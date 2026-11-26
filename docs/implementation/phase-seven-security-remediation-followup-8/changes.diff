@@ -1,0 +1,209 @@
+--- a/bindings/react-native/tools/security/README.md
++++ b/bindings/react-native/tools/security/README.md
+@@ -50,7 +50,12 @@
+   - the reviewed slide alignment (no default) and the capture source;
+   - an explicit image list of path, image UUID, unslid address and text size
+     (no prefix, wildcard or whole-cache enrollment), and explicit reviewed
+-    aliases.
++    aliases;
++  - `mandatory_images`: a non-empty list of canonical `images` paths (never
++    aliases), including `/usr/lib/libSystem.B.dylib`. Every observed JVM must
++    report each of them, matched after reviewed-alias lookup, so a reviewed
++    alias satisfies its canonical image. A JVM with zero cache images, or
++    missing one mandatory image, is an incomplete capture.
+   `pre_host` and `post_host` are records the runner reads independently
+   before and after the capture. They must equal the reviewed identity, re-read
+   every reviewed image identity from the cache, report every reviewed path as
+@@ -62,6 +67,15 @@
+   top address 0). JFR does not report the mapped cache UUID, so tying a
+   process to the rehashed host cache is an inference under the trusted host
+   boundary, not process attestation.
++  The inputs are trusted caller snapshots. The frozen evidence dataclass is
++  shallow: its dicts stay mutable, so the caller binds the approved record
++  identity and prevents concurrent mutation while a check runs.
++  **Mandatory controller contract.** `system_cache` stays optional in this
++  platform-neutral pure API. For the macOS restricted workflow, however, the
++  controller MUST supply reviewed system-cache evidence, and its integration
++  tests must show that omitting it rejects before any observation is accepted.
++  Neither caller-attested completeness nor a file-only result substitutes for
++  it. That wiring is a later controller task.
+ - `symbol_guard` -> absence and external-invocation evidence (SR-30).
+ - `embedded_scan.inventory(...)` / `embedded_scan.evaluate(...)` -> permanent
+   embedded/shaded component gate (SR-31). Relocation prefixes are matched
+--- a/bindings/react-native/tools/security/native_cache.py
++++ b/bindings/react-native/tools/security/native_cache.py
+@@ -23,7 +23,8 @@
+ CAPTURE_KEYS = ('jdk', 'event', 'base_address', 'top_address')
+ IMAGE_KEYS = ('install_path', 'image_uuid', 'unslid_load_address', 'text_size')
+ IDENTITY_KEYS = IMAGE_KEYS[1:]
+-RECORD_KEYS = ('schema', *HOST_IDENTITY_KEYS, 'slide_alignment', 'capture_source', 'images', 'aliases')
++RECORD_KEYS = ('schema', *HOST_IDENTITY_KEYS, 'slide_alignment', 'capture_source', 'images', 'aliases', 'mandatory_images')
++REQUIRED_MANDATORY_IMAGES = ('/usr/lib/libSystem.B.dylib',)  # every process of the studied macOS workflow maps it
+ HOST_KEYS = (*HOST_IDENTITY_KEYS, 'boot_session_uuid', 'image_path_status', 'cache_image_identities')
+ SHA256 = re.compile(r'[0-9a-f]{64}')
+ GLOB = set('*?[]{}')
+@@ -32,6 +33,8 @@
+ 
+ @dataclass(frozen=True)
+ class SystemCacheEvidence:
++    """Trusted caller snapshots. The frozen dataclass is shallow: the dicts inside stay mutable, so the caller must
++    bind the approved record identity and prevent concurrent mutation while a check runs."""
+     expected: dict
+     pre_host: dict
+     post_host: dict
+@@ -130,6 +133,10 @@
+         errors.append('images: entire cache image set cannot be enrolled')
+     if not isinstance(aliases, dict) or not all(_path(a) and a not in paths and t in paths for a, t in aliases.items()):
+         errors.append('aliases: explicit reviewed alias to a reviewed image required')
++    mandatory = record['mandatory_images']
++    if not isinstance(mandatory, list) or not mandatory or len(set(map(str, mandatory))) != len(mandatory) \
++            or not all(isinstance(m, str) and m in paths for m in mandatory) or not set(REQUIRED_MANDATORY_IMAGES) <= set(mandatory):
++        errors.append('mandatory_images: non-empty canonical subset of images including %s required' % ', '.join(REQUIRED_MANDATORY_IMAGES))
+     return errors
+ 
+ 
+@@ -201,4 +208,8 @@
+         slides.add(slide)
+     if len(slides) > 1:
+         errors.append('system cache images use different slides in one JVM')
++    observed = {path for path, _ in entries}  # canonical paths, after reviewed-alias lookup
++    for path in record['mandatory_images']:
++        if path not in observed:
++            errors.append('incomplete capture: mandatory system cache image missing: %s' % path)
+     return errors
+--- a/bindings/react-native/tools/security/test_native_cache.py
++++ b/bindings/react-native/tools/security/test_native_cache.py
+@@ -27,6 +27,7 @@
+     {'install_path': SECURITY, 'image_uuid': 'B2530481-AEDF-36E2-847D-77D5545C91FE', 'unslid_load_address': 0x7ff806220000, 'text_size': 4190288},
+ ]
+ ALIAS = '/System/Library/Frameworks/Security.framework/Security'
++LIBSYSTEM_ALIAS = '/usr/lib/libSystem.dylib'
+ 
+ 
+ def expected():
+@@ -47,6 +48,7 @@
+         'capture_source': {'jdk': 'Temurin-17.0.1+12', 'event': 'jdk.NativeLibrary', 'base_address': 'mach_header', 'top_address': 'zero'},
+         'images': copy.deepcopy(IMAGES),
+         'aliases': {},
++        'mandatory_images': [LIBSYSTEM],
+     }
+ 
+ 
+@@ -109,11 +111,71 @@
+         self.assertEqual(result.system_cache_loads, [('kotlin-compiler', LIBSYSTEM), ('kotlin-compiler', LIBZ), ('kotlin-compiler', SECURITY)])
+         self.assertEqual(result.discovered_images, [])
+ 
+-    def test_sr22a_repeated_chunk_event_for_same_image_counts_once(self):
+-        result = check([jvm([cached(LIBZ), cached(LIBZ)])], evidence())
++    # Follow-up 8 (review): a valid cache record must not certify a JVM without the mandatory cache images.
++    def test_sr22a_zero_cache_images_is_incomplete(self):
++        self.rejected(check([jvm(FILE_LIBS)], evidence()), 'mandatory system cache image missing: ' + LIBSYSTEM)
++
++    def test_sr22a_every_jvm_must_report_mandatory_images(self):
++        first = jvm(FILE_LIBS + [cached(LIBSYSTEM)])
++        second = jvm(FILE_LIBS, role='kotlin-daemon')
++        result = G.check_observed_jvms([first, second], ['kotlin-compiler', 'kotlin-daemon'], native_inventory=PAYLOADS,
++                                       native_baseline=BASELINE, system_cache=evidence())
++        self.rejected(result, 'mandatory system cache image missing: ' + LIBSYSTEM)
++        self.assertEqual({v.source for v in result.violations}, {'kotlin-daemon'})
++
++    def test_sr22a_non_mandatory_cache_image_alone_is_incomplete(self):
++        self.rejected(check([jvm([cached(LIBZ)])], evidence()), 'mandatory system cache image missing: ' + LIBSYSTEM)
++
++    def test_sr22a_mandatory_subset_must_be_explicit_canonical_and_include_libsystem(self):
++        changes = {
++            'absent': lambda r: r.pop('mandatory_images'),
++            'empty': lambda r: r.update(mandatory_images=[]),
++            'all': lambda r: r.update(mandatory_images='all'),
++            'non-list': lambda r: r.update(mandatory_images={LIBSYSTEM: True}),
++            'unregistered': lambda r: r.update(mandatory_images=[LIBSYSTEM, '/usr/lib/libobjc.A.dylib']),
++            'alias entry': lambda r: r.update(aliases={LIBSYSTEM_ALIAS: LIBSYSTEM}, mandatory_images=[LIBSYSTEM_ALIAS]),
++            'duplicate': lambda r: r.update(mandatory_images=[LIBSYSTEM, LIBSYSTEM]),
++            'without libSystem': lambda r: r.update(mandatory_images=[LIBZ]),
++            'wildcard': lambda r: r.update(mandatory_images=['/usr/lib/*']),
++        }
++        for label, change in changes.items():
++            record = expected()
++            change(record)
++            with self.subTest(label=label):
++                result = check([jvm([cached(LIBSYSTEM), cached(LIBZ)])], evidence(record, pre=host(), post=host()))
++                self.assertFalse(result.ok)
++                self.assertTrue(any('mandatory_images' in v.setting for v in result.violations), result.violations)
++        record = expected()
++        record['mandatory_images'] = [LIBSYSTEM, LIBZ]
++        self.assertTrue(check([jvm([cached(LIBSYSTEM), cached(LIBZ)])], evidence(record)).ok)
++        self.rejected(check([jvm([cached(LIBSYSTEM)])], evidence(record)), 'mandatory system cache image missing: ' + LIBZ)
++
++    def test_sr22a_any_one_of_several_jvms_missing_a_mandatory_image_rejects(self):
++        roles = ['kotlin-compiler', 'kotlin-daemon', 'kapt']
++        for missing in roles:
++            observations = [jvm([cached(LIBZ)] + ([] if role == missing else [cached(LIBSYSTEM)]), role=role) for role in roles]
++            with self.subTest(missing=missing):
++                result = G.check_observed_jvms(observations, roles, system_cache=evidence())
++                self.rejected(result, 'mandatory system cache image missing: ' + LIBSYSTEM)
++                self.assertEqual({v.source for v in result.violations}, {missing})
++
++    def test_sr22a_unreviewed_alias_cannot_satisfy_mandatory_image(self):
++        result = check([jvm([cached(LIBSYSTEM, name=LIBSYSTEM_ALIAS)])], evidence())
++        self.rejected(result, 'mandatory system cache image missing: ' + LIBSYSTEM)
++        self.assertEqual(result.discovered_images, [('kotlin-compiler', LIBSYSTEM_ALIAS)])
++
++    def test_sr22a_reviewed_alias_satisfies_canonical_mandatory_image(self):
++        record = expected()
++        record['aliases'] = {LIBSYSTEM_ALIAS: LIBSYSTEM}
++        result = check([jvm([cached(LIBSYSTEM, name=LIBSYSTEM_ALIAS)])], evidence(record, pre=host(record), post=host(record)))
+         self.assertTrue(result.ok, result.violations)
+-        self.assertEqual(result.system_cache_loads, [('kotlin-compiler', LIBZ)])
++        self.assertEqual(result.system_cache_loads, [('kotlin-compiler', LIBSYSTEM)])
+ 
++    def test_sr22a_repeated_chunk_event_for_same_image_counts_once(self):
++        result = check([jvm([cached(LIBSYSTEM), cached(LIBZ), cached(LIBZ)])], evidence())
++        self.assertTrue(result.ok, result.violations)
++        self.assertEqual(result.system_cache_loads, [('kotlin-compiler', LIBSYSTEM), ('kotlin-compiler', LIBZ)])
++
+     def test_sr22a_missing_digest_is_never_a_general_exemption(self):
+         self.rejected(check([jvm([cached(LIBZ)])]), 'missing digest')
+         self.rejected(check([jvm([{'name': '/jdk/lib/libjava.dylib', 'sha256': None}])], evidence()), 'missing digest')
+@@ -196,20 +258,22 @@
+     def test_sr22b_slide_must_be_common_bounded_and_aligned(self):
+         cases = {
+             'mixed': [cached(LIBZ), cached(LIBSYSTEM, slide=SLIDE + 0x1000)],
+-            'negative': [cached(LIBZ, slide=-0x1000)],
+-            'unaligned': [cached(LIBZ, slide=0x5800)],
+-            'at max_slide': [cached(LIBZ, slide=0x1941c000)],
+-            'beyond max_slide': [cached(LIBZ, slide=0x20000000)],
++            # Follow-up 8: libSystem shares each bad slide, so only the slide rule can reject.
++            'negative': [cached(LIBSYSTEM, slide=-0x1000), cached(LIBZ, slide=-0x1000)],
++            'unaligned': [cached(LIBSYSTEM, slide=0x5800), cached(LIBZ, slide=0x5800)],
++            'at max_slide': [cached(LIBSYSTEM, slide=0x1941c000), cached(LIBZ, slide=0x1941c000)],
++            'beyond max_slide': [cached(LIBSYSTEM, slide=0x20000000), cached(LIBZ, slide=0x20000000)],
+         }
+         for label, libs in cases.items():
+             with self.subTest(label=label):
+                 self.rejected(check([jvm(libs)], evidence()), 'slide')
+-        self.assertTrue(check([jvm([cached(LIBZ, slide=0)])], evidence()).ok)
+-        self.assertTrue(check([jvm([cached(LIBZ, slide=0x1941b000)])], evidence()).ok)
++        for slide in (0, 0x1941b000):
++            result = check([jvm([cached(LIBSYSTEM, slide=slide), cached(LIBZ, slide=slide)])], evidence())
++            self.assertTrue(result.ok, result.violations)
+ 
+     def test_sr22b_slide_is_per_jvm(self):
+-        first = jvm([cached(LIBZ)])
+-        second = jvm([cached(LIBZ, slide=0x9000)], role='kotlin-daemon')
++        first = jvm([cached(LIBSYSTEM), cached(LIBZ)])
++        second = jvm([cached(LIBSYSTEM, slide=0x9000), cached(LIBZ, slide=0x9000)], role='kotlin-daemon')
+         result = G.check_observed_jvms([first, second], ['kotlin-compiler', 'kotlin-daemon'], system_cache=evidence())
+         self.assertTrue(result.ok, result.violations)
+ 
+@@ -261,9 +325,9 @@
+         self.rejected(check([jvm([cached(SECURITY, name=ALIAS)])], evidence()), 'missing digest')
+         record = expected()
+         record['aliases'] = {ALIAS: SECURITY}
+-        result = check([jvm([cached(SECURITY, name=ALIAS)])], evidence(record, pre=host(record), post=host(record)))
++        result = check([jvm([cached(LIBSYSTEM), cached(SECURITY, name=ALIAS)])], evidence(record, pre=host(record), post=host(record)))
+         self.assertTrue(result.ok, result.violations)
+-        self.assertEqual(result.system_cache_loads, [('kotlin-compiler', SECURITY)])
++        self.assertEqual(result.system_cache_loads, [('kotlin-compiler', LIBSYSTEM), ('kotlin-compiler', SECURITY)])
+         for bad in ({ALIAS: '/usr/lib/unreviewed.dylib'}, {'/System/Library/Frameworks/*': SECURITY}, {LIBZ: SECURITY}):
+             record = expected()
+             record['aliases'] = bad

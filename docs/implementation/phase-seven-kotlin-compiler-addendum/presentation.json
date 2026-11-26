@@ -1,0 +1,495 @@
+{
+  "scope": "presentation only; no resolved graph, command, artifact or source input changed",
+  "initial_cut_index_sha256": "a194306b7a6da538881643f5c2b6ea904e65c460001aa50a21eedf57bef91a18",
+  "files": {
+    "README.md": {
+      "status": "superseded in the final version; original preserved byte-identically",
+      "original_sha256": "c02d06b23a282168ec4f77a0879c17407194c40c932fa1d612e767fcc10dabb9",
+      "original_preserved_at": "initial-cut/README.md"
+    },
+    "bundle.json": {
+      "status": "superseded in the final version; original preserved byte-identically",
+      "original_sha256": "0a89471e62d3add3dc0f2016286cd618de85f1395cfea211247e715249958681",
+      "original_preserved_at": "initial-cut/bundle.json"
+    },
+    "files-sha256.json": {
+      "status": "superseded in the final version; original preserved byte-identically",
+      "original_sha256": "a194306b7a6da538881643f5c2b6ea904e65c460001aa50a21eedf57bef91a18",
+      "original_preserved_at": "initial-cut/files-sha256.json"
+    },
+    "metadata/online/resolution.json": {
+      "status": "readable derived view (parsed-JSON equal); original bytes in wrapper",
+      "original_sha256": "fd025809cd1efceecaa526dc4c3710e164ce264182a99fe0b485f11233eec2e7",
+      "original_preserved_at": "metadata/online/resolution.original.json",
+      "wrapper_sha256": "6939f98c6710e874cad6db294d9727e3124ea6b7a4de5e0247143503603e36bb",
+      "readable_sha256": "2b71454cb49c03762539a4ebb4d29b761452960db4c6c1758e65c62f0ecd61e6",
+      "parsed_json_equal": true
+    },
+    "metadata/offline/resolution.json": {
+      "status": "readable derived view (parsed-JSON equal); original bytes in wrapper",
+      "original_sha256": "9d30b92b5411a09e2ec13f3ca5b70e84e4839f6138ec5705844b697511c655a6",
+      "original_preserved_at": "metadata/offline/resolution.original.json",
+      "wrapper_sha256": "2c839474e055589fffa2de8e28195eb3ceda1ccfcd79ee4a89a131a14d6d378b",
+      "readable_sha256": "2de9c4cd68cbfb1a39f493a9c8bb51bda05c17ec6b8a5477f4da643950881d74",
+      "parsed_json_equal": true
+    },
+    "metadata/offline-repeat2/resolution.json": {
+      "status": "readable derived view (parsed-JSON equal); original bytes in wrapper",
+      "original_sha256": "9d30b92b5411a09e2ec13f3ca5b70e84e4839f6138ec5705844b697511c655a6",
+      "original_preserved_at": "metadata/offline-repeat2/resolution.original.json",
+      "wrapper_sha256": "aec95cc11295a2869a2f96dd23664443471fb81b96a195ef102d7c15049140bc",
+      "readable_sha256": "2de9c4cd68cbfb1a39f493a9c8bb51bda05c17ec6b8a5477f4da643950881d74",
+      "parsed_json_equal": true
+    },
+    "metadata/online/output.txt": {
+      "status": "original bytes only in lossless wrapper (trailing whitespace is part of the original)",
+      "original_sha256": "bfacbcef4769f6a7d16474c398ce1bfd8e4ebbf8dd3b24beb7b182dd0c5c6069",
+      "original_preserved_at": "metadata/online/output.txt.json",
+      "wrapper_sha256": "10372e87b13e1be4296f3d219087fbe2df26c4c108a8f92e87af7bb10b75726a"
+    },
+    "metadata/offline/output.txt": {
+      "status": "original bytes only in lossless wrapper (trailing whitespace is part of the original)",
+      "original_sha256": "18e16ea724c2e0b5e82a6f4c7e946ebdf18c3b41fb2000bb083afb4ead8455ff",
+      "original_preserved_at": "metadata/offline/output.txt.json",
+      "wrapper_sha256": "cec05cff09464b6434473bc861b8c15422c54f2ae4037ad65da08a85ad277097"
+    },
+    "metadata/offline-repeat2/output.txt": {
+      "status": "original bytes only in lossless wrapper (trailing whitespace is part of the original)",
+      "original_sha256": "11023c30e29287364242d9e5cc8fcffe706f5c1042646723568b4260ed53ab37",
+      "original_preserved_at": "metadata/offline-repeat2/output.txt.json",
+      "wrapper_sha256": "0489e8037173ce1920d2878aa859cef9aa7f5eb11e78cea316a87482160815e2"
+    },
+    "upstream/README.md": {
+      "status": "original bytes only in lossless wrapper (trailing whitespace is part of the original)",
+      "original_sha256": "7b9ed2fce6cb756174326571ef57e641e7b22c439c87ee7e2ab85e9be9751d95",
+      "original_preserved_at": "upstream/README.md.json",
+      "wrapper_sha256": "02194d5d62ba6324a2339f1070483cf3bfda4f1e5bbc9c3433b7303c83a2fc8e"
+    },
+    "advisories/GHSA-5mg8-w23w-74h3.json": {
+      "status": "unchanged at the same path",
+      "original_sha256": "a7f5e292592dbcd19bb86625e86a9a65fc5cdededc8f8ca402979241b48b03f4"
+    },
+    "advisories/GHSA-7g45-4rm6-3mm3.json": {
+      "status": "unchanged at the same path",
+      "original_sha256": "8965dd19101c09bdc196ed470cb0cc91661a209a98a732425a4711c61cf3782a"
+    },
+    "fetch-log.json": {
+      "status": "unchanged at the same path",
+      "original_sha256": "8228a2207d7c5e219413417eac96c4e4fba9b3a1b2a7eca2796b7103865f3ae1"
+    },
+    "graph-delta.json": {
+      "status": "unchanged at the same path",
+      "original_sha256": "639278592b8d43d8f1fad7ec5bd12a7736db803c654aae57d3950ceb592866e8"
+    },
+    "kgp-source-evidence.json": {
+      "status": "unchanged at the same path",
+      "original_sha256": "b4ba0454353212c2efac821bb054465e72fa35a293cfe74531244e2e70254e08"
+    },
+    "marker/PACKET.md": {
+      "status": "unchanged at the same path",
+      "original_sha256": "d5a691e552ff5ad7d60789540964788d524aa3c2bb9e02a4ad509bdc511a420b"
+    },
+    "marker/fetch.json": {
+      "status": "unchanged at the same path",
+      "original_sha256": "3c2de3a890e49e2910054f11dca8d257ac8dc0432f4b986e32bc0b4a8001a79e"
+    },
+    "marker/parse.json": {
+      "status": "unchanged at the same path",
+      "original_sha256": "0d477b9c928ad52b08cbdbe1cf15f6e880317c8603c4cf237141927174e5f9c4"
+    },
+    "metadata/build.gradle": {
+      "status": "unchanged at the same path",
+      "original_sha256": "a061a668ff0126b47105bad6d99a8b5b0482b91bf72f6a05e5d59e32d0a3492c"
+    },
+    "metadata/gradle.properties": {
+      "status": "unchanged at the same path",
+      "original_sha256": "cf077097b1e78bea50b30a743e231ac53754b13075af78642cf533b6224138c0"
+    },
+    "metadata/included-build-classpaths.build.gradle": {
+      "status": "unchanged at the same path",
+      "original_sha256": "c7e9ea4ec7a7042630fd0a15afaefa76b6f5ea7440b0ff41885695febe2fe41c"
+    },
+    "metadata/offline/command.json": {
+      "status": "unchanged at the same path",
+      "original_sha256": "678e6a2b071d885f83ee0b64fed4e65ebff04cc0d7dc5ee2ee0b70d8bbd831e6"
+    },
+    "metadata/offline/gradle.lockfile": {
+      "status": "unchanged at the same path",
+      "original_sha256": "a5d7937413a4370ffe2fe953845587e74ca918f0d43ea8a9de15e105acc4aa59"
+    },
+    "metadata/offline/included-build-classpaths__gradle.lockfile": {
+      "status": "unchanged at the same path",
+      "original_sha256": "a2f1ed3fa5693a7c01674d8d5cfd10216e7375b6eb5eb18a9394d6c792eb487b"
+    },
+    "metadata/offline-repeat2/command.json": {
+      "status": "unchanged at the same path",
+      "original_sha256": "82158120ee0890ee109f16775a583aa42a87932a18b8deb2c6c59a03bc077747"
+    },
+    "metadata/offline-repeat2/gradle.lockfile": {
+      "status": "unchanged at the same path",
+      "original_sha256": "a5d7937413a4370ffe2fe953845587e74ca918f0d43ea8a9de15e105acc4aa59"
+    },
+    "metadata/offline-repeat2/included-build-classpaths__gradle.lockfile": {
+      "status": "unchanged at the same path",
+      "original_sha256": "a2f1ed3fa5693a7c01674d8d5cfd10216e7375b6eb5eb18a9394d6c792eb487b"
+    },
+    "metadata/online/command.json": {
+      "status": "unchanged at the same path",
+      "original_sha256": "e9c12012e04c777341d08d60ae438a38413120d6c7438df64bce445a5b66a70b"
+    },
+    "metadata/online/gradle.lockfile": {
+      "status": "unchanged at the same path",
+      "original_sha256": "a5d7937413a4370ffe2fe953845587e74ca918f0d43ea8a9de15e105acc4aa59"
+    },
+    "metadata/online/included-build-classpaths__gradle.lockfile": {
+      "status": "unchanged at the same path",
+      "original_sha256": "a2f1ed3fa5693a7c01674d8d5cfd10216e7375b6eb5eb18a9394d6c792eb487b"
+    },
+    "metadata/settings.gradle": {
+      "status": "unchanged at the same path",
+      "original_sha256": "76854e9dcde2dd57adc699f350d89e9f1c1aabf656a20fc9ed46b6204de2f3c4"
+    },
+    "osv-query.json": {
+      "status": "unchanged at the same path",
+      "original_sha256": "382849d10070c2d5feb2cc855f1fa59d02f00ac51d95f68af5572d65597503dd"
+    },
+    "osv-result.json": {
+      "status": "unchanged at the same path",
+      "original_sha256": "4f81a7026e8a45863e5de21666a6a6fbb6865bfbb11c8125b06363b5ff6b039a"
+    },
+    "osv-summary.json": {
+      "status": "unchanged at the same path",
+      "original_sha256": "36c0f962b021b3b8e3b225e1f60532325256040b0015d9bceee3bb7d36c713d8"
+    },
+    "run1-history.md": {
+      "status": "unchanged at the same path",
+      "original_sha256": "c529737f87cb5d2bdd96be534d62f519d4b9cca3f4695ca7696377a6a686643f"
+    },
+    "tools/bundle.py.txt": {
+      "status": "unchanged at the same path",
+      "original_sha256": "2aea1cc73e3c079b7607764454005187a81efec73a340a9c04d27aa8fc7b3da0"
+    },
+    "tools/fetch.py.txt": {
+      "status": "unchanged at the same path",
+      "original_sha256": "f70b59c4924861d3a3c2ebb2bc4f0f80a20e7d42b76e65938dc76903bd4ed63b"
+    },
+    "tools/osv.py.txt": {
+      "status": "unchanged at the same path",
+      "original_sha256": "28b409a6ac824c32006ef407938909fe1502a62f7025434a698fc0a4e14114a3"
+    },
+    "tools/run-gradle.py.txt": {
+      "status": "unchanged at the same path",
+      "original_sha256": "9efa1da5268f39aee40b044e9a01c9e10de306da80093fc86d2458ac8fa3887c"
+    },
+    "tools/verify.py.txt": {
+      "status": "unchanged at the same path",
+      "original_sha256": "2c05759e888039755e24a5ec3926083d2221e560bd494b4de6f861388cf8f845"
+    },
+    "upstream/LICENSE.txt": {
+      "status": "unchanged at the same path",
+      "original_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "upstream/libs.versions.toml": {
+      "status": "unchanged at the same path",
+      "original_sha256": "66e6f9d4bdfd070d5740608571c344e17ee13ded384431c1a84815204a422afc"
+    },
+    "upstream/tag-v2.1.20.json": {
+      "status": "unchanged at the same path",
+      "original_sha256": "3a986e22beb3cc645391266c62497d71331f93627e42fe203145a87b1860cc76"
+    },
+    "verification.json": {
+      "status": "unchanged at the same path",
+      "original_sha256": "59f30eba7932ea1d0db2ad8de21719f8f0401b71d9cb7cc72533d73552e3d749"
+    }
+  },
+  "followup_1_sources": {
+    "followup-1/attestation/verification.json": {
+      "source": "target/phase-seven-rn/compiler-review/attestation-followup/verification.json",
+      "source_sha256": "f353f2f915209f5dbd5507119b4f25a23c2e6048954a41a024e8b170a8c7982e"
+    },
+    "followup-1/attestation/verification-keyid-fallback.json": {
+      "source": "target/phase-seven-rn/compiler-review/attestation-followup/verification-keyid-fallback.json",
+      "source_sha256": "7b8e9054461ca668e6e055cf3eedcbf4da3cc62ce82bfc23df594cd24659c553"
+    },
+    "followup-1/attestation/fallback-crash-note.md": {
+      "source": "target/phase-seven-rn/compiler-review/attestation-followup/fallback-crash-note.md",
+      "source_sha256": "e9ae38b87c0a0f2e97fcde9b7883ed971ac85f7d9d79390c068f83d2d2c52221"
+    },
+    "followup-1/attestation/verify.py.txt": {
+      "source": "target/phase-seven-rn/compiler-review/attestation-followup/verify.py",
+      "source_sha256": "e101a854e230a949f06f64c871b9d1db323017ebc1ad01cc04780c3c1bd3aebf"
+    },
+    "followup-1/attestation/verify_keyid.py.txt": {
+      "source": "target/phase-seven-rn/compiler-review/attestation-followup/verify_keyid.py",
+      "source_sha256": "3f1411c461b2a1042f6b065cadba0615ed57e0f5f62e14166aad1bca000e4df5"
+    },
+    "followup-1/embedded/byte-presence.json": {
+      "source": "target/phase-seven-rn/compiler-review/embedded-evidence/byte-presence.json",
+      "source_sha256": "477d659721cf18e8e09772e593336f200bd1447e315f9f7402089682dad644a4"
+    },
+    "followup-1/embedded/native-libraries.json": {
+      "source": "target/phase-seven-rn/compiler-review/embedded-evidence/native-libraries.json",
+      "source_sha256": "cbed86716d59481fafe981610fcdbfeea8727327b397fa27a15d424b0f453618"
+    },
+    "followup-1/embedded/osv-query.json": {
+      "source": "target/phase-seven-rn/compiler-review/embedded-evidence/osv-query.json",
+      "source_sha256": "f250a61e5c2f736668a8accc17ac265af22b189261f160dee9d5ae1b07d95105"
+    },
+    "followup-1/embedded/osv-result.json": {
+      "source": "target/phase-seven-rn/compiler-review/embedded-evidence/osv-result.json",
+      "source_sha256": "2db7be83f48ce805d0ddb925fe67deeae4381d3f57769fd66ea93cebbf341c10"
+    },
+    "followup-1/embedded/osv-summary.json": {
+      "source": "target/phase-seven-rn/compiler-review/embedded-evidence/osv-summary.json",
+      "source_sha256": "0aec7982d82477e9965ebd0ae9f67a21a051d8709bddc04f72a70bc3ba3bb513"
+    },
+    "followup-1/embedded/upstream/versions.properties": {
+      "source": "target/phase-seven-rn/compiler-review/embedded-evidence/versions.properties",
+      "source_sha256": "b42f7d63f33e24389355e3b499879c5ba523ad103bfcb67ba28daee0b8b40a45"
+    },
+    "followup-1/embedded/upstream/prepare-compiler-embeddable.build.gradle.kts.json": {
+      "source": "target/phase-seven-rn/compiler-review/embedded-evidence/build.gradle.kts",
+      "source_sha256": "334099035ef1050731c2d6969b1468aba9732985ec9ffc2c91aa64c97bcbbf4e"
+    },
+    "followup-1/embedded/upstream/prepare-compiler.build.gradle.kts": {
+      "source": "target/phase-seven-rn/compiler-review/embedded-evidence/prepare-compiler/build.gradle.kts",
+      "source_sha256": "facde9ef202317cfe7952e97ff6dbd71bb8575f48666d09f05fadf238d3b9ab2"
+    },
+    "followup-1/embedded/upstream/contents-license_third_party.json": {
+      "source": "target/phase-seven-rn/compiler-review/embedded-evidence/contents-license_third_party.json",
+      "source_sha256": "adcb69068c396768270fac6668a19e71af7f6117ba762502be6f51ae5e848689"
+    },
+    "followup-1/activation-confirmation/aapt2-and-jdk.json": {
+      "source": "target/phase-seven-rn/compiler-review/activation-confirmation/aapt2-and-jdk.json",
+      "source_sha256": "87dd3865f9407ac529e6fee59da9058a7c9877cc9a8f0aba8a802161c5b6c08e"
+    },
+    "followup-1/provenance/strong-sidecars.json": {
+      "source": "target/phase-seven-rn/compiler-review/strong-sidecars.json",
+      "source_sha256": "22a352fc1bf3a6607de1af4d83033b48c884b788f602b2cab293dcb6ef033f71"
+    },
+    "followup-1/provenance/parents-match.json": {
+      "source": "target/phase-seven-rn/compiler-review/parents-match.json",
+      "source_sha256": "a1e74b37455b00c69b614d2996e0585c1d3e06f01254d1d2ad089a1e42fbd42a"
+    },
+    "followup-1/provenance/q1-jvm-version-check.json": {
+      "source": "target/phase-seven-rn/compiler-review/q1-jvm-version-check.json",
+      "source_sha256": "bc6abcf1e0033bef6b728ca95bddfe0dde44609d8ccacd0ef7d342b9c69839bc"
+    },
+    "followup-1/provenance/fetch-log-followup.json": {
+      "source": "target/phase-seven-rn/compiler-review/fetch-log.json",
+      "source_sha256": "32576f8cea01295eaae368c98b26b3f90ca28ede51e8933b225f026028e2257e"
+    },
+    "followup-1/tools-v2/fetch.py.txt": {
+      "source": "target/phase-seven-rn/compiler-review/tools/fetch.py",
+      "source_sha256": "9df54622f749145a6ce51b48f8698f500aef525e816ff1f02eac993449c90cad"
+    },
+    "followup-1/tools-v2/verify.py.txt": {
+      "source": "target/phase-seven-rn/compiler-review/tools/verify.py",
+      "source_sha256": "06c4a1c9b95067a64cfd2dc99bc854ba05648377eb1817e280a05cec036b2f8f"
+    },
+    "followup-1/tools-v2/run-gradle.py.txt": {
+      "source": "target/phase-seven-rn/compiler-review/tools/run-gradle.py",
+      "source_sha256": "eefa695d832bfbbaee60dce96d4abbd43e75bce550d91025b3493abc4661268d"
+    },
+    "followup-1/tools-v2/osv.py.txt": {
+      "source": "target/phase-seven-rn/compiler-review/tools/osv.py",
+      "source_sha256": "2d8e392a4691e19d7bf1b7302da490335e8a423d3955672ba854207369cd2ac1"
+    },
+    "followup-1/tools-v2/bundle.py.txt": {
+      "source": "target/phase-seven-rn/compiler-review/tools/bundle.py",
+      "source_sha256": "2aea1cc73e3c079b7607764454005187a81efec73a340a9c04d27aa8fc7b3da0"
+    },
+    "followup-1/tools-v2/strong_sidecars.py.txt": {
+      "source": "target/phase-seven-rn/compiler-review/tools/strong_sidecars.py",
+      "source_sha256": "099d97a9704e127bf381e9dc42241e038a59837d9b9c1dce53afc57a8ea3c8f8"
+    },
+    "followup-1/tools-v2/assemble_final.py.txt": {
+      "source": "target/phase-seven-rn/compiler-review/tools/assemble_final.py",
+      "source_sha256": "01f3adae49ae06d1645d2ba5a552c2ba4b094de4b86be450fd90f81bdbee4d3f"
+    },
+    "followup-1/attestation/keys/29579F18FA8FD93B-keys.openpgp.org.asc": {
+      "source": "target/phase-seven-rn/compiler-review/attestation-followup/keys/29579F18FA8FD93B-keys.openpgp.org.asc",
+      "source_sha256": "d3b49f7952e4dcbdaa88317d04a94af7abaaf7af66f4c1120be97684ddb688cb"
+    },
+    "followup-1/attestation/keys/29579F18FA8FD93B-keyserver.ubuntu.com.asc.json": {
+      "source": "target/phase-seven-rn/compiler-review/attestation-followup/keys/29579F18FA8FD93B-keyserver.ubuntu.com.asc",
+      "source_sha256": "bf07fb41fc6e2f7495f775d7b2a9139941a24a108580157b9e6be52c28cc62c7"
+    },
+    "followup-1/attestation/keys/379CE192D401AB61-keys.openpgp.org.asc": {
+      "source": "target/phase-seven-rn/compiler-review/attestation-followup/keys/379CE192D401AB61-keys.openpgp.org.asc",
+      "source_sha256": "ca167d406ec8014a883a6dd9385514950e088845e2c91fbc76766f2f3bcc1d45"
+    },
+    "followup-1/attestation/keys/379CE192D401AB61-keyserver.ubuntu.com.asc.json": {
+      "source": "target/phase-seven-rn/compiler-review/attestation-followup/keys/379CE192D401AB61-keyserver.ubuntu.com.asc",
+      "source_sha256": "dad9d73f9580cdb65e1bf8c5f4cb5d14876d8ccd74b9ab1f9dfb979c5fe2631e"
+    },
+    "followup-1/attestation/keys/3D5839A2262CBBFB-keys.openpgp.org.asc": {
+      "source": "target/phase-seven-rn/compiler-review/attestation-followup/keys/3D5839A2262CBBFB-keys.openpgp.org.asc",
+      "source_sha256": "3688ed45fe6838fcfae660b55bc65071981e20988cc09e25cfba7a5c0d361638"
+    },
+    "followup-1/attestation/keys/3D5839A2262CBBFB-keyserver.ubuntu.com.asc.json": {
+      "source": "target/phase-seven-rn/compiler-review/attestation-followup/keys/3D5839A2262CBBFB-keyserver.ubuntu.com.asc",
+      "source_sha256": "3bb5d5537b7969635f2e8eb5ca918c34cdcf4382d5ab06bda7bdeecb8ed13690"
+    },
+    "followup-1/attestation/keys/694621A7227D8D5289699830ABE9F3126BB741C1-keys.openpgp.org.asc": {
+      "source": "target/phase-seven-rn/compiler-review/attestation-followup/keys/694621A7227D8D5289699830ABE9F3126BB741C1-keys.openpgp.org.asc",
+      "source_sha256": "9f10b34e6a5dbb36f0c718e9324933a663c26d12a398bc5078844721412b6d25"
+    },
+    "followup-1/attestation/keys/694621A7227D8D5289699830ABE9F3126BB741C1-keyserver.ubuntu.com.asc.json": {
+      "source": "target/phase-seven-rn/compiler-review/attestation-followup/keys/694621A7227D8D5289699830ABE9F3126BB741C1-keyserver.ubuntu.com.asc",
+      "source_sha256": "d3b309a449daec607f3bfe56166eb6a738839230c0a12945afdf47715f93047e"
+    },
+    "followup-1/attestation/keys/6F538074CCEBF35F28AF9B066A0975F8B1127B83-keys.openpgp.org.asc": {
+      "source": "target/phase-seven-rn/compiler-review/attestation-followup/keys/6F538074CCEBF35F28AF9B066A0975F8B1127B83-keys.openpgp.org.asc",
+      "source_sha256": "dd4e4696a9cea1c666733a72d9a136b2375980bfcb4167d90634e82ba7719e50"
+    },
+    "followup-1/attestation/keys/B0F3710FA64900E7-keys.openpgp.org.asc": {
+      "source": "target/phase-seven-rn/compiler-review/attestation-followup/keys/B0F3710FA64900E7-keys.openpgp.org.asc",
+      "source_sha256": "729efc8475a57933090b4bb95d0b675c187f633fb5e6050ea997579db6e3c8cf"
+    },
+    "followup-1/attestation/keys/B0F3710FA64900E7-keyserver.ubuntu.com.asc.json": {
+      "source": "target/phase-seven-rn/compiler-review/attestation-followup/keys/B0F3710FA64900E7-keyserver.ubuntu.com.asc",
+      "source_sha256": "abdff93da4cc637ff344e2a7b7edbc84b53ff26c7c8148ef89a93c3d5cf47a6c"
+    },
+    "followup-1/attestation/keys/B16698A4ADF4D638-keys.openpgp.org.asc": {
+      "source": "target/phase-seven-rn/compiler-review/attestation-followup/keys/B16698A4ADF4D638-keys.openpgp.org.asc",
+      "source_sha256": "5f999b663b3c9a6a6861a8b6c5e347504513050199052a4beeadc4c2b4589c96"
+    },
+    "followup-1/attestation/keys/B16698A4ADF4D638-keyserver.ubuntu.com.asc.json": {
+      "source": "target/phase-seven-rn/compiler-review/attestation-followup/keys/B16698A4ADF4D638-keyserver.ubuntu.com.asc",
+      "source_sha256": "00d72f99c99506b2a1a205230608d120afbcbfdadbe5bc65624d795b3b8fd61e"
+    },
+    "followup-1/attestation/keys/BDB5FA4FE719D787FB3D3197F6D4A1D411E9D1AE-keys.openpgp.org.asc": {
+      "source": "target/phase-seven-rn/compiler-review/attestation-followup/keys/BDB5FA4FE719D787FB3D3197F6D4A1D411E9D1AE-keys.openpgp.org.asc",
+      "source_sha256": "78213bb9504338999bc712b5d1641d3eb33891db9d70ad51c3c940813d00fbe2"
+    },
+    "followup-1/attestation/keys/E77417AC194160A3FABD04969A259C7EE636C5ED-keys.openpgp.org.asc": {
+      "source": "target/phase-seven-rn/compiler-review/attestation-followup/keys/E77417AC194160A3FABD04969A259C7EE636C5ED-keys.openpgp.org.asc",
+      "source_sha256": "655511485b4ab2471f2a03560c24a61a275a37bb01a1c246d0a3b8a8eca658b3"
+    },
+    "followup-1/attestation/keys/E77417AC194160A3FABD04969A259C7EE636C5ED-keyserver.ubuntu.com.asc.json": {
+      "source": "target/phase-seven-rn/compiler-review/attestation-followup/keys/E77417AC194160A3FABD04969A259C7EE636C5ED-keyserver.ubuntu.com.asc",
+      "source_sha256": "2299b16f80687e8c7afab3ec11c3ac3f444efc63c69d17025bf26eca32a94e7e"
+    },
+    "followup-1/embedded/upstream/license-third-party/aalto_xml_licence.txt": {
+      "source": "target/phase-seven-rn/compiler-review/embedded-evidence/license-third-party/aalto_xml_licence.txt",
+      "source_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "followup-1/embedded/upstream/license-third-party/asm_license.txt": {
+      "source": "target/phase-seven-rn/compiler-review/embedded-evidence/license-third-party/asm_license.txt",
+      "source_sha256": "bf7e5d772c8adf38d16306cba31de6151e1886560d08888bf25defbe8adf725a"
+    },
+    "followup-1/embedded/upstream/license-third-party/fastutil_licence": {
+      "source": "target/phase-seven-rn/compiler-review/embedded-evidence/license-third-party/fastutil_licence",
+      "source_sha256": "fb411e13059fe3649b2630d6b94f7a031d089a8a78e49256033c4e3f3da3f1f4"
+    },
+    "followup-1/embedded/upstream/license-third-party/guava_license.txt": {
+      "source": "target/phase-seven-rn/compiler-review/embedded-evidence/license-third-party/guava_license.txt",
+      "source_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "followup-1/embedded/upstream/license-third-party/gwt_license.txt": {
+      "source": "target/phase-seven-rn/compiler-review/embedded-evidence/license-third-party/gwt_license.txt",
+      "source_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "followup-1/embedded/upstream/license-third-party/stax2-api.txt": {
+      "source": "target/phase-seven-rn/compiler-review/embedded-evidence/license-third-party/stax2-api.txt",
+      "source_sha256": "7f33221dc6c76f3e8ea4111088ec905ca4ba59cdfabd67e27e1953a94d07ae34"
+    },
+    "followup-1/embedded/upstream/license-third-party/trove_license.txt.json": {
+      "source": "target/phase-seven-rn/compiler-review/embedded-evidence/license-third-party/trove_license.txt",
+      "source_sha256": "dfc7c3ce50ee8217506becd88eb534ad11fa292564fc5b3ef3f4ccad40f95d5c"
+    },
+    "followup-1/embedded/upstream/license-third-party/trove_readme_license.txt.json": {
+      "source": "target/phase-seven-rn/compiler-review/embedded-evidence/license-third-party/trove_readme_license.txt",
+      "source_sha256": "7088d9c07317e94f1f9b794e7ec713f99f65d03614dd105b70754a09e7c46df1"
+    },
+    "followup-1/embedded/advisories/GHSA-2qrg-x229-3v8q.json": {
+      "source": "target/phase-seven-rn/compiler-review/embedded-evidence/advisories/GHSA-2qrg-x229-3v8q.json",
+      "source_sha256": "cd6492a2fd290e8341e6eafc5e2a0b446466cca1d3aae22176a638a4d74b59e1"
+    },
+    "followup-1/embedded/advisories/GHSA-343h-94h5-c4wr.json": {
+      "source": "target/phase-seven-rn/compiler-review/embedded-evidence/advisories/GHSA-343h-94h5-c4wr.json",
+      "source_sha256": "004d2703606a980e447b4da3c09e77a27594e00c797eef9d710d32f05f02169f"
+    },
+    "followup-1/embedded/advisories/GHSA-4v53-57pg-c464.json": {
+      "source": "target/phase-seven-rn/compiler-review/embedded-evidence/advisories/GHSA-4v53-57pg-c464.json",
+      "source_sha256": "725760b1717cf3a46ebc8357ff6a3fafcc10c57ad70f415280ad5f299182980d"
+    },
+    "followup-1/embedded/advisories/GHSA-65fg-84f6-3jq3.json": {
+      "source": "target/phase-seven-rn/compiler-review/embedded-evidence/advisories/GHSA-65fg-84f6-3jq3.json",
+      "source_sha256": "d1cf77ace953471cea3ff9f05af7033c8b9748abaa364bb5113ce46853f4cd94"
+    },
+    "followup-1/embedded/advisories/GHSA-6cx8-rjf8-pr8g.json": {
+      "source": "target/phase-seven-rn/compiler-review/embedded-evidence/advisories/GHSA-6cx8-rjf8-pr8g.json",
+      "source_sha256": "c65d1e210ec6cc22661b43a82a84f4c93a73bacbfde92ccc791f7f2a9e56633a"
+    },
+    "followup-1/embedded/advisories/GHSA-735f-pc8j-v9w8.json": {
+      "source": "target/phase-seven-rn/compiler-review/embedded-evidence/advisories/GHSA-735f-pc8j-v9w8.json",
+      "source_sha256": "5b1d1836a4b372578bba3a097b956ad9ba9a137daf4e1eca9eb2f6ec2c7e35d1"
+    },
+    "followup-1/embedded/advisories/GHSA-cmp6-m4wj-q63q.json": {
+      "source": "target/phase-seven-rn/compiler-review/embedded-evidence/advisories/GHSA-cmp6-m4wj-q63q.json",
+      "source_sha256": "7ffacf8cfb876fcd01b78a8b7b9681741f2e3eebc23559a25ea1d5a1eefb8fd2"
+    },
+    "followup-1/embedded/advisories/GHSA-f7vh-qwp3-x37m.json": {
+      "source": "target/phase-seven-rn/compiler-review/embedded-evidence/advisories/GHSA-f7vh-qwp3-x37m.json",
+      "source_sha256": "3fd83d891a2647c4301132905fc989ddbb45df956e6db34017a32467e3f3adcc"
+    },
+    "followup-1/embedded/advisories/GHSA-fp5r-v3w9-4333.json": {
+      "source": "target/phase-seven-rn/compiler-review/embedded-evidence/advisories/GHSA-fp5r-v3w9-4333.json",
+      "source_sha256": "a0bf6c9a4007d5691bc2c8a2d0429e639d3a6073a3acfc06fa47f981e8979ea4"
+    },
+    "followup-1/embedded/advisories/GHSA-gm45-99xc-r7wv.json": {
+      "source": "target/phase-seven-rn/compiler-review/embedded-evidence/advisories/GHSA-gm45-99xc-r7wv.json",
+      "source_sha256": "58897a6676f6a53010b6d53ef6921e4a7e28676e6fc3aa3ba5606cc13584c63c"
+    },
+    "followup-1/embedded/advisories/GHSA-h4h5-3hr4-j3g2.json": {
+      "source": "target/phase-seven-rn/compiler-review/embedded-evidence/advisories/GHSA-h4h5-3hr4-j3g2.json",
+      "source_sha256": "d581e1556a042132f55a4ad035e52e3c761f9c5eb417a6621245159d6fe877d4"
+    },
+    "followup-1/embedded/advisories/GHSA-mcr4-qmvw-px4g.json": {
+      "source": "target/phase-seven-rn/compiler-review/embedded-evidence/advisories/GHSA-mcr4-qmvw-px4g.json",
+      "source_sha256": "6c680807c20248d7dfe602d9143e3ee0466189008eaae09acc292061275e80c1"
+    },
+    "followup-1/embedded/advisories/GHSA-vp98-w2p3-mv35.json": {
+      "source": "target/phase-seven-rn/compiler-review/embedded-evidence/advisories/GHSA-vp98-w2p3-mv35.json",
+      "source_sha256": "0bc4bc32131e9abd18928b4c53ec483e0b83771c7fe197a7fa5d4bd6c8e642e7"
+    },
+    "followup-1/embedded/advisories/GHSA-vqf4-7m7x-wgfc.json": {
+      "source": "target/phase-seven-rn/compiler-review/embedded-evidence/advisories/GHSA-vqf4-7m7x-wgfc.json",
+      "source_sha256": "3d10b2eaf0ae670218045ac66de1fc7f170142b7819cd8227e34225695849a59"
+    },
+    "followup-1/embedded/advisories/GHSA-w9p3-5cr8-m3jj.json": {
+      "source": "target/phase-seven-rn/compiler-review/embedded-evidence/advisories/GHSA-w9p3-5cr8-m3jj.json",
+      "source_sha256": "5a33519107e806832297bf2fc12e370aa8010466fef8a21fc90182a6004789ad"
+    },
+    "followup-1/embedded/advisories/GHSA-wrvw-hg22-4m67.json": {
+      "source": "target/phase-seven-rn/compiler-review/embedded-evidence/advisories/GHSA-wrvw-hg22-4m67.json",
+      "source_sha256": "f44f2b19c4c74c7744cd4c6e4cf32f233b8cc7e57ba89d479afa7d56c5acc26d"
+    },
+    "followup-1/embedded/advisories/GHSA-xx22-p4ch-683r.json": {
+      "source": "target/phase-seven-rn/compiler-review/embedded-evidence/advisories/GHSA-xx22-p4ch-683r.json",
+      "source_sha256": "100f39af47e0404cb7a6f6004c552d58724992f66b1c1d3877df3ea67b6687c1"
+    },
+    "marker/bytes/org.jetbrains.kotlin.jvm.gradle.plugin-2.1.20.pom": {
+      "source": "target/phase-seven-rn/marker-review/bytes/org.jetbrains.kotlin.jvm.gradle.plugin-2.1.20.pom",
+      "source_sha256": "5ccb905a796717218c1bb4eed8bb31fc674c5803cdd54c23753ead380f7a11b5"
+    },
+    "marker/bytes/org.jetbrains.kotlin.jvm.gradle.plugin-2.1.20.pom.sha1": {
+      "source": "target/phase-seven-rn/marker-review/bytes/org.jetbrains.kotlin.jvm.gradle.plugin-2.1.20.pom.sha1",
+      "source_sha256": "099475416ef50063249e0e318cacb63fc925aeffc63c8263f921014aa14a57aa"
+    },
+    "marker/bytes/org.jetbrains.kotlin.jvm.gradle.plugin-2.1.20.pom.md5": {
+      "source": "target/phase-seven-rn/marker-review/bytes/org.jetbrains.kotlin.jvm.gradle.plugin-2.1.20.pom.md5",
+      "source_sha256": "52e795d097ff73941cac706f57f690993d36430dabc2c5d733bf2564f5b51483"
+    },
+    "followup-1/tools-v2/bundle_v2.py.txt": {
+      "source": "target/phase-seven-rn/compiler-review/tools/bundle_v2.py",
+      "source_sha256": "054cadc8e3d894796fe6567847367d424467ddf4bf557a9a4e6ae7a7f2e71ba8"
+    },
+    "followup-1/revalidate.py.txt": {
+      "source": "target/phase-seven-rn/compiler-review/tools/revalidate.py",
+      "source_sha256": "88ff32cc47385b5ef5b3d0b17b62a461bb206a71f2d93cc23296b593522ac51d"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+[
+  "swift",
+  "build",
+  "--package-path",
+  "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-phase7-consumer-s2413p0r",
+  "-Xswiftc",
+  "-warnings-as-errors"
+]

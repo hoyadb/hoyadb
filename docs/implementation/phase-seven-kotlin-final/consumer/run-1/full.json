@@ -1,0 +1,102 @@
+{
+  "mode": "full",
+  "failed": 10,
+  "cases": [
+    {
+      "id": "K14.actual_16KiB_native_abi",
+      "ok": true
+    },
+    {
+      "id": "K01.memory.literal_schema_A_all_values_relations_queries_batch",
+      "ok": true
+    },
+    {
+      "id": "K01.memory.literal_schema_B_HasMany",
+      "ok": true
+    },
+    {
+      "id": "K06.memory.initial_UI_executor_reentrant_drain_cancel",
+      "ok": true
+    },
+    {
+      "id": "K07.memory.awaited_command_context_injected_ID",
+      "ok": true
+    },
+    {
+      "id": "K08.memory.noncooperative_cancel_late_resume_releases_scope",
+      "ok": true
+    },
+    {
+      "id": "K09.memory.packaged_fake_exact_wire_and_i64",
+      "ok": false,
+      "error": "Protocol"
+    },
+    {
+      "id": "K01.protected.literal_schema_A_all_values_relations_queries_batch",
+      "ok": false,
+      "error": "InvalidRequest"
+    },
+    {
+      "id": "K01.protected.literal_schema_B_HasMany",
+      "ok": false,
+      "error": "InvalidRequest"
+    },
+    {
+      "id": "K06.protected.initial_UI_executor_reentrant_drain_cancel",
+      "ok": false,
+      "error": "InvalidRequest"
+    },
+    {
+      "id": "K07.protected.awaited_command_context_injected_ID",
+      "ok": false,
+      "error": "InvalidRequest"
+    },
+    {
+      "id": "K08.protected.noncooperative_cancel_late_resume_releases_scope",
+      "ok": false,
+      "error": "InvalidRequest"
+    },
+    {
+      "id": "K09.protected.packaged_fake_exact_wire_and_i64",
+      "ok": false,
+      "error": "InvalidRequest"
+    },
+    {
+      "id": "K04.retained_memory_all_seven_authored_steps",
+      "ok": true
+    },
+    {
+      "id": "K13.actual_noBackup_optin_key_cipher_foreign_corruption_preservation",
+      "ok": false,
+      "error": "InvalidRequest"
+    },
+    {
+      "id": "K11_K12.actual_protected_passive_hooks_pull_reset",
+      "ok": false,
+      "error": "InvalidRequest"
+    },
+    {
+      "id": "K10_K22.all_local_operations_without_successful_transport",
+      "ok": false,
+      "error": "InvalidRequest"
+    },
+    {
+      "id": "K02_K24.public_opaque_formatting_and_static_boundaries",
+      "ok": true
+    },
+    {
+      "id": "K02_K11.large_owned_event_prefixes",
+      "ok": true
+    },
+    {
+      "id": "K02_K11.aggregate_push_prefixes_retain_exact_core_batch",
+      "ok": true
+    },
+    {
+      "id": "K15.late_sync_response_cannot_reach_replacement_owner_or_mapper",
+      "ok": true
+    }
+  ],
+  "page_size": 16384,
+  "pid": 6151
+}

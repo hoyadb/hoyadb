@@ -1,0 +1,78 @@
+{
+  "status": "Reviewed inert research only; not observation acceptance or approval",
+  "proposal_commit": "b69613a72078c2f6b4de934ea71d672727f68d38",
+  "raw_inputs": {
+    "inventory_directory": "target/phase-seven-security-remediation/observation-static-inventory",
+    "inventory_index_sha256": "1bb171364dc63b3429b6818ef8f5c0b367adc594460e78ebfdc50a07b3061c05",
+    "dispatch_directory": "target/phase-seven-rn/android/dispatch-static-study",
+    "dispatch_index_sha256": "d051f64a9b841e6be63498611d9b3cdc1e96b1bc45f199212d813845698597e9",
+    "root_verification": "target/phase-seven-security-remediation/observation-static-root-verification.json",
+    "root_verification_sha256": "a599003f74264a7611e062773953e9b48528048142ee91ab42aa6cf11c747824"
+  },
+  "root_verification": {
+    "inventory_index_entries": 8,
+    "source_archive_hashes_and_lengths_verified": 517,
+    "jdk_file_hashes_and_lengths_verified": 71,
+    "recorded_archive_entry_digests_and_lengths_verified": 453,
+    "dispatch_outputs": 13,
+    "dispatch_tools": 2,
+    "frozen_prior_notes": 2
+  },
+  "focused_review": {
+    "agent_id": "e6f3b33e-7787-43bb-904f-646b096c9154",
+    "model": "claude-opus-5-5",
+    "message_id": "5869b9e0-b122-4cee-b326-a0fe371769c0",
+    "verdict": "PASS as inert evidence, subject to the qualifications recorded here"
+  },
+  "qualifications": [
+    {
+      "area": "Compiler class origin",
+      "finding": "A per-compile URLClassLoader over a configured compiler classpath does not prove the actual class origin under parent-first delegation. Boot, platform and system-loader visibility, daemon classpath and agent/boot-classpath additions remain material. KGP plugin-loader copies are not thereby inert.",
+      "required_evidence": "Keep actual class origin and compiler-classpath wiring unresolved until verified."
+    },
+    {
+      "area": "Task completion",
+      "finding": "TaskExecution$3 calls AsyncWorkTracker.waitForCompletion after action.execute. The exact tracker semantics, operation linkage and work covered were not decoded.",
+      "correction": "This suggests a later doLast may follow completion only if that tracker waits for the relevant noIsolation work. It does not yet disprove the older timing pitfall. The earlier root commentary calling the study a correction was too strong."
+    },
+    {
+      "area": "Referenced LZ4 implementation names",
+      "finding": "archive-findings.json records CompressionUtil string references to org.jetbrains.kotlin.com.intellij.util.io.LZ4Compressor and org.jetbrains.kotlin.com.intellij.util.io.LZ4Decompressor. Normalized as internal names, neither matches a current guard prefix. CompressionUtil itself does match.",
+      "limits": "These are references, not proof of loaded implementation classes or affected invocation. Presence/runtime source and routes remain unresolved. Current prefixes must not be described as independently covering every referenced implementation."
+    },
+    {
+      "area": "Inventory selection",
+      "finding": "The name-based family scan is non-exhaustive. The 63 outside-prefix selections are other LZ4 implementations or name matches, not automatically vulnerable copies. Extracted payload bytes do not prove loading."
+    }
+  ],
+  "controller_checklist": {
+    "source": "target/phase-seven-rn/android/build.py",
+    "sha256": "95cabcd410d61664da8ebde07f29db3fb113f9bc7fb1bd8bb2bf38b93050c70d",
+    "lines": "234-241",
+    "facts": [
+      "The child environment inherits os.environ",
+      "Inherited JAVA_OPTS and JDK_JAVA_OPTIONS are neither rejected nor cleared in the current explicit rejection list",
+      "The runner constructs JAVA_TOOL_OPTIONS=-Djava.net.preferIPv4Stack=true; future expected inputs must account for this as constructed input"
+    ],
+    "disposition": "Guard wiring and controller correction are not implemented by these studies. No guarded-build claim is made."
+  },
+  "no_changes": [
+    "Frozen raw study bytes",
+    "Formal SPEC-0034 and TC-0038",
+    "Guard sources or R1 pin",
+    "Dependency activation",
+    "Baseline enrollment",
+    "JVM/Gradle/compiler execution authorization"
+  ],
+  "operator_decisions": {
+    "D1": "PENDING",
+    "D2": "PENDING"
+  },
+  "separate_gates": [
+    "Exact dependency delta approval",
+    "Open protobuf advisory disposition",
+    "Concrete baseline review",
+    "Bounded execution/control approval"
+  ],
+  "final_phase_seven_rounds_counted": 0
+}

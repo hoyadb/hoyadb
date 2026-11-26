@@ -1,0 +1,11 @@
+{
+  "scope": "Binds the root review supplement and the two local frozen study indexes; local study bodies remain under ignored target",
+  "files": {
+    "phase-seven-observation-static-review.json": "13ae34b237607e86138378e488fb2bf9a0561b133e71f99fef4a9dc7e3027dfa"
+  },
+  "local_indexes": {
+    "target/phase-seven-security-remediation/observation-static-inventory/files-sha256.json": "1bb171364dc63b3429b6818ef8f5c0b367adc594460e78ebfdc50a07b3061c05",
+    "target/phase-seven-rn/android/dispatch-static-study/outputs-sha256.json": "d051f64a9b841e6be63498611d9b3cdc1e96b1bc45f199212d813845698597e9"
+  },
+  "proposal_index_sha256": "395228b2bf495fd7f6635c8311680f7893d7698e7ecb9aea603c6becc07b1324"
+}

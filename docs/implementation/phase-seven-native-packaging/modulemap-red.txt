@@ -1,0 +1,99 @@
+checking /Users/boristacyniak/Projects/alocasia/hoyadb/bindings/swift/Artifacts/HoyaNative.xcframework
+test_claimed_slices_only (__main__.XCFrameworkPackaging.test_claimed_slices_only) ... ok
+test_every_slice_uses_one_static_library_basename (__main__.XCFrameworkPackaging.test_every_slice_uses_one_static_library_basename) ... ok
+test_headers_and_module_map_present_per_slice (__main__.XCFrameworkPackaging.test_headers_and_module_map_present_per_slice) ... FAIL
+test_recorded_build_evidence_matches_bytes (__main__.XCFrameworkPackaging.test_recorded_build_evidence_matches_bytes) ... ok
+test_two_package_manager_copies_import_one_module (__main__.XCFrameworkPackaging.test_two_package_manager_copies_import_one_module) ... FAIL
+
+======================================================================
+FAIL: test_headers_and_module_map_present_per_slice (__main__.XCFrameworkPackaging.test_headers_and_module_map_present_per_slice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/swift/check_artifacts.py", line 54, in test_headers_and_module_map_present_per_slice
+    self.assertEqual(files, ["HoyaNative/module.modulemap", "hoyadb.h"], identifier)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['hoyadb.h', 'module.modulemap'] != ['HoyaNative/module.modulemap', 'hoyadb.h']
+
+First differing element 0:
+'hoyadb.h'
+'HoyaNative/module.modulemap'
+
+- ['hoyadb.h', 'module.modulemap']
++ ['HoyaNative/module.modulemap', 'hoyadb.h'] : ios-arm64
+
+======================================================================
+FAIL: test_two_package_manager_copies_import_one_module (__main__.XCFrameworkPackaging.test_two_package_manager_copies_import_one_module)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/swift/check_artifacts.py", line 69, in test_two_package_manager_copies_import_one_module
+    self.assertEqual(result.returncode, 0, result.stdout)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : /var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/tmp0elje0sf/cocoapods-headers/module.modulemap:1:8: error: redefinition of module 'HoyaNative'
+1 | module HoyaNative {
+  |        `- error: redefinition of module 'HoyaNative'
+2 |     header "hoyadb.h"
+3 |     export *
+
+/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/tmp0elje0sf/swiftpm-include/module.modulemap:1:8: note: previously defined here
+1 | module HoyaNative {
+  |        `- note: previously defined here
+2 |     header "hoyadb.h"
+3 |     export *
+
+/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/tmp0elje0sf/cocoapods-headers/module.modulemap:1:8: error: redefinition of module 'HoyaNative'
+1 | module HoyaNative {
+  |        `- error: redefinition of module 'HoyaNative'
+2 |     header "hoyadb.h"
+3 |     export *
+
+/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/tmp0elje0sf/swiftpm-include/module.modulemap:1:8: note: previously defined here
+1 | module HoyaNative {
+  |        `- note: previously defined here
+2 |     header "hoyadb.h"
+3 |     export *
+
+/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/tmp0elje0sf/swiftpm-include/hoyadb.h:5:10: note: while building module '_Builtin_stdint' imported from /var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/tmp0elje0sf/swiftpm-include/hoyadb.h:5:
+ 3 | 
+ 4 | #include <stddef.h>
+ 5 | #include <stdint.h>
+   |          `- note: while building module '_Builtin_stdint' imported from /var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/tmp0elje0sf/swiftpm-include/hoyadb.h:5:
+ 6 | 
+ 7 | #ifdef __cplusplus
+
+<module-includes>:1:9: note: in file included from <module-includes>:1:
+1 | #import "stdint.h"
+  |         `- note: in file included from <module-includes>:1:
+2 | 
+
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/clang/include/stdint.h:56:16: error: could not build module '_DarwinFoundation2'
+ 54 | # endif
+ 55 | 
+ 56 | # include_next <stdint.h>
+    |                `- error: could not build module '_DarwinFoundation2'
+ 57 | 
+ 58 | # ifdef __STDC_LIMIT_MACROS_DEFINED_BY_CLANG
+
+<module-includes>:1:9: note: in file included from <module-includes>:1:
+1 | #import "hoyadb.h"
+  |         `- note: in file included from <module-includes>:1:
+2 | 
+
+/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/tmp0elje0sf/swiftpm-include/hoyadb.h:5:10: error: could not build module '_Builtin_stdint'
+ 3 | 
+ 4 | #include <stddef.h>
+ 5 | #include <stdint.h>
+   |          `- error: could not build module '_Builtin_stdint'
+ 6 | 
+ 7 | #ifdef __cplusplus
+
+/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/tmp0elje0sf/probe.swift:1:8: error: could not build Objective-C module 'HoyaNative'
+1 | import HoyaNative
+  |        `- error: could not build Objective-C module 'HoyaNative'
+2 | let version = hoya_v1_abi_version()
+3 | 
+
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.795s
+
+FAILED (failures=2)

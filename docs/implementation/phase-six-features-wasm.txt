@@ -1,0 +1,190 @@
+hoyadb-phase-six-dependency-review v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-six-dependency-review)
+├── js-sys feature "default"
+│   ├── js-sys v0.3.106
+│   │   ├── futures-util v0.3.34
+│   │   │   ├── futures-core v0.3.34
+│   │   │   ├── futures-task v0.3.34
+│   │   │   ├── slab v0.4.12
+│   │   │   └── pin-project-lite feature "default"
+│   │   │       └── pin-project-lite v0.2.17
+│   │   ├── wasm-bindgen v0.2.129
+│   │   │   ├── once_cell v1.21.4
+│   │   │   ├── cfg-if feature "default"
+│   │   │   │   └── cfg-if v1.0.5
+│   │   │   ├── wasm-bindgen-macro feature "default"
+│   │   │   │   └── wasm-bindgen-macro v0.2.129 (proc-macro)
+│   │   │   │       ├── quote feature "default"
+│   │   │   │       │   ├── quote v1.0.47
+│   │   │   │       │   │   └── proc-macro2 v1.0.107
+│   │   │   │       │   │       └── unicode-ident feature "default"
+│   │   │   │       │   │           └── unicode-ident v1.0.27
+│   │   │   │       │   └── quote feature "proc-macro"
+│   │   │   │       │       ├── quote v1.0.47 (*)
+│   │   │   │       │       └── proc-macro2 feature "proc-macro"
+│   │   │   │       │           └── proc-macro2 v1.0.107 (*)
+│   │   │   │       └── wasm-bindgen-macro-support feature "default"
+│   │   │   │           └── wasm-bindgen-macro-support v0.2.129
+│   │   │   │               ├── quote feature "default" (*)
+│   │   │   │               ├── proc-macro2 feature "default"
+│   │   │   │               │   ├── proc-macro2 v1.0.107 (*)
+│   │   │   │               │   └── proc-macro2 feature "proc-macro" (*)
+│   │   │   │               ├── bumpalo feature "default"
+│   │   │   │               │   └── bumpalo v3.20.3
+│   │   │   │               ├── syn feature "default"
+│   │   │   │               │   ├── syn v3.0.9
+│   │   │   │               │   │   ├── proc-macro2 v1.0.107 (*)
+│   │   │   │               │   │   ├── quote v1.0.47 (*)
+│   │   │   │               │   │   └── unicode-ident feature "default" (*)
+│   │   │   │               │   ├── syn feature "clone-impls"
+│   │   │   │               │   │   └── syn v3.0.9 (*)
+│   │   │   │               │   ├── syn feature "derive"
+│   │   │   │               │   │   └── syn v3.0.9 (*)
+│   │   │   │               │   ├── syn feature "parsing"
+│   │   │   │               │   │   └── syn v3.0.9 (*)
+│   │   │   │               │   ├── syn feature "printing"
+│   │   │   │               │   │   └── syn v3.0.9 (*)
+│   │   │   │               │   └── syn feature "proc-macro"
+│   │   │   │               │       ├── syn v3.0.9 (*)
+│   │   │   │               │       ├── quote feature "proc-macro" (*)
+│   │   │   │               │       └── proc-macro2 feature "proc-macro" (*)
+│   │   │   │               ├── syn feature "extra-traits"
+│   │   │   │               │   └── syn v3.0.9 (*)
+│   │   │   │               ├── syn feature "full"
+│   │   │   │               │   └── syn v3.0.9 (*)
+│   │   │   │               ├── syn feature "visit"
+│   │   │   │               │   └── syn v3.0.9 (*)
+│   │   │   │               ├── syn feature "visit-mut"
+│   │   │   │               │   └── syn v3.0.9 (*)
+│   │   │   │               └── wasm-bindgen-shared feature "default"
+│   │   │   │                   └── wasm-bindgen-shared v0.2.129
+│   │   │   │                       └── unicode-ident feature "default" (*)
+│   │   │   └── wasm-bindgen-shared feature "default"
+│   │   │       └── wasm-bindgen-shared v0.2.129
+│   │   │           └── unicode-ident feature "default"
+│   │   │               └── unicode-ident v1.0.27
+│   │   │   [build-dependencies]
+│   │   │   └── rustversion feature "default"
+│   │   │       └── rustversion v1.0.23 (proc-macro)
+│   │   └── cfg-if feature "default" (*)
+│   ├── js-sys feature "std"
+│   │   ├── js-sys v0.3.106 (*)
+│   │   ├── js-sys feature "futures-util"
+│   │   │   └── js-sys v0.3.106 (*)
+│   │   ├── futures-util feature "std"
+│   │   │   ├── futures-util v0.3.34 (*)
+│   │   │   ├── futures-util feature "alloc"
+│   │   │   │   ├── futures-util v0.3.34 (*)
+│   │   │   │   ├── futures-util feature "slab"
+│   │   │   │   │   └── futures-util v0.3.34 (*)
+│   │   │   │   ├── futures-core feature "alloc"
+│   │   │   │   │   └── futures-core v0.3.34
+│   │   │   │   └── futures-task feature "alloc"
+│   │   │   │       └── futures-task v0.3.34
+│   │   │   ├── futures-util feature "slab" (*)
+│   │   │   ├── futures-core feature "std"
+│   │   │   │   ├── futures-core v0.3.34
+│   │   │   │   └── futures-core feature "alloc" (*)
+│   │   │   ├── futures-task feature "std"
+│   │   │   │   ├── futures-task v0.3.34
+│   │   │   │   └── futures-task feature "alloc" (*)
+│   │   │   └── slab feature "std"
+│   │   │       └── slab v0.4.12
+│   │   └── wasm-bindgen feature "std"
+│   │       └── wasm-bindgen v0.2.129 (*)
+│   └── js-sys feature "unsafe-eval"
+│       └── js-sys v0.3.106 (*)
+├── wasm-bindgen feature "default"
+│   ├── wasm-bindgen v0.2.129 (*)
+│   └── wasm-bindgen feature "std" (*)
+├── rusqlite feature "ffi-sqlite-wasm-rs"
+│   └── rusqlite v0.40.1 (https://github.com/rusqlite/rusqlite?rev=661107f6eb5d7477c61be1221744de3ad96c53e7#661107f6)
+│       ├── sqlite-wasm-rs v0.6.2
+│       │   ├── js-sys v0.3.106 (*)
+│       │   ├── wasm-bindgen v0.2.129 (*)
+│       │   └── rsqlite-vfs feature "default"
+│       │       └── rsqlite-vfs v0.2.0
+│       │           └── thiserror v2.0.21
+│       │               └── thiserror-impl feature "default"
+│       │                   └── thiserror-impl v2.0.21 (proc-macro)
+│       │                       ├── quote feature "default" (*)
+│       │                       ├── proc-macro2 feature "default" (*)
+│       │                       └── syn feature "default" (*)
+│       │   [build-dependencies]
+│       │   ├── cc feature "default"
+│       │   │   └── cc v1.10.0
+│       │   │       ├── find-msvc-tools feature "default"
+│       │   │       │   └── find-msvc-tools v0.1.15
+│       │   │       └── shlex feature "default"
+│       │   │           ├── shlex v2.0.1
+│       │   │           └── shlex feature "std"
+│       │   │               └── shlex v2.0.1
+│       │   └── sqlcipher-src feature "default"
+│       │       └── sqlcipher-src v419.0.6+sqlcipher-4.19.0-sqlite-3.53.4-libtomcrypt-1.18.2
+│       ├── bitflags feature "default"
+│       │   └── bitflags v2.13.2
+│       ├── fallible-iterator feature "default"
+│       │   ├── fallible-iterator v0.3.0
+│       │   └── fallible-iterator feature "alloc"
+│       │       └── fallible-iterator v0.3.0
+│       ├── fallible-streaming-iterator feature "default"
+│       │   └── fallible-streaming-iterator v0.1.9
+│       └── smallvec feature "default"
+│           └── smallvec v1.16.4
+├── sqlite-wasm-rs feature "sqlcipher"
+│   └── sqlite-wasm-rs v0.6.2 (*)
+├── sqlite-wasm-rs feature "wasm-bindgen"
+│   └── sqlite-wasm-rs v0.6.2 (*)
+├── sqlite-wasm-vfs feature "sahpool"
+│   └── sqlite-wasm-vfs v0.3.0
+│       ├── thiserror v2.0.21 (*)
+│       ├── wasm-bindgen v0.2.129 (*)
+│       ├── js-sys feature "std" (*)
+│       ├── futures-util feature "std" (*)
+│       ├── rsqlite-vfs feature "default" (*)
+│       ├── web-sys feature "DedicatedWorkerGlobalScope"
+│       │   ├── web-sys v0.3.106
+│       │   │   ├── js-sys v0.3.106 (*)
+│       │   │   └── wasm-bindgen v0.2.129 (*)
+│       │   ├── web-sys feature "EventTarget"
+│       │   │   └── web-sys v0.3.106 (*)
+│       │   └── web-sys feature "WorkerGlobalScope"
+│       │       ├── web-sys v0.3.106 (*)
+│       │       └── web-sys feature "EventTarget" (*)
+│       ├── web-sys feature "FileSystemDirectoryHandle"
+│       │   ├── web-sys v0.3.106 (*)
+│       │   └── web-sys feature "FileSystemHandle"
+│       │       └── web-sys v0.3.106 (*)
+│       ├── web-sys feature "FileSystemFileHandle"
+│       │   ├── web-sys v0.3.106 (*)
+│       │   └── web-sys feature "FileSystemHandle" (*)
+│       ├── web-sys feature "FileSystemGetDirectoryOptions"
+│       │   └── web-sys v0.3.106 (*)
+│       ├── web-sys feature "FileSystemGetFileOptions"
+│       │   └── web-sys v0.3.106 (*)
+│       ├── web-sys feature "FileSystemReadWriteOptions"
+│       │   └── web-sys v0.3.106 (*)
+│       ├── web-sys feature "FileSystemSyncAccessHandle"
+│       │   └── web-sys v0.3.106 (*)
+│       ├── web-sys feature "StorageManager"
+│       │   └── web-sys v0.3.106 (*)
+│       └── web-sys feature "WorkerNavigator"
+│           └── web-sys v0.3.106 (*)
+├── web-sys feature "DedicatedWorkerGlobalScope" (*)
+├── web-sys feature "default"
+│   ├── web-sys v0.3.106 (*)
+│   └── web-sys feature "std"
+│       ├── web-sys v0.3.106 (*)
+│       ├── js-sys feature "std" (*)
+│       └── wasm-bindgen feature "std" (*)
+├── wasm-bindgen-futures feature "default"
+│   ├── wasm-bindgen-futures v0.4.79
+│   │   ├── js-sys v0.3.106 (*)
+│   │   └── wasm-bindgen v0.2.129 (*)
+│   └── wasm-bindgen-futures feature "std"
+│       ├── wasm-bindgen-futures v0.4.79 (*)
+│       ├── js-sys feature "std" (*)
+│       └── wasm-bindgen feature "std" (*)
+└── zeroize feature "default"
+    ├── zeroize v1.9.1
+    └── zeroize feature "alloc"
+        └── zeroize v1.9.1

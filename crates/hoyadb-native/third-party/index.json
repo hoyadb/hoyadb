@@ -1,0 +1,1134 @@
+{
+  "format": 1,
+  "platform": "apple",
+  "scope": "Notices for the local unpublished HoyaNative.xcframework: Apple native Rust graph (linked and build-only roles), SQLCipher/SQLite C code, OS-provided CommonCrypto/Security and the Rust std toolchain aggregate.",
+  "project_distribution_license": "MIT",
+  "lock": {
+    "file": "crates/hoyadb-native/Cargo.lock",
+    "sha256": "a96a5481be73dc5ab125b4cec4b441bedd256f7a1d834694073cba5f342cb951"
+  },
+  "apple_targets": [
+    "x86_64-apple-darwin",
+    "aarch64-apple-ios",
+    "aarch64-apple-ios-sim",
+    "x86_64-apple-ios"
+  ],
+  "graph": {
+    "normal": [
+      "bitflags 2.13.2",
+      "fallible-iterator 0.3.0",
+      "fallible-streaming-iterator 0.1.9",
+      "libsqlite3-sys 0.38.1",
+      "rusqlite 0.40.1",
+      "smallvec 1.16.4",
+      "zeroize 1.9.1"
+    ],
+    "build": [
+      "cc 1.10.0",
+      "find-msvc-tools 0.1.15",
+      "pkg-config 0.3.34",
+      "shlex 2.0.1",
+      "sqlcipher-src 419.0.6+sqlcipher-4.19.0-sqlite-3.53.4-libtomcrypt-1.18.2",
+      "vcpkg 0.2.15"
+    ]
+  },
+  "excluded_lock_packages": [
+    {
+      "name": "bumpalo",
+      "version": "3.20.3",
+      "reason": "not on the normal or build graph of any Apple target (cargo tree --locked --offline)"
+    },
+    {
+      "name": "cfg-if",
+      "version": "1.0.5",
+      "reason": "not on the normal or build graph of any Apple target (cargo tree --locked --offline)"
+    },
+    {
+      "name": "futures-core",
+      "version": "0.3.34",
+      "reason": "not on the normal or build graph of any Apple target (cargo tree --locked --offline)"
+    },
+    {
+      "name": "futures-task",
+      "version": "0.3.34",
+      "reason": "not on the normal or build graph of any Apple target (cargo tree --locked --offline)"
+    },
+    {
+      "name": "futures-util",
+      "version": "0.3.34",
+      "reason": "not on the normal or build graph of any Apple target (cargo tree --locked --offline)"
+    },
+    {
+      "name": "js-sys",
+      "version": "0.3.106",
+      "reason": "not on the normal or build graph of any Apple target (cargo tree --locked --offline)"
+    },
+    {
+      "name": "once_cell",
+      "version": "1.21.4",
+      "reason": "not on the normal or build graph of any Apple target (cargo tree --locked --offline)"
+    },
+    {
+      "name": "pin-project-lite",
+      "version": "0.2.17",
+      "reason": "not on the normal or build graph of any Apple target (cargo tree --locked --offline)"
+    },
+    {
+      "name": "proc-macro2",
+      "version": "1.0.107",
+      "reason": "not on the normal or build graph of any Apple target (cargo tree --locked --offline)"
+    },
+    {
+      "name": "quote",
+      "version": "1.0.47",
+      "reason": "not on the normal or build graph of any Apple target (cargo tree --locked --offline)"
+    },
+    {
+      "name": "rsqlite-vfs",
+      "version": "0.2.0",
+      "reason": "not on the normal or build graph of any Apple target (cargo tree --locked --offline)"
+    },
+    {
+      "name": "rustversion",
+      "version": "1.0.23",
+      "reason": "not on the normal or build graph of any Apple target (cargo tree --locked --offline)"
+    },
+    {
+      "name": "slab",
+      "version": "0.4.12",
+      "reason": "not on the normal or build graph of any Apple target (cargo tree --locked --offline)"
+    },
+    {
+      "name": "sqlite-wasm-rs",
+      "version": "0.6.2",
+      "reason": "not on the normal or build graph of any Apple target (cargo tree --locked --offline)"
+    },
+    {
+      "name": "syn",
+      "version": "3.0.9",
+      "reason": "not on the normal or build graph of any Apple target (cargo tree --locked --offline)"
+    },
+    {
+      "name": "thiserror",
+      "version": "2.0.21",
+      "reason": "not on the normal or build graph of any Apple target (cargo tree --locked --offline)"
+    },
+    {
+      "name": "thiserror-impl",
+      "version": "2.0.21",
+      "reason": "not on the normal or build graph of any Apple target (cargo tree --locked --offline)"
+    },
+    {
+      "name": "unicode-ident",
+      "version": "1.0.27",
+      "reason": "not on the normal or build graph of any Apple target (cargo tree --locked --offline)"
+    },
+    {
+      "name": "wasm-bindgen",
+      "version": "0.2.129",
+      "reason": "not on the normal or build graph of any Apple target (cargo tree --locked --offline)"
+    },
+    {
+      "name": "wasm-bindgen-macro",
+      "version": "0.2.129",
+      "reason": "not on the normal or build graph of any Apple target (cargo tree --locked --offline)"
+    },
+    {
+      "name": "wasm-bindgen-macro-support",
+      "version": "0.2.129",
+      "reason": "not on the normal or build graph of any Apple target (cargo tree --locked --offline)"
+    },
+    {
+      "name": "wasm-bindgen-shared",
+      "version": "0.2.129",
+      "reason": "not on the normal or build graph of any Apple target (cargo tree --locked --offline)"
+    }
+  ],
+  "notice": {
+    "file": "NOTICE.md",
+    "sha256": "700e5a3e8dfe68fd10ca3832246705dd6d7c44580e18d19df78a9b494ea5326f"
+  },
+  "provider_evidence_source": {
+    "file": "docs/implementation/approved-engineering-evidence/apple-native-build-parent-monstera-20261107.json",
+    "sha256": "ff37cd45ac42a2d62872a23fcb1f52aa608635f17fe2618562e102e5e1e027b4",
+    "derivation": {
+      "file": "docs/implementation/approved-engineering-evidence/apple-provider-refresh-monstera-20261107.json",
+      "sha256": "5ce9845f553f58104a100ce6ad55576fbe3ef544b3d6094deba88f056b38787f"
+    }
+  },
+  "packages": [
+    {
+      "name": "bitflags",
+      "version": "2.13.2",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "3ded4057c258ba199e2d26386d3af3780957ecaee6c4ef4041c6b4b8b97c0b06",
+      "license": "MIT OR Apache-2.0",
+      "role": "linked_rust",
+      "files": [
+        {
+          "file": "rust/bitflags-2.13.2/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "origin": {
+            "kind": "crate_entry",
+            "crate": "bitflags",
+            "version": "2.13.2",
+            "archive_sha256": "3ded4057c258ba199e2d26386d3af3780957ecaee6c4ef4041c6b4b8b97c0b06",
+            "entry": "LICENSE-APACHE"
+          }
+        },
+        {
+          "file": "rust/bitflags-2.13.2/LICENSE-MIT",
+          "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb",
+          "origin": {
+            "kind": "crate_entry",
+            "crate": "bitflags",
+            "version": "2.13.2",
+            "archive_sha256": "3ded4057c258ba199e2d26386d3af3780957ecaee6c4ef4041c6b4b8b97c0b06",
+            "entry": "LICENSE-MIT"
+          }
+        }
+      ]
+    },
+    {
+      "name": "fallible-iterator",
+      "version": "0.3.0",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "2acce4a10f12dc2fb14a218589d4f1f62ef011b2d0cc4b3cb1bba8e94da14649",
+      "license": "MIT/Apache-2.0",
+      "role": "linked_rust",
+      "files": [
+        {
+          "file": "rust/fallible-iterator-0.3.0/LICENSE-APACHE",
+          "sha256": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08",
+          "origin": {
+            "kind": "crate_entry",
+            "crate": "fallible-iterator",
+            "version": "0.3.0",
+            "archive_sha256": "2acce4a10f12dc2fb14a218589d4f1f62ef011b2d0cc4b3cb1bba8e94da14649",
+            "entry": "LICENSE-APACHE"
+          }
+        },
+        {
+          "file": "rust/fallible-iterator-0.3.0/LICENSE-MIT",
+          "sha256": "0816e154b159ba255c563f7c8c7df5bbb8cc5fc96f5ab8cf9f4743b4f41fe7eb",
+          "origin": {
+            "kind": "crate_entry",
+            "crate": "fallible-iterator",
+            "version": "0.3.0",
+            "archive_sha256": "2acce4a10f12dc2fb14a218589d4f1f62ef011b2d0cc4b3cb1bba8e94da14649",
+            "entry": "LICENSE-MIT"
+          }
+        }
+      ]
+    },
+    {
+      "name": "fallible-streaming-iterator",
+      "version": "0.1.9",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "7360491ce676a36bf9bb3c56c1aa791658183a54d2744120f27285738d90465a",
+      "license": "MIT/Apache-2.0",
+      "role": "linked_rust",
+      "files": [
+        {
+          "file": "rust/fallible-streaming-iterator-0.1.9/LICENSE-APACHE",
+          "sha256": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08",
+          "origin": {
+            "kind": "crate_entry",
+            "crate": "fallible-streaming-iterator",
+            "version": "0.1.9",
+            "archive_sha256": "7360491ce676a36bf9bb3c56c1aa791658183a54d2744120f27285738d90465a",
+            "entry": "LICENSE-APACHE"
+          }
+        },
+        {
+          "file": "rust/fallible-streaming-iterator-0.1.9/LICENSE-MIT",
+          "sha256": "8dcec5569a9be5b0e086c80faed6f1aefa670af0ec29cecc2f714303096887e0",
+          "origin": {
+            "kind": "crate_entry",
+            "crate": "fallible-streaming-iterator",
+            "version": "0.1.9",
+            "archive_sha256": "7360491ce676a36bf9bb3c56c1aa791658183a54d2744120f27285738d90465a",
+            "entry": "LICENSE-MIT"
+          }
+        }
+      ]
+    },
+    {
+      "name": "libsqlite3-sys",
+      "version": "0.38.1",
+      "source": "git+https://github.com/rusqlite/rusqlite?rev=661107f6eb5d7477c61be1221744de3ad96c53e7#661107f6eb5d7477c61be1221744de3ad96c53e7",
+      "checksum": null,
+      "license": "MIT",
+      "role": "linked_rust",
+      "files": [
+        {
+          "file": "rust/libsqlite3-sys-0.38.1/LICENSE",
+          "sha256": "c10c1f27337546471e5f7e4e97fdd398b35b9d4e126115dcd22de8d8e65abf6f",
+          "origin": {
+            "kind": "git_entry",
+            "repository": "https://github.com/rusqlite/rusqlite",
+            "rev": "661107f6eb5d7477c61be1221744de3ad96c53e7",
+            "path": "libsqlite3-sys/LICENSE",
+            "symlink_target": "LICENSE"
+          }
+        }
+      ]
+    },
+    {
+      "name": "rusqlite",
+      "version": "0.40.1",
+      "source": "git+https://github.com/rusqlite/rusqlite?rev=661107f6eb5d7477c61be1221744de3ad96c53e7#661107f6eb5d7477c61be1221744de3ad96c53e7",
+      "checksum": null,
+      "license": "MIT",
+      "role": "linked_rust",
+      "files": [
+        {
+          "file": "rust/rusqlite-0.40.1/LICENSE",
+          "sha256": "c10c1f27337546471e5f7e4e97fdd398b35b9d4e126115dcd22de8d8e65abf6f",
+          "origin": {
+            "kind": "git_entry",
+            "repository": "https://github.com/rusqlite/rusqlite",
+            "rev": "661107f6eb5d7477c61be1221744de3ad96c53e7",
+            "path": "LICENSE"
+          }
+        }
+      ]
+    },
+    {
+      "name": "smallvec",
+      "version": "1.16.4",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "d0d5d4b1981b8bbbb7aed204cae5726d683d5d6ac7e74ec54122ea28f315e7c8",
+      "license": "MIT OR Apache-2.0",
+      "role": "linked_rust",
+      "files": [
+        {
+          "file": "rust/smallvec-1.16.4/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "origin": {
+            "kind": "crate_entry",
+            "crate": "smallvec",
+            "version": "1.16.4",
+            "archive_sha256": "d0d5d4b1981b8bbbb7aed204cae5726d683d5d6ac7e74ec54122ea28f315e7c8",
+            "entry": "LICENSE-APACHE"
+          }
+        },
+        {
+          "file": "rust/smallvec-1.16.4/LICENSE-MIT",
+          "sha256": "0b28172679e0009b655da42797c03fd163a3379d5cfa67ba1f1655e974a2a1a9",
+          "origin": {
+            "kind": "crate_entry",
+            "crate": "smallvec",
+            "version": "1.16.4",
+            "archive_sha256": "d0d5d4b1981b8bbbb7aed204cae5726d683d5d6ac7e74ec54122ea28f315e7c8",
+            "entry": "LICENSE-MIT"
+          }
+        }
+      ]
+    },
+    {
+      "name": "zeroize",
+      "version": "1.9.1",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "e13084392c5e4bc371903e2935a5eaeed24905a7511356b883835e18a78f6879",
+      "license": "Apache-2.0 OR MIT",
+      "role": "linked_rust",
+      "files": [
+        {
+          "file": "rust/zeroize-1.9.1/LICENSE-APACHE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "origin": {
+            "kind": "crate_entry",
+            "crate": "zeroize",
+            "version": "1.9.1",
+            "archive_sha256": "e13084392c5e4bc371903e2935a5eaeed24905a7511356b883835e18a78f6879",
+            "entry": "LICENSE-APACHE"
+          }
+        },
+        {
+          "file": "rust/zeroize-1.9.1/LICENSE-MIT",
+          "sha256": "8c7516d4b27b1e495be5e38b612298b63de48d05f49cdac94f70f3cd70f8864b",
+          "origin": {
+            "kind": "crate_entry",
+            "crate": "zeroize",
+            "version": "1.9.1",
+            "archive_sha256": "e13084392c5e4bc371903e2935a5eaeed24905a7511356b883835e18a78f6879",
+            "entry": "LICENSE-MIT"
+          }
+        }
+      ]
+    },
+    {
+      "name": "cc",
+      "version": "1.10.0",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "86e055fa6e3e40ad6187ba25b6855eeb635d5271f8e0f0e1e9a5826b8d75bea0",
+      "license": "MIT OR Apache-2.0",
+      "role": "build_tool",
+      "files": [
+        {
+          "file": "rust/cc-1.10.0/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "origin": {
+            "kind": "crate_entry",
+            "crate": "cc",
+            "version": "1.10.0",
+            "archive_sha256": "86e055fa6e3e40ad6187ba25b6855eeb635d5271f8e0f0e1e9a5826b8d75bea0",
+            "entry": "LICENSE-APACHE"
+          }
+        },
+        {
+          "file": "rust/cc-1.10.0/LICENSE-MIT",
+          "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+          "origin": {
+            "kind": "crate_entry",
+            "crate": "cc",
+            "version": "1.10.0",
+            "archive_sha256": "86e055fa6e3e40ad6187ba25b6855eeb635d5271f8e0f0e1e9a5826b8d75bea0",
+            "entry": "LICENSE-MIT"
+          }
+        }
+      ]
+    },
+    {
+      "name": "find-msvc-tools",
+      "version": "0.1.15",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "1c66915cc5391097de7a2b0b972e8505aa33c0df401fd3a6811dbdb32881ba48",
+      "license": "MIT OR Apache-2.0",
+      "role": "build_tool",
+      "files": [
+        {
+          "file": "rust/find-msvc-tools-0.1.15/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "origin": {
+            "kind": "crate_entry",
+            "crate": "find-msvc-tools",
+            "version": "0.1.15",
+            "archive_sha256": "1c66915cc5391097de7a2b0b972e8505aa33c0df401fd3a6811dbdb32881ba48",
+            "entry": "LICENSE-APACHE"
+          }
+        },
+        {
+          "file": "rust/find-msvc-tools-0.1.15/LICENSE-MIT",
+          "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+          "origin": {
+            "kind": "crate_entry",
+            "crate": "find-msvc-tools",
+            "version": "0.1.15",
+            "archive_sha256": "1c66915cc5391097de7a2b0b972e8505aa33c0df401fd3a6811dbdb32881ba48",
+            "entry": "LICENSE-MIT"
+          }
+        }
+      ]
+    },
+    {
+      "name": "pkg-config",
+      "version": "0.3.34",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "f6b464fbc74e149a392436b17d523f769e057cb6877f6a5c4618bc6f11800548",
+      "license": "MIT OR Apache-2.0",
+      "role": "build_tool",
+      "files": [
+        {
+          "file": "rust/pkg-config-0.3.34/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "origin": {
+            "kind": "crate_entry",
+            "crate": "pkg-config",
+            "version": "0.3.34",
+            "archive_sha256": "f6b464fbc74e149a392436b17d523f769e057cb6877f6a5c4618bc6f11800548",
+            "entry": "LICENSE-APACHE"
+          }
+        },
+        {
+          "file": "rust/pkg-config-0.3.34/LICENSE-MIT",
+          "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+          "origin": {
+            "kind": "crate_entry",
+            "crate": "pkg-config",
+            "version": "0.3.34",
+            "archive_sha256": "f6b464fbc74e149a392436b17d523f769e057cb6877f6a5c4618bc6f11800548",
+            "entry": "LICENSE-MIT"
+          }
+        }
+      ]
+    },
+    {
+      "name": "shlex",
+      "version": "2.0.1",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "f8fadd59c855ef2080decdef8ff161eb6661b86933c9d82e5ba29dc602a55aba",
+      "license": "MIT OR Apache-2.0",
+      "role": "build_tool",
+      "files": [
+        {
+          "file": "rust/shlex-2.0.1/LICENSE-APACHE",
+          "sha256": "553fffcd9b1cb158bc3e9edc35da85ca5c3b3d7d2e61c883ebcfa8a65814b583",
+          "origin": {
+            "kind": "crate_entry",
+            "crate": "shlex",
+            "version": "2.0.1",
+            "archive_sha256": "f8fadd59c855ef2080decdef8ff161eb6661b86933c9d82e5ba29dc602a55aba",
+            "entry": "LICENSE-APACHE"
+          }
+        },
+        {
+          "file": "rust/shlex-2.0.1/LICENSE-MIT",
+          "sha256": "4455bf75a91154108304cb283e0fea9948c14f13e20d60887cf2552449dea3b1",
+          "origin": {
+            "kind": "crate_entry",
+            "crate": "shlex",
+            "version": "2.0.1",
+            "archive_sha256": "f8fadd59c855ef2080decdef8ff161eb6661b86933c9d82e5ba29dc602a55aba",
+            "entry": "LICENSE-MIT"
+          }
+        }
+      ]
+    },
+    {
+      "name": "sqlcipher-src",
+      "version": "419.0.6+sqlcipher-4.19.0-sqlite-3.53.4-libtomcrypt-1.18.2",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "ab732d48ebf2a1449e94d071b26544f99845834c75c3c210e927ace097b49aa4",
+      "license": "MIT AND BSD-3-Clause AND blessing AND WTFPL",
+      "role": "build_native_c_source",
+      "files": [
+        {
+          "file": "rust/sqlcipher-src-419.0.6+sqlcipher-4.19.0-sqlite-3.53.4-libtomcrypt-1.18.2/LICENSE",
+          "sha256": "413f82e0f4f8191a8624a7b7b2c9809466f7f3d930ad52a74ad29f2dd907881d",
+          "origin": {
+            "kind": "crate_entry",
+            "crate": "sqlcipher-src",
+            "version": "419.0.6+sqlcipher-4.19.0-sqlite-3.53.4-libtomcrypt-1.18.2",
+            "archive_sha256": "ab732d48ebf2a1449e94d071b26544f99845834c75c3c210e927ace097b49aa4",
+            "entry": "LICENSE"
+          }
+        }
+      ]
+    },
+    {
+      "name": "vcpkg",
+      "version": "0.2.15",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "accd4ea62f7bb7a82fe23066fb0957d48ef677f6eeb8215f372f52e48bb32426",
+      "license": "MIT/Apache-2.0",
+      "role": "build_tool",
+      "files": [
+        {
+          "file": "rust/vcpkg-0.2.15/LICENSE-APACHE",
+          "sha256": "60c93a31f490375aadf64098b75f10715010379541021e00261045d7800611d3",
+          "origin": {
+            "kind": "crate_entry",
+            "crate": "vcpkg",
+            "version": "0.2.15",
+            "archive_sha256": "accd4ea62f7bb7a82fe23066fb0957d48ef677f6eeb8215f372f52e48bb32426",
+            "entry": "LICENSE-APACHE"
+          }
+        },
+        {
+          "file": "rust/vcpkg-0.2.15/LICENSE-MIT",
+          "sha256": "016d20f335060a70e79d9fcf8dfaa6201114d65d592211f4bdfb8ae9ca2bc1dc",
+          "origin": {
+            "kind": "crate_entry",
+            "crate": "vcpkg",
+            "version": "0.2.15",
+            "archive_sha256": "accd4ea62f7bb7a82fe23066fb0957d48ef677f6eeb8215f372f52e48bb32426",
+            "entry": "LICENSE-MIT"
+          }
+        }
+      ]
+    },
+    {
+      "name": "SQLCipher",
+      "version": "4.19.0",
+      "license": "BSD-3-Clause",
+      "role": "linked_native_c",
+      "via": "sqlcipher-src",
+      "files": [
+        {
+          "file": "native/sqlcipher-4.19.0/LICENSE-sqlcipher",
+          "sha256": "2a2826f6acf46fa650730cf42cbb22a642be33a7ef119c9c4f4bf6daf3bef48e",
+          "origin": {
+            "kind": "crate_entry",
+            "crate": "sqlcipher-src",
+            "entry": "sqlcipher/LICENSE-sqlcipher",
+            "version": "419.0.6+sqlcipher-4.19.0-sqlite-3.53.4-libtomcrypt-1.18.2",
+            "archive_sha256": "ab732d48ebf2a1449e94d071b26544f99845834c75c3c210e927ace097b49aa4"
+          }
+        }
+      ]
+    },
+    {
+      "name": "SQLite",
+      "version": "3.53.4",
+      "license": "blessing",
+      "role": "linked_native_c",
+      "via": "sqlcipher-src",
+      "files": [
+        {
+          "file": "native/sqlite-3.53.4/LICENSE-sqlite",
+          "sha256": "85806d613cfda5901f848b3b5b4b04396c8c64e89c97c0af3706c42b0c44bb47",
+          "origin": {
+            "kind": "crate_entry_prefix",
+            "crate": "sqlcipher-src",
+            "entry": "sqlcipher/sqlite3.h",
+            "version": "419.0.6+sqlcipher-4.19.0-sqlite-3.53.4-libtomcrypt-1.18.2",
+            "archive_sha256": "ab732d48ebf2a1449e94d071b26544f99845834c75c3c210e927ace097b49aa4"
+          }
+        }
+      ]
+    },
+    {
+      "name": "LibTomCrypt",
+      "version": "1.18.2",
+      "license": "not applicable: source present in sqlcipher-src, not linked on Apple",
+      "role": "unused_source_not_linked",
+      "via": "sqlcipher-src",
+      "files": []
+    },
+    {
+      "name": "CommonCrypto",
+      "role": "os_framework_not_redistributed",
+      "description": "Apple CommonCrypto imported from the OS at link time; not redistributed in this artifact",
+      "files": [],
+      "evidence": [
+        {
+          "library": "macos-x86_64/libhoyadb_native.a",
+          "sha256": "3f347aaf0cce83c4e990561e287827cad8da6cf54c1b859f06220be9b2e9e804",
+          "architectures": [
+            "x86_64"
+          ],
+          "imported_symbols": [
+            "_CCCryptorCreate",
+            "_CCCryptorFinal",
+            "_CCCryptorRelease",
+            "_CCCryptorUpdate",
+            "_CCHmacFinal",
+            "_CCHmacInit",
+            "_CCHmacUpdate",
+            "_CCKeyDerivationPBKDF",
+            "_CCRandomGenerateBytes"
+          ],
+          "libtomcrypt_symbols": 0
+        },
+        {
+          "library": "ios-arm64/libhoyadb_native.a",
+          "sha256": "2b30e37ff99bac90db45e101a8c9960415e6ac410e89ef69343181f9d598ba4e",
+          "architectures": [
+            "arm64"
+          ],
+          "imported_symbols": [
+            "_CCCryptorCreate",
+            "_CCCryptorFinal",
+            "_CCCryptorRelease",
+            "_CCCryptorUpdate",
+            "_CCHmacFinal",
+            "_CCHmacInit",
+            "_CCHmacUpdate",
+            "_CCKeyDerivationPBKDF",
+            "_CCRandomGenerateBytes"
+          ],
+          "libtomcrypt_symbols": 0
+        },
+        {
+          "library": "ios-arm64_x86_64-simulator/libhoyadb_native.a",
+          "sha256": "734c627c4d8a95b7df8e90601a33da13f4f27ebd2a9ca69cde3c5e95fda995dd",
+          "architectures": [
+            "x86_64",
+            "arm64"
+          ],
+          "imported_symbols": [
+            "_CCCryptorCreate",
+            "_CCCryptorFinal",
+            "_CCCryptorRelease",
+            "_CCCryptorUpdate",
+            "_CCHmacFinal",
+            "_CCHmacInit",
+            "_CCHmacUpdate",
+            "_CCKeyDerivationPBKDF",
+            "_CCRandomGenerateBytes"
+          ],
+          "libtomcrypt_symbols": 0
+        }
+      ]
+    },
+    {
+      "name": "Security",
+      "role": "os_framework_not_redistributed",
+      "description": "Apple Security imported from the OS at link time; not redistributed in this artifact",
+      "files": [],
+      "evidence": [
+        {
+          "library": "macos-x86_64/libhoyadb_native.a",
+          "sha256": "3f347aaf0cce83c4e990561e287827cad8da6cf54c1b859f06220be9b2e9e804",
+          "architectures": [
+            "x86_64"
+          ],
+          "imported_symbols": [
+            "_SecRandomCopyBytes",
+            "_kSecRandomDefault"
+          ],
+          "libtomcrypt_symbols": 0
+        },
+        {
+          "library": "ios-arm64/libhoyadb_native.a",
+          "sha256": "2b30e37ff99bac90db45e101a8c9960415e6ac410e89ef69343181f9d598ba4e",
+          "architectures": [
+            "arm64"
+          ],
+          "imported_symbols": [
+            "_SecRandomCopyBytes",
+            "_kSecRandomDefault"
+          ],
+          "libtomcrypt_symbols": 0
+        },
+        {
+          "library": "ios-arm64_x86_64-simulator/libhoyadb_native.a",
+          "sha256": "734c627c4d8a95b7df8e90601a33da13f4f27ebd2a9ca69cde3c5e95fda995dd",
+          "architectures": [
+            "x86_64",
+            "arm64"
+          ],
+          "imported_symbols": [
+            "_SecRandomCopyBytes",
+            "_kSecRandomDefault"
+          ],
+          "libtomcrypt_symbols": 0
+        }
+      ]
+    },
+    {
+      "name": "rust-std",
+      "version": "1.98.1",
+      "license": "aggregate toolchain notice (see texts)",
+      "role": "toolchain_aggregate",
+      "description": "Rust 1.98.1 standard library sysroot crates linked via the staticlib for the Apple targets",
+      "qualification": "Aggregate notice; not every item it lists is linked; not a compiler SBOM or legal certification.",
+      "linked_sysroot_crates": [
+        "addr2line",
+        "adler2",
+        "alloc",
+        "cfg_if",
+        "compiler_builtins",
+        "core",
+        "gimli",
+        "hashbrown",
+        "libc",
+        "memchr",
+        "miniz_oxide",
+        "object",
+        "panic_unwind",
+        "rustc_demangle",
+        "rustc_std_workspace_alloc",
+        "rustc_std_workspace_core",
+        "std",
+        "std_detect",
+        "unwind"
+      ],
+      "crates_not_named_in_aggregate_text": [
+        "addr2line",
+        "adler2",
+        "compiler_builtins",
+        "miniz_oxide",
+        "panic_unwind",
+        "rustc_std_workspace_alloc",
+        "rustc_std_workspace_core",
+        "std_detect"
+      ],
+      "verified_link_inputs": [
+        {
+          "target": "aarch64-apple-ios",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-apple-ios/lib/libaddr2line-f8aeb75ab647c186.rlib",
+          "sha256": "f9fcf435351d7893bb1caee8c1f5cb81e9beb1d8806873f8d4c1f1cac9a9f9ec"
+        },
+        {
+          "target": "aarch64-apple-ios",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-apple-ios/lib/libadler2-1eed006d37013bfe.rlib",
+          "sha256": "502675a50623bed0d2a42387db3e135554a9bd460afc8a7bff54f46e18a6820a"
+        },
+        {
+          "target": "aarch64-apple-ios",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-apple-ios/lib/liballoc-9b236de5ba37b474.rlib",
+          "sha256": "b12087a9eb4d6bda37db01db7ff43b6dd4a0b10229d17f067daf2323de4515a3"
+        },
+        {
+          "target": "aarch64-apple-ios",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-apple-ios/lib/libcfg_if-0121a51ae9fa3b7e.rlib",
+          "sha256": "c4725c91527586dab0fa035efe0f553749b495204b0bfc411901957577a16461"
+        },
+        {
+          "target": "aarch64-apple-ios",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-apple-ios/lib/libcompiler_builtins-5681b3e446a40f9c.rlib",
+          "sha256": "126118d055406b823e20485d142277574a567637261dc4a753cc2f5a96cd1502"
+        },
+        {
+          "target": "aarch64-apple-ios",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-apple-ios/lib/libcore-403caf253face0cb.rlib",
+          "sha256": "a2fd3c78161142957f2fb1483701f2229135c184bfc7f86cc6d3f959da3beb4f"
+        },
+        {
+          "target": "aarch64-apple-ios",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-apple-ios/lib/libgimli-1d8a5a401e4cd33f.rlib",
+          "sha256": "43fefc69ef0330c7c839109e3af956cdec3f50c8af2956a66f3eb0b8147148da"
+        },
+        {
+          "target": "aarch64-apple-ios",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-apple-ios/lib/libhashbrown-56d3ed4b0db3e1c6.rlib",
+          "sha256": "45753da8b20d04e79c34ae3e38f387a7aecfa5cc9a804bd2965eff6b2341cdd8"
+        },
+        {
+          "target": "aarch64-apple-ios",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-apple-ios/lib/liblibc-208963ca9efd2325.rlib",
+          "sha256": "dddfe70611c3a9b5103cfc42ad947f4164011fc2c0105d7f97f57f31b37b9668"
+        },
+        {
+          "target": "aarch64-apple-ios",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-apple-ios/lib/libmemchr-21bc1bda78823500.rlib",
+          "sha256": "57e1ad644d8f8094396ca1a2306868bc118829dbb5b1686525ed81ce9f9ebc28"
+        },
+        {
+          "target": "aarch64-apple-ios",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-apple-ios/lib/libminiz_oxide-a2d6594d2d4e6ada.rlib",
+          "sha256": "73a4bdd8e0d6eaae99472762f4a601f40be561f402bb03065b4a209d9c1f7a8f"
+        },
+        {
+          "target": "aarch64-apple-ios",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-apple-ios/lib/libobject-70d2eb86e7703624.rlib",
+          "sha256": "0bc5e17b739826b0acfea2a8a85e9c02cca12ee5106f92e0aa788e31913c152b"
+        },
+        {
+          "target": "aarch64-apple-ios",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-apple-ios/lib/libpanic_unwind-d01c48c4ab1389dc.rlib",
+          "sha256": "b82ba545bd47f033584c33cda42a62fe88ac3d11c56c52355da3a50c0d09e81d"
+        },
+        {
+          "target": "aarch64-apple-ios",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-apple-ios/lib/librustc_demangle-248dc7a7363af89d.rlib",
+          "sha256": "7b12054faf17ac54667a74ee7da31ae1ac2a3cdfed81dbdaf23873a623090a62"
+        },
+        {
+          "target": "aarch64-apple-ios",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-apple-ios/lib/librustc_std_workspace_alloc-29f4cbf5f1af351f.rlib",
+          "sha256": "ff82bcda8ba62436b6b5012bce17905e2024443dde1bc7dc9e077af1b6838cd6"
+        },
+        {
+          "target": "aarch64-apple-ios",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-apple-ios/lib/librustc_std_workspace_core-d6b7bf7b8130480d.rlib",
+          "sha256": "9602794ab15751881933537450cac0603973d61682df507ec1a7c467276694b4"
+        },
+        {
+          "target": "aarch64-apple-ios",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-apple-ios/lib/libstd-a6e7130a7711af76.rlib",
+          "sha256": "7f9eea04ce686f69c0bbbbf956fd3a0e257aa88d88fbea190dd1be7a0194b6f3"
+        },
+        {
+          "target": "aarch64-apple-ios",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-apple-ios/lib/libstd_detect-e1ad733e4dab5831.rlib",
+          "sha256": "b3574f375462f92008be376144655f6242a7b09fbcd31a2cf80661979975e47a"
+        },
+        {
+          "target": "aarch64-apple-ios",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-apple-ios/lib/libunwind-5e7afab0d1e8b7fc.rlib",
+          "sha256": "c940ed3db15fb5f57a9c05f8f9c0c171e90423ec75b010d28ffa4e88678149e8"
+        },
+        {
+          "target": "aarch64-apple-ios-sim",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-apple-ios-sim/lib/libaddr2line-be1396782163a4e0.rlib",
+          "sha256": "2877162ed7e4d444075d35449f91a056707e8d824f2276ab867d14f089d3f2ed"
+        },
+        {
+          "target": "aarch64-apple-ios-sim",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-apple-ios-sim/lib/libadler2-b9d7b9ad5e5dd7eb.rlib",
+          "sha256": "648be50b3fe237c21394b086977b719dc0786b72f070a2027a3089e8310ee6ab"
+        },
+        {
+          "target": "aarch64-apple-ios-sim",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-apple-ios-sim/lib/liballoc-a2e0b68a96a48f96.rlib",
+          "sha256": "9edf36e7cd2fd17dcfae8bb901f53778c03f9880be620138c7f2e314627db40d"
+        },
+        {
+          "target": "aarch64-apple-ios-sim",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-apple-ios-sim/lib/libcfg_if-d0465a2f7d657181.rlib",
+          "sha256": "ad1f1174386c26733f9caa73ab5b3f65ba53edf45df67dd6e12889be2bca357e"
+        },
+        {
+          "target": "aarch64-apple-ios-sim",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-apple-ios-sim/lib/libcompiler_builtins-5ac55021494ba651.rlib",
+          "sha256": "a9b89c64fa399ee1fabf6fa14a9f34c11db4d6fee19e16c25359ade0fddaa73c"
+        },
+        {
+          "target": "aarch64-apple-ios-sim",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-apple-ios-sim/lib/libcore-34758c01bf3a4163.rlib",
+          "sha256": "d19e68aea7d3f9049a00ba1a2bdd09e619972928217b4b0e72ed102b71833617"
+        },
+        {
+          "target": "aarch64-apple-ios-sim",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-apple-ios-sim/lib/libgimli-54361db3b82e12eb.rlib",
+          "sha256": "0995e4ac439c257b766a53914299402e31daffde2876f4fb22b60d8a831c6658"
+        },
+        {
+          "target": "aarch64-apple-ios-sim",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-apple-ios-sim/lib/libhashbrown-5a142b9f697d13a8.rlib",
+          "sha256": "d81db09b8fd72eba6c6c81968d1a4069262ba8e24a382620a2b37aac5ddf51af"
+        },
+        {
+          "target": "aarch64-apple-ios-sim",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-apple-ios-sim/lib/liblibc-b678323495ff69dd.rlib",
+          "sha256": "b4486acc4e135a4f768e7839484e1c026e9180a31970f4457381943b93e6a3cb"
+        },
+        {
+          "target": "aarch64-apple-ios-sim",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-apple-ios-sim/lib/libmemchr-fe1bde768e4f0dd8.rlib",
+          "sha256": "03f3e79af9334d05c717802bfbc3ba4d62ba488536bef5a85aa1f9bca857a8ee"
+        },
+        {
+          "target": "aarch64-apple-ios-sim",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-apple-ios-sim/lib/libminiz_oxide-62a025655f57a953.rlib",
+          "sha256": "b3f5cf45da1f02b2d1bb02cbe169846a276cba13c8168936a091082cd4dfeefc"
+        },
+        {
+          "target": "aarch64-apple-ios-sim",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-apple-ios-sim/lib/libobject-fd0f569d467bbdd6.rlib",
+          "sha256": "6bf04b653060aee8ad13a2c25c945301de4d8cb39bf83b75b52e097ff57528ca"
+        },
+        {
+          "target": "aarch64-apple-ios-sim",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-apple-ios-sim/lib/libpanic_unwind-bc3290df7897b819.rlib",
+          "sha256": "543efdac7139d6faa3725ba5d2e5a75b62757d1e8188e5886ea62ba718312627"
+        },
+        {
+          "target": "aarch64-apple-ios-sim",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-apple-ios-sim/lib/librustc_demangle-1826459e2b93e4bc.rlib",
+          "sha256": "cc56e6234d30ba22afc3ff9737f14835d12d15c141d11178aa5420d87c24874b"
+        },
+        {
+          "target": "aarch64-apple-ios-sim",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-apple-ios-sim/lib/librustc_std_workspace_alloc-69305d9b393444e4.rlib",
+          "sha256": "11b87a7d72de99105d976b613f347fb27e1f19376f9eb593a3cc454fec1f3e07"
+        },
+        {
+          "target": "aarch64-apple-ios-sim",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-apple-ios-sim/lib/librustc_std_workspace_core-74bab513c56396c3.rlib",
+          "sha256": "f164efff06095a61c797b44570d558d04b1bfbef4ac39a0b803c5c4a3d0240f6"
+        },
+        {
+          "target": "aarch64-apple-ios-sim",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-apple-ios-sim/lib/libstd-a9253391bb68d5e2.rlib",
+          "sha256": "b345b42fb26c23b2011d05ef74de4d50cba9e1eb8f47cd0a29ce5d731db8b5a1"
+        },
+        {
+          "target": "aarch64-apple-ios-sim",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-apple-ios-sim/lib/libstd_detect-2ab6758e6d63ff79.rlib",
+          "sha256": "ea7780a65887041958110a6d5d60504822bd6e9bf50ce3a38b6214a25c641d67"
+        },
+        {
+          "target": "aarch64-apple-ios-sim",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-apple-ios-sim/lib/libunwind-4cebf0fc84e5d10a.rlib",
+          "sha256": "6e490fc203f5733c159739ebbefac53937674178d7d65e09f26f9e1a3048a0c1"
+        },
+        {
+          "target": "x86_64-apple-darwin",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-apple-darwin/lib/libaddr2line-9684bb964f1dcfeb.rlib",
+          "sha256": "6a84fe848c5314e53198222b4bc93789201791fe0cf73e7d8f326d320856446e"
+        },
+        {
+          "target": "x86_64-apple-darwin",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-apple-darwin/lib/libadler2-ce82b8457b0d62cf.rlib",
+          "sha256": "57bffa7a6e2b1f9dc1b02416fdb286ca6e9e8612cc18039dfff5485379f33a23"
+        },
+        {
+          "target": "x86_64-apple-darwin",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-apple-darwin/lib/liballoc-9dfb932996702d52.rlib",
+          "sha256": "efb17fd5e72d340c0832f372aea9e8457d2c853e098ff467dc7e83865ed05cdc"
+        },
+        {
+          "target": "x86_64-apple-darwin",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-apple-darwin/lib/libcfg_if-08411893b961a173.rlib",
+          "sha256": "397e4d3c95c33035e1bbd7e5906b86aeb62e8154380163bcbb3ec5db9cb18ff3"
+        },
+        {
+          "target": "x86_64-apple-darwin",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-apple-darwin/lib/libcompiler_builtins-61f62886d21d43fa.rlib",
+          "sha256": "d3811e93f6b64b5754097412a5a34f7f7353549906f0a13c8db81a3978fe968d"
+        },
+        {
+          "target": "x86_64-apple-darwin",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-apple-darwin/lib/libcore-68779ac4ab5af248.rlib",
+          "sha256": "79bb9bb9ac66beba68bf43a97f2caed852b0cc1d6a0633569d006505734a5448"
+        },
+        {
+          "target": "x86_64-apple-darwin",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-apple-darwin/lib/libgimli-460a23ff6bbeabe2.rlib",
+          "sha256": "c8243de353a7afa19973d3351e86e321c9d59258db4f03fa6bfc9c624c199b2c"
+        },
+        {
+          "target": "x86_64-apple-darwin",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-apple-darwin/lib/libhashbrown-95aa8454464c7fe4.rlib",
+          "sha256": "13512c9f471d84a0820bb4793b2a5b33cb8bdd9e36bb4705a198ce7d48cada3a"
+        },
+        {
+          "target": "x86_64-apple-darwin",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-apple-darwin/lib/liblibc-2411db95a292c07d.rlib",
+          "sha256": "d644ef41d4279e580f3ba0b57225e7e7c657baefda0b12eb66d16bbeff1c5d0c"
+        },
+        {
+          "target": "x86_64-apple-darwin",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-apple-darwin/lib/libmemchr-3db2833c7ffc1474.rlib",
+          "sha256": "01c2d1d3309023d5abf5a8b892ba75b65d40187fe3a2651e666e19f8b82d32b5"
+        },
+        {
+          "target": "x86_64-apple-darwin",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-apple-darwin/lib/libminiz_oxide-28a8783e1d60f65c.rlib",
+          "sha256": "72dce335874aae03f8894733b23e91ce66cffd56d7728e284b40a05e2e618037"
+        },
+        {
+          "target": "x86_64-apple-darwin",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-apple-darwin/lib/libobject-06e34eeb4eb73dc0.rlib",
+          "sha256": "cb7c0760bb6aa9bda75b3bf823032f51d8a3e307d7bcc3dc468118186a434ac8"
+        },
+        {
+          "target": "x86_64-apple-darwin",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-apple-darwin/lib/libpanic_unwind-bb2d4a9c83662d5d.rlib",
+          "sha256": "d3efffdfcb2269416c0c70d92423c489cc1cb50745951a35f9994473b33e0e61"
+        },
+        {
+          "target": "x86_64-apple-darwin",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-apple-darwin/lib/librustc_demangle-41c7380fef7dd4f3.rlib",
+          "sha256": "c9e25609001b9ea25200bfffc42f22842946d8a16061063793da04d301a1e0ae"
+        },
+        {
+          "target": "x86_64-apple-darwin",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-apple-darwin/lib/librustc_std_workspace_alloc-6e5920faa921c164.rlib",
+          "sha256": "f35ffc2ce056bbf386021fa31846b5aeb4885ef72468e005ca8bb0a444a8e6dc"
+        },
+        {
+          "target": "x86_64-apple-darwin",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-apple-darwin/lib/librustc_std_workspace_core-bd6a8ef50e9e69c9.rlib",
+          "sha256": "15b5c1a97c4ef1766f5b46b05e12fdfe478f54fa766e56b0c31951eeb946ee86"
+        },
+        {
+          "target": "x86_64-apple-darwin",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-apple-darwin/lib/libstd-62092c68b9eb1b56.rlib",
+          "sha256": "dad51408889e9846dfecf0f124ba58a13d1c600f5fe5964ea3aa338296eb88e4"
+        },
+        {
+          "target": "x86_64-apple-darwin",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-apple-darwin/lib/libstd_detect-512ada365c7d3af2.rlib",
+          "sha256": "e7d56bd1733a3a3e6cc2ce5b49b09e6647b79d175ba37c6813f970ea2814cfc2"
+        },
+        {
+          "target": "x86_64-apple-darwin",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-apple-darwin/lib/libunwind-696ddcf0cce35199.rlib",
+          "sha256": "07b9011c2a936eef89c7bbfdb37a71fb1ee5ff8a8e124f877050ee621e61f0c7"
+        },
+        {
+          "target": "x86_64-apple-ios",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-apple-ios/lib/libaddr2line-914008a78f9f85a7.rlib",
+          "sha256": "5693bbbef6178fe9c255c4443c288823961e3ccf1c3b12f621a4110a95d24be2"
+        },
+        {
+          "target": "x86_64-apple-ios",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-apple-ios/lib/libadler2-c9bc91d121144fa4.rlib",
+          "sha256": "60d0ac1f30a55215d0cb994499cbafb363b00351b6b7c8c17ae514c4aff2ea54"
+        },
+        {
+          "target": "x86_64-apple-ios",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-apple-ios/lib/liballoc-908e1544ea440046.rlib",
+          "sha256": "189562292e88ebd2eec572fc1a4cb239919484e5082a1de88f9c2a1814849f29"
+        },
+        {
+          "target": "x86_64-apple-ios",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-apple-ios/lib/libcfg_if-c7baad44d717a4ac.rlib",
+          "sha256": "127ac5608337966e4869c275d23e55e903f9419b2934399c7d84da766e0085a1"
+        },
+        {
+          "target": "x86_64-apple-ios",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-apple-ios/lib/libcompiler_builtins-4cf6563f8457bed4.rlib",
+          "sha256": "72e5cf57e8c1cb035ed258d1b8a65efab2c87b3f57dcb855a37d633c3765d3e6"
+        },
+        {
+          "target": "x86_64-apple-ios",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-apple-ios/lib/libcore-69aed2f083ca3663.rlib",
+          "sha256": "e1e367742d26d761db00f31fb3b0488f51d3304f6c9ad63d53bc796a1160d78f"
+        },
+        {
+          "target": "x86_64-apple-ios",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-apple-ios/lib/libgimli-d36a885c4a40e121.rlib",
+          "sha256": "4f0812990f635dc7557b8d205356039782c5ca0360c13d2e6f5f6288e5d9e0ce"
+        },
+        {
+          "target": "x86_64-apple-ios",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-apple-ios/lib/libhashbrown-02eccfd4591a6e7c.rlib",
+          "sha256": "0242a95a8708442cd1f78169fbca15ff3d7dffae64093149e10255e2042aed58"
+        },
+        {
+          "target": "x86_64-apple-ios",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-apple-ios/lib/liblibc-60f79cea868517d8.rlib",
+          "sha256": "5d12ef606ed6c126b6049cb0bb1908fcedc20d6a3b4d3f904938766d19de8ce0"
+        },
+        {
+          "target": "x86_64-apple-ios",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-apple-ios/lib/libmemchr-b2a3fae6a06650a7.rlib",
+          "sha256": "cc921900a30a96130789b31d043c7960fde59923581acbf270cafa22eda8d955"
+        },
+        {
+          "target": "x86_64-apple-ios",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-apple-ios/lib/libminiz_oxide-4c45502887fbd2b7.rlib",
+          "sha256": "8c8206b7afa375792cb19f0d2c182283ada9bb624c2e26dfaad729660fc6feb9"
+        },
+        {
+          "target": "x86_64-apple-ios",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-apple-ios/lib/libobject-5da2598375ea5399.rlib",
+          "sha256": "5dbdca8ffdcf47fe95fd7b40a949a170a66780d953755d82382cacccc14b08da"
+        },
+        {
+          "target": "x86_64-apple-ios",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-apple-ios/lib/libpanic_unwind-cbc44624ba061c0c.rlib",
+          "sha256": "e59239d7930a37337232adab54abe19e716729a20d6c02f9935d8b1ea8fd0f3f"
+        },
+        {
+          "target": "x86_64-apple-ios",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-apple-ios/lib/librustc_demangle-ea0a5d1f7cfb27dc.rlib",
+          "sha256": "a0012adf535c4cec5b39c545de03e15b65d79f57ba2ed1918756f481f3e41276"
+        },
+        {
+          "target": "x86_64-apple-ios",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-apple-ios/lib/librustc_std_workspace_alloc-9061e600f25ab1a0.rlib",
+          "sha256": "ac179c5c24041c30c3ab9eb5ac7d91b6e7b470ef65cf9364807f836636342b86"
+        },
+        {
+          "target": "x86_64-apple-ios",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-apple-ios/lib/librustc_std_workspace_core-6a91b0149c99fd36.rlib",
+          "sha256": "3bed062056cb6b27a344e773fcdacd419ec0a9e7d143c1367e95a7e3b9054e96"
+        },
+        {
+          "target": "x86_64-apple-ios",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-apple-ios/lib/libstd-b9f61b250b34e825.rlib",
+          "sha256": "f24bc51daf57db01c08a91fed724b8ef646672c1abfd6825cbaa1ae2b39a027a"
+        },
+        {
+          "target": "x86_64-apple-ios",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-apple-ios/lib/libstd_detect-ccc4b53268835c1e.rlib",
+          "sha256": "5e952d7cf77722768e8cd681ac5e055c298bdd190655d5d315adea40b0fe8891"
+        },
+        {
+          "target": "x86_64-apple-ios",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-apple-ios/lib/libunwind-714cdc9a28a20af0.rlib",
+          "sha256": "bdc0bc309bf26376cca2a4bb339620e49f8025a0497d5b99b4f51ef432d87b98"
+        }
+      ],
+      "files": [
+        {
+          "file": "toolchain/rust-1.98.1/COPYRIGHT-library.html",
+          "sha256": "68129500b616d5838629e68f55ff3aed5e096dacf60ce9eb41bbe599a563afa6",
+          "origin": {
+            "kind": "toolchain_local",
+            "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/share/doc/rust/COPYRIGHT-library.html"
+          }
+        }
+      ]
+    }
+  ],
+  "project_license_sha256": "f970675f7e759c9f923042d3ddf8452438e1ac151a9478ffef39b2f1879725fa"
+}

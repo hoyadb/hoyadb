@@ -1,0 +1,8 @@
+{
+  "format_status": "FAILED",
+  "evidence": "swift-format-current.txt",
+  "finding": "ObservationTests.swift:19 OnlyOneTrailingClosureArgument",
+  "earlier_claim": "Incorrectly reported PASS; copied original logs preserved byte-for-byte",
+  "rerun_status": "pending quiet window end and source hold release",
+  "tests_status": "35 passed as observed; independent from lint"
+}

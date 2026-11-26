@@ -1,0 +1,122 @@
+{
+  "escaped_key_probe": {
+    "literal_input": "systemProp.\\u0069dea.use.native.compression=true",
+    "ok": false,
+    "violations": [
+      {
+        "setting": "idea.use.native.compression",
+        "source": "consumer/gradle.properties"
+      }
+    ]
+  },
+  "head_before": "62ecf3d",
+  "limits": [
+    "Unit and synthetic guard proof only, no Gradle/compiler/JAR execution.",
+    "No dependency activation or final Phase 7 review counted.",
+    "Coverage remains unmeasured.",
+    "The real embedded dependency gate remains rejected; protobuf findings remain open."
+  ],
+  "runs": [
+    {
+      "command": [
+        "python3",
+        "-I",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "bindings/react-native/tools/security",
+        "-p",
+        "test_*.py"
+      ],
+      "exit": 0,
+      "log": "normal.txt",
+      "log_sha256": "e2626d87364185a690c49ce66e41eebcf27b2245c1c27fe5334458ffd47bb17b",
+      "mode": "normal"
+    },
+    {
+      "command": [
+        "python3",
+        "-I",
+        "-O",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "bindings/react-native/tools/security",
+        "-p",
+        "test_*.py"
+      ],
+      "exit": 0,
+      "log": "optimized.txt",
+      "log_sha256": "b6a7f1d4b13d3e9063c21481d02fd4fd6e5202a695972266fc96e9164050b9cb",
+      "mode": "optimized"
+    }
+  ],
+  "sources_after": {
+    "README.md": "fbfdf9eced3bb171009a8074ae31cc5cb1adc6779f0261f431bcf488b28db973",
+    "classfile.py": "d6cddefb56da9ba602a4b85c5e885f47ef03d90a983fb4eb09e18e98f218f6cd",
+    "embedded_scan.py": "20299d9e0518c489effe4e4e6d5c22f485be015cc7a1a56f5adac0e845ad9833",
+    "fixtures.py": "98435b6272b53931ef9261d8dd4d813679a40f5aaeabca067ab35a041c719ed2",
+    "init_script_guard.py": "a03132fa672aa67b56672de7f7b8aec0f4814974fc2485277fee5ad61ef7135a",
+    "java_properties.py": "1520ebe4d58b2667aa4e7df242387ff63c46d1bac0971216bb02320b3a17beab",
+    "kotlin_guard.py": "d88d53f50dfb4eb0a62e57032829198d43cdc5c2416f237924e423a1481b48fa",
+    "r1-compile-alignment.init.gradle": "74aa545a6c82cbdc434e71328653979715659818603a6c0d60627245e8d1f9a0",
+    "symbol_guard.py": "56668e924bca2606d5eb2f5dc8983cf7e1c2a22998ba38679d86e23feb26c0a9",
+    "test_embedded_scan.py": "e017988682145333f92540b8cf9c41e66601ecf0050e8565c58d90fcef53e114",
+    "test_init_script_guard.py": "d172782de62399add70feed1df9c2a5e23aafc38bce5bb6453d40c48011a925a",
+    "test_java_properties.py": "5d52254eef75884ba61dc901f22624fb61fb1be919f23e16807458c1a7431eea",
+    "test_kotlin_guard.py": "69d36b8175212303618aa106948559591110b423efa0603fc8dc5123cc1bbbdb",
+    "test_symbol_guard.py": "6993bb6abb3bd5cc9176c048e96db9f0391f76e3b05edd603b655cd7f6019f9c"
+  },
+  "sources_before": {
+    "README.md": "fbfdf9eced3bb171009a8074ae31cc5cb1adc6779f0261f431bcf488b28db973",
+    "classfile.py": "d6cddefb56da9ba602a4b85c5e885f47ef03d90a983fb4eb09e18e98f218f6cd",
+    "embedded_scan.py": "20299d9e0518c489effe4e4e6d5c22f485be015cc7a1a56f5adac0e845ad9833",
+    "fixtures.py": "98435b6272b53931ef9261d8dd4d813679a40f5aaeabca067ab35a041c719ed2",
+    "init_script_guard.py": "a03132fa672aa67b56672de7f7b8aec0f4814974fc2485277fee5ad61ef7135a",
+    "java_properties.py": "1520ebe4d58b2667aa4e7df242387ff63c46d1bac0971216bb02320b3a17beab",
+    "kotlin_guard.py": "d88d53f50dfb4eb0a62e57032829198d43cdc5c2416f237924e423a1481b48fa",
+    "r1-compile-alignment.init.gradle": "74aa545a6c82cbdc434e71328653979715659818603a6c0d60627245e8d1f9a0",
+    "symbol_guard.py": "56668e924bca2606d5eb2f5dc8983cf7e1c2a22998ba38679d86e23feb26c0a9",
+    "test_embedded_scan.py": "e017988682145333f92540b8cf9c41e66601ecf0050e8565c58d90fcef53e114",
+    "test_init_script_guard.py": "d172782de62399add70feed1df9c2a5e23aafc38bce5bb6453d40c48011a925a",
+    "test_java_properties.py": "5d52254eef75884ba61dc901f22624fb61fb1be919f23e16807458c1a7431eea",
+    "test_kotlin_guard.py": "69d36b8175212303618aa106948559591110b423efa0603fc8dc5123cc1bbbdb",
+    "test_symbol_guard.py": "6993bb6abb3bd5cc9176c048e96db9f0391f76e3b05edd603b655cd7f6019f9c"
+  },
+  "sources_unchanged": true,
+  "static_audit": [
+    {
+      "file": "classfile.py",
+      "forbidden_constructs": []
+    },
+    {
+      "file": "embedded_scan.py",
+      "forbidden_constructs": []
+    },
+    {
+      "file": "fixtures.py",
+      "forbidden_constructs": []
+    },
+    {
+      "file": "init_script_guard.py",
+      "forbidden_constructs": []
+    },
+    {
+      "file": "java_properties.py",
+      "forbidden_constructs": []
+    },
+    {
+      "file": "kotlin_guard.py",
+      "forbidden_constructs": []
+    },
+    {
+      "file": "symbol_guard.py",
+      "forbidden_constructs": []
+    }
+  ],
+  "tests_per_mode": 81
+}

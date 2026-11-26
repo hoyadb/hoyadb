@@ -1,0 +1,1033 @@
+{
+  "scope": "Local four-ABI package and narrow Android32 runtime evidence; no full Monstera parity, physical ARM device, 16KiB runtime, distribution or legal certification",
+  "head_commit": "425fdbc39413c623c76110ef7e525767f2b11d2f",
+  "source_inventory_before_after_final_equal": true,
+  "source_inventory": {
+    "files": {
+      "Cargo.lock": "a7385544aa00356ebdc3e1fad3e95ca61722d1a85333f19bae18049cd77ac507",
+      "Cargo.toml": "9273a751adcd3ae6e53d9de8e7d7681970e96aa9ebbdbc56cb5b3dd22ddff5d3",
+      "bindings/android/src/main/java/dev/hoyadb/NativeBridge.java": "01ef6f9baaffa25ae976768c72aef947dae7fa350557aa3837964af5a53b95e7",
+      "bindings/android/src/main/kotlin/dev/hoyadb/Background.kt": "a102c643bab246a9e16251fa8b1058399dabc2e2592ab5143e029b798d7d3eca",
+      "bindings/android/src/main/kotlin/dev/hoyadb/Commands.kt": "012e540e51d331f4c7b1776000930f7b866c91b19a1610d5ab08fe69d6c1a65b",
+      "bindings/android/src/main/kotlin/dev/hoyadb/Conflict.kt": "bc4f7605d4d954d80e371e6b7ea47c7fda616b1342d80c126c8bcfeecde17423",
+      "bindings/android/src/main/kotlin/dev/hoyadb/Database.kt": "633750a0255e18627528a8f33de783839da7a0af453b0e259f913d9a427aced3",
+      "bindings/android/src/main/kotlin/dev/hoyadb/Entities.kt": "ba534da201735869f0a1c74780804ed6f9fe2f1e12bbc75abaa10da9bbd4b9e4",
+      "bindings/android/src/main/kotlin/dev/hoyadb/ExplicitDrain.kt": "cfcc46a9a4e8a307a1c0db5658bd98874bd1ead678b01172037abf606cf7b6be",
+      "bindings/android/src/main/kotlin/dev/hoyadb/HoyaNativeTransport.kt": "d231e562095a1e0d9cdc79d35b8d6d720612fa1945eed34d20db0b05204e7697",
+      "bindings/android/src/main/kotlin/dev/hoyadb/Lifetime.kt": "8438f7f9d0794406c0fd5b2d4b04dffab709c2297701d066b81be60ace804b9f",
+      "bindings/android/src/main/kotlin/dev/hoyadb/Models.kt": "e31613f9d5b3d8e3e91fc0c128ed85a9a63348e5562d3cc9e6cd9404f6720e49",
+      "bindings/android/src/main/kotlin/dev/hoyadb/Observations.kt": "a67ce681d521c4cc3e6ecedb6be46f8701fd1f62ae6676238a932b96c76e9d68",
+      "bindings/android/src/main/kotlin/dev/hoyadb/Queue.kt": "bb25d4bad130847af016b2d17c0c6d0efddf4cdcd35a354301ec997c21ddb4b2",
+      "bindings/android/src/main/kotlin/dev/hoyadb/Runtime.kt": "02891aebeb1562898dc2b9694acac4eea18a8c93fc4746e2caeb09e2c104950d",
+      "bindings/android/src/main/kotlin/dev/hoyadb/Sync.kt": "67b4212b3e29ac38b88d3a8097a8b3744c100ad7e90de93dcc1730c715451c2f",
+      "bindings/android/src/main/kotlin/dev/hoyadb/SyncModels.kt": "89e9dd30b0376c09137b9731779aad47be5d1d24ac76451770e7e3f3b93cf7ee",
+      "bindings/android/src/main/kotlin/dev/hoyadb/Values.kt": "d293ad959f24200bd03fa833afc8cbc708ddf3bc3a658c87c79303749e0ae831",
+      "bindings/android/src/main/kotlin/dev/hoyadb/testing/FakeTransport.kt": "8ddae00074600805c595bc95f92ac4c7395dbae4a6e61463f9d819c64e9fdf67",
+      "bindings/android/src/main/kotlin/dev/hoyadb/testing/Testing.kt": "e2d5aae5a67939d664958ee9e3ecf17f21b016d51617704891be5995e9b7c500",
+      "bindings/android/toolchain-review.json": "0f2e838fdb5aede71f033fdaf1f3f96ade3e00047435b1f870ef775ee5ca7ba0",
+      "bindings/android/tools/build-consumer.py": "a26c8c76b7e8648bcd8f2e99955ac43022ae1fed4ded7847c3f7274bebda1f60",
+      "bindings/android/tools/build.py": "9c1b1bc7e93c488166ba2bf5063853e194b24e35f2a0eec10be3e3b4e5b8283c",
+      "bindings/android/tools/package-aar.py": "69ae81c455a1554a5bcb758968e52efed91aac0358fce23b51758ac5c465a341",
+      "bindings/android/tools/package_fixture.py": "5187567179ddd467b097fb8b0d54e0b4a386c7d074181f4a7d9cc603f09a2cfb",
+      "bindings/android/tools/run-consumer.py": "61b6dd7a0ef9c4f9ed5e29d1635345c03d6cc5200b313c9174c58bdc7cc89fa7",
+      "bindings/android/tools/run-tests.py": "435f1a4588034e84b08baa995b04290497e5972d7613d0d7bc17d255a5e50064",
+      "bindings/android/tools/runtime_cache.py": "98164262faee69c2bf75d3b3b6ffd9c1004f959c56093429033890c6dac6916a",
+      "bindings/android/tools/test_build_tool.py": "13bda1acdc87444de506b26ce446fd52f25132abdb6bf7b7949d07bb4660d5cb",
+      "bindings/android/tools/test_consumer_tools.py": "cade0f8dafb1bee2a7e029dc0bfcbbd53d47265423998d2657b2b6d043efc57b",
+      "bindings/android/tools/test_package_aar.py": "c8a04a7ac89d3cb15aad0f49bd82e5b1a6c48ab81156c0ef95b2a76586f57949",
+      "bindings/android/tools/test_runtime_cache.py": "addbae9041804bf7d7365187412ee1f7a6f98c4511c651ef57845d35c8284d43",
+      "bindings/swift/build-artifacts.py": "81335920373e4587a46ca19d6e746d48a417c00cbd0ecaa99688cb3b204857e7",
+      "bindings/swift/check_artifacts.py": "0729a7ae3a7f678453151fc7f3b6e760bea55e9efb3c9b92cc99edb8a889b47c",
+      "crates/hoyadb-bindings/Cargo.toml": "508986656f7406bad3599645e037d2b7c25c945232c9ac137633839777ba7c3f",
+      "crates/hoyadb-bindings/src/budget.rs": "17c1b1b96b96c2d6e8a3d3b5fa79b88f6ef14957964fa6b8bcc1fd9cff031b69",
+      "crates/hoyadb-bindings/src/codec.rs": "eef07eec01e3d3cf00b0328d93061becb1127369a293dc4c33d3669e258787a1",
+      "crates/hoyadb-bindings/src/commands.rs": "2837b59a02a58754893a3e1a69c506c3fa01d0459824c81907c2abaefa776756",
+      "crates/hoyadb-bindings/src/data.rs": "a828b4b8afda985e380cd50abcff3ee333854839f3449f369ecc2c118be8c372",
+      "crates/hoyadb-bindings/src/engine.rs": "321d55e0a4a78fccbf5fab590dae146b57b893d57c3c3fe3f8f42be40d5bc572",
+      "crates/hoyadb-bindings/src/entities.rs": "140372242c54bd71d908a127000fe0eaf8a61401f6a5e166249903cee186434b",
+      "crates/hoyadb-bindings/src/lib.rs": "36f2c223d737b34ecb21b89aeddeeb94be386963ed0f230a1ce1c3c2379c6372",
+      "crates/hoyadb-bindings/src/observations.rs": "360622ce3714c11650d3804bda994f833fdd173b18f820b850d2e487e4cefc87",
+      "crates/hoyadb-bindings/src/reconciliation.rs": "32d3ba19369e728101b39a64bdadd53616f2f37863e30235dd5e290c7b232df6",
+      "crates/hoyadb-core/Cargo.toml": "1cd7711f51b4dc97e28a2160265dd71d1cb1b7202559fd05c4e277f14162075b",
+      "crates/hoyadb-core/src/command/convert/tests.rs": "a0a35d0a0f2e0d53ecd05bd35e29d62f79fd07c581b3913c05b7cbd5bb4bc0fa",
+      "crates/hoyadb-core/src/command/convert.rs": "dda111bb38c4b28a3b3b45945a31c41fa8f992d5b7e6f5421c8d9de1d2c1449a",
+      "crates/hoyadb-core/src/command/durable.rs": "23fba943ea68a5405603cf32a5a57be574e7b1ccf922af724494f0c683058dae",
+      "crates/hoyadb-core/src/command/entity.rs": "f1e09c838573217eb0bc1e9910e7708f7524e41e10fa214dec3c6b9df891e089",
+      "crates/hoyadb-core/src/command/entity_batch.rs": "5e21271bb9127a824e48be003f0883c68fe37de822314895cc192545653cc4ec",
+      "crates/hoyadb-core/src/command/entity_owner.rs": "964c1782098ce12a58b3d8060bad9ed72afe6ac358449e01ff3a178932f7aea5",
+      "crates/hoyadb-core/src/command/execution.rs": "b408c3f67490e18e9ee969d5ac9ccc0253b44d73226956cb8f1d7f9cf7c70e82",
+      "crates/hoyadb-core/src/command/json.rs": "64419603b3ee2d5a890a50d688ed4cd29ce0612136565672103df102c48d3e6c",
+      "crates/hoyadb-core/src/command/ledger_txn.rs": "3c71d03de833e53e1721301de1832ad08c46b3ad989950792fd0fd4600bea20b",
+      "crates/hoyadb-core/src/command/merge.rs": "bd74db90486b83d369995fea252a1301fc113ee1c4cfb6fad879324afadebabb",
+      "crates/hoyadb-core/src/command/mod.rs": "8536834cc40a6491ae7ed48701f489939d3746f9be1de8259bfbb3abe6d01a67",
+      "crates/hoyadb-core/src/command/overlay.rs": "65b36cbcdf2db74c114533373419cd894d1b9bdcf42db198f2092519ad89b847",
+      "crates/hoyadb-core/src/command/owner.rs": "840409a06d1d0c3ffbfa899cc7743c1fd32895d480d73d1c51a8116ab99c48a9",
+      "crates/hoyadb-core/src/command/phase3_cases.rs": "633c3603fd16b8f1b6ff18a85ee0990d9430a9aee89f4c1a57279e76c35cf427",
+      "crates/hoyadb-core/src/command/policy.rs": "daf53a58133f92b537d95e08b5bd21346ee2130569ca3199ddb1607f6c6ee58a",
+      "crates/hoyadb-core/src/command/proposed.rs": "9099639354f6f28f0a946d8f15d61e2dbbe99bcca71aad21c65147a31c5afbc5",
+      "crates/hoyadb-core/src/command/pull.rs": "19a133d84c5764079bbb3f4ba131c83b5a2e2786d75c79f829a8eebfa262c9a4",
+      "crates/hoyadb-core/src/command/queue.rs": "c2efd2b9d2e4a6197b8ec69dcef40b1584363d8a635ac61a179e16e7cda727d3",
+      "crates/hoyadb-core/src/command/reconcile/discard.rs": "57559fe896d922a944caa48cab197f2fb9683af5841cc9d4c908c11050b1a76e",
+      "crates/hoyadb-core/src/command/reconcile/fallback.rs": "26a296158cf3b0a3fac10b7aaebac35e844be8e92487c4dfdd4c7fd8350ed67c",
+      "crates/hoyadb-core/src/command/reconcile.rs": "a17c969f655aa9dd0543e040be8ede727ea1557e56e3619b30d73c386090b0dd",
+      "crates/hoyadb-core/src/command/records.rs": "c817f766428cd9ff7687a38d1464a0e2ecd1f6430d295557f8f71bc55f4a89ad",
+      "crates/hoyadb-core/src/command/security.rs": "8dd4e236fac63c93019ce32e3e17932915409a4262bab5966765e19deb513038",
+      "crates/hoyadb-core/src/command/sync.rs": "f193e3cc2e6894b2cc131095248fc70eb6f5cd0014b423227d79392b7eceb83f",
+      "crates/hoyadb-core/src/lib.rs": "9484a9eb3fcf563086c450d1746c7c6a76f8347f26f7928240c77ccebe9433db",
+      "crates/hoyadb-core/src/model/database.rs": "33329a639cdada74dc7a3748d0e7187bbca7b7d927ddc3ad1af21ed66798ed0b",
+      "crates/hoyadb-core/src/model/migration.rs": "db9cfabe28b4f9a511f2dc77f93e2ae2f2db4096b192277e07ed3b84bff859df",
+      "crates/hoyadb-core/src/model/mod.rs": "9b8132927cd06a8c92d62aa7ca74a8f74c6e1e19ed5082c46b98fd023cbbae79",
+      "crates/hoyadb-core/src/model/query.rs": "224ad496a17f2fc702ed808baa7ff2c1fbbd8f41fcf982e6b7174b32e54bd67f",
+      "crates/hoyadb-core/src/model/reactive.rs": "a9f6323e69b5f74eb06d0879fc7c1d977990d3a3aa602f19268bc874e8faabda",
+      "crates/hoyadb-core/src/model/schema.rs": "b9b79984a9ab98de0811722f207a245fe10c82444c2612dc10769b882d338741",
+      "crates/hoyadb-core/src/storage/counters.rs": "04f36841fd9cb0f95c5cc99d461a94165794a12f93acda466157cb9c9162dde9",
+      "crates/hoyadb-core/src/storage/model.rs": "48faafdadc8aa5e4cb4ef8971e34735bbfc277a0405d27f3a923e1bdf5e592c2",
+      "crates/hoyadb-core/src/storage/observation.rs": "1a09c65d6fd034f888b51a9849a037272f53bc73942b991a4f3d0291dc9998cc",
+      "crates/hoyadb-core/src/storage/snapshot/delta_tests.rs": "8e3395484a6066fd8c10777d5e496f3dad747641031d92f51d91b01ef6d34814",
+      "crates/hoyadb-core/src/storage/snapshot/lifecycle.rs": "db43fda169746c5e74a9e633190e1836d631ec3193da944b152f6935b9239b4b",
+      "crates/hoyadb-core/src/storage/snapshot/mod.rs": "ddf6fc8f99ad03c3ddaa86ae1d9e1d9bf3f415d3882d27c39a46feef8e1691d9",
+      "crates/hoyadb-core/src/storage/snapshot/projection.rs": "91aa2fb3d2fe2aca7d3f62c3ea7de5e78bb9ae8decd177d289ec25135134fd29",
+      "crates/hoyadb-core/src/storage/snapshot/sync.rs": "aa2d4c8f9fca7b2e08733ceb59bb2c83344991497175f67b93d8807f2e13e042",
+      "crates/hoyadb-core/src/storage/snapshot/typed.rs": "0a8ed744aa90dbc75d1dae649a84a20eeaad57601cc7c0d298d0d67000d21386",
+      "crates/hoyadb-core/src/storage/snapshot/undo.rs": "e00ccf7d6f7048fa81fec025cb11ab963ea9db91e741b2a66fcb6d9c63b644ac",
+      "crates/hoyadb-core/src/storage/sync.rs": "8479e56c1ebe525e3e96594454991ad44f6af8a6bf8c6b81e6685a53df1aa8a4",
+      "crates/hoyadb-core/src/storage/typed.rs": "fff0af4a0483e096f9768ccdc24e23a445547098895740d747c76c2d7055b7aa",
+      "crates/hoyadb-core/src/storage.rs": "5b7dc18c1d3de75e0aea273ea65675df4f0724bf7b898b3c3ffe0ca3b3175160",
+      "crates/hoyadb-native/Cargo.lock": "a96a5481be73dc5ab125b4cec4b441bedd256f7a1d834694073cba5f342cb951",
+      "crates/hoyadb-native/Cargo.toml": "a5588297516d698ab453b96d30982abcbdb2ed216b80d5aa72be727666feb0c9",
+      "crates/hoyadb-native/android/build-jni.py": "fe7860683481ed6a497da9df1017b107773b552ca562ff2852a9cfdfeadaee80",
+      "crates/hoyadb-native/android/build-provider.py": "dfe6f1b9ea0ecf451fb1196dd8d8003cb8a6a5d36e263f34d08a0174182224b0",
+      "crates/hoyadb-native/android/exports.map": "fe8fb95dce0d4005b7d73afd3b5b59c3ef0be2c164f8f82947ac6f2689bf1832",
+      "crates/hoyadb-native/android/hoya_entropy.c": "c8b6059feb75c2ac008030c2f15c714643fd5f3ee0212b9f69e6770ac3030b75",
+      "crates/hoyadb-native/android/hoya_jni.c": "e620c700ffbbee4ed2a3a346f637c6fb7416c13f88845525d39df6fbb8fd0265",
+      "crates/hoyadb-native/android/ltc_config.h": "e20d3d40f0b93cb7c2398d3afbe9ced995a6275f385ae6f91d861f6285bbf49c",
+      "crates/hoyadb-native/android/test_build_abis.py": "12999b0f6431e6bc20d71c893f2f67d00026cd757973bc4c1e1bbd0f46841cc4",
+      "crates/hoyadb-native/include/HoyaNative/module.modulemap": "33326b1780c8a1c82237313f2ee88578d34e816af4ecc3a4a799abfeb23af60c",
+      "crates/hoyadb-native/include/hoyadb.h": "2f61e513be42d3e7aabbd9bb06f02a98d88096551276ae89dd5b30aa28526b48",
+      "crates/hoyadb-native/src/lib.rs": "4cfa3f57fc11b69b09b7a2c9e5e73ce0ae1b13557f90762bba86da417fa19a47",
+      "crates/hoyadb-native/tools/apple_notices.py": "c282426d7b2d0dc14c0621cec471057a4a1086528af8bb7245d86a05b5ad9e53",
+      "crates/hoyadb-native/tools/test_apple_notices.py": "3e057242c4d9b57f7b190d6977d9f2f88a2e087d9b74bccc9d77592cf310eee6",
+      "crates/hoyadb-storage-memory/Cargo.toml": "408ec7aec3268ea5b8fa87d3d2f1980a01000b1da299662ad9d02b43834a371d",
+      "crates/hoyadb-storage-memory/src/lib.rs": "0c26d6799994174b2c6543fc8cc506a8ada788ae761030b70fd8baa3517724f1",
+      "crates/hoyadb-storage-sqlite/Cargo.toml": "705062305b82701ec53ea9517fd8b608434bda26977c7ccbddbe716da48d6468",
+      "crates/hoyadb-storage-sqlite/src/bin/entity_restart_fixture.rs": "67bec3f33795cc52d900458c47d261a2cb13cd3427c89335d5a55c7901a3a6dd",
+      "crates/hoyadb-storage-sqlite/src/bin/hoyadb-convert-ledger.rs": "4f37e73e671699a4144f0e89b321c3506ca4bcc037e8789df772a7a6199ad4eb",
+      "crates/hoyadb-storage-sqlite/src/bin/restart_fixture.rs": "75c241135617e5a5ef5f6877190c21d08b5b8a3afbc454eb06a9da569fc38f2f",
+      "crates/hoyadb-storage-sqlite/src/convert.rs": "79e0b08281765b3abcfe243bdc92bbea9e70def7093fc3c241d9ea55bc73aeba",
+      "crates/hoyadb-storage-sqlite/src/encryption.rs": "add0aa6bcd9f08ee7831c51063ca8f007d9f75f59a39ab101399699139f17df8",
+      "crates/hoyadb-storage-sqlite/src/lib.rs": "b636cab4acc3f57d4897e1039f3a2da2518735b979d8165824847de243365750",
+      "crates/hoyadb-storage-sqlite/src/lifecycle.rs": "f2e3620a164c3e8bffb8b5755d51eec31f08d757128bde444958ef732c0aca0d",
+      "crates/hoyadb-storage-sqlite/src/projection.rs": "0dcb0063c412177f4a515e9959d97f0959ac92f163901234cf553bb1a7148ec1",
+      "crates/hoyadb-storage-sqlite/src/query.rs": "063646093bc87bad5af88920e4f355efa1f183ece8a47d5cbd2bc01ef2c596ec",
+      "crates/hoyadb-storage-sqlite/src/sync.rs": "791cbb85284ce353703448f58fcb4c8237b5c9d1c896f2d6a54dee1bdc622ba9",
+      "crates/hoyadb-storage-sqlite/src/test_hooks.rs": "4f4c8adbc613dd4132512bd7ea60b657cc9eed14c523ccabf060092edbdf6583",
+      "packages/react-native/android/.gradle/9.8.1/checksums/checksums.lock": "500906eb0850ebfa8d384ea8550a311ce09bd6a74214049d8ddb725e55d0b147",
+      "packages/react-native/android/.gradle/9.8.1/fileChanges/last-build.bin": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d",
+      "packages/react-native/android/.gradle/9.8.1/fileHashes/fileHashes.bin": "669ab599657684c25b829903e3fd9b1ca72057f327a123665bf0371d61cd3132",
+      "packages/react-native/android/.gradle/9.8.1/fileHashes/fileHashes.lock": "aa84b28bc41c091a4bc3dd1c142373076825659eb9bf189cec396eed23f97ede",
+      "packages/react-native/android/.gradle/9.8.1/gc.properties": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "packages/react-native/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock": "ff186383c59401035384e7ac1e9aeb17071370b3642a6bef8f2ddebbb726ec6c",
+      "packages/react-native/android/.gradle/buildOutputCleanup/cache.properties": "7828aa1042e52495db00fe214eb71b89d3339b8785e152c8db802d54a1ea59a3",
+      "packages/react-native/android/.gradle/vcs-1/gc.properties": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "packages/react-native/android/.npmignore": "8c14e5ce2a4b785f38e12036540e8838090de3a962d6e91132c34bf1f129d2a2",
+      "packages/react-native/android/build.gradle": "83981de597fe0eea030981d426b6daf429673e204da2e2154e28d43713d6503d",
+      "packages/react-native/android/src/main/AndroidManifest.xml": "343d5be1ac17cdd45d1a2f2ddc616c509290e655869125a9422a96d88aa66066",
+      "packages/react-native/android/src/main/java/dev/hoyadb/HoyaDBModule.java": "a69fa232b3289e92f1eb92b0c31d823c18f641040707711da02716bb5206e485",
+      "packages/react-native/android/src/main/java/dev/hoyadb/HoyaDBPackage.java": "423cf05779ad6a7185c07d8290592a39ed36ea7365f83692541774f42450c9ad",
+      "packages/react-native/ios/HoyaBackupPolicy.h": "139e7eb9512cd4c16ffff32a1e78a5d68f482324d7011b2c07b90b4d4fbe5a01",
+      "packages/react-native/ios/HoyaBackupPolicy.mm": "cd71cdf34ccd7c29d352a3e10ce804fa44b33ba6dc503669cd4729ee3e9ff93e",
+      "packages/react-native/ios/HoyaDBModule.h": "8f8b3c9a2458751332a384b58dc9aee4c9a904301002a9ff38029113824a3469",
+      "packages/react-native/ios/HoyaDBModule.mm": "16dcd036b71a30dc764d680ea9ac3398704ee68af016d4a91a5b80940d6463b4",
+      "packages/react-native/ios/HoyaNativeHost.h": "2f90bb41496070267e5059c5051ac3aa15acb50cf7376f84b64b3b057c079445",
+      "packages/react-native/ios/HoyaNativeHost.mm": "e40e20f72c8d0bdc13a7c09d8ff612157398775b33072d13b27f3474fbf3d5f9",
+      "packages/react-native/src/NativeHoyaDB.ts": "ba9f3eb228f537498c0c4673c8de5fbf9b26755e60d090ddf60a5203e51d5a99",
+      "packages/react-native/src/channel.js": "79fb52d5b22d12dbf69b0b7af845bf3a211093c2868bd1f5080a91b6549ab371",
+      "packages/react-native/src/index.js": "edfe3fe864d66cbb5e53c79bd509d6098a277de2e401f14d6fdf5f0be9bcfec6",
+      "rust-toolchain.toml": "9500030ccefd0bab631fb7f1763f79f4103eca3a344c36cf15be869e330683bb"
+    },
+    "count": 140,
+    "sha256": "8f6fdf32315aa13725ae87f00aa270440bc4fd490741f79813e6d4de17e4f0c9"
+  },
+  "previous_native_inventory_sha256": "86e0a5f907e1aa0f3b144e44f73979c81fb53a296c07f670d1464a12c46ec22a",
+  "changes_from_previous_native_inventory": {
+    "modified": [
+      "bindings/android/tools/package-aar.py",
+      "bindings/android/tools/package_fixture.py",
+      "bindings/android/tools/test_package_aar.py",
+      "crates/hoyadb-native/android/build-jni.py",
+      "crates/hoyadb-native/android/build-provider.py"
+    ],
+    "added": [
+      "crates/hoyadb-native/android/test_build_abis.py"
+    ],
+    "removed": []
+  },
+  "toolchain": {
+    "toolchain_version": "1.98.1 (48a229cea 2026-09-01)",
+    "manifest_date": "2026-09-03",
+    "identical_tool_binaries": {
+      "bin/rustc": {
+        "pinned": "fc3ef947b6b9ecdd3919b57f540f75c59768e99b58dd23ad9cbb4f8137e78077",
+        "stable": "fc3ef947b6b9ecdd3919b57f540f75c59768e99b58dd23ad9cbb4f8137e78077"
+      },
+      "bin/cargo": {
+        "pinned": "f9f8280cbd7600d6cd0c7ed12e10d6744a04b44c482e56d7bc8a524474ffdce4",
+        "stable": "f9f8280cbd7600d6cd0c7ed12e10d6744a04b44c482e56d7bc8a524474ffdce4"
+      },
+      "lib/rustlib/x86_64-apple-darwin/bin/rust-lld": {
+        "pinned": "4794c16aa1f3e6f13b7ec0a1e5eb81c6bf77d5ce72ef168fffdcce45091f9b81",
+        "stable": "4794c16aa1f3e6f13b7ec0a1e5eb81c6bf77d5ce72ef168fffdcce45091f9b81"
+      }
+    }
+  },
+  "build_commands": [
+    {
+      "label": "provider-armeabi-v7a",
+      "argv": [
+        "python3",
+        "crates/hoyadb-native/android/build-provider.py",
+        "--abi",
+        "armeabi-v7a",
+        "--ndk",
+        "/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006",
+        "--output",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/target/monstera-android32-20261107/provider-armeabi-v7a"
+      ],
+      "overrides": {},
+      "exact_toolchain": "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin",
+      "exit": 0
+    },
+    {
+      "label": "rust-armeabi-v7a",
+      "argv": [
+        "cargo",
+        "build",
+        "--manifest-path",
+        "crates/hoyadb-native/Cargo.toml",
+        "--target",
+        "armv7-linux-androideabi",
+        "--release",
+        "--offline",
+        "--locked",
+        "-vv"
+      ],
+      "overrides": {
+        "LIBSQLITE3_SYS_USE_PKG_CONFIG": "1",
+        "SQLCIPHER_LIB_DIR": "/Users/boristacyniak/Projects/alocasia/hoyadb/target/monstera-android32-20261107/provider-armeabi-v7a/lib",
+        "SQLCIPHER_INCLUDE_DIR": "/Users/boristacyniak/Projects/alocasia/hoyadb/target/monstera-android32-20261107/provider-armeabi-v7a/include",
+        "SQLCIPHER_STATIC": "1",
+        "PKG_CONFIG_ALLOW_CROSS": "1",
+        "PKG_CONFIG_LIBDIR": "/Users/boristacyniak/Projects/alocasia/hoyadb/target/monstera-android32-20261107/provider-armeabi-v7a/lib/pkgconfig",
+        "CARGO_TARGET_ARMV7_LINUX_ANDROIDEABI_LINKER": "/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/bin/armv7a-linux-androideabi24-clang",
+        "CARGO_TARGET_DIR": "/Users/boristacyniak/Projects/alocasia/hoyadb/target/monstera-android32-20261107/rust-armeabi-v7a"
+      },
+      "exact_toolchain": "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin",
+      "exit": 0
+    },
+    {
+      "label": "jni-armeabi-v7a",
+      "argv": [
+        "python3",
+        "crates/hoyadb-native/android/build-jni.py",
+        "--abi",
+        "armeabi-v7a",
+        "--ndk",
+        "/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006",
+        "--archive",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/target/monstera-android32-20261107/rust-armeabi-v7a/armv7-linux-androideabi/release/libhoyadb_native.a",
+        "--out",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-native/jni-current/armeabi-v7a"
+      ],
+      "overrides": {},
+      "exact_toolchain": "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin",
+      "exit": 0
+    },
+    {
+      "label": "exports-armeabi-v7a",
+      "argv": [
+        "python3",
+        "crates/hoyadb-native/tests/exports.py",
+        "/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-nm",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-native/jni-current/armeabi-v7a/libhoyadb_jni.so"
+      ],
+      "overrides": {},
+      "exact_toolchain": "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin",
+      "exit": 0
+    },
+    {
+      "label": "provider-x86",
+      "argv": [
+        "python3",
+        "crates/hoyadb-native/android/build-provider.py",
+        "--abi",
+        "x86",
+        "--ndk",
+        "/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006",
+        "--output",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/target/monstera-android32-20261107/provider-x86"
+      ],
+      "overrides": {},
+      "exact_toolchain": "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin",
+      "exit": 0
+    },
+    {
+      "label": "rust-x86",
+      "argv": [
+        "cargo",
+        "build",
+        "--manifest-path",
+        "crates/hoyadb-native/Cargo.toml",
+        "--target",
+        "i686-linux-android",
+        "--release",
+        "--offline",
+        "--locked",
+        "-vv"
+      ],
+      "overrides": {
+        "LIBSQLITE3_SYS_USE_PKG_CONFIG": "1",
+        "SQLCIPHER_LIB_DIR": "/Users/boristacyniak/Projects/alocasia/hoyadb/target/monstera-android32-20261107/provider-x86/lib",
+        "SQLCIPHER_INCLUDE_DIR": "/Users/boristacyniak/Projects/alocasia/hoyadb/target/monstera-android32-20261107/provider-x86/include",
+        "SQLCIPHER_STATIC": "1",
+        "PKG_CONFIG_ALLOW_CROSS": "1",
+        "PKG_CONFIG_LIBDIR": "/Users/boristacyniak/Projects/alocasia/hoyadb/target/monstera-android32-20261107/provider-x86/lib/pkgconfig",
+        "CARGO_TARGET_I686_LINUX_ANDROID_LINKER": "/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/bin/i686-linux-android24-clang",
+        "CARGO_TARGET_DIR": "/Users/boristacyniak/Projects/alocasia/hoyadb/target/monstera-android32-20261107/rust-x86"
+      },
+      "exact_toolchain": "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin",
+      "exit": 0
+    },
+    {
+      "label": "jni-x86",
+      "argv": [
+        "python3",
+        "crates/hoyadb-native/android/build-jni.py",
+        "--abi",
+        "x86",
+        "--ndk",
+        "/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006",
+        "--archive",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/target/monstera-android32-20261107/rust-x86/i686-linux-android/release/libhoyadb_native.a",
+        "--out",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-native/jni-current/x86"
+      ],
+      "overrides": {},
+      "exact_toolchain": "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin",
+      "exit": 0
+    },
+    {
+      "label": "exports-x86",
+      "argv": [
+        "python3",
+        "crates/hoyadb-native/tests/exports.py",
+        "/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-nm",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-native/jni-current/x86/libhoyadb_jni.so"
+      ],
+      "overrides": {},
+      "exact_toolchain": "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin",
+      "exit": 0
+    }
+  ],
+  "retained_link_evidence": {
+    "android-notice-index-before-32bit-20261108.json": "28b425a3299e3f7e7ab7c7f73c6cc6597fc470ef839bda293f996bac39edac48",
+    "android32-link-inputs-20261108.json": "f8257c7495dc7dd8daa5bdcec74892b51d2acccd5733b8ccfde9ac9b7103be64",
+    "capture-android32-link-inputs-20261108.py.txt": "8a7ed8b6f82287973f789359cd785d2d67fbc735a7021ebfdb43c77d2be27bdf"
+  },
+  "notice_index_sha256": "d723883558fed341949a2bd1a4a4cfc8d9887e320640f94089601dec9dba6ecd",
+  "package_repository": "/Users/boristacyniak/Projects/alocasia/hoyadb/target/monstera-android32-20261107/maven-final",
+  "certificate_sha256": "3a88f637b0445b984236735a37f7c493d7393cc0718f234b223f0b291244819f",
+  "certificate": {
+    "development_only": false,
+    "build": "manual SDK build; resource-free AAR; not an AGP build",
+    "coordinate": "dev.hoyadb:hoyadb-android:0.1.0",
+    "compiler": "installed2.2.20 language/API/metadata2.1",
+    "abis": {
+      "x86_64": "runtime pending independent consumer",
+      "arm64-v8a": "build-only",
+      "armeabi-v7a": "build-only",
+      "x86": "build-only"
+    },
+    "files": {
+      "hoyadb-android-0.1.0.aar": "b94dc03435418a85f327eb467f7fff67d1e2c1bffa76828f71621e50035a03af",
+      "hoyadb-android-0.1.0.pom": "146de9a71014e8ffc2399d104ed318d07d11375073be35f53dac7ec46c2def1b",
+      "hoyadb-android-0.1.0-sources.jar": "6e82b51382f9be1f7b0296e73a11869e4bc1a42f0d083eb1f270fd92e10fef47",
+      "hoyadb-android-0.1.0-notices.zip": "a49cf545cf93573af0fdd2f9eabdbb870f7e74d9f3c8636037b18a9a1dc6e8b9"
+    },
+    "aar_entries_sha256": {
+      "AndroidManifest.xml": "ee65aa19c64933e93d0eed09de6344929f09553947a2df873ca78819e4cf1513",
+      "META-INF/hoyadb-android/NOTICE.md": "e5209eb2f79c348fcaddcfb80caee916950b9a9db493887cdc3f961a99ea264f",
+      "META-INF/hoyadb-android/third-party/index.json": "d723883558fed341949a2bd1a4a4cfc8d9887e320640f94089601dec9dba6ecd",
+      "META-INF/hoyadb-android/third-party/kotlin/annotations-13.0/LICENSE-2.0.txt": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "META-INF/hoyadb-android/third-party/kotlin/kotlin-stdlib-2.1.20/LICENSE.txt": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "META-INF/hoyadb-android/third-party/kotlin/kotlin-stdlib-2.1.20/NOTICE.txt": "0b09a83d3ef7795c7dec65e815866597c066c53898f2852a76599b8f5552941a",
+      "META-INF/hoyadb-android/third-party/kotlin/kotlin-stdlib-2.1.20/third_party/boost_LICENSE.txt": "8d8291caf1cee26d23acf3eb67c9f9a2d58f1c681b16a4fbe8cbfb9e3c0b5a9b",
+      "META-INF/hoyadb-android/third-party/kotlin/kotlin-stdlib-2.1.20/third_party/guava_license.txt": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "META-INF/hoyadb-android/third-party/kotlin/kotlin-stdlib-2.1.20/third_party/gwt_license.txt": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "META-INF/hoyadb-android/third-party/kotlin/kotlin-stdlib-2.1.20/third_party/threetenbp_license.txt": "d1bc53b493a3ab387b42717ed5c4b1976a5048996f81154278100bff86d39331",
+      "META-INF/hoyadb-android/third-party/native/libtomcrypt-1.18.2/LICENSE-libtomcrypt": "8f196cb13afd271f5e267fd29543fc454596382ad580e7592709492843996ac8",
+      "META-INF/hoyadb-android/third-party/native/sqlcipher-4.19.0/LICENSE-sqlcipher": "2a2826f6acf46fa650730cf42cbb22a642be33a7ef119c9c4f4bf6daf3bef48e",
+      "META-INF/hoyadb-android/third-party/native/sqlite-3.53.4/LICENSE-sqlite": "85806d613cfda5901f848b3b5b4b04396c8c64e89c97c0af3706c42b0c44bb47",
+      "META-INF/hoyadb-android/third-party/rust/bitflags-2.13.2/LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+      "META-INF/hoyadb-android/third-party/rust/bitflags-2.13.2/LICENSE-MIT": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb",
+      "META-INF/hoyadb-android/third-party/rust/cc-1.10.0/LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+      "META-INF/hoyadb-android/third-party/rust/cc-1.10.0/LICENSE-MIT": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+      "META-INF/hoyadb-android/third-party/rust/fallible-iterator-0.3.0/LICENSE-APACHE": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08",
+      "META-INF/hoyadb-android/third-party/rust/fallible-iterator-0.3.0/LICENSE-MIT": "0816e154b159ba255c563f7c8c7df5bbb8cc5fc96f5ab8cf9f4743b4f41fe7eb",
+      "META-INF/hoyadb-android/third-party/rust/fallible-streaming-iterator-0.1.9/LICENSE-APACHE": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08",
+      "META-INF/hoyadb-android/third-party/rust/fallible-streaming-iterator-0.1.9/LICENSE-MIT": "8dcec5569a9be5b0e086c80faed6f1aefa670af0ec29cecc2f714303096887e0",
+      "META-INF/hoyadb-android/third-party/rust/find-msvc-tools-0.1.15/LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+      "META-INF/hoyadb-android/third-party/rust/find-msvc-tools-0.1.15/LICENSE-MIT": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+      "META-INF/hoyadb-android/third-party/rust/libsqlite3-sys-0.38.1/LICENSE": "c10c1f27337546471e5f7e4e97fdd398b35b9d4e126115dcd22de8d8e65abf6f",
+      "META-INF/hoyadb-android/third-party/rust/pkg-config-0.3.34/LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+      "META-INF/hoyadb-android/third-party/rust/pkg-config-0.3.34/LICENSE-MIT": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+      "META-INF/hoyadb-android/third-party/rust/rusqlite-0.40.1/LICENSE": "c10c1f27337546471e5f7e4e97fdd398b35b9d4e126115dcd22de8d8e65abf6f",
+      "META-INF/hoyadb-android/third-party/rust/shlex-2.0.1/LICENSE-APACHE": "553fffcd9b1cb158bc3e9edc35da85ca5c3b3d7d2e61c883ebcfa8a65814b583",
+      "META-INF/hoyadb-android/third-party/rust/shlex-2.0.1/LICENSE-MIT": "4455bf75a91154108304cb283e0fea9948c14f13e20d60887cf2552449dea3b1",
+      "META-INF/hoyadb-android/third-party/rust/smallvec-1.16.4/LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+      "META-INF/hoyadb-android/third-party/rust/smallvec-1.16.4/LICENSE-MIT": "0b28172679e0009b655da42797c03fd163a3379d5cfa67ba1f1655e974a2a1a9",
+      "META-INF/hoyadb-android/third-party/rust/sqlcipher-src-419.0.6+sqlcipher-4.19.0-sqlite-3.53.4-libtomcrypt-1.18.2/LICENSE": "413f82e0f4f8191a8624a7b7b2c9809466f7f3d930ad52a74ad29f2dd907881d",
+      "META-INF/hoyadb-android/third-party/rust/vcpkg-0.2.15/LICENSE-APACHE": "60c93a31f490375aadf64098b75f10715010379541021e00261045d7800611d3",
+      "META-INF/hoyadb-android/third-party/rust/vcpkg-0.2.15/LICENSE-MIT": "016d20f335060a70e79d9fcf8dfaa6201114d65d592211f4bdfb8ae9ca2bc1dc",
+      "META-INF/hoyadb-android/third-party/rust/zeroize-1.9.1/LICENSE-APACHE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "META-INF/hoyadb-android/third-party/rust/zeroize-1.9.1/LICENSE-MIT": "8c7516d4b27b1e495be5e38b612298b63de48d05f49cdac94f70f3cd70f8864b",
+      "META-INF/hoyadb-android/third-party/toolchain/ndk-27.1.12297006/NOTICE": "4d5224d1c0b54ffa88b0dc0088191638fdbb7227835095dfb98f7f66b416a323",
+      "META-INF/hoyadb-android/third-party/toolchain/ndk-27.1.12297006/NOTICE.toolchain": "cbe3237be53c0a819f8df6aac5358fdee848eee3b6571b4e2ca20767ebd7465e",
+      "META-INF/hoyadb-android/third-party/toolchain/rust-1.98.1/COPYRIGHT-library.html": "68129500b616d5838629e68f55ff3aed5e096dacf60ce9eb41bbe599a563afa6",
+      "classes.jar": "7e18a4bfc0570f83e876d76acf015d1197e33cbb66f21da1502d675feb6287b8",
+      "consumer-rules.pro": "6ca554d2ec8086f923e82f2d42ece610dfdd1e65f2ee08e4f77c7a8aebdc3077",
+      "jni/arm64-v8a/libhoyadb_jni.so": "dfb11a131cbd6c3e777c62268be86eb477a2e2cc7af25605e7b30c9023b5cc47",
+      "jni/armeabi-v7a/libhoyadb_jni.so": "753199eb9b78a0b26c4341869df81ab1538707d241358d272e8d599e8499fbdb",
+      "jni/x86/libhoyadb_jni.so": "b4b9fb64bd776e60a92c09e41d3b9bc66e150731bf9462e0188c0b1ea2d787e2",
+      "jni/x86_64/libhoyadb_jni.so": "1869eef4f3accd580708c7ec26c3ce003b72dba8e0f1d82b9dd988f9c70fa15a"
+    },
+    "classes_sha256": "7e18a4bfc0570f83e876d76acf015d1197e33cbb66f21da1502d675feb6287b8",
+    "build_manifest_sha256": "abbc3ac294e6c910eb460744b4b70669e11d5b433ef129a84828a0f0398bf37a",
+    "build_commands": [
+      [
+        "/Users/boristacyniak/.sdkman/candidates/java/17.0.1-tem/bin/javac",
+        "--release",
+        "8",
+        "-d",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/target/monstera-android32-20261107/kotlin-production/classes",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/src/main/java/dev/hoyadb/NativeBridge.java"
+      ],
+      [
+        "/Applications/Android Studio.app/Contents/plugins/Kotlin/kotlinc/bin/kotlinc",
+        "-language-version",
+        "2.1",
+        "-api-version",
+        "2.1",
+        "-jvm-target",
+        "1.8",
+        "-no-stdlib",
+        "-no-reflect",
+        "-classpath",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-kotlin/deps/kotlin-stdlib-2.1.20.jar:/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-kotlin/deps/annotations-13.0.jar:/Users/boristacyniak/Library/Android/sdk/platforms/android-37.0/android.jar:/Users/boristacyniak/Projects/alocasia/hoyadb/target/monstera-android32-20261107/kotlin-production/classes",
+        "-module-name",
+        "hoyadb",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/src/main/kotlin/dev/hoyadb/Background.kt",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/src/main/kotlin/dev/hoyadb/Commands.kt",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/src/main/kotlin/dev/hoyadb/Conflict.kt",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/src/main/kotlin/dev/hoyadb/Database.kt",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/src/main/kotlin/dev/hoyadb/Entities.kt",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/src/main/kotlin/dev/hoyadb/ExplicitDrain.kt",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/src/main/kotlin/dev/hoyadb/HoyaNativeTransport.kt",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/src/main/kotlin/dev/hoyadb/Lifetime.kt",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/src/main/kotlin/dev/hoyadb/Models.kt",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/src/main/kotlin/dev/hoyadb/Observations.kt",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/src/main/kotlin/dev/hoyadb/Queue.kt",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/src/main/kotlin/dev/hoyadb/Runtime.kt",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/src/main/kotlin/dev/hoyadb/Sync.kt",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/src/main/kotlin/dev/hoyadb/SyncModels.kt",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/src/main/kotlin/dev/hoyadb/Values.kt",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/src/main/kotlin/dev/hoyadb/testing/FakeTransport.kt",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/src/main/kotlin/dev/hoyadb/testing/Testing.kt",
+        "-d",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/target/monstera-android32-20261107/kotlin-production/classes"
+      ]
+    ],
+    "build_tools_sha256": {
+      "/Applications/Android Studio.app/Contents/plugins/Kotlin/kotlinc/bin/kotlinc": "90750c977cc043dd2b05c69dd4e052c10377554925dd5a155e74ef732be28c7d",
+      "/Applications/Android Studio.app/Contents/plugins/Kotlin/kotlinc/lib/kotlin-preloader.jar": "7d1b28178518486afc7c20541dc310840dbab4e70bc934ed762a5513091f1b2a",
+      "/Applications/Android Studio.app/Contents/plugins/Kotlin/kotlinc/lib/kotlin-compiler.jar": "26d99b0510e4bc279327827c9f8ce1a7bc859afcef5f8c2cf6d32e0f8751f6df",
+      "/Applications/Android Studio.app/Contents/plugins/Kotlin/kotlinc/lib/annotations-13.0.jar": "ace2a10dc8e2d5fd34925ecac03e4988b2c0f851650c94b8cef49ba1bd111478",
+      "/Applications/Android Studio.app/Contents/plugins/Kotlin/kotlinc/lib/kotlin-stdlib.jar": "8836ccffd3585fadda9901244b20d42901d2f3cd581058d8434e2ffabcf3a3e7",
+      "/Applications/Android Studio.app/Contents/plugins/Kotlin/kotlinc/lib/kotlin-reflect.jar": "8209083a4a7c4e476d9842b078308fa96a96f07a6bd99f05f3586ee13289ab26",
+      "/Applications/Android Studio.app/Contents/plugins/Kotlin/kotlinc/lib/kotlin-script-runtime.jar": "5c8bd5dd7ae1ea2eeb2778fdbeaa19a562184975f6cab8a0bb6779e4190731ae",
+      "/Applications/Android Studio.app/Contents/plugins/Kotlin/kotlinc/lib/kotlinx-coroutines-core-jvm.jar": "9860906a1937490bf5f3b06d2f0e10ef451e65b95b269f22daf68a3d1f5065c5",
+      "/Users/boristacyniak/Library/Android/sdk/platforms/android-37.0/android.jar": "06893f4a316277dfe8c8fe42d4a25552b4e84be474d8c7ea7d34b6ddc26e2ad6",
+      "/Users/boristacyniak/Library/Android/sdk/build-tools/37.0.0/d8": "b773a721be3d4988dea9660815a9e441b76100e5b0f5c72b5893cfadadc76c6f",
+      "/Users/boristacyniak/Library/Android/sdk/build-tools/37.0.0/lib/d8.jar": "a26ee56252adcff6752c379ae255a0ad538ebec60189e078ec6855487107637d",
+      "/Users/boristacyniak/.sdkman/candidates/java/17.0.1-tem/bin/java": "2c663a2f4677833e1305ea553aa188af1e22aca92a85f39e6189ae0708e5f8b4",
+      "/Users/boristacyniak/.sdkman/candidates/java/17.0.1-tem/bin/javac": "275d2edae5c19cf08a97c5da451b5d027521780a38bb76d0146a1eaaac5c2a4c"
+    },
+    "sources": {
+      "bindings/android/src/main/java/dev/hoyadb/NativeBridge.java": "01ef6f9baaffa25ae976768c72aef947dae7fa350557aa3837964af5a53b95e7",
+      "bindings/android/src/main/kotlin/dev/hoyadb/Background.kt": "a102c643bab246a9e16251fa8b1058399dabc2e2592ab5143e029b798d7d3eca",
+      "bindings/android/src/main/kotlin/dev/hoyadb/Commands.kt": "012e540e51d331f4c7b1776000930f7b866c91b19a1610d5ab08fe69d6c1a65b",
+      "bindings/android/src/main/kotlin/dev/hoyadb/Conflict.kt": "bc4f7605d4d954d80e371e6b7ea47c7fda616b1342d80c126c8bcfeecde17423",
+      "bindings/android/src/main/kotlin/dev/hoyadb/Database.kt": "633750a0255e18627528a8f33de783839da7a0af453b0e259f913d9a427aced3",
+      "bindings/android/src/main/kotlin/dev/hoyadb/Entities.kt": "ba534da201735869f0a1c74780804ed6f9fe2f1e12bbc75abaa10da9bbd4b9e4",
+      "bindings/android/src/main/kotlin/dev/hoyadb/ExplicitDrain.kt": "cfcc46a9a4e8a307a1c0db5658bd98874bd1ead678b01172037abf606cf7b6be",
+      "bindings/android/src/main/kotlin/dev/hoyadb/HoyaNativeTransport.kt": "d231e562095a1e0d9cdc79d35b8d6d720612fa1945eed34d20db0b05204e7697",
+      "bindings/android/src/main/kotlin/dev/hoyadb/Lifetime.kt": "8438f7f9d0794406c0fd5b2d4b04dffab709c2297701d066b81be60ace804b9f",
+      "bindings/android/src/main/kotlin/dev/hoyadb/Models.kt": "e31613f9d5b3d8e3e91fc0c128ed85a9a63348e5562d3cc9e6cd9404f6720e49",
+      "bindings/android/src/main/kotlin/dev/hoyadb/Observations.kt": "a67ce681d521c4cc3e6ecedb6be46f8701fd1f62ae6676238a932b96c76e9d68",
+      "bindings/android/src/main/kotlin/dev/hoyadb/Queue.kt": "bb25d4bad130847af016b2d17c0c6d0efddf4cdcd35a354301ec997c21ddb4b2",
+      "bindings/android/src/main/kotlin/dev/hoyadb/Runtime.kt": "02891aebeb1562898dc2b9694acac4eea18a8c93fc4746e2caeb09e2c104950d",
+      "bindings/android/src/main/kotlin/dev/hoyadb/Sync.kt": "67b4212b3e29ac38b88d3a8097a8b3744c100ad7e90de93dcc1730c715451c2f",
+      "bindings/android/src/main/kotlin/dev/hoyadb/SyncModels.kt": "89e9dd30b0376c09137b9731779aad47be5d1d24ac76451770e7e3f3b93cf7ee",
+      "bindings/android/src/main/kotlin/dev/hoyadb/Values.kt": "d293ad959f24200bd03fa833afc8cbc708ddf3bc3a658c87c79303749e0ae831",
+      "bindings/android/src/main/kotlin/dev/hoyadb/testing/FakeTransport.kt": "8ddae00074600805c595bc95f92ac4c7395dbae4a6e61463f9d819c64e9fdf67",
+      "bindings/android/src/main/kotlin/dev/hoyadb/testing/Testing.kt": "e2d5aae5a67939d664958ee9e3ecf17f21b016d51617704891be5995e9b7c500",
+      "bindings/android/toolchain-review.json": "0f2e838fdb5aede71f033fdaf1f3f96ade3e00047435b1f870ef775ee5ca7ba0",
+      "bindings/android/tools/build-consumer.py": "a26c8c76b7e8648bcd8f2e99955ac43022ae1fed4ded7847c3f7274bebda1f60",
+      "bindings/android/tools/build.py": "9c1b1bc7e93c488166ba2bf5063853e194b24e35f2a0eec10be3e3b4e5b8283c",
+      "bindings/android/tools/package-aar.py": "69ae81c455a1554a5bcb758968e52efed91aac0358fce23b51758ac5c465a341",
+      "bindings/android/tools/package_fixture.py": "5187567179ddd467b097fb8b0d54e0b4a386c7d074181f4a7d9cc603f09a2cfb",
+      "bindings/android/tools/run-consumer.py": "61b6dd7a0ef9c4f9ed5e29d1635345c03d6cc5200b313c9174c58bdc7cc89fa7",
+      "bindings/android/tools/run-tests.py": "435f1a4588034e84b08baa995b04290497e5972d7613d0d7bc17d255a5e50064",
+      "bindings/android/tools/runtime_cache.py": "98164262faee69c2bf75d3b3b6ffd9c1004f959c56093429033890c6dac6916a",
+      "bindings/android/tools/test_build_tool.py": "13bda1acdc87444de506b26ce446fd52f25132abdb6bf7b7949d07bb4660d5cb",
+      "bindings/android/tools/test_consumer_tools.py": "cade0f8dafb1bee2a7e029dc0bfcbbd53d47265423998d2657b2b6d043efc57b",
+      "bindings/android/tools/test_package_aar.py": "c8a04a7ac89d3cb15aad0f49bd82e5b1a6c48ab81156c0ef95b2a76586f57949",
+      "bindings/android/tools/test_runtime_cache.py": "addbae9041804bf7d7365187412ee1f7a6f98c4511c651ef57845d35c8284d43"
+    },
+    "packaging_tools_sha256": {
+      "/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-readelf": "53cf1969ea16d33d10b98b2b6a3c21775ef58291d39349b659818d5f1c626919",
+      "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/build-consumer.py": "a26c8c76b7e8648bcd8f2e99955ac43022ae1fed4ded7847c3f7274bebda1f60",
+      "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/build.py": "9c1b1bc7e93c488166ba2bf5063853e194b24e35f2a0eec10be3e3b4e5b8283c",
+      "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/package-aar.py": "69ae81c455a1554a5bcb758968e52efed91aac0358fce23b51758ac5c465a341",
+      "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/package_fixture.py": "5187567179ddd467b097fb8b0d54e0b4a386c7d074181f4a7d9cc603f09a2cfb",
+      "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/run-consumer.py": "61b6dd7a0ef9c4f9ed5e29d1635345c03d6cc5200b313c9174c58bdc7cc89fa7",
+      "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/run-tests.py": "435f1a4588034e84b08baa995b04290497e5972d7613d0d7bc17d255a5e50064",
+      "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/runtime_cache.py": "98164262faee69c2bf75d3b3b6ffd9c1004f959c56093429033890c6dac6916a",
+      "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_build_tool.py": "13bda1acdc87444de506b26ce446fd52f25132abdb6bf7b7949d07bb4660d5cb",
+      "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_consumer_tools.py": "cade0f8dafb1bee2a7e029dc0bfcbbd53d47265423998d2657b2b6d043efc57b",
+      "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py": "c8a04a7ac89d3cb15aad0f49bd82e5b1a6c48ab81156c0ef95b2a76586f57949",
+      "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_runtime_cache.py": "addbae9041804bf7d7365187412ee1f7a6f98c4511c651ef57845d35c8284d43"
+    },
+    "native_provenance_sha256": {
+      "Cargo.lock": "a7385544aa00356ebdc3e1fad3e95ca61722d1a85333f19bae18049cd77ac507",
+      "crates/hoyadb-native/Cargo.lock": "a96a5481be73dc5ab125b4cec4b441bedd256f7a1d834694073cba5f342cb951",
+      "crates/hoyadb-native/Cargo.toml": "a5588297516d698ab453b96d30982abcbdb2ed216b80d5aa72be727666feb0c9",
+      "rust-toolchain.toml": "9500030ccefd0bab631fb7f1763f79f4103eca3a344c36cf15be869e330683bb",
+      "crates/hoyadb-native/android/exports.map": "fe8fb95dce0d4005b7d73afd3b5b59c3ef0be2c164f8f82947ac6f2689bf1832"
+    },
+    "jni": {
+      "x86_64": {
+        "sha256": "1869eef4f3accd580708c7ec26c3ce003b72dba8e0f1d82b9dd988f9c70fa15a",
+        "native_evidence": "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-native/jni-current/x86_64/evidence.json",
+        "evidence_sha256": "d5e3a1895222c995499725352c0eafb9f628eb59cf04e0cd358b8ee008474e2f",
+        "inputs_sha256": {
+          "crates/hoyadb-native/android/hoya_jni.c": "e620c700ffbbee4ed2a3a346f637c6fb7416c13f88845525d39df6fbb8fd0265",
+          "crates/hoyadb-native/android/exports.map": "fe8fb95dce0d4005b7d73afd3b5b59c3ef0be2c164f8f82947ac6f2689bf1832",
+          "crates/hoyadb-native/include/hoyadb.h": "2f61e513be42d3e7aabbd9bb06f02a98d88096551276ae89dd5b30aa28526b48",
+          "target/monstera-native-20261107/rust-x86_64/x86_64-linux-android/release/libhoyadb_native.a": "c6af86086ecb34f84d3dd6739490a97b7dbb354c34c2ceb8951556ed4a28fd3c"
+        }
+      },
+      "arm64-v8a": {
+        "sha256": "dfb11a131cbd6c3e777c62268be86eb477a2e2cc7af25605e7b30c9023b5cc47",
+        "native_evidence": "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-native/jni-current/arm64-v8a/evidence.json",
+        "evidence_sha256": "02c5b121042c0633dbf8069251a9ab50f8d5f056466dbd5a0e1cdf08ff5f7035",
+        "inputs_sha256": {
+          "crates/hoyadb-native/android/hoya_jni.c": "e620c700ffbbee4ed2a3a346f637c6fb7416c13f88845525d39df6fbb8fd0265",
+          "crates/hoyadb-native/android/exports.map": "fe8fb95dce0d4005b7d73afd3b5b59c3ef0be2c164f8f82947ac6f2689bf1832",
+          "crates/hoyadb-native/include/hoyadb.h": "2f61e513be42d3e7aabbd9bb06f02a98d88096551276ae89dd5b30aa28526b48",
+          "target/monstera-native-20261107/rust-arm64-v8a/aarch64-linux-android/release/libhoyadb_native.a": "dd168b23bc9e1f2b3b3f016c93b6c4240ef756edfed3a524e5a4001d7353a235"
+        }
+      },
+      "armeabi-v7a": {
+        "sha256": "753199eb9b78a0b26c4341869df81ab1538707d241358d272e8d599e8499fbdb",
+        "native_evidence": "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-native/jni-current/armeabi-v7a/evidence.json",
+        "evidence_sha256": "73c3c7f95f00a6e061b2f3f355ac7dffaddff87d6f986475929b0e08f7f2cdf0",
+        "inputs_sha256": {
+          "crates/hoyadb-native/android/hoya_jni.c": "e620c700ffbbee4ed2a3a346f637c6fb7416c13f88845525d39df6fbb8fd0265",
+          "crates/hoyadb-native/android/exports.map": "fe8fb95dce0d4005b7d73afd3b5b59c3ef0be2c164f8f82947ac6f2689bf1832",
+          "crates/hoyadb-native/include/hoyadb.h": "2f61e513be42d3e7aabbd9bb06f02a98d88096551276ae89dd5b30aa28526b48",
+          "target/monstera-android32-20261107/rust-armeabi-v7a/armv7-linux-androideabi/release/libhoyadb_native.a": "66f438f6e91ffa5fa0555a4925a44fdfa3fa0fe020d593c43fcb3bc7efc2e048"
+        }
+      },
+      "x86": {
+        "sha256": "b4b9fb64bd776e60a92c09e41d3b9bc66e150731bf9462e0188c0b1ea2d787e2",
+        "native_evidence": "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-native/jni-current/x86/evidence.json",
+        "evidence_sha256": "40b8ddcef7720e0dd61fddae82007e91b075a68f5ceeb3b14d208970ea30845c",
+        "inputs_sha256": {
+          "crates/hoyadb-native/android/hoya_jni.c": "e620c700ffbbee4ed2a3a346f637c6fb7416c13f88845525d39df6fbb8fd0265",
+          "crates/hoyadb-native/android/exports.map": "fe8fb95dce0d4005b7d73afd3b5b59c3ef0be2c164f8f82947ac6f2689bf1832",
+          "crates/hoyadb-native/include/hoyadb.h": "2f61e513be42d3e7aabbd9bb06f02a98d88096551276ae89dd5b30aa28526b48",
+          "target/monstera-android32-20261107/rust-x86/i686-linux-android/release/libhoyadb_native.a": "50da4de7596741a23d42782734d5af7e4eedecad5d7dd424d3b988615d4f5bac"
+        }
+      }
+    },
+    "elf": {
+      "x86_64": {
+        "inspections": [
+          {
+            "command": [
+              "/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-readelf",
+              "-h",
+              "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-native/jni-current/x86_64/libhoyadb_jni.so"
+            ],
+            "exit": 0,
+            "stdout_sha256": "a72337f154ea1aa826a1955f301efa9b718499b100b2ce4aa5517095a15c9114"
+          },
+          {
+            "command": [
+              "/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-readelf",
+              "-lW",
+              "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-native/jni-current/x86_64/libhoyadb_jni.so"
+            ],
+            "exit": 0,
+            "stdout_sha256": "5a852c8de2827a12a99f40650be96c4e3dd087f92a10b5f9b11d729e28d46b93"
+          },
+          {
+            "command": [
+              "/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-readelf",
+              "--dyn-syms",
+              "-W",
+              "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-native/jni-current/x86_64/libhoyadb_jni.so"
+            ],
+            "exit": 0,
+            "stdout_sha256": "4a75b6a0f60c49db1bea5c6479abefeeb6060b957ff60eec5de8794e9506327d"
+          },
+          {
+            "command": [
+              "/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-readelf",
+              "-dW",
+              "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-native/jni-current/x86_64/libhoyadb_jni.so"
+            ],
+            "exit": 0,
+            "stdout_sha256": "ddb52973b6f49d69442dbfeae347b027d2a80cb62418d43fd356081f2d7ac1c0"
+          }
+        ],
+        "exports": [
+          "Java_dev_hoyadb_NativeBridge_abiVersion",
+          "Java_dev_hoyadb_NativeBridge_call",
+          "Java_dev_hoyadb_NativeBridge_open",
+          "Java_dev_hoyadb_NativeBridge_validateOpen",
+          "hoya_v1_abi_version",
+          "hoya_v1_call",
+          "hoya_v1_open",
+          "hoya_v1_validate_open"
+        ],
+        "needed": [
+          "libc.so",
+          "libdl.so",
+          "libm.so"
+        ],
+        "load_alignments": [
+          "0x4000",
+          "0x4000",
+          "0x4000",
+          "0x4000"
+        ]
+      },
+      "arm64-v8a": {
+        "inspections": [
+          {
+            "command": [
+              "/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-readelf",
+              "-h",
+              "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-native/jni-current/arm64-v8a/libhoyadb_jni.so"
+            ],
+            "exit": 0,
+            "stdout_sha256": "b410b3823a76f3730c5d838b9311f9a54ea3c9716039dde0659e4a73d9caca7a"
+          },
+          {
+            "command": [
+              "/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-readelf",
+              "-lW",
+              "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-native/jni-current/arm64-v8a/libhoyadb_jni.so"
+            ],
+            "exit": 0,
+            "stdout_sha256": "88889ee0b13c8b9d717c5fe128fe83ab786c0c001d06c04a9d778b39678fee6b"
+          },
+          {
+            "command": [
+              "/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-readelf",
+              "--dyn-syms",
+              "-W",
+              "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-native/jni-current/arm64-v8a/libhoyadb_jni.so"
+            ],
+            "exit": 0,
+            "stdout_sha256": "dcb7475357b03f30856b46a39717367e1cc567c253c4fc52bf0ef2dbcdf05986"
+          },
+          {
+            "command": [
+              "/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-readelf",
+              "-dW",
+              "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-native/jni-current/arm64-v8a/libhoyadb_jni.so"
+            ],
+            "exit": 0,
+            "stdout_sha256": "154804f865b152c5d5a04d64ff7106e2b08f9837f4b804ae17a7e6bd129694bf"
+          }
+        ],
+        "exports": [
+          "Java_dev_hoyadb_NativeBridge_abiVersion",
+          "Java_dev_hoyadb_NativeBridge_call",
+          "Java_dev_hoyadb_NativeBridge_open",
+          "Java_dev_hoyadb_NativeBridge_validateOpen",
+          "hoya_v1_abi_version",
+          "hoya_v1_call",
+          "hoya_v1_open",
+          "hoya_v1_validate_open"
+        ],
+        "needed": [
+          "libc.so",
+          "libdl.so",
+          "libm.so"
+        ],
+        "load_alignments": [
+          "0x4000",
+          "0x4000",
+          "0x4000",
+          "0x4000"
+        ]
+      },
+      "armeabi-v7a": {
+        "inspections": [
+          {
+            "command": [
+              "/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-readelf",
+              "-h",
+              "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-native/jni-current/armeabi-v7a/libhoyadb_jni.so"
+            ],
+            "exit": 0,
+            "stdout_sha256": "78359a87e99d122aa87a2301ef30c136379336366832a62b1b86e679e29d95cb"
+          },
+          {
+            "command": [
+              "/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-readelf",
+              "-lW",
+              "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-native/jni-current/armeabi-v7a/libhoyadb_jni.so"
+            ],
+            "exit": 0,
+            "stdout_sha256": "b232b69258a7594368b3f71e125cf954a1f7e975a6079c4f70242b58cb249242"
+          },
+          {
+            "command": [
+              "/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-readelf",
+              "--dyn-syms",
+              "-W",
+              "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-native/jni-current/armeabi-v7a/libhoyadb_jni.so"
+            ],
+            "exit": 0,
+            "stdout_sha256": "77423f07a03d7c7522fd73e48cc1e10f5ad83bff2ac49fe1724571904e652288"
+          },
+          {
+            "command": [
+              "/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-readelf",
+              "-dW",
+              "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-native/jni-current/armeabi-v7a/libhoyadb_jni.so"
+            ],
+            "exit": 0,
+            "stdout_sha256": "87ce47c82d1696a9a813e424084465e597edbdc11c7c30093c233f4b29b99061"
+          }
+        ],
+        "exports": [
+          "Java_dev_hoyadb_NativeBridge_abiVersion",
+          "Java_dev_hoyadb_NativeBridge_call",
+          "Java_dev_hoyadb_NativeBridge_open",
+          "Java_dev_hoyadb_NativeBridge_validateOpen",
+          "hoya_v1_abi_version",
+          "hoya_v1_call",
+          "hoya_v1_open",
+          "hoya_v1_validate_open"
+        ],
+        "needed": [
+          "libc.so",
+          "libdl.so",
+          "libm.so"
+        ],
+        "load_alignments": [
+          "0x4000",
+          "0x4000",
+          "0x4000",
+          "0x4000"
+        ]
+      },
+      "x86": {
+        "inspections": [
+          {
+            "command": [
+              "/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-readelf",
+              "-h",
+              "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-native/jni-current/x86/libhoyadb_jni.so"
+            ],
+            "exit": 0,
+            "stdout_sha256": "5c7bd8d11f6718e812f8728526f54d1e6b6a8f513de57b0a992cace7b19eb294"
+          },
+          {
+            "command": [
+              "/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-readelf",
+              "-lW",
+              "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-native/jni-current/x86/libhoyadb_jni.so"
+            ],
+            "exit": 0,
+            "stdout_sha256": "86ff25c19df6afc080717594cba45e25a1cc7e442e67f035c65af65e80932f5d"
+          },
+          {
+            "command": [
+              "/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-readelf",
+              "--dyn-syms",
+              "-W",
+              "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-native/jni-current/x86/libhoyadb_jni.so"
+            ],
+            "exit": 0,
+            "stdout_sha256": "faacc77dc9220beae682d5f51f4f3b4c08a2e1ff998847442a4e2d38adc428d5"
+          },
+          {
+            "command": [
+              "/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-readelf",
+              "-dW",
+              "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-native/jni-current/x86/libhoyadb_jni.so"
+            ],
+            "exit": 0,
+            "stdout_sha256": "8f4c022c626e8937cd43088977ee2d150fd4c910b3c8a7d78a76db600a882a10"
+          }
+        ],
+        "exports": [
+          "Java_dev_hoyadb_NativeBridge_abiVersion",
+          "Java_dev_hoyadb_NativeBridge_call",
+          "Java_dev_hoyadb_NativeBridge_open",
+          "Java_dev_hoyadb_NativeBridge_validateOpen",
+          "hoya_v1_abi_version",
+          "hoya_v1_call",
+          "hoya_v1_open",
+          "hoya_v1_validate_open"
+        ],
+        "needed": [
+          "libc.so",
+          "libdl.so",
+          "libm.so"
+        ],
+        "load_alignments": [
+          "0x4000",
+          "0x4000",
+          "0x4000",
+          "0x4000"
+        ]
+      }
+    },
+    "notice_index_sha256": "d723883558fed341949a2bd1a4a4cfc8d9887e320640f94089601dec9dba6ecd"
+  },
+  "tested_package_identical_to_final": true,
+  "probe_build": {
+    "aar": "/Users/boristacyniak/Projects/alocasia/hoyadb/target/monstera-android32-20261107/maven/dev/hoyadb/hoyadb-android/0.1.0/hoyadb-android-0.1.0.aar",
+    "aar_sha256": "b94dc03435418a85f327eb467f7fff67d1e2c1bffa76828f71621e50035a03af",
+    "image": "system-images;android-30;google_apis_playstore;x86_64",
+    "abis": {
+      "x86": {
+        "package": "dev.hoyadb.android32.p98ebb4e75ff64bb68a0729a1358d5b42",
+        "apk": "/Users/boristacyniak/Projects/alocasia/hoyadb/target/monstera-android32-20261107/probe-2/x86/probe.apk",
+        "apk_sha256": "8b909577699eac7e18eb57befd99682b0e6bb4339d2f28b1d5bad13424348b65",
+        "jni_sha256": "b4b9fb64bd776e60a92c09e41d3b9bc66e150731bf9462e0188c0b1ea2d787e2",
+        "coexistence": true
+      },
+      "armeabi-v7a": {
+        "package": "dev.hoyadb.android32.pd88697166a9b475092a2faefca5e2d0b",
+        "apk": "/Users/boristacyniak/Projects/alocasia/hoyadb/target/monstera-android32-20261107/probe-2/armeabi-v7a/probe.apk",
+        "apk_sha256": "8eede129c0b5093774ca37ab0776dee92e2349b73918544e5a9c227e6f82c6eb",
+        "jni_sha256": "753199eb9b78a0b26c4341869df81ab1538707d241358d272e8d599e8499fbdb",
+        "coexistence": true
+      }
+    },
+    "sources": {
+      "/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-native/tests/android32/run.py": "205d9bbcce1cc7f5d989176e8cb7028dbd0e8e6962d9ae41cd64d98a0d8f169a",
+      "/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-native/tests/android32/Native32Instrumentation.java": "dc0f39452d58b35def87589f532fb28fc8b2356f855e885c9cdade181d425623",
+      "/Users/boristacyniak/Projects/Mobile/Monstera-hoyadb-local/modules/monstera-storage-key/test/CoexistenceProbe.java": "46cd7a31c2f1a4effbf72fa191d5febbaf0a89ec6d796c6ac0ecaac9e08debc1"
+    }
+  },
+  "probe_runtime": {
+    "identity": "hoya32_c4b746cf40a94c2a97db549dbe3c246b",
+    "serial": "emulator-5588",
+    "image": "system-images;android-30;google_apis_playstore;x86_64",
+    "build_sha256": "c98003faee335ccd24f088b422e2cb42561397a378ec028395a08c83ff057b9a",
+    "abis": {
+      "x86": {
+        "execution": "direct x86",
+        "phases": [
+          {
+            "phase": "seed",
+            "abi": "x86",
+            "pid": 2927,
+            "is64Bit": false,
+            "pageSize": 4096,
+            "osArch": "i686"
+          },
+          {
+            "phase": "parent",
+            "abi": "x86",
+            "pid": 3155,
+            "is64Bit": false,
+            "pageSize": 4096,
+            "osArch": "i686"
+          },
+          {
+            "phase": "child",
+            "abi": "x86",
+            "pid": 3364,
+            "is64Bit": false,
+            "pageSize": 4096,
+            "osArch": "i686"
+          },
+          {
+            "phase": "restart",
+            "abi": "x86",
+            "pid": 3530,
+            "is64Bit": false,
+            "pageSize": 4096,
+            "osArch": "i686"
+          },
+          {
+            "phase": "coexistence",
+            "abi": "x86",
+            "pid": 3681,
+            "is64Bit": false,
+            "pageSize": 4096,
+            "osArch": "i686"
+          }
+        ]
+      },
+      "armeabi-v7a": {
+        "execution": "ARM32 via installed image native bridge",
+        "phases": [
+          {
+            "phase": "seed",
+            "abi": "armeabi-v7a",
+            "pid": 4058,
+            "is64Bit": false,
+            "pageSize": 4096,
+            "osArch": "armv7l"
+          },
+          {
+            "phase": "parent",
+            "abi": "armeabi-v7a",
+            "pid": 4326,
+            "is64Bit": false,
+            "pageSize": 4096,
+            "osArch": "armv7l"
+          },
+          {
+            "phase": "child",
+            "abi": "armeabi-v7a",
+            "pid": 4687,
+            "is64Bit": false,
+            "pageSize": 4096,
+            "osArch": "armv7l"
+          },
+          {
+            "phase": "restart",
+            "abi": "armeabi-v7a",
+            "pid": 4879,
+            "is64Bit": false,
+            "pageSize": 4096,
+            "osArch": "armv7l"
+          },
+          {
+            "phase": "coexistence",
+            "abi": "armeabi-v7a",
+            "pid": 5198,
+            "is64Bit": false,
+            "pageSize": 4096,
+            "osArch": "armv7l"
+          }
+        ]
+      }
+    },
+    "cleanup": true,
+    "device_properties": {
+      "ro.build.version.sdk": "30",
+      "ro.product.cpu.abilist": "x86_64,x86,arm64-v8a,armeabi-v7a,armeabi",
+      "ro.product.cpu.abilist32": "x86,armeabi-v7a,armeabi",
+      "ro.dalvik.vm.native.bridge": "libndk_translation.so"
+    },
+    "passed": true
+  },
+  "runtime_tool_files_sha256": {
+    "/Users/boristacyniak/.sdkman/candidates/java/17.0.1-tem/bin/java": "2c663a2f4677833e1305ea553aa188af1e22aca92a85f39e6189ae0708e5f8b4",
+    "/Users/boristacyniak/.sdkman/candidates/java/17.0.1-tem/bin/javac": "275d2edae5c19cf08a97c5da451b5d027521780a38bb76d0146a1eaaac5c2a4c",
+    "/Users/boristacyniak/.sdkman/candidates/java/17.0.1-tem/bin/keytool": "43659d5791f2969c6a471a40b640d697c1ae0ae6309376a2048fde434318fb14",
+    "/Users/boristacyniak/Library/Android/sdk/build-tools/37.0.0/aapt2": "13a206c0b022ba3b92f21b6f142f3a4b2d0f3bb1ac0bddfa820ee2c6b00c4c99",
+    "/Users/boristacyniak/Library/Android/sdk/build-tools/37.0.0/d8": "b773a721be3d4988dea9660815a9e441b76100e5b0f5c72b5893cfadadc76c6f",
+    "/Users/boristacyniak/Library/Android/sdk/build-tools/37.0.0/zipalign": "6d99a9d16c7116850414910b04cffd5ba3aaff86db7a6346179d678abe6d25d1",
+    "/Users/boristacyniak/Library/Android/sdk/build-tools/37.0.0/apksigner": "b47549e373b895ce6ca620d0c7887e674d9615ffa837a86ac601dcfd04adb0f0",
+    "/Users/boristacyniak/Library/Android/sdk/build-tools/37.0.0/lib/d8.jar": "a26ee56252adcff6752c379ae255a0ad538ebec60189e078ec6855487107637d",
+    "/Users/boristacyniak/Library/Android/sdk/build-tools/37.0.0/lib/apksigner.jar": "2defad215d7ff52968a409cde528cdaef7918b115e276b8e3378ca7a178e4180",
+    "/Users/boristacyniak/Library/Android/sdk/emulator/emulator": "2972462a5155cc9c04c4e1dbe119bee0a42475fba15def99a2a83a7ed4d526d3",
+    "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb": "1811e253b21b12cbfda7201ebaf86c10e7ddcb5c606a7a81f7c82b4c429c2d3b",
+    "/Users/boristacyniak/Library/Android/sdk/platforms/android-37.0/android.jar": "06893f4a316277dfe8c8fe42d4a25552b4e84be474d8c7ea7d34b6ddc26e2ad6",
+    "/Users/boristacyniak/Library/Android/sdk/cmdline-tools/latest/bin/avdmanager": "09199f7bca5dc7eb4e4b4ff459dc125579c3e08c61ddc078dcd2c6e8e61efbb6",
+    "/Users/boristacyniak/Library/Android/sdk/system-images/android-30/google_apis_playstore/x86_64/source.properties": "f5b810add3292d3c4f20308749650408d3c7e02f15dd219f3a1a06b62791b80f",
+    "/Users/boristacyniak/Library/Android/sdk/system-images/android-30/google_apis_playstore/x86_64/package.xml": "9f2cb449a0cb07299876b5432191062ef3478b257557c15bf2fc8ac8a9c27de6",
+    "/Users/boristacyniak/Library/Android/sdk/system-images/android-30/google_apis_playstore/x86_64/build.prop": "a7346d8aac17687f6a28a1fb83c25074d1db01493e93ebfc6f207a8b871fb748",
+    "/Users/boristacyniak/Library/Android/sdk/system-images/android-30/google_apis_playstore/x86_64/advancedFeatures.ini": "9bee101e4ddda4768e0b5ed282b6fe49f0bb5d2312a9d46dd08a37d87e5a6ad0"
+  },
+  "verification": [
+    {
+      "command": "python3 -m unittest discover -s crates/hoyadb-native/android -p 'test_*.py'",
+      "exit": 0,
+      "tests": 2,
+      "abi_subcases": 8
+    },
+    {
+      "command": "python3 -m unittest discover -s bindings/android/tools -p 'test_*.py'",
+      "exit": 0,
+      "tests": 61
+    },
+    {
+      "command": "python3 -O -m unittest discover -s bindings/android/tools -p test_package_aar.py",
+      "exit": 0,
+      "tests": 43
+    },
+    {
+      "command": "python3 tools/traceability/trace_check.py docs/design",
+      "exit": 0,
+      "violations": 0
+    },
+    {
+      "command": "python3 tools/traceability/rtm_gen.py docs/design --check",
+      "exit": 0,
+      "result": "up to date"
+    }
+  ],
+  "logs_sha256": {
+    "android-tools-final.log": "d80e4c90ddb61f06d1b026b8d92187ee085d526dbfa3758fbdaafd53c7cd62a2",
+    "android-tools-green.log": "51348fd2748a59938ee349250e2d5faaa8b99e7ad1b0a54ee047e4b1da1c28d8",
+    "exports-armeabi-v7a.log": "d4ca767f46b82921dfb60211685d8b508d5cee309f2ebb29b7bc3a0f9803fa8b",
+    "exports-x86.log": "d4ca767f46b82921dfb60211685d8b508d5cee309f2ebb29b7bc3a0f9803fa8b",
+    "jni-armeabi-v7a.log": "0e36e5af3f1c68e10913b92f16811a8ed5d010723b8b1656c21f963e8e652d23",
+    "jni-x86.log": "977af516f035c2e461d7a692244c98ff6528af994279723d96084448e1331ab9",
+    "kotlin-production.log": "23da888c50cab83bb4a653903f67e5a5615e6adb9381cc1f90b7209b14f103c3",
+    "mapping-final.log": "c3658939af71acbd0c526482983b1e5ae4bbcde8950389f36913e5a83512bb4e",
+    "mapping-green.log": "ae086d126f8093bcb65e030a1919eb2b362a2ca1c3563eedf6cdb908a8d18364",
+    "mapping-red.log": "7517312085958dd3c9c586b4ccb10d2e3f00c870e6c9feb47b689ae74163fbf2",
+    "package-final.log": "87af3ab0c3b7124ff32abdcb57a0b7ea4e88e7bdb54cedf8fec3f0cac36944e8",
+    "package-four-abis.log": "b648458b16f177a3f56811c714a2fe2f4dcf4c4ba340d2900dbaa00a78194cd7",
+    "packaging-green.log": "ccaaeec38c8d1059a48c1d545a79db50bc344b87d249b8f0eb67bd94e03c683e",
+    "packaging-optimized-green.log": "c383a450d1a639448e94c2d4ef41853d60d7f68fe70449f18b1cb6b0f9c96d78",
+    "packaging-red.log": "9333a0792e337cda116f88a2aaa52113a54be5304b27ac78590902b16db98a69",
+    "probe-build-1.log": "6df9571cce5e1881882bc8103315e7162720af84e2c35b3cacc8b4d0fe02b07e",
+    "probe-build-2.log": "7ca48e8506bd6b53f855451e2d4edb46a5efdc03f13c4fdf02059410cf9697e5",
+    "probe-runtime-2.log": "15b78d072c64b0346010c6d5c46ec3229d8462ceac826693450c3f92701a13db",
+    "probe-typecheck.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "provider-armeabi-v7a.log": "76655e3d8adacda7ff8667c9afddbe3b7191e9f440b2793ac1c08cac5dc64687",
+    "provider-x86.log": "0d861e8fb857403557ff8413556e8c75e329e33e4dad8624c7df0296cdf1ddcd",
+    "rtm-final.log": "c10c555e75b52b85cb3ae7104c4c0b0e50111229d6db0a1c2dbfe4d7e55e53f1",
+    "rust-armeabi-v7a.log": "e5e7fc973be6d85975e80710a2108dfdbde085ecdab9b2cada54e2635f6570ba",
+    "rust-x86.log": "7f9b5182442f84f0fe59a1bfec1fb5f2447143e60e8422ebf5f650fbeaa161d4",
+    "trace-final.log": "91825ce680c70e06eafc7b68f86d0d4148e28f5825e65c1906a3801c894fcdd1"
+  },
+  "prior_two_abi_aar_unchanged_sha256": "dd977d0c5de63152f8b8d80e9fbab69662f17ec37193ede08aa6e4b3011c670c",
+  "limits": [
+    "Existing x86_64 and arm64-v8a JNI bytes reused with checked unchanged native source and recorded C/header/static archive hashes; both 32-bit providers/Rust/JNI built fresh.",
+    "All 16 ELF LOAD segments align to 16384, but actual API30 runtime pages were 4096. The separate existing 16KiB consumer gate was not changed or replaced.",
+    "ARM32 runs on the installed x86_64 API30 emulator through libndk_translation.so, not a physical ARM device.",
+    "Raw JNI fixture tests protected storage, atomic marker rollback, partial patch, i64, alias mapping, pending writes, forgetting and restart. It does not prove Kotlin/RN API or full Monstera UI behavior.",
+    "Optional coexistence used exact Monstera default-visible Watermelon SQLite C and Java fixture files read-only. Actual key-module behavior is owned by the separate Monstera lane.",
+    "Initial probe compile used nonexistent android-37/android.jar; corrected fixture path to installed android-37.0/android.jar. Native implementation and acceptance assertions unchanged.",
+    "Prior Apple notice unit suite had two HEAD-reproduced synthetic fixture failures (AN02BuildOrchestration test_build_artifacts_always_finalizes_notices and test_build_artifacts_fails_without_a_valid_corpus); no unrelated test or checker changed.",
+    "No new dependency download, no commit, no publishing. Historical evidence and accepted two-ABI Maven retained."
+  ]
+}

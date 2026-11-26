@@ -1,0 +1,195 @@
+--- a/bindings/react-native/tools/security/README.md
++++ b/bindings/react-native/tools/security/README.md
+@@ -39,7 +39,10 @@
+   vacuous certification and rejects. An observation without a non-empty
+   effective `system_properties` map, an `input_arguments` list or an
+   effective `environment` map is incomplete; any `DYLD_*` name in the
+-  effective environment rejects.
++  effective environment rejects. Each `native_libraries_loaded` entry must be
++  an object with a non-empty string `name`. Otherwise it rejects as an
++  incomplete capture for that role (DEF-0031). The value is never echoed and
++  never enters a load bin or `discovered_images`.
+ - `native_cache.SystemCacheEvidence(expected, pre_host, post_host)` -> the
+   `system_cache` input (SR-22a/b). `expected` is the externally reviewed
+   `hoyadb.system-shared-cache/1` record:
+--- a/bindings/react-native/tools/security/kotlin_guard.py
++++ b/bindings/react-native/tools/security/kotlin_guard.py
+@@ -229,7 +229,14 @@
+                 out.add(Violation(role, 'vulnerable LZ4 entry point: ' + internal))
+         cached = []
+         for lib in o.get('native_libraries_loaded') or []:
++            # DEF-0031: validate the entry and its name before any lookup; never echo malformed values.
++            if not isinstance(lib, dict):
++                out.add(Violation(role, 'incomplete capture: native library entry is not an object'))
++                continue
+             name, digest = lib.get('name'), lib.get('sha256')
++            if not isinstance(name, str) or not name:
++                out.add(Violation(role, 'incomplete capture: native library name missing or not a non-empty string'))
++                continue
+             cache_path = native_cache.lookup(system_cache, name) if cache_ready else None
+             if digest is not None:
+                 bins = [inventory.get(name) == digest, baseline.get(name) == digest]
+--- a/bindings/react-native/tools/security/native_cache.py
++++ b/bindings/react-native/tools/security/native_cache.py
+@@ -93,7 +93,8 @@
+         errors.append('os')
+     if not _exact_keys(record['host_integrity'], INTEGRITY_KEYS) or not all(isinstance(v, bool) for v in record['host_integrity'].values()):
+         errors.append('host_integrity')
+-    if not isinstance(record['arch'], str) or not record['arch']:
++    arch_valid = isinstance(record['arch'], str) and bool(record['arch'])  # DEF-0031: validated before filename use
++    if not arch_valid:
+         errors.append('arch')
+     if not _path(record['cache_dir']):
+         errors.append('cache_dir')
+@@ -103,7 +104,8 @@
+             or not all(_exact_keys(s, ('suffix', 'uuid')) and isinstance(s['suffix'], str) and isinstance(s['uuid'], str)
+                        and s['suffix'] and s['uuid'] and '/' not in s['suffix'] for s in cache['subcaches']):
+         return errors + ['cache']
+-    errors += _file_errors(record)
++    if arch_valid:
++        errors += _file_errors(record)
+     alignment = record['slide_alignment']
+     if not _int(alignment) or alignment <= 0 or alignment & (alignment - 1):
+         errors.append('slide_alignment')
+@@ -156,7 +158,7 @@
+             errors.append('images: invalid identity')
+             break
+     paths = [i['install_path'] for i in images]
+-    if len(set(paths)) != len(paths):
++    if all(isinstance(path, str) for path in paths) and len(set(paths)) != len(paths):  # DEF-0031: hash strings only
+         errors.append('images: duplicate install_path')
+     if len(images) >= cache['images_count']:
+         errors.append('images: entire cache image set cannot be enrolled')
+--- a/bindings/react-native/tools/security/test_kotlin_guard.py
++++ b/bindings/react-native/tools/security/test_kotlin_guard.py
+@@ -222,6 +222,26 @@
+         self.assertFalse(result.ok)
+         self.assertIn('incomplete capture: effective environment missing', [v.setting for v in result.violations])
+ 
++    # DEF-0031 UP05 (no cache evidence): malformed entries reject by field and role, never raise or echo.
++    def test_malformed_native_entries_reject_without_raising_or_echo(self):
++        sentinel = 'malformed-value-sentinel-91c4'
++        cases = [(None, 'entry is not an object'), ([sentinel], 'entry is not an object'),
++                 ({'name': [sentinel], 'sha256': 'b' * 64}, 'name missing or not a non-empty string'),
++                 ({'name': {sentinel: 1}, 'sha256': 'b' * 64}, 'name missing or not a non-empty string'),
++                 ({'sha256': 'b' * 64}, 'name missing or not a non-empty string'), ({'name': ''}, 'name missing or not a non-empty string')]
++        for entry, identity in cases:
++            with self.subTest(entry=repr(entry)):
++                try:
++                    result = G.check_observed_jvms([self.jvm(native_libraries_loaded=[entry])], ['kotlin-compiler'],
++                                                   native_inventory={'jansi-mac-x86_64': 'b' * 64})
++                except Exception as error:
++                    self.fail('raised %s instead of rejecting' % type(error).__name__)
++                self.assertFalse(result.ok)
++                self.assertIn(('kotlin-compiler', 'incomplete capture: native library ' + identity),
++                              [(v.source, v.setting) for v in result.violations])
++                self.assertNotIn(sentinel, repr(result))
++                self.assertEqual((result.native_loads, result.baseline_loads, result.discovered_images), ([], [], []))
++
+     def test_strategy_mismatch_rejects(self):
+         result = G.check_observed_jvms([self.jvm(execution_strategy='daemon')], ['kotlin-compiler'])
+         self.assertFalse(result.ok)
+--- a/bindings/react-native/tools/security/test_native_cache.py
++++ b/bindings/react-native/tools/security/test_native_cache.py
+@@ -563,8 +563,101 @@
+         record.pop('cache_files')
+         self.rejected_with(check([jvm([cached(LIBSYSTEM)])], evidence_v2(record, pre=host_v2(expected_v2()), post=host_v2(expected_v2()))),
+                            'cache_files')
++
++
++SENTINEL = 'malformed-value-sentinel-91c4'
++NON_STRING_JSON = [None, True, 0, 1.5, [SENTINEL], {SENTINEL: SENTINEL}]
++
++
++class InputTypes(unittest.TestCase):
++    """DEF-0031 UP01-UP05: malformed field types return structured rejections; exceptions are test failures."""
++
++    def call(self, function, *args, **kwargs):
++        try:
++            return function(*args, **kwargs)
++        except Exception as error:  # the defect: an escaping exception instead of a structured rejection
++            self.fail('raised %s instead of rejecting' % type(error).__name__)
++
++    def records(self):
++        return (('v1', expected, host, evidence), ('v2', expected_v2, host_v2, evidence_v2))
++
++    def test_up01_unhashable_install_path_does_not_escape_validation(self):
++        for label, make, make_host, make_evidence in self.records():
++            for value in ([], {}):
++                record = make()
++                record['images'][0]['install_path'] = value
++                with self.subTest(schema=label, value=type(value).__name__):
++                    direct = self.call(N.check_host, N.SystemCacheEvidence(record, {}, {}))
++                    self.assertTrue(any(e.startswith('system cache record: images') for e in direct), direct)
++                    result = self.call(check, [jvm([cached(LIBSYSTEM)])], make_evidence(record, pre=make_host(make()), post=make_host(make())))
++                    self.assertFalse(result.ok)
++                    self.assertTrue(any(v.setting.startswith('system cache record: images') for v in result.violations), result.violations)
+ 
++    def test_up02_every_non_string_install_path_rejects_without_coercion(self):
++        for label, make, make_host, make_evidence in self.records():
++            for value in NON_STRING_JSON:
++                record = make()
++                record['images'][0]['install_path'] = value
++                with self.subTest(schema=label, value=repr(value)):
++                    direct = self.call(N.check_host, N.SystemCacheEvidence(record, {}, {}))
++                    self.assertIn('system cache record: images: invalid identity', direct)
++                    self.assertNotIn(SENTINEL, repr(direct))
+ 
++    def test_up03_valid_duplicate_and_unsafe_path_controls_keep_their_meaning(self):
++        self.assertTrue(self.call(check, [jvm([cached(LIBSYSTEM), cached(LIBZ)])], evidence()).ok)
++        self.assertTrue(self.call(check, [jvm([cached(LIBSYSTEM), cached_image(KERNEL_IMAGE)])], evidence_v2()).ok)
++        for label, make, _, _ in self.records():
++            record = make()
++            record['images'].append(dict(record['images'][0]))
++            with self.subTest(schema=label, case='duplicate'):
++                self.assertIn('system cache record: images: duplicate install_path', self.call(N.check_host, N.SystemCacheEvidence(record, {}, {})))
++            for path in ('', 'usr/lib/libz.1.dylib', '/usr/lib/*', '/usr/lib/../libz.1.dylib'):
++                record = make()
++                record['images'][1]['install_path'] = path
++                with self.subTest(schema=label, path=path):
++                    self.assertIn('system cache record: images: invalid identity', self.call(N.check_host, N.SystemCacheEvidence(record, {}, {})))
++
++    def test_up04_invalid_architecture_never_reaches_filename_construction(self):
++        for label, make, make_host, make_evidence in self.records():
++            for value in [''] + NON_STRING_JSON:
++                record = make()
++                record['arch'] = value
++                with self.subTest(schema=label, value=repr(value)):
++                    direct = self.call(N.check_host, N.SystemCacheEvidence(record, {}, {}))
++                    self.assertIn('system cache record: arch', direct)
++                    self.assertFalse(any('cache_files' in e for e in direct), direct)
++                    self.assertNotIn(SENTINEL, repr(direct))
++                    result = self.call(check, [jvm([cached(LIBSYSTEM)])], make_evidence(record, pre=make_host(make()), post=make_host(make())))
++                    self.assertFalse(result.ok)
++                    self.assertIn('system cache record: arch', [v.setting for v in result.violations])
++
++    def test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned(self):
++        entries = [('not an object', bad) for bad in (None, SENTINEL, [SENTINEL], 7, True)]
++        for name in ('missing', '') + tuple(NON_STRING_JSON):
++            for digest in (None, 'b' * 64):
++                for base in (False, True):
++                    entry = {} if name == 'missing' else {'name': name}
++                    if digest:
++                        entry['sha256'] = digest
++                    if base:
++                        entry.update(base_address=0x7ff812db2000 + SLIDE, top_address=0)
++                    entries.append(('name', entry))
++        for with_cache in (False, True):
++            valid = FILE_LIBS + ([cached(LIBSYSTEM)] if with_cache else [])
++            for kind, bad in entries:
++                with self.subTest(cache=with_cache, kind=kind, entry=repr(bad)):
++                    result = self.call(check, [jvm(valid + [bad])], evidence() if with_cache else None)
++                    self.assertFalse(result.ok)
++                    identity = ('incomplete capture: native library entry is not an object' if kind == 'not an object'
++                                else 'incomplete capture: native library name missing or not a non-empty string')
++                    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
++                    self.assertNotIn(SENTINEL, repr(result))
++                    self.assertEqual(result.discovered_images, [])
++                    self.assertEqual(result.native_loads, [('kotlin-compiler', 'libjansi.jnilib')])
++                    self.assertEqual(result.baseline_loads, [('kotlin-compiler', '/jdk/lib/libjava.dylib')])
++                    self.assertEqual(result.system_cache_loads, [('kotlin-compiler', LIBSYSTEM)] if with_cache else [])
++
++
+ class LoaderEnvironment(unittest.TestCase):
+     def test_sr22c_dyld_variables_reject_before_launch_by_name_only(self):
+         for name in ('DYLD_INSERT_LIBRARIES', 'DYLD_LIBRARY_PATH', 'DYLD_SHARED_REGION', 'DYLD_SHARED_CACHE_DIR', 'DYLD_FRAMEWORK_PATH',

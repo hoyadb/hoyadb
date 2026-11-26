@@ -1,0 +1,88 @@
+{
+  "format": 1,
+  "status": "node_checkpoint_passed_packaged_runtime_pending",
+  "scope": "additive cross-wrapper admission wake and DEF-0011 stale sync suppression",
+  "formal_prep": {
+    "release": "dfe6f92",
+    "stale_success": "1d809b9",
+    "stale_error": "429ea25"
+  },
+  "sources": [
+    {
+      "path": "bindings/javascript/client/src/client.js",
+      "bytes": 26696,
+      "sha256": "2926aead0837ead0d3e360ea7741720c6c0cd5562893288278846ac75f92b0f3"
+    },
+    {
+      "path": "bindings/javascript/client/index.d.ts",
+      "bytes": 11579,
+      "sha256": "0fb04bd3b8bd2dd639215e9299816c6eddd999d81a8aab749e41625390ccd151"
+    },
+    {
+      "path": "bindings/javascript/README.md",
+      "bytes": 8195,
+      "sha256": "59967ecf21171694f519e3de4e00b6dee3322720bf7b0696a6302012c7214a65"
+    },
+    {
+      "path": "bindings/javascript/client/test/release.test.mjs",
+      "bytes": 7579,
+      "sha256": "3ef4f733303f655139d5b91a83cbcf586c96722c165a828f645ead21f52c3c09"
+    },
+    {
+      "path": "bindings/javascript/client/test/stale-sync.test.mjs",
+      "bytes": 5902,
+      "sha256": "fd0ae1319bdc9fdb6dd9795937b9a2b7cc37bbc355d29706259075cfa56123c5"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "target/phase-seven-web/release-bus-red.txt",
+      "bytes": 5276,
+      "sha256": "cc420d524b1b25b1b2d79d8fab5a43c6ae8056948189cec224a88602698392a9"
+    },
+    {
+      "path": "target/phase-seven-web/release-bus-all-green.txt",
+      "bytes": 17987,
+      "sha256": "c35718780450cfdb64da0a746243022063f8df66590dc46d2fe1fbfcc794a99f"
+    },
+    {
+      "path": "target/phase-seven-web/stale-sync-red.txt",
+      "bytes": 2114,
+      "sha256": "4e25e8f4c34e0211466c50a90969a037479577cf90ef76ba0eff69faea0466b9"
+    },
+    {
+      "path": "target/phase-seven-web/stale-sync-error-red.txt",
+      "bytes": 2036,
+      "sha256": "62a010e40b841129937f0538ae3ab25969e434e8d75472fea0a3b91b23ed1225"
+    },
+    {
+      "path": "target/phase-seven-web/stale-sync-error-postcommit-red.txt",
+      "bytes": 2037,
+      "sha256": "8abfd10e5e502e4611cec7b23fe08fd760986576ee818cecf64acaf52a7c630e"
+    },
+    {
+      "path": "target/phase-seven-web/stale-sync-postcommit-green.txt",
+      "bytes": 1056,
+      "sha256": "108902943bc95066642ca69f7cdd50b4d4b643a1212639fdc7f2a3b302cc478b"
+    },
+    {
+      "path": "target/phase-seven-web/stale-sync-workspace-postcommit-green.txt",
+      "bytes": 19324,
+      "sha256": "2d83e8039141ee7dad25f4b7ab4d7f4854cc9b61f9df46195e52e88322ee699c"
+    }
+  ],
+  "checks": {
+    "release_tests": 9,
+    "stale_tests": 4,
+    "javascript_workspace": {
+      "passed": 82,
+      "failed": 0
+    },
+    "syntax": "client.js and stale-sync.test.mjs passed"
+  },
+  "qualifications": [
+    "Native platform broker execution belongs to native/RN reports; mock Channel tests establish the portable host retry lifecycle.",
+    "Earlier late-error RED/GREEN was exploratory before follow-up prep429ea25; formal postcommit RED restored only the live catch guard to its failing state, then restored the fix and reran four cases plus full workspace.",
+    "Existing eb8dab9 packaged runtime matrix remains historical. Matching packed/browser runtime rerun is pending this checkpoint."
+  ]
+}

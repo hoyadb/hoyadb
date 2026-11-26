@@ -1,0 +1,104 @@
+{
+  "c_header": {
+    "path": "bindings/native/include/hoyadb.h",
+    "sha256": "2f61e513be42d3e7aabbd9bb06f02a98d88096551276ae89dd5b30aa28526b48",
+    "declared_functions": [
+      "hoya_v1_abi_version",
+      "hoya_v1_call",
+      "hoya_v1_open",
+      "hoya_v1_validate_open"
+    ],
+    "module_map": {
+      "path": "bindings/native/include/HoyaNative/module.modulemap",
+      "sha256": "33326b1780c8a1c82237313f2ee88578d34e816af4ecc3a4a799abfeb23af60c"
+    }
+  },
+  "apple_static_exports": {
+    "ios-arm64": [
+      "_hoya_v1_abi_version",
+      "_hoya_v1_call",
+      "_hoya_v1_open",
+      "_hoya_v1_validate_open"
+    ],
+    "ios-arm64_x86_64-simulator": [
+      "_hoya_v1_abi_version",
+      "_hoya_v1_call",
+      "_hoya_v1_open",
+      "_hoya_v1_validate_open"
+    ],
+    "macos-x86_64": [
+      "_hoya_v1_abi_version",
+      "_hoya_v1_call",
+      "_hoya_v1_open",
+      "_hoya_v1_validate_open"
+    ]
+  },
+  "android_jni": {
+    "arm64-v8a": {
+      "sha256": "2ca0467dd2527757f8e2635237e8311f005331ce55b1070b435391662b6348ff",
+      "exports": [
+        "Java_dev_hoyadb_NativeBridge_abiVersion@@HOYADB_1",
+        "Java_dev_hoyadb_NativeBridge_call@@HOYADB_1",
+        "Java_dev_hoyadb_NativeBridge_open@@HOYADB_1",
+        "Java_dev_hoyadb_NativeBridge_validateOpen@@HOYADB_1",
+        "hoya_v1_abi_version@@HOYADB_1",
+        "hoya_v1_call@@HOYADB_1",
+        "hoya_v1_open@@HOYADB_1",
+        "hoya_v1_validate_open@@HOYADB_1"
+      ]
+    },
+    "x86_64": {
+      "sha256": "3b8c7f5a01fc91d6eba77dac8c4190ca251ceb4121407d4cde1c6525e90b6788",
+      "exports": [
+        "Java_dev_hoyadb_NativeBridge_abiVersion@@HOYADB_1",
+        "Java_dev_hoyadb_NativeBridge_call@@HOYADB_1",
+        "Java_dev_hoyadb_NativeBridge_open@@HOYADB_1",
+        "Java_dev_hoyadb_NativeBridge_validateOpen@@HOYADB_1",
+        "hoya_v1_abi_version@@HOYADB_1",
+        "hoya_v1_call@@HOYADB_1",
+        "hoya_v1_open@@HOYADB_1",
+        "hoya_v1_validate_open@@HOYADB_1"
+      ]
+    }
+  },
+  "swift": {
+    "HoyaDB": {
+      "dump_sha256": "97f23de12148a30af7b77f9d6ba2b79ecbe567365a327b0fdaa5f5e267575bef",
+      "summary_lines": 400,
+      "summary_sha256": "e9347dfe5e0b7be8547f9b3c805d7f3f8db86d2e852871735961ccf55b452d1c"
+    },
+    "HoyaDBTesting": {
+      "dump_sha256": "0557e730d891bf29bb22b614a9ad837beca7264b8f599b882fe791e7a22b4b7a",
+      "summary_lines": 36,
+      "summary_sha256": "0aed4e501167be00a23438ad195c82b4b60d6d9b17f85946ed9771c8680469d1"
+    }
+  },
+  "react_native": {
+    "declarations": {
+      "path": "bindings/react-native/index.d.ts",
+      "sha256": "8ea711a2dea25e530b4c011b28bf265e31877b27fc33219de20d92e22f3edd44"
+    },
+    "runtime_exports": [
+      "createNativeRuntime",
+      "defineSchema",
+      "j",
+      "openMemoryDatabase",
+      "openNativeDatabase",
+      "query"
+    ],
+    "turbo_module_spec": {
+      "path": "bindings/react-native/src/NativeHoyaDB.ts",
+      "sha256": "ba9f3eb228f537498c0c4673c8de5fbf9b26755e60d090ddf60a5203e51d5a99",
+      "members": [
+        "open",
+        "call",
+        "namespace",
+        "uptime",
+        "onAdmissionReleased"
+      ]
+    },
+    "package_json_sha256": "d5dcb80697a8db699204017193237278ac6d0aaaeeefa0b84f37bf3a21985b8d",
+    "podspec_sha256": "b354179ffc6636d9d468fcfd5140a21c4abcb834045e35b77c68a0a9cddfb011",
+    "react_native_config_sha256": "c76d0286fefed2ef599a9a94907befe5564987bbf3731433b37882bddec15fa0"
+  }
+}

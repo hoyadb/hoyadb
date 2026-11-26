@@ -1,0 +1,5 @@
+org/jetbrains/kotlin/com/intellij/util/CompressionUtil.class ['LZ4Compressor', 'LZ4Factory', 'LZ4FastDecompressor']
+caller classes 1
+kotlin-compiler-embeddable-2.1.20.jar 3 ['org/jetbrains/kotlin/com/intellij/util/io/CompressedAppendableFile.class', 'org/jetbrains/kotlin/com/intellij/util/io/PersistentMapWal.class', 'org/jetbrains/kotlin/com/intellij/util/io/PersistentMapWalPlayer.class']
+kotlin-gradle-plugin-2.1.20-gradle85.jar 3 ['org/jetbrains/kotlin/com/intellij/util/io/CompressedAppendableFile.class', 'org/jetbrains/kotlin/com/intellij/util/io/PersistentMapWal.class', 'org/jetbrains/kotlin/com/intellij/util/io/PersistentMapWalPlayer.class']
+kotlin-compiler-embeddable-2.1.20.jar 3 ['org/jetbrains/kotlin/com/intellij/util/io/CompressedAppendableFile.class', 'org/jetbrains/kotlin/com/intellij/util/io/PersistentMapWal.class', 'org/jetbrains/kotlin/com/intellij/util/io/PersistentMapWalPlayer.class']

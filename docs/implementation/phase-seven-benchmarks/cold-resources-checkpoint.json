@@ -1,0 +1,1041 @@
+{
+  "format": 1,
+  "scope": "Complete first native cold and untimed resources matrix; warm matrix, SDK classes, repeatability and numeric budget review still open",
+  "source_workload_sha256": "e1963c2f3a94c6efc45345a4ae0855805c3f62582e29d794840f1a8e5103e82d",
+  "artifact_sha256": "8f6cd610433df3918ca1fa1a0ca9d2a94a20f6ab3bf59d89796f0023bc930ab5",
+  "quiet_coordination": "All three task agents acknowledged finished heavy work and stopped owned emulators/simulators before start; explicit end sent after completed cold run",
+  "external_background": "unknown; actual OS/power/thermal observations retained in each original manifest",
+  "cold": {
+    "independent_process_executions": 60,
+    "setup_executions": 3,
+    "summary_count": 12,
+    "source_and_artifact_stable": true,
+    "cleanup": "owned temporary directory removed after all children reaped",
+    "endpoint_note": "Separate inner open and outer launch-to-parent-observed-decoded-owner; OS cache not flushed, no cold-disk claim"
+  },
+  "resources": {
+    "cycles_per_engine": 30,
+    "checkpoints_per_engine": 61,
+    "source_and_artifact_stable": true,
+    "interpretation": "Actual process retained RSS delta and direct-child peak, not allocator leak attribution"
+  },
+  "remaining": [
+    "full warm matrix",
+    "same-class repeat and control comparisons",
+    "explicit measured numeric budget review and regression gate",
+    "separate browser and supported language SDK classes",
+    "final package sizes and complete target runtime verification"
+  ],
+  "files": [
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-resources/build.txt",
+      "bytes": 165,
+      "sha256": "c0452af88cc6a6f3d24e2d3b1e8bafba4749623b203024ef77f56032411ce4cf"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-resources/manifest.json",
+      "bytes": 24916,
+      "sha256": "d8e29bfd20d35f1ff26494b57df979035ddcc0a0277077977c1ddc9d694a4c56"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-resources/resources-memory-config.json",
+      "bytes": 579,
+      "sha256": "a29267d1c1d101c39d36c9115755db18a4e18a82bef4f84508d28292a9d7083e"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-resources/resources-memory-metric.json",
+      "bytes": 1080,
+      "sha256": "8a1e07c03e2e05dd0854c13ae646b7fbf94d4c6373514def98f494a86d2cb681"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-resources/resources-memory-raw.json",
+      "bytes": 14728,
+      "sha256": "77028a619ef1024d5a1177a0635371a899ab8618944273a3ccd3968054c5da3e"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-resources/resources-native-protected-config.json",
+      "bytes": 704,
+      "sha256": "4b92f135f66efb66cdb3a65eee1603885c5697277d8c4ec549b7e385852539b6"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-resources/resources-native-protected-metric.json",
+      "bytes": 1096,
+      "sha256": "32d60d2600f0428beee24a0e689ce05a210121b74f03a718541b823a19be378d"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-resources/resources-native-protected-raw.json",
+      "bytes": 20894,
+      "sha256": "3554a20a9ee5d4373d728d28907d9b9c694493b8f7fa48f9f20463920d578ff8"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-resources/resources-native-protected-store.json",
+      "bytes": 3632,
+      "sha256": "6f2aa7b2d3b5dd777649ac97a37dd4f24757ecb3c4977727dce15908ee71ac98"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/build.txt",
+      "bytes": 62,
+      "sha256": "92434e198f27984c035c376ec77a7cf9e6ebdde782f8ccb1336ae3329b66ddb7"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-memory-00-1-config.json",
+      "bytes": 559,
+      "sha256": "fbedce2356cf30505e6dca4633ebd5753d0ba36d5c8358fe02ca4e3e82491397"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-memory-00-1-raw.json",
+      "bytes": 1550,
+      "sha256": "c251bc74124aa130d25aea0d7e1a32ba1eecc46e79eb0693cd2398535f5eecae"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-memory-00-10-config.json",
+      "bytes": 560,
+      "sha256": "447556dbf3fa0036a18832ab83d5c32a6c34bac260a99c755db26b4186cec54e"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-memory-00-10-raw.json",
+      "bytes": 1536,
+      "sha256": "5b76e24e525477b16a5234a7612115b8ee1f2184132c7cafc5816754909ffa4d"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-memory-00-2-config.json",
+      "bytes": 559,
+      "sha256": "34e881b13057c3c60ee57854d6878f3b654d182a2163eb4ec47a22eaecaabc4d"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-memory-00-2-raw.json",
+      "bytes": 1535,
+      "sha256": "a149c8644a47748bf19a7d958534879190329bb5e13341934f6e87a0843255db"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-memory-00-3-config.json",
+      "bytes": 559,
+      "sha256": "b9150b7dfef28f9f13ab9c2c986207977ff1e1a7769abe1366285a15e4ffdb9d"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-memory-00-3-raw.json",
+      "bytes": 1548,
+      "sha256": "9594717a182bd86ad5645a7d30dbda308e487ad4a60d81ac28da268e8901fd43"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-memory-00-4-config.json",
+      "bytes": 559,
+      "sha256": "ed52c83d93a2a2c449f4efc9edb1d84ce1b3e1459744d3aa5e2b402612b87b17"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-memory-00-4-raw.json",
+      "bytes": 1548,
+      "sha256": "bf26a03ad92653a1b61472379053db79e57c794540d9007ffe7e22406fdfbb26"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-memory-00-5-config.json",
+      "bytes": 559,
+      "sha256": "dd49bd3d234e0a48f80478736beb2c6ccaa3ab65377054452fcc599f0da283e0"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-memory-00-5-raw.json",
+      "bytes": 1534,
+      "sha256": "39bd105633068cf6db40a31818de5a98d97cd5d94c8914479e78045cff6e0e30"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-memory-00-6-config.json",
+      "bytes": 559,
+      "sha256": "3d0548147dcbd6f0a97299c0f9a55d37157609e8116532bfb5aadb15be146cdf"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-memory-00-6-raw.json",
+      "bytes": 1561,
+      "sha256": "557e76134b70f3b896edf6a2f6d22729140ff80ebc61bd60d6a93bac5dc2c276"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-memory-00-7-config.json",
+      "bytes": 559,
+      "sha256": "a17262444b56946ca568e2267e2bd766b38b724eab1423e797aa5c23d0332bed"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-memory-00-7-raw.json",
+      "bytes": 1548,
+      "sha256": "14f590a4e8f6fb88f61a40e7c1e639b8b876b80332dd74304071ac9398e62c45"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-memory-00-8-config.json",
+      "bytes": 559,
+      "sha256": "bb5ecfef145d3802c85f02b2dda157f2eb2319adcb55141073dda1e262b8b2e9"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-memory-00-8-raw.json",
+      "bytes": 1535,
+      "sha256": "fcfd366f306e313a19e8089057bfa87b31e493c6b094179b4c1e7d2ca311712e"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-memory-00-9-config.json",
+      "bytes": 559,
+      "sha256": "9316df81fe207a302dbf9bae6cfbf9338eab642727ae60d2240a67f06b0f0f3a"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-memory-00-9-raw.json",
+      "bytes": 1548,
+      "sha256": "e64ef0a371f64b94637497b15f83e7582277d0c03eb1580953b592cdac600d43"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-memory-00-inner-summary.json",
+      "bytes": 1487,
+      "sha256": "64345b4acea8832e1b1b4335d98562f5074bcaf51ab632751435d8121f589aa5"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-memory-00-outer-summary.json",
+      "bytes": 1587,
+      "sha256": "3eeb37c750692bcf9f9f7c8a4682479b714a9f423077453f8b4955962a158237"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-00-1-config.json",
+      "bytes": 687,
+      "sha256": "51230712379dcbc00c9a0c9a9418fdc98b76013c1d6d919e3bbde806af1d5d9e"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-00-1-raw.json",
+      "bytes": 1544,
+      "sha256": "50fcb9331a7ac26cfefee1700dc0a20a7014e7468cacd426e7dadadcbd0cc606"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-00-1-store.json",
+      "bytes": 108,
+      "sha256": "8b88f0bb1e89206024cd3b8fa4ec0ca8a2259a342074fc37b96a460aab043f69"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-00-10-config.json",
+      "bytes": 689,
+      "sha256": "f4723529e8f8ffc076d37397217d404134be0ee7c434dca4111aada0430de6c7"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-00-10-raw.json",
+      "bytes": 1545,
+      "sha256": "b0078a175e22f2fcd4a7c0971b67dd77ce5b042ecc856531d2a25dd72791e0e6"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-00-10-store.json",
+      "bytes": 108,
+      "sha256": "8b88f0bb1e89206024cd3b8fa4ec0ca8a2259a342074fc37b96a460aab043f69"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-00-2-config.json",
+      "bytes": 687,
+      "sha256": "cd77a5983b0cae76f99f8e48e98545e02fc1721b0cce362fed29e7ddc7305fb2"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-00-2-raw.json",
+      "bytes": 1544,
+      "sha256": "db209155b7fca269fecac17a819db5306e52ac6d9f403162f2d692d3975cc114"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-00-2-store.json",
+      "bytes": 108,
+      "sha256": "8b88f0bb1e89206024cd3b8fa4ec0ca8a2259a342074fc37b96a460aab043f69"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-00-3-config.json",
+      "bytes": 687,
+      "sha256": "0b36fcbb4369dee742500a4bd8c5faea511844b19a9e77a6ebd46cb348915138"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-00-3-raw.json",
+      "bytes": 1544,
+      "sha256": "11938673b77aa24749e9645e3df697400ebba57e0bf862800dc5dbe6667249d1"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-00-3-store.json",
+      "bytes": 108,
+      "sha256": "8b88f0bb1e89206024cd3b8fa4ec0ca8a2259a342074fc37b96a460aab043f69"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-00-4-config.json",
+      "bytes": 687,
+      "sha256": "ffe0832407b6780cd12b49fa6c2004a980f1b95651cc9cbf9d60ec29cd1081fb"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-00-4-raw.json",
+      "bytes": 1544,
+      "sha256": "835ce9cf260945122a5fd7b3b2a6d6f57ae0b8797d390c1724b91629a16e5b0d"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-00-4-store.json",
+      "bytes": 108,
+      "sha256": "8b88f0bb1e89206024cd3b8fa4ec0ca8a2259a342074fc37b96a460aab043f69"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-00-5-config.json",
+      "bytes": 687,
+      "sha256": "5743591903701e79871a6b064bb34d52b1232cae6ce2423742d5d4c1c36a9941"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-00-5-raw.json",
+      "bytes": 1558,
+      "sha256": "33abfc8bd46e3a51e0177fa70f019f6560ffca7f5561f0cd7da847ad4d846fd7"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-00-5-store.json",
+      "bytes": 108,
+      "sha256": "8b88f0bb1e89206024cd3b8fa4ec0ca8a2259a342074fc37b96a460aab043f69"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-00-6-config.json",
+      "bytes": 687,
+      "sha256": "9cf2f2e98d81720671c7d73a1c30283ac96b451e5213517ae172c00d9dff663e"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-00-6-raw.json",
+      "bytes": 1556,
+      "sha256": "ca5ff9806fa6b10b3b5f95e089269e1914d7ee8927f2bf015f74345d787e825d"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-00-6-store.json",
+      "bytes": 108,
+      "sha256": "8b88f0bb1e89206024cd3b8fa4ec0ca8a2259a342074fc37b96a460aab043f69"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-00-7-config.json",
+      "bytes": 687,
+      "sha256": "273f72c3609b4245a188e854cc2c8b0a458d73ef46d07681a9bb4da9067fce02"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-00-7-raw.json",
+      "bytes": 1544,
+      "sha256": "178ea38c2d44ed4ed9c0f71cdf6ff446c4087445673563f6a1a1a749d51a78ec"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-00-7-store.json",
+      "bytes": 108,
+      "sha256": "8b88f0bb1e89206024cd3b8fa4ec0ca8a2259a342074fc37b96a460aab043f69"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-00-8-config.json",
+      "bytes": 687,
+      "sha256": "5b67a19023cca7b8464f47a9c201b631708bf6d9366ff47a4dde67a17b740aca"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-00-8-raw.json",
+      "bytes": 1556,
+      "sha256": "78b273fc48a3595cc80241c451bf9ee829bb6e699adc8902ac0ee15d08ba3cea"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-00-8-store.json",
+      "bytes": 108,
+      "sha256": "8b88f0bb1e89206024cd3b8fa4ec0ca8a2259a342074fc37b96a460aab043f69"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-00-9-config.json",
+      "bytes": 687,
+      "sha256": "08c9805eaaba1e1dcb5bf04d956fd9ab5110de796ee96fe855b6a86446017fb1"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-00-9-raw.json",
+      "bytes": 1544,
+      "sha256": "1a4074f5eb082c80230b256571140d716199d8d3d3bb9298901ae280d5cc5f3f"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-00-9-store.json",
+      "bytes": 108,
+      "sha256": "8b88f0bb1e89206024cd3b8fa4ec0ca8a2259a342074fc37b96a460aab043f69"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-00-inner-summary.json",
+      "bytes": 1542,
+      "sha256": "49af4bf9560184400d1412dd383458a898f4da79702db34b0b10bf7fe1bbdabe"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-00-outer-summary.json",
+      "bytes": 1584,
+      "sha256": "67102be084ef61312f7209e4b02f08f93a38bd7bc4020743fd3cade456637043"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-01-1-config.json",
+      "bytes": 691,
+      "sha256": "89f6ab878394bf40633f397b53353a5fac0b3be307bfcd61f2cf61a2726d9579"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-01-1-raw.json",
+      "bytes": 1550,
+      "sha256": "3cdfd3ea916e1f53434f6ee8fc8c3119b6856c05e6637b7d8444acf14792887f"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-01-1-store.json",
+      "bytes": 110,
+      "sha256": "818f761fe7501ec117487be6929eebaf583ee751d1a6ed1f1cc3e033b7f4e9d2"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-01-10-config.json",
+      "bytes": 693,
+      "sha256": "e914bf73a4dff49c8ad9cbf034ccfcbaa95e16e55399554307c3d86641d9063a"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-01-10-raw.json",
+      "bytes": 1562,
+      "sha256": "54ab8345f1df9550846f459a0941bc89b5d6664facba1ddbf48efcc2622d944a"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-01-10-store.json",
+      "bytes": 110,
+      "sha256": "818f761fe7501ec117487be6929eebaf583ee751d1a6ed1f1cc3e033b7f4e9d2"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-01-2-config.json",
+      "bytes": 691,
+      "sha256": "ced561ecc99d0d2a9ed9b1982ac09aae885226a841024cf49fcdddd4a44f269f"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-01-2-raw.json",
+      "bytes": 1550,
+      "sha256": "66da7ab3eac83736c22a40974ef759d199609d957b9347e434b8e47aa873df84"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-01-2-store.json",
+      "bytes": 110,
+      "sha256": "818f761fe7501ec117487be6929eebaf583ee751d1a6ed1f1cc3e033b7f4e9d2"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-01-3-config.json",
+      "bytes": 691,
+      "sha256": "fcee51157bcad7034a5380fe35a6109696f9d079784b1b3f62e40a35364af652"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-01-3-raw.json",
+      "bytes": 1574,
+      "sha256": "c819229fdb0875ef8ddfef3584db55b5384f9017110177d0406c7ecc43cf99d3"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-01-3-store.json",
+      "bytes": 110,
+      "sha256": "818f761fe7501ec117487be6929eebaf583ee751d1a6ed1f1cc3e033b7f4e9d2"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-01-4-config.json",
+      "bytes": 691,
+      "sha256": "3cf6abb093186306a42e3a5af5436eba70c17b1abbd853583aeadc360d872b51"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-01-4-raw.json",
+      "bytes": 1550,
+      "sha256": "e7be16c2edbe86d06ce64d2455809c3bd77c5a378d5eec4054e0fd6a0d21e135"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-01-4-store.json",
+      "bytes": 110,
+      "sha256": "818f761fe7501ec117487be6929eebaf583ee751d1a6ed1f1cc3e033b7f4e9d2"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-01-5-config.json",
+      "bytes": 691,
+      "sha256": "7f7243787d8e1ba03df6228389bdd74ee1698814d2618fe2b847208cde464d77"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-01-5-raw.json",
+      "bytes": 1562,
+      "sha256": "5e79d0a8dee381a0eb971e65e2f9496e41e753cf5d9df53722ed127518da505d"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-01-5-store.json",
+      "bytes": 110,
+      "sha256": "818f761fe7501ec117487be6929eebaf583ee751d1a6ed1f1cc3e033b7f4e9d2"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-01-6-config.json",
+      "bytes": 691,
+      "sha256": "3de4efd3f60ca6940ec4e2c494010f7de0ad556becbf31dcbe8a484dd2189ba8"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-01-6-raw.json",
+      "bytes": 1550,
+      "sha256": "3e05ec24aaa21132a9401d1cbc8b80b53ad6aea1cfe72d35013ee231f6a425eb"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-01-6-store.json",
+      "bytes": 110,
+      "sha256": "818f761fe7501ec117487be6929eebaf583ee751d1a6ed1f1cc3e033b7f4e9d2"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-01-7-config.json",
+      "bytes": 691,
+      "sha256": "cf2a5d8c9804265e0430e61aa634281f01d245156eb77c3ea3fe60e2d968b198"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-01-7-raw.json",
+      "bytes": 1561,
+      "sha256": "d5c20c2457011f827c6fd78f4a54bfb676396dd52491ad129bdca27909983522"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-01-7-store.json",
+      "bytes": 110,
+      "sha256": "818f761fe7501ec117487be6929eebaf583ee751d1a6ed1f1cc3e033b7f4e9d2"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-01-8-config.json",
+      "bytes": 691,
+      "sha256": "3d7d1c086a5d5bdbb76e5238a4a775d6c6d8c394885288f0cdb9a85c349e1549"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-01-8-raw.json",
+      "bytes": 1550,
+      "sha256": "9e5d394e80d1704adab298fc0a0ad0da8eb9a42c0cfc8f93ea769a07d46684f1"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-01-8-store.json",
+      "bytes": 110,
+      "sha256": "818f761fe7501ec117487be6929eebaf583ee751d1a6ed1f1cc3e033b7f4e9d2"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-01-9-config.json",
+      "bytes": 691,
+      "sha256": "a77ce00e66cb9aa843be1584452cef5f859822daa3e229d92f14e7faac36f971"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-01-9-raw.json",
+      "bytes": 1562,
+      "sha256": "57f34ccbb4f9d00b6abf986a6ecd6d83731aa6909b9370e62287f8fea6825757"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-01-9-store.json",
+      "bytes": 110,
+      "sha256": "818f761fe7501ec117487be6929eebaf583ee751d1a6ed1f1cc3e033b7f4e9d2"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-01-inner-summary.json",
+      "bytes": 1539,
+      "sha256": "3ff980bdb505fa48e385349d3530151c165d8b3379b9114f078f4bd71d543fce"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-01-outer-summary.json",
+      "bytes": 1588,
+      "sha256": "7445d61f46f1cfd2252aff8f97569ce0afc00a6cf8b7e34218a6b634c010f098"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-02-1-config.json",
+      "bytes": 693,
+      "sha256": "a36a1b7238416a0ab6c4da79fff91084572629c1ad424cf6f764d520f8d012db"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-02-1-raw.json",
+      "bytes": 1569,
+      "sha256": "e619997d821b229d863e9d6b0ab347112a1bb094c8a903d16bc592074b7d22d5"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-02-1-store.json",
+      "bytes": 112,
+      "sha256": "5bd4886bf82f0812f02e7123f2c1ad72641200884f27cd3b8935240508d6d29a"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-02-10-config.json",
+      "bytes": 695,
+      "sha256": "ec57d9440463e7d1c1bcfe60aa355076dddc3d2edf6e95bf0595240564cc2ca0"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-02-10-raw.json",
+      "bytes": 1558,
+      "sha256": "5ce2e8712dd6cd321fb4032e06bf0b07d509665d490f1bb24d1b944180408755"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-02-10-store.json",
+      "bytes": 112,
+      "sha256": "5bd4886bf82f0812f02e7123f2c1ad72641200884f27cd3b8935240508d6d29a"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-02-2-config.json",
+      "bytes": 693,
+      "sha256": "adbea518dac57c83497e7c20497d169c73e5e0d1fb2e2a93a6af843e0d2cec2a"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-02-2-raw.json",
+      "bytes": 1558,
+      "sha256": "836d22500660af1ab3140647d27b09bd5e5cb0666eb9abac4c5c13b79e1a7969"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-02-2-store.json",
+      "bytes": 112,
+      "sha256": "5bd4886bf82f0812f02e7123f2c1ad72641200884f27cd3b8935240508d6d29a"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-02-3-config.json",
+      "bytes": 693,
+      "sha256": "07844916f243470ed0c96c585438306d2064741d9bf54ccd60f210f918f06a64"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-02-3-raw.json",
+      "bytes": 1580,
+      "sha256": "fcb32149db9cbb4486bb7f5f88e205dff4b741151de93ce94306d4d1bed7465b"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-02-3-store.json",
+      "bytes": 112,
+      "sha256": "5bd4886bf82f0812f02e7123f2c1ad72641200884f27cd3b8935240508d6d29a"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-02-4-config.json",
+      "bytes": 693,
+      "sha256": "c5cff1b690ffd89445c596dda9292e70156b59187e1e5e5bf28efd302a3c7cc8"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-02-4-raw.json",
+      "bytes": 1557,
+      "sha256": "5283418cc2249fe87904477bfc277d120d48a6ce921ead564a8809b5abb44919"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-02-4-store.json",
+      "bytes": 112,
+      "sha256": "5bd4886bf82f0812f02e7123f2c1ad72641200884f27cd3b8935240508d6d29a"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-02-5-config.json",
+      "bytes": 693,
+      "sha256": "bdbae384ecd59009cc785d689e32edb1b75898ea5d743c4b7ab4a40ccf5c8040"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-02-5-raw.json",
+      "bytes": 1558,
+      "sha256": "fd7259c5c73d442a1a12d7875353e00add83e6f865f047eb224e71a3293464ce"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-02-5-store.json",
+      "bytes": 112,
+      "sha256": "5bd4886bf82f0812f02e7123f2c1ad72641200884f27cd3b8935240508d6d29a"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-02-6-config.json",
+      "bytes": 693,
+      "sha256": "1d0bfdd7c1c8ba4e2d4d6d14d8012aef396f489b1af76c348961fa2d63ba9206"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-02-6-raw.json",
+      "bytes": 1569,
+      "sha256": "5f0aedf3ffedcafb2412b7ad30edf68b2820364bfef00c682d78b19a023f326e"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-02-6-store.json",
+      "bytes": 112,
+      "sha256": "5bd4886bf82f0812f02e7123f2c1ad72641200884f27cd3b8935240508d6d29a"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-02-7-config.json",
+      "bytes": 693,
+      "sha256": "c1a997acf5ee8b3386d1ce6b4e3e4c17212fdbba801514f0cdbfc8e2fa6a0f9e"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-02-7-raw.json",
+      "bytes": 1557,
+      "sha256": "ea2c55f535f7520af357a2c3e5b7cf3798cd07dd1e0f38abcd09a759906888e8"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-02-7-store.json",
+      "bytes": 112,
+      "sha256": "5bd4886bf82f0812f02e7123f2c1ad72641200884f27cd3b8935240508d6d29a"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-02-8-config.json",
+      "bytes": 693,
+      "sha256": "57ffe41d33aef7a38900df2cc4ec68475251789c3d34ee4cf828d330a09de07f"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-02-8-raw.json",
+      "bytes": 1568,
+      "sha256": "7d4298c7259aba20c2d6178620acedc28193d7be9a7a22796fc10eeb569baf52"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-02-8-store.json",
+      "bytes": 112,
+      "sha256": "5bd4886bf82f0812f02e7123f2c1ad72641200884f27cd3b8935240508d6d29a"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-02-9-config.json",
+      "bytes": 693,
+      "sha256": "2d6b83b1837bf2dfcac2e964049d27157c9b974e2b9d09aa37eb6d979483bd5a"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-02-9-raw.json",
+      "bytes": 1569,
+      "sha256": "5027a2d0ec4a2fc881e5374b3ccb9f42647a7d6c96590d48ecb3f7ebca12d6cb"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-02-9-store.json",
+      "bytes": 112,
+      "sha256": "5bd4886bf82f0812f02e7123f2c1ad72641200884f27cd3b8935240508d6d29a"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-02-inner-summary.json",
+      "bytes": 1583,
+      "sha256": "41a6ea39371bf24043763054eb7482eaf465488956cd18c1f1768e0c5c7c69c2"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-02-outer-summary.json",
+      "bytes": 1589,
+      "sha256": "d5e8cd80b8af9b0fab5d7622ea0cee77ca1f38ece442bfdcc6e478b1c8902835"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-03-1-config.json",
+      "bytes": 695,
+      "sha256": "4507ca2ee74aaa1e8531ebf1e1b0c85e03290d511a8b59a0c31290cf9f9d8762"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-03-1-raw.json",
+      "bytes": 1565,
+      "sha256": "24f6c74a9daee015a21a1fcaf3058f2a33c86fcab6daa32b7b87c3507fe0379e"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-03-1-store.json",
+      "bytes": 114,
+      "sha256": "db6d451fa019fd5ad34cb5b3d40f71bc827d027f14070871ee1eb601c4f7bed3"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-03-10-config.json",
+      "bytes": 697,
+      "sha256": "324b9b251961d55dd6c12cb0ffe08f242f0f779d96baa3df8331c4db3198d426"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-03-10-raw.json",
+      "bytes": 1576,
+      "sha256": "0e3ad963c66be6caaca39c2075da0d62ac8742462b7b0b7fc4449d15bf9242ba"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-03-10-store.json",
+      "bytes": 114,
+      "sha256": "db6d451fa019fd5ad34cb5b3d40f71bc827d027f14070871ee1eb601c4f7bed3"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-03-2-config.json",
+      "bytes": 695,
+      "sha256": "f32985f1ec4fcda15dbe321148d2ed99d05c9b996bef1cf8fee165b187995a50"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-03-2-raw.json",
+      "bytes": 1565,
+      "sha256": "71a24c0bd7b8df7a3db0f266161a8490942f0cd37f81f5a150e867deaac51c1c"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-03-2-store.json",
+      "bytes": 114,
+      "sha256": "db6d451fa019fd5ad34cb5b3d40f71bc827d027f14070871ee1eb601c4f7bed3"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-03-3-config.json",
+      "bytes": 695,
+      "sha256": "86894901143ebb58fab2cd8c41c0ea2770d28081486c08b9089c982adab216e3"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-03-3-raw.json",
+      "bytes": 1575,
+      "sha256": "b6d923d74584269006a53bdd908a87ecf5978d5ce51ce7b82cef67a75e53f9a0"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-03-3-store.json",
+      "bytes": 114,
+      "sha256": "db6d451fa019fd5ad34cb5b3d40f71bc827d027f14070871ee1eb601c4f7bed3"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-03-4-config.json",
+      "bytes": 695,
+      "sha256": "e57de5fcaba8b209546e3c166c242add58085bd4b1e51c09a947b1621d1775e0"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-03-4-raw.json",
+      "bytes": 1565,
+      "sha256": "8c02f2a0d26b0976c19d72d110efc8790d53212b9eee521326555bffd102f25b"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-03-4-store.json",
+      "bytes": 114,
+      "sha256": "db6d451fa019fd5ad34cb5b3d40f71bc827d027f14070871ee1eb601c4f7bed3"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-03-5-config.json",
+      "bytes": 695,
+      "sha256": "e679fa867e0f2e6c0cebf242d293241bc816587287ac917c09c461cf55107212"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-03-5-raw.json",
+      "bytes": 1565,
+      "sha256": "fc0a72522ceb160ff8bc131cba447501214cd1ddd5afe107d2106fe086eaf509"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-03-5-store.json",
+      "bytes": 114,
+      "sha256": "db6d451fa019fd5ad34cb5b3d40f71bc827d027f14070871ee1eb601c4f7bed3"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-03-6-config.json",
+      "bytes": 695,
+      "sha256": "2c91062a22d09eeaef30d87ed900ff1abc46980037cab9e80efe453fb1bd49fb"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-03-6-raw.json",
+      "bytes": 1575,
+      "sha256": "aec779980cc00590d8e5b88850909bab73ae5742e0392d426c34cb572acf10df"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-03-6-store.json",
+      "bytes": 114,
+      "sha256": "db6d451fa019fd5ad34cb5b3d40f71bc827d027f14070871ee1eb601c4f7bed3"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-03-7-config.json",
+      "bytes": 695,
+      "sha256": "e08987861f24efbd7c2886133e0f3bf5d6e5b13362ba758f1693f2f8385ef74b"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-03-7-raw.json",
+      "bytes": 1565,
+      "sha256": "2675cb646c3162e029d9cb51bfc13883a4319e89d6409eabb949d01d2ffe6b65"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-03-7-store.json",
+      "bytes": 114,
+      "sha256": "db6d451fa019fd5ad34cb5b3d40f71bc827d027f14070871ee1eb601c4f7bed3"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-03-8-config.json",
+      "bytes": 695,
+      "sha256": "94dc8d1ab16588d591732b9fd948c02dfac6b01ce3d90fc1fa1f284112551aad"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-03-8-raw.json",
+      "bytes": 1565,
+      "sha256": "9ed4e22dfa5d7935cfce73f0b924d29f00b573c46d9a5fd9b0dd267a0d767da4"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-03-8-store.json",
+      "bytes": 114,
+      "sha256": "db6d451fa019fd5ad34cb5b3d40f71bc827d027f14070871ee1eb601c4f7bed3"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-03-9-config.json",
+      "bytes": 695,
+      "sha256": "642a7f02387c74d36977d0c5de8988f9c32c034f8cb138b7adb3d0e564acbc14"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-03-9-raw.json",
+      "bytes": 1564,
+      "sha256": "90d890d936e1ea5a9837f2d6b5e33eb2536999e542a3c02386a09fb5123cb364"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-03-9-store.json",
+      "bytes": 114,
+      "sha256": "db6d451fa019fd5ad34cb5b3d40f71bc827d027f14070871ee1eb601c4f7bed3"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-03-inner-summary.json",
+      "bytes": 1627,
+      "sha256": "b65bec1d1c106d56f5a6a317d2b88d15f73e0cdac8236447e4c1cad0263c9741"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-03-outer-summary.json",
+      "bytes": 1633,
+      "sha256": "e99a2d0ac4869c4cd789aea0f61bd06e34da99e69913062d96dbea2906c5e505"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-04-1-config.json",
+      "bytes": 695,
+      "sha256": "8cb50109b3380aaf3f71e6965f9ebd83c52d4c255c9f29e9521eb48efab6b3ef"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-04-1-raw.json",
+      "bytes": 1573,
+      "sha256": "2501ddd92a301531532a7ff774366289be429a20633fd96b27673f95be57d06d"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-04-1-store.json",
+      "bytes": 112,
+      "sha256": "259341dade6c802e33b1ffdddf3816d7cf5d3919258073431db32082f1d0609d"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-04-10-config.json",
+      "bytes": 697,
+      "sha256": "d784959ad7f6477a33afd676feca10df12dd2b26f7fbf33c167d288f0993f92c"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-04-10-raw.json",
+      "bytes": 1563,
+      "sha256": "53321741020fbf1b66e046d4f34ee5feea682aa18c9c0900368950c687c795bf"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-04-10-store.json",
+      "bytes": 112,
+      "sha256": "259341dade6c802e33b1ffdddf3816d7cf5d3919258073431db32082f1d0609d"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-04-2-config.json",
+      "bytes": 695,
+      "sha256": "e819465080d1d542b82a85210d332d24b408ee62bcb1521d505fe64b9200ffa0"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-04-2-raw.json",
+      "bytes": 1562,
+      "sha256": "3b2c9ddff1072ecd44edd7468c25867622a4b67b74245d7ac5ca696dd2049c3a"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-04-2-store.json",
+      "bytes": 112,
+      "sha256": "259341dade6c802e33b1ffdddf3816d7cf5d3919258073431db32082f1d0609d"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-04-3-config.json",
+      "bytes": 695,
+      "sha256": "1fb1cfd1c18656a029d449b50af4ae346340c2fd479af593f371973744300607"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-04-3-raw.json",
+      "bytes": 1562,
+      "sha256": "a147fd306f78f3a168553492d1c4f03be708b54a34bba732e5598a72877eb779"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-04-3-store.json",
+      "bytes": 112,
+      "sha256": "259341dade6c802e33b1ffdddf3816d7cf5d3919258073431db32082f1d0609d"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-04-4-config.json",
+      "bytes": 695,
+      "sha256": "ad6b5e61e89034ea53122ef57e6b2dbad6c3d424569a9d981e34aeed5642fa6f"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-04-4-raw.json",
+      "bytes": 1573,
+      "sha256": "cefa3a3f0fb8d341b29580bca99e941bf42e098a49c83e7053e17e7b37334c5f"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-04-4-store.json",
+      "bytes": 112,
+      "sha256": "259341dade6c802e33b1ffdddf3816d7cf5d3919258073431db32082f1d0609d"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-04-5-config.json",
+      "bytes": 695,
+      "sha256": "891fd22b0227706f9c9cd492191c831740283ffaea93d0761f10b5e59d758cb2"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-04-5-raw.json",
+      "bytes": 1562,
+      "sha256": "9a7ed4d6e73045e6cbe9cda0136b66e0f99277816227522bd1c80ef8f412dbdd"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-04-5-store.json",
+      "bytes": 112,
+      "sha256": "259341dade6c802e33b1ffdddf3816d7cf5d3919258073431db32082f1d0609d"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-04-6-config.json",
+      "bytes": 695,
+      "sha256": "1c824c36fff803bc0e521683ea50f83f06e57676c53b9a4c40a50435dd6ab038"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-04-6-raw.json",
+      "bytes": 1562,
+      "sha256": "4062ed174844b4abd2f89620f3311efcf190f9442135681636f04100a5843671"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-04-6-store.json",
+      "bytes": 112,
+      "sha256": "259341dade6c802e33b1ffdddf3816d7cf5d3919258073431db32082f1d0609d"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-04-7-config.json",
+      "bytes": 695,
+      "sha256": "085f785e57fd31953c45e6683b4039f4444a0a28384048a68e49f994300a95d0"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-04-7-raw.json",
+      "bytes": 1573,
+      "sha256": "592ff56b32a3af7548054c51d9f3292c3f14eaef07a55ec7086ffefdfec93909"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-04-7-store.json",
+      "bytes": 112,
+      "sha256": "259341dade6c802e33b1ffdddf3816d7cf5d3919258073431db32082f1d0609d"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-04-8-config.json",
+      "bytes": 695,
+      "sha256": "75d205791a898159d5c34fbf0fa248862cca168db5b30a24447f63dc1e9bb382"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-04-8-raw.json",
+      "bytes": 1561,
+      "sha256": "48874c9674e708b87357c4cab7efd42a4ca4674c88d06a455f0c2ce23f4f4e4c"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-04-8-store.json",
+      "bytes": 112,
+      "sha256": "259341dade6c802e33b1ffdddf3816d7cf5d3919258073431db32082f1d0609d"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-04-9-config.json",
+      "bytes": 695,
+      "sha256": "c7cc7f17f72817c7a893a05a8f85b9e13b173d8377ec5f533d5bd7098564f3af"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-04-9-raw.json",
+      "bytes": 1573,
+      "sha256": "c832e7c8263546d18a3b8bbbbe1973a0c35c3eb68689fe6dbf8d095ffbd577b4"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-04-9-store.json",
+      "bytes": 112,
+      "sha256": "259341dade6c802e33b1ffdddf3816d7cf5d3919258073431db32082f1d0609d"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-04-inner-summary.json",
+      "bytes": 1627,
+      "sha256": "45928940444aa4d7f2465f4a555131afbd206fc887e8940d40c9677439339fe2"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/cold-native-protected-04-outer-summary.json",
+      "bytes": 1633,
+      "sha256": "f8cfa5ba5df1f5b23afd5343ce2d31b1b55329bde260726e839bc5fe6155888e"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/manifest.json",
+      "bytes": 24911,
+      "sha256": "153649e1ea14a6725d53abcd562bf6ad700d457b659ffe4db7fa9c08d3084659"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/setup-100-config.json",
+      "bytes": 674,
+      "sha256": "5bad22fcd808a33c24b6315c1ccaf23db7e0c3383659c57277c635537378760d"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/setup-100-raw.json",
+      "bytes": 1504,
+      "sha256": "40e009de58a42e1d0c4d54092fe4aff9a0066cad77123835816b813b21c64264"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/setup-100-store.json",
+      "bytes": 110,
+      "sha256": "818f761fe7501ec117487be6929eebaf583ee751d1a6ed1f1cc3e033b7f4e9d2"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/setup-1000-config.json",
+      "bytes": 677,
+      "sha256": "d118de1dc935dfcc60ef951a3b4fa7436c83ccf5b65a2a185d1634c88b95bae3"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/setup-1000-raw.json",
+      "bytes": 1496,
+      "sha256": "8adb5d0737980feff7411fc990d8d59482dea004bef562e2b2afe435ab58ed04"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/setup-1000-store.json",
+      "bytes": 112,
+      "sha256": "5bd4886bf82f0812f02e7123f2c1ad72641200884f27cd3b8935240508d6d29a"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/setup-10000-config.json",
+      "bytes": 680,
+      "sha256": "1832b40c3f66edf86189cd1f12c31b126f0d8cdaeed2014adf5002a1b056e372"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/setup-10000-raw.json",
+      "bytes": 1502,
+      "sha256": "4e669470e3d779a4fd16fb94bb54b0e065e594c751ed5f7fd9d27d9da2b3feea"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/full-20261024-cold/setup-10000-store.json",
+      "bytes": 114,
+      "sha256": "db6d451fa019fd5ad34cb5b3d40f71bc827d027f14070871ee1eb601c4f7bed3"
+    }
+  ]
+}

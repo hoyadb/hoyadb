@@ -1,0 +1,25 @@
+[0/1] Planning build
+Building for debugging...
+[0/7] Write sources
+[3/7] Write swift-version--58304C5D6DBC2206.txt
+[5/11] Emitting module HoyaDB
+[6/11] Compiling HoyaDB Observations.swift
+[7/11] Compiling HoyaDB Sync.swift
+[8/11] Compiling HoyaDB Database.swift
+[9/15] Compiling HoyaDB Relations.swift
+[10/15] Compiling HoyaDB Commands.swift
+[11/15] Compiling HoyaDB Values.swift
+[12/15] Compiling HoyaDB Entities.swift
+[13/19] Emitting module HoyaDBTesting
+[14/19] Compiling HoyaDBTesting FakeTransport.swift
+[15/19] Compiling HoyaDBTesting ManualClock.swift
+[16/19] Compiling HoyaDBTesting MemoryTesting.swift
+[17/24] Compiling GeneralConsumer Consumer.swift
+[18/24] Compiling GeneralConsumer Advanced.swift
+[19/24] Compiling GeneralConsumer Walkthrough.swift
+[20/24] Emitting module GeneralConsumer
+[21/24] Compiling GeneralConsumer Recovery.swift
+[21/24] Write Objects.LinkFileList
+[22/24] Linking GeneralConsumer
+[23/24] Applying GeneralConsumer
+Build complete! (19.22s)

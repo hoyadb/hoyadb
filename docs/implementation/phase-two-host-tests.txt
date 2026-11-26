@@ -1,0 +1,209 @@
+   Compiling hoyadb-storage-memory v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-storage-memory)
+   Compiling hoyadb-core v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-core)
+   Compiling hoyadb-storage-sqlite v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-storage-sqlite)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 2.27s
+     Running unittests src/lib.rs (target/debug/deps/hoyadb_core-b8564e49484c8abc)
+
+running 9 tests
+test storage::typed::tests::finite_float_preserves_all_finite_values_and_canonicalizes_zero ... ok
+test storage::typed::tests::supplied_schema_and_paths_validate_without_engine_access ... ok
+test storage::typed::tests::query_and_row_validation_use_exact_types_and_coordinates ... ok
+test model::schema::tests::tc0027_shared_reference_aliases_must_agree_on_target ... ok
+test storage::model::tests::d13_metadata_shape_is_exact_and_never_defaults_on_corruption ... ok
+test model::schema::tests::d01_implicit_keys_and_bookkeeping_compile_without_changing_declaration ... ok
+test model::schema::tests::d02_invalid_versions_names_and_reference_mappings_reject ... ok
+test storage::model::tests::d14_plan_and_inventory_require_matching_definition_and_row_versions ... ok
+test model::schema::tests::d13_canonical_codec_roundtrips_all_relation_operands_and_exact_names ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/hoyadb_storage_memory-bc7319ce50f8182d)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/contract.rs (target/debug/deps/contract-170cd76e4e62827f)
+
+running 46 tests
+test conformance::m05_unknown_table_rejects_every_operation ... ok
+test conformance::m06_missing_read_and_replacement ... ok
+test conformance::m09_creating_existing_table_preserves_rows ... ok
+test conformance::m04_duplicate_insert_preserves_existing_row ... ok
+test conformance::m02_reads_are_owned_snapshots ... ok
+test conformance::m01_typed_roundtrip ... ok
+test conformance::m03_tables_and_instances_are_isolated ... ok
+test conformance::m08_removal_reports_existing_and_missing_rows ... ok
+test conformance::m07_replacement_replaces_all_fields ... ok
+test conformance::t02_batch_observes_prior_mutations_in_order ... ok
+test conformance::t04_missing_replacement_restores_removed_row ... ok
+test conformance::t06_first_typed_error_is_preserved ... ok
+test conformance::t07_empty_and_missing_removal_batches_preserve_rows ... ok
+test conformance::t01_mixed_cross_table_batch_commits ... ok
+test conformance::t03_duplicate_rolls_back_all_tables_and_later_mutations ... ok
+test conformance::t05_unknown_table_rolls_back_for_each_mutation_kind ... ok
+test schema_conformance::s01_initialize_catalog_and_owned_scan ... ok
+test model_conformance::d02_invalid_declarations_and_reserved_inputs_leave_state_unchanged ... ok
+test model_conformance::d01_declared_schema_typed_records_and_bookkeeping ... ok
+test schema_conformance::s02_failed_prefix_preserves_all_state ... ok
+test schema_conformance::s03_stale_expected_state_rejects_before_operations ... ok
+test model_conformance::d05_lazy_to_one_has_many_and_engine_owned_fetch ... ok
+test model_conformance::d08_initialization_and_compatible_legacy_adoption ... ok
+test schema_conformance::s04_unknown_bookkeeping_and_corrupt_metadata_never_become_absent ... ok
+test schema_conformance::s05_checkpoints_and_final_candidate_validate_before_commit ... ok
+test model_conformance::d13_definition_codec_and_bound_unicode_names_roundtrip ... ok
+test typed_conformance::p02_schema_and_row_validation ... ok
+test typed_conformance::p04_optional_null_comparison_and_order ... ok
+test model_conformance::d07_identical_reopen_and_schema_drift ... ok
+test model_conformance::d03_generated_ids_public_mutations_and_counter_rollback ... ok
+test typed_conformance::p01_all_primitives_roundtrip ... ok
+test typed_conformance::p08_committed_changes_order_owned_noops ... ok
+test typed_conformance::p07_invalid_queries_before_execution ... ok
+test model_conformance::d06_many_to_many_managed_links_and_both_directions ... ok
+test typed_conformance::p06_direct_to_one_missing_and_cycles ... ok
+test typed_conformance::p10_all_write_paths_keep_queries_coherent ... ok
+test typed_conformance::p05_filter_order_limit_ties ... ok
+test typed_conformance::p09_rollback_and_invalid_returned_rows ... ok
+test typed_conformance::p03_every_operator_every_primitive ... ok
+test model_conformance::d11_missing_complete_chain_resets_without_running_prefix ... ok
+test model_conformance::tc0028_unselected_migration_descriptors_validate_nested_names ... ok
+test model_conformance::d09_complete_authored_chain_applies_all_primitives ... ok
+test model_conformance::d04_public_operators_all_kinds_order_and_limit ... ok
+test model_conformance::d12_downgrade_unknown_queue_and_future_metadata_reject ... ok
+test model_conformance::d14_public_boundary_partitions_preserve_managed_state ... ok
+test model_conformance::d10_failed_migration_and_endpoint_return_original_owned_engine ... ok
+
+test result: ok. 46 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+     Running tests/index_cost.rs (target/debug/deps/index_cost-142e8e268752673b)
+
+running 1 test
+test p12_selective_lookup_survives_growth_update_raw_writes_and_rollback ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s
+
+     Running unittests src/lib.rs (target/debug/deps/hoyadb_storage_sqlite-5efc1fcf2972a937)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/restart_fixture.rs (target/debug/deps/restart_fixture-ab1c5e7142c78675)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running tests/contract.rs (target/debug/deps/contract-f1fa3b135ea59902)
+
+running 46 tests
+test conformance::m06_missing_read_and_replacement ... ok
+test conformance::m05_unknown_table_rejects_every_operation ... ok
+test conformance::t06_first_typed_error_is_preserved ... ok
+test conformance::m08_removal_reports_existing_and_missing_rows ... ok
+test conformance::t02_batch_observes_prior_mutations_in_order ... ok
+test conformance::t07_empty_and_missing_removal_batches_preserve_rows ... ok
+test conformance::m04_duplicate_insert_preserves_existing_row ... ok
+test conformance::m02_reads_are_owned_snapshots ... ok
+test conformance::m09_creating_existing_table_preserves_rows ... ok
+test conformance::t04_missing_replacement_restores_removed_row ... ok
+test conformance::m01_typed_roundtrip ... ok
+test conformance::m07_replacement_replaces_all_fields ... ok
+test conformance::t05_unknown_table_rolls_back_for_each_mutation_kind ... ok
+test conformance::t03_duplicate_rolls_back_all_tables_and_later_mutations ... ok
+test conformance::t01_mixed_cross_table_batch_commits ... ok
+test model_conformance::d01_declared_schema_typed_records_and_bookkeeping ... ok
+test conformance::m03_tables_and_instances_are_isolated ... ok
+test model_conformance::d05_lazy_to_one_has_many_and_engine_owned_fetch ... ok
+test schema_conformance::s01_initialize_catalog_and_owned_scan ... ok
+test schema_conformance::s02_failed_prefix_preserves_all_state ... ok
+test model_conformance::d03_generated_ids_public_mutations_and_counter_rollback ... ok
+test model_conformance::d07_identical_reopen_and_schema_drift ... ok
+test model_conformance::d13_definition_codec_and_bound_unicode_names_roundtrip ... ok
+test schema_conformance::s03_stale_expected_state_rejects_before_operations ... ok
+test model_conformance::d11_missing_complete_chain_resets_without_running_prefix ... ok
+test model_conformance::d08_initialization_and_compatible_legacy_adoption ... ok
+test model_conformance::d09_complete_authored_chain_applies_all_primitives ... ok
+test model_conformance::d06_many_to_many_managed_links_and_both_directions ... ok
+test schema_conformance::s05_checkpoints_and_final_candidate_validate_before_commit ... ok
+test typed_conformance::p02_schema_and_row_validation ... ok
+test typed_conformance::p04_optional_null_comparison_and_order ... ok
+test schema_conformance::s04_unknown_bookkeeping_and_corrupt_metadata_never_become_absent ... ok
+test typed_conformance::p06_direct_to_one_missing_and_cycles ... ok
+test model_conformance::d02_invalid_declarations_and_reserved_inputs_leave_state_unchanged ... ok
+test typed_conformance::p08_committed_changes_order_owned_noops ... ok
+test typed_conformance::p07_invalid_queries_before_execution ... ok
+test model_conformance::tc0028_unselected_migration_descriptors_validate_nested_names ... ok
+test typed_conformance::p10_all_write_paths_keep_queries_coherent ... ok
+test model_conformance::d12_downgrade_unknown_queue_and_future_metadata_reject ... ok
+test typed_conformance::p09_rollback_and_invalid_returned_rows ... ok
+test model_conformance::d10_failed_migration_and_endpoint_return_original_owned_engine ... ok
+test model_conformance::d14_public_boundary_partitions_preserve_managed_state ... ok
+test typed_conformance::p01_all_primitives_roundtrip ... ok
+test typed_conformance::p05_filter_order_limit_ties ... ok
+test typed_conformance::p03_every_operator_every_primitive ... ok
+test model_conformance::d04_public_operators_all_kinds_order_and_limit ... ok
+
+test result: ok. 46 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.28s
+
+     Running tests/model_cases.rs (target/debug/deps/model_cases-310f7ac2d2a6a279)
+
+running 5 tests
+test d15_actual_commit_failure_preserves_counter_and_retry_identity ... ok
+test d15_orphan_physical_bookkeeping_is_never_adopted_or_reset ... ok
+test d15_public_insert_counter_and_row_share_one_commit ... ok
+test d15_initialization_and_legacy_adoption_roll_back_after_metadata_abort ... ok
+test d15_migration_and_missing_chain_reset_abort_preserve_reopened_state ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.09s
+
+     Running tests/process.rs (target/debug/deps/process-f13a6bdd1fb62adb)
+
+running 4 tests
+test p11_new_typed_values_survive_process_restart ... ok
+test q02_failed_batch_remains_rolled_back_after_restart ... ok
+test q01_committed_rows_survive_process_restart ... ok
+test d16_managed_schema_migration_relations_and_ids_survive_process_restart ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.70s
+
+     Running tests/sqlite_cases.rs (target/debug/deps/sqlite_cases-9f3a308a4493a6c0)
+
+running 6 tests
+test q05_lock_failure_recovers_without_publication ... ok
+test q07_trigger_failure_rolls_back_single_mutations_and_batch ... ok
+test q03_bound_names_and_empty_rows ... ok
+test q08_owned_connection_moves_and_operations_are_eager_ready_send ... ok
+test q04_open_rejects_paths_and_unowned_formats_without_mutation ... ok
+test q06_corrupt_fields_never_return_partial_rows ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.10s
+
+     Running tests/typed_cases.rs (target/debug/deps/typed_cases-380fa928e6f4c493)
+
+running 5 tests
+test p11_typed_sql_write_and_commit_failures_preserve_snapshots_and_indexes ... ok
+test p11_new_tags_roundtrip_and_reopen_preserve_v1_tables_and_old_rows ... ok
+test p11_float_integer_affinity_is_checked_without_saturating_casts ... ok
+test p11_strict_new_tag_decoding_never_coerces_payloads ... ok
+test p12_actual_numeric_and_text_lookup_plans_and_recorded_costs ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.26s
+
+   Doc-tests hoyadb_core
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests hoyadb_storage_memory
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests hoyadb_storage_sqlite
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s

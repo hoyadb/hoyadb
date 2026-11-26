@@ -1,0 +1,52 @@
+test_generated_member_outside_the_validated_framework_rejects (__main__.AN05PackSourceIdentity.test_generated_member_outside_the_validated_framework_rejects) ... ok
+test_head_identical_sources_and_validated_framework_pass (__main__.AN05PackSourceIdentity.test_head_identical_sources_and_validated_framework_pass) ... ok
+test_head_moving_to_new_bytes_cannot_borrow_the_pinned_commit (__main__.AN05PackSourceIdentity.test_head_moving_to_new_bytes_cannot_borrow_the_pinned_commit) ... FAIL
+test_inherited_git_environment_cannot_redirect_explicit_roots (__main__.AN05PackSourceIdentity.test_inherited_git_environment_cannot_redirect_explicit_roots) ... FAIL
+test_pinned_commit_bytes_still_verify_after_head_moves (__main__.AN05PackSourceIdentity.test_pinned_commit_bytes_still_verify_after_head_moves) ... FAIL
+test_shipped_npmignore_excludes_only_gradle_and_build_state (__main__.AN05PackSourceIdentity.test_shipped_npmignore_excludes_only_gradle_and_build_state) ... ok
+test_tracked_but_modified_file_rejects_before_extraction (__main__.AN05PackSourceIdentity.test_tracked_but_modified_file_rejects_before_extraction) ... ok
+test_untracked_package_file_rejects_before_extraction (__main__.AN05PackSourceIdentity.test_untracked_package_file_rejects_before_extraction) ... ok
+test_wrong_git_root_rejects_before_npm (__main__.AN05PackSourceIdentity.test_wrong_git_root_rejects_before_npm) ... ok
+
+======================================================================
+FAIL: test_head_moving_to_new_bytes_cannot_borrow_the_pinned_commit (__main__.AN05PackSourceIdentity.test_head_moving_to_new_bytes_cannot_borrow_the_pinned_commit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/native/tools/test_apple_notices.py", line 778, in test_head_moving_to_new_bytes_cannot_borrow_the_pinned_commit
+    self.rejected_before_extraction(mode, root, package, parent, 'modified-entry',
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                    npm_before=self.head_move_step(root, restore_original=False))
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/native/tools/test_apple_notices.py", line 713, in rejected_before_extraction
+    self.expect_rejected(result, reason, mode)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/native/tools/test_apple_notices.py", line 161, in expect_rejected
+    self.assertEqual(result.returncode, 2, f'{mode}: {result.stdout}{result.stderr}')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 2 : normal: {"archive": "hoyadb-fixture-rn-0.0.1.tgz", "result": "packed", "sha256": "b4581e6bf1297a49ad4037cffaeec5c7f097802844b6d04d3e9d038b32a802b6", "validations": ["source", "package-copy", "extracted"]}
+
+
+======================================================================
+FAIL: test_inherited_git_environment_cannot_redirect_explicit_roots (__main__.AN05PackSourceIdentity.test_inherited_git_environment_cannot_redirect_explicit_roots)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/native/tools/test_apple_notices.py", line 810, in test_inherited_git_environment_cannot_redirect_explicit_roots
+    self.assertEqual(result.returncode, 0, f'{mode}: {result.stdout}{result.stderr}')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 0 : normal: REJECTED git-root-mismatch: Git work tree of /private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-def0030-8lcixvw2/001-normal-git-env/bindings/react-native is not /private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-def0030-8lcixvw2/001-normal-git-env: '/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-def0030-8lcixvw2/000-foreign'
+
+
+======================================================================
+FAIL: test_pinned_commit_bytes_still_verify_after_head_moves (__main__.AN05PackSourceIdentity.test_pinned_commit_bytes_still_verify_after_head_moves)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/native/tools/test_apple_notices.py", line 789, in test_pinned_commit_bytes_still_verify_after_head_moves
+    self.assertEqual(result.returncode, 0, f'{mode}: {result.stdout}{result.stderr}')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 0 : normal: REJECTED modified-entry: index.js differs from its committed HEAD bytes (bindings/react-native/index.js)
+
+
+----------------------------------------------------------------------
+Ran 9 tests in 46.527s
+
+FAILED (failures=3)

@@ -1,0 +1,20 @@
+{
+ "OMISSIONS.json": "a7547e80a7a0984ea24d12aa8327fa5f8890a5bec62da9b390f2308a03018b3d",
+ "README-api.diff": "3fba81bdd7e29c9db3a33e2413b85e2cbdeac628782821a503e3ca00b36462f7",
+ "README.md": "5dcef6afc6c6f3a06ddbaec83d96bde94f88a50ba59fdac1d94c9a46e87ae5cd",
+ "VIEW.md": "f5bfa9d9be373e9e344a71512da2cac26198524881fa357455b7615d0a596634",
+ "initial-handback-source-sha256.json": "a7898abbaca3718411736ea445dd5b834295bedc4e331f58df8a8d1fa4bcc5eb",
+ "jdk17-src.zip.sha256": "eeb8c1d77d9e21ef2b6a4205b52b7d59dfefd7bb93dc1b52b7a4eab83f6c602e",
+ "logs/green-O-test_embedded_scan.txt": "abb1608426e0374da6f0c3e41c994373097ef0718cd483b04a42b3e9a83e927a",
+ "logs/green-O-test_init_script_guard.txt": "9d9e699697f26a79da1b43c073670b030f840ab2dedce5c93e8125e51e577bc3",
+ "logs/green-O-test_kotlin_guard.txt": "e05661b57c57b7a1387eaf142e36ed4b1d3a1f514f1b09d22fb91b0d0d3cda2f",
+ "logs/green-O-test_symbol_guard.txt": "7aa83240944c83c670eb4127cf5d8ac5fcf83c5370284485c7202c6c3f221458",
+ "logs/green-test_embedded_scan.txt": "d463117a6e2ae62a5c808cd2bddf92ba42dccc82fef5012c79b6a9a017f00df0",
+ "logs/green-test_init_script_guard.txt": "2a7be98e27bcdd1da365d85a85322ba0101a2026fcef926b7a031fae5ce173c0",
+ "logs/green-test_kotlin_guard.txt": "8b43925375a64de9a8d012fa9441c42356dbf8c50df17dd2d12f016f6774dade",
+ "logs/green-test_symbol_guard.txt": "5c4b47379411f87703c20fe0b8f80fa92680cfb3bad02b1cf562e4b86404e65e",
+ "logs/red-O-test_kotlin_guard.txt": "cc23e7523bac9206f920579716c42379f934150454cfa014738c1f0ab609e976",
+ "logs/red-test_kotlin_guard.txt": "dcd6bdf144af8050622bbe2e85e0f3dd50be5b6713636d6d7e1399284cba4f6e",
+ "logs/root-repro-after.txt": "8fdd6c0b5f76c6b0b1fa8ddd1eb3d9e1e799fe4070350af87e5110502bad7e4b",
+ "test_kotlin_guard.diff": "3c0bfe42787617c90bed3a862d77446b4ab55c2b6e886f58772bffb946ffd5b8"
+}

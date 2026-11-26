@@ -1,0 +1,8 @@
+[
+  "com.ncorti.ktfmt.gradle:com.ncorti.ktfmt.gradle.gradle.plugin:0.22.0",
+  "com.ncorti.ktfmt.gradle:plugin:0.22.0",
+  "io.github.java-diff-utils:java-diff-utils:4.15",
+  "org.gradle.toolchains.foojay-resolver-convention:org.gradle.toolchains.foojay-resolver-convention.gradle.plugin:1.0.0",
+  "org.gradle.toolchains:foojay-resolver:1.0.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:2.1.10"
+]

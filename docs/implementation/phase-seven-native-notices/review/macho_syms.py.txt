@@ -1,0 +1,53 @@
+"""Static read-only Mach-O/ar symbol-table parser (no execution of any tool). Mirrors nm --no-llvm-bc semantics:
+reads LC_SYMTAB of each archive member, ignores embedded LLVM bitcode sections."""
+import struct,sys,re,json,hashlib
+LTC=re.compile(r'(ltc_|tomcrypt|register_cipher|register_hash|register_prng|sqlcipher_ltc)',re.I)
+EXTRA=re.compile(r'^_(find_cipher|find_hash|cipher_descriptor|hash_descriptor|prng_descriptor|crypt_argchk|pkcs_5_alg2|hmac_init|aes_setup|rijndael_|sha1_init|sha256_init|sha512_init|fortuna_)')
+CPU={7:'i386',0x01000007:'x86_64',12:'arm',0x0100000c:'arm64'}
+def members(ar):
+    assert ar[:8]==b'!<arch>\n';off=8
+    while off<len(ar):
+        h=ar[off:off+60];name=h[:16].decode().strip();size=int(h[48:58]);off+=60;data=ar[off:off+size]
+        if name.startswith('#1/'):
+            n=int(name[3:]);name=data[:n].rstrip(b'\0').decode();data=data[n:]
+        yield name,data;off+=size+(size&1)
+def symtab(mo):
+    magic=struct.unpack('<I',mo[:4])[0]
+    if magic!=0xfeedfacf: return None
+    ncmds=struct.unpack('<I',mo[16:20])[0];off=32
+    for _ in range(ncmds):
+        cmd,sz=struct.unpack('<II',mo[off:off+8])
+        if cmd==2:
+            symoff,nsyms,stroff,strsize=struct.unpack('<IIII',mo[off+8:off+24]);out=[]
+            for i in range(nsyms):
+                e=mo[symoff+16*i:symoff+16*i+16];strx,ntype,nsect,ndesc,nvalue=struct.unpack('<IBBHQ',e)
+                s=mo[stroff+strx:mo.index(b'\0',stroff+strx)].decode('latin1');out.append((s,ntype))
+            return out
+        off+=sz
+    return []
+def slices(b):
+    if struct.unpack('>I',b[:4])[0]==0xcafebabe:
+        n=struct.unpack('>I',b[4:8])[0]
+        for i in range(n):
+            cpu,sub,off,size,al=struct.unpack('>IIIII',b[8+20*i:28+20*i]);yield CPU.get(cpu,hex(cpu)),b[off:off+size]
+    else: yield 'thin',b
+res={}
+for path in sys.argv[1:]:
+    b=open(path,'rb').read();r={'sha256':hashlib.sha256(b).hexdigest()}
+    for arch,a in slices(b):
+        und=set();defined=set();nonmacho=[];ltc=set();extra=set();count=0
+        for name,data in members(a):
+            if name.startswith('__.SYMDEF'): continue
+            st=symtab(data);count+=1
+            if st is None: nonmacho.append(name);continue
+            for s,t in st:
+                if t&0xe0: continue  # stab
+                typ=t&0x0e;ext=t&1
+                if typ==0 and ext: und.add(s)
+                elif ext: defined.add(s)
+                if LTC.search(s): ltc.add(s)
+                if EXTRA.match(s): extra.add(s)
+        imports=sorted(x for x in und-defined if x.startswith(('_CC','_Sec','_kSec')))
+        r[arch]={'members':count,'non_macho_members':nonmacho[:3],'os_imports':imports,'ltc':sorted(ltc),'ltc_extra_names':sorted(extra)}
+    res[path.split('HoyaNative.xcframework/')[-1]]=r
+print(json.dumps(res,indent=1))

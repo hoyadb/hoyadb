@@ -1,0 +1,161 @@
+{
+  "recorded_utc": "2026-10-31T02:24:31.731334+00:00",
+  "scope": "Stop only the task-started read-only emulator instance; no AVD deletion, app changes, adb-server shutdown or other process signal.",
+  "serial": "emulator-5588",
+  "avd": "hoyadb_phase7_owned_ps16k",
+  "pid": 30063,
+  "task_launch_utc": "Fri Oct 30 23:56:47 2026 UTC",
+  "ownership_verified": true,
+  "ownership_basis": "Retained follow-up launcher refused an occupied serial; launch/started records match current PID, exact process start second, AVD, port and read-only flags.",
+  "retained_records": {
+    "/private/tmp/hoyadb-followup-20261031/kotlin/device-retry/launch.json": "6c2116a8762f82ec823e17e9743c867690657826bbdd7942e0f475d46b2a5275",
+    "/private/tmp/hoyadb-followup-20261031/kotlin/device-retry/started.json": "726011704e596b121d2f9171fd23a60702f76bb245019db10ccd9bd15eea2ee0",
+    "/private/tmp/hoyadb-followup-20261031/kotlin/device-retry/command.json": "e02dec98ebc401b9076d0b7f2dd6a5b52e0a5e22fadc0a469b670161c86ccbd0",
+    "/private/tmp/hoyadb-followup-20261031/kotlin/start-device-diagnostic.py": "d047509f020f890e1ff23ddb8764deb20571a9f1f24e418163ece6607f2bbfa8"
+  },
+  "commands": [
+    {
+      "argv": [
+        "/bin/ps",
+        "-p",
+        "30063",
+        "-o",
+        "pid=,ppid=,lstart=,command="
+      ],
+      "exit": 0,
+      "stdout": "30063 30027 Fri Oct 30 23:56:47 2026     /Users/boristacyniak/Library/Android/sdk/emulator/qemu/darwin-x86_64/qemu-system-x86_64-headless -avd hoyadb_phase7_owned_ps16k -port 5588 -no-window -no-audio -no-snapshot -gpu swiftshader -read-only -show-kernel\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/bin/ps",
+        "-p",
+        "30063",
+        "-o",
+        "lstart="
+      ],
+      "exit": 0,
+      "stdout": "Fri Oct 30 23:56:47 2026    \n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+        "-s",
+        "emulator-5588",
+        "emu",
+        "avd",
+        "name"
+      ],
+      "exit": 0,
+      "stdout": "hoyadb_phase7_owned_ps16k\nOK\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+        "-s",
+        "emulator-5588",
+        "emu",
+        "kill"
+      ],
+      "exit": 0,
+      "stdout": "OK: killing emulator, bye bye\nOK\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/bin/ps",
+        "-p",
+        "30063",
+        "-o",
+        "pid=,command="
+      ],
+      "exit": 0,
+      "stdout": "30063 /Users/boristacyniak/Library/Android/sdk/emulator/qemu/darwin-x86_64/qemu-system-x86_64-headless -avd hoyadb_phase7_owned_ps16k -port 5588 -no-window -no-audio -no-snapshot -gpu swiftshader -read-only -show-kernel\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+        "-s",
+        "emulator-5588",
+        "get-state"
+      ],
+      "exit": 0,
+      "stdout": "device\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/bin/ps",
+        "-p",
+        "30063",
+        "-o",
+        "pid=,command="
+      ],
+      "exit": 0,
+      "stdout": "30063 /Users/boristacyniak/Library/Android/sdk/emulator/qemu/darwin-x86_64/qemu-system-x86_64-headless -avd hoyadb_phase7_owned_ps16k -port 5588 -no-window -no-audio -no-snapshot -gpu swiftshader -read-only -show-kernel\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+        "-s",
+        "emulator-5588",
+        "get-state"
+      ],
+      "exit": 0,
+      "stdout": "device\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/bin/ps",
+        "-p",
+        "30063",
+        "-o",
+        "pid=,command="
+      ],
+      "exit": 0,
+      "stdout": "30063 /Users/boristacyniak/Library/Android/sdk/emulator/qemu/darwin-x86_64/qemu-system-x86_64-headless -avd hoyadb_phase7_owned_ps16k -port 5588 -no-window -no-audio -no-snapshot -gpu swiftshader -read-only -show-kernel\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+        "-s",
+        "emulator-5588",
+        "get-state"
+      ],
+      "exit": 0,
+      "stdout": "device\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/bin/ps",
+        "-p",
+        "30063",
+        "-o",
+        "pid=,command="
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+        "-s",
+        "emulator-5588",
+        "get-state"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "error: device 'emulator-5588' not found\n"
+    }
+  ],
+  "result": "stopped_and_verified_absent",
+  "changed_other_devices_or_apps": false
+}

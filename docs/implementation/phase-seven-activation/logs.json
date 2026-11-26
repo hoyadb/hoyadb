@@ -1,0 +1,23 @@
+{
+  "format": 1,
+  "files": [
+    {
+      "path": "docs/implementation/phase-seven-activation/npm-ci-online.txt",
+      "raw_sha256": "6f6b3c9d68412c934d3e7677a1f63aa1e99c9c61a27404903e47a46e1284b188",
+      "presentation_sha256": "aceb6169bfbaeecfe6889c4d6a384ad77c45c4588bbc18f507b6f849c7770bc3",
+      "presentation": "strip empty outer lines only"
+    },
+    {
+      "path": "docs/implementation/phase-seven-activation/npm-ci-offline.txt",
+      "raw_sha256": "c411c12052d1016bd51192125e10154d17b6a3ea03cc4dbd07e594a6641a099a",
+      "presentation_sha256": "70dba049173e9c047025cb0ddcaf500d0aa5caf376c457d8618bfe16f21c5fb7",
+      "presentation": "strip empty outer lines only"
+    },
+    {
+      "path": "docs/implementation/phase-seven-activation/ios-verification.txt",
+      "raw_sha256": "88b66903b93b04aa9956d1eed2602d2eb12919c3f32e743a28a3a345528ec5ae",
+      "presentation_sha256": "88b66903b93b04aa9956d1eed2602d2eb12919c3f32e743a28a3a345528ec5ae",
+      "presentation": "strip empty outer lines only"
+    }
+  ]
+}

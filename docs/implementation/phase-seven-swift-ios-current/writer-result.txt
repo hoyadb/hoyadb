@@ -1,0 +1,1 @@
+HOYA_SWIFT_GENERAL_CONSUMER_GREEN mode=writer schemas=2 protected=SQLCipher4.19.0 automatic_observers=2 commands=cancel-fifo queue=frozen-retry entity=automatic pull=stale-refetch hook=async migration=authored

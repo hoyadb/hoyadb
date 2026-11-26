@@ -1,0 +1,175 @@
+{
+  "recorded_utc": "2026-10-24T16:11:47.931927+00:00",
+  "base_head": "e318c4ab5c41ebd16fd86203363a85c2225864f1",
+  "workspace": {
+    "command": "cargo test --workspace --offline --locked",
+    "exit_code": 0,
+    "passed": 347,
+    "failed": 0,
+    "result_records": 31,
+    "output_sha256": "b3df7c853067939eb1086cce34ef5049479b92f9276fef2413cf33125f6667c8"
+  },
+  "fresh_container": {
+    "image": "rust:1.98.1@sha256:a8a5f0a1e5fe7dfe1d352591e4a1c7dd2c08fd70475cae872cf3458ba0df0546",
+    "platform": "linux/amd64",
+    "exit_code": 0,
+    "marker": "PHASE6_CONTAINER_GREEN",
+    "command_file": "phase-six-ci-commands.sh",
+    "output_file": "phase-six-ci-output.txt",
+    "output_sha256": "71d9c51886203ef43aea0e057d445452a3f518ab5c6f96796acd3f3e073716e6",
+    "source_snapshot_manifest_sha256": "2b99dda1b64f4fb8dc4d7f41ee854376086cbec524b94fb098e8020668978f11",
+    "note": "Frozen source includes pending user formatting config. Exact commands include extra repeated profile unit. No remote CI claimed.",
+    "raw_output_sha256": "98cdd1af6e3a949ac2e43a4b3fa0b243c4a72f9f125f6153fab298c3d3729fe9",
+    "durable_output_sha256": "1ba480d54c4890f87bce12a8edb91c6388473c570117ac2b658cce15de3fab28",
+    "output_sha256_note": "Earlier output_sha256 is universal-newline-decoded source digest; raw and durable presentation digests are separate."
+  },
+  "behavior_only_clean_candidate": {
+    "status": "PASS",
+    "checks": [
+      {
+        "name": "default-format workspace",
+        "command": [
+          "cargo",
+          "fmt",
+          "--manifest-path",
+          "Cargo.toml",
+          "--all",
+          "--check",
+          "--",
+          "--config-path",
+          "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-six-stage-default/rustfmt.toml"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 1.354
+      },
+      {
+        "name": "default-format cross-platform",
+        "command": [
+          "cargo",
+          "fmt",
+          "--manifest-path",
+          "spikes/cross-platform/Cargo.toml",
+          "--all",
+          "--check",
+          "--",
+          "--config-path",
+          "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-six-stage-default/rustfmt.toml"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.185
+      },
+      {
+        "name": "default-format native",
+        "command": [
+          "cargo",
+          "fmt",
+          "--manifest-path",
+          "spikes/cross-platform/native/Cargo.toml",
+          "--all",
+          "--check",
+          "--",
+          "--config-path",
+          "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-six-stage-default/rustfmt.toml"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 1.637
+      },
+      {
+        "name": "default-format web",
+        "command": [
+          "cargo",
+          "fmt",
+          "--manifest-path",
+          "spikes/cross-platform/web/Cargo.toml",
+          "--all",
+          "--check",
+          "--",
+          "--config-path",
+          "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-six-stage-default/rustfmt.toml"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.226
+      },
+      {
+        "name": "default-format browser",
+        "command": [
+          "cargo",
+          "fmt",
+          "--manifest-path",
+          "spikes/storage-browser/Cargo.toml",
+          "--all",
+          "--check",
+          "--",
+          "--config-path",
+          "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-six-stage-default/rustfmt.toml"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 1.737
+      },
+      {
+        "name": "workspace all-targets check",
+        "command": [
+          "cargo",
+          "check",
+          "--workspace",
+          "--all-targets",
+          "--offline",
+          "--locked"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 13.673
+      },
+      {
+        "name": "native all-targets check",
+        "command": [
+          "cargo",
+          "check",
+          "--manifest-path",
+          "spikes/cross-platform/native/Cargo.toml",
+          "--all-targets",
+          "--offline",
+          "--locked"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 4.035
+      }
+    ],
+    "rust_candidate_count": 35,
+    "pure_format_file_count_omitted": 48,
+    "source_hashes_match_report": true,
+    "index_unchanged": true,
+    "mirror_byte_identical": true,
+    "note": "Feature Rust only default formatted without pending user config, manifests/locks and current foreign source overlaid. No source/index mutation. Later lifecycle JS fix separately verified."
+  },
+  "lifecycle_followup": {
+    "contract_commit": "c3dfcf8",
+    "node_tests": 38,
+    "actual_worker_groups": 4,
+    "protected_host_groups": 5,
+    "command_groups": 13,
+    "entity_groups": 11,
+    "review": "phase-six-lifecycle-review.md",
+    "evidence": "phase-six-lifecycle.md",
+    "note": "JS-only followup, original crypto evidence source cuts preserved."
+  },
+  "formal_checks": {
+    "trace": "0 violation(s)",
+    "rtm": "docs/design/traceability/rtm.md is up to date"
+  },
+  "evidence_text_normalization": [
+    {
+      "path": "docs/implementation/phase-six-ci-output.txt",
+      "raw_sha256": "98cdd1af6e3a949ac2e43a4b3fa0b243c4a72f9f125f6153fab298c3d3729fe9",
+      "normalized_sha256": "1ba480d54c4890f87bce12a8edb91c6388473c570117ac2b658cce15de3fab28",
+      "normalization": "CR to LF, trim line-end whitespace and excess blank EOF; test/output words and all results preserved",
+      "raw_origin": "target/phase-six-ci-output.txt"
+    },
+    {
+      "path": "docs/implementation/phase-six-lifecycle-test-output.txt",
+      "raw_sha256": "d8dd48488d28486920f3da9997786beedf49dfc74a997d91d4faefd2ba401563",
+      "normalized_sha256": "a64b2f03d2c0fcd324217564f44d57a0351fa27cc17c3ed5a743691631f128a0",
+      "normalization": "CR to LF, trim line-end whitespace and excess blank EOF; test/output words and all results preserved",
+      "raw_origin": "target/phase-six-client-lifecycle/"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+   Compiling hoyadb-benchmark v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/native)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.96s
+     Running unittests src/lib.rs (benchmarks/native/target/debug/deps/hoyadb_benchmark-0e7a7c369aeaba1a)
+
+running 1 test
+test tests::p02_cold_empty_create_same_key_reopen_and_authored_upgrade ... FAILED
+
+failures:
+
+---- tests::p02_cold_empty_create_same_key_reopen_and_authored_upgrade stdout ----
+
+thread 'tests::p02_cold_empty_create_same_key_reopen_and_authored_upgrade' (82121777) panicked at src/lib.rs:363:55:
+called `Result::unwrap()` on an `Err` value: "cold open pending"
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    tests::p02_cold_empty_create_same_key_reopen_and_authored_upgrade
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `--lib`

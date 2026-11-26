@@ -1,0 +1,34 @@
+{
+  "consumer": "/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-phase7-rn-consumer-v8cue5dl",
+  "sandbox_probe": "Errno::EPERM",
+  "podfile_lock_sha256": "f8f398191e5ddce74f26c06a9556e22d50e6645335d22ab29ff12c9e7ebc5ca5",
+  "owned_package_sha256": {
+    "packages/hoyadb-client-0.1.0.tgz": "db7e3d5af32ba8b9f36373f1adf647b2ef5d0ef1d130eebd3b728fdb09a01ddd",
+    "packages/hoyadb-react-native-0.1.0.tgz": "f1961d1a824150125895a8829bdd849fe3ab05ddf4969587f2bf9ca4525c82cb",
+    "packages/hoyadb-testing-0.1.0.tgz": "b27941c4dcfb6e971c7b5fa4d5da4743d35445fd5dbd5a411c3f1dfa8bc15e18"
+  },
+  "consumer_sources_sha256": {
+    "conformance.mjs": "a758e996b0c838f4732a4468e6cf1efabb07a00bd27e4285c11cd7be0ad8be29",
+    "guards.mjs": "908113709901dfb97e83b78aed3a21b7d2ebcc4014243a943cb91be1aea95cc3",
+    "mixed.mjs": "14b60f9c3afa68e4b19d83fff715e3ef3c22a4750fab58c45983b73f1abadfa9",
+    "retained.mjs": "03b2c650bea9c17c465c782411fb2adb6c881f0c2e6f83d3006917edbd1c5f48",
+    "schemas.mjs": "c75f11cbcfeffcc63ab84409671ac8fb4f14998761b746d98b03a4845ba50029",
+    "walkthrough.mjs": "34190a8bad4f74dd8152128296322b0dc471412e8112ae754fa7df9537846590",
+    "index.js": "8e3f34a81f83721eb45458163b5422e8a258ef3fc51c67eb4a598be00107d548"
+  },
+  "bundle": {
+    "js_sha256": "c261a79c80f9f9da42182fea70fe7a28499bcdc884819b9b7edaf0e970c97f33",
+    "hbc_sha256": "136310b970c1f102ee265907a29293617e5918f5a8197c45454ab3dec2dcbf9c",
+    "hbc_magic_hex": "c61fbc03c103191f"
+  },
+  "xcodebuild_network_denied": false,
+  "app": {
+    "path": "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/ios-build-f/DerivedData/Build/Products/Debug-iphonesimulator/HoyaConsumer.app",
+    "binary_sha256": "89f61c25e3234935844005195e468b77b17dfe15042c883b6cb8e1ffa1610ea8",
+    "hoyadb_c_exports": [],
+    "otool_L": "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/ios-build-f/DerivedData/Build/Products/Debug-iphonesimulator/HoyaConsumer.app/HoyaConsumer.debug.dylib:\n\t@rpath/HoyaConsumer.debug.dylib (compatibility version 0.0.0, current version 0.0.0)\n\t/System/Library/Frameworks/Accelerate.framework/Accelerate (compatibility version 1.0.0, current version 4.0.0)\n\t/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox (compatibility version 1.0.0, current version 1000.0.0)\n\t/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation (compatibility version 150.0.0, current version 5026.5.4)\n\t/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics (compatibility version 64.0.0, current version 1965.5.1)\n\t/System/Library/Frameworks/ImageIO.framework/ImageIO (compatibility version 1.0.0, current version 1.0.0)\n\t/System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices (compatibility version 1.0.0, current version 1226.0.0)\n\t/System/Library/Frameworks/QuartzCore.framework/QuartzCore (compatibility version 1.2.0, current version 1195.14.4)\n\t@rpath/React.framework/React (compatibility version 0.0.0, current version 0.0.0)\n\t@rpath/ReactNativeDependencies.framework/ReactNativeDependencies (compatibility version 0.0.0, current version 0.0.0)\n\t/System/Library/Frameworks/Security.framework/Security (compatibility version 1.0.0, current version 61901.120.67)\n\t/System/Library/Frameworks/UIKit.framework/UIKit (compatibility version 1.0.0, current version 9126.5.5)\n\t@rpath/hermesvm.framework/hermesvm (compatibility version 1.0.0, current version 1.0.0)\n\t/System/Library/Frameworks/JavaScriptCore.framework/JavaScriptCore (compatibility version 1.0.0, current version 624.2.5, weak)\n\t/System/Library/Frameworks/Foundation.framework/Foundation (compatibility version 300.0.0, current version 5026.5.4)\n\t/usr/lib/libobjc.A.dylib (compatibility version 1.0.0, current version 228.0.0)\n\t/usr/lib/libc++.1.dylib (compatibility version 1.0.0, current version 2100.43.0)\n\t/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1356.0.0)\n\t/usr/lib/swift/libswiftCore.dylib (compatibility version 0.0.0, current version 0.0.0)\n\t/usr/lib/swift/libswiftCoreFoundation.dylib (compatibility version 1.0.0, current version 120.100.0, weak)\n\t/usr/lib/swift/libswiftDarwin.dylib (compatibility version 1.0.0, current version 377.120.8, weak)\n\t/usr/lib/swift/libswiftDispatch.dylib (compatibility version 1.0.0, current version 1542.100.32)\n\t/usr/lib/swift/libswiftObjectiveC.dylib (compatibility version 1.0.0, current version 951.7.0, weak)\n\t/usr/lib/swift/libswiftXPC.dylib (compatibility version 1.0.0, current version 128.120.2, weak)\n\t/usr/lib/swift/libswift_Concurrency.dylib (compatibility version 0.0.0, current version 0.0.0)\n\t/usr/lib/swift/libswiftFoundation.dylib (compatibility version 1.0.0, current version 1.0.0)\n",
+    "embedded_files_with_hoyadb": []
+  },
+  "result": "BUILD_GREEN",
+  "approved_node_source_differences": {}
+}

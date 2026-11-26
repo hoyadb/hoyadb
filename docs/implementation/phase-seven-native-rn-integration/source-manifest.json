@@ -1,0 +1,759 @@
+{
+  "format": 1,
+  "generated_note": "static handoff for root integration; no source edits/rebuilds/tests performed for this manifest",
+  "excluded": [
+    "bindings/react-native/tools/security/** (security author 7518debe)",
+    "generated/ignored: Artifacts, .build, .swiftpm, node_modules, android/build, target, __pycache__, .gradle",
+    "user/pre-existing: see notes"
+  ],
+  "source_files": {
+    "bindings/native/.gitignore": {
+      "state": "tracked-unchanged",
+      "sha256": "306fd52e74fca6746e12acc750f232de15e71da917756a1270d74c91f5eb7368",
+      "bytes": 9
+    },
+    "bindings/native/Cargo.lock": {
+      "state": "tracked-unchanged",
+      "sha256": "a96a5481be73dc5ab125b4cec4b441bedd256f7a1d834694073cba5f342cb951",
+      "bytes": 8630
+    },
+    "bindings/native/README.md": {
+      "state": "tracked-unchanged",
+      "sha256": "7034327b95e0350ebb24938bd7ea4922424e06380ad2c0fc0317fce8d3081c46",
+      "bytes": 3434
+    },
+    "bindings/native/android/build-jni.py": {
+      "state": "tracked-unchanged",
+      "sha256": "debc443aa6447c0e2bf02071c1de8fb0f40fef9843f7d0c6929912a07f52fa01",
+      "bytes": 1908
+    },
+    "bindings/native/android/build-provider.py": {
+      "state": "tracked-unchanged",
+      "sha256": "f28badbc5c5a5d06e0045c297c78f26fcaecfdc491b7467d746726c79b81909d",
+      "bytes": 6477
+    },
+    "bindings/native/android/exports.map": {
+      "state": "tracked-unchanged",
+      "sha256": "fe8fb95dce0d4005b7d73afd3b5b59c3ef0be2c164f8f82947ac6f2689bf1832",
+      "bytes": 294
+    },
+    "bindings/native/android/hoya_entropy.c": {
+      "state": "tracked-unchanged",
+      "sha256": "c8b6059feb75c2ac008030c2f15c714643fd5f3ee0212b9f69e6770ac3030b75",
+      "bytes": 2075
+    },
+    "bindings/native/android/hoya_jni.c": {
+      "state": "tracked-unchanged",
+      "sha256": "e620c700ffbbee4ed2a3a346f637c6fb7416c13f88845525d39df6fbb8fd0265",
+      "bytes": 4197
+    },
+    "bindings/native/android/ltc_config.h": {
+      "state": "tracked-unchanged",
+      "sha256": "e20d3d40f0b93cb7c2398d3afbe9ced995a6275f385ae6f91d861f6285bbf49c",
+      "bytes": 542
+    },
+    "bindings/native/include/HoyaNative/module.modulemap": {
+      "state": "untracked",
+      "sha256": "33326b1780c8a1c82237313f2ee88578d34e816af4ecc3a4a799abfeb23af60c",
+      "bytes": 60
+    },
+    "bindings/native/include/hoyadb.h": {
+      "state": "tracked-unchanged",
+      "sha256": "2f61e513be42d3e7aabbd9bb06f02a98d88096551276ae89dd5b30aa28526b48",
+      "bytes": 2171
+    },
+    "bindings/native/src/lib.rs": {
+      "state": "tracked-unchanged",
+      "sha256": "4cfa3f57fc11b69b09b7a2c9e5e73ce0ae1b13557f90762bba86da417fa19a47",
+      "bytes": 6843
+    },
+    "bindings/native/tests/boundary.rs": {
+      "state": "tracked-unchanged",
+      "sha256": "368ed066e292b4da824fa023d46ad8bba95427d25f826806f1804ef0a40b11e4",
+      "bytes": 11825
+    },
+    "bindings/native/tests/cross_provider.c": {
+      "state": "untracked",
+      "sha256": "b4fafe997bace5268feb44197643839e2de906f843c84abdcaaaab01088aea72",
+      "bytes": 3234
+    },
+    "bindings/native/tests/entropy.c": {
+      "state": "tracked-unchanged",
+      "sha256": "c938d8faedd3d4ec8eefe0a668ddc23afe13f323c5dee5b0b2e6c2d1890f78c4",
+      "bytes": 2499
+    },
+    "bindings/native/tests/entropy_provider.c": {
+      "state": "tracked-unchanged",
+      "sha256": "e5ba28c4f3c371aceaa91ef75ab329da51fee98704b17e7a59e6f3b1f8a03437",
+      "bytes": 1251
+    },
+    "bindings/native/tests/exports.py": {
+      "state": "tracked-unchanged",
+      "sha256": "47ea0bf7cd1b87c72a5676bdfbfc52d91b6600f9a19f78758c912a09bb6e0e60",
+      "bytes": 844
+    },
+    "bindings/native/tests/fixtures/memory-open.json": {
+      "state": "tracked-unchanged",
+      "sha256": "a78db4c5f651f9872a9a4a958b144154049e56b55bb74e501b898b8538d6b649",
+      "bytes": 376
+    },
+    "bindings/native/tests/java/dev/hoyadb/NativeBridgeTest.java": {
+      "state": "tracked-unchanged",
+      "sha256": "47f91b76054ec71d287d310ecee626d2c2bd70f9a2a1e3f23137baa04e0b3cdc",
+      "bytes": 4538
+    },
+    "bindings/native/tests/provider.c": {
+      "state": "tracked-unchanged",
+      "sha256": "595c811dafdc766b768e38e95b9d158db985a156d14ce47ffccb5ff920642c9f",
+      "bytes": 2606
+    },
+    "bindings/swift/.gitignore": {
+      "state": "tracked-unchanged",
+      "sha256": "414c1f2b985c18db4b132bac75fb130fb4c2a1728b1f4a8cfb6a9533ab4664c7",
+      "bytes": 21
+    },
+    "bindings/swift/Examples/GeneralConsumer/Package.swift": {
+      "state": "tracked-unchanged",
+      "sha256": "f29045a9b4f641a9b554c879103e0f241fffac2ed2594ca21aaa9e3bab71615f",
+      "bytes": 428
+    },
+    "bindings/swift/Examples/GeneralConsumer/Sources/GeneralConsumer/Advanced.swift": {
+      "state": "tracked-unchanged",
+      "sha256": "4d7a39b5bd1a53cd8d98365962257f277a9c3fa8adc1d1d9e0c23a243cbeefa2",
+      "bytes": 6711
+    },
+    "bindings/swift/Examples/GeneralConsumer/Sources/GeneralConsumer/Consumer.swift": {
+      "state": "tracked-unchanged",
+      "sha256": "d44058245e9c46079d3f71d72af180910d7a284abfbcd92eeee9a76b4d832f81",
+      "bytes": 5988
+    },
+    "bindings/swift/Examples/GeneralConsumer/Sources/GeneralConsumer/Recovery.swift": {
+      "state": "tracked-unchanged",
+      "sha256": "50e86899dcdc5677775c3d5fcb0ef2b15ebe7a5049414bee3d11915fdb1f076f",
+      "bytes": 5095
+    },
+    "bindings/swift/Examples/GeneralConsumer/Sources/GeneralConsumer/Walkthrough.swift": {
+      "state": "tracked-unchanged",
+      "sha256": "2e65858c4c6ea691ed58a2edfad9fc06c536f9d897a36a210e99410795c33bdd",
+      "bytes": 14318
+    },
+    "bindings/swift/Package.swift": {
+      "state": "tracked-unchanged",
+      "sha256": "c08ee92a5778748aa2d3d078e6acdb1bdd74c569fac209ca581b6d353d47d261",
+      "bytes": 744
+    },
+    "bindings/swift/README.md": {
+      "state": "modified",
+      "sha256": "29b1bccd717b671eda71ca672e5b7f18d3b772cb1fcdc2092b46ac122df76239",
+      "bytes": 6225
+    },
+    "bindings/swift/Sources/HoyaDB/Admission.swift": {
+      "state": "tracked-unchanged",
+      "sha256": "c9fcf5c3eccff2d183d033afdd63df6c505a595a9e834e87f1bf284893811831",
+      "bytes": 524
+    },
+    "bindings/swift/Sources/HoyaDB/Commands.swift": {
+      "state": "tracked-unchanged",
+      "sha256": "68850a4d1225fb6e392c807fe95f1722359daaf2ea46d04e607561bca4ccfd9f",
+      "bytes": 14703
+    },
+    "bindings/swift/Sources/HoyaDB/Database.swift": {
+      "state": "tracked-unchanged",
+      "sha256": "151be3245159165e9b8df745487523299b7d7f81b6670c0f174030e7627ced5f",
+      "bytes": 11743
+    },
+    "bindings/swift/Sources/HoyaDB/Entities.swift": {
+      "state": "tracked-unchanged",
+      "sha256": "a6d09cd51fdf512b4aa28d8820ccffd7241d6c15b1f4e6e820bdb41fa4375d59",
+      "bytes": 14257
+    },
+    "bindings/swift/Sources/HoyaDB/Migrations.swift": {
+      "state": "tracked-unchanged",
+      "sha256": "bbb73585ae426cf45fb8f79a145c35ab58c170137bcda0bce0d67a9708264047",
+      "bytes": 3459
+    },
+    "bindings/swift/Sources/HoyaDB/Namespace.swift": {
+      "state": "tracked-unchanged",
+      "sha256": "50ab0e021da607a5035f4cb2911e52cfc5ff853933caec046e857b641d72f86f",
+      "bytes": 1325
+    },
+    "bindings/swift/Sources/HoyaDB/NativeRuntime.swift": {
+      "state": "tracked-unchanged",
+      "sha256": "5a1a248a290daed4cdc7d24172f1358d77379dbd0d672fbe1da8e06124ccea26",
+      "bytes": 3046
+    },
+    "bindings/swift/Sources/HoyaDB/Observations.swift": {
+      "state": "tracked-unchanged",
+      "sha256": "67c4b4fde1560c1fc3863456201d80c4a63d6f66697700241243d6007cc2ff1a",
+      "bytes": 11664
+    },
+    "bindings/swift/Sources/HoyaDB/Relations.swift": {
+      "state": "tracked-unchanged",
+      "sha256": "dc6aedd6a1ff20e84e101713e682d6e310c06373ae612771748ac09f3a8488ea",
+      "bytes": 2456
+    },
+    "bindings/swift/Sources/HoyaDB/Sync.swift": {
+      "state": "tracked-unchanged",
+      "sha256": "d165b57d3265cb2db6abf12bfb48a7d4b31081687206d5609cabe83f5e9bc201",
+      "bytes": 15800
+    },
+    "bindings/swift/Sources/HoyaDB/Types.swift": {
+      "state": "tracked-unchanged",
+      "sha256": "9d447f83b5321ae9319aea09fc8fb4a001dc5d523a455415ebc1e7db8d1ef468",
+      "bytes": 2606
+    },
+    "bindings/swift/Sources/HoyaDB/Values.swift": {
+      "state": "tracked-unchanged",
+      "sha256": "63ad3bad3a86d1da299bd99e377c7ad143cdc8deb9dbac5c8d7dafffef777f8a",
+      "bytes": 9370
+    },
+    "bindings/swift/Sources/HoyaDB/Wire.swift": {
+      "state": "tracked-unchanged",
+      "sha256": "04c86dfa67952a50492fb0fde7511cdddf460960414f84948f8a11318d3ebb18",
+      "bytes": 7314
+    },
+    "bindings/swift/Sources/HoyaDBTesting/FakeTransport.swift": {
+      "state": "tracked-unchanged",
+      "sha256": "4c70a0ec8c7bab3243e274cb81c2682d788e662a9ecf98e3b83f8f629e083842",
+      "bytes": 3267
+    },
+    "bindings/swift/Sources/HoyaDBTesting/ManualClock.swift": {
+      "state": "tracked-unchanged",
+      "sha256": "7f0421261eb085336de402a9f60fdfca779211c4f13917f95a8d5ae5eef82fa7",
+      "bytes": 2390
+    },
+    "bindings/swift/Sources/HoyaDBTesting/MemoryTesting.swift": {
+      "state": "tracked-unchanged",
+      "sha256": "05cd92fa6cd61af0ed5d31caa5f76aeaf9e4f9c0c5c1d52762298f15a1758ea2",
+      "bytes": 724
+    },
+    "bindings/swift/TESTING_PLAN.md": {
+      "state": "tracked-unchanged",
+      "sha256": "95615d1d86e4fb32dbaab121a895634f1b320901b8645545d52b7ef9e40d0075",
+      "bytes": 7458
+    },
+    "bindings/swift/Tests/HoyaDBTestingTests/TestingTests.swift": {
+      "state": "tracked-unchanged",
+      "sha256": "cd1c6bd7754dc0d02357514207ac108724ac18882c4af1057c646ce6f2bae743",
+      "bytes": 14586
+    },
+    "bindings/swift/Tests/HoyaDBTests/AdmissionTests.swift": {
+      "state": "tracked-unchanged",
+      "sha256": "851a66b009f9ac22e5b414cd699b38995b8d87fcfdbd1f15cb6c74553f09e6b8",
+      "bytes": 4704
+    },
+    "bindings/swift/Tests/HoyaDBTests/CommandTests.swift": {
+      "state": "tracked-unchanged",
+      "sha256": "d2ab1bbfe0b04f3cc5602484634305b6e3cb69b8f6cb637acb4d6bae8a14afda",
+      "bytes": 13598
+    },
+    "bindings/swift/Tests/HoyaDBTests/EntityTests.swift": {
+      "state": "tracked-unchanged",
+      "sha256": "02159a96237ce7de50d58a23510abca99fe9de739381bc3ffcde6a50161a8be5",
+      "bytes": 6641
+    },
+    "bindings/swift/Tests/HoyaDBTests/LifetimeTests.swift": {
+      "state": "tracked-unchanged",
+      "sha256": "1cecf2a9ba1e60c8249d0c4956ae9552ea2f65539f028885aeb163778e06908c",
+      "bytes": 1873
+    },
+    "bindings/swift/Tests/HoyaDBTests/MigrationTests.swift": {
+      "state": "tracked-unchanged",
+      "sha256": "63a4ce15e902255945e3ed6820d9730683ba5b22b7c01e400280611af7c4d0ce",
+      "bytes": 5308
+    },
+    "bindings/swift/Tests/HoyaDBTests/NamespaceTests.swift": {
+      "state": "tracked-unchanged",
+      "sha256": "b372cb4017b72e489d1ebf35f065c72cb1527855cc6f42da2c2c3b5f890dcef5",
+      "bytes": 1106
+    },
+    "bindings/swift/Tests/HoyaDBTests/NativeOwnerTests.swift": {
+      "state": "tracked-unchanged",
+      "sha256": "5e55dbae1c6f2f16781e33b227c2133f20e62967a39082c15983f849f35d2ab5",
+      "bytes": 6928
+    },
+    "bindings/swift/Tests/HoyaDBTests/ObservationTests.swift": {
+      "state": "tracked-unchanged",
+      "sha256": "09f361d292942e41b80cd8f133dfa6acdc745ef8299ab6dcfcb4c507f56154ba",
+      "bytes": 13798
+    },
+    "bindings/swift/Tests/HoyaDBTests/ProtocolTests.swift": {
+      "state": "tracked-unchanged",
+      "sha256": "6a58ef3e7d34b6bea3c2f767dacca2e57112de499b5f7667cfc7ffaa86f10afb",
+      "bytes": 2703
+    },
+    "bindings/swift/Tests/HoyaDBTests/RelationTests.swift": {
+      "state": "tracked-unchanged",
+      "sha256": "db6945c58df3cc151f9877f35e2e13c6f6c0eb9c6930d48eda3b8c51766f4c9d",
+      "bytes": 2419
+    },
+    "bindings/swift/Tests/HoyaDBTests/SyncTests.swift": {
+      "state": "tracked-unchanged",
+      "sha256": "537c4b2fab423c44de54ec4c5ae57c6d5e7be7e0349c5d57c9d5030db4094150",
+      "bytes": 16995
+    },
+    "bindings/swift/Tests/HoyaDBTests/TypedValuesTests.swift": {
+      "state": "tracked-unchanged",
+      "sha256": "39b045a65ccfc532bb5c8fe5bada415c01bd551c84f1a30cd037d6a98c9d22d9",
+      "bytes": 4415
+    },
+    "bindings/swift/build-artifacts.py": {
+      "state": "modified",
+      "sha256": "733f9ca6c7be1ace65b0c9f260289185b924ae847a3320e7f7019a4b0125e7c7",
+      "bytes": 3638
+    },
+    "bindings/swift/check_artifacts.py": {
+      "state": "untracked",
+      "sha256": "720bf6f9e06026a8f9f3c1ef5cb1526f5df94b540a1dff8a7578f8ba7a46db06",
+      "bytes": 4423
+    },
+    "bindings/react-native/.gitignore": {
+      "state": "untracked",
+      "sha256": "ae1eeae0aed89306617c920073d5023246532d5a92fb5ead91dc64e41df89a10",
+      "bytes": 40
+    },
+    "bindings/react-native/ACTIVATION.md": {
+      "state": "modified",
+      "sha256": "405d5ba288f4f62abe1b5ee77f2cd2c14f5772f084b3df3a73c9dffc5ae4dce4",
+      "bytes": 7265
+    },
+    "bindings/react-native/ANDROID_BUILD_OPTIONS.md": {
+      "state": "tracked-unchanged",
+      "sha256": "38c4a91e6a4d83a239c0bc53c1df121a088c46c0cad3a043e46cac6c82d59cf3",
+      "bytes": 4563
+    },
+    "bindings/react-native/Examples/GeneralConsumer/android/app/build.gradle": {
+      "state": "untracked",
+      "sha256": "16c8e069918e73bdad843464e45edadc266fd2d00afc18fd00713503f0b228b9",
+      "bytes": 841
+    },
+    "bindings/react-native/Examples/GeneralConsumer/android/app/src/main/AndroidManifest.xml": {
+      "state": "untracked",
+      "sha256": "d3f4325543d811002ce0927c4fac306c7e112d83b13fc3d28813ab1ae8f3041d",
+      "bytes": 898
+    },
+    "bindings/react-native/Examples/GeneralConsumer/android/app/src/main/java/dev/hoyadb/consumer/HoyaConsumerModule.kt": {
+      "state": "untracked",
+      "sha256": "9df5982eda49d7081961b08b1980c9ed1e791f65ea784bec8a0ffb465b66d01e",
+      "bytes": 4331
+    },
+    "bindings/react-native/Examples/GeneralConsumer/android/app/src/main/java/dev/hoyadb/consumer/HoyaConsumerPackage.kt": {
+      "state": "untracked",
+      "sha256": "9f0ec7236a4928147fbb736d661d980818faabb171038444287f2c07c7355edf",
+      "bytes": 759
+    },
+    "bindings/react-native/Examples/GeneralConsumer/android/app/src/main/java/dev/hoyadb/consumer/MainActivity.kt": {
+      "state": "untracked",
+      "sha256": "f08a09c4107ebb2d0b2968153833fc572416bd76831fcdf33a4f00eaeaea04d1",
+      "bytes": 647
+    },
+    "bindings/react-native/Examples/GeneralConsumer/android/app/src/main/java/dev/hoyadb/consumer/MainApplication.kt": {
+      "state": "untracked",
+      "sha256": "858b46d0b54f5119cb7fe0cdb199903c783ee39d7b906a6c8deb66e91a155684",
+      "bytes": 612
+    },
+    "bindings/react-native/Examples/GeneralConsumer/android/app/src/main/java/dev/hoyadb/consumer/PolicyInstrumentation.java": {
+      "state": "untracked",
+      "sha256": "e6d162b3d16fd9142a08c8dbd28a8530f2304217ff703f477151b214c2f2d0cc",
+      "bytes": 789
+    },
+    "bindings/react-native/Examples/GeneralConsumer/android/build.gradle": {
+      "state": "untracked",
+      "sha256": "6fd09533037bfcae33957dc43d10a462adc6e6a508a0cb99f9187c14bc4403ef",
+      "bytes": 826
+    },
+    "bindings/react-native/Examples/GeneralConsumer/android/gradle.properties": {
+      "state": "untracked",
+      "sha256": "864ad870445fe80a3e78705cbfb970dc181ccb6609eae70a346f1c0e8415dd80",
+      "bytes": 242
+    },
+    "bindings/react-native/Examples/GeneralConsumer/android/settings.gradle": {
+      "state": "untracked",
+      "sha256": "f246586ceecabbf73a62f3acf874cc9f692e251f329c435be6a8003495dff2b5",
+      "bytes": 484
+    },
+    "bindings/react-native/Examples/GeneralConsumer/app.json": {
+      "state": "untracked",
+      "sha256": "7687e322553d201c2736c1d67b40dd063cb9d44542fd1c397861462f314ba39d",
+      "bytes": 62
+    },
+    "bindings/react-native/Examples/GeneralConsumer/babel.config.cjs": {
+      "state": "untracked",
+      "sha256": "1af8208ec7c17ebaa2860f0c97607c3944e720db2135c983c021361e9f495425",
+      "bytes": 64
+    },
+    "bindings/react-native/Examples/GeneralConsumer/conformance.mjs": {
+      "state": "untracked",
+      "sha256": "a758e996b0c838f4732a4468e6cf1efabb07a00bd27e4285c11cd7be0ad8be29",
+      "bytes": 29622
+    },
+    "bindings/react-native/Examples/GeneralConsumer/guards.mjs": {
+      "state": "untracked",
+      "sha256": "908113709901dfb97e83b78aed3a21b7d2ebcc4014243a943cb91be1aea95cc3",
+      "bytes": 2880
+    },
+    "bindings/react-native/Examples/GeneralConsumer/index.js": {
+      "state": "untracked",
+      "sha256": "8e3f34a81f83721eb45458163b5422e8a258ef3fc51c67eb4a598be00107d548",
+      "bytes": 6358
+    },
+    "bindings/react-native/Examples/GeneralConsumer/ios/AppDelegate.h": {
+      "state": "untracked",
+      "sha256": "e12d25330ab21b8e93d90aec33213b06f4a41437afcc49bd2cf852a3ddf849a2",
+      "bytes": 136
+    },
+    "bindings/react-native/Examples/GeneralConsumer/ios/AppDelegate.mm": {
+      "state": "untracked",
+      "sha256": "da808ca2fcbdd17e904868d1c7d9c2218fdcab83d4877f712baec339c2ddda9e",
+      "bytes": 1379
+    },
+    "bindings/react-native/Examples/GeneralConsumer/ios/ForeignControl.swift": {
+      "state": "untracked",
+      "sha256": "98ccaf10722e89105433ddf801d96fa408b515f428e12d0abe1e463a44d6b36a",
+      "bytes": 3486
+    },
+    "bindings/react-native/Examples/GeneralConsumer/ios/HoyaConsumerModule.h": {
+      "state": "untracked",
+      "sha256": "ced4cdc1aff54524b2198468d54ea5ac156f9d62f8e8bc785d544c529e21cb05",
+      "bytes": 135
+    },
+    "bindings/react-native/Examples/GeneralConsumer/ios/HoyaConsumerModule.mm": {
+      "state": "untracked",
+      "sha256": "a4e01a3487738a430d0ea1bc49723eec7a43d02c95a59444b9d2e20891c07387",
+      "bytes": 1280
+    },
+    "bindings/react-native/Examples/GeneralConsumer/ios/Info.plist": {
+      "state": "untracked",
+      "sha256": "2b4a86b1d6bd79c5778bfb290b27aaccbac4ec0f1ee59a7938623bdc4a06ab21",
+      "bytes": 800
+    },
+    "bindings/react-native/Examples/GeneralConsumer/ios/Podfile": {
+      "state": "untracked",
+      "sha256": "7ffd4a1d23f0ed9020facdbe8816ccc194d243ce7fac14773ac617a59375bca7",
+      "bytes": 789
+    },
+    "bindings/react-native/Examples/GeneralConsumer/ios/create-project.rb": {
+      "state": "untracked",
+      "sha256": "eb5c1446f787f93a5dfd59a5bb3e46c50397a7b824c76d1c340e3ec18dc772d1",
+      "bytes": 2486
+    },
+    "bindings/react-native/Examples/GeneralConsumer/ios/main.mm": {
+      "state": "untracked",
+      "sha256": "0f44e2a85e69feef63f4683c58916e09224adecb2532f3b17208c7459896d393",
+      "bytes": 183
+    },
+    "bindings/react-native/Examples/GeneralConsumer/metro.config.cjs": {
+      "state": "untracked",
+      "sha256": "8acbad771cc2ec23f951ef8f784afa9934631e850fb29719425eab00f4e5c790",
+      "bytes": 684
+    },
+    "bindings/react-native/Examples/GeneralConsumer/mixed.mjs": {
+      "state": "untracked",
+      "sha256": "519e2066375055ddedcac604c3a7ea9dc97e097edb79d297e0ca77dfe4d687b5",
+      "bytes": 3039
+    },
+    "bindings/react-native/Examples/GeneralConsumer/retained.mjs": {
+      "state": "untracked",
+      "sha256": "03b2c650bea9c17c465c782411fb2adb6c881f0c2e6f83d3006917edbd1c5f48",
+      "bytes": 2595
+    },
+    "bindings/react-native/Examples/GeneralConsumer/schemas.mjs": {
+      "state": "untracked",
+      "sha256": "c75f11cbcfeffcc63ab84409671ac8fb4f14998761b746d98b03a4845ba50029",
+      "bytes": 1017
+    },
+    "bindings/react-native/Examples/GeneralConsumer/shared-case-sources.json": {
+      "state": "untracked",
+      "sha256": "5a9fadeb8f2036a0903c4990ef1c18d90c7c7e3bb14589da1da67f22489ef5a9",
+      "bytes": 942
+    },
+    "bindings/react-native/Examples/GeneralConsumer/src/NativeHoyaConsumer.ts": {
+      "state": "untracked",
+      "sha256": "c94bcb24909061e3fc97d1f6012818dcdb2d32cce9d01b5c8b542cfa301bcb61",
+      "bytes": 425
+    },
+    "bindings/react-native/Examples/GeneralConsumer/walkthrough.mjs": {
+      "state": "untracked",
+      "sha256": "34190a8bad4f74dd8152128296322b0dc471412e8112ae754fa7df9537846590",
+      "bytes": 9369
+    },
+    "bindings/react-native/HoyaDBReactNative.podspec": {
+      "state": "untracked",
+      "sha256": "b354179ffc6636d9d468fcfd5140a21c4abcb834045e35b77c68a0a9cddfb011",
+      "bytes": 772
+    },
+    "bindings/react-native/README.md": {
+      "state": "untracked",
+      "sha256": "283e06fb827da04ef11aca5565ec02b5c3b77913ef32e603a8dcc5ac56a45b6e",
+      "bytes": 3350
+    },
+    "bindings/react-native/android/build.gradle": {
+      "state": "untracked",
+      "sha256": "83981de597fe0eea030981d426b6daf429673e204da2e2154e28d43713d6503d",
+      "bytes": 370
+    },
+    "bindings/react-native/android/src/main/AndroidManifest.xml": {
+      "state": "untracked",
+      "sha256": "343d5be1ac17cdd45d1a2f2ddc616c509290e655869125a9422a96d88aa66066",
+      "bytes": 72
+    },
+    "bindings/react-native/android/src/main/java/dev/hoyadb/HoyaDBModule.java": {
+      "state": "untracked",
+      "sha256": "24bc9d1abf66cc18384c632ab116133e2d37c8ddd1d4f06f5bda20e952229ab4",
+      "bytes": 7966
+    },
+    "bindings/react-native/android/src/main/java/dev/hoyadb/HoyaDBPackage.java": {
+      "state": "untracked",
+      "sha256": "423cf05779ad6a7185c07d8290592a39ed36ea7365f83692541774f42450c9ad",
+      "bytes": 801
+    },
+    "bindings/react-native/index.d.ts": {
+      "state": "untracked",
+      "sha256": "8ea711a2dea25e530b4c011b28bf265e31877b27fc33219de20d92e22f3edd44",
+      "bytes": 934
+    },
+    "bindings/react-native/ios/HoyaDBModule.h": {
+      "state": "untracked",
+      "sha256": "8f8b3c9a2458751332a384b58dc9aee4c9a904301002a9ff38029113824a3469",
+      "bytes": 105
+    },
+    "bindings/react-native/ios/HoyaDBModule.mm": {
+      "state": "untracked",
+      "sha256": "20cb57f95899aff1afc9020f5e0bbd17908a3d4b60144661e5e14d7ea6c2b22c",
+      "bytes": 5018
+    },
+    "bindings/react-native/ios/HoyaNativeHost.h": {
+      "state": "untracked",
+      "sha256": "2a75581971a9326cde542ab4f161dd7ec11caaf406d071324632f0b0cd361629",
+      "bytes": 432
+    },
+    "bindings/react-native/ios/HoyaNativeHost.mm": {
+      "state": "untracked",
+      "sha256": "3deea520b8068564fe462854bb9b1f74d41404991cc7d0cc8bf159f9af172c03",
+      "bytes": 7147
+    },
+    "bindings/react-native/package.json": {
+      "state": "untracked",
+      "sha256": "d5dcb80697a8db699204017193237278ac6d0aaaeeefa0b84f37bf3a21985b8d",
+      "bytes": 802
+    },
+    "bindings/react-native/react-native.config.cjs": {
+      "state": "untracked",
+      "sha256": "c76d0286fefed2ef599a9a94907befe5564987bbf3731433b37882bddec15fa0",
+      "bytes": 171
+    },
+    "bindings/react-native/src/NativeHoyaDB.ts": {
+      "state": "untracked",
+      "sha256": "ba9f3eb228f537498c0c4673c8de5fbf9b26755e60d090ddf60a5203e51d5a99",
+      "bytes": 546
+    },
+    "bindings/react-native/src/channel.js": {
+      "state": "untracked",
+      "sha256": "c24e572096ab2ccc185062fb4f28db82e53dfb6db6bd9bd82f8a23d869d608ff",
+      "bytes": 1364
+    },
+    "bindings/react-native/src/index.js": {
+      "state": "untracked",
+      "sha256": "af431431cc2535f5449c09cb9a931b62c8f919eedda6482b0a519a2e283b077e",
+      "bytes": 1225
+    },
+    "bindings/react-native/test/android/PolicyProbe.java": {
+      "state": "untracked",
+      "sha256": "64d1b6e8869dd2b8efa3e5f3457df031b4318cc854d42f4388d6aa2d4b9b5d9d",
+      "bytes": 6841
+    },
+    "bindings/react-native/test/apple-host.mm": {
+      "state": "untracked",
+      "sha256": "7ba5931910acdff0ab265a2f5fc6898d97278e719fb42bbace10d3b1e712fd65",
+      "bytes": 4854
+    },
+    "bindings/react-native/test/channel.test.mjs": {
+      "state": "untracked",
+      "sha256": "fc334a7960d7611d758f34184c3815078388ebc123f284ec5d09e5b0c886b2e1",
+      "bytes": 1638
+    },
+    "bindings/react-native/tools/android/prepare_repo.py": {
+      "state": "tracked-unchanged",
+      "sha256": "0dbe70ee3b080c898deffe640d7b8059c803d15e60799364b9572ec8856cbdff",
+      "bytes": 11068
+    },
+    "bindings/react-native/tools/android/test_prepare_repo.py": {
+      "state": "tracked-unchanged",
+      "sha256": "bed30179c5264a2e6b1590db0c17ccd7d4507fc1b653af5022466a048315443a",
+      "bytes": 16568
+    },
+    "bindings/react-native/tools/android/testdata/prepare-repo-v1.py.txt": {
+      "state": "tracked-unchanged",
+      "sha256": "f76c2a5c04518d10da1f2bc1f0325b55ec66ba42575c09a953523eb70e651d6f",
+      "bytes": 5467
+    }
+  },
+  "deleted_tracked": [
+    "bindings/native/include/module.modulemap"
+  ],
+  "evidence_dirs_untracked": {
+    "phase-seven-native-packaging": {
+      "Info-after.plist": "fa4dd51ea8237ba99d7d23badd28bc9db8080dbc1c477038db3fb8ef61463a23",
+      "Info-before.plist": "98dba4e6a8c6a1d1de91d9a0d8d115256ef73604b48d3c2db977c60568abd13c",
+      "README.md": "483de23c32a2a16bd71b2fe5d9a57ab76cc2741cec17eab9ab3b0a386d961dfd",
+      "after-swift-artifact-sha256.txt": "3e529acdfaf9e73a7d1e7e40f60863809d354d29bbec0f95f28ac8cd9221eb24",
+      "before-artifact-sha256.txt": "f1bfdf349faacac7e034e91da10b7264bf7e79afa2034f913f0e34fb55a9e039",
+      "build.txt": "4f9b94a052f446cd1cf5d8b99e2adca29d36831b166b1cee3276f12a2f9d2cef",
+      "green-swift.txt": "2dd6612205f95af0636489f92da5a0977fb2c95d0582d5e501fa70a0df6a4747",
+      "install-pods-offline-red-as-run.py.txt": "a9f31fb400756da0068990b6e4cf58a0f4e752707325e2debc823653c6cd6473",
+      "install-pods-offline.py.txt": "fe67926538eec02283fc11d868bbf78cadba0fad22bb0d9a79a36336f7f190db",
+      "macos-build.txt": "32dab2aecbc4eabbe95dc14589c87782e61b4be8ee8f7a13e8a35bb8e3e911a9",
+      "macos-results.json": "8a057274b791691f463a125e3f76639e5afe041fa39da8073782061f5d36b20e",
+      "modulemap-consumer-results.json": "c089bc5a5295d857b7d193e60b326fb1b8bad491f45eab42df443e681a5e0cea",
+      "modulemap-green.txt": "48865be5455bd274f18c8eb624091af96e569fdd5f169efc7c29ccad257aaf48",
+      "modulemap-red.txt": "028665b969c9615733668a25ec556eb28c187c23deb6727a689c422ff4c79243",
+      "modulemap-strict-format.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modulemap-swift-test.txt": "6d092fb4c494577aa6190e83d0ac8ce9b97a1c2f2c283a9edf0d99477f2091a9",
+      "native-build-after.json": "c19233a6d34e76628ae42c4870be5c6add4fa39c7f4fb9ed46678da95a532496",
+      "native-build-before-modulemap.json": "f6202291b3bb29c8f9568d57181dbecf55e4f4b40f5b733197c23fa2b7c57fa0",
+      "native-build-before.json": "0642a7f9623531431a22844f4aa73a8c2625a85ae96f71ab89aabc62bec2bf8a",
+      "pod-graph-review.json": "31caa55ba88b880f7763560b11968d00b679a60bf2525a77beb612b34a36ce7a",
+      "pod-install-2-basename-failure.txt": "9a46fe5850cc2752af774beb09e6514975af96d0959ad7ef3124d20c5ed37deb",
+      "pod-install-3-command.json": "f9949fa725eb46e4eeeca45044beee1b47566cba2f52785058c94816434673dd",
+      "pod-install-3-green.txt": "8bf423ea73b8c092d8fafbec49fe2be2ca44cbafaeb8c27edfc2d355dd9bf01c",
+      "pod-install-4-command.json": "60ab0b3698ccc60ed7082402be053579d36d874d621ec76ef9b6a38619764be1",
+      "pod-install-4-network-denied-failure.txt": "ba13bf942aeafa06b4c22e49452e1ccae9164fc23e9c6d9c2dc40a48f321aba5",
+      "pod-install-5-graph-comparison.json": "1d5cd3f94fd79e8def0157e6596a4b604840a9ae6f623d549e203753c4d851b6",
+      "pod-install-5-wrong-codegen-layout.txt": "4c7577813dd90b4bb070b5e8a6a7eff92bef3179181080473568d8a726bf12c2",
+      "pod-install-6-command.json": "8a614d356c3026ef1f8cc5c9bb15bee3d1735ee2a93a246cf174dbda6ca54b9e",
+      "pod-install-6-graph-comparison.json": "97be782f03ca3301fc785da46bb5fd47ee448eb22adf7fea782204a428b63d5d",
+      "pod-install-6-network-denied-green.txt": "a610f7e7bd94f06e58793417216899ba8a8717ca194242580685e10ddf6cbce8",
+      "red-rn.txt": "4fd73f20f8401a8115b7b9d0475e3f892a320bdcb2b3697860d23e8016702a23",
+      "red-swift.txt": "67ab467568380633adc5c0217ca606305e1acc608e8d39ef5ee3966fca62b879",
+      "repack-xcframework-basename.py.txt": "7bb137d948b4b1f7dbb0995811699ea84dce8107d7fcfadfcb0ac3b451bc66b7",
+      "rn-check-consumer-installed.txt": "4b42363c0633c33e88b7cdff64f7917562c196c12482019d0e0660c6478fe2db",
+      "rn-check-rn-package-source.txt": "102f79e7120bff6c0c9e307abef6e55dc03da76747ab1e43833f6706a0787956",
+      "rn-check-swift-source.txt": "4afe35d755320ca5f3f39a7905d2f91eaca671f5ca11b67d516b5f56333c9adb",
+      "rn-config-green.json": "3c485fe8eed9aab10944d470a592fb0299681ab1a1b5b6262c6fccc3abe8d57a",
+      "rn-config-red-android-null.json": "404bc5773db66cbaf8548cab6c964c8c3b42f98abe9118f626344e7c55302fa0",
+      "rn-repack-final.json": "d3237e022ecb10192dc4b575aa98cdfc4516aa11534f9dc3a4d8371049e146c2",
+      "rn-repack.json": "03aa0852eef0a30d999713f3ca01ffda2f205badfefca4ae80dbdeb1ea136a7c",
+      "spec-source-fixture.txt": "38b13c1a92ffb2469e6257689c699c52d3127d33949635ceabc6a6081f591c74",
+      "strict-format.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "swift-test.txt": "b0a761fbc6c426f2e7e8aca16ed75de399934675187a294f1f5bb0aa241291b0"
+    },
+    "phase-seven-swift-ios-current": {
+      "README.md": "c34d0729d8a340c3562ae6a62b96fc2e7d2a2a4619a870406449da3d655c75d5",
+      "clean-build-command.json": "f0b57b53940ac323e615ff2f9cefe7a9470f225f6aa5ca1916f2517a5f1a382e",
+      "clean-build.txt": "6317a448da8b8f308c398bb160f1f72b84b2ca54ab6fc5982e7054462e6f7073",
+      "commands.json": "763c824b5c46b41a93bbaae88525ee5b26206e25775e8e639d1612ebd5e4c7a8",
+      "pre-build-binaries-sha256.txt": "fa8fdbcc5679670c38f02533cd995772cf807ab9b965b616c249945ef422944d",
+      "reader-result.txt": "5dbbfffd95a15d5ca4d5ff5d9440c7cbce911df6068004c28213015a441a8ecb",
+      "reader-stdout.txt": "879843785e015f44ea79da123f4778eb179fb5bbd96e4628c8db72123f9c40cf",
+      "run.py.txt": "73b03ae8e9d11f3fa137ecdd5166a2fa7f9f8959fcb5ebe71bbf409d89b772d2",
+      "summary.json": "a81ce77833daa128f7a918c563997aca65d76afd593c5d526526fccdc3608843",
+      "swift-source-sha256.json": "7e318d5ab0dd3291b576b765097078258080c4efe6bed34c724c130cd658bfea",
+      "writer-result.txt": "ec8aa72771b1a16fa92dd002d1a607b6d726f983e93bb1996422ad4c0251a973",
+      "writer-stdout.txt": "a2a085db4820f1b7b7728ac57d1effc91a1b8bf459adf1035619b622f408c760"
+    },
+    "phase-seven-rn-ios": {
+      "README.md": "774c9d430d60b1bbc499b43a0ffbad747fd1b996035bf6484c4a1c313e1fb1cf",
+      "build-a/build.json": "f104b892f5a58cd708b5ff69a8a600302d8ad8b6ccfc5952d3bf6a6977fa0783",
+      "build-a/metro-bundle.txt": "5bd481e548c0be635a12b86eda4e677b28be50022b5de516685d6625f7d1be42",
+      "build-a/steps.json": "c309d394e8b0237afdaf4e40774ef28aad0745c3705b1beb08858661986ec140",
+      "build-b/build.json": "c7e17d03b92e4559fbee86b7c3b3fcb7a8e20b0b2c884504cc5b1f3403b66b41",
+      "build-b/steps.json": "bc16705412d23873b3eaa6e2f0d239db9617aeb2ce4f0aad38785eb19b626089",
+      "build-b/xcodebuild.txt": "350945329704cbe983fb1bb405a38744c5c93ea7d2f1cd6380d11917e4c776b2",
+      "build-c/build.json": "a5992048accff3e6c02b1b6d2ba3c7177710005df86b31891f72370df663f409",
+      "build-c/steps.json": "32991295ea0c8ae9573aecbc19b72de32d4c53e2e63f6f07439bde469a6b58a1",
+      "build-c/xcodebuild-errors.txt": "8615ec0361be68dab7b1489cbe22c6cb47b7da42a2684f3dd1819ff14f713087",
+      "build-d/build.json": "bb1b4e3db050d71c4864aff03648c7adc3a13ef0d85f8da55644322497bcef4c",
+      "build-d/steps.json": "18d952fecfc455e1d236f7387c3c5b68bdb915fe25430d13e0f1ccebc41bcf36",
+      "build-d/xcodebuild-errors.txt": "76ee4fffe5b951ddf92c2a9570f2aa1e49e962d9d25bca9f06b57846b4a2dcdf",
+      "build-e/build.json": "97fcc006b1d8c37ecaaf737c81d7ea0116cb93e9bd6fa26023b61e47f18758e1",
+      "build-e/steps.json": "025a347416a12cf7d6996a4adcbebc365111f62e22fe1faaf21f62c598d589df",
+      "build-f/build.json": "de7877beb1ea84dfc2161cb70671ea41a4682844a6fb2ff8e3b5661016760401",
+      "build-f/steps.json": "b149810835cf4e13405c5e843405f9a23b70045eed0024f4d9144216913a4fe3",
+      "build-g/build.json": "af6b15aaaeaf246a7f291a11ae42befe5718afaf10306abd64308554f1a95f5b",
+      "build-g/steps.json": "bc8ad22e347626db700b47a063a80859e6f7d85d44c5607fd425d49323ba307c",
+      "build-g/xcodebuild-tail.txt": "4ac5c714c9622c26d27e41610e990855c12461e3747656374c545ab53130d21e",
+      "final-repack.json": "d3b53c98ebde8718f28c0547e8c891cbc18bab8525ce8e258fe6a58940031248",
+      "final-rn-artifact.json": "e12f21423baa3db5842632af6f208895051136cf44e595cda770a33840c20e13",
+      "ios-build.py.txt": "805536c6e3493eb2b618775661c629ed45ef4de19d8d5ede97c35e8eb4bb3a5e",
+      "ios-run.py.txt": "fd2a2f352df5ac9ef15c91df59af8b06a648a0b94911f77ae1aa42c236a560a8",
+      "pod-install-offline-d-command.json": "193cc673406dd89cdb5684daf2bfac013439ecc678961f38a0015d1e53e765a4",
+      "run-a/all-report.json": "579e3d4fcbcbf2fea884cd28b004a9b304ac494c55bfdf182a44da53b1d1aecc",
+      "run-a/commands.json": "31f97d23a2443928c7d18cea4cc1d9840ddf2863efd6b3687a4e2c2367ea65f7",
+      "run-a/reader-report.json": "596487119d6a818b60a3e1cfebc145920c1dbb43f7147cadad1c004dad2a2809",
+      "run-a/summary.json": "836171db6c0f600af45a9b290f4fe7c7e3565d765528ff22a93b4f43ff24ec7d",
+      "run-a/writer-report.json": "6a7d147d76eeeacbe6a7ecd179bfc8eabf04b69209ed0e1451ee075ee075060a",
+      "run-b/all-report.json": "a6ff304f95e3626bb11fddaf9405826c2c1b8cc7b865b84af9af53e63d231e66",
+      "run-b/commands.json": "a839eaeeb835686d8ce17372892efccbfd1513a58f0f5a4f6b2ea53fabb1178d",
+      "run-b/reader-report.json": "596487119d6a818b60a3e1cfebc145920c1dbb43f7147cadad1c004dad2a2809",
+      "run-b/summary.json": "abadf8b9f907d02ecbf2d80bbfcd237bb821e79d7e66e6f3952c0f9a4e81b3ce",
+      "run-b/writer-report.json": "6a7d147d76eeeacbe6a7ecd179bfc8eabf04b69209ed0e1451ee075ee075060a",
+      "run-c/all-report.json": "d7f6a8e870a37ce243098b3190e22d5b2d49aeff82039c68a308172e3d01b7de",
+      "run-c/commands.json": "19bade74ee5ccedd2e618e7dc1fae724bcdd490dbeee8802c6afde6edd3371a6",
+      "run-c/reader-report.json": "596487119d6a818b60a3e1cfebc145920c1dbb43f7147cadad1c004dad2a2809",
+      "run-c/summary.json": "2f0408a3f30d141af08df1262daf6561f6c6984d164b0c18e10ac00f8964aac9",
+      "run-c/writer-report.json": "6a7d147d76eeeacbe6a7ecd179bfc8eabf04b69209ed0e1451ee075ee075060a"
+    },
+    "phase-seven-rn-declarations": {
+      "README.md": "6457ab013edf9c593452f159b48ef90cbf1f291f309fb96dfee7674bf2c43000",
+      "check.py.txt": "258c5a20d5ecca5dba4fa62e3a22bbe1e4cfd233263083672dfc38e27bb399dd",
+      "pre-fix-index.d.ts": "0e2c802514506d44a8df8f0223aaa00b4b1355176bd75276b3c07d13cfeb1960",
+      "result-es2022-dom-pre-fix.json": "ecca7b90a1c6fa50512ff3f0cd3d120dee609229a34d33c06cfb42366cfd9278",
+      "result-es2022-dom.json": "5112c8b8b606fef1040dc5f5c695dd3c71c91a2fba7832621e976186eeea9547",
+      "result-es2022.json": "0f6839b573a3305515a1fdd2fe0fd3c923bc38f90484b94831d935dee5835dcb",
+      "types.ts": "3fe7439d2b919590933a82b834adb7ac9cf0347480bf1afb10c15bf2a90cbb5d"
+    },
+    "phase-seven-native-api-snapshots": {
+      "HoyaDB.api.json": "97f23de12148a30af7b77f9d6ba2b79ecbe567365a327b0fdaa5f5e267575bef",
+      "HoyaDB.api.txt": "e9347dfe5e0b7be8547f9b3c805d7f3f8db86d2e852871735961ccf55b452d1c",
+      "HoyaDBTesting.api.json": "0557e730d891bf29bb22b614a9ad837beca7264b8f599b882fe791e7a22b4b7a",
+      "HoyaDBTesting.api.txt": "0aed4e501167be00a23438ad195c82b4b60d6d9b17f85946ed9771c8680469d1",
+      "README.md": "c419b7741d32e0a2bf356490f0be9cde9c58b280cb10fa82d434514b498cbfa3",
+      "react-native-index.d.ts": "8ea711a2dea25e530b4c011b28bf265e31877b27fc33219de20d92e22f3edd44",
+      "snapshot.json": "5d6091bafb922aa55d630cb8289f03c95198eb6508307e6a8f3e81694adbd801",
+      "snapshot.py.txt": "fd43621222ab8d386b16e08946337b0f53d81b8f4f384415fe8bd5d3d8118cc3"
+    }
+  },
+  "already_committed_by_root": [
+    "bindings/react-native/tools/android/** (DEF-0028, a05a09b)",
+    "docs/implementation/phase-seven-rn-def-0028/** (a05a09b)",
+    "docs/implementation/phase-seven-kotlin-compiler-addendum/** (5e771f2)"
+  ],
+  "notes": {
+    "bindings/native/Cargo.toml": "modified: PRE-EXISTING trailing blank-line diff from the handoff, not this lane's change; preserve, root decides",
+    "bindings/native/include/module.modulemap": "deleted: moved to bindings/native/include/HoyaNative/module.modulemap (header \"../hoyadb.h\") for the mixed SwiftPM+CocoaPods redefinition fix",
+    "bindings/native/tests/cross_provider.c": "untracked: verification-only cross-provider tool from the previous lane (handoff), unchanged by this lane",
+    "bindings/react-native/**": "untracked RN package as a whole (previous lane plus this lane: podspec name, config sourceDir/ios fix, factories store/options, index.d.ts, README, Examples metro/Podfile/ForeignControl/retained/mixed/index/build.gradle)"
+  },
+  "superseded_historical_cuts": {
+    "XCFramework (generated, ignored)": [
+      "pre-basename: simulator libhoyadb_native_simulator.a, Info.plist 98dba4e6\u2026",
+      "uniform basename: Info.plist 69e3575d\u2026, top-level module.modulemap",
+      "CURRENT: HoyaNative/module.modulemap layout, Info.plist fa4dd51e\u2026, library bytes unchanged (mac 5aba91a0\u2026, ios 64d6fd9e\u2026, sim bf491fe3\u2026)"
+    ],
+    "Swift sources": "44-test checkpoint committed 16c15b8/cf3f03a; current Swift .swift sources unchanged; only README.md, build-artifacts.py modified and check_artifacts.py added",
+    "RN npm package tgz (consumer packages/)": [
+      "podspec-rename repack (previous lane)",
+      "basename 3f4d4cc8\u2026",
+      "modulemap 967263f7\u2026",
+      "rn-config f1961d1a\u2026",
+      "factory-fix 1ac8d113\u2026 (RN iOS run-c 51/51 + writer/reader; preserved at target/phase-seven-rn/final-artifacts/)",
+      "CURRENT 6a2ca07b\u2026 (differs from run-c only in package/README.md)"
+    ],
+    "client tgz": "RN iOS cut used the pre-DEF-0026 client; DEF-0026 (82cffb8) client fb710c70\u2026 changes only client/index.d.ts and is the input for RN Android",
+    "external Gradle state (not this lane)": [
+      "target/phase-seven-activation/npm/node_modules/@react-native/gradle-plugin/{.gradle,build}/ written 2026-10-25T22:35:57 (Gradle 9.3.1)",
+      "docs/implementation/phase-seven-kotlin-compiler-addendum/metadata/{.gradle,build}/ written 2026-10-25T22:35:19-20 (Gradle 9.8.1); 123 indexed packet files intact"
+    ]
+  },
+  "derivation": {
+    "original_handoff_sha256": "ba1b0f364982f40bb46967a4bcffef3ddabe929a348f70264524bdbc87550cb2",
+    "original_local_path": "target/phase-seven-rn/handoff/source-manifest.json",
+    "omitted_from_source_binding": [
+      "bindings/native/Cargo.toml (pre-existing user whitespace overlay)"
+    ],
+    "omitted_from_evidence_binding": [
+      "phase-seven-rn-bootstrap-addendum (separately reviewed proposal; later v2 cut)"
+    ],
+    "unchanged_entries": "All remaining source and evidence entry hashes are copied exactly"
+  }
+}

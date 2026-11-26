@@ -1,0 +1,1739 @@
+{
+  "sourceCommit": "45e7c5c",
+  "notes": [
+    "Final run includes TC-0027 through D14 and standalone TC-0028: 20 shared Rust model/schema cases.",
+    "Browser harness assertions run at the source revision now committed as 45e7c5c; subsequent source-header comments do not change behavior.",
+    "Stage 1 pauses for an actual page reload. Stage 2 reads persisted fixtures before insertion, verifies next ID local:3 and acknowledges cleanup before worker termination."
+  ],
+  "stage1": {
+    "results": [
+      {
+        "name": "runtime",
+        "passed": true,
+        "detail": {
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Paseo/0.12.0 Chrome/152.0.7977.76 Electron/44.2.0 Safari/537.36",
+          "origin": "http://127.0.0.1:8769",
+          "secure": true,
+          "crossOriginIsolated": false
+        }
+      },
+      {
+        "name": "W05 simulated unavailable capability",
+        "passed": true,
+        "detail": "BackendFailure; no adapter exposed"
+      },
+      {
+        "name": "W05 actual capabilities and initialization",
+        "passed": true,
+        "detail": {
+          "secure": true,
+          "dedicatedWorker": true,
+          "wasm": true,
+          "bigint": true,
+          "opfs": true,
+          "syncAccessHandle": true,
+          "crossOriginIsolated": false
+        }
+      },
+      {
+        "name": "W03 immediate failed batch rollback",
+        "passed": true,
+        "detail": [
+          [
+            "\u0000🌿'; DROP TABLE x;--",
+            "é\u0000🌿",
+            {
+              "id": "é\u0000🌿",
+              "fields": [
+                {
+                  "name": "",
+                  "kind": "String",
+                  "value": ""
+                },
+                {
+                  "name": "max",
+                  "kind": "Integer",
+                  "value": "9223372036854775807"
+                },
+                {
+                  "name": "min",
+                  "kind": "Integer",
+                  "value": "-9223372036854775808"
+                },
+                {
+                  "name": "no",
+                  "kind": "Boolean",
+                  "value": false
+                },
+                {
+                  "name": "text\u0000",
+                  "kind": "String",
+                  "value": "保留\u0000🌿 '); DROP TABLE x;--"
+                },
+                {
+                  "name": "yes",
+                  "kind": "Boolean",
+                  "value": true
+                }
+              ]
+            }
+          ],
+          [
+            "\u0000🌿'; DROP TABLE x;--",
+            "replace",
+            {
+              "id": "replace",
+              "fields": [
+                {
+                  "name": "yes",
+                  "kind": "Boolean",
+                  "value": true
+                }
+              ]
+            }
+          ],
+          [
+            "\u0000🌿'; DROP TABLE x;--",
+            "removed",
+            null
+          ],
+          [
+            "\u0000🌿'; DROP TABLE x;--",
+            "prefix",
+            null
+          ],
+          [
+            "",
+            "keeper",
+            {
+              "id": "keeper",
+              "fields": [
+                {
+                  "name": "k",
+                  "kind": "String",
+                  "value": "unchanged"
+                }
+              ]
+            }
+          ],
+          [
+            "",
+            "later",
+            null
+          ],
+          [
+            "",
+            "empty",
+            {
+              "id": "empty",
+              "fields": []
+            }
+          ]
+        ]
+      },
+      {
+        "name": "W01/W03 worker termination and recreation",
+        "passed": true,
+        "detail": [
+          [
+            "\u0000🌿'; DROP TABLE x;--",
+            "é\u0000🌿",
+            {
+              "id": "é\u0000🌿",
+              "fields": [
+                {
+                  "name": "",
+                  "kind": "String",
+                  "value": ""
+                },
+                {
+                  "name": "max",
+                  "kind": "Integer",
+                  "value": "9223372036854775807"
+                },
+                {
+                  "name": "min",
+                  "kind": "Integer",
+                  "value": "-9223372036854775808"
+                },
+                {
+                  "name": "no",
+                  "kind": "Boolean",
+                  "value": false
+                },
+                {
+                  "name": "text\u0000",
+                  "kind": "String",
+                  "value": "保留\u0000🌿 '); DROP TABLE x;--"
+                },
+                {
+                  "name": "yes",
+                  "kind": "Boolean",
+                  "value": true
+                }
+              ]
+            }
+          ],
+          [
+            "\u0000🌿'; DROP TABLE x;--",
+            "replace",
+            {
+              "id": "replace",
+              "fields": [
+                {
+                  "name": "yes",
+                  "kind": "Boolean",
+                  "value": true
+                }
+              ]
+            }
+          ],
+          [
+            "\u0000🌿'; DROP TABLE x;--",
+            "removed",
+            null
+          ],
+          [
+            "\u0000🌿'; DROP TABLE x;--",
+            "prefix",
+            null
+          ],
+          [
+            "",
+            "keeper",
+            {
+              "id": "keeper",
+              "fields": [
+                {
+                  "name": "k",
+                  "kind": "String",
+                  "value": "unchanged"
+                }
+              ]
+            }
+          ],
+          [
+            "",
+            "later",
+            null
+          ],
+          [
+            "",
+            "empty",
+            {
+              "id": "empty",
+              "fields": []
+            }
+          ]
+        ]
+      },
+      {
+        "name": "W06/W08 malformed input, stale handles, disposal and recreation",
+        "passed": true,
+        "detail": [
+          [
+            "\u0000🌿'; DROP TABLE x;--",
+            "é\u0000🌿",
+            {
+              "id": "é\u0000🌿",
+              "fields": [
+                {
+                  "name": "",
+                  "kind": "String",
+                  "value": ""
+                },
+                {
+                  "name": "max",
+                  "kind": "Integer",
+                  "value": "9223372036854775807"
+                },
+                {
+                  "name": "min",
+                  "kind": "Integer",
+                  "value": "-9223372036854775808"
+                },
+                {
+                  "name": "no",
+                  "kind": "Boolean",
+                  "value": false
+                },
+                {
+                  "name": "text\u0000",
+                  "kind": "String",
+                  "value": "保留\u0000🌿 '); DROP TABLE x;--"
+                },
+                {
+                  "name": "yes",
+                  "kind": "Boolean",
+                  "value": true
+                }
+              ]
+            }
+          ],
+          [
+            "\u0000🌿'; DROP TABLE x;--",
+            "replace",
+            {
+              "id": "replace",
+              "fields": [
+                {
+                  "name": "yes",
+                  "kind": "Boolean",
+                  "value": true
+                }
+              ]
+            }
+          ],
+          [
+            "\u0000🌿'; DROP TABLE x;--",
+            "removed",
+            null
+          ],
+          [
+            "\u0000🌿'; DROP TABLE x;--",
+            "prefix",
+            null
+          ],
+          [
+            "",
+            "keeper",
+            {
+              "id": "keeper",
+              "fields": [
+                {
+                  "name": "k",
+                  "kind": "String",
+                  "value": "unchanged"
+                }
+              ]
+            }
+          ],
+          [
+            "",
+            "later",
+            null
+          ],
+          [
+            "",
+            "empty",
+            {
+              "id": "empty",
+              "fields": []
+            }
+          ]
+        ]
+      },
+      {
+        "name": "W07 simulated write failure",
+        "passed": true,
+        "detail": "Synthetic BackendFailure before invocation; no actual VFS failure claimed"
+      },
+      {
+        "name": "W07 preserves incompatible unrelated fixture",
+        "passed": true,
+        "detail": {
+          "schema": [
+            [
+              "sentinel",
+              "CREATE TABLE sentinel(value TEXT)"
+            ]
+          ],
+          "data": "preserve 🌿"
+        }
+      },
+      {
+        "name": "W07 preserves incompatible version fixture",
+        "passed": true,
+        "detail": {
+          "schema": [
+            [
+              "__hoya_fields",
+              "CREATE TABLE __hoya_fields(table_name TEXT NOT NULL,row_id TEXT NOT NULL,name TEXT NOT NULL,kind INTEGER NOT NULL,text_value TEXT,int_value INTEGER,PRIMARY KEY(table_name,row_id,name))"
+            ],
+            [
+              "__hoya_fields_numeric",
+              "CREATE INDEX __hoya_fields_numeric ON __hoya_fields(table_name,name,kind,int_value,row_id)"
+            ],
+            [
+              "__hoya_fields_text",
+              "CREATE INDEX __hoya_fields_text ON __hoya_fields(table_name,name,kind,text_value,row_id)"
+            ],
+            [
+              "__hoya_meta",
+              "CREATE TABLE __hoya_meta(version INTEGER NOT NULL)"
+            ],
+            [
+              "__hoya_rows",
+              "CREATE TABLE __hoya_rows(table_name TEXT NOT NULL,id TEXT NOT NULL,PRIMARY KEY(table_name,id))"
+            ],
+            [
+              "__hoya_tables",
+              "CREATE TABLE __hoya_tables(name TEXT PRIMARY KEY NOT NULL)"
+            ],
+            [
+              "sqlite_autoindex___hoya_fields_1",
+              null
+            ],
+            [
+              "sqlite_autoindex___hoya_rows_1",
+              null
+            ],
+            [
+              "sqlite_autoindex___hoya_tables_1",
+              null
+            ]
+          ],
+          "data": "2"
+        }
+      },
+      {
+        "name": "W04 shared assertions",
+        "passed": true,
+        "detail": [
+          "M01",
+          "M02",
+          "M04",
+          "M05",
+          "M06",
+          "M07",
+          "M08",
+          "M09",
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05",
+          "T06",
+          "T07",
+          "M03 logical tables only; simultaneous instances excluded"
+        ]
+      },
+      {
+        "name": "P01–P10 shared typed Rust assertions",
+        "passed": true,
+        "detail": "All ten shared cases executed in the real SQLite worker"
+      },
+      {
+        "name": "P11 physical fixtures and actual SQL rollback",
+        "passed": true,
+        "detail": [
+          "P11 v1 DDL marker old row and typed batch retained",
+          "P11 malformed Float Timestamp Reference Null payloads reject strictly",
+          "P11 actual SQL trigger abort rolls back prefix and emits no changes after reopen"
+        ]
+      },
+      {
+        "name": "P12 browser engine index costs",
+        "passed": true,
+        "detail": [
+          {
+            "size": 256,
+            "initial_256_raw_population_ms": 198,
+            "populated_index_build_ms": 45,
+            "added_population_ms": 0,
+            "lookups": [
+              {
+                "field": "number",
+                "first_lookup_ms": 1,
+                "repeated_25_ms": 50,
+                "plan": [
+                  "SEARCH f0 USING COVERING INDEX __hoya_fields_numeric (table_name=? AND name=? AND kind=? AND int_value=?)",
+                  "SEARCH r USING COVERING INDEX sqlite_autoindex___hoya_rows_1 (table_name=? AND id=?)",
+                  "USE TEMP B-TREE FOR ORDER BY"
+                ]
+              },
+              {
+                "field": "text",
+                "first_lookup_ms": 1,
+                "repeated_25_ms": 51,
+                "plan": [
+                  "SEARCH f0 USING COVERING INDEX __hoya_fields_text (table_name=? AND name=? AND kind=? AND text_value=?)",
+                  "SEARCH r USING COVERING INDEX sqlite_autoindex___hoya_rows_1 (table_name=? AND id=?)",
+                  "USE TEMP B-TREE FOR ORDER BY"
+                ]
+              }
+            ],
+            "typed_update_ms": 6,
+            "raw_update_ms": 4,
+            "rollback_ms": 1,
+            "ordering_ms": 3,
+            "reopen_ms": 40,
+            "reopened_plan": [
+              "SEARCH f0 USING COVERING INDEX __hoya_fields_numeric (table_name=? AND name=? AND kind=? AND int_value=?)",
+              "SEARCH r USING COVERING INDEX sqlite_autoindex___hoya_rows_1 (table_name=? AND id=?)",
+              "USE TEMP B-TREE FOR ORDER BY"
+            ]
+          },
+          {
+            "size": 2048,
+            "initial_256_raw_population_ms": 198,
+            "populated_index_build_ms": 45,
+            "added_population_ms": 1902,
+            "lookups": [
+              {
+                "field": "number",
+                "first_lookup_ms": 1,
+                "repeated_25_ms": 50,
+                "plan": [
+                  "SEARCH f0 USING COVERING INDEX __hoya_fields_numeric (table_name=? AND name=? AND kind=? AND int_value=?)",
+                  "SEARCH r USING COVERING INDEX sqlite_autoindex___hoya_rows_1 (table_name=? AND id=?)",
+                  "USE TEMP B-TREE FOR ORDER BY"
+                ]
+              },
+              {
+                "field": "text",
+                "first_lookup_ms": 1,
+                "repeated_25_ms": 95,
+                "plan": [
+                  "SEARCH f0 USING COVERING INDEX __hoya_fields_text (table_name=? AND name=? AND kind=? AND text_value=?)",
+                  "SEARCH r USING COVERING INDEX sqlite_autoindex___hoya_rows_1 (table_name=? AND id=?)",
+                  "USE TEMP B-TREE FOR ORDER BY"
+                ]
+              }
+            ],
+            "typed_update_ms": 6,
+            "raw_update_ms": 4,
+            "rollback_ms": 38,
+            "ordering_ms": 52,
+            "reopen_ms": 1,
+            "reopened_plan": [
+              "SEARCH f0 USING COVERING INDEX __hoya_fields_numeric (table_name=? AND name=? AND kind=? AND int_value=?)",
+              "SEARCH r USING COVERING INDEX sqlite_autoindex___hoya_rows_1 (table_name=? AND id=?)",
+              "USE TEMP B-TREE FOR ORDER BY"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "D01–D14 shared public model and schema assertions",
+        "passed": true,
+        "detail": "All shared Phase 2 Rust cases executed in the real worker"
+      },
+      {
+        "name": "D15 actual SQL model metadata abort and recovery",
+        "passed": true,
+        "detail": "Initialization, adoption, insertion, migration and reset preserve original state"
+      },
+      {
+        "name": "P01 bridge finite float, i64 timestamp, reference and Null validation",
+        "passed": true,
+        "detail": {
+          "id": "typed-primitives",
+          "fields": [
+            {
+              "name": "float",
+              "kind": "Float",
+              "value": 1.25
+            },
+            {
+              "name": "max",
+              "kind": "Float",
+              "value": 1.7976931348623157e+308
+            },
+            {
+              "name": "min",
+              "kind": "Float",
+              "value": -1.7976931348623157e+308
+            },
+            {
+              "name": "negativeZero",
+              "kind": "Float",
+              "value": 0
+            },
+            {
+              "name": "null",
+              "kind": "Null",
+              "value": null
+            },
+            {
+              "name": "reference",
+              "kind": "Reference",
+              "value": "引用\u0000'; DROP TABLE x;--"
+            },
+            {
+              "name": "subnormal",
+              "kind": "Float",
+              "value": 5e-324
+            },
+            {
+              "name": "timestamp",
+              "kind": "Timestamp",
+              "value": "-9223372036854775808"
+            },
+            {
+              "name": "timestampMax",
+              "kind": "Timestamp",
+              "value": "9223372036854775807"
+            }
+          ]
+        }
+      },
+      {
+        "name": "P11 typed batch and new primitive worker restart",
+        "passed": true,
+        "detail": {
+          "id": "typed-owned",
+          "fields": [
+            {
+              "name": "float",
+              "kind": "Float",
+              "value": 1.7976931348623157e+308
+            },
+            {
+              "name": "integer",
+              "kind": "Integer",
+              "value": "-9223372036854775808"
+            },
+            {
+              "name": "null",
+              "kind": "Null",
+              "value": null
+            },
+            {
+              "name": "reference",
+              "kind": "Reference",
+              "value": "引用\u0000'; DROP TABLE x;--"
+            },
+            {
+              "name": "timestamp",
+              "kind": "Timestamp",
+              "value": "9223372036854775807"
+            }
+          ]
+        }
+      },
+      {
+        "name": "D16 managed schema and relations after worker restart",
+        "passed": true,
+        "detail": {
+          "rowIds": [
+            "local:2"
+          ],
+          "nextId": null
+        }
+      },
+      {
+        "name": "W08 lifecycle CRUD and batch",
+        "passed": true,
+        "detail": "Disposed and terminated; ready for actual page reload"
+      }
+    ],
+    "checkedErrors": [
+      {
+        "kind": "BackendFailure",
+        "message": "Simulated init failure before invocation; no real VFS failure claimed"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "worker not initialized"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "Simulated open failure before invocation; no real VFS failure claimed"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "stale or disposed handle"
+      },
+      {
+        "kind": "RowAlreadyExists",
+        "table": "\u0000🌿'; DROP TABLE x;--",
+        "id": "é\u0000🌿"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "unknown operation"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "stale or disposed handle"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "number too large to fit in target type"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "number too small to fit in target type"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "decimal i64 string required"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "boolean required"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "string required"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "duplicate field"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "string required"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "string required"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "typed row required"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "stale or disposed handle"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "Simulated write failure before invocation; no real VFS failure claimed"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "a local database file path is required"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "a local database file path is required"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "a local database file path is required"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "a local database file path is required"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "unrelated or incompatible SQLite storage format"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "unsupported storage format version"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "finite float required"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "finite float required"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "finite float required"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "finite float required"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "decimal i64 string required"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "number too large to fit in target type"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "string required"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "null required"
+      }
+    ],
+    "done": false,
+    "needsReload": true,
+    "namespace": "hoyadb-spec23-76c91afa-5a7e-4178-912b-164966038730"
+  },
+  "stage2": {
+    "results": [
+      {
+        "name": "runtime",
+        "passed": true,
+        "detail": {
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Paseo/0.12.0 Chrome/152.0.7977.76 Electron/44.2.0 Safari/537.36",
+          "origin": "http://127.0.0.1:8769",
+          "secure": true,
+          "crossOriginIsolated": false
+        }
+      },
+      {
+        "name": "W05 simulated unavailable capability",
+        "passed": true,
+        "detail": "BackendFailure; no adapter exposed"
+      },
+      {
+        "name": "W05 actual capabilities and initialization",
+        "passed": true,
+        "detail": {
+          "secure": true,
+          "dedicatedWorker": true,
+          "wasm": true,
+          "bigint": true,
+          "opfs": true,
+          "syncAccessHandle": true,
+          "crossOriginIsolated": false
+        }
+      },
+      {
+        "name": "W02/W03 page reload before insertion",
+        "passed": true,
+        "detail": [
+          [
+            "\u0000🌿'; DROP TABLE x;--",
+            "é\u0000🌿",
+            {
+              "id": "é\u0000🌿",
+              "fields": [
+                {
+                  "name": "",
+                  "kind": "String",
+                  "value": ""
+                },
+                {
+                  "name": "max",
+                  "kind": "Integer",
+                  "value": "9223372036854775807"
+                },
+                {
+                  "name": "min",
+                  "kind": "Integer",
+                  "value": "-9223372036854775808"
+                },
+                {
+                  "name": "no",
+                  "kind": "Boolean",
+                  "value": false
+                },
+                {
+                  "name": "text\u0000",
+                  "kind": "String",
+                  "value": "保留\u0000🌿 '); DROP TABLE x;--"
+                },
+                {
+                  "name": "yes",
+                  "kind": "Boolean",
+                  "value": true
+                }
+              ]
+            }
+          ],
+          [
+            "\u0000🌿'; DROP TABLE x;--",
+            "replace",
+            {
+              "id": "replace",
+              "fields": [
+                {
+                  "name": "yes",
+                  "kind": "Boolean",
+                  "value": true
+                }
+              ]
+            }
+          ],
+          [
+            "\u0000🌿'; DROP TABLE x;--",
+            "removed",
+            null
+          ],
+          [
+            "\u0000🌿'; DROP TABLE x;--",
+            "prefix",
+            null
+          ],
+          [
+            "",
+            "keeper",
+            {
+              "id": "keeper",
+              "fields": [
+                {
+                  "name": "k",
+                  "kind": "String",
+                  "value": "unchanged"
+                }
+              ]
+            }
+          ],
+          [
+            "",
+            "later",
+            null
+          ],
+          [
+            "",
+            "empty",
+            {
+              "id": "empty",
+              "fields": []
+            }
+          ]
+        ]
+      },
+      {
+        "name": "P11 primitive page reload before insertion",
+        "passed": true,
+        "detail": {
+          "id": "typed-primitives",
+          "fields": [
+            {
+              "name": "float",
+              "kind": "Float",
+              "value": 1.25
+            },
+            {
+              "name": "max",
+              "kind": "Float",
+              "value": 1.7976931348623157e+308
+            },
+            {
+              "name": "min",
+              "kind": "Float",
+              "value": -1.7976931348623157e+308
+            },
+            {
+              "name": "negativeZero",
+              "kind": "Float",
+              "value": 0
+            },
+            {
+              "name": "null",
+              "kind": "Null",
+              "value": null
+            },
+            {
+              "name": "reference",
+              "kind": "Reference",
+              "value": "引用\u0000'; DROP TABLE x;--"
+            },
+            {
+              "name": "subnormal",
+              "kind": "Float",
+              "value": 5e-324
+            },
+            {
+              "name": "timestamp",
+              "kind": "Timestamp",
+              "value": "-9223372036854775808"
+            },
+            {
+              "name": "timestampMax",
+              "kind": "Timestamp",
+              "value": "9223372036854775807"
+            }
+          ]
+        }
+      },
+      {
+        "name": "P11 typed batch page reload before insertion",
+        "passed": true,
+        "detail": {
+          "id": "typed-owned",
+          "fields": [
+            {
+              "name": "float",
+              "kind": "Float",
+              "value": 1.7976931348623157e+308
+            },
+            {
+              "name": "integer",
+              "kind": "Integer",
+              "value": "-9223372036854775808"
+            },
+            {
+              "name": "null",
+              "kind": "Null",
+              "value": null
+            },
+            {
+              "name": "reference",
+              "kind": "Reference",
+              "value": "引用\u0000'; DROP TABLE x;--"
+            },
+            {
+              "name": "timestamp",
+              "kind": "Timestamp",
+              "value": "9223372036854775807"
+            }
+          ]
+        }
+      },
+      {
+        "name": "D16 managed rows and schema page reload before insertion",
+        "passed": true,
+        "detail": {
+          "rowIds": [
+            "local:2"
+          ],
+          "nextId": null
+        }
+      },
+      {
+        "name": "D16 persisted ID counter continuity",
+        "passed": true,
+        "detail": "local:3 allocated only after exact restart reads"
+      },
+      {
+        "name": "L01 live adapter prevents shutdown",
+        "passed": true,
+        "detail": [
+          [
+            "\u0000🌿'; DROP TABLE x;--",
+            "é\u0000🌿",
+            {
+              "id": "é\u0000🌿",
+              "fields": [
+                {
+                  "name": "",
+                  "kind": "String",
+                  "value": ""
+                },
+                {
+                  "name": "max",
+                  "kind": "Integer",
+                  "value": "9223372036854775807"
+                },
+                {
+                  "name": "min",
+                  "kind": "Integer",
+                  "value": "-9223372036854775808"
+                },
+                {
+                  "name": "no",
+                  "kind": "Boolean",
+                  "value": false
+                },
+                {
+                  "name": "text\u0000",
+                  "kind": "String",
+                  "value": "保留\u0000🌿 '); DROP TABLE x;--"
+                },
+                {
+                  "name": "yes",
+                  "kind": "Boolean",
+                  "value": true
+                }
+              ]
+            }
+          ],
+          [
+            "\u0000🌿'; DROP TABLE x;--",
+            "replace",
+            {
+              "id": "replace",
+              "fields": [
+                {
+                  "name": "yes",
+                  "kind": "Boolean",
+                  "value": true
+                }
+              ]
+            }
+          ],
+          [
+            "\u0000🌿'; DROP TABLE x;--",
+            "removed",
+            null
+          ],
+          [
+            "\u0000🌿'; DROP TABLE x;--",
+            "prefix",
+            null
+          ],
+          [
+            "",
+            "keeper",
+            {
+              "id": "keeper",
+              "fields": [
+                {
+                  "name": "k",
+                  "kind": "String",
+                  "value": "unchanged"
+                }
+              ]
+            }
+          ],
+          [
+            "",
+            "later",
+            null
+          ],
+          [
+            "",
+            "empty",
+            {
+              "id": "empty",
+              "fields": []
+            }
+          ]
+        ]
+      },
+      {
+        "name": "L02 pool owns handles after adapter disposal",
+        "passed": true,
+        "detail": "Actual NoModificationAllowedError while worker is still alive"
+      },
+      {
+        "name": "L02 acknowledged shutdown permits cleanup before termination",
+        "passed": true,
+        "detail": "hoyadb-spec23-76c91afa-5a7e-4178-912b-164966038730"
+      },
+      {
+        "name": "cleanup",
+        "passed": true,
+        "detail": "hoyadb-spec23-76c91afa-5a7e-4178-912b-164966038730"
+      }
+    ],
+    "checkedErrors": [
+      {
+        "kind": "BackendFailure",
+        "message": "Simulated init failure before invocation; no real VFS failure claimed"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "worker not initialized"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "Simulated open failure before invocation; no real VFS failure claimed"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "stale or disposed handle"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "dispose adapter before VFS shutdown"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "worker has shut down"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "worker has shut down"
+      }
+    ],
+    "done": true,
+    "needsReload": false,
+    "namespace": "hoyadb-spec23-76c91afa-5a7e-4178-912b-164966038730"
+  },
+  "red": {
+    "results": [
+      {
+        "name": "runtime",
+        "passed": true,
+        "detail": {
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Paseo/0.12.0 Chrome/152.0.7977.76 Electron/44.2.0 Safari/537.36",
+          "origin": "http://127.0.0.1:8769",
+          "secure": true,
+          "crossOriginIsolated": false
+        }
+      },
+      {
+        "name": "W05 simulated unavailable capability",
+        "passed": true,
+        "detail": "BackendFailure; no adapter exposed"
+      },
+      {
+        "name": "W05 actual capabilities and initialization",
+        "passed": true,
+        "detail": {
+          "secure": true,
+          "dedicatedWorker": true,
+          "wasm": true,
+          "bigint": true,
+          "opfs": true,
+          "syncAccessHandle": true,
+          "crossOriginIsolated": false
+        }
+      },
+      {
+        "name": "W03 immediate failed batch rollback",
+        "passed": true,
+        "detail": [
+          [
+            "\u0000🌿'; DROP TABLE x;--",
+            "é\u0000🌿",
+            {
+              "id": "é\u0000🌿",
+              "fields": [
+                {
+                  "name": "",
+                  "kind": "String",
+                  "value": ""
+                },
+                {
+                  "name": "max",
+                  "kind": "Integer",
+                  "value": "9223372036854775807"
+                },
+                {
+                  "name": "min",
+                  "kind": "Integer",
+                  "value": "-9223372036854775808"
+                },
+                {
+                  "name": "no",
+                  "kind": "Boolean",
+                  "value": false
+                },
+                {
+                  "name": "text\u0000",
+                  "kind": "String",
+                  "value": "保留\u0000🌿 '); DROP TABLE x;--"
+                },
+                {
+                  "name": "yes",
+                  "kind": "Boolean",
+                  "value": true
+                }
+              ]
+            }
+          ],
+          [
+            "\u0000🌿'; DROP TABLE x;--",
+            "replace",
+            {
+              "id": "replace",
+              "fields": [
+                {
+                  "name": "yes",
+                  "kind": "Boolean",
+                  "value": true
+                }
+              ]
+            }
+          ],
+          [
+            "\u0000🌿'; DROP TABLE x;--",
+            "removed",
+            null
+          ],
+          [
+            "\u0000🌿'; DROP TABLE x;--",
+            "prefix",
+            null
+          ],
+          [
+            "",
+            "keeper",
+            {
+              "id": "keeper",
+              "fields": [
+                {
+                  "name": "k",
+                  "kind": "String",
+                  "value": "unchanged"
+                }
+              ]
+            }
+          ],
+          [
+            "",
+            "later",
+            null
+          ],
+          [
+            "",
+            "empty",
+            {
+              "id": "empty",
+              "fields": []
+            }
+          ]
+        ]
+      },
+      {
+        "name": "W01/W03 worker termination and recreation",
+        "passed": true,
+        "detail": [
+          [
+            "\u0000🌿'; DROP TABLE x;--",
+            "é\u0000🌿",
+            {
+              "id": "é\u0000🌿",
+              "fields": [
+                {
+                  "name": "",
+                  "kind": "String",
+                  "value": ""
+                },
+                {
+                  "name": "max",
+                  "kind": "Integer",
+                  "value": "9223372036854775807"
+                },
+                {
+                  "name": "min",
+                  "kind": "Integer",
+                  "value": "-9223372036854775808"
+                },
+                {
+                  "name": "no",
+                  "kind": "Boolean",
+                  "value": false
+                },
+                {
+                  "name": "text\u0000",
+                  "kind": "String",
+                  "value": "保留\u0000🌿 '); DROP TABLE x;--"
+                },
+                {
+                  "name": "yes",
+                  "kind": "Boolean",
+                  "value": true
+                }
+              ]
+            }
+          ],
+          [
+            "\u0000🌿'; DROP TABLE x;--",
+            "replace",
+            {
+              "id": "replace",
+              "fields": [
+                {
+                  "name": "yes",
+                  "kind": "Boolean",
+                  "value": true
+                }
+              ]
+            }
+          ],
+          [
+            "\u0000🌿'; DROP TABLE x;--",
+            "removed",
+            null
+          ],
+          [
+            "\u0000🌿'; DROP TABLE x;--",
+            "prefix",
+            null
+          ],
+          [
+            "",
+            "keeper",
+            {
+              "id": "keeper",
+              "fields": [
+                {
+                  "name": "k",
+                  "kind": "String",
+                  "value": "unchanged"
+                }
+              ]
+            }
+          ],
+          [
+            "",
+            "later",
+            null
+          ],
+          [
+            "",
+            "empty",
+            {
+              "id": "empty",
+              "fields": []
+            }
+          ]
+        ]
+      },
+      {
+        "name": "W06/W08 malformed input, stale handles, disposal and recreation",
+        "passed": true,
+        "detail": [
+          [
+            "\u0000🌿'; DROP TABLE x;--",
+            "é\u0000🌿",
+            {
+              "id": "é\u0000🌿",
+              "fields": [
+                {
+                  "name": "",
+                  "kind": "String",
+                  "value": ""
+                },
+                {
+                  "name": "max",
+                  "kind": "Integer",
+                  "value": "9223372036854775807"
+                },
+                {
+                  "name": "min",
+                  "kind": "Integer",
+                  "value": "-9223372036854775808"
+                },
+                {
+                  "name": "no",
+                  "kind": "Boolean",
+                  "value": false
+                },
+                {
+                  "name": "text\u0000",
+                  "kind": "String",
+                  "value": "保留\u0000🌿 '); DROP TABLE x;--"
+                },
+                {
+                  "name": "yes",
+                  "kind": "Boolean",
+                  "value": true
+                }
+              ]
+            }
+          ],
+          [
+            "\u0000🌿'; DROP TABLE x;--",
+            "replace",
+            {
+              "id": "replace",
+              "fields": [
+                {
+                  "name": "yes",
+                  "kind": "Boolean",
+                  "value": true
+                }
+              ]
+            }
+          ],
+          [
+            "\u0000🌿'; DROP TABLE x;--",
+            "removed",
+            null
+          ],
+          [
+            "\u0000🌿'; DROP TABLE x;--",
+            "prefix",
+            null
+          ],
+          [
+            "",
+            "keeper",
+            {
+              "id": "keeper",
+              "fields": [
+                {
+                  "name": "k",
+                  "kind": "String",
+                  "value": "unchanged"
+                }
+              ]
+            }
+          ],
+          [
+            "",
+            "later",
+            null
+          ],
+          [
+            "",
+            "empty",
+            {
+              "id": "empty",
+              "fields": []
+            }
+          ]
+        ]
+      },
+      {
+        "name": "W07 simulated write failure",
+        "passed": true,
+        "detail": "Synthetic BackendFailure before invocation; no actual VFS failure claimed"
+      },
+      {
+        "name": "W07 preserves incompatible unrelated fixture",
+        "passed": true,
+        "detail": {
+          "schema": [
+            [
+              "sentinel",
+              "CREATE TABLE sentinel(value TEXT)"
+            ]
+          ],
+          "data": "preserve 🌿"
+        }
+      },
+      {
+        "name": "W07 preserves incompatible version fixture",
+        "passed": true,
+        "detail": {
+          "schema": [
+            [
+              "__hoya_fields",
+              "CREATE TABLE __hoya_fields(table_name TEXT NOT NULL,row_id TEXT NOT NULL,name TEXT NOT NULL,kind INTEGER NOT NULL,text_value TEXT,int_value INTEGER,PRIMARY KEY(table_name,row_id,name))"
+            ],
+            [
+              "__hoya_fields_numeric",
+              "CREATE INDEX __hoya_fields_numeric ON __hoya_fields(table_name,name,kind,int_value,row_id)"
+            ],
+            [
+              "__hoya_fields_text",
+              "CREATE INDEX __hoya_fields_text ON __hoya_fields(table_name,name,kind,text_value,row_id)"
+            ],
+            [
+              "__hoya_meta",
+              "CREATE TABLE __hoya_meta(version INTEGER NOT NULL)"
+            ],
+            [
+              "__hoya_rows",
+              "CREATE TABLE __hoya_rows(table_name TEXT NOT NULL,id TEXT NOT NULL,PRIMARY KEY(table_name,id))"
+            ],
+            [
+              "__hoya_tables",
+              "CREATE TABLE __hoya_tables(name TEXT PRIMARY KEY NOT NULL)"
+            ],
+            [
+              "sqlite_autoindex___hoya_fields_1",
+              null
+            ],
+            [
+              "sqlite_autoindex___hoya_rows_1",
+              null
+            ],
+            [
+              "sqlite_autoindex___hoya_tables_1",
+              null
+            ]
+          ],
+          "data": "2"
+        }
+      },
+      {
+        "name": "W04 shared assertions",
+        "passed": true,
+        "detail": [
+          "M01",
+          "M02",
+          "M04",
+          "M05",
+          "M06",
+          "M07",
+          "M08",
+          "M09",
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05",
+          "T06",
+          "T07",
+          "M03 logical tables only; simultaneous instances excluded"
+        ]
+      },
+      {
+        "name": "P01–P10 shared typed Rust assertions",
+        "passed": true,
+        "detail": "All ten shared cases executed in the real SQLite worker"
+      },
+      {
+        "name": "P11 physical fixtures and actual SQL rollback",
+        "passed": true,
+        "detail": [
+          "P11 v1 DDL marker old row and typed batch retained",
+          "P11 malformed Float Timestamp Reference Null payloads reject strictly",
+          "P11 actual SQL trigger abort rolls back prefix and emits no changes after reopen"
+        ]
+      },
+      {
+        "name": "P12 browser engine index costs",
+        "passed": true,
+        "detail": [
+          {
+            "size": 256,
+            "initial_256_raw_population_ms": 340,
+            "populated_index_build_ms": 48,
+            "added_population_ms": 0,
+            "lookups": [
+              {
+                "field": "number",
+                "first_lookup_ms": 1,
+                "repeated_25_ms": 618,
+                "plan": [
+                  "SEARCH f0 USING COVERING INDEX __hoya_fields_numeric (table_name=? AND name=? AND kind=? AND int_value=?)",
+                  "SEARCH r USING COVERING INDEX sqlite_autoindex___hoya_rows_1 (table_name=? AND id=?)",
+                  "USE TEMP B-TREE FOR ORDER BY"
+                ]
+              },
+              {
+                "field": "text",
+                "first_lookup_ms": 1,
+                "repeated_25_ms": 54,
+                "plan": [
+                  "SEARCH f0 USING COVERING INDEX __hoya_fields_text (table_name=? AND name=? AND kind=? AND text_value=?)",
+                  "SEARCH r USING COVERING INDEX sqlite_autoindex___hoya_rows_1 (table_name=? AND id=?)",
+                  "USE TEMP B-TREE FOR ORDER BY"
+                ]
+              }
+            ],
+            "typed_update_ms": 45,
+            "raw_update_ms": 4,
+            "rollback_ms": 3,
+            "ordering_ms": 2,
+            "reopen_ms": 1,
+            "reopened_plan": [
+              "SEARCH f0 USING COVERING INDEX __hoya_fields_numeric (table_name=? AND name=? AND kind=? AND int_value=?)",
+              "SEARCH r USING COVERING INDEX sqlite_autoindex___hoya_rows_1 (table_name=? AND id=?)",
+              "USE TEMP B-TREE FOR ORDER BY"
+            ]
+          },
+          {
+            "size": 2048,
+            "initial_256_raw_population_ms": 340,
+            "populated_index_build_ms": 48,
+            "added_population_ms": 1850,
+            "lookups": [
+              {
+                "field": "number",
+                "first_lookup_ms": 1,
+                "repeated_25_ms": 93,
+                "plan": [
+                  "SEARCH f0 USING COVERING INDEX __hoya_fields_numeric (table_name=? AND name=? AND kind=? AND int_value=?)",
+                  "SEARCH r USING COVERING INDEX sqlite_autoindex___hoya_rows_1 (table_name=? AND id=?)",
+                  "USE TEMP B-TREE FOR ORDER BY"
+                ]
+              },
+              {
+                "field": "text",
+                "first_lookup_ms": 0,
+                "repeated_25_ms": 54,
+                "plan": [
+                  "SEARCH f0 USING COVERING INDEX __hoya_fields_text (table_name=? AND name=? AND kind=? AND text_value=?)",
+                  "SEARCH r USING COVERING INDEX sqlite_autoindex___hoya_rows_1 (table_name=? AND id=?)",
+                  "USE TEMP B-TREE FOR ORDER BY"
+                ]
+              }
+            ],
+            "typed_update_ms": 43,
+            "raw_update_ms": 4,
+            "rollback_ms": 2,
+            "ordering_ms": 48,
+            "reopen_ms": 1,
+            "reopened_plan": [
+              "SEARCH f0 USING COVERING INDEX __hoya_fields_numeric (table_name=? AND name=? AND kind=? AND int_value=?)",
+              "SEARCH r USING COVERING INDEX sqlite_autoindex___hoya_rows_1 (table_name=? AND id=?)",
+              "USE TEMP B-TREE FOR ORDER BY"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "failure",
+        "passed": false,
+        "detail": "Error: {\"kind\":\"BackendFailure\",\"message\":\"stale or disposed handle\"}"
+      }
+    ],
+    "checkedErrors": [
+      {
+        "kind": "BackendFailure",
+        "message": "Simulated init failure before invocation; no real VFS failure claimed"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "worker not initialized"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "Simulated open failure before invocation; no real VFS failure claimed"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "stale or disposed handle"
+      },
+      {
+        "kind": "RowAlreadyExists",
+        "table": "\u0000🌿'; DROP TABLE x;--",
+        "id": "é\u0000🌿"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "unknown operation"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "stale or disposed handle"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "number too large to fit in target type"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "number too small to fit in target type"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "decimal i64 string required"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "boolean required"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "string required"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "duplicate field"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "string required"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "string required"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "typed row required"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "stale or disposed handle"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "Simulated write failure before invocation; no real VFS failure claimed"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "a local database file path is required"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "a local database file path is required"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "a local database file path is required"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "a local database file path is required"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "unrelated or incompatible SQLite storage format"
+      },
+      {
+        "kind": "BackendFailure",
+        "message": "unsupported storage format version"
+      }
+    ],
+    "done": true,
+    "needsReload": false,
+    "namespace": "hoyadb-spec23-4900256a-ed15-4111-a954-fb049e88ceed"
+  }
+}

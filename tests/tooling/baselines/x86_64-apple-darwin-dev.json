@@ -1,0 +1,67 @@
+{
+  "scope": "native Rust workspace source files including inline unit tests; branches unknown unless instrumented",
+  "measurement": {
+    "command": [
+      "cargo",
+      "llvm-cov",
+      "--workspace",
+      "--offline",
+      "--locked",
+      "--json",
+      "--output-path",
+      "target/quality/coverage-before.json"
+    ],
+    "comparison": {
+      "kind": "coverage",
+      "compiler": "rustc 1.98.1 (48a229cea 2026-09-01)\nbinary: rustc\ncommit-hash: 48a229ceaefd4985c50990b14116b6d856af0985\ncommit-date: 2026-09-01\nhost: x86_64-apple-darwin\nrelease: 1.98.1\nLLVM version: 22.1.8",
+      "tool": "cargo-llvm-cov 0.9.1",
+      "target": "x86_64-apple-darwin",
+      "profile": "dev",
+      "command": [
+        "cargo",
+        "llvm-cov",
+        "--workspace",
+        "--offline",
+        "--locked",
+        "--json"
+      ],
+      "environment": {
+        "LLVM_COV": "/usr/local/opt/llvm@22/bin/llvm-cov",
+        "LLVM_PROFDATA": "/usr/local/opt/llvm@22/bin/llvm-profdata"
+      }
+    },
+    "captured_at": "2026-10-29T21:01:27.969554+00:00",
+    "retrospective_environment_import": "LLVM overrides were verified from the exact executed command after collection; the initial metadata helper omitted these variables. Future captures record them automatically. Counts and Rust source hashes are unchanged."
+  },
+  "components": {
+    "hoyadb-bindings": {
+      "lines": {
+        "count": 2397,
+        "covered": 2061
+      },
+      "branches": null
+    },
+    "hoyadb-core": {
+      "lines": {
+        "count": 15911,
+        "covered": 15207
+      },
+      "branches": null
+    },
+    "hoyadb-storage-sqlite": {
+      "lines": {
+        "count": 1816,
+        "covered": 1759
+      },
+      "branches": null
+    },
+    "hoyadb-storage-memory": {
+      "lines": null,
+      "branches": null
+    }
+  },
+  "source_snapshot_sha256": "dbd5b0e2ea3ce38d298a8ac3788c2e7e0fa0d05e5b2b1d6c83c13cb1088c9a49",
+  "revision": "035bd0f180ca73c017813f03c454d4ad85936927",
+  "evidence": "Initial macOS/dev workspace LLVM export; dirty Rust sources verified against pre-task inventory. Compiler/tool identity rechecked when importing the baseline; captured_at describes this import, not original test start. Raw local evidence: target/quality/initial/coverage.json and coverage-source.json. This baseline cannot certify Linux/release.",
+  "dirty": true
+}

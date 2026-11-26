@@ -1,0 +1,32 @@
+--- target/phase-seven-security-remediation/code-snapshots/initial-handback/README.md	2026-10-25 23:36:03
++++ bindings/react-native/tools/security/README.md	2026-10-25 23:38:24
+@@ -8,12 +8,25 @@
+ API for the RN Android runner owner (wiring happens after handback):
+ 
+ - `kotlin_guard.secure_launch_args()` -> list of reviewed Gradle arguments.
+-- `kotlin_guard.check_launch(argv, env, properties)` -> `Violations`.
++- `kotlin_guard.check_launch(argv, env, properties)` -> `Result`.
+   Rejects Kotlin incremental compilation, a non-pinned Kotlin execution
+   strategy and `idea.use.native.compression` from every option source; it
+-  reports only source and setting names, never values.
+-- `kotlin_guard.check_observed_jvms(observations, required_roles)` -> gate
+-  result for the effective compiling JVMs (SR-20/21/22 evidence input).
++  reports only source and setting names, never values. `properties` maps a
++  label to the text or raw bytes of EVERY Gradle properties source the launch
++  can read: consumer root, included-build root, the isolated
++  `GRADLE_USER_HOME/gradle.properties` and the Gradle installation's
++  `gradle.properties`. Parsing ports JDK17 `java.util.Properties.load`
++  (logical lines, `=`/`:`/whitespace separators, `\uXXXX` and other escapes,
++  last value wins); bytes decode as ISO-8859-1 and non-ASCII files are also
++  checked as UTF-8; malformed escapes fail closed. This pre-launch check is
++  required in addition to the authoritative observed-JVM check.
++- `kotlin_guard.check_observed_jvms(observations, required_roles,
++  native_inventory, native_baseline)` -> gate result for the effective
++  compiling JVMs (SR-20/21/22 evidence input). Every observed native library
++  must match by name and SHA256 either the reviewed embedded payload inventory
++  (`native_loads`) or the explicitly supplied trusted JDK/platform baseline
++  (`baseline_loads`); anything else keeps the gate open. Capture completeness
++  is the caller's attested input and is never inferred.
+ - `symbol_guard` -> absence and external-invocation evidence (SR-30).
+ - `embedded_scan.inventory(...)` / `embedded_scan.evaluate(...)` -> permanent
+   embedded/shaded component gate (SR-31).

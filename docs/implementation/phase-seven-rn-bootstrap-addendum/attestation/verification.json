@@ -1,0 +1,336 @@
+{
+  "gpg_sha256": "76fb076671a8cd55bdc8d5f10e64ca3159c41005d8e352c866b5b6cb3e953e19",
+  "owned_home": "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xkadyj__",
+  "results": [
+    {
+      "file": "closure/error_prone_annotations-2.27.0/error_prone_annotations-2.27.0.jar",
+      "file_sha256": "24c923372c58e35d0b9f16a028929bb9aedc77521867c274f2bd0735df5ba1f5",
+      "asc_sha256": "54733d3cd7a6f5c0f09920021c946c8557cdea48e32f3a0455ac27b9b293ff35",
+      "lookup": "EE0CA873074092F806F59B65D364ABAA39A47320",
+      "lookup_kind": "issuer fingerprint",
+      "digest_algo_sha1": false,
+      "key_requests": [
+        {
+          "url": "https://keys.openpgp.org/vks/v1/by-fingerprint/EE0CA873074092F806F59B65D364ABAA39A47320",
+          "exit_code": 0,
+          "stderr": "",
+          "sha256": "a784aa13827f1fa9dfd048452dd89821a8eb76df9665867f47cf8b4754619cb8",
+          "import": {
+            "command": [
+              "/usr/local/bin/gpg",
+              "--homedir",
+              "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xkadyj__",
+              "--no-options",
+              "--no-autostart",
+              "--batch",
+              "--no-auto-key-retrieve",
+              "--import-options",
+              "import-minimal",
+              "--import",
+              "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/bootstrap-review/attestation/keys/EE0CA873074092F806F59B65D364ABAA39A47320-keys.openpgp.org.asc"
+            ],
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "gpg: key D364ABAA39A47320: no user ID\ngpg: Total number processed: 1\n"
+          },
+          "has_uid": false
+        },
+        {
+          "url": "https://keyserver.ubuntu.com/pks/lookup?op=get&options=mr&search=0xEE0CA873074092F806F59B65D364ABAA39A47320",
+          "exit_code": 0,
+          "stderr": "",
+          "sha256": "081cea7f3236dc08355b2c0844e2335a10c21cba196eee275c070f3d66a75a65",
+          "import": {
+            "command": [
+              "/usr/local/bin/gpg",
+              "--homedir",
+              "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xkadyj__",
+              "--no-options",
+              "--no-autostart",
+              "--batch",
+              "--no-auto-key-retrieve",
+              "--import-options",
+              "import-minimal",
+              "--import",
+              "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/bootstrap-review/attestation/keys/EE0CA873074092F806F59B65D364ABAA39A47320-keyserver.ubuntu.com.asc"
+            ],
+            "exit_code": 0,
+            "stdout": "",
+            "stderr": "gpg: key D364ABAA39A47320: public key \"Liam Miller-Cushon (Error Prone releases) <cushon@google.com>\" imported\ngpg: no gpg-agent running in this session\ngpg: Total number processed: 1\ngpg:               imported: 1\n"
+          },
+          "has_uid": true
+        }
+      ],
+      "verify_status": "[GNUPG:] NEWSIG\n[GNUPG:] KEY_CONSIDERED EE0CA873074092F806F59B65D364ABAA39A47320 0\n[GNUPG:] SIG_ID YOIcHRMGa1wZbUgdkvMD3g5owvM 2024-04-26 1714146726\n[GNUPG:] GOODSIG D364ABAA39A47320 Liam Miller-Cushon (Error Prone releases) <cushon@google.com>\n[GNUPG:] VALIDSIG EE0CA873074092F806F59B65D364ABAA39A47320 2024-04-26 1714146726 0 4 0 1 10 00 EE0CA873074092F806F59B65D364ABAA39A47320\n[GNUPG:] TRUST_UNDEFINED 0 pgp\n",
+      "goodsig": true,
+      "validsig": "EE0CA873074092F806F59B65D364ABAA39A47320",
+      "primary": "EE0CA873074092F806F59B65D364ABAA39A47320",
+      "uid": "Liam Miller-Cushon (Error Prone releases) <cushon@google.com>",
+      "expired_or_revoked": [],
+      "identity_trust": "UNKNOWN"
+    },
+    {
+      "file": "closure/error_prone_annotations-2.27.0/error_prone_annotations-2.27.0.pom",
+      "file_sha256": "4ca5a35d61235e16549ac346d1e34551cdf0fe27e84aa57e03cbeb255ea4e5da",
+      "asc_sha256": "ddf5fcd8f7a3bc4b401013220ebb11c04305f567c1d6427da02c1c8db61fc290",
+      "lookup": "EE0CA873074092F806F59B65D364ABAA39A47320",
+      "lookup_kind": "issuer fingerprint",
+      "digest_algo_sha1": false,
+      "key_requests": [
+        {
+          "url": "https://keys.openpgp.org/vks/v1/by-fingerprint/EE0CA873074092F806F59B65D364ABAA39A47320",
+          "exit_code": 0,
+          "stderr": "",
+          "sha256": "a784aa13827f1fa9dfd048452dd89821a8eb76df9665867f47cf8b4754619cb8",
+          "import": {
+            "command": [
+              "/usr/local/bin/gpg",
+              "--homedir",
+              "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xkadyj__",
+              "--no-options",
+              "--no-autostart",
+              "--batch",
+              "--no-auto-key-retrieve",
+              "--import-options",
+              "import-minimal",
+              "--import",
+              "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/bootstrap-review/attestation/keys/EE0CA873074092F806F59B65D364ABAA39A47320-keys.openpgp.org.asc"
+            ],
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "gpg: key D364ABAA39A47320: no user ID\ngpg: Total number processed: 1\n"
+          },
+          "has_uid": false
+        },
+        {
+          "url": "https://keyserver.ubuntu.com/pks/lookup?op=get&options=mr&search=0xEE0CA873074092F806F59B65D364ABAA39A47320",
+          "exit_code": 0,
+          "stderr": "",
+          "sha256": "081cea7f3236dc08355b2c0844e2335a10c21cba196eee275c070f3d66a75a65",
+          "import": {
+            "command": [
+              "/usr/local/bin/gpg",
+              "--homedir",
+              "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xkadyj__",
+              "--no-options",
+              "--no-autostart",
+              "--batch",
+              "--no-auto-key-retrieve",
+              "--import-options",
+              "import-minimal",
+              "--import",
+              "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/bootstrap-review/attestation/keys/EE0CA873074092F806F59B65D364ABAA39A47320-keyserver.ubuntu.com.asc"
+            ],
+            "exit_code": 0,
+            "stdout": "",
+            "stderr": "gpg: key D364ABAA39A47320: public key \"Liam Miller-Cushon (Error Prone releases) <cushon@google.com>\" imported\ngpg: no gpg-agent running in this session\ngpg: Total number processed: 1\ngpg:               imported: 1\n"
+          },
+          "has_uid": true
+        }
+      ],
+      "verify_status": "[GNUPG:] NEWSIG\n[GNUPG:] KEY_CONSIDERED EE0CA873074092F806F59B65D364ABAA39A47320 0\n[GNUPG:] SIG_ID INwZZ4N/hlzmVAMnVGx/9Gnc7yk 2024-04-26 1714146726\n[GNUPG:] GOODSIG D364ABAA39A47320 Liam Miller-Cushon (Error Prone releases) <cushon@google.com>\n[GNUPG:] VALIDSIG EE0CA873074092F806F59B65D364ABAA39A47320 2024-04-26 1714146726 0 4 0 1 10 00 EE0CA873074092F806F59B65D364ABAA39A47320\n[GNUPG:] TRUST_UNDEFINED 0 pgp\n",
+      "goodsig": true,
+      "validsig": "EE0CA873074092F806F59B65D364ABAA39A47320",
+      "primary": "EE0CA873074092F806F59B65D364ABAA39A47320",
+      "uid": "Liam Miller-Cushon (Error Prone releases) <cushon@google.com>",
+      "expired_or_revoked": [],
+      "identity_trust": "UNKNOWN"
+    },
+    {
+      "file": "closure/java-diff-utils-parent-4.15/java-diff-utils-parent-4.15.pom",
+      "file_sha256": "09e7d44a7cfa19bc6b23cad14ec0a41f32ae0b597f0e26ace91916fdc2bb5c82",
+      "asc_sha256": "0878de3b03acf45e2d1477571d938880c051c7eb1a4236876e8c06e119b5e378",
+      "lookup": "D477D51812E692011DB11E66A6EA2E2BF22E0543",
+      "lookup_kind": "issuer fingerprint",
+      "digest_algo_sha1": false,
+      "key_requests": [
+        {
+          "url": "https://keys.openpgp.org/vks/v1/by-fingerprint/D477D51812E692011DB11E66A6EA2E2BF22E0543",
+          "exit_code": 0,
+          "stderr": "",
+          "sha256": "58fd1ea6a8fdb15a0e7ca572c065eaf273ffab2fd447e902ec8f16a0e18b5996",
+          "import": {
+            "command": [
+              "/usr/local/bin/gpg",
+              "--homedir",
+              "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xkadyj__",
+              "--no-options",
+              "--no-autostart",
+              "--batch",
+              "--no-auto-key-retrieve",
+              "--import-options",
+              "import-minimal",
+              "--import",
+              "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/bootstrap-review/attestation/keys/D477D51812E692011DB11E66A6EA2E2BF22E0543-keys.openpgp.org.asc"
+            ],
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "gpg: key A6EA2E2BF22E0543: no user ID\ngpg: Total number processed: 1\n"
+          },
+          "has_uid": false
+        },
+        {
+          "url": "https://keyserver.ubuntu.com/pks/lookup?op=get&options=mr&search=0xD477D51812E692011DB11E66A6EA2E2BF22E0543",
+          "exit_code": 0,
+          "stderr": "",
+          "sha256": "cc173d5a4a53ec324bb639dd123387e681a98be7358d008891db6faee6ca8407",
+          "import": {
+            "command": [
+              "/usr/local/bin/gpg",
+              "--homedir",
+              "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xkadyj__",
+              "--no-options",
+              "--no-autostart",
+              "--batch",
+              "--no-auto-key-retrieve",
+              "--import-options",
+              "import-minimal",
+              "--import",
+              "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/bootstrap-review/attestation/keys/D477D51812E692011DB11E66A6EA2E2BF22E0543-keyserver.ubuntu.com.asc"
+            ],
+            "exit_code": 0,
+            "stdout": "",
+            "stderr": "gpg: key A6EA2E2BF22E0543: public key \"Tobias Warneke (for development purposes) <t.warneke@gmx.net>\" imported\ngpg: no gpg-agent running in this session\ngpg: Total number processed: 1\ngpg:               imported: 1\n"
+          },
+          "has_uid": true
+        }
+      ],
+      "verify_status": "[GNUPG:] NEWSIG\n[GNUPG:] KEY_CONSIDERED D477D51812E692011DB11E66A6EA2E2BF22E0543 0\n[GNUPG:] KEYEXPIRED 1667300400\n[GNUPG:] SIG_ID kDoWxxKW4G/xOW5killl83sI98U 2024-11-23 1732399120\n[GNUPG:] EXPKEYSIG A6EA2E2BF22E0543 Tobias Warneke (for development purposes) <t.warneke@gmx.net>\n[GNUPG:] VALIDSIG D477D51812E692011DB11E66A6EA2E2BF22E0543 2024-11-23 1732399120 0 4 0 1 8 00 D477D51812E692011DB11E66A6EA2E2BF22E0543\n",
+      "goodsig": false,
+      "validsig": "D477D51812E692011DB11E66A6EA2E2BF22E0543",
+      "primary": "D477D51812E692011DB11E66A6EA2E2BF22E0543",
+      "uid": null,
+      "expired_or_revoked": [
+        "EXPKEYSIG",
+        "KEYEXPIRED"
+      ],
+      "identity_trust": "UNKNOWN"
+    },
+    {
+      "file": "closure/junit-bom-5.10.2/junit-bom-5.10.2.module",
+      "file_sha256": "de23b114b3e4119a8fe6eb17bed5a3852816698bace67071579d6d927ebb080a",
+      "asc_sha256": "55bc621f6fec4f16530ac2c789af708f0af360f5f64b8780fed62e186b171087",
+      "lookup": "FF6E2C001948C5F2F38B0CC385911F425EC61B51",
+      "lookup_kind": "issuer fingerprint",
+      "digest_algo_sha1": false,
+      "key_requests": [
+        {
+          "url": "https://keys.openpgp.org/vks/v1/by-fingerprint/FF6E2C001948C5F2F38B0CC385911F425EC61B51",
+          "exit_code": 0,
+          "stderr": "",
+          "sha256": "c818db746a4c0f1c0e203791e2474362959a27628c779832294ee7b33bdacdd1",
+          "import": {
+            "command": [
+              "/usr/local/bin/gpg",
+              "--homedir",
+              "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xkadyj__",
+              "--no-options",
+              "--no-autostart",
+              "--batch",
+              "--no-auto-key-retrieve",
+              "--import-options",
+              "import-minimal",
+              "--import",
+              "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/bootstrap-review/attestation/keys/FF6E2C001948C5F2F38B0CC385911F425EC61B51-keys.openpgp.org.asc"
+            ],
+            "exit_code": 0,
+            "stdout": "",
+            "stderr": "gpg: key 85911F425EC61B51: public key \"Marc Philipp <mail@marcphilipp.de>\" imported\ngpg: no gpg-agent running in this session\ngpg: Total number processed: 1\ngpg:               imported: 1\n"
+          },
+          "has_uid": true
+        }
+      ],
+      "verify_status": "[GNUPG:] NEWSIG\n[GNUPG:] KEY_CONSIDERED FF6E2C001948C5F2F38B0CC385911F425EC61B51 0\n[GNUPG:] SIG_ID qSWiWpOv7aC5vd5wZI8sOa9Xy7c 2024-02-04 1707035677\n[GNUPG:] GOODSIG 85911F425EC61B51 Marc Philipp <mail@marcphilipp.de>\n[GNUPG:] VALIDSIG FF6E2C001948C5F2F38B0CC385911F425EC61B51 2024-02-04 1707035677 0 4 0 1 8 00 FF6E2C001948C5F2F38B0CC385911F425EC61B51\n[GNUPG:] TRUST_UNDEFINED 0 pgp\n",
+      "goodsig": true,
+      "validsig": "FF6E2C001948C5F2F38B0CC385911F425EC61B51",
+      "primary": "FF6E2C001948C5F2F38B0CC385911F425EC61B51",
+      "uid": "Marc Philipp <mail@marcphilipp.de>",
+      "expired_or_revoked": [],
+      "identity_trust": "UNKNOWN"
+    },
+    {
+      "file": "closure/kotlin-stdlib-2.2.21/kotlin-stdlib-2.2.21.jar",
+      "file_sha256": "6558a3d233da56a20934b32159f9db5f86ed5816ef098f78a2c223dc6abb79dd",
+      "asc_sha256": "987df1e4d2fe52f725fe053244c59664dfe24bd7def525d081e5f1ab5dc903e2",
+      "lookup": "6F538074CCEBF35F28AF9B066A0975F8B1127B83",
+      "lookup_kind": "issuer fingerprint",
+      "digest_algo_sha1": false,
+      "key_requests": [
+        {
+          "url": "https://keys.openpgp.org/vks/v1/by-fingerprint/6F538074CCEBF35F28AF9B066A0975F8B1127B83",
+          "exit_code": 0,
+          "stderr": "",
+          "sha256": "dd4e4696a9cea1c666733a72d9a136b2375980bfcb4167d90634e82ba7719e50",
+          "import": {
+            "command": [
+              "/usr/local/bin/gpg",
+              "--homedir",
+              "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xkadyj__",
+              "--no-options",
+              "--no-autostart",
+              "--batch",
+              "--no-auto-key-retrieve",
+              "--import-options",
+              "import-minimal",
+              "--import",
+              "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/bootstrap-review/attestation/keys/6F538074CCEBF35F28AF9B066A0975F8B1127B83-keys.openpgp.org.asc"
+            ],
+            "exit_code": 0,
+            "stdout": "",
+            "stderr": "gpg: key 0729A0AFF8999A87: public key \"Kotlin Release <kt-a@jetbrains.com>\" imported\ngpg: no gpg-agent running in this session\ngpg: Total number processed: 1\ngpg:               imported: 1\n"
+          },
+          "has_uid": true
+        }
+      ],
+      "verify_status": "[GNUPG:] NEWSIG\n[GNUPG:] KEY_CONSIDERED 2FBA29D08D2E25EE84C132C30729A0AFF8999A87 0\n[GNUPG:] SIG_ID ygKIhWMwQLj/pw5BAMnkw7GkK1Y 2025-10-22 1761128285\n[GNUPG:] GOODSIG 6A0975F8B1127B83 Kotlin Release <kt-a@jetbrains.com>\n[GNUPG:] VALIDSIG 6F538074CCEBF35F28AF9B066A0975F8B1127B83 2025-10-22 1761128285 0 4 0 1 10 00 2FBA29D08D2E25EE84C132C30729A0AFF8999A87\n[GNUPG:] KEY_CONSIDERED 2FBA29D08D2E25EE84C132C30729A0AFF8999A87 0\n[GNUPG:] TRUST_UNDEFINED 0 pgp\n",
+      "goodsig": true,
+      "validsig": "6F538074CCEBF35F28AF9B066A0975F8B1127B83",
+      "primary": "2FBA29D08D2E25EE84C132C30729A0AFF8999A87",
+      "uid": "Kotlin Release <kt-a@jetbrains.com>",
+      "expired_or_revoked": [],
+      "identity_trust": "UNKNOWN"
+    },
+    {
+      "file": "closure/kotlin-stdlib-2.2.21/kotlin-stdlib-2.2.21.pom",
+      "file_sha256": "cf31f923196c63aedecd0a57c24269bd3702a4e47c0bf0bd64b5ada5de522272",
+      "asc_sha256": "a00316fd645fe5daee639d35674e30132f806fcd15bafcb50c2ae1668c538f71",
+      "lookup": "6F538074CCEBF35F28AF9B066A0975F8B1127B83",
+      "lookup_kind": "issuer fingerprint",
+      "digest_algo_sha1": false,
+      "key_requests": [
+        {
+          "url": "https://keys.openpgp.org/vks/v1/by-fingerprint/6F538074CCEBF35F28AF9B066A0975F8B1127B83",
+          "exit_code": 0,
+          "stderr": "",
+          "sha256": "dd4e4696a9cea1c666733a72d9a136b2375980bfcb4167d90634e82ba7719e50",
+          "import": {
+            "command": [
+              "/usr/local/bin/gpg",
+              "--homedir",
+              "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xkadyj__",
+              "--no-options",
+              "--no-autostart",
+              "--batch",
+              "--no-auto-key-retrieve",
+              "--import-options",
+              "import-minimal",
+              "--import",
+              "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/bootstrap-review/attestation/keys/6F538074CCEBF35F28AF9B066A0975F8B1127B83-keys.openpgp.org.asc"
+            ],
+            "exit_code": 0,
+            "stdout": "",
+            "stderr": "gpg: key 0729A0AFF8999A87: public key \"Kotlin Release <kt-a@jetbrains.com>\" imported\ngpg: no gpg-agent running in this session\ngpg: Total number processed: 1\ngpg:               imported: 1\n"
+          },
+          "has_uid": true
+        }
+      ],
+      "verify_status": "[GNUPG:] NEWSIG\n[GNUPG:] KEY_CONSIDERED 2FBA29D08D2E25EE84C132C30729A0AFF8999A87 0\n[GNUPG:] SIG_ID bVGHy8XbTBNYdRGE/dDW44AjZqU 2025-10-22 1761128285\n[GNUPG:] GOODSIG 6A0975F8B1127B83 Kotlin Release <kt-a@jetbrains.com>\n[GNUPG:] VALIDSIG 6F538074CCEBF35F28AF9B066A0975F8B1127B83 2025-10-22 1761128285 0 4 0 1 10 00 2FBA29D08D2E25EE84C132C30729A0AFF8999A87\n[GNUPG:] KEY_CONSIDERED 2FBA29D08D2E25EE84C132C30729A0AFF8999A87 0\n[GNUPG:] TRUST_UNDEFINED 0 pgp\n",
+      "goodsig": true,
+      "validsig": "6F538074CCEBF35F28AF9B066A0975F8B1127B83",
+      "primary": "2FBA29D08D2E25EE84C132C30729A0AFF8999A87",
+      "uid": "Kotlin Release <kt-a@jetbrains.com>",
+      "expired_or_revoked": [],
+      "identity_trust": "UNKNOWN"
+    }
+  ]
+}

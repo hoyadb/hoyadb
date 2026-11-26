@@ -1,0 +1,1 @@
+HOYA_JNI_GENERAL_GREEN schemas=2 threads=4 calls=32 static_errors=4 owned_replies=true

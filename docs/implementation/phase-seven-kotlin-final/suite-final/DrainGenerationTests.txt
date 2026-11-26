@@ -1,0 +1,3 @@
+PASS DEF19_retired_clock_gated_drain_cannot_consume_replacement_initial_event
+
+exit=0

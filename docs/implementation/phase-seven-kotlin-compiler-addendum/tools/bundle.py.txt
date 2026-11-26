@@ -1,0 +1,68 @@
+"""Assemble the proposed addendum bundle.json from recorded evidence only (no network, no execution)."""
+from pathlib import Path
+import json
+here = Path(__file__).resolve().parents[1]
+repo = here.parents[2]
+v = json.loads((here / 'verification.json').read_text())
+delta = json.loads((here / 'graph-delta.json').read_text())
+osv = json.loads((here / 'osv-summary.json').read_text())
+fetch = {r['dest']: r for r in json.loads((here / 'fetch-log.json').read_text())}
+marker = json.loads((here.parent / 'marker-review/parse.json').read_text())
+roles = {
+    'org.jetbrains.kotlin:kotlin-compiler-embeddable:2.1.20': 'Kotlin compiler (shades IntelliJ core and other libraries); KGP kotlinCompilerClasspath default dependency; runs in-process to compile Kotlin',
+    'org.jetbrains.kotlin:kotlin-daemon-embeddable:2.1.20': 'Compiler daemon protocol classes required by kotlin-compiler-embeddable',
+    'org.jetbrains.kotlin:kotlin-build-tools-impl:2.1.20': 'Build Tools API implementation; KGP kotlinBuildToolsApiClasspath (strictly 2.1.20), used by classpath-snapshot and script-extension-discovery transforms',
+    'org.jetbrains.kotlin:kotlin-scripting-compiler-embeddable:2.1.20': 'Scripting compiler plugin added unconditionally by KGP to every non-native compilation plugin classpath',
+    'org.jetbrains.kotlin:kotlin-scripting-compiler-impl-embeddable:2.1.20': 'Dependency of the scripting compiler plugin',
+    'org.jetbrains.kotlin:kotlin-scripting-common:2.1.20': 'Dependency of the scripting compiler plugin',
+    'org.jetbrains.kotlin:kotlin-scripting-jvm:2.1.20': 'Dependency of the scripting compiler plugin',
+    'org.jetbrains.kotlin:kotlin-script-runtime:2.1.20': 'Dependency of the compiler and scripting plugin',
+    'org.jetbrains.kotlin:kotlin-reflect:1.6.10': 'Dependency of kotlin-compiler-embeddable (version declared by its POM; distinct from approved kotlin-reflect 2.1.20)',
+    'org.jetbrains.intellij.deps:trove4j:1.0.20200330': 'Collections dependency of kotlin-compiler-embeddable',
+    'org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.8.0': 'Coroutines dependency of kotlin-compiler-embeddable (distinct from approved runtime 1.9.0)',
+    'com.google.code.gson:gson:2.8.9': 'Compile-only selection on the official RN Gradle plugin compile classpath (runtime selects approved 2.11.0)',
+    'com.google.guava:guava:31.0.1-jre': 'Compile-only selection on the official RN Gradle plugin compile classpath (runtime selects approved 33.3.1-jre)',
+    'com.google.guava:failureaccess:1.0.1': 'Compile-only dependency of Guava 31.0.1-jre',
+    'com.google.errorprone:error_prone_annotations:2.7.1': 'Compile-only annotation dependency of Guava 31.0.1-jre',
+    'com.google.j2objc:j2objc-annotations:1.3': 'Compile-only annotation dependency of Guava 31.0.1-jre',
+    'org.checkerframework:checker-qual:3.12.0': 'Compile-only annotation dependency of Guava 31.0.1-jre',
+    'org.jetbrains.kotlin:kotlin-gradle-plugins-bom:2.1.20': 'Metadata-only platform (BOM) referenced by KGP module metadata',
+    'org.jetbrains.kotlinx:kotlinx-coroutines-bom:1.9.0': 'Metadata-only platform (BOM) on the plugin runtime classpath',
+    'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0': 'Metadata-only Kotlin Multiplatform root module; redirects to the approved -jvm 1.9.0 artifact',
+}
+artifacts, metadata_only = [], []
+for coord, e in v['components'].items():
+    files = []
+    for name, r in e['files'].items():
+        dest = f"closure/{coord.replace(':', '__')}/{name}"
+        files.append({'name': name, 'url': fetch[dest]['url'], 'bytes': r['bytes'], 'sha256': r['sha256'], 'sha512': r['sha512'],
+                      'sha1_sidecar_match': r['sha1_sidecar_match'], 'gradle_independent_retrieval_match': r['gradle_independent_retrieval_match'],
+                      'publisher_module_sha256_match': r.get('publisher_module_sha256_match'), 'detached_signature_fetched_unverified': r['asc_present'] if name.endswith('.jar') else None})
+    pom = next(r for n, r in e['files'].items() if n.endswith('.pom'))
+    item = {'coordinate': coord, 'role': roles[coord], 'pom_licenses': pom['licenses'], 'pom_parent': pom.get('parent'),
+            'osv_exact_version_matches': osv['closure'].get(coord, []), 'files': files}
+    (artifacts if any(f['name'].endswith('.jar') for f in files) else metadata_only).append(item)
+bundle = {
+    'format': 1,
+    'approval_status': 'PREPARATION ONLY: awaiting independent review and explicit operator approval under ADR-0035; nothing activated',
+    'original_approvals': ['ADR-0035 /1a914cd (snapshot dc5469e)', 'plugin addendum 8a87389 (snapshot 03048bb)'],
+    'scope': 'Kotlin 2.1.20 compiler build-process inputs for the unchanged official RN0.86.3 includeBuild and the RN consumer app Kotlin compilation; no app/SDK/core runtime pin change',
+    'marker': {'coordinate': marker['coordinate'], 'sha256': marker['sha256'], 'bytes': marker['bytes'], 'packaging': marker['packaging'],
+               'sole_dependency': marker['dependencies'], 'quarantine': 'target/phase-seven-rn/marker-review/bytes'},
+    'additional_jar_components': artifacts,
+    'metadata_only_components': metadata_only,
+    'parent_poms_already_in_reviewed_metadata': [p['coordinate'] for p in v['parent_poms']],
+    'graph_delta': delta,
+    'advisories': {'closure_matches': {c: m for c, m in osv['closure'].items() if m}, 'embedded_catalog_declared_informational': osv['embedded_catalog_declared_informational'],
+                   'note': 'Exact-version OSV registry check only; ADR-0035 original 47 build-only advisories (3 critical) remain disclosed and are not rescanned here'},
+    'restrictions': [
+        'Activate only the exact marker plus listed JAR/metadata bytes after explicit operator approval; verify every hash before use',
+        'Unchanged official includeBuild and consumer; isolated fresh GRADLE_USER_HOME; no HOME override; no shared/remote cache; --offline, no build/configuration cache',
+        'Explicit existing JDK 17.0.1-tem (the reviewed metadata JDK) with auto-detect/auto-download disabled; no JDK fetch',
+        'No ktfmtFormat or formatter 0.54 activation; no source fallback; no SDK component download',
+        'Compare the actual selected build/runtime graphs with (ADR-0035 union + 8a87389 + this addendum) before compilation; stop on any extra component or artifact',
+        'No publication or customer-store operation',
+    ],
+}
+(here / 'bundle.json').write_text(json.dumps(bundle, indent=2) + '\n')
+print(len(artifacts), 'jar components;', len(metadata_only), 'metadata-only;', sum(f['bytes'] for a in artifacts for f in a['files'] if f['name'].endswith('.jar')), 'jar bytes')

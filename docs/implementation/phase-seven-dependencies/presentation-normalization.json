@@ -1,0 +1,307 @@
+{
+  "recorded_utc": "2026-10-24T16:58:26.616524+00:00",
+  "scope": "Whitespace-only normalization of durable copied presentation files. Exact npm/native locks excluded. Source/archive/SRI digests remain raw identities. License words/non-whitespace bytes preserved.",
+  "raw_snapshot_root": "target/phase-seven-dependencies/presentation-raw",
+  "excluded_exact_lock_sha256": {
+    "native/gradle.lockfile": "20f0ff0bd6d259e9faa28fc5606ca028411ba6e0490fdcbe79d8e84531f865b1",
+    "baselines/native-gradle.lockfile": "ebbc67474edf6da75bb2a06cae761bfbbdb1e219b0d5a457b4a5b63545372bfd",
+    "baselines/npm-package-lock.json": "0ce4a11cadd129c0b9abede2756ce7222ce8ec4aa993bc24b0c0c3edc372073b",
+    "npm/package-lock.json": "c05cb6a927e86bd25a1a076df5e7d911745bad9773f21dca5e9149b153df8b2b"
+  },
+  "changes": [
+    {
+      "path": "baselines/fast-xml-parser-advisory.json",
+      "raw_sha256": "8a155a8cfc96bce23c5e77b735885ac88674052201dcb0376577e73865e94ed4",
+      "presentation_sha256": "db2eac22d763a9da0ced72b2775a768c42fb74f6eff364b0ada9d949b5c8c637",
+      "raw_bytes": 8649,
+      "presentation_bytes": 8650,
+      "raw_snapshot_retained_under_ignored_target": "target/phase-seven-dependencies/presentation-raw/baselines/fast-xml-parser-advisory.json",
+      "operations": [
+        "CRLF to LF where present",
+        "remove spaces/tabs at line ends",
+        "one final LF"
+      ],
+      "non_whitespace_bytes_unchanged": true
+    },
+    {
+      "path": "baselines/native-resolution.json",
+      "raw_sha256": "7cd5bf6baeac228de093aa2cc301c5005a2985f380a7e7a3cbe573bf4ed2e4f6",
+      "presentation_sha256": "48c65418e8b37b462ab9994bbfd925d6cd7e2dc542654f580280c6b9d5282d18",
+      "raw_bytes": 589955,
+      "presentation_bytes": 589891,
+      "raw_snapshot_retained_under_ignored_target": "target/phase-seven-dependencies/presentation-raw/baselines/native-resolution.json",
+      "operations": [
+        "CRLF to LF where present",
+        "remove spaces/tabs at line ends",
+        "one final LF"
+      ],
+      "non_whitespace_bytes_unchanged": true
+    },
+    {
+      "path": "ios/component-licenses/DoubleConversion-commit.json",
+      "raw_sha256": "53bb1e95d59e88ae90f9f195c258927f137723546b13d976fd7f2de7e01b635e",
+      "presentation_sha256": "5886881110b07d0091213e29dcc4443503927f746dc0991be8fcb5ddf850c563",
+      "raw_bytes": 4316,
+      "presentation_bytes": 4317,
+      "raw_snapshot_retained_under_ignored_target": "target/phase-seven-dependencies/presentation-raw/ios/component-licenses/DoubleConversion-commit.json",
+      "operations": [
+        "CRLF to LF where present",
+        "remove spaces/tabs at line ends",
+        "one final LF"
+      ],
+      "non_whitespace_bytes_unchanged": true
+    },
+    {
+      "path": "ios/component-licenses/RCT-Folly-commit.json",
+      "raw_sha256": "cbab834e0b7232aabfe270cd6a94170e39fd398e8a58d4ec895fee19c6816c83",
+      "presentation_sha256": "764f4969738b5378ade46610f8e886cf9e1dd514d86cdd86934b19ff29c3c621",
+      "raw_bytes": 5717,
+      "presentation_bytes": 5718,
+      "raw_snapshot_retained_under_ignored_target": "target/phase-seven-dependencies/presentation-raw/ios/component-licenses/RCT-Folly-commit.json",
+      "operations": [
+        "CRLF to LF where present",
+        "remove spaces/tabs at line ends",
+        "one final LF"
+      ],
+      "non_whitespace_bytes_unchanged": true
+    },
+    {
+      "path": "ios/component-licenses/SocketRocket-LICENSE",
+      "raw_sha256": "41c74b84758ab303b091b0afbf958de909559556c8f1591dc4d687ea184356ab",
+      "presentation_sha256": "d7d8e55c08282204909f7c30d2c75ea0c3433fd69292e6f756bae1ffef9e1304",
+      "raw_bytes": 1532,
+      "presentation_bytes": 1533,
+      "raw_snapshot_retained_under_ignored_target": "target/phase-seven-dependencies/presentation-raw/ios/component-licenses/SocketRocket-LICENSE",
+      "operations": [
+        "CRLF to LF where present",
+        "remove spaces/tabs at line ends",
+        "one final LF"
+      ],
+      "non_whitespace_bytes_unchanged": true
+    },
+    {
+      "path": "ios/component-licenses/SocketRocket-commit.json",
+      "raw_sha256": "a8c46e38e1e253d92824bfd0d01b24aa12c92f7e911ef0f8d4da8e4f7d78232e",
+      "presentation_sha256": "e7bb2d876c8dc769c403a1a252639ef63ec344bc587ca66394803736498125d7",
+      "raw_bytes": 5371,
+      "presentation_bytes": 5372,
+      "raw_snapshot_retained_under_ignored_target": "target/phase-seven-dependencies/presentation-raw/ios/component-licenses/SocketRocket-commit.json",
+      "operations": [
+        "CRLF to LF where present",
+        "remove spaces/tabs at line ends",
+        "one final LF"
+      ],
+      "non_whitespace_bytes_unchanged": true
+    },
+    {
+      "path": "ios/component-licenses/boost-LICENSE_1_0.txt",
+      "raw_sha256": "beb8e42e9d6b4284e03304d05a81a0755200a965fc8d0a5e0aea1e84cf805d6e",
+      "presentation_sha256": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566",
+      "raw_bytes": 1361,
+      "presentation_bytes": 1338,
+      "raw_snapshot_retained_under_ignored_target": "target/phase-seven-dependencies/presentation-raw/ios/component-licenses/boost-LICENSE_1_0.txt",
+      "operations": [
+        "CRLF to LF where present",
+        "remove spaces/tabs at line ends",
+        "one final LF"
+      ],
+      "non_whitespace_bytes_unchanged": true
+    },
+    {
+      "path": "ios/component-licenses/boost-commit.json",
+      "raw_sha256": "9e8cd85ae8a199cd57f8ea596f0ee1effb83effc8cc7afe845fed006825cb0fb",
+      "presentation_sha256": "4342605c58c9df4cb415fadbe93b17597d5fff5dee957a79342dd4163a396908",
+      "raw_bytes": 1014630,
+      "presentation_bytes": 1014631,
+      "raw_snapshot_retained_under_ignored_target": "target/phase-seven-dependencies/presentation-raw/ios/component-licenses/boost-commit.json",
+      "operations": [
+        "CRLF to LF where present",
+        "remove spaces/tabs at line ends",
+        "one final LF"
+      ],
+      "non_whitespace_bytes_unchanged": true
+    },
+    {
+      "path": "ios/component-licenses/fast_float-commit.json",
+      "raw_sha256": "ddbbe60039451ea69ed2cd0b6e1dcaf82ff7a98d0a1f66d025d53df1e7ff2afb",
+      "presentation_sha256": "818359b821069775fce2e366aeefdcb5a753eb8ca54fc353b8105bd2f618d461",
+      "raw_bytes": 6316,
+      "presentation_bytes": 6317,
+      "raw_snapshot_retained_under_ignored_target": "target/phase-seven-dependencies/presentation-raw/ios/component-licenses/fast_float-commit.json",
+      "operations": [
+        "CRLF to LF where present",
+        "remove spaces/tabs at line ends",
+        "one final LF"
+      ],
+      "non_whitespace_bytes_unchanged": true
+    },
+    {
+      "path": "ios/component-licenses/fmt-commit.json",
+      "raw_sha256": "5ed2edbc88e839a05d438fd71e46e769241d1202c92e060a8c376e7f9e758ae7",
+      "presentation_sha256": "0a75884cd5da2358b596a1b1291d346624f60d9d68e46bc4062a7fa7cf6e49a1",
+      "raw_bytes": 3865,
+      "presentation_bytes": 3866,
+      "raw_snapshot_retained_under_ignored_target": "target/phase-seven-dependencies/presentation-raw/ios/component-licenses/fmt-commit.json",
+      "operations": [
+        "CRLF to LF where present",
+        "remove spaces/tabs at line ends",
+        "one final LF"
+      ],
+      "non_whitespace_bytes_unchanged": true
+    },
+    {
+      "path": "ios/component-licenses/glog-commit.json",
+      "raw_sha256": "d619d265dae07ec7ab596796cc996125e9c27faf9db60fb120d885f006850311",
+      "presentation_sha256": "fe21e2bf53495eb06a78651052140296fe303017b08fa4bac88fcc79e2c0bb4f",
+      "raw_bytes": 3957,
+      "presentation_bytes": 3958,
+      "raw_snapshot_retained_under_ignored_target": "target/phase-seven-dependencies/presentation-raw/ios/component-licenses/glog-commit.json",
+      "operations": [
+        "CRLF to LF where present",
+        "remove spaces/tabs at line ends",
+        "one final LF"
+      ],
+      "non_whitespace_bytes_unchanged": true
+    },
+    {
+      "path": "licenses/maven/bouncycastle-1.79-LICENSE.html",
+      "raw_sha256": "edbbb10380b1271998b867a2e36b1cbee226e03d438726e1a91f80c5dde11849",
+      "presentation_sha256": "16c5a8672245103fc093c2d22ac6094396bc2e7ff6c2fea4b0bc7ef19c28d563",
+      "raw_bytes": 1175,
+      "presentation_bytes": 1172,
+      "raw_snapshot_retained_under_ignored_target": "target/phase-seven-dependencies/presentation-raw/licenses/maven/bouncycastle-1.79-LICENSE.html",
+      "operations": [
+        "CRLF to LF where present",
+        "remove spaces/tabs at line ends",
+        "one final LF"
+      ],
+      "non_whitespace_bytes_unchanged": true
+    },
+    {
+      "path": "licenses/maven/jdom2-2.0.6-LICENSE.txt",
+      "raw_sha256": "9d3878b0a87ad1b2bafb729e8c9085b36b17bd0d30a813030113e13f99cced2c",
+      "presentation_sha256": "a35a44ef839d07fc4c08d0ea10cc846d4a6ad7c1783fbc27549126d7b404d467",
+      "raw_bytes": 2558,
+      "presentation_bytes": 2489,
+      "raw_snapshot_retained_under_ignored_target": "target/phase-seven-dependencies/presentation-raw/licenses/maven/jdom2-2.0.6-LICENSE.txt",
+      "operations": [
+        "CRLF to LF where present",
+        "remove spaces/tabs at line ends",
+        "one final LF"
+      ],
+      "non_whitespace_bytes_unchanged": true
+    },
+    {
+      "path": "licenses/maven/kxml2-2.3.0-source-license-header.txt",
+      "raw_sha256": "6f91abe1318458f114397a9421f1b458dfbef6f6ca5c7265b88b5363b1c91744",
+      "presentation_sha256": "c1f6675e9075f0aac3cdcec8354ccc666001ee179ee9f49fccd313156f2e8aec",
+      "raw_bytes": 8000,
+      "presentation_bytes": 7997,
+      "raw_snapshot_retained_under_ignored_target": "target/phase-seven-dependencies/presentation-raw/licenses/maven/kxml2-2.3.0-source-license-header.txt",
+      "operations": [
+        "CRLF to LF where present",
+        "remove spaces/tabs at line ends",
+        "one final LF"
+      ],
+      "non_whitespace_bytes_unchanged": true
+    },
+    {
+      "path": "native/resolution.json",
+      "raw_sha256": "7dfcee9b0cc7cdfa8201e5b931e72461b65ab30725f4e5f3933b9a938e886967",
+      "presentation_sha256": "ac2c7167a61a86d4275842b21fa9257effe83959010687e97651507b69b199eb",
+      "raw_bytes": 592979,
+      "presentation_bytes": 592915,
+      "raw_snapshot_retained_under_ignored_target": "target/phase-seven-dependencies/presentation-raw/native/resolution.json",
+      "operations": [
+        "CRLF to LF where present",
+        "remove spaces/tabs at line ends",
+        "one final LF"
+      ],
+      "non_whitespace_bytes_unchanged": true
+    },
+    {
+      "path": "native/resolve-output.txt",
+      "raw_sha256": "244e2a8ed806ffd5a3f9f82b0866131b14071b04dbfab1651f03e0823456393d",
+      "presentation_sha256": "760f2df91e1bf2f00f10c8180c7b49370894ce9d4eed4fe2c2543e8fdec910ce",
+      "raw_bytes": 445,
+      "presentation_bytes": 444,
+      "raw_snapshot_retained_under_ignored_target": "target/phase-seven-dependencies/presentation-raw/native/resolve-output.txt",
+      "operations": [
+        "CRLF to LF where present",
+        "remove spaces/tabs at line ends",
+        "one final LF"
+      ],
+      "non_whitespace_bytes_unchanged": true
+    },
+    {
+      "path": "provenance/cli20.2-release.json",
+      "raw_sha256": "aa215bf9134395402341f7ec670833384d0f711b2c408ecfa9458d0f79962578",
+      "presentation_sha256": "ee5fc882f9f6a8856963d98ab725f010fe074df66d6b856aba2941d279d64330",
+      "raw_bytes": 3777,
+      "presentation_bytes": 3778,
+      "raw_snapshot_retained_under_ignored_target": "target/phase-seven-dependencies/presentation-raw/provenance/cli20.2-release.json",
+      "operations": [
+        "CRLF to LF where present",
+        "remove spaces/tabs at line ends",
+        "one final LF"
+      ],
+      "non_whitespace_bytes_unchanged": true
+    },
+    {
+      "path": "provenance/hermes-release-directory.html",
+      "raw_sha256": "bcbe5479a27e09908749690a3cbefd35ef3491dba7b5f375f4c44fc102b709b1",
+      "presentation_sha256": "7d09f3d19eaf1eb374b03df46353ce4970340e4241b736e35713550f760ea096",
+      "raw_bytes": 11456,
+      "presentation_bytes": 11157,
+      "raw_snapshot_retained_under_ignored_target": "target/phase-seven-dependencies/presentation-raw/provenance/hermes-release-directory.html",
+      "operations": [
+        "CRLF to LF where present",
+        "remove spaces/tabs at line ends",
+        "one final LF"
+      ],
+      "non_whitespace_bytes_unchanged": true
+    },
+    {
+      "path": "provenance/ios-release-directory.html",
+      "raw_sha256": "4aeeadfbaf8f544ef730f534a3c3577f76aa738f83ea88cebb49c8e94ae9b963",
+      "presentation_sha256": "fbaf005307fbb2ab02c5a721fe110a81124a956ab9ff83b1b0b725a9c7ae6b82",
+      "raw_bytes": 22550,
+      "presentation_bytes": 22011,
+      "raw_snapshot_retained_under_ignored_target": "target/phase-seven-dependencies/presentation-raw/provenance/ios-release-directory.html",
+      "operations": [
+        "CRLF to LF where present",
+        "remove spaces/tabs at line ends",
+        "one final LF"
+      ],
+      "non_whitespace_bytes_unchanged": true
+    },
+    {
+      "path": "provenance/official-template-package.json",
+      "raw_sha256": "b99e5875e69f86418afc789ec84ce6fd4f3aa61532a85768cd9ac914326eb5cc",
+      "presentation_sha256": "6865f0ff19a22b0545bcd2313257046c70c1909ea34ee9a56b69bec8b639938a",
+      "raw_bytes": 1220,
+      "presentation_bytes": 1221,
+      "raw_snapshot_retained_under_ignored_target": "target/phase-seven-dependencies/presentation-raw/provenance/official-template-package.json",
+      "operations": [
+        "CRLF to LF where present",
+        "remove spaces/tabs at line ends",
+        "one final LF"
+      ],
+      "non_whitespace_bytes_unchanged": true
+    },
+    {
+      "path": "reviews/okio/osv-new-coordinates.json",
+      "raw_sha256": "a695960dbd857a99b1fa5950f6b69013974aef100c8b9b4c2dbc4fe8c1fc42e9",
+      "presentation_sha256": "fc65d0bce438f7501253b6523abaa7ae6f0f28cc9f966ffb4b115d8dac408ace",
+      "raw_bytes": 19,
+      "presentation_bytes": 20,
+      "raw_snapshot_retained_under_ignored_target": "target/phase-seven-dependencies/presentation-raw/reviews/okio/osv-new-coordinates.json",
+      "operations": [
+        "CRLF to LF where present",
+        "remove spaces/tabs at line ends",
+        "one final LF"
+      ],
+      "non_whitespace_bytes_unchanged": true
+    }
+  ]
+}

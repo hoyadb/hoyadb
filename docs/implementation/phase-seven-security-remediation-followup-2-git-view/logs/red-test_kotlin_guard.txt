@@ -1,0 +1,85 @@
+.......E..FFFF......E...
+======================================================================
+ERROR: test_properties_bytes_decode_like_java_iso_8859_1_and_fail_closed_on_utf8 (__main__.LaunchGuard.test_properties_bytes_decode_like_java_iso_8859_1_and_fail_closed_on_utf8)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py", line 115, in test_properties_bytes_decode_like_java_iso_8859_1_and_fail_closed_on_utf8
+    self.rejected(secure(properties={'consumer/gradle.properties': b'kotlin.incremental=true\n'}), 'consumer/gradle.properties', 'kotlin.incremental')
+                  ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py", line 22, in secure
+    return G.check_launch([*G.secure_launch_args(), *argv], env, props)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/kotlin_guard.py", line 148, in check_launch
+    for key, value in _properties(text).items():
+                      ~~~~~~~~~~~^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/kotlin_guard.py", line 96, in _properties
+    line = pending + raw.strip()
+           ~~~~~~~~^~~~~~~~~~~~~
+TypeError: can only concatenate str (not "bytes") to str
+
+======================================================================
+ERROR: test_native_baseline_contract_is_explicit (__main__.ObservedJvms.test_native_baseline_contract_is_explicit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py", line 179, in test_native_baseline_contract_is_explicit
+    result = G.check_observed_jvms([self.jvm(native_libraries_loaded=observed)], ['kotlin-compiler'],
+                                   native_inventory=payloads, native_baseline={'libjava.dylib': 'd' * 64})
+TypeError: check_observed_jvms() got an unexpected keyword argument 'native_baseline'
+
+======================================================================
+FAIL: test_properties_escaped_backslash_is_not_a_continuation (__main__.LaunchGuard.test_properties_escaped_backslash_is_not_a_continuation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py", line 104, in test_properties_escaped_backslash_is_not_a_continuation
+    self.rejected(result, 'consumer/gradle.properties', 'kotlin.incremental')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py", line 27, in rejected
+    self.assertFalse(result.ok)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_properties_malformed_unicode_escape_fails_closed (__main__.LaunchGuard.test_properties_malformed_unicode_escape_fails_closed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py", line 111, in test_properties_malformed_unicode_escape_fails_closed
+    self.rejected(secure(properties={'consumer/gradle.properties': 'kotlin.incremental=\\u00zz\n'}),
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                  'consumer/gradle.properties', 'malformed properties')
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py", line 28, in rejected
+    self.assertIn((source, setting), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('consumer/gradle.properties', 'malformed properties') not found in [('consumer/gradle.properties', 'kotlin.incremental')]
+
+======================================================================
+FAIL: test_properties_unicode_escaped_key_and_value (__main__.LaunchGuard.test_properties_unicode_escaped_key_and_value)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py", line 81, in test_properties_unicode_escaped_key_and_value
+    self.rejected(secure(properties={'consumer/gradle.properties': 'systemProp.\\u0069dea.use.native.compression=true\n'}),
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                  'consumer/gradle.properties', 'idea.use.native.compression')
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py", line 27, in rejected
+    self.assertFalse(result.ok)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_properties_whitespace_and_colon_separators (__main__.LaunchGuard.test_properties_whitespace_and_colon_separators)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py", line 91, in test_properties_whitespace_and_colon_separators
+    self.rejected(secure(properties={'consumer/gradle.properties': line + '\n'}), 'consumer/gradle.properties', 'kotlin.incremental')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py", line 27, in rejected
+    self.assertFalse(result.ok)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.040s
+
+FAILED (failures=4, errors=2)
+exit=1

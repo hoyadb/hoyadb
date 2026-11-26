@@ -1,0 +1,46 @@
+{
+ "initial_handback_12": {
+  "README.md": "6d922e6a5cf33c1c609d04be7864d714fce8d9b3767d6e72773667aa19b34789",
+  "classfile.py": "d6cddefb56da9ba602a4b85c5e885f47ef03d90a983fb4eb09e18e98f218f6cd",
+  "embedded_scan.py": "7d99c0848aac7e7935c61c11f72cfb3e2b4039f490821877d3951b692ca60a67",
+  "fixtures.py": "98435b6272b53931ef9261d8dd4d813679a40f5aaeabca067ab35a041c719ed2",
+  "init_script_guard.py": "4f105b7ca3166f505788bee65d71bb5f886d3c04e35ad3fc55effc80860f8680",
+  "kotlin_guard.py": "5ea74e2da7cc5089a1f7bb4f7703f761cd5faa47e36ed44144a6b449724dea14",
+  "r1-compile-alignment.init.gradle": "74aa545a6c82cbdc434e71328653979715659818603a6c0d60627245e8d1f9a0",
+  "symbol_guard.py": "56668e924bca2606d5eb2f5dc8983cf7e1c2a22998ba38679d86e23feb26c0a9",
+  "test_embedded_scan.py": "38405c85d2032e220f4876012a3336a627502eed8c20c9691d70bd76a147bd92",
+  "test_init_script_guard.py": "35efad394c84dddbb83234441bba56ba3fab8ce38b368b13da2bceb80b117891",
+  "test_kotlin_guard.py": "a84431d1a808431703ba90ea074be03b096a990e6c127e63a175a859e3f2b860",
+  "test_symbol_guard.py": "6993bb6abb3bd5cc9176c048e96db9f0391f76e3b05edd603b655cd7f6019f9c"
+ },
+ "followup_2_handback (pre-followup-4)": {
+  "README.md": "570d4f0e50d8ac58a577efaf233da765bbd9023f2931dd1f5ecf46692cab196f",
+  "classfile.py": "d6cddefb56da9ba602a4b85c5e885f47ef03d90a983fb4eb09e18e98f218f6cd",
+  "embedded_scan.py": "7d99c0848aac7e7935c61c11f72cfb3e2b4039f490821877d3951b692ca60a67",
+  "fixtures.py": "98435b6272b53931ef9261d8dd4d813679a40f5aaeabca067ab35a041c719ed2",
+  "init_script_guard.py": "4f105b7ca3166f505788bee65d71bb5f886d3c04e35ad3fc55effc80860f8680",
+  "kotlin_guard.py": "ea0ce078863d3006f221727056527ba9eae6ab3fa5d2fb32a802b6fec0a6e71e",
+  "r1-compile-alignment.init.gradle": "74aa545a6c82cbdc434e71328653979715659818603a6c0d60627245e8d1f9a0",
+  "symbol_guard.py": "56668e924bca2606d5eb2f5dc8983cf7e1c2a22998ba38679d86e23feb26c0a9",
+  "test_embedded_scan.py": "9f0724e1e1b3dfcb1f2311876e3d747b37ff0d1b17f30b0dacd79e3fd1329cc1",
+  "test_init_script_guard.py": "d172782de62399add70feed1df9c2a5e23aafc38bce5bb6453d40c48011a925a",
+  "test_kotlin_guard.py": "c7b0c0f5f26c2e141e4be52a402b3ccc33fd8a204e164cfe676c73f58f2bbf69",
+  "test_symbol_guard.py": "6993bb6abb3bd5cc9176c048e96db9f0391f76e3b05edd603b655cd7f6019f9c"
+ },
+ "final_followup_4": {
+  "README.md": "fbfdf9eced3bb171009a8074ae31cc5cb1adc6779f0261f431bcf488b28db973",
+  "classfile.py": "d6cddefb56da9ba602a4b85c5e885f47ef03d90a983fb4eb09e18e98f218f6cd",
+  "embedded_scan.py": "20299d9e0518c489effe4e4e6d5c22f485be015cc7a1a56f5adac0e845ad9833",
+  "fixtures.py": "98435b6272b53931ef9261d8dd4d813679a40f5aaeabca067ab35a041c719ed2",
+  "init_script_guard.py": "a03132fa672aa67b56672de7f7b8aec0f4814974fc2485277fee5ad61ef7135a",
+  "kotlin_guard.py": "78beb2736fcb7cfa8297989bf6543c9c89af20dce3ecfd4f18e9f3b21d643572",
+  "r1-compile-alignment.init.gradle": "74aa545a6c82cbdc434e71328653979715659818603a6c0d60627245e8d1f9a0",
+  "symbol_guard.py": "56668e924bca2606d5eb2f5dc8983cf7e1c2a22998ba38679d86e23feb26c0a9",
+  "test_embedded_scan.py": "e017988682145333f92540b8cf9c41e66601ecf0050e8565c58d90fcef53e114",
+  "test_init_script_guard.py": "d172782de62399add70feed1df9c2a5e23aafc38bce5bb6453d40c48011a925a",
+  "test_kotlin_guard.py": "c7b0c0f5f26c2e141e4be52a402b3ccc33fd8a204e164cfe676c73f58f2bbf69",
+  "test_symbol_guard.py": "6993bb6abb3bd5cc9176c048e96db9f0391f76e3b05edd603b655cd7f6019f9c"
+ },
+ "r1_init_script_sha256_pin": "74aa545a6c82cbdc434e71328653979715659818603a6c0d60627245e8d1f9a0",
+ "bound_green_run": "final-green/green-run-identity.json (sources_before == sources_after == final_followup_4)"
+}

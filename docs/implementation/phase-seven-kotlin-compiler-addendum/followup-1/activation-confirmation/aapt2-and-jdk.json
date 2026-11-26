@@ -1,0 +1,52 @@
+{
+  "aapt2_property_hits": [
+    {
+      "jar": "android/repo/com/android/tools/build/gradle/8.12.0/gradle-8.12.0.jar",
+      "jar_sha256": "ac19aabdfb6736ed49697e107ba0d824c6f5078e203f2bce911e8a6bba6d91cb",
+      "class": "com/android/build/gradle/options/StringOption.class"
+    },
+    {
+      "jar": "android/repo/com/android/tools/build/gradle/8.12.0/gradle-8.12.0.jar",
+      "jar_sha256": "ac19aabdfb6736ed49697e107ba0d824c6f5078e203f2bce911e8a6bba6d91cb",
+      "class": "com/android/build/gradle/options/BooleanOption.class"
+    }
+  ],
+  "installed_aapt2": {
+    "path": "/Users/boristacyniak/Library/Android/sdk/build-tools/36.1.0/aapt2",
+    "sha256": "347ae46c83960aed14dd88e132f80a82c1b3456000384d234cee23c412533b03",
+    "version": "Android Asset Packaging Tool (aapt) 2.20-14042983"
+  },
+  "jdk": {
+    "home": "/Users/boristacyniak/.sdkman/candidates/java/17.0.1-tem",
+    "realpath": "/Users/boristacyniak/.sdkman/candidates/java/17.0.1-tem",
+    "java_sha256": "2c663a2f4677833e1305ea553aa188af1e22aca92a85f39e6189ae0708e5f8b4",
+    "release": "IMPLEMENTOR=\"Eclipse Adoptium\"\nIMPLEMENTOR_VERSION=\"Temurin-17.0.1+12\"\nJAVA_VERSION=\"17.0.1\"\nJAVA_VERSION_DATE=\"2021-10-19\"\nLIBC=\"default\"\nMODULES=\"java.base java.compiler java.datatransfer java.xml java.prefs java.desktop java.instrument java.logging java.management java.security.sasl java.naming java.rmi java.management.rmi java.net.http java.scripting java.security.jgss java.transaction.xa java.sql java.sql.rowset java.xml.crypto java.se java.smartcardio jdk.accessibility jdk.internal.jvmstat jdk.attach jdk.charsets jdk.compiler jdk.crypto.ec jdk.crypto.cryptoki jdk.dynalink jdk.internal.ed"
+  },
+  "aapt2_property_strings": {
+    "com/android/build/gradle/options/StringOption.class": [
+      "AAPT2_FROM_MAVEN_OVERRIDE",
+      "!AAPT2_FROM_MAVEN_VERSION_OVERRIDE",
+      "\"AAPT2_FROM_MAVEN_PLATFORM_OVERRIDE",
+      "android.aapt2FromMavenOverride",
+      "android.aapt2Version",
+      "android.aapt2Platform"
+    ],
+    "com/android/build/gradle/options/BooleanOption.class": [
+      "ENABLE_DAEMON_MODE_AAPT2",
+      "ENABLE_AAPT2",
+      "USE_AAPT2_FROM_MAVEN",
+      "ENABLE_AAPT2_WORKER_ACTIONS",
+      "ENABLE_IN_PROCESS_AAPT2",
+      "android.enableAapt2DaemonMode",
+      "(AAPT2 daemon mode is now always enabled.",
+      "android.enableAapt2",
+      "6This property has no effect, AAPT2 is now always used.",
+      "android.useAapt2FromMaven",
+      "This property has no effect and AAPT2 from maven.google.com is now always used. If you wish to use a local executable of AAPT2 please use the 'android.aapt2FromMavenOverride' option.",
+      " android.enableAapt2WorkerActions",
+      "SAAPT2 worker actions have been used unconditionally since Android Gradle Plugin 3.3",
+      "android.enableAapt2jni",
+      "AAPT2 JNI has been removed."
+    ]
+  }
+}

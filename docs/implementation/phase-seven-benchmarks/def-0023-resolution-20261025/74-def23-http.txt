@@ -1,0 +1,9 @@
+test_DEF0023_retiring_waiter_never_clears_a_newer_waiter_registration (test_browser_server.BrowserControllerTests.test_DEF0023_retiring_waiter_never_clears_a_newer_waiter_registration) ... ok
+test_DEF0023_waiter_retires_even_when_start_and_completion_both_win_and_cannot_claim_a_later_permit (test_browser_server.BrowserControllerTests.test_DEF0023_waiter_retires_even_when_start_and_completion_both_win_and_cannot_claim_a_later_permit) ... ok
+test_DEF0023_waiter_retires_when_a_direct_start_wins_the_lock_for_each_start_route (test_browser_server.BrowserControllerTests.test_DEF0023_waiter_retires_when_a_direct_start_wins_the_lock_for_each_start_route) ... ok
+test_DEF0023_waiting_http_request_gets_the_entry_guard_rejection_when_a_direct_start_wins (test_browser_server.BrowserHTTPTests.test_DEF0023_waiting_http_request_gets_the_entry_guard_rejection_when_a_direct_start_wins) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 1.105s
+
+OK

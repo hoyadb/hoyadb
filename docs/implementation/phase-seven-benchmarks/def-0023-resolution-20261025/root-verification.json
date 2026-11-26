@@ -1,0 +1,29 @@
+{
+  "closure_sha256": "0dd6d44db46ce65379036fc37c7f5ad568d0fdc21c59c2321ca87d4148cdfaa8",
+  "files_rehashed": 41,
+  "mismatches": [],
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "benchmarks",
+        "-p",
+        "test_*.py"
+      ],
+      "exit_code": 0,
+      "tests": 90,
+      "result": "OK"
+    },
+    {
+      "command": "node --test bindings/javascript/benchmark/*.test.mjs",
+      "exit_code": 0,
+      "tests": 79,
+      "passed": 79,
+      "failed": 0
+    }
+  ]
+}

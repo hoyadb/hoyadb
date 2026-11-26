@@ -1,0 +1,14 @@
+{
+  "README.md": "54a71bf73a10de97ea344b88de9168efa70e758b5dc4201d566f70372467e9d2",
+  "approved-additions.json": "8649357b7007660c2063a183180783ed6b640eb8ab1888cccb1b4984230d2c1a",
+  "assembly.txt": "e942913cd80a9426ddde9ec0617ed6c499bd3e3b1c58575688c2adf778eb0408",
+  "normal.txt": "f21f0d12febe85f7df2de9299e1caaa95f89954019eac8b7de701d1c84940d1c",
+  "optimized.txt": "f21f0d12febe85f7df2de9299e1caaa95f89954019eac8b7de701d1c84940d1c",
+  "original-optimized.txt": "e785f93c4f7e80f993f6f4bfc3b83cf8cca93a0f189d7fdd68c6e21ec7558e85",
+  "outcome.json": "1e37987cab4e7d9517284386dc3e42e70a9d8ac2b55066e468be324e933a9b2c",
+  "plan-identity.json": "4ecec7ce235f79c387fb0ad195f626b366b7dbefbfcd711a931c1ad1bbb38e20",
+  "plan.json": "62ced3f9a2505aab20d9ebfcf0ee7ada03a852c388c7dcb0abfa84e325e9c23d",
+  "preflight-verification.json": "145c43bae64a8d8b0439b29ac3eadf38bab8f13dc9ff4f6559aa419e6086d66b",
+  "repository-record.json": "ab21d5b2985b1fef15e94ea4ecefec4c712d7c2e46dad2925f1624ae1fb75da4",
+  "run-identity.json": "1cd458e5df88e8cd182ea1c27b403bddc287455d52ef3865e7b1cfe67ccb5d15"
+}

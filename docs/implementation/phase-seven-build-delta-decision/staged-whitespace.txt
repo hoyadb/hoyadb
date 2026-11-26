@@ -1,0 +1,16 @@
+docs/implementation/phase-seven-security-remediation-followup-1/licenses/jose4j-0.9.6-source-header.txt:16: new blank line at EOF.
+docs/implementation/phase-seven-security-remediation-followup-1/licenses/netty-4.1.139.Final-NOTICE.txt:216: trailing whitespace.
++    
+docs/implementation/phase-seven-security-remediation-followup-1/licenses/slf4j-1.7.36-LICENSE.txt:22: new blank line at EOF.
+docs/implementation/phase-seven-security-remediation-followup-6/evidence/netty-4.1.139.Final-NOTICE.txt:216: trailing whitespace.
++    
+docs/implementation/phase-seven-security-remediation-followup-6/keys/2C7B12F2A511E325.ubuntu.asc:2: trailing whitespace.
++Comment: Hostname: 
+docs/implementation/phase-seven-security-remediation-followup-6/keys/3051D45031E13516A6E8FAFF280D66A55F5316C5.asc:3: trailing whitespace.
++Comment: Hostname: 
+docs/implementation/phase-seven-security-remediation-followup-6/keys/78DF98EF7F95578FD545B9A159A7C2A1BD98C013.asc:2: trailing whitespace.
++Comment: Hostname: 
+docs/implementation/phase-seven-security-remediation-followup-6/keys/7B121B76A7ED6CE6E60AD51784E913A8E3A748C0.asc:3: trailing whitespace.
++Comment: The Legion of the Bouncy Castle Inc. (Maven Repository 
+docs/implementation/phase-seven-security-remediation-followup-6/keys/F3D1600878E85A3D.ubuntu.asc:2: trailing whitespace.
++Comment: Hostname: 

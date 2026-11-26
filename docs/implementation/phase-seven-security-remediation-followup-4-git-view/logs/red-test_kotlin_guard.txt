@@ -1,0 +1,24 @@
+...................F.F....
+======================================================================
+FAIL: test_empty_required_roles_cannot_certify (__main__.ObservedJvms.test_empty_required_roles_cannot_certify)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py", line 190, in test_empty_required_roles_cannot_certify
+    self.assertFalse(G.check_observed_jvms([], []).ok)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_missing_or_empty_effective_properties_is_incomplete (__main__.ObservedJvms.test_missing_or_empty_effective_properties_is_incomplete)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py", line 196, in test_missing_or_empty_effective_properties_is_incomplete
+    self.assertFalse(result.ok, override)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false : {'system_properties': {}}
+
+----------------------------------------------------------------------
+Ran 26 tests in 0.023s
+
+FAILED (failures=2)
+exit=1

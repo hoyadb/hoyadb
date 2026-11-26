@@ -1,0 +1,62 @@
+import groovy.json.JsonOutput
+import org.gradle.api.attributes.*
+import org.gradle.api.attributes.java.TargetJvmVersion
+import org.gradle.api.attributes.plugin.GradlePluginApiVersion
+
+// Metadata resolution only with Gradle's builtin java plugin. Mirrors the buildscript/settings classpaths of the
+// official @react-native/gradle-plugin 0.86.3 included build (settings.gradle.kts and build.gradle.kts plugins{}):
+// attributes from Gradle 9.3.1 DefaultScriptClassPathResolver; strict constraints from Gradle's
+// EmbeddedKotlinProvider.pinEmbeddedKotlinDependenciesOn (gradle-kotlin-dsl-embedded-kotlin.properties).
+// No plugin is applied and no dependency JAR is loaded.
+plugins { id 'java' }
+repositories {
+    mavenCentral()
+    gradlePluginPortal()
+}
+def pins = ['org.jetbrains.kotlin:kotlin-reflect': '2.2.21', 'org.jetbrains.kotlin:kotlin-stdlib': '2.2.21', 'org.jetbrains:annotations': '13.0']
+def scriptClasspath = { String name ->
+    configurations.create(name) {
+        canBeConsumed = false
+        canBeResolved = true
+        attributes {
+            attribute(Usage.USAGE_ATTRIBUTE, objects.named(Usage, Usage.JAVA_RUNTIME))
+            attribute(Category.CATEGORY_ATTRIBUTE, objects.named(Category, Category.LIBRARY))
+            attribute(LibraryElements.LIBRARY_ELEMENTS_ATTRIBUTE, objects.named(LibraryElements, LibraryElements.JAR))
+            attribute(Bundling.BUNDLING_ATTRIBUTE, objects.named(Bundling, Bundling.EXTERNAL))
+            attribute(TargetJvmVersion.TARGET_JVM_VERSION_ATTRIBUTE, 17)
+            attribute(GradlePluginApiVersion.GRADLE_PLUGIN_API_VERSION_ATTRIBUTE, objects.named(GradlePluginApiVersion, gradle.gradleVersion))
+        }
+        resolutionStrategy.activateDependencyLocking()
+    }
+    pins.each { module, version ->
+        dependencies.constraints.add(name, "${module}:${version}") { version { strictly version }; because 'Pinned to the embedded Kotlin' }
+    }
+}
+scriptClasspath('includedSettingsClasspath')
+dependencies.add('includedSettingsClasspath', 'org.gradle.toolchains.foojay-resolver-convention:org.gradle.toolchains.foojay-resolver-convention.gradle.plugin:1.0.0')
+scriptClasspath('includedRootBuildscriptClasspath')
+dependencies.add('includedRootBuildscriptClasspath', 'org.jetbrains.kotlin.jvm:org.jetbrains.kotlin.jvm.gradle.plugin:2.1.20')
+dependencies.add('includedRootBuildscriptClasspath', 'com.ncorti.ktfmt.gradle:com.ncorti.ktfmt.gradle.gradle.plugin:0.22.0')
+
+tasks.register('captureMetadata') {
+    doLast {
+        def report = [gradle: gradle.gradleVersion, java: System.getProperty('java.version'),
+                      status: 'Metadata resolution only; builtin java plugin; no plugin applied; no dependency code executed', configurations: [:]]
+        ['includedSettingsClasspath', 'includedRootBuildscriptClasspath'].each { name ->
+            def result = configurations[name].incoming.resolutionResult
+            def components = []; def edges = []; def failures = []
+            result.allComponents.each { c ->
+                components.add([id: c.id.displayName, reason: c.selectionReason.descriptions.collect { it.description },
+                                variants: c.variants.collect { v -> [name: v.displayName, attributes: v.attributes.keySet().collectEntries { a -> [(a.name): v.attributes.getAttribute(a).toString()] }] }])
+            }
+            result.allDependencies.each { d ->
+                if (d instanceof org.gradle.api.artifacts.result.ResolvedDependencyResult) edges.add([from: d.from.id.displayName, requested: d.requested.displayName, selected: d.selected.id.displayName, constraint: d.constraint])
+                if (d instanceof org.gradle.api.artifacts.result.UnresolvedDependencyResult) failures.add([requested: d.attempted.displayName, failure: d.failure.message, details: d.failure.cause?.message])
+            }
+            report.configurations[name] = [attributes: configurations[name].attributes.keySet().collectEntries { a -> [(a.name): configurations[name].attributes.getAttribute(a).toString()] },
+                                           components: components, edges: edges, failures: failures]
+        }
+        file('resolution.json').text = JsonOutput.prettyPrint(JsonOutput.toJson(report)) + '\n'
+        if (report.configurations.any { n, v -> !v.failures.empty }) throw new GradleException('Metadata graph unresolved; see resolution.json')
+    }
+}

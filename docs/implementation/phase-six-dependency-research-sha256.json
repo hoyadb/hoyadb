@@ -1,0 +1,92 @@
+[
+  {
+    "path": "Cargo.lock",
+    "sha256": "ceb04adc75a3fff9c8fa9218774cd057cd0b649993e5d926d62fd0f7bc01bf9a",
+    "bytes": 9308
+  },
+  {
+    "path": "Cargo.toml",
+    "sha256": "270758d5299c695f74149716771ff3cf052e82a67fbef32ae561002ab023d9e9",
+    "bytes": 961
+  },
+  {
+    "path": "README.md",
+    "sha256": "a9458590dde0555d772bf85d4921a10cc64b370dfdd41dea6e5f0333f1c3d80d",
+    "bytes": 4158
+  },
+  {
+    "path": "commands.txt",
+    "sha256": "41eefa5da9fbb9743064ae5d1d3a197350c5c9561e09b3e2b9659f60db797f0a",
+    "bytes": 975
+  },
+  {
+    "path": "dependency-report.json",
+    "sha256": "71659f62e6912a71ac57970e777674935ceb2f3395451b242c73371b33f57c5b",
+    "bytes": 40183
+  },
+  {
+    "path": "features-native.txt",
+    "sha256": "949adc2685782a7ce8ee137a4115535034e68fd7f6b790382e3f411de8dc98e8",
+    "bytes": 4163
+  },
+  {
+    "path": "features-wasm.txt",
+    "sha256": "591794538fd39b17d8d9ae8f7297c5763775227073ae2903d191932fd74c5ad3",
+    "bytes": 11153
+  },
+  {
+    "path": "git-commit-verification.json",
+    "sha256": "aaf25a07f86d05a18123b6f71d35d5babf0b67899bcf1123cbdbef9849a6add7",
+    "bytes": 1970
+  },
+  {
+    "path": "metadata-native-output.txt",
+    "sha256": "2337da93d8f404820f28e57106b2777783a9379485d16ffae076d0ea1bfc5208",
+    "bytes": 52
+  },
+  {
+    "path": "metadata-native.json",
+    "sha256": "7188c099ca0beb8e2fb79a3956b37a0f112e9e5b91cb76d6cae7c0214a13dd06",
+    "bytes": 49507
+  },
+  {
+    "path": "metadata-wasm-output.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  {
+    "path": "metadata-wasm.json",
+    "sha256": "cb5bc7efb854a94f54451c42ad73a3cdc8cbd6cdf48b6d9e48c30b190b8186fd",
+    "bytes": 202527
+  },
+  {
+    "path": "packages-native.txt",
+    "sha256": "d6854a36c214e56aaf584379f21c13bb69847b65a3cda6fa3d419358c91d8575",
+    "bytes": 614
+  },
+  {
+    "path": "packages-wasm.txt",
+    "sha256": "8c09463c823040dd3dcd07797167466f32d94ad1ec224b800ed43c6dbc815dad",
+    "bytes": 1603
+  },
+  {
+    "path": "primary-tokio-1.54.1.json",
+    "sha256": "943d1fb0c913aa46b14751456c1ca51be42f39af9c874e8fe720daa2e16827c7",
+    "bytes": 3741
+  },
+  {
+    "path": "project-before.json",
+    "sha256": "60b88fcd308207b45c36df9a7fdac802a2c3d1f81da8b945d023a966bd356bd1",
+    "bytes": 948
+  },
+  {
+    "path": "resolve-output.txt",
+    "sha256": "05ba687a361d07f29ab616ce1bc8d22444303f21e2304d7de6cb6ac9685db435",
+    "bytes": 163
+  },
+  {
+    "path": "wasm-bindgen-cli-primary.json",
+    "sha256": "80c0c4fff9551e0160d51d1850672147c10fbdd1ed31f4d8da6e5dd68da06e4e",
+    "bytes": 2403
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "feature_commit": "7ba538bcb82dc6584ec2a0a9cd66d32d3fd56591",
+  "remaining_modified_rust_files": 70,
+  "remaining_rust_behavior_mismatches_after_same_rustfmt": [],
+  "protected_preexisting_baseline_bytes_match": {
+    ".gitlab-ci.yml": true,
+    "rustfmt.toml": true,
+    ".editorconfig": true,
+    "docs/design/spec/SPEC-0030-rust-formatting.md": true,
+    "docs/design/tests/cases/TC-0033-rust-formatting.md": true
+  },
+  "preexisting_tooling_script_baseline_hash": "not captured; left unstaged and no task edits made",
+  "candidate_source_check": "Five formatter manifests and workspace/native all-target compile passed in a clean standalone candidate tree without the pending formatting configuration.",
+  "note": "Only task behavior was committed. Feature Rust blobs used the prior formatter; the working tree retains the separate user formatting configuration/layout. Formatting normalization and token checks preserve literal/comment contents; rustfmt optional punctuation is normalized on both sides."
+}

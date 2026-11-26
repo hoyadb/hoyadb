@@ -1,0 +1,417 @@
+{
+  "namespace": "hoyadb-spec23-8d8f73da-a2d8-47af-91a8-e8e73e1341cd",
+  "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Paseo/0.12.0 Chrome/152.0.7977.76 Electron/44.2.0 Safari/537.36",
+  "origin": "http://127.0.0.1:8772",
+  "results": [
+    {
+      "name": "R01–R12/R15 shared reactive and projection Rust assertions",
+      "passed": true,
+      "detail": [
+        "R01",
+        "R02",
+        "R03",
+        "R04",
+        "R05",
+        "R06",
+        "R07",
+        "R08",
+        "R09",
+        "R10",
+        "R11 values",
+        "R11 operators",
+        "R11 relations",
+        "R11 validation",
+        "R11 names",
+        "R12",
+        "R15"
+      ]
+    },
+    {
+      "name": "R13 callback read/write, owned values, cancellation after extraction and recursive drain",
+      "passed": true,
+      "detail": {
+        "mainThread": true,
+        "initialRows": 1,
+        "nextDrainRows": 2,
+        "canceledCallbacks": 0
+      }
+    },
+    {
+      "name": "R13 exception isolation and final observer release",
+      "passed": true,
+      "detail": {
+        "callbackErrors": 1,
+        "survivingCallbacks": 1,
+        "groups": 0
+      }
+    },
+    {
+      "name": "R13 count-only throttle, typed post-commit error and explicit recovery",
+      "passed": true,
+      "detail": {
+        "counts": [
+          3,
+          13,
+          "BackendFailure",
+          14
+        ],
+        "countMaterializations": 0,
+        "intervalMs": 16
+      }
+    },
+    {
+      "name": "R13 close from callback suppresses remaining extracted callbacks",
+      "passed": true,
+      "detail": {
+        "closed": 1,
+        "afterClose": 0
+      }
+    },
+    {
+      "name": "R13 replacement generation and concurrent-drain guards",
+      "passed": true,
+      "detail": {
+        "obsoleteCallbacks": 0,
+        "currentCallbacks": 1,
+        "distinctHandles": true
+      }
+    },
+    {
+      "name": "R15 actual browser callback latency samples",
+      "passed": true,
+      "detail": {
+        "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Paseo/0.12.0 Chrome/152.0.7977.76 Electron/44.2.0 Safari/537.36",
+        "origin": "http://127.0.0.1:8772",
+        "scheduling": "one explicit drain immediately after each acknowledged write",
+        "milliseconds": [
+          10.599999904632568,
+          12.200000047683716,
+          9.899999976158142,
+          10,
+          10.5
+        ],
+        "min": 9.899999976158142,
+        "max": 12.200000047683716
+      }
+    },
+    {
+      "name": "Q01 actual worker oversized query/projection and SAH pool inspection",
+      "passed": true,
+      "detail": {
+        "operands": 33002,
+        "rows": [
+          {
+            "id": "needle",
+            "fields": [
+              {
+                "name": "value",
+                "kind": "Integer",
+                "value": "42"
+              }
+            ]
+          }
+        ],
+        "keys": [
+          "needle"
+        ],
+        "queryError": null,
+        "projectError": null,
+        "poolBefore": [
+          "conformance-29.sqlite",
+          "reactive-client.sqlite"
+        ],
+        "poolAfter": [
+          "conformance-29.sqlite",
+          "reactive-client.sqlite"
+        ]
+      }
+    },
+    {
+      "name": "Shared Q01 large observations/navigation/reverse dependencies",
+      "passed": true,
+      "detail": {
+        "milliseconds": 3796.2000000476837,
+        "poolChecks": [
+          {
+            "case": "Q01 large observations/navigation/reverse dependencies",
+            "before": [
+              "reactive-client.sqlite"
+            ],
+            "after": [
+              "reactive-client.sqlite"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Shared Q01 owner TEMP window/intersection",
+      "passed": true,
+      "detail": {
+        "milliseconds": 2343.399999976158,
+        "poolChecks": [
+          {
+            "case": "Q01 owner TEMP window/intersection",
+            "before": [
+              "reactive-client.sqlite"
+            ],
+            "after": [
+              "reactive-client.sqlite"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Shared Q01 oversized all-kind/Null/AND parity",
+      "passed": true,
+      "detail": {
+        "milliseconds": 2597.7999999523163,
+        "poolChecks": [
+          {
+            "case": "Q01 oversized all-kind/Null/AND parity",
+            "before": [
+              "reactive-client.sqlite"
+            ],
+            "after": [
+              "reactive-client.sqlite"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Shared Q02 repeated explicit retry errors",
+      "passed": true,
+      "detail": {
+        "milliseconds": 26.700000047683716,
+        "poolChecks": [
+          {
+            "case": "Q02 repeated explicit retry errors",
+            "before": [
+              "reactive-client.sqlite"
+            ],
+            "after": [
+              "reactive-client.sqlite"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Shared Q03 row/count failure isolation",
+      "passed": true,
+      "detail": {
+        "milliseconds": 23,
+        "poolChecks": [
+          {
+            "case": "Q03 row/count failure isolation",
+            "before": [
+              "reactive-client.sqlite"
+            ],
+            "after": [
+              "reactive-client.sqlite"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "TC-0031 Q01–Q03 shared large-set and failure regressions with SAH inventory",
+      "passed": true,
+      "detail": {
+        "cases": [
+          "Q01 large observations/navigation/reverse dependencies",
+          "Q01 owner TEMP window/intersection",
+          "Q01 oversized all-kind/Null/AND parity",
+          "Q02 repeated explicit retry errors",
+          "Q03 row/count failure isolation"
+        ],
+        "poolChecks": [
+          {
+            "case": "Q01 large observations/navigation/reverse dependencies",
+            "before": [
+              "reactive-client.sqlite"
+            ],
+            "after": [
+              "reactive-client.sqlite"
+            ]
+          },
+          {
+            "case": "Q01 owner TEMP window/intersection",
+            "before": [
+              "reactive-client.sqlite"
+            ],
+            "after": [
+              "reactive-client.sqlite"
+            ]
+          },
+          {
+            "case": "Q01 oversized all-kind/Null/AND parity",
+            "before": [
+              "reactive-client.sqlite"
+            ],
+            "after": [
+              "reactive-client.sqlite"
+            ]
+          },
+          {
+            "case": "Q02 repeated explicit retry errors",
+            "before": [
+              "reactive-client.sqlite"
+            ],
+            "after": [
+              "reactive-client.sqlite"
+            ]
+          },
+          {
+            "case": "Q03 row/count failure isolation",
+            "before": [
+              "reactive-client.sqlite"
+            ],
+            "after": [
+              "reactive-client.sqlite"
+            ]
+          }
+        ],
+        "milliseconds": [
+          3796.2000000476837,
+          2343.399999976158,
+          2597.7999999523163,
+          26.700000047683716,
+          23
+        ]
+      }
+    },
+    {
+      "name": "Q03 committed mixed row/count failure delivery",
+      "passed": true,
+      "detail": {
+        "rowEvents": [
+          {
+            "subscription": "62",
+            "kind": "error",
+            "value": {
+              "kind": "BackendFailure",
+              "message": "fixture full-row read failure"
+            }
+          }
+        ],
+        "columnEvents": [
+          {
+            "subscription": "63",
+            "kind": "error",
+            "value": {
+              "kind": "BackendFailure",
+              "message": "fixture full-row read failure"
+            }
+          }
+        ],
+        "countEvents": [
+          {
+            "subscription": "64",
+            "kind": "count",
+            "value": 0
+          },
+          {
+            "subscription": "64",
+            "kind": "count",
+            "value": 1
+          }
+        ],
+        "committed": {
+          "id": "local:1",
+          "fields": [
+            {
+              "name": "active",
+              "kind": "Boolean",
+              "value": false
+            },
+            {
+              "name": "notes",
+              "kind": "String",
+              "value": "owned\u0000🌿 ' --"
+            },
+            {
+              "name": "placed_at",
+              "kind": "Timestamp",
+              "value": "-9223372036854775808"
+            },
+            {
+              "name": "price",
+              "kind": "Float",
+              "value": 1.7976931348623157e+308
+            },
+            {
+              "name": "status",
+              "kind": "String",
+              "value": "pending"
+            },
+            {
+              "name": "total_cents",
+              "kind": "Integer",
+              "value": "71"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Q02/Q05 projected retry errors remain observable and retain count deadline",
+      "passed": true,
+      "detail": {
+        "counts": [
+          0,
+          1,
+          2,
+          "BackendFailure",
+          "BackendFailure",
+          "BackendFailure",
+          3
+        ],
+        "recoveryDeadline": 48
+      }
+    },
+    {
+      "name": "Q03/Q05 repeated explicit row errors, exact recovery, valid counts and dirty cancellation",
+      "passed": true,
+      "detail": {
+        "rowEventKinds": [
+          "error",
+          "error",
+          "error",
+          "rows",
+          "error"
+        ],
+        "columnEventKinds": [
+          "error",
+          "error",
+          "error",
+          "rows",
+          "error"
+        ],
+        "counts": [
+          0,
+          1,
+          2,
+          {
+            "kind": "BackendFailure",
+            "message": "fixture projected read failure"
+          },
+          {
+            "kind": "BackendFailure",
+            "message": "fixture projected read failure"
+          },
+          {
+            "kind": "BackendFailure",
+            "message": "fixture projected read failure"
+          },
+          3
+        ],
+        "observersAfterCancel": 0
+      }
+    }
+  ],
+  "done": true,
+  "cleaned": true
+}

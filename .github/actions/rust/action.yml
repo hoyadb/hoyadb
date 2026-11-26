@@ -1,0 +1,13 @@
+name: Pinned Rust toolchain
+description: Install the repository toolchain and Linux WASM compiler prerequisites
+runs:
+  using: composite
+  steps:
+    - shell: bash
+      run: |
+        set -euo pipefail
+        sudo apt-get update
+        sudo apt-get install --no-install-recommends -y clang llvm ripgrep pkg-config libssl-dev
+        rustup show active-toolchain
+        rustc -vV
+        cargo --version

@@ -1,0 +1,22 @@
+   Compiling hoyadb-benchmark v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/native)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 5.23s
+     Running unittests src/lib.rs (benchmarks/native/target/debug/deps/hoyadb_benchmark-0e7a7c369aeaba1a)
+
+running 1 test
+test tests::p01_p02_literal_fixture_real_public_operations_and_protection ... FAILED
+
+failures:
+
+---- tests::p01_p02_literal_fixture_real_public_operations_and_protection stdout ----
+
+thread 'tests::p01_p02_literal_fixture_real_public_operations_and_protection' (81989553) panicked at src/lib.rs:128:52:
+called `Result::unwrap()` on an `Err` value: "operation pending"
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    tests::p01_p02_literal_fixture_real_public_operations_and_protection
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 4.39s
+
+error: test failed, to rerun pass `--lib`

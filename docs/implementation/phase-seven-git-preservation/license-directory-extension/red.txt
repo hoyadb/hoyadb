@@ -1,0 +1,305 @@
+test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) ... 
+  test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='input', path='docs/implementation/phase-seven-security-remediation-followup-3/licenses/jdom-2.0.6.1-LICENSE.txt', filter='clean') ... FAIL
+  test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='input', path='docs/implementation/phase-seven-security-remediation-followup-3/licenses/jdom-2.0.6.1-LICENSE.txt', filter='checkout') ... FAIL
+  test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='true', path='docs/implementation/phase-seven-dependencies/licenses/maven/archive-review.json', filter='checkout') ... FAIL
+  test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='true', path='docs/implementation/phase-seven-dependencies/licenses/maven/bouncycastle-1.79-LICENSE.html', filter='checkout') ... FAIL
+  test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='true', path='docs/implementation/phase-seven-dependencies/licenses/maven/javax.inject-1-source-license-header.txt', filter='checkout') ... FAIL
+  test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='true', path='docs/implementation/phase-seven-dependencies/licenses/maven/jdom2-2.0.6-LICENSE.txt', filter='checkout') ... FAIL
+  test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='true', path='docs/implementation/phase-seven-dependencies/licenses/maven/kxml2-2.3.0-source-license-header.txt', filter='checkout') ... FAIL
+  test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='true', path='docs/implementation/phase-seven-dependencies/licenses/upstream/hermes-compiler-LICENSE', filter='checkout') ... FAIL
+  test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='true', path='docs/implementation/phase-seven-dependencies/licenses/upstream/provenance.json', filter='checkout') ... FAIL
+  test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='true', path='docs/implementation/phase-seven-dependencies/licenses/upstream/rn-0.86.3-MIT', filter='checkout') ... FAIL
+  test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='true', path='docs/implementation/phase-seven-dependencies/licenses/upstream/rn-gradle-codegen-MIT', filter='checkout') ... FAIL
+  test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='true', path='docs/implementation/phase-seven-security-remediation-followup-1/licenses/jose4j-0.9.6-source-header.txt', filter='checkout') ... FAIL
+  test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='true', path='docs/implementation/phase-seven-security-remediation-followup-1/licenses/netty-4.1.139.Final-LICENSE.txt', filter='checkout') ... FAIL
+  test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='true', path='docs/implementation/phase-seven-security-remediation-followup-1/licenses/netty-4.1.139.Final-NOTICE.txt', filter='checkout') ... FAIL
+  test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='true', path='docs/implementation/phase-seven-security-remediation-followup-1/licenses/slf4j-1.7.36-LICENSE.txt', filter='checkout') ... FAIL
+  test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='true', path='docs/implementation/phase-seven-security-remediation-followup-3/licenses/intellij-community-233.13135.103-LICENSE.txt', filter='checkout') ... FAIL
+  test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='true', path='docs/implementation/phase-seven-security-remediation-followup-3/licenses/intellij-community-233.13135.103-NOTICE.txt', filter='checkout') ... FAIL
+  test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='true', path='docs/implementation/phase-seven-security-remediation-followup-3/licenses/javax.inject-1-source-license-header.txt', filter='checkout') ... FAIL
+  test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='true', path='docs/implementation/phase-seven-security-remediation-followup-3/licenses/jdom-2.0.6.1-LICENSE.txt', filter='clean') ... FAIL
+  test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='true', path='docs/implementation/phase-seven-security-remediation-followup-3/licenses/jline-3.24.1-LICENSE.txt', filter='checkout') ... FAIL
+  test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='true', path='docs/implementation/phase-seven-security-remediation-followup-3/licenses/log4j-1.2.17-LICENSE', filter='checkout') ... FAIL
+  test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='true', path='docs/implementation/phase-seven-security-remediation-followup-3/licenses/log4j-1.2.17-NOTICE', filter='checkout') ... FAIL
+  test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='true', path='docs/implementation/phase-seven-security-remediation-followup-3/licenses/protobuf-v2.6.1-LICENSE', filter='checkout') ... FAIL
+
+======================================================================
+FAIL: test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='input', path='docs/implementation/phase-seven-security-remediation-followup-3/licenses/jdom-2.0.6.1-LICENSE.txt', filter='clean')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/tests/tooling/git_provenance.py", line 83, in test_g28_upstream_bytes_survive_clean_and_checkout
+    self.assertEqual(hashlib.sha256(actual).hexdigest(), hashlib.sha256(expected).hexdigest())
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '6170097609fee117507eae5056785e812941365382f6cad405175719aa2c79ee' != '9d3878b0a87ad1b2bafb729e8c9085b36b17bd0d30a813030113e13f99cced2c'
+- 6170097609fee117507eae5056785e812941365382f6cad405175719aa2c79ee
++ 9d3878b0a87ad1b2bafb729e8c9085b36b17bd0d30a813030113e13f99cced2c
+
+
+======================================================================
+FAIL: test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='input', path='docs/implementation/phase-seven-security-remediation-followup-3/licenses/jdom-2.0.6.1-LICENSE.txt', filter='checkout')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/tests/tooling/git_provenance.py", line 86, in test_g28_upstream_bytes_survive_clean_and_checkout
+    self.assertEqual(hashlib.sha256(actual).hexdigest(), hashlib.sha256(expected).hexdigest())
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '6170097609fee117507eae5056785e812941365382f6cad405175719aa2c79ee' != '9d3878b0a87ad1b2bafb729e8c9085b36b17bd0d30a813030113e13f99cced2c'
+- 6170097609fee117507eae5056785e812941365382f6cad405175719aa2c79ee
++ 9d3878b0a87ad1b2bafb729e8c9085b36b17bd0d30a813030113e13f99cced2c
+
+
+======================================================================
+FAIL: test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='true', path='docs/implementation/phase-seven-dependencies/licenses/maven/archive-review.json', filter='checkout')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/tests/tooling/git_provenance.py", line 86, in test_g28_upstream_bytes_survive_clean_and_checkout
+    self.assertEqual(hashlib.sha256(actual).hexdigest(), hashlib.sha256(expected).hexdigest())
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'b5e4427c62491e6c318f7e39ee87bd0d91cd6fdf67a18b58957627dab0f62328' != 'c1c038bf3de0c1027e2beca7590f6f98fa5146ea3719c40489e8c49c543f1ffe'
+- b5e4427c62491e6c318f7e39ee87bd0d91cd6fdf67a18b58957627dab0f62328
++ c1c038bf3de0c1027e2beca7590f6f98fa5146ea3719c40489e8c49c543f1ffe
+
+
+======================================================================
+FAIL: test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='true', path='docs/implementation/phase-seven-dependencies/licenses/maven/bouncycastle-1.79-LICENSE.html', filter='checkout')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/tests/tooling/git_provenance.py", line 86, in test_g28_upstream_bytes_survive_clean_and_checkout
+    self.assertEqual(hashlib.sha256(actual).hexdigest(), hashlib.sha256(expected).hexdigest())
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '68ad3fc75e777f49573b8fca3cfe02d1680618d35ab3123ba5d13394a9f38e8d' != '16c5a8672245103fc093c2d22ac6094396bc2e7ff6c2fea4b0bc7ef19c28d563'
+- 68ad3fc75e777f49573b8fca3cfe02d1680618d35ab3123ba5d13394a9f38e8d
++ 16c5a8672245103fc093c2d22ac6094396bc2e7ff6c2fea4b0bc7ef19c28d563
+
+
+======================================================================
+FAIL: test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='true', path='docs/implementation/phase-seven-dependencies/licenses/maven/javax.inject-1-source-license-header.txt', filter='checkout')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/tests/tooling/git_provenance.py", line 86, in test_g28_upstream_bytes_survive_clean_and_checkout
+    self.assertEqual(hashlib.sha256(actual).hexdigest(), hashlib.sha256(expected).hexdigest())
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '13ba4e6d181b74fac244a18ee843f6141e319de3efb52b43167795420b71643a' != '04cefc686b5ea6d0d40d569d2345a3a6f0a5f6baa5c39976f047fbbd7bc5cf9f'
+- 13ba4e6d181b74fac244a18ee843f6141e319de3efb52b43167795420b71643a
++ 04cefc686b5ea6d0d40d569d2345a3a6f0a5f6baa5c39976f047fbbd7bc5cf9f
+
+
+======================================================================
+FAIL: test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='true', path='docs/implementation/phase-seven-dependencies/licenses/maven/jdom2-2.0.6-LICENSE.txt', filter='checkout')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/tests/tooling/git_provenance.py", line 86, in test_g28_upstream_bytes_survive_clean_and_checkout
+    self.assertEqual(hashlib.sha256(actual).hexdigest(), hashlib.sha256(expected).hexdigest())
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '7d6f8e61b765f4e594291273a20b8b759674d506122bd1cce9059381e1801801' != 'a35a44ef839d07fc4c08d0ea10cc846d4a6ad7c1783fbc27549126d7b404d467'
+- 7d6f8e61b765f4e594291273a20b8b759674d506122bd1cce9059381e1801801
++ a35a44ef839d07fc4c08d0ea10cc846d4a6ad7c1783fbc27549126d7b404d467
+
+
+======================================================================
+FAIL: test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='true', path='docs/implementation/phase-seven-dependencies/licenses/maven/kxml2-2.3.0-source-license-header.txt', filter='checkout')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/tests/tooling/git_provenance.py", line 86, in test_g28_upstream_bytes_survive_clean_and_checkout
+    self.assertEqual(hashlib.sha256(actual).hexdigest(), hashlib.sha256(expected).hexdigest())
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '6d50a7972e37d807f6f797ce6d59b510b362471effdbaf14d9f66009c044e2ec' != 'c1f6675e9075f0aac3cdcec8354ccc666001ee179ee9f49fccd313156f2e8aec'
+- 6d50a7972e37d807f6f797ce6d59b510b362471effdbaf14d9f66009c044e2ec
++ c1f6675e9075f0aac3cdcec8354ccc666001ee179ee9f49fccd313156f2e8aec
+
+
+======================================================================
+FAIL: test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='true', path='docs/implementation/phase-seven-dependencies/licenses/upstream/hermes-compiler-LICENSE', filter='checkout')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/tests/tooling/git_provenance.py", line 86, in test_g28_upstream_bytes_survive_clean_and_checkout
+    self.assertEqual(hashlib.sha256(actual).hexdigest(), hashlib.sha256(expected).hexdigest())
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '63e8210e6bf3e8c032dc0c69b1d1d2e3ab72c14b02cabcc0dada2618bb188b97' != 'da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93'
+- 63e8210e6bf3e8c032dc0c69b1d1d2e3ab72c14b02cabcc0dada2618bb188b97
++ da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93
+
+
+======================================================================
+FAIL: test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='true', path='docs/implementation/phase-seven-dependencies/licenses/upstream/provenance.json', filter='checkout')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/tests/tooling/git_provenance.py", line 86, in test_g28_upstream_bytes_survive_clean_and_checkout
+    self.assertEqual(hashlib.sha256(actual).hexdigest(), hashlib.sha256(expected).hexdigest())
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'e8b77195dd5a52f819e6eb9de51df4dc3af16e9b8a06b32a6b9b5915a5cce2d6' != '767218c9ad9fc59c367357186db7ddbf5c9382342308b7441639f54d4c8edbc0'
+- e8b77195dd5a52f819e6eb9de51df4dc3af16e9b8a06b32a6b9b5915a5cce2d6
++ 767218c9ad9fc59c367357186db7ddbf5c9382342308b7441639f54d4c8edbc0
+
+
+======================================================================
+FAIL: test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='true', path='docs/implementation/phase-seven-dependencies/licenses/upstream/rn-0.86.3-MIT', filter='checkout')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/tests/tooling/git_provenance.py", line 86, in test_g28_upstream_bytes_survive_clean_and_checkout
+    self.assertEqual(hashlib.sha256(actual).hexdigest(), hashlib.sha256(expected).hexdigest())
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '63e8210e6bf3e8c032dc0c69b1d1d2e3ab72c14b02cabcc0dada2618bb188b97' != 'da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93'
+- 63e8210e6bf3e8c032dc0c69b1d1d2e3ab72c14b02cabcc0dada2618bb188b97
++ da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93
+
+
+======================================================================
+FAIL: test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='true', path='docs/implementation/phase-seven-dependencies/licenses/upstream/rn-gradle-codegen-MIT', filter='checkout')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/tests/tooling/git_provenance.py", line 86, in test_g28_upstream_bytes_survive_clean_and_checkout
+    self.assertEqual(hashlib.sha256(actual).hexdigest(), hashlib.sha256(expected).hexdigest())
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '63e8210e6bf3e8c032dc0c69b1d1d2e3ab72c14b02cabcc0dada2618bb188b97' != 'da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93'
+- 63e8210e6bf3e8c032dc0c69b1d1d2e3ab72c14b02cabcc0dada2618bb188b97
++ da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93
+
+
+======================================================================
+FAIL: test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='true', path='docs/implementation/phase-seven-security-remediation-followup-1/licenses/jose4j-0.9.6-source-header.txt', filter='checkout')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/tests/tooling/git_provenance.py", line 86, in test_g28_upstream_bytes_survive_clean_and_checkout
+    self.assertEqual(hashlib.sha256(actual).hexdigest(), hashlib.sha256(expected).hexdigest())
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'b5a5dc59067e528eb69c20856422ed8e6ad1f870592bf094ab6018b3cfaa8619' != 'ed4c51f907dce004d78ba9f41bb7e7176d058f3f72b71827bc823ed11ca9902f'
+- b5a5dc59067e528eb69c20856422ed8e6ad1f870592bf094ab6018b3cfaa8619
++ ed4c51f907dce004d78ba9f41bb7e7176d058f3f72b71827bc823ed11ca9902f
+
+
+======================================================================
+FAIL: test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='true', path='docs/implementation/phase-seven-security-remediation-followup-1/licenses/netty-4.1.139.Final-LICENSE.txt', filter='checkout')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/tests/tooling/git_provenance.py", line 86, in test_g28_upstream_bytes_survive_clean_and_checkout
+    self.assertEqual(hashlib.sha256(actual).hexdigest(), hashlib.sha256(expected).hexdigest())
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'e8de1a7393457e9c88768b78e6ba790622fbefb040ce48194c2cb0f1b6d4e9ff' != 'aac73b3148f6d1d7111dbca32099f68d26c644c6813ae1e4f05f6579aa2663fe'
+- e8de1a7393457e9c88768b78e6ba790622fbefb040ce48194c2cb0f1b6d4e9ff
++ aac73b3148f6d1d7111dbca32099f68d26c644c6813ae1e4f05f6579aa2663fe
+
+
+======================================================================
+FAIL: test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='true', path='docs/implementation/phase-seven-security-remediation-followup-1/licenses/netty-4.1.139.Final-NOTICE.txt', filter='checkout')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/tests/tooling/git_provenance.py", line 86, in test_g28_upstream_bytes_survive_clean_and_checkout
+    self.assertEqual(hashlib.sha256(actual).hexdigest(), hashlib.sha256(expected).hexdigest())
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'e86ef3f30c72a405e0dbe3028ccc09af41d722fa47b6eef6b1b0a742fbdafb65' != '64e368e79be71463922ebb102b33088667cf975edeed8df7f68efe9f89835ca1'
+- e86ef3f30c72a405e0dbe3028ccc09af41d722fa47b6eef6b1b0a742fbdafb65
++ 64e368e79be71463922ebb102b33088667cf975edeed8df7f68efe9f89835ca1
+
+
+======================================================================
+FAIL: test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='true', path='docs/implementation/phase-seven-security-remediation-followup-1/licenses/slf4j-1.7.36-LICENSE.txt', filter='checkout')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/tests/tooling/git_provenance.py", line 86, in test_g28_upstream_bytes_survive_clean_and_checkout
+    self.assertEqual(hashlib.sha256(actual).hexdigest(), hashlib.sha256(expected).hexdigest())
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '4e7f90c86ab51278228bce153122f1d8df30149d13ce9ef524c8444a84c32dcc' != '6fbe2eaf44b193b8a40eed9208f52848572224ad8d7672dd09418aa174847e73'
+- 4e7f90c86ab51278228bce153122f1d8df30149d13ce9ef524c8444a84c32dcc
++ 6fbe2eaf44b193b8a40eed9208f52848572224ad8d7672dd09418aa174847e73
+
+
+======================================================================
+FAIL: test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='true', path='docs/implementation/phase-seven-security-remediation-followup-3/licenses/intellij-community-233.13135.103-LICENSE.txt', filter='checkout')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/tests/tooling/git_provenance.py", line 86, in test_g28_upstream_bytes_survive_clean_and_checkout
+    self.assertEqual(hashlib.sha256(actual).hexdigest(), hashlib.sha256(expected).hexdigest())
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'c3136cdccc39a265d2afd9fcad52bc23f4a9b834e233ac99f062f8f3388c680d' != 'f0faea91dbf608882a9811211ec58d6c90fea8211b91218532eecb15b08e8ae2'
+- c3136cdccc39a265d2afd9fcad52bc23f4a9b834e233ac99f062f8f3388c680d
++ f0faea91dbf608882a9811211ec58d6c90fea8211b91218532eecb15b08e8ae2
+
+
+======================================================================
+FAIL: test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='true', path='docs/implementation/phase-seven-security-remediation-followup-3/licenses/intellij-community-233.13135.103-NOTICE.txt', filter='checkout')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/tests/tooling/git_provenance.py", line 86, in test_g28_upstream_bytes_survive_clean_and_checkout
+    self.assertEqual(hashlib.sha256(actual).hexdigest(), hashlib.sha256(expected).hexdigest())
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '4452d94b4679eb232eed3cbfdfd694814bba6eee6ece85537c0f1b30fc7c9103' != '83903abdebe3b3dda1a178fb3f03ac71ef31c4503b79226b66ef27f1aa9d3993'
+- 4452d94b4679eb232eed3cbfdfd694814bba6eee6ece85537c0f1b30fc7c9103
++ 83903abdebe3b3dda1a178fb3f03ac71ef31c4503b79226b66ef27f1aa9d3993
+
+
+======================================================================
+FAIL: test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='true', path='docs/implementation/phase-seven-security-remediation-followup-3/licenses/javax.inject-1-source-license-header.txt', filter='checkout')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/tests/tooling/git_provenance.py", line 86, in test_g28_upstream_bytes_survive_clean_and_checkout
+    self.assertEqual(hashlib.sha256(actual).hexdigest(), hashlib.sha256(expected).hexdigest())
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '13ba4e6d181b74fac244a18ee843f6141e319de3efb52b43167795420b71643a' != '04cefc686b5ea6d0d40d569d2345a3a6f0a5f6baa5c39976f047fbbd7bc5cf9f'
+- 13ba4e6d181b74fac244a18ee843f6141e319de3efb52b43167795420b71643a
++ 04cefc686b5ea6d0d40d569d2345a3a6f0a5f6baa5c39976f047fbbd7bc5cf9f
+
+
+======================================================================
+FAIL: test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='true', path='docs/implementation/phase-seven-security-remediation-followup-3/licenses/jdom-2.0.6.1-LICENSE.txt', filter='clean')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/tests/tooling/git_provenance.py", line 83, in test_g28_upstream_bytes_survive_clean_and_checkout
+    self.assertEqual(hashlib.sha256(actual).hexdigest(), hashlib.sha256(expected).hexdigest())
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '6170097609fee117507eae5056785e812941365382f6cad405175719aa2c79ee' != '9d3878b0a87ad1b2bafb729e8c9085b36b17bd0d30a813030113e13f99cced2c'
+- 6170097609fee117507eae5056785e812941365382f6cad405175719aa2c79ee
++ 9d3878b0a87ad1b2bafb729e8c9085b36b17bd0d30a813030113e13f99cced2c
+
+
+======================================================================
+FAIL: test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='true', path='docs/implementation/phase-seven-security-remediation-followup-3/licenses/jline-3.24.1-LICENSE.txt', filter='checkout')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/tests/tooling/git_provenance.py", line 86, in test_g28_upstream_bytes_survive_clean_and_checkout
+    self.assertEqual(hashlib.sha256(actual).hexdigest(), hashlib.sha256(expected).hexdigest())
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '19a6981fd9a0b93fe8af5a6db78c69c0494108a8954a972e58e33f15fa56db9f' != '7d9ca7d4eb3a2534869e7823b81b299321d49ceb3d169d11b995513fabd9fc7e'
+- 19a6981fd9a0b93fe8af5a6db78c69c0494108a8954a972e58e33f15fa56db9f
++ 7d9ca7d4eb3a2534869e7823b81b299321d49ceb3d169d11b995513fabd9fc7e
+
+
+======================================================================
+FAIL: test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='true', path='docs/implementation/phase-seven-security-remediation-followup-3/licenses/log4j-1.2.17-LICENSE', filter='checkout')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/tests/tooling/git_provenance.py", line 86, in test_g28_upstream_bytes_survive_clean_and_checkout
+    self.assertEqual(hashlib.sha256(actual).hexdigest(), hashlib.sha256(expected).hexdigest())
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '1e257be27232da482b596fcb37c3ef4185e3c40ccb7c33ff07b37976590bc67a' != 'e118ad8e5f2d3c71f0e7d6202d5829e7580ccd9e3609a546c692788e657afbe2'
+- 1e257be27232da482b596fcb37c3ef4185e3c40ccb7c33ff07b37976590bc67a
++ e118ad8e5f2d3c71f0e7d6202d5829e7580ccd9e3609a546c692788e657afbe2
+
+
+======================================================================
+FAIL: test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='true', path='docs/implementation/phase-seven-security-remediation-followup-3/licenses/log4j-1.2.17-NOTICE', filter='checkout')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/tests/tooling/git_provenance.py", line 86, in test_g28_upstream_bytes_survive_clean_and_checkout
+    self.assertEqual(hashlib.sha256(actual).hexdigest(), hashlib.sha256(expected).hexdigest())
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'f46b510ba2309df40aa8a426d37ebba196d68752ab3a54e8b6c1f76923bece38' != '0bb1786271220fb5cb7c12acede871f85eb8c43ea7ba9621bd0d628f5156ecee'
+- f46b510ba2309df40aa8a426d37ebba196d68752ab3a54e8b6c1f76923bece38
++ 0bb1786271220fb5cb7c12acede871f85eb8c43ea7ba9621bd0d628f5156ecee
+
+
+======================================================================
+FAIL: test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='true', path='docs/implementation/phase-seven-security-remediation-followup-3/licenses/protobuf-v2.6.1-LICENSE', filter='checkout')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/tests/tooling/git_provenance.py", line 86, in test_g28_upstream_bytes_survive_clean_and_checkout
+    self.assertEqual(hashlib.sha256(actual).hexdigest(), hashlib.sha256(expected).hexdigest())
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '71f5daf531747ece3648600f085e0c062b04a29716e5382d4bcae9ff699a3d79' != '31c7505c31a1ea8557a5362cd69946dc9f5ee80fac8fa1d1b1531c08530497b0'
+- 71f5daf531747ece3648600f085e0c062b04a29716e5382d4bcae9ff699a3d79
++ 31c7505c31a1ea8557a5362cd69946dc9f5ee80fac8fa1d1b1531c08530497b0
+
+
+----------------------------------------------------------------------
+Ran 1 test in 26.996s
+
+FAILED (failures=23)

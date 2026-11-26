@@ -1,0 +1,18 @@
+{
+  "command": [
+    "cargo",
+    "build",
+    "-p",
+    "hoyadb-core",
+    "-p",
+    "hoyadb-storage-memory",
+    "--target",
+    "wasm32-unknown-unknown",
+    "--offline",
+    "--locked"
+  ],
+  "exit_code": 0,
+  "started_unix_ns": 1792878036320963000,
+  "finished_unix_ns": 1792878036667665000,
+  "log_sha256": "f591e097f22f91dd5c31fbbf7e587d80c0a4e0ed594f9c9012a544f38c52d926"
+}

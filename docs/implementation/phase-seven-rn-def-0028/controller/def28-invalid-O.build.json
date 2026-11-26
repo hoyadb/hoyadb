@@ -1,0 +1,13 @@
+{
+  "label": "def28-invalid-O",
+  "mode": "included-graph",
+  "consumer": "/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-phase7-rn-consumer-v8cue5dl",
+  "profile": "(version 1)(allow default)(deny network-outbound)(allow network-outbound (remote ip \"localhost:*\"))",
+  "jdk": "/Users/boristacyniak/.sdkman/candidates/java/17.0.1-tem",
+  "gradle": "/Users/boristacyniak/.gradle/wrapper/dists/gradle-9.3.1-bin/23ovyewtku6u96viwx3xl3oks/gradle-9.3.1/bin/gradle",
+  "sdk": "/Users/boristacyniak/Library/Android/sdk",
+  "steps": [],
+  "repository_verification": {
+    "rejected": "missing-file: missing repository files: ['androidx/activity/activity/1.5.1/activity-1.5.1.module', 'androidx/activity/activity/1.5.1/activity-1.5.1.pom', 'androidx/activity/activity/1.7.0/activity-1.7.0.module', 'androidx/activity/activity/1.7.0/activity-1.7.0.pom', 'androidx/annotation/annotation-experimental/1.0.0/annotation-experimental-1.0.0.pom']"
+  }
+}

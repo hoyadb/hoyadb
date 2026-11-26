@@ -1,0 +1,3387 @@
+{
+  "recorded_utc": "2026-10-24T08:06:22.593153+00:00",
+  "status": "PASS",
+  "profile": "release",
+  "source_manifest": "phase-five-browser-source-sha256.json",
+  "legacy_results": "phase-five-browser-legacy-results.json",
+  "phase_five": {
+    "namespace": "hoyadb-spec23-236bdbcb-ba2d-4a2f-93c8-df89957efdfb",
+    "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Paseo/0.12.0 Chrome/152.0.7977.76 Electron/44.2.0 Safari/537.36",
+    "origin": "http://127.0.0.1:8775",
+    "results": [
+      {
+        "name": "E shared 0 automatic_entities",
+        "passed": true,
+        "detail": {
+          "case": "automatic_entities",
+          "files_before": [],
+          "files_after": [],
+          "elapsed_ms": 1818
+        }
+      },
+      {
+        "name": "E shared 1 admission_and_inverse",
+        "passed": true,
+        "detail": {
+          "case": "admission_and_inverse",
+          "files_before": [],
+          "files_after": [],
+          "elapsed_ms": 180
+        }
+      },
+      {
+        "name": "E shared 2 two_client_resolution",
+        "passed": true,
+        "detail": {
+          "case": "two_client_resolution",
+          "files_before": [],
+          "files_after": [],
+          "elapsed_ms": 711
+        }
+      },
+      {
+        "name": "E shared 3 pull_atomicity_bootstrap_and_reset",
+        "passed": true,
+        "detail": {
+          "case": "pull_atomicity_bootstrap_and_reset",
+          "files_before": [],
+          "files_after": [],
+          "elapsed_ms": 573
+        }
+      },
+      {
+        "name": "E shared 4 reset_inventory",
+        "passed": true,
+        "detail": {
+          "case": "reset_inventory",
+          "files_before": [],
+          "files_after": [],
+          "elapsed_ms": 80
+        }
+      },
+      {
+        "name": "E shared 5 lifecycle_comparison_guard",
+        "passed": true,
+        "detail": {
+          "case": "lifecycle_comparison_guard",
+          "files_before": [],
+          "files_after": [],
+          "elapsed_ms": 46
+        }
+      },
+      {
+        "name": "E shared 6 pull_recovery_protection",
+        "passed": true,
+        "detail": {
+          "case": "pull_recovery_protection",
+          "files_before": [],
+          "files_after": [],
+          "elapsed_ms": 542
+        }
+      },
+      {
+        "name": "E shared 7 progress_transition_guard",
+        "passed": true,
+        "detail": {
+          "case": "progress_transition_guard",
+          "files_before": [],
+          "files_after": [],
+          "elapsed_ms": 36
+        }
+      },
+      {
+        "name": "E shared 8 reset_modes_and_coordinator_guard",
+        "passed": true,
+        "detail": {
+          "case": "reset_modes_and_coordinator_guard",
+          "files_before": [],
+          "files_after": [],
+          "elapsed_ms": 68
+        }
+      },
+      {
+        "name": "E shared 9 managed_links_and_mapped_rows",
+        "passed": true,
+        "detail": {
+          "case": "managed_links_and_mapped_rows",
+          "files_before": [],
+          "files_after": [],
+          "elapsed_ms": 536
+        }
+      },
+      {
+        "name": "E shared 10 reconfiguration_guards",
+        "passed": true,
+        "detail": {
+          "case": "reconfiguration_guards",
+          "files_before": [],
+          "files_after": [],
+          "elapsed_ms": 61
+        }
+      },
+      {
+        "name": "E shared 11 typed_correction_clocks",
+        "passed": true,
+        "detail": {
+          "case": "typed_correction_clocks",
+          "files_before": [],
+          "files_after": [],
+          "elapsed_ms": 133
+        }
+      },
+      {
+        "name": "E shared 12 reconfigure_inventory",
+        "passed": true,
+        "detail": {
+          "case": "reconfigure_inventory",
+          "files_before": [],
+          "files_after": [],
+          "elapsed_ms": 70
+        }
+      },
+      {
+        "name": "E01\u2013E06 actual entity mutations, mixed HTTP retries and mapping",
+        "passed": true,
+        "detail": {
+          "envelopes": 3,
+          "httpArrays": 3,
+          "exactRetry": true,
+          "stableId": true
+        }
+      },
+      {
+        "name": "E11\u2013E13 actual paginated pull exposes partial data and sticky readiness",
+        "passed": true,
+        "detail": {
+          "pages": "2",
+          "rows": 2
+        }
+      },
+      {
+        "name": "E14 actual suspended handler retains a Busy page without repeating HTTP",
+        "passed": true,
+        "detail": {
+          "networkCalls": 1,
+          "abortedStagingAbsent": true
+        }
+      },
+      {
+        "name": "E14 a suspended old revision is retired and a fresh HTTP request succeeds",
+        "passed": true,
+        "detail": {
+          "staleRejected": true,
+          "refetched": true
+        }
+      },
+      {
+        "name": "E16\u2013E18 reset preserves by default, discards explicitly and suppresses late callbacks",
+        "passed": true,
+        "detail": {
+          "empty": true,
+          "oldReplyInert": true
+        }
+      },
+      {
+        "name": "E06 actual typed correction retains backend clocks below optimistic time",
+        "passed": true,
+        "detail": {
+          "selectedClock": "25",
+          "laterClock": "30"
+        }
+      },
+      {
+        "name": "E18/E19 actual close/reopen isolates suspended HTTP and preserves the original file",
+        "passed": true,
+        "detail": {
+          "newPumpResolved": true,
+          "oldRecoveryUnchanged": true
+        }
+      },
+      {
+        "name": "E20 actual multi-chunk UTF-8 page and total reset",
+        "passed": true,
+        "detail": {
+          "valueBytes": 300000
+        }
+      },
+      {
+        "name": "E13 first bootstrap page before actual reload",
+        "passed": true,
+        "detail": {
+          "checkpointCommitted": true,
+          "ready": false
+        }
+      },
+      {
+        "name": "E13 reload resumes exact checkpoint and persists an offline diff",
+        "passed": true,
+        "detail": {
+          "pages": "2",
+          "ready": true
+        }
+      },
+      {
+        "name": "E04/E17 second reload retains entity recovery and explicit discard resets it",
+        "passed": true,
+        "detail": {
+          "reloads": 2,
+          "recoverySurvived": true
+        }
+      }
+    ],
+    "done": true,
+    "rpc_timings": [
+      {
+        "operation": "init",
+        "elapsed_ms": 338
+      },
+      {
+        "operation": "entity_conformance",
+        "elapsed_ms": 1818
+      },
+      {
+        "operation": "entity_conformance",
+        "elapsed_ms": 180
+      },
+      {
+        "operation": "entity_conformance",
+        "elapsed_ms": 711
+      },
+      {
+        "operation": "entity_conformance",
+        "elapsed_ms": 573
+      },
+      {
+        "operation": "entity_conformance",
+        "elapsed_ms": 80
+      },
+      {
+        "operation": "entity_conformance",
+        "elapsed_ms": 46
+      },
+      {
+        "operation": "entity_conformance",
+        "elapsed_ms": 542
+      },
+      {
+        "operation": "entity_conformance",
+        "elapsed_ms": 36
+      },
+      {
+        "operation": "entity_conformance",
+        "elapsed_ms": 68
+      },
+      {
+        "operation": "entity_conformance",
+        "elapsed_ms": 536
+      },
+      {
+        "operation": "entity_conformance",
+        "elapsed_ms": 61
+      },
+      {
+        "operation": "entity_conformance",
+        "elapsed_ms": 133
+      },
+      {
+        "operation": "entity_conformance",
+        "elapsed_ms": 70
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 19
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 8
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 2
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 52
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 14
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 2
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 12
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 13
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 8
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 13
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 9
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 25
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 23
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 94
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 89
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 15
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 10
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 13
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 7
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 13
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 9
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 140
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 135
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 4
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 16
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 14
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 13
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 15
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 124
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 15
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 6
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 13
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 22
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 8
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 9
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 11
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 10
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 10
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 10
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 16
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 8
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 10
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 10
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 15
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 6
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 9
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 10
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 11
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 5
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 137
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 132
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 8
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 17
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 7
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 6
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 2
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 30
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 14
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 189
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 8
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 17
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 7
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 9
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "init",
+        "elapsed_ms": 144
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 58
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 3
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 39
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 126
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 33
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 9
+      },
+      {
+        "operation": "init",
+        "elapsed_ms": 153
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 68
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 3
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 4
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 32
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc",
+        "elapsed_ms": 9
+      },
+      {
+        "operation": "shutdown",
+        "elapsed_ms": 19
+      }
+    ],
+    "capabilities": {
+      "secure": true,
+      "dedicatedWorker": true,
+      "wasm": true,
+      "bigint": true,
+      "opfs": true,
+      "syncAccessHandle": true,
+      "crossOriginIsolated": false
+    },
+    "restart": {
+      "step": 3,
+      "id": "entity:427456f89da3e0596085ac118bac9433:0000000000000001"
+    },
+    "cleaned": true
+  },
+  "phase_four_same_artifact": {
+    "namespace": "hoyadb-spec23-b17b9f5f-4118-4584-a8cf-d35ecc881edc",
+    "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Paseo/0.12.0 Chrome/152.0.7977.76 Electron/44.2.0 Safari/537.36",
+    "origin": "http://127.0.0.1:8775",
+    "results": [
+      {
+        "name": "C20 shared 0 atomic_initialization_and_order",
+        "passed": true,
+        "detail": {
+          "case": "atomic_initialization_and_order",
+          "files_before": [],
+          "files_after": [],
+          "elapsed_ms": 62
+        }
+      },
+      {
+        "name": "C20 shared 1 ordinary_failure_preserves_absence_data_and_counter",
+        "passed": true,
+        "detail": {
+          "case": "ordinary_failure_preserves_absence_data_and_counter",
+          "files_before": [],
+          "files_after": [],
+          "elapsed_ms": 15
+        }
+      },
+      {
+        "name": "C20 shared 2 complete_cas_and_initial_guards",
+        "passed": true,
+        "detail": {
+          "case": "complete_cas_and_initial_guards",
+          "files_before": [],
+          "files_after": [],
+          "elapsed_ms": 48
+        }
+      },
+      {
+        "name": "C20 shared 3 reserved_corrupt_and_future_packets_reject",
+        "passed": true,
+        "detail": {
+          "case": "reserved_corrupt_and_future_packets_reject",
+          "files_before": [],
+          "files_after": [],
+          "elapsed_ms": 16
+        }
+      },
+      {
+        "name": "C20 shared 4 live_lifecycle_guard_and_resolved_history",
+        "passed": true,
+        "detail": {
+          "case": "live_lifecycle_guard_and_resolved_history",
+          "files_before": [],
+          "files_after": [],
+          "elapsed_ms": 31
+        }
+      },
+      {
+        "name": "C20 shared 5 identity_and_frozen_transition_guards",
+        "passed": true,
+        "detail": {
+          "case": "identity_and_frozen_transition_guards",
+          "files_before": [],
+          "files_after": [],
+          "elapsed_ms": 27
+        }
+      },
+      {
+        "name": "C20 shared 6 live_undo_uses_public_rows_and_checked_model_types",
+        "passed": true,
+        "detail": {
+          "case": "live_undo_uses_public_rows_and_checked_model_types",
+          "files_before": [],
+          "files_after": [],
+          "elapsed_ms": 16
+        }
+      },
+      {
+        "name": "C20 shared 7 live_created_ownership_requires_current_model_tables",
+        "passed": true,
+        "detail": {
+          "case": "live_created_ownership_requires_current_model_tables",
+          "files_before": [],
+          "files_after": [],
+          "elapsed_ms": 16
+        }
+      },
+      {
+        "name": "C20 shared 8 owner_contract",
+        "passed": true,
+        "detail": {
+          "case": "owner_contract",
+          "files_before": [],
+          "files_after": [],
+          "elapsed_ms": 134
+        }
+      },
+      {
+        "name": "C20 shared 9 dispatch",
+        "passed": true,
+        "detail": {
+          "case": "dispatch",
+          "files_before": [],
+          "files_after": [],
+          "elapsed_ms": 45
+        }
+      },
+      {
+        "name": "C20 shared 10 correction_inverse",
+        "passed": true,
+        "detail": {
+          "case": "correction_inverse",
+          "files_before": [],
+          "files_after": [],
+          "elapsed_ms": 99
+        }
+      },
+      {
+        "name": "C20 shared 11 graph",
+        "passed": true,
+        "detail": {
+          "case": "graph",
+          "files_before": [],
+          "files_after": [],
+          "elapsed_ms": 68
+        }
+      },
+      {
+        "name": "C20 shared 12 zero_history",
+        "passed": true,
+        "detail": {
+          "case": "zero_history",
+          "files_before": [],
+          "files_after": [],
+          "elapsed_ms": 40
+        }
+      },
+      {
+        "name": "C20 shared 13 capacity_boundary",
+        "passed": true,
+        "detail": {
+          "case": "capacity_boundary",
+          "files_before": [],
+          "files_after": [],
+          "elapsed_ms": 39662
+        }
+      },
+      {
+        "name": "H01 actual awaited scopes, committed visibility, context copy and app-wide two-owner FIFO",
+        "passed": true,
+        "detail": {
+          "order": [
+            "a",
+            "a2",
+            "b"
+          ],
+          "clockSamples": 2,
+          "committedInteger": "-9223372036854775808",
+          "atomicRelatedItems": 2
+        }
+      },
+      {
+        "name": "H02 thrown/queued/active cancellation, stale scope and delayed committed finish",
+        "passed": true,
+        "detail": {
+          "committedRows": 3,
+          "queuedHandlerCalls": 0,
+          "lateCompletionRejected": true
+        }
+      },
+      {
+        "name": "H04 main-thread callbacks, recursive-drain rejection, exception isolation and close after extraction",
+        "passed": true,
+        "detail": {
+          "survivingCallbacks": 1,
+          "callbackErrors": 1,
+          "cancelledDelivery": 0,
+          "closedActiveStagingLost": true,
+          "closedFromCallback": true
+        }
+      },
+      {
+        "name": "H06 configured capacity rejects before handler",
+        "passed": true,
+        "detail": {
+          "capacity": 1,
+          "rejectedHandlerCalls": 0
+        }
+      },
+      {
+        "name": "H03/H06 exact i64, raw canonical arrays, actual fetch, reversed-key outcomes and timer retry",
+        "passed": true,
+        "detail": {
+          "calls": 2,
+          "retryDelay_ms": 21,
+          "keys": 2,
+          "received": 2,
+          "statusCallbacks": 6,
+          "outcomeCallbacks": 8,
+          "precisionSafe": true
+        }
+      },
+      {
+        "name": "H06 actual HTTP single/partial/equal-duplicate/conflicting/mixed keyed outcomes",
+        "passed": true,
+        "detail": {
+          "single": 1,
+          "partial": 1,
+          "duplicate": 6,
+          "conflictAccepted": 3,
+          "conflictRejected": 1,
+          "mixed": 3,
+          "acknowledgedResends": 0
+        }
+      },
+      {
+        "name": "H06 real HTTP response and async mapper survive overlapping scopes",
+        "passed": true,
+        "detail": {
+          "networkRequests": 1,
+          "mapperCalls": 1,
+          "receiptAndPlanDeferred": true
+        }
+      },
+      {
+        "name": "H04/H06 bounded event prefixes, callback-write snapshot boundary and multiple actual HTTP arrays",
+        "passed": true,
+        "detail": {
+          "firstDrain": 3,
+          "nextDrain": 3,
+          "cancelledAfterExtraction": 1,
+          "postBytes": [
+            840873,
+            280217
+          ],
+          "mappedCommands": 5
+        }
+      },
+      {
+        "name": "large-message host scenario wall time",
+        "passed": true,
+        "detail": {
+          "elapsed_ms": 9011,
+          "watchdog_ms": 900000,
+          "rpc_deadline_ms": 60000,
+          "http_deadline_ms": 5000
+        }
+      },
+      {
+        "name": "H05 writer committed+frozen, second handler staged before actual reload",
+        "passed": true,
+        "detail": {
+          "committed": 1,
+          "stagedUncommitted": 1
+        }
+      },
+      {
+        "name": "H05 first reload restores exact frozen bytes, due time, rows and migration guard",
+        "passed": true,
+        "detail": {
+          "frozenEqual": true,
+          "stagedLost": true,
+          "ackOnly": true
+        }
+      },
+      {
+        "name": "H05 second reload preserves receipt-only state and stores authoritative outcome",
+        "passed": true,
+        "detail": {
+          "resends": 0,
+          "pendingReconciliation": 1
+        }
+      },
+      {
+        "name": "H05 third reload recovers exact outcome, reconciles ID and permits authored v2 upgrade",
+        "passed": true,
+        "detail": {
+          "reloads": 3,
+          "outcomeExact": true,
+          "serverId": "server-restart",
+          "schemaVersion": 2
+        }
+      }
+    ],
+    "done": true,
+    "rpc_timings": [
+      {
+        "operation": "init",
+        "elapsed_ms": 86
+      },
+      {
+        "operation": "command_conformance",
+        "elapsed_ms": 62
+      },
+      {
+        "operation": "command_conformance",
+        "elapsed_ms": 15
+      },
+      {
+        "operation": "command_conformance",
+        "elapsed_ms": 48
+      },
+      {
+        "operation": "command_conformance",
+        "elapsed_ms": 16
+      },
+      {
+        "operation": "command_conformance",
+        "elapsed_ms": 31
+      },
+      {
+        "operation": "command_conformance",
+        "elapsed_ms": 27
+      },
+      {
+        "operation": "command_conformance",
+        "elapsed_ms": 16
+      },
+      {
+        "operation": "command_conformance",
+        "elapsed_ms": 16
+      },
+      {
+        "operation": "command_conformance",
+        "elapsed_ms": 134
+      },
+      {
+        "operation": "command_conformance",
+        "elapsed_ms": 45
+      },
+      {
+        "operation": "command_conformance",
+        "elapsed_ms": 99
+      },
+      {
+        "operation": "command_conformance",
+        "elapsed_ms": 68
+      },
+      {
+        "operation": "command_conformance",
+        "elapsed_ms": 40
+      },
+      {
+        "operation": "command_conformance",
+        "elapsed_ms": 39662
+      },
+      {
+        "operation": "command_rpc/open",
+        "elapsed_ms": 14
+      },
+      {
+        "operation": "command_rpc/open",
+        "elapsed_ms": 10
+      },
+      {
+        "operation": "command_rpc/request",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc/begin",
+        "elapsed_ms": 2
+      },
+      {
+        "operation": "command_rpc/scope_args",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_context",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_insert",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc/fetch",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc/fetch",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/direct_batch",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc/scope_insert",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_insert",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_fetch",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc/finish",
+        "elapsed_ms": 5
+      },
+      {
+        "operation": "command_rpc/drain",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/request",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/begin",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc/scope_args",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_context",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_fetch",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_fetch",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_insert",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/finish",
+        "elapsed_ms": 5
+      },
+      {
+        "operation": "command_rpc/drain",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/request",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/begin",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_args",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_context",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/finish",
+        "elapsed_ms": 4
+      },
+      {
+        "operation": "command_rpc/drain",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/fetch",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc/fetch",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/prepare_push",
+        "elapsed_ms": 6
+      },
+      {
+        "operation": "command_rpc/request",
+        "elapsed_ms": 3
+      },
+      {
+        "operation": "command_rpc/begin",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc/scope_args",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_context",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_insert",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/abort",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/fetch",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc/request",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/begin",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc/scope_args",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_context",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_insert",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/abort",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/fetch",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc/request",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/begin",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc/scope_args",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_context",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_insert",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/finish",
+        "elapsed_ms": 6
+      },
+      {
+        "operation": "command_rpc/fetch",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc/drain",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/observe_data",
+        "elapsed_ms": 3
+      },
+      {
+        "operation": "command_rpc/observe_data",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc/observe_data",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc/observe_data",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/drain",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc/fetch",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc/unsubscribe",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc/fetch",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc/unsubscribe",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/unsubscribe",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/unsubscribe",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/observe_data",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc/drain",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/close",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/open",
+        "elapsed_ms": 8
+      },
+      {
+        "operation": "command_rpc/request",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/begin",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_args",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_context",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_insert",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/close",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/abort",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/open",
+        "elapsed_ms": 2
+      },
+      {
+        "operation": "command_rpc/fetch",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/observe_data",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/drain",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/close",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/close",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/open",
+        "elapsed_ms": 8
+      },
+      {
+        "operation": "command_rpc/request",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/begin",
+        "elapsed_ms": 7
+      },
+      {
+        "operation": "command_rpc/cancel_request",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/request",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/begin",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/cancel_request",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/fetch",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/request",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/begin",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_args",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_context",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/finish",
+        "elapsed_ms": 4
+      },
+      {
+        "operation": "command_rpc/drain",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/request",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/begin",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/cancel_request",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/close",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/open",
+        "elapsed_ms": 7
+      },
+      {
+        "operation": "command_rpc/request",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/begin",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_args",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_context",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/finish",
+        "elapsed_ms": 4
+      },
+      {
+        "operation": "command_rpc/drain",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/request",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/begin",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_args",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_context",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/finish",
+        "elapsed_ms": 5
+      },
+      {
+        "operation": "command_rpc/drain",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/observe_status",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/observe_outcome",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/observe_outcome",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/queue_status",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/prepare_push",
+        "elapsed_ms": 5
+      },
+      {
+        "operation": "command_rpc/queue_status",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/queue_status",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/queue_status",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/prepare_push",
+        "elapsed_ms": 5
+      },
+      {
+        "operation": "command_rpc/queue_status",
+        "elapsed_ms": 2
+      },
+      {
+        "operation": "command_rpc/receive_wire",
+        "elapsed_ms": 11
+      },
+      {
+        "operation": "command_rpc/queue_status",
+        "elapsed_ms": 7
+      },
+      {
+        "operation": "command_rpc/pending_reconciliations",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/reconcile",
+        "elapsed_ms": 6
+      },
+      {
+        "operation": "command_rpc/queue_status",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc/reconcile",
+        "elapsed_ms": 5
+      },
+      {
+        "operation": "command_rpc/drain",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc/queue_status",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc/drain",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/request",
+        "elapsed_ms": 4
+      },
+      {
+        "operation": "command_rpc/begin",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc/scope_args",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_context",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/finish",
+        "elapsed_ms": 5
+      },
+      {
+        "operation": "command_rpc/drain",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/prepare_push",
+        "elapsed_ms": 5
+      },
+      {
+        "operation": "command_rpc/receive_wire",
+        "elapsed_ms": 5
+      },
+      {
+        "operation": "command_rpc/pending_reconciliations",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/reconcile",
+        "elapsed_ms": 5
+      },
+      {
+        "operation": "command_rpc/queue_status",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/request",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/begin",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_args",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_context",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/finish",
+        "elapsed_ms": 5
+      },
+      {
+        "operation": "command_rpc/drain",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/request",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/begin",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_args",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_context",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/finish",
+        "elapsed_ms": 5
+      },
+      {
+        "operation": "command_rpc/drain",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/request",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/begin",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_args",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_context",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/finish",
+        "elapsed_ms": 6
+      },
+      {
+        "operation": "command_rpc/drain",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/prepare_push",
+        "elapsed_ms": 6
+      },
+      {
+        "operation": "command_rpc/receive_wire",
+        "elapsed_ms": 6
+      },
+      {
+        "operation": "command_rpc/pending_reconciliations",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/receive_wire",
+        "elapsed_ms": 13
+      },
+      {
+        "operation": "command_rpc/pending_reconciliations",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/reconcile",
+        "elapsed_ms": 7
+      },
+      {
+        "operation": "command_rpc/reconcile",
+        "elapsed_ms": 7
+      },
+      {
+        "operation": "command_rpc/reconcile",
+        "elapsed_ms": 7
+      },
+      {
+        "operation": "command_rpc/queue_status",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/request",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/begin",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_args",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_context",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/finish",
+        "elapsed_ms": 7
+      },
+      {
+        "operation": "command_rpc/drain",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc/request",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/begin",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_args",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_context",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/finish",
+        "elapsed_ms": 7
+      },
+      {
+        "operation": "command_rpc/drain",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/request",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/begin",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_args",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_context",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/finish",
+        "elapsed_ms": 7
+      },
+      {
+        "operation": "command_rpc/drain",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/prepare_push",
+        "elapsed_ms": 8
+      },
+      {
+        "operation": "command_rpc/receive_wire",
+        "elapsed_ms": 24
+      },
+      {
+        "operation": "command_rpc/pending_reconciliations",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/pending_reconciliations",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/reconcile",
+        "elapsed_ms": 9
+      },
+      {
+        "operation": "command_rpc/reconcile",
+        "elapsed_ms": 8
+      },
+      {
+        "operation": "command_rpc/reconcile",
+        "elapsed_ms": 8
+      },
+      {
+        "operation": "command_rpc/queue_status",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/request",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/begin",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_args",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_context",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/finish",
+        "elapsed_ms": 8
+      },
+      {
+        "operation": "command_rpc/drain",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc/request",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/begin",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_args",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_context",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/finish",
+        "elapsed_ms": 8
+      },
+      {
+        "operation": "command_rpc/drain",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/request",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/begin",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_args",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_context",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/finish",
+        "elapsed_ms": 8
+      },
+      {
+        "operation": "command_rpc/drain",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/prepare_push",
+        "elapsed_ms": 9
+      },
+      {
+        "operation": "command_rpc/receive_wire",
+        "elapsed_ms": 27
+      },
+      {
+        "operation": "command_rpc/pending_reconciliations",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/pending_reconciliations",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/reconcile",
+        "elapsed_ms": 9
+      },
+      {
+        "operation": "command_rpc/reconcile",
+        "elapsed_ms": 10
+      },
+      {
+        "operation": "command_rpc/reconcile",
+        "elapsed_ms": 9
+      },
+      {
+        "operation": "command_rpc/rollback",
+        "elapsed_ms": 10
+      },
+      {
+        "operation": "command_rpc/queue_status",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/prepare_push",
+        "elapsed_ms": 10
+      },
+      {
+        "operation": "command_rpc/open",
+        "elapsed_ms": 8
+      },
+      {
+        "operation": "command_rpc/request",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/begin",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_args",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_context",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/finish",
+        "elapsed_ms": 4
+      },
+      {
+        "operation": "command_rpc/drain",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/prepare_push",
+        "elapsed_ms": 4
+      },
+      {
+        "operation": "command_rpc/request",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/begin",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_args",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_context",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/receive_wire",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/pending_reconciliations",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/abort",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/receive_wire",
+        "elapsed_ms": 4
+      },
+      {
+        "operation": "command_rpc/pending_reconciliations",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/request",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/begin",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_args",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_context",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/reconcile",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/pending_reconciliations",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/abort",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/queue_status",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/reconcile",
+        "elapsed_ms": 5
+      },
+      {
+        "operation": "command_rpc/drain",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/prepare_push",
+        "elapsed_ms": 4
+      },
+      {
+        "operation": "command_rpc/queue_status",
+        "elapsed_ms": 3
+      },
+      {
+        "operation": "command_rpc/pending_reconciliations",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/drain",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/close",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/open",
+        "elapsed_ms": 8
+      },
+      {
+        "operation": "command_rpc/request",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/begin",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/cancel_request",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/close",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/close",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/open",
+        "elapsed_ms": 8
+      },
+      {
+        "operation": "command_rpc/request",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/begin",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_args",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_context",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_insert",
+        "elapsed_ms": 14
+      },
+      {
+        "operation": "command_rpc/finish",
+        "elapsed_ms": 34
+      },
+      {
+        "operation": "command_rpc/drain",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/observe_data",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc/observe_data",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/observe_data",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/observe_data",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/drain",
+        "elapsed_ms": 54
+      },
+      {
+        "operation": "command_rpc/unsubscribe",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/direct_batch",
+        "elapsed_ms": 5
+      },
+      {
+        "operation": "command_rpc/drain",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/drain",
+        "elapsed_ms": 42
+      },
+      {
+        "operation": "command_rpc/unsubscribe",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc/unsubscribe",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc/unsubscribe",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/request",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/begin",
+        "elapsed_ms": 14
+      },
+      {
+        "operation": "command_rpc/scope_args",
+        "elapsed_ms": 3
+      },
+      {
+        "operation": "command_rpc/scope_context",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/finish",
+        "elapsed_ms": 85
+      },
+      {
+        "operation": "command_rpc/drain",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/request",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/begin",
+        "elapsed_ms": 14
+      },
+      {
+        "operation": "command_rpc/scope_args",
+        "elapsed_ms": 3
+      },
+      {
+        "operation": "command_rpc/scope_context",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/finish",
+        "elapsed_ms": 130
+      },
+      {
+        "operation": "command_rpc/drain",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/request",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/begin",
+        "elapsed_ms": 14
+      },
+      {
+        "operation": "command_rpc/scope_args",
+        "elapsed_ms": 4
+      },
+      {
+        "operation": "command_rpc/scope_context",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/finish",
+        "elapsed_ms": 177
+      },
+      {
+        "operation": "command_rpc/drain",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/request",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/begin",
+        "elapsed_ms": 14
+      },
+      {
+        "operation": "command_rpc/scope_args",
+        "elapsed_ms": 3
+      },
+      {
+        "operation": "command_rpc/scope_context",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/finish",
+        "elapsed_ms": 222
+      },
+      {
+        "operation": "command_rpc/drain",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/queue_status",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/prepare_push",
+        "elapsed_ms": 513
+      },
+      {
+        "operation": "command_rpc/queue_status",
+        "elapsed_ms": 516
+      },
+      {
+        "operation": "command_rpc/queue_status",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/receive_wire",
+        "elapsed_ms": 2911
+      },
+      {
+        "operation": "command_rpc/queue_status",
+        "elapsed_ms": 2911
+      },
+      {
+        "operation": "command_rpc/pending_reconciliations",
+        "elapsed_ms": 11
+      },
+      {
+        "operation": "command_rpc/queue_status",
+        "elapsed_ms": 7
+      },
+      {
+        "operation": "command_rpc/reconcile",
+        "elapsed_ms": 768
+      },
+      {
+        "operation": "command_rpc/queue_status",
+        "elapsed_ms": 762
+      },
+      {
+        "operation": "command_rpc/reconcile",
+        "elapsed_ms": 741
+      },
+      {
+        "operation": "command_rpc/queue_status",
+        "elapsed_ms": 735
+      },
+      {
+        "operation": "command_rpc/reconcile",
+        "elapsed_ms": 732
+      },
+      {
+        "operation": "command_rpc/queue_status",
+        "elapsed_ms": 726
+      },
+      {
+        "operation": "command_rpc/reconcile",
+        "elapsed_ms": 767
+      },
+      {
+        "operation": "command_rpc/queue_status",
+        "elapsed_ms": 761
+      },
+      {
+        "operation": "command_rpc/drain",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/prepare_push",
+        "elapsed_ms": 10
+      },
+      {
+        "operation": "command_rpc/queue_status",
+        "elapsed_ms": 5
+      },
+      {
+        "operation": "command_rpc/queue_status",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc/receive_wire",
+        "elapsed_ms": 824
+      },
+      {
+        "operation": "command_rpc/queue_status",
+        "elapsed_ms": 818
+      },
+      {
+        "operation": "command_rpc/pending_reconciliations",
+        "elapsed_ms": 4
+      },
+      {
+        "operation": "command_rpc/reconcile",
+        "elapsed_ms": 827
+      },
+      {
+        "operation": "command_rpc/queue_status",
+        "elapsed_ms": 825
+      },
+      {
+        "operation": "command_rpc/drain",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/fetch",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc/close",
+        "elapsed_ms": 9
+      },
+      {
+        "operation": "command_rpc/open",
+        "elapsed_ms": 11
+      },
+      {
+        "operation": "command_rpc/request",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/begin",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_args",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_context",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_insert",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/finish",
+        "elapsed_ms": 5
+      },
+      {
+        "operation": "command_rpc/drain",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/prepare_push",
+        "elapsed_ms": 5
+      },
+      {
+        "operation": "command_rpc/request",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/begin",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc/scope_args",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_context",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/scope_insert",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "init",
+        "elapsed_ms": 98
+      },
+      {
+        "operation": "command_rpc/open",
+        "elapsed_ms": 42
+      },
+      {
+        "operation": "command_rpc/fetch",
+        "elapsed_ms": 3
+      },
+      {
+        "operation": "command_rpc/prepare_push",
+        "elapsed_ms": 3
+      },
+      {
+        "operation": "command_rpc/prepare_push",
+        "elapsed_ms": 17
+      },
+      {
+        "operation": "command_rpc/close",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc/open",
+        "elapsed_ms": 9
+      },
+      {
+        "operation": "command_rpc/open",
+        "elapsed_ms": 5
+      },
+      {
+        "operation": "command_rpc/fetch",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc/receive",
+        "elapsed_ms": 8
+      },
+      {
+        "operation": "command_rpc/queue_status",
+        "elapsed_ms": 2
+      },
+      {
+        "operation": "command_rpc/close",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "init",
+        "elapsed_ms": 100
+      },
+      {
+        "operation": "command_rpc/open",
+        "elapsed_ms": 43
+      },
+      {
+        "operation": "command_rpc/fetch",
+        "elapsed_ms": 3
+      },
+      {
+        "operation": "command_rpc/prepare_push",
+        "elapsed_ms": 24
+      },
+      {
+        "operation": "command_rpc/queue_status",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc/receive_wire",
+        "elapsed_ms": 51
+      },
+      {
+        "operation": "command_rpc/pending_reconciliations",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "command_rpc/close",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "init",
+        "elapsed_ms": 101
+      },
+      {
+        "operation": "command_rpc/open",
+        "elapsed_ms": 44
+      },
+      {
+        "operation": "command_rpc/fetch",
+        "elapsed_ms": 3
+      },
+      {
+        "operation": "command_rpc/pending_reconciliations",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc/reconcile",
+        "elapsed_ms": 30
+      },
+      {
+        "operation": "command_rpc/fetch",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc/queue_status",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc/close",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc/open",
+        "elapsed_ms": 16
+      },
+      {
+        "operation": "command_rpc/fetch",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc/direct_batch",
+        "elapsed_ms": 7
+      },
+      {
+        "operation": "command_rpc/fetch",
+        "elapsed_ms": 1
+      },
+      {
+        "operation": "command_rpc/close",
+        "elapsed_ms": 0
+      },
+      {
+        "operation": "shutdown",
+        "elapsed_ms": 12
+      }
+    ],
+    "capabilities": {
+      "secure": true,
+      "dedicatedWorker": true,
+      "wasm": true,
+      "bigint": true,
+      "opfs": true,
+      "syncAccessHandle": true,
+      "crossOriginIsolated": false
+    },
+    "current": 13,
+    "restart": {
+      "step": 4,
+      "key": "00000000000003e8-96994397a59fe7d1d849127e64c740f1-0000000000000001",
+      "row": {
+        "fields": {
+          "active": {
+            "kind": "boolean",
+            "value": false
+          },
+          "label": {
+            "kind": "string",
+            "value": "restart"
+          },
+          "notes": {
+            "kind": "string",
+            "value": "\u6771\u4eac\u0000\ud83d\ude00"
+          },
+          "placed_at": {
+            "kind": "timestamp",
+            "value": "-9223372036854775808"
+          },
+          "ratio": {
+            "kind": "float",
+            "value": "179769313486231570000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+          },
+          "total": {
+            "kind": "integer",
+            "value": "9223372036854775807"
+          }
+        },
+        "id": "local:1"
+      },
+      "batch": {
+        "envelopes": [
+          "{\"args\":{\"label\":\"restart\"},\"command\":\"order-v1\",\"context\":{\"capturedAt\":\"1970-01-01T00:00:01.000Z\",\"identity\":null},\"idempotencyKey\":\"00000000000003e8-96994397a59fe7d1d849127e64c740f1-0000000000000001\",\"schemaVersion\":1}"
+        ],
+        "has_more": false,
+        "next_due_ms": "1100"
+      }
+    },
+    "cleaned": true
+  },
+  "automation_setup_diagnostics": {
+    "status": "recovered automation setup failure",
+    "attempts": [
+      {
+        "url": "http://127.0.0.1:8775/command.html?shared",
+        "error": "browser_timeout",
+        "stage": "tab registration",
+        "browser_id": "fa81a29f-2603-492a-b035-c418cf39619e"
+      },
+      {
+        "url": "http://127.0.0.1:8775/command.html?shared",
+        "error": "browser_timeout",
+        "stage": "tab registration",
+        "browser_id": "9529aac9-0bcd-47ce-a788-bd5c00d42942"
+      }
+    ],
+    "inventory_after_failures": [],
+    "recovery": "Registered origin root tab, completed its ordinary persistence reload/namespace cleanup, then navigated that registered tab to command.html?shared. No source/artifact/deadline/security changes; no failed command assertion from these setup attempts."
+  },
+  "historical_expected_red": {
+    "purpose": "Actual old release worker rejects newly tested typed correction before parser implementation; this is historical behavioral RED, not final runtime or a final-source manifest.",
+    "state": {
+      "namespace": "hoyadb-spec23-1d3595ea-4dd7-4e01-8214-0b3fc987019d",
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Paseo/0.12.0 Chrome/152.0.7977.76 Electron/44.2.0 Safari/537.36",
+      "origin": "http://127.0.0.1:8775",
+      "results": [
+        {
+          "name": "E01\u2013E06 actual entity mutations, mixed HTTP retries and mapping",
+          "passed": true,
+          "detail": {
+            "envelopes": 3,
+            "httpArrays": 3,
+            "exactRetry": true,
+            "stableId": true
+          }
+        },
+        {
+          "name": "E11\u2013E13 actual paginated pull exposes partial data and sticky readiness",
+          "passed": true,
+          "detail": {
+            "pages": "2",
+            "rows": 2
+          }
+        },
+        {
+          "name": "E14 actual suspended handler retains a Busy page without repeating HTTP",
+          "passed": true,
+          "detail": {
+            "networkCalls": 1,
+            "abortedStagingAbsent": true
+          }
+        },
+        {
+          "name": "E14 a suspended old revision is retired and a fresh HTTP request succeeds",
+          "passed": true,
+          "detail": {
+            "staleRejected": true,
+            "refetched": true
+          }
+        },
+        {
+          "name": "E16\u2013E18 reset preserves by default, discards explicitly and suppresses late callbacks",
+          "passed": true,
+          "detail": {
+            "empty": true,
+            "oldReplyInert": true
+          }
+        },
+        {
+          "name": "failure",
+          "passed": false,
+          "detail": "Error: InvalidRequest",
+          "stack": "Error: InvalidRequest\n    at failure (http://127.0.0.1:8775/command-client.js:2:39)\n    at CommandClient.call (http://127.0.0.1:8775/command-client.js:80:28)\n    at async runEntityChecks (http://127.0.0.1:8775/entity-tests.js:77:3)\n    at async http://127.0.0.1:8775/entity-page.js:22:3"
+        }
+      ],
+      "done": true,
+      "rpc_timings": [
+        {
+          "operation": "init",
+          "elapsed_ms": 96
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 49
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 14
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 3
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 1
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 23
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 16
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 2
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 10
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 1
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 11
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 6
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 9
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 8
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 19
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 14
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 1
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 12
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 7
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 10
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 5
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 9
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 3
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 10
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 6
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 9
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 3
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 2
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 13
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 9
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 2
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 1
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 1
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 8
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 2
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 11
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 10
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 9
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 10
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 5
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 7
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 6
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 6
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 1
+        },
+        {
+          "operation": "command_rpc",
+          "elapsed_ms": 0
+        },
+        {
+          "operation": "shutdown",
+          "elapsed_ms": 7
+        }
+      ],
+      "capabilities": {
+        "secure": true,
+        "dedicatedWorker": true,
+        "wasm": true,
+        "bigint": true,
+        "opfs": true,
+        "syncAccessHandle": true,
+        "crossOriginIsolated": false
+      },
+      "cleaned": true
+    }
+  },
+  "counts": {
+    "phase_five": 24,
+    "phase_four": 27,
+    "legacy_initial": 36,
+    "legacy_after_reload": 12,
+    "reactive": 17,
+    "total_report_groups": 116,
+    "node_tests": 14,
+    "python_http_tests": 5
+  },
+  "task_resource_cleanup": {
+    "recorded_utc": "2026-10-24T08:07:12.867937+00:00",
+    "owned_browser_tabs_remaining": 0,
+    "http_fixture_pid": 90922,
+    "http_fixture_port": 8775,
+    "http_fixture_stopped": "SIGINT, owning session83271 observed exit0",
+    "port_accepts_connections": false
+  }
+}

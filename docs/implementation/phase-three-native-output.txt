@@ -1,0 +1,5 @@
+PASS R14A owned rows/count/columns
+PASS R14B reentrant callback lifecycle
+R15 native insertion-to-callback samples ns=[198401, 215374, 228087, 243648, 264416, 279953, 291503, 400543, 331686, 333865, 349304, 426365], drainCallerThread=74483167, cadence=explicit immediate drain; measured to callback entry
+PASS R14C/R15 stale owners and timing
+Swift Phase3 runtime: Version 26.7.1 (Build 25G241)

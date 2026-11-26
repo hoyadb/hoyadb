@@ -1,0 +1,40 @@
+{
+  "scope": "New benchmark source only; keep user formatter overlay uncommitted. Same formatter/punctuation-only strategy as shared facade source preservation audit.",
+  "files": [
+    {
+      "path": "benchmarks/native/src/main.rs",
+      "tested_worktree_sha256": "6860b1c50e8a3168d7e84fa22acd873f65cd7f8f2931098eef6517ceaec7f8bf",
+      "committed_default_layout_sha256": "d6ec7cbe284d7ff08fbae0dcdcbb7ad4a1c0c0040c025366645f819898edb6a3",
+      "format_only_punctuation_changes": [
+        {
+          "current": [
+            ","
+          ],
+          "candidate": []
+        }
+      ],
+      "worktree_preserved": true
+    },
+    {
+      "path": "benchmarks/native/src/lib.rs",
+      "tested_worktree_sha256": "ef45c78665ce9010dabed7e3653f91ff27f2e52203d15548830ab86901d1ff4e",
+      "committed_default_layout_sha256": "636426462becd3c079fa7c9c835897ec7b6fa04859bb7e13b4f7867fc26ea204",
+      "format_only_punctuation_changes": [
+        {
+          "current": [
+            ","
+          ],
+          "candidate": []
+        }
+      ],
+      "worktree_preserved": true
+    },
+    {
+      "path": "benchmarks/native/tests/process.rs",
+      "tested_worktree_sha256": "7a67c5219da2a4d9b8c8a7ed758746bd05d1d8719ce61c6950cfd0d8505071fc",
+      "committed_default_layout_sha256": "7a67c5219da2a4d9b8c8a7ed758746bd05d1d8719ce61c6950cfd0d8505071fc",
+      "format_only_punctuation_changes": [],
+      "worktree_preserved": true
+    }
+  ]
+}

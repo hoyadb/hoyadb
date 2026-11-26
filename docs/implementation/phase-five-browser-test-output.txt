@@ -1,0 +1,144 @@
+Release build
+CC_wasm32_unknown_unknown=/usr/local/opt/llvm@22/bin/clang AR_wasm32_unknown_unknown=/usr/local/opt/llvm@22/bin/llvm-ar cargo build --manifest-path spikes/storage-browser/Cargo.toml --target wasm32-unknown-unknown --release --offline --locked
+Observed exit status: 0
+   Compiling hoyadb-core v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-core)
+   Compiling hoyadb-storage-sqlite v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-storage-sqlite)
+   Compiling hoyadb-storage-browser-spike v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/spikes/storage-browser)
+    Finished `release` profile [optimized] target(s) in 1m 11s
+
+Bindings
+wasm-bindgen --target web --out-dir spikes/storage-browser/pkg spikes/storage-browser/target/wasm32-unknown-unknown/release/hoyadb_storage_browser_spike.wasm
+Observed exit status: 0
+
+Release Clippy
+CC_wasm32_unknown_unknown=/usr/local/opt/llvm@22/bin/clang AR_wasm32_unknown_unknown=/usr/local/opt/llvm@22/bin/llvm-ar cargo clippy --manifest-path spikes/storage-browser/Cargo.toml --target wasm32-unknown-unknown --release --offline --locked -- -D warnings
+Observed exit status: 0
+    Checking hoyadb-core v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-core)
+    Checking hoyadb-storage-sqlite v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-storage-sqlite)
+    Checking hoyadb-storage-browser-spike v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/spikes/storage-browser)
+    Finished `release` profile [optimized] target(s) in 25.07s
+
+Node deterministic client
+node --test spikes/storage-browser/command-client.test.mjs
+Observed exit status: 0
+TAP version 13
+# Subtest: E01 entity calls capture trusted context atomically with each mutation
+ok 1 - E01 entity calls capture trusted context atomically with each mutation
+  ---
+  duration_ms: 7.299864
+  type: 'test'
+  ...
+# Subtest: E13 pull keeps opaque UTF-8 body across bounded chunks and one production apply
+ok 2 - E13 pull keeps opaque UTF-8 body across bounded chunks and one production apply
+  ---
+  duration_ms: 15.259167
+  type: 'test'
+  ...
+# Subtest: E18 reset changes foreign generation and callbacks only after successful core reset
+ok 3 - E18 reset changes foreign generation and callbacks only after successful core reset
+  ---
+  duration_ms: 1.123337
+  type: 'test'
+  ...
+# Subtest: E18 late transport completion cannot clear a replacement generation sync pump
+ok 4 - E18 late transport completion cannot clear a replacement generation sync pump
+  ---
+  duration_ms: 27.614908
+  type: 'test'
+  ...
+# Subtest: E18 close and reopen can start a new pump while the old transport remains suspended
+ok 5 - E18 close and reopen can start a new pump while the old transport remains suspended
+  ---
+  duration_ms: 22.678867
+  type: 'test'
+  ...
+# Subtest: H01 host invokes its awaited handler and returns the owned result
+ok 6 - H01 host invokes its awaited handler and returns the owned result
+  ---
+  duration_ms: 1.758963
+  type: 'test'
+  ...
+# Subtest: H03 unsafe integer Number coercion rejects before transport
+ok 7 - H03 unsafe integer Number coercion rejects before transport
+  ---
+  duration_ms: 0.468925
+  type: 'test'
+  ...
+# Subtest: H01 two owners execute FIFO and active cancellation releases a never-settling handler
+ok 8 - H01 two owners execute FIFO and active cancellation releases a never-settling handler
+  ---
+  duration_ms: 2.244157
+  type: 'test'
+  ...
+# Subtest: H02 cancellation while finish reply is delayed preserves committed success
+ok 9 - H02 cancellation while finish reply is delayed preserves committed success
+  ---
+  duration_ms: 1.434373
+  type: 'test'
+  ...
+# Subtest: H01 pending begin waits for a release signal without polling or calling handler
+ok 10 - H01 pending begin waits for a release signal without polling or calling handler
+  ---
+  duration_ms: 13.068015
+  type: 'test'
+  ...
+# Subtest: H06 owned HTTP response and application plan survive active-handler Busy without repeating work
+ok 11 - H06 owned HTTP response and application plan survive active-handler Busy without repeating work
+  ---
+  duration_ms: 31.391538
+  type: 'test'
+  ...
+# Subtest: H06 a finish wake during an awaited mapper is replayed when the old batch has no deadline
+ok 12 - H06 a finish wake during an awaited mapper is replayed when the old batch has no deadline
+  ---
+  duration_ms: 10.708168
+  type: 'test'
+  ...
+# Subtest: H04 bounded event pages retain one drain guard and callback liveness
+ok 13 - H04 bounded event pages retain one drain guard and callback liveness
+  ---
+  duration_ms: 0.767545
+  type: 'test'
+  ...
+# Subtest: H06 each bounded prepare prefix is a separate nonempty HTTP array
+ok 14 - H06 each bounded prepare prefix is a separate nonempty HTTP array
+  ---
+  duration_ms: 2.620381
+  type: 'test'
+  ...
+1..14
+# tests 14
+# suites 0
+# pass 14
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 253.034674
+
+Python loopback HTTP fixture
+python3 -m unittest discover -s spikes/common -p 'test_command_http.py'
+Observed exit status: 0
+.....
+----------------------------------------------------------------------
+Ran 5 tests in 0.005s
+
+OK
+
+Versions
+{
+  "rust": "rustc 1.98.1 (48a229cea 2026-09-01)",
+  "wasm_bindgen": "wasm-bindgen 0.2.104",
+  "node": "v22.18.0",
+  "clang": "Homebrew clang version 22.1.8\nTarget: x86_64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /usr/local/Cellar/llvm@22/22.1.8/bin\nConfiguration file: /usr/local/Cellar/llvm@22/22.1.8/etc/clang/x86_64-apple-darwin25.cfg"
+}
+
+Runtime pages (Paseo actual browser tools)
+http://127.0.0.1:8775/entity.html?shared: 24 PASS, two actual reloads; cleaned=true
+http://127.0.0.1:8775/command.html?shared: 27 PASS, three actual reloads; cleaned=true
+http://127.0.0.1:8775/index.html: 36 PASS then actual reload 12 PASS; cleanup report present
+http://127.0.0.1:8775/reactive.html: 17 PASS; cleaned=true
+Source closure: 109 source hashes and 2 generated artifact hashes matched before/after runtime.
+Automation setup: two tab-registration timeouts; recovered via registered origin tab then navigation. No assertion/deadline/artifact changes.
+All owned browser tabs closed after cleanup; server cleanup coordinated separately.
+HTTP cleanup: exact owned PID90922 stopped with SIGINT; session83271 exit0; port8775 no longer accepts connections. Browser inventory empty.

@@ -1,0 +1,108 @@
+EEEEEEEE
+======================================================================
+ERROR: test_cli_writes_json_and_exit_codes (__main__.Gate.test_cli_writes_json_and_exit_codes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_embedded_scan.py", line 100, in test_cli_writes_json_and_exit_codes
+    code = E.main(['--plan', str(plan), '--out', str(out)])
+           ^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/embedded_scan.py", line 5, in __getattr__
+    raise NotImplementedError("embedded_scan." + name + " not implemented")
+NotImplementedError: embedded_scan.main not implemented
+
+======================================================================
+ERROR: test_known_shaded_lang3_is_detected_byte_bound_and_separate (__main__.Gate.test_known_shaded_lang3_is_detected_byte_bound_and_separate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_embedded_scan.py", line 43, in test_known_shaded_lang3_is_detected_byte_bound_and_separate
+    found = self.inventory(self.kgp, 'org.jetbrains.kotlin:kotlin-gradle-plugin:2.1.20')
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_embedded_scan.py", line 39, in inventory
+    return E.inventory(jar_path, own_coordinate=own, relocation_prefixes=['org/jetbrains/kotlin/'],
+           ^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/embedded_scan.py", line 5, in __getattr__
+    raise NotImplementedError("embedded_scan." + name + " not implemented")
+NotImplementedError: embedded_scan.inventory not implemented
+
+======================================================================
+ERROR: test_not_applicable_requires_evidence_reference (__main__.Gate.test_not_applicable_requires_evidence_reference)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_embedded_scan.py", line 90, in test_not_applicable_requires_evidence_reference
+    found = self.inventory(self.kgp, 'org.jetbrains.kotlin:kotlin-gradle-plugin:2.1.20')
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_embedded_scan.py", line 39, in inventory
+    return E.inventory(jar_path, own_coordinate=own, relocation_prefixes=['org/jetbrains/kotlin/'],
+           ^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/embedded_scan.py", line 5, in __getattr__
+    raise NotImplementedError("embedded_scan." + name + " not implemented")
+NotImplementedError: embedded_scan.inventory not implemented
+
+======================================================================
+ERROR: test_relocated_namespace_without_identity_is_unknown_not_clean (__main__.Gate.test_relocated_namespace_without_identity_is_unknown_not_clean)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_embedded_scan.py", line 56, in test_relocated_namespace_without_identity_is_unknown_not_clean
+    found = self.inventory(self.compiler, 'org.jetbrains.kotlin:kotlin-compiler-embeddable:2.1.20')
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_embedded_scan.py", line 39, in inventory
+    return E.inventory(jar_path, own_coordinate=own, relocation_prefixes=['org/jetbrains/kotlin/'],
+           ^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/embedded_scan.py", line 5, in __getattr__
+    raise NotImplementedError("embedded_scan." + name + " not implemented")
+NotImplementedError: embedded_scan.inventory not implemented
+
+======================================================================
+ERROR: test_source_declared_is_distinct_from_byte_bound (__main__.Gate.test_source_declared_is_distinct_from_byte_bound)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_embedded_scan.py", line 51, in test_source_declared_is_distinct_from_byte_bound
+    found = self.inventory(self.compiler, 'org.jetbrains.kotlin:kotlin-compiler-embeddable:2.1.20', self.declared)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_embedded_scan.py", line 39, in inventory
+    return E.inventory(jar_path, own_coordinate=own, relocation_prefixes=['org/jetbrains/kotlin/'],
+           ^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/embedded_scan.py", line 5, in __getattr__
+    raise NotImplementedError("embedded_scan." + name + " not implemented")
+NotImplementedError: embedded_scan.inventory not implemented
+
+======================================================================
+ERROR: test_triaged_known_advisory_is_reported_open_not_clean (__main__.Gate.test_triaged_known_advisory_is_reported_open_not_clean)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_embedded_scan.py", line 71, in test_triaged_known_advisory_is_reported_open_not_clean
+    found = self.inventory(self.kgp, 'org.jetbrains.kotlin:kotlin-gradle-plugin:2.1.20')
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_embedded_scan.py", line 39, in inventory
+    return E.inventory(jar_path, own_coordinate=own, relocation_prefixes=['org/jetbrains/kotlin/'],
+           ^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/embedded_scan.py", line 5, in __getattr__
+    raise NotImplementedError("embedded_scan." + name + " not implemented")
+NotImplementedError: embedded_scan.inventory not implemented
+
+======================================================================
+ERROR: test_unmapped_relocated_third_party_namespace_rejects (__main__.Gate.test_unmapped_relocated_third_party_namespace_rejects)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_embedded_scan.py", line 65, in test_unmapped_relocated_third_party_namespace_rejects
+    found = self.inventory(odd, 'org.jetbrains.kotlin:odd:1')
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_embedded_scan.py", line 39, in inventory
+    return E.inventory(jar_path, own_coordinate=own, relocation_prefixes=['org/jetbrains/kotlin/'],
+           ^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/embedded_scan.py", line 5, in __getattr__
+    raise NotImplementedError("embedded_scan." + name + " not implemented")
+NotImplementedError: embedded_scan.inventory not implemented
+
+======================================================================
+ERROR: test_untriaged_advisory_component_or_failed_scan_rejects (__main__.Gate.test_untriaged_advisory_component_or_failed_scan_rejects)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_embedded_scan.py", line 81, in test_untriaged_advisory_component_or_failed_scan_rejects
+    found = self.inventory(self.kgp, 'org.jetbrains.kotlin:kotlin-gradle-plugin:2.1.20')
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_embedded_scan.py", line 39, in inventory
+    return E.inventory(jar_path, own_coordinate=own, relocation_prefixes=['org/jetbrains/kotlin/'],
+           ^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/embedded_scan.py", line 5, in __getattr__
+    raise NotImplementedError("embedded_scan." + name + " not implemented")
+NotImplementedError: embedded_scan.inventory not implemented
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.086s
+
+FAILED (errors=8)
+exit=1

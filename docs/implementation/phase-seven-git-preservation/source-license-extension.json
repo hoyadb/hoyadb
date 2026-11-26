@@ -1,0 +1,36 @@
+{
+  "defect": "DEF-0027",
+  "preparation_commit": "c005f9a",
+  "scope": "Raw captured upstream license directories in docs/implementation/**/sources/licenses/**; approved derived iOS presentations unchanged",
+  "test_sha256": "ae9e13310d3bcef19859844e56f2ead68144653d9fde71ae1ced97e5f6528ee9",
+  "red": {
+    "exit": 1,
+    "failures": 7,
+    "failures_by_mode": {
+      "input": 2,
+      "true": 5
+    },
+    "headers": [
+      "FAIL: test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='input', path='docs/implementation/phase-seven-security-remediation/sources/licenses/streamex-0.7.2-LICENSE', filter='clean')",
+      "FAIL: test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='input', path='docs/implementation/phase-seven-security-remediation/sources/licenses/streamex-0.7.2-LICENSE', filter='checkout')",
+      "FAIL: test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='true', path='docs/implementation/phase-seven-security-remediation/sources/licenses/jansi-2.4.0-license.txt', filter='checkout')",
+      "FAIL: test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='true', path='docs/implementation/phase-seven-security-remediation/sources/licenses/kotlinx-collections-immutable-0.3.7-LICENSE.txt', filter='checkout')",
+      "FAIL: test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='true', path='docs/implementation/phase-seven-security-remediation/sources/licenses/lz4-java-1.7.1-LICENSE.txt', filter='checkout')",
+      "FAIL: test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='true', path='docs/implementation/phase-seven-security-remediation/sources/licenses/streamex-0.7.2-LICENSE', filter='clean')",
+      "FAIL: test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) (mode='true', path='docs/implementation/phase-seven-security-remediation/sources/licenses/vavr-0.10.4-LICENSE', filter='checkout')"
+    ],
+    "raw_sha256": "0377852afb7edbd63ffbdc5310d04b98681ae3908f815618fe79f364e78edd0b"
+  },
+  "green": {
+    "source-license-green": {
+      "exit": 0,
+      "raw_sha256": "93de67acf87e7c5b2f7c52058054ca03f5425e90f1209ad7e65c853d1daf1cc5",
+      "output": "test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 23.968s\n\nOK\n"
+    },
+    "source-license-green-O": {
+      "exit": 0,
+      "raw_sha256": "a827962e5418f1f08441992536aa6b611a0ddd2aa990c7d4d70791a41029183d",
+      "output": "test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 26.906s\n\nOK\n"
+    }
+  }
+}

@@ -1,0 +1,1 @@
+{"archive": "hoyadb-react-native-0.1.0.tgz", "result": "packed", "sha256": "83ba210612181fbd3b5ca3d746cde4577f5ca521df4256c4f0b6e5c54a5cbc75", "validations": ["source", "package-copy", "extracted"]}

@@ -1,0 +1,59 @@
+{
+  "defect": "DEF-0029",
+  "status": "root verification and focused independent review passed; final Phase7 review remains pending",
+  "evidence_index_sha256": "39560652284fe2eb8c7d2ff7f5e831a7731350eb0f38b238a87dba4d39a3a174",
+  "changed_sources": {
+    "benchmarks/browser_server.py": {
+      "bytes": 37842,
+      "sha256": "c8056bbc1450b007640cac3343a7f83091038c11435ade6e857f3f99f1765227"
+    },
+    "benchmarks/test_browser_server.py": {
+      "bytes": 54708,
+      "sha256": "d06fff5f86503a523df06e7d8574e7b69c3b92eebfa74f7b2bf8a902d0d48dfe"
+    }
+  },
+  "root_checks": {
+    "evidence_files_rehashed": 7,
+    "source_files_rehashed": 2,
+    "mismatches": 0,
+    "unindexed_evidence_files": 0,
+    "original_logs_rehashed": 4,
+    "derived_logs_reproduced": 4,
+    "derivation": "Replace repository root with <repo>; all other bytes identical for these four logs",
+    "previous_41_file_source_set": "39 unchanged; exactly browser_server.py and test_browser_server.py changed"
+  },
+  "test_runs": [
+    {
+      "command": "python3 -I -m unittest discover -s benchmarks -p 'test_*.py'",
+      "tests": 93,
+      "seconds": 111.856,
+      "exit_code": 0
+    },
+    {
+      "command": "python3 -I -O -m unittest discover -s benchmarks -p 'test_*.py'",
+      "tests": 93,
+      "seconds": 111.404,
+      "exit_code": 0
+    }
+  ],
+  "source_review": "All three call sites pass the existing side-effect-free plan under the existing collector lock. Exact permit matching and drift recheck precede planning; plan rejection logs without mutation; commit retains DEF0023 generation and notification.",
+  "tdd_review": "Behavioral RED has three state failures and three revoke errors caused by consumed permit. Resource test corrected its post-fix invalid run2 identity to the other declared engine; assertions retained.",
+  "whitespace_check": {
+    "authored_sources": "clean",
+    "preserved_red_log_findings": {
+      "path": "def0029-preflight-20261025/logs/90-def29-red.txt",
+      "lines": [
+        1,
+        5
+      ]
+    },
+    "interpretation": "Test-output trailing spaces remain in original and normalized copies. No whitespace/diff attributes were disabled and a full whitespace pass is not claimed."
+  },
+  "scope_limits": [
+    "Synthetic controller correctness only; no SDK, worker, compiler or performance measurement",
+    "Historical evidence cuts retain their identities; new source hashes apply to future runs",
+    "Accepted quiet measurements remain after RN Android completion",
+    "No final Phase7 clean Opus review or code-coverage percentage claimed"
+  ],
+  "focused_review": "phase-seven-assembler-preflight-focused-review.json"
+}

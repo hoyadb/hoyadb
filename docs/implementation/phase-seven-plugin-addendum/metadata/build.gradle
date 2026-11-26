@@ -1,0 +1,117 @@
+import groovy.json.JsonOutput
+import org.gradle.api.attributes.*
+import org.gradle.api.attributes.java.TargetJvmEnvironment
+import org.gradle.api.attributes.plugin.GradlePluginApiVersion
+
+plugins { id 'java' }
+
+repositories {
+    google()
+    mavenCentral()
+    maven { url = uri("https://plugins.gradle.org/m2/") }
+}
+
+def buildType = Attribute.of('com.android.build.api.attributes.BuildTypeAttr', String)
+def kotlinPlatform = Attribute.of('org.jetbrains.kotlin.platform.type', String)
+
+// Equivalent relevant rule from inspected KotlinPlatformType.kt 2.1.20 source.
+// No Kotlin plugin classes/JARs are loaded or applied.
+class AndroidJvmCompatibility implements AttributeCompatibilityRule<String> {
+    void execute(CompatibilityCheckDetails<String> details) {
+        if (details.consumerValue == 'androidJvm' && details.producerValue == 'jvm') details.compatible()
+    }
+}
+class KotlinPlatformPreference implements AttributeDisambiguationRule<String> {
+    void execute(MultipleCandidatesDetails<String> details) {
+        if (details.consumerValue != null && details.candidateValues.contains(details.consumerValue)) details.closestMatch(details.consumerValue)
+    }
+}
+dependencies.attributesSchema.attribute(kotlinPlatform) {
+    compatibilityRules.add(AndroidJvmCompatibility)
+    disambiguationRules.add(KotlinPlatformPreference)
+}
+
+def makeRuntime = { String name, String type ->
+    configurations.create(name) {
+        canBeConsumed = false
+        canBeResolved = true
+        attributes {
+            attribute(Usage.USAGE_ATTRIBUTE, objects.named(Usage, Usage.JAVA_RUNTIME))
+            attribute(Category.CATEGORY_ATTRIBUTE, objects.named(Category, Category.LIBRARY))
+            attribute(TargetJvmEnvironment.TARGET_JVM_ENVIRONMENT_ATTRIBUTE, objects.named(TargetJvmEnvironment, 'android'))
+            attribute(buildType, type)
+            attribute(kotlinPlatform, 'androidJvm')
+        }
+        resolutionStrategy.activateDependencyLocking()
+    }
+}
+makeRuntime('androidDebug', 'debug')
+makeRuntime('androidRelease', 'release')
+makeRuntime('kotlinSdkRuntime', 'release')
+dependencies.add('kotlinSdkRuntime', 'org.jetbrains.kotlin:kotlin-stdlib:2.1.20')
+configurations.create('nativeBuildTools') {
+    canBeConsumed = false
+    canBeResolved = true
+    attributes {
+        attribute(Usage.USAGE_ATTRIBUTE, objects.named(Usage, Usage.JAVA_RUNTIME))
+        attribute(Category.CATEGORY_ATTRIBUTE, objects.named(Category, Category.LIBRARY))
+        attribute(TargetJvmEnvironment.TARGET_JVM_ENVIRONMENT_ATTRIBUTE, objects.named(TargetJvmEnvironment, 'standard-jvm'))
+        attribute(kotlinPlatform, 'jvm')
+        attribute(GradlePluginApiVersion.GRADLE_PLUGIN_API_VERSION_ATTRIBUTE, objects.named(GradlePluginApiVersion, gradle.gradleVersion))
+    }
+    resolutionStrategy.activateDependencyLocking()
+}
+['androidDebug', 'androidRelease'].each { cfg ->
+    dependencies.constraints.add(cfg, 'com.squareup.okio:okio:3.4.0') { because 'Patch GHSA-w33c-445m-f8w7 in reference consumer; metadata-only candidate' }
+    dependencies.add(cfg, 'com.facebook.react:react-android:0.86.3')
+    dependencies.add(cfg, 'com.facebook.hermes:hermes-android:250829098.0.17')
+    dependencies.add(cfg, 'org.jetbrains.kotlin:kotlin-stdlib:2.1.20')
+}
+[
+ 'com.android.tools.build:gradle:8.12.0',
+ 'org.jetbrains.kotlin:kotlin-gradle-plugin:2.1.20',
+ 'com.google.code.gson:gson:2.8.9',
+ 'com.google.guava:guava:31.0.1-jre',
+ 'com.squareup:javapoet:1.13.0'
+].each { dep -> dependencies.add('nativeBuildTools', dep) }
+
+
+['foojaySettings', 'ktfmtPlugin', 'ktfmtFormatter'].each { name ->
+    configurations.create(name) {
+        canBeConsumed = false
+        canBeResolved = true
+        attributes {
+            attribute(Usage.USAGE_ATTRIBUTE, objects.named(Usage, Usage.JAVA_RUNTIME))
+            attribute(Category.CATEGORY_ATTRIBUTE, objects.named(Category, Category.LIBRARY))
+            attribute(TargetJvmEnvironment.TARGET_JVM_ENVIRONMENT_ATTRIBUTE, objects.named(TargetJvmEnvironment, 'standard-jvm'))
+            attribute(kotlinPlatform, 'jvm')
+            attribute(GradlePluginApiVersion.GRADLE_PLUGIN_API_VERSION_ATTRIBUTE, objects.named(GradlePluginApiVersion, gradle.gradleVersion))
+        }
+        resolutionStrategy.activateDependencyLocking()
+    }
+}
+dependencies.add('foojaySettings', 'org.gradle.toolchains.foojay-resolver-convention:org.gradle.toolchains.foojay-resolver-convention.gradle.plugin:1.0.0')
+dependencies.add('ktfmtPlugin', 'com.ncorti.ktfmt.gradle:com.ncorti.ktfmt.gradle.gradle.plugin:0.22.0')
+dependencies.add('ktfmtFormatter', 'com.facebook:ktfmt:0.54')
+
+tasks.register('captureMetadata') {
+    doLast {
+        def report = [gradle: gradle.gradleVersion, java: System.getProperty('java.version'), status: 'Metadata resolution only; AGP/Kotlin plugins not applied; no dependency code executed', configurations: [:]]
+        ['androidDebug', 'androidRelease', 'kotlinSdkRuntime', 'nativeBuildTools', 'foojaySettings', 'ktfmtPlugin', 'ktfmtFormatter'].each { name ->
+            def result = configurations[name].incoming.resolutionResult
+            def components = []
+            def failures = []
+            def edges = []
+            result.allComponents.each { c ->
+                components.add([id: c.id.displayName, reason: c.selectionReason.descriptions.collect { it.description }, variants: c.variants.collect { v -> [name: v.displayName, attributes: v.attributes.keySet().collectEntries { a -> [(a.name):v.attributes.getAttribute(a).toString()] }] }])
+            }
+            result.allDependencies.each { d ->
+                if (d instanceof org.gradle.api.artifacts.result.ResolvedDependencyResult) edges.add([from:d.from.id.displayName, requested:d.requested.displayName, selected:d.selected.id.displayName, constraint:d.constraint])
+                if (d instanceof org.gradle.api.artifacts.result.UnresolvedDependencyResult) failures.add([requested:d.attempted.displayName, failure:d.failure.message, details:d.failure.cause?.message])
+            }
+            report.configurations[name] = [attributes:configurations[name].attributes.keySet().collectEntries { a -> [(a.name):configurations[name].attributes.getAttribute(a).toString()] }, components:components, edges:edges, failures:failures]
+        }
+        file('resolution.json').text = JsonOutput.prettyPrint(JsonOutput.toJson(report)) + '\n'
+        if (report.configurations.any { name, value -> !value.failures.empty }) throw new GradleException('Metadata graph unresolved; see resolution.json')
+    }
+}

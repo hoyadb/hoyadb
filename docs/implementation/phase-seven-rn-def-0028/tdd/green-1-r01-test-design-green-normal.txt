@@ -1,0 +1,35 @@
+test_source_symlink_leaving_its_root_rejected (__main__.PathSafety.test_source_symlink_leaving_its_root_rejected) ... ok
+test_unsafe_output_and_source_paths_rejected (__main__.PathSafety.test_unsafe_output_and_source_paths_rejected) ... ok
+test_normal_and_optimized_produce_identical_complete_repositories (__main__.R01CompleteAssembly.test_normal_and_optimized_produce_identical_complete_repositories) ... FAIL
+test_corrupted_binary_rejected_before_success_record (__main__.R02CorruptedInput.test_corrupted_binary_rejected_before_success_record) ... ok
+test_corrupted_metadata_rejected_before_success_record (__main__.R02CorruptedInput.test_corrupted_metadata_rejected_before_success_record) ... ok
+test_missing_binary_rejected_locally (__main__.R02bMissingInput.test_missing_binary_rejected_locally) ... ok
+test_missing_metadata_rejected_locally (__main__.R02bMissingInput.test_missing_metadata_rejected_locally) ... ok
+test_tool_has_no_network_or_subprocess_capability (__main__.R02bMissingInput.test_tool_has_no_network_or_subprocess_capability) ... ok
+test_conflicting_bytes_for_same_destination_rejected (__main__.R03Conflicts.test_conflicting_bytes_for_same_destination_rejected) ... ok
+test_conflicting_provenance_identity_for_same_path_rejected (__main__.R03Conflicts.test_conflicting_provenance_identity_for_same_path_rejected) ... ok
+test_partial_output_is_not_a_repository (__main__.R04ConsumerVerification.test_partial_output_is_not_a_repository) ... ok
+test_verification_rejects_missing_stale_tampered_records_and_mutations (__main__.R04ConsumerVerification.test_verification_rejects_missing_stale_tampered_records_and_mutations) ... ok
+test_import_has_no_side_effects (__main__.StaticGuarantees.test_import_has_no_side_effects) ... ok
+test_tool_uses_no_assert_statements (__main__.StaticGuarantees.test_tool_uses_no_assert_statements) ... ok
+test_v1_optimized_run_accepts_corrupted_binary (__main__.V1MechanismReplay.test_v1_optimized_run_accepts_corrupted_binary) ... ok
+test_v1_optimized_run_loses_metadata_collection (__main__.V1MechanismReplay.test_v1_optimized_run_loses_metadata_collection) ... ok
+
+======================================================================
+FAIL: test_normal_and_optimized_produce_identical_complete_repositories (__main__.R01CompleteAssembly.test_normal_and_optimized_produce_identical_complete_repositories)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/android/test_prepare_repo.py", line 123, in test_normal_and_optimized_produce_identical_complete_repositories
+    self.assertEqual(results['normal'][2], results['optimized'][2], 'fixture plans differ (test setup)')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: b'{\n[106 chars]8zce/normal/inputs-bin",\n    "meta": "/var/fo[2469 chars]n}\n' != b'{\n[106 chars]8zce/optimized/inputs-bin",\n    "meta": "/var[2475 chars]n}\n' : fixture plans differ (test setup)
+
+----------------------------------------------------------------------
+Ran 16 tests in 36.089s
+
+FAILED (failures=1)
+python optimize flag: 0
+
+V1 corrupted replay: normal exit=1 optimized exit=0 counts={'binaries': 1, 'metadata': 0, 'fetched': 0}
+
+V1 replay (sha256 f76c2a5c0451…): normal counts={'binaries': 1, 'metadata': 1, 'fetched': 0} optimized counts={'binaries': 1, 'metadata': 0, 'fetched': 0}

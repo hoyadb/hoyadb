@@ -1,0 +1,13 @@
+{
+  "command": [
+    "npm",
+    "audit",
+    "--package-lock-only",
+    "--ignore-scripts",
+    "--json",
+    "--registry=https://registry.npmjs.org",
+    "--cache=/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-dependencies/cache"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 1.0447469769278541
+}

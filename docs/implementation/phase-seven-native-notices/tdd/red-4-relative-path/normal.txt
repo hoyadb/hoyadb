@@ -1,0 +1,20 @@
+test_pack_accepts_paths_relative_to_the_caller (__main__.AN02ReactNativePack.test_pack_accepts_paths_relative_to_the_caller) ... FAIL
+
+======================================================================
+FAIL: test_pack_accepts_paths_relative_to_the_caller (__main__.AN02ReactNativePack.test_pack_accepts_paths_relative_to_the_caller)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/native/tools/test_apple_notices.py", line 600, in test_pack_accepts_paths_relative_to_the_caller
+    self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 0 : REJECTED pack-failed:  -2
+npm error enoent ENOENT: no such file or directory, open '/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-def0030-j6ypudrv/000-pack-relative/bindings/react-native/packed/hoyadb-fixture-rn-0.0.1.tgz'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-def0030-j6ypudrv/000-pack-relative/npm-cache/_logs/2026-10-25T23_42_03_566Z-debug-0.log
+
+
+----------------------------------------------------------------------
+Ran 1 test in 2.212s
+
+FAILED (failures=1)

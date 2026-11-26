@@ -1,0 +1,86 @@
+{
+  "x86_64": {
+    "llvm_ar_command": [
+      "/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-ar",
+      "t",
+      "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-native/android-x86_64/x86_64-linux-android/release/libhoyadb_native.a"
+    ],
+    "archive_members_from_sysroot": [
+      "alloc-2b6541c412e67024",
+      "cfg_if-e6a31e18df17e8c0",
+      "compiler_builtins-c11961ff1f22ca5b",
+      "core-031f8bcee104d276",
+      "gimli-ef8eb10394d1aae4",
+      "hashbrown-ba81ba5fff6a13c5",
+      "libc-e12042dd98388257",
+      "memchr-4f8fe02c0e72ce54",
+      "miniz_oxide-f0b8a7b78bbf9ebb",
+      "object-12629fd2acbc0497",
+      "panic_unwind-0d9eea3f9629aecd",
+      "rustc_demangle-1f6b6e7d722b3033",
+      "rustc_std_workspace_alloc-a9892e8b52f8a215",
+      "rustc_std_workspace_core-ef4bac770ba3a669",
+      "std-7fb7d93196c61333",
+      "std_detect-47b12a8c8e578c50",
+      "unwind-34c1f103c0f05a9c"
+    ],
+    "driver_command": [
+      "/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/bin/x86_64-linux-android24-clang",
+      "-###",
+      "-shared",
+      "-fPIC",
+      "-o",
+      "/tmp/hoyadb-never-written.so",
+      "-x",
+      "c",
+      "/dev/null",
+      "-Wl,-z,max-page-size=16384",
+      "-pthread",
+      "-ldl",
+      "-lm"
+    ],
+    "driver_link_plan": " \"/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/bin/ld.lld\" \"-z\" \"now\" \"-z\" \"relro\" \"--hash-style=gnu\" \"--eh-frame-hdr\" \"-m\" \"elf_x86_64\" \"-shared\" \"-o\" \"/tmp/hoyadb-never-written.so\" \"/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/bin/../sysroot/usr/lib/x86_64-linux-android/24/crtbegin_so.o\" \"-L/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/x86_64\" \"-L/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/bin/../sysroot/usr/lib/x86_64-linux-android/24\" \"-L/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/bin/../sysroot/usr/lib/x86_64-linux-android\" \"-L/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/bin/../sysroot/usr/lib\" \"/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/null-30019e.o\" \"-z\" \"max-page-size=16384\" \"-ldl\" \"-lm\" \"/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-x86_64-android.a\" \"-l:libunwind.a\" \"-ldl\" \"-lc\" \"/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-x86_64-android.a\" \"-l:libunwind.a\" \"-ldl\" \"/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/bin/../sysroot/usr/lib/x86_64-linux-android/24/crtend_so.o\""
+  },
+  "arm64-v8a": {
+    "llvm_ar_command": [
+      "/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-ar",
+      "t",
+      "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-native/android-arm64/aarch64-linux-android/release/libhoyadb_native.a"
+    ],
+    "archive_members_from_sysroot": [
+      "alloc-e873bd788329a382",
+      "cfg_if-7940436b5bc09512",
+      "compiler_builtins-4b6ddcdc38eb70ec",
+      "core-1bf91c199a1ce463",
+      "gimli-efcbe5df0664cf0f",
+      "hashbrown-f806186a866b8a78",
+      "libc-9362df6966735ad3",
+      "memchr-f32bf962b0c2a4bc",
+      "miniz_oxide-2136f8b807dbd294",
+      "object-6e12209a49bb3b1a",
+      "panic_unwind-88828a024024d89b",
+      "rustc_demangle-6c7f9e897ff52ab9",
+      "rustc_std_workspace_alloc-65ded7c6f6fa1bb7",
+      "rustc_std_workspace_core-1c69fb9e2b8b7ea9",
+      "std-69632c570ff376ae",
+      "std_detect-1950ba6e9d9c4e17",
+      "unwind-f2266549852b5106"
+    ],
+    "driver_command": [
+      "/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/bin/aarch64-linux-android24-clang",
+      "-###",
+      "-shared",
+      "-fPIC",
+      "-o",
+      "/tmp/hoyadb-never-written.so",
+      "-x",
+      "c",
+      "/dev/null",
+      "-Wl,-z,max-page-size=16384",
+      "-pthread",
+      "-ldl",
+      "-lm"
+    ],
+    "driver_link_plan": " \"/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/bin/ld.lld\" \"-EL\" \"--fix-cortex-a53-843419\" \"-z\" \"now\" \"-z\" \"relro\" \"-z\" \"max-page-size=4096\" \"--hash-style=gnu\" \"--eh-frame-hdr\" \"-m\" \"aarch64linux\" \"-shared\" \"-o\" \"/tmp/hoyadb-never-written.so\" \"/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/bin/../sysroot/usr/lib/aarch64-linux-android/24/crtbegin_so.o\" \"-L/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/aarch64\" \"-L/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/bin/../sysroot/usr/lib/aarch64-linux-android/24\" \"-L/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/bin/../sysroot/usr/lib/aarch64-linux-android\" \"-L/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/bin/../sysroot/usr/lib\" \"/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/null-0e1c74.o\" \"-z\" \"max-page-size=16384\" \"-ldl\" \"-lm\" \"/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-aarch64-android.a\" \"-l:libunwind.a\" \"-ldl\" \"-lc\" \"/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-aarch64-android.a\" \"-l:libunwind.a\" \"-ldl\" \"/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/bin/../sysroot/usr/lib/aarch64-linux-android/24/crtend_so.o\""
+  }
+}

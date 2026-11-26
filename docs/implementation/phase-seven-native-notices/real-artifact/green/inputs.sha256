@@ -1,0 +1,5 @@
+2982643861739b6b624fe1f175c0d1d418927e0cbd4612b187292de210687d46  bindings/native/tools/apple_notices.py
+65a591b52a3a632526c1b1f930980cc8a7f2bd561af020b7e6e8fb19eb72bde6  bindings/native/third-party/index.json
+5178e861fbf3c226c42222c4bce70a440fa309fd266105b3eb9c97fffcbf23ba  bindings/native/third-party/NOTICE.md
+a96a5481be73dc5ab125b4cec4b441bedd256f7a1d834694073cba5f342cb951  bindings/native/Cargo.lock
+c19233a6d34e76628ae42c4870be5c6add4fa39c7f4fb9ed46678da95a532496  bindings/swift/Artifacts/native-build.json

@@ -1,0 +1,191 @@
+{
+  "profile": "optimized approved-source SQLCipher4.19.0; no LTO/size threshold claim",
+  "runtime_verified": false,
+  "macos_architectures": [
+    "x86_64"
+  ],
+  "ios_device_architectures": [
+    "arm64"
+  ],
+  "ios_simulator_architectures": [
+    "x86_64",
+    "arm64"
+  ],
+  "source_sha256": {
+    "Cargo.lock": "c0b3ea34c15984efef184be735421a295069ab385d721861a9dcace707ead295",
+    "bindings/native/Cargo.lock": "a96a5481be73dc5ab125b4cec4b441bedd256f7a1d834694073cba5f342cb951",
+    "bindings/native/Cargo.toml": "a772b5e0a899deba105ddb776caeac52ce6c3aff7cdc0cbacb3c672396607b12",
+    "bindings/native/include/HoyaNative/module.modulemap": "33326b1780c8a1c82237313f2ee88578d34e816af4ecc3a4a799abfeb23af60c",
+    "bindings/native/include/hoyadb.h": "2f61e513be42d3e7aabbd9bb06f02a98d88096551276ae89dd5b30aa28526b48",
+    "bindings/native/src/lib.rs": "4cfa3f57fc11b69b09b7a2c9e5e73ce0ae1b13557f90762bba86da417fa19a47",
+    "crates/hoyadb-bindings/Cargo.toml": "ae50f97fefa26f3cae89d1682b06898069ceda539c1c9648756fe718cbf2cc8b",
+    "crates/hoyadb-bindings/src/budget.rs": "8efe83e4524fa929e9da3d8e5e2a65d014e72fb33b44da0c1effe8b31e8d5e15",
+    "crates/hoyadb-bindings/src/codec.rs": "eef07eec01e3d3cf00b0328d93061becb1127369a293dc4c33d3669e258787a1",
+    "crates/hoyadb-bindings/src/commands.rs": "d054b96d1b018747c9ef3510fe4747bba435e894a23dc2cd5ab6f759e73c215f",
+    "crates/hoyadb-bindings/src/data.rs": "a828b4b8afda985e380cd50abcff3ee333854839f3449f369ecc2c118be8c372",
+    "crates/hoyadb-bindings/src/engine.rs": "0ec9daf66925ede06126c3613fb2fa856c51ae82019bafde9cf2e9d2af1ff968",
+    "crates/hoyadb-bindings/src/entities.rs": "c4b93592b14ffa0f1812e35a37b0358a53ac3a945a1a71577f7e449ee400d56b",
+    "crates/hoyadb-bindings/src/lib.rs": "6093398fa60cc3ecb40f318b043d8e5c9d3681e655838bd1fdff06fc1bca0d14",
+    "crates/hoyadb-bindings/src/observations.rs": "86c4a6cec76d3a45b72fb4970219d34d42e8cca1367ed70c4002801903df8de6",
+    "crates/hoyadb-bindings/src/reconciliation.rs": "c1146c9b4c74e89f240b7dee83673a90a3aa7e7675c179cfceec229b0cb29988",
+    "crates/hoyadb-core/Cargo.toml": "393ac6390a59fea8503a060b8992437f49107c10a765f955be1792efefaa3930",
+    "crates/hoyadb-core/src/command/entity.rs": "4cd52a8d8b1498bace74960b7c2cf9cfc8d2e5883461ffe542c44db5c8149918",
+    "crates/hoyadb-core/src/command/entity_owner.rs": "bf80f821009b014f9f60a41a433fc92b7bb8141d00638425ccf57ac23dc04838",
+    "crates/hoyadb-core/src/command/execution.rs": "2dbff03b78930a04bfce4a96136f6593ba3c75391ad405c142ccd3985a069590",
+    "crates/hoyadb-core/src/command/json.rs": "64419603b3ee2d5a890a50d688ed4cd29ce0612136565672103df102c48d3e6c",
+    "crates/hoyadb-core/src/command/merge.rs": "30b4b0793deb5a3778aa7991d4c5b6dd010fc15de3e8d05976678192a7cb2728",
+    "crates/hoyadb-core/src/command/mod.rs": "13e7e273787ec911341ccc31ae672f9dc82187346aba7ef7236a785c4b714d56",
+    "crates/hoyadb-core/src/command/owner.rs": "1219be28a22385cb4ac03626fded586969808282c678e6b40240925f37c88717",
+    "crates/hoyadb-core/src/command/proposed.rs": "e9628729dde8c3d2f9a9dc081635995d9feee3ebcd951b1f386f6bc829f768ef",
+    "crates/hoyadb-core/src/command/pull.rs": "3e00878f88e9be95ae0289c05b7191b0693eb0f3e5c7da63b54245e470ea8af5",
+    "crates/hoyadb-core/src/command/queue.rs": "a0fc1c2252af878836b4b5b1681673f77ccef6ea8f0bece91274260e6a347996",
+    "crates/hoyadb-core/src/command/reconcile.rs": "cd33873c6d54a42b6b507b9ca29be0cae32775bb8b7c00e4a3963c7ae848f8de",
+    "crates/hoyadb-core/src/command/records.rs": "ad299835d15df77b025156239976cc1681600f951c730f554c548d02fd12dabc",
+    "crates/hoyadb-core/src/command/security.rs": "8c119eb27d7a4a64ca0f49f44cd02c23322a19bef1bec360482037d1dbbe1710",
+    "crates/hoyadb-core/src/command/sync.rs": "97aaa3df8c903efbef06453040149419740ae0b1a218e47956d04abada5c262f",
+    "crates/hoyadb-core/src/lib.rs": "9484a9eb3fcf563086c450d1746c7c6a76f8347f26f7928240c77ccebe9433db",
+    "crates/hoyadb-core/src/model/database.rs": "6ac9d0df29bdd7e5c242b09cdc63eb5153bf10378fb742737eeac3481d9d1a35",
+    "crates/hoyadb-core/src/model/migration.rs": "db9cfabe28b4f9a511f2dc77f93e2ae2f2db4096b192277e07ed3b84bff859df",
+    "crates/hoyadb-core/src/model/mod.rs": "9b8132927cd06a8c92d62aa7ca74a8f74c6e1e19ed5082c46b98fd023cbbae79",
+    "crates/hoyadb-core/src/model/query.rs": "462e7329287e21ca866627173ca5e1dd09f5cbf98febf9242b443c9f4fef739d",
+    "crates/hoyadb-core/src/model/reactive.rs": "b20c18ee68e45a6585fed92720ac221485869c13fad01935b7a9ca1418d87037",
+    "crates/hoyadb-core/src/model/schema.rs": "b9b79984a9ab98de0811722f207a245fe10c82444c2612dc10769b882d338741",
+    "crates/hoyadb-core/src/storage/model.rs": "4ae2c5d3b465fd3fcfad7ff8d3ad734decc6884a370d1dbaa8110ef35ae8ca30",
+    "crates/hoyadb-core/src/storage/observation.rs": "1a09c65d6fd034f888b51a9849a037272f53bc73942b991a4f3d0291dc9998cc",
+    "crates/hoyadb-core/src/storage/snapshot/lifecycle.rs": "b0ae5e041abd56436f62785f9d2d9278ead36d9e1616aaaf41e384df8c60ee10",
+    "crates/hoyadb-core/src/storage/snapshot/mod.rs": "f974c092f3779d50f2fcc69a8099d0e91cb71775282886630603f7baf12f9861",
+    "crates/hoyadb-core/src/storage/snapshot/projection.rs": "91aa2fb3d2fe2aca7d3f62c3ea7de5e78bb9ae8decd177d289ec25135134fd29",
+    "crates/hoyadb-core/src/storage/snapshot/sync.rs": "15f109b8a92b3aaaf6e2297afc9e007fd2828445813a7a23a3e9efe2ae0ccf94",
+    "crates/hoyadb-core/src/storage/snapshot/typed.rs": "848c8af97832720530952b88ec59dacb1c83e1c451edec1ad9b99c7fde739c30",
+    "crates/hoyadb-core/src/storage/sync.rs": "3538587fcd2eafb98edc2cb8cf55dd9a395434ec9562cd314ff0a94e40a898f6",
+    "crates/hoyadb-core/src/storage/typed.rs": "f04b224134a1e78d1d41eeba2d83a3ecc0619dbf5a82b02f6ca0a3cf75365078",
+    "crates/hoyadb-core/src/storage.rs": "e52b7582e3f997a1a6ecb5dee126e97ca98976f6e29580c60b01a2b4ad42d3a8",
+    "crates/hoyadb-storage-memory/Cargo.toml": "f894792e4a923e3823af2bc6ac0a6a4181cd7808e81e82d02a8a125450418560",
+    "crates/hoyadb-storage-memory/src/lib.rs": "0c26d6799994174b2c6543fc8cc506a8ada788ae761030b70fd8baa3517724f1",
+    "crates/hoyadb-storage-sqlite/Cargo.toml": "bde9bf1740a99cf5fd0b85cd13c60549a7c169b3e3718f68ebc82f922753d909",
+    "crates/hoyadb-storage-sqlite/src/bin/entity_restart_fixture.rs": "67bec3f33795cc52d900458c47d261a2cb13cd3427c89335d5a55c7901a3a6dd",
+    "crates/hoyadb-storage-sqlite/src/bin/restart_fixture.rs": "136cd650706bbaa274e21fbf67c218318f15487b281e4ee69f4b47d797191acd",
+    "crates/hoyadb-storage-sqlite/src/encryption.rs": "add0aa6bcd9f08ee7831c51063ca8f007d9f75f59a39ab101399699139f17df8",
+    "crates/hoyadb-storage-sqlite/src/lib.rs": "bbe8b09f3fd7413cbf78dd667bbc946b189a6024f3c67782033d36bbd3e5a0c4",
+    "crates/hoyadb-storage-sqlite/src/lifecycle.rs": "d7d94dadf858b846f4ffc4b3e6a1add96ed7fbdc7d7463947c380ab3e29c711f",
+    "crates/hoyadb-storage-sqlite/src/projection.rs": "0dcb0063c412177f4a515e9959d97f0959ac92f163901234cf553bb1a7148ec1",
+    "crates/hoyadb-storage-sqlite/src/query.rs": "063646093bc87bad5af88920e4f355efa1f183ece8a47d5cbd2bc01ef2c596ec",
+    "crates/hoyadb-storage-sqlite/src/sync.rs": "91c671600e5bceefbb5c1d306ab9af0a18d5408c39d23d3daf2107344e9208d7",
+    "rust-toolchain.toml": "9500030ccefd0bab631fb7f1763f79f4103eca3a344c36cf15be869e330683bb"
+  },
+  "commands": [
+    {
+      "argv": [
+        "cargo",
+        "build",
+        "--manifest-path",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/native/Cargo.toml",
+        "--release",
+        "--offline",
+        "--locked"
+      ],
+      "overrides": {
+        "MACOSX_DEPLOYMENT_TARGET": "13.0"
+      }
+    },
+    {
+      "argv": [
+        "cargo",
+        "build",
+        "--manifest-path",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/native/Cargo.toml",
+        "--target",
+        "x86_64-apple-ios",
+        "--release",
+        "--offline",
+        "--locked"
+      ],
+      "overrides": {
+        "CARGO_TARGET_DIR": "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-native/ios-simulator",
+        "SDKROOT": "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk",
+        "IPHONEOS_DEPLOYMENT_TARGET": "15.1"
+      }
+    },
+    {
+      "argv": [
+        "cargo",
+        "build",
+        "--manifest-path",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/native/Cargo.toml",
+        "--target",
+        "aarch64-apple-ios-sim",
+        "--release",
+        "--offline",
+        "--locked"
+      ],
+      "overrides": {
+        "CARGO_TARGET_DIR": "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-native/ios-arm64-simulator",
+        "SDKROOT": "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk",
+        "IPHONEOS_DEPLOYMENT_TARGET": "15.1"
+      }
+    },
+    {
+      "argv": [
+        "cargo",
+        "build",
+        "--manifest-path",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/native/Cargo.toml",
+        "--target",
+        "aarch64-apple-ios",
+        "--release",
+        "--offline",
+        "--locked"
+      ],
+      "overrides": {
+        "CARGO_TARGET_DIR": "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-native/ios-device",
+        "SDKROOT": "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.5.sdk",
+        "IPHONEOS_DEPLOYMENT_TARGET": "15.1"
+      }
+    },
+    {
+      "argv": [
+        "xcrun",
+        "lipo",
+        "-create",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-native/ios-simulator/x86_64-apple-ios/release/libhoyadb_native.a",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-native/ios-arm64-simulator/aarch64-apple-ios-sim/release/libhoyadb_native.a",
+        "-output",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-native/xcframework-simulator/libhoyadb_native.a"
+      ],
+      "overrides": {}
+    },
+    {
+      "argv": [
+        "xcodebuild",
+        "-create-xcframework",
+        "-library",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/native/target/release/libhoyadb_native.a",
+        "-headers",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/native/include",
+        "-library",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-native/ios-device/aarch64-apple-ios/release/libhoyadb_native.a",
+        "-headers",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/native/include",
+        "-library",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-native/xcframework-simulator/libhoyadb_native.a",
+        "-headers",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/native/include",
+        "-output",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/swift/Artifacts/HoyaNative.xcframework"
+      ],
+      "overrides": {}
+    }
+  ],
+  "artifact_files_sha256": {
+    "HoyaNative.xcframework/Info.plist": "fa4dd51ea8237ba99d7d23badd28bc9db8080dbc1c477038db3fb8ef61463a23",
+    "HoyaNative.xcframework/ios-arm64/Headers/HoyaNative/module.modulemap": "33326b1780c8a1c82237313f2ee88578d34e816af4ecc3a4a799abfeb23af60c",
+    "HoyaNative.xcframework/ios-arm64/Headers/hoyadb.h": "2f61e513be42d3e7aabbd9bb06f02a98d88096551276ae89dd5b30aa28526b48",
+    "HoyaNative.xcframework/ios-arm64/libhoyadb_native.a": "64d6fd9ea798dfb8fc03f36dcce9b7e43ce55971756ed937bf4aa5362723244a",
+    "HoyaNative.xcframework/ios-arm64_x86_64-simulator/Headers/HoyaNative/module.modulemap": "33326b1780c8a1c82237313f2ee88578d34e816af4ecc3a4a799abfeb23af60c",
+    "HoyaNative.xcframework/ios-arm64_x86_64-simulator/Headers/hoyadb.h": "2f61e513be42d3e7aabbd9bb06f02a98d88096551276ae89dd5b30aa28526b48",
+    "HoyaNative.xcframework/ios-arm64_x86_64-simulator/libhoyadb_native.a": "bf491fe39f7275b6589063fa4645e050e38d4a2215623311bac6768ff016f396",
+    "HoyaNative.xcframework/macos-x86_64/Headers/HoyaNative/module.modulemap": "33326b1780c8a1c82237313f2ee88578d34e816af4ecc3a4a799abfeb23af60c",
+    "HoyaNative.xcframework/macos-x86_64/Headers/hoyadb.h": "2f61e513be42d3e7aabbd9bb06f02a98d88096551276ae89dd5b30aa28526b48",
+    "HoyaNative.xcframework/macos-x86_64/libhoyadb_native.a": "5aba91a0c4f53a726b8e4abaca073b45ff5adc5916666544577d3b7d45fe15e1"
+  }
+}

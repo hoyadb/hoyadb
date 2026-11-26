@@ -1,0 +1,67 @@
+--- a/bindings/react-native/tools/security/README.md
++++ b/bindings/react-native/tools/security/README.md
+@@ -86,9 +86,14 @@
+   **Capture classification is unchanged:** a digest-bearing observation of a
+   reviewed cache path rejects even when its digest equals the disk hash.
+   `pre_host` and `post_host` are records the runner reads independently
+-  before and after the capture. They must equal the reviewed identity, re-read
+-  every reviewed image identity from the cache, report every reviewed path as
+-  absent as a file, and share the captured JVM's boot-session UUID. Within one
++  before and after the capture. They must equal the reviewed identity and
++  re-read every reviewed image identity from the cache. Their path statuses
++  depend on the version:
++  - version 1: every reviewed path and alias is `absent` as a file;
++  - version 2: each explicit `dual_resident_images` path is `regular`, and
++    every other reviewed path and every alias is `absent`.
++
++  They must also share the captured JVM's boot-session UUID. Within one
+   JVM, every cached image's `base_address` minus its unslid address must give
+   one common slide that is non-negative, below `max_slide` and a multiple of
+   the alignment; `top_address` must be 0. These follow the studied JDK
+--- a/bindings/react-native/tools/security/native_cache.py
++++ b/bindings/react-native/tools/security/native_cache.py
+@@ -112,15 +112,17 @@
+         errors.append('capture_source')
+     elif (source['base_address'], source['top_address']) != STUDIED_ADDRESS_SEMANTICS:
+         errors.append('capture_source: address semantics not studied')
+-    errors += _image_errors(record)
++    image_errors = _image_errors(record)
++    errors += image_errors
+     if version2:
+-        errors += _dual_errors(record)
++        # Follow-up 10: the dual subset can only be checked against valid canonical image identities.
++        errors += _dual_errors(record) if not image_errors else ['dual_resident_images: not validated because images are invalid']
+     return errors
+ 
+ 
+ def _dual_errors(record):
+     images, dual = record['images'], record['dual_resident_images']
+-    canonical = {i['install_path'] for i in images} if isinstance(images, list) and all(isinstance(i, dict) for i in images) else set()
++    canonical = {i['install_path'] for i in images}  # images already validated by _image_errors
+     if not isinstance(dual, dict) or not all(isinstance(path, str) and path in canonical for path in dual) \
+             or not all(_exact_keys(v, DUAL_KEYS) and _int(v['bytes']) and v['bytes'] > 0
+                        and isinstance(v['sha256'], str) and SHA256.fullmatch(v['sha256']) for v in dual.values()):
+--- a/bindings/react-native/tools/security/test_native_cache.py
++++ b/bindings/react-native/tools/security/test_native_cache.py
+@@ -492,6 +492,21 @@
+                                evidence_v2(record, pre=host_v2(expected_v2()), post=host_v2(expected_v2())))
+                 self.rejected_with(result, 'system cache record: dual_resident_images')
+ 
++    # Follow-up 10 (root finding): an invalid image identity must be a record rejection, never an exception.
++    def test_sr22d_missing_image_identity_rejects_instead_of_raising(self):
++        for key in ('install_path', 'image_uuid', 'unslid_load_address', 'text_size'):
++            for index in (0, 3):
++                record = expected_v2()
++                record['images'][index].pop(key)
++                with self.subTest(key=key, index=index):
++                    try:
++                        direct = N.check_host(N.SystemCacheEvidence(record, {}, {}))
++                        result = check([jvm([cached(LIBSYSTEM)])], evidence_v2(record, pre=host_v2(expected_v2()), post=host_v2(expected_v2())))
++                    except Exception as error:  # the defect: an exception instead of a rejection
++                        self.fail('raised %s instead of rejecting' % type(error).__name__)
++                    self.assertTrue(any(e.startswith('system cache record: images') for e in direct), direct)
++                    self.rejected_with(result, 'system cache record: images')
++
+     def test_sr22d_changed_missing_extra_or_incomplete_host_file_evidence_rejects(self):
+         changes = {
+             'sha changed': lambda h: h['dual_resident_files'][KERNEL].update(sha256='1' * 64),

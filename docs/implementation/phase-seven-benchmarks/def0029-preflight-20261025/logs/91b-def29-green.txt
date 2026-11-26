@@ -1,0 +1,8 @@
+test_DEF0029_P01_existing_evidence_after_admit_rejects_without_consuming_the_permit (test_browser_server.BrowserControllerTests.test_DEF0029_P01_existing_evidence_after_admit_rejects_without_consuming_the_permit) ... ok
+test_DEF0029_P02_revoke_recover_then_a_different_identity_starts_exactly_once (test_browser_server.BrowserControllerTests.test_DEF0029_P02_revoke_recover_then_a_different_identity_starts_exactly_once) ... ok
+test_DEF0029_P03_mismatch_and_drift_keep_their_semantics_and_drift_wins_over_existing_evidence (test_browser_server.BrowserControllerTests.test_DEF0029_P03_mismatch_and_drift_keep_their_semantics_and_drift_wins_over_existing_evidence) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.162s
+
+OK

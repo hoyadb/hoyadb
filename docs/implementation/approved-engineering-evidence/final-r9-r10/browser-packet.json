@@ -1,0 +1,39 @@
+{
+  "result": "passed",
+  "source_and_artifact_inputs": 112,
+  "dist_inputs": 110,
+  "runtime_inputs": 187,
+  "tested_wasm_sha256": "9a37bbce1b49df4109394786b3826338e027f33d4abbf38ac543c8a2422ef09c",
+  "build_packet": {
+    "path": "/tmp/hoyadb-followup-20261031/final-web-refreshed/packet.json",
+    "sha256": "9f49ce9b21d05f8d43c4cf4f39202e4fc11c8a25acb6278b266db793fbe309fd"
+  },
+  "staged_inputs_unchanged": true,
+  "main_inputs_match": true,
+  "build_artifacts_match": true,
+  "tool_inputs_unchanged": true,
+  "recorded_files": {
+    "run.py": "2ffaabd8e0c1d25d0c32623cedb2c7ecdf0d7c943ae9a44a27e3fa60c9c84a3c",
+    "execution.json": "f19c24dfe0c0ecb144c1bff5cf831965f67e13395bb1f08ad5254ac4d3400577",
+    "application-browser.log": "9981d7aae4936a678da03d04697befa5dbb88081ba702039d5b7dce86132c29d",
+    "inputs-before.json": "edd1ecd0e0c96ff8b5d9ccdbf98b76ed88e77e2cde234d3034a757de9faa0163",
+    "inputs-after.json": "edd1ecd0e0c96ff8b5d9ccdbf98b76ed88e77e2cde234d3034a757de9faa0163",
+    "runtime-freeze.json": "8549dc12cf14db7e5ffb47bb0687e799767f29c6350ed5aad0eac5d8f13c1818",
+    "tools-before.json": "d2e1ab5279e1ff3bf9900f3e11ed95d3e475ad397b2db20e3f3338e949627b59",
+    "tools-after.json": "d2e1ab5279e1ff3bf9900f3e11ed95d3e475ad397b2db20e3f3338e949627b59",
+    "chrome-diagnostic.json": "2872de45a73867fc855528c21dcb3769421e9696d56e14c5f04c8096488c3729",
+    "chrome-diagnostic.log": "aabfb7b1bfe3256866d6faa228d77a6d5e1ddfa49766068762b0e4e4ba4c6978",
+    "attempt-2/run.py": "2ffaabd8e0c1d25d0c32623cedb2c7ecdf0d7c943ae9a44a27e3fa60c9c84a3c",
+    "attempt-2/execution.json": "1681b1bb6dfb4a5f23ce3c1a5415d93539215414bf2358afdfe30de68053baa8",
+    "attempt-2/application-browser.log": "889c99a5944f31a853c5d3d6d73e74b91435040b98602008cce5ded6012eb076",
+    "attempt-2/browser.json": "f2f1be925d36292af1d53609e8e6fc03a4ab2ede2d741956bb52eba2fcd22151",
+    "attempt-2/inputs-before.json": "edd1ecd0e0c96ff8b5d9ccdbf98b76ed88e77e2cde234d3034a757de9faa0163",
+    "attempt-2/inputs-after.json": "edd1ecd0e0c96ff8b5d9ccdbf98b76ed88e77e2cde234d3034a757de9faa0163",
+    "REVIEW.md": "33ce6ab98a51d94a798e31e030841bc6367ed4cabd01ef50e46c22e3cd68a270"
+  },
+  "limits": [
+    "application tutorial + protected OPFS close/reopen in one installed Chrome",
+    "broader test-controls and page-reload suites not executed",
+    "no new build, dependency, runtime or test modification"
+  ]
+}

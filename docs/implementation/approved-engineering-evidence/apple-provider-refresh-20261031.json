@@ -1,0 +1,383 @@
+{
+  "scope": "Fresh imported-symbol and archive provenance for current Apple build; not runtime/platform/legal certification",
+  "old_index_sha256": "65a591b52a3a632526c1b1f930980cc8a7f2bd561af020b7e6e8fb19eb72bde6",
+  "native_parent_sha256": "2fbf43373ba0d0cd03ce5da068d3d0c6f4cff89f045c1d9f218201977ceb21a3",
+  "native_sources": {
+    "Cargo.lock": "a7385544aa00356ebdc3e1fad3e95ca61722d1a85333f19bae18049cd77ac507",
+    "crates/hoyadb-bindings/Cargo.toml": "508986656f7406bad3599645e037d2b7c25c945232c9ac137633839777ba7c3f",
+    "crates/hoyadb-bindings/src/budget.rs": "8efe83e4524fa929e9da3d8e5e2a65d014e72fb33b44da0c1effe8b31e8d5e15",
+    "crates/hoyadb-bindings/src/codec.rs": "eef07eec01e3d3cf00b0328d93061becb1127369a293dc4c33d3669e258787a1",
+    "crates/hoyadb-bindings/src/commands.rs": "2837b59a02a58754893a3e1a69c506c3fa01d0459824c81907c2abaefa776756",
+    "crates/hoyadb-bindings/src/data.rs": "a828b4b8afda985e380cd50abcff3ee333854839f3449f369ecc2c118be8c372",
+    "crates/hoyadb-bindings/src/engine.rs": "302857e0443cb5d585d11bcdd397fba36f5e7cffccedd3054d7d8915e7f77eaa",
+    "crates/hoyadb-bindings/src/entities.rs": "c4b93592b14ffa0f1812e35a37b0358a53ac3a945a1a71577f7e449ee400d56b",
+    "crates/hoyadb-bindings/src/lib.rs": "36f2c223d737b34ecb21b89aeddeeb94be386963ed0f230a1ce1c3c2379c6372",
+    "crates/hoyadb-bindings/src/observations.rs": "360622ce3714c11650d3804bda994f833fdd173b18f820b850d2e487e4cefc87",
+    "crates/hoyadb-bindings/src/reconciliation.rs": "32d3ba19369e728101b39a64bdadd53616f2f37863e30235dd5e290c7b232df6",
+    "crates/hoyadb-core/Cargo.toml": "1cd7711f51b4dc97e28a2160265dd71d1cb1b7202559fd05c4e277f14162075b",
+    "crates/hoyadb-core/src/command/entity.rs": "fbebe6e39f29a3fbdc62086e2b8be04514792fbdfd4bb1d1d1fd4d549390933e",
+    "crates/hoyadb-core/src/command/entity_owner.rs": "f58eb201fc8e515f36acecbee4b30e86538ee2ac4a0b6139c0c90902481aeb9c",
+    "crates/hoyadb-core/src/command/execution.rs": "b408c3f67490e18e9ee969d5ac9ccc0253b44d73226956cb8f1d7f9cf7c70e82",
+    "crates/hoyadb-core/src/command/json.rs": "64419603b3ee2d5a890a50d688ed4cd29ce0612136565672103df102c48d3e6c",
+    "crates/hoyadb-core/src/command/merge.rs": "df16526a77f5f96c1aabb03d7df554ff9a53cd4af0ddb874dddc6cc98c3aacc8",
+    "crates/hoyadb-core/src/command/mod.rs": "aeaf1e69fc9dd5cc4f8cb6ac85e14fef3434bf4f88793e27b035d623a326be88",
+    "crates/hoyadb-core/src/command/overlay.rs": "65b36cbcdf2db74c114533373419cd894d1b9bdcf42db198f2092519ad89b847",
+    "crates/hoyadb-core/src/command/owner.rs": "1459484e1b674e6852a9002b8c2e1f6319f97afd865bdbee882d4b817cf43727",
+    "crates/hoyadb-core/src/command/policy.rs": "daf53a58133f92b537d95e08b5bd21346ee2130569ca3199ddb1607f6c6ee58a",
+    "crates/hoyadb-core/src/command/proposed.rs": "9099639354f6f28f0a946d8f15d61e2dbbe99bcca71aad21c65147a31c5afbc5",
+    "crates/hoyadb-core/src/command/pull.rs": "aa601a72a9289133fbdbdb19db06ce356ba2d1516750a54e6797ce1565aa909a",
+    "crates/hoyadb-core/src/command/queue.rs": "95390c786780d9c5ac8fd47025b5454b5b65558de835a04eeff3ecec2b34cda9",
+    "crates/hoyadb-core/src/command/reconcile/discard.rs": "c3b45cc287e723acfbbeda285d5c2405b8b09f42d476b42620892fb16a906014",
+    "crates/hoyadb-core/src/command/reconcile/fallback.rs": "4a79e4468685764f35b9883006116f18757137ba1a3a4ed165fb4ba3a36a0a2a",
+    "crates/hoyadb-core/src/command/reconcile.rs": "0b64457392a7d173287c9acfdc07f22d435e622bc85754fb1c8fda150b89d20d",
+    "crates/hoyadb-core/src/command/records.rs": "73e2c61c8b388068625965a152a8a07aaa1ef8c31b4d0c26d3b6d667ed535ade",
+    "crates/hoyadb-core/src/command/security.rs": "8dd4e236fac63c93019ce32e3e17932915409a4262bab5966765e19deb513038",
+    "crates/hoyadb-core/src/command/sync.rs": "26d82a46b71f3206c3414db312ceffa10c1a48ce80399c790c30fcb4779295a4",
+    "crates/hoyadb-core/src/lib.rs": "9484a9eb3fcf563086c450d1746c7c6a76f8347f26f7928240c77ccebe9433db",
+    "crates/hoyadb-core/src/model/database.rs": "33329a639cdada74dc7a3748d0e7187bbca7b7d927ddc3ad1af21ed66798ed0b",
+    "crates/hoyadb-core/src/model/migration.rs": "db9cfabe28b4f9a511f2dc77f93e2ae2f2db4096b192277e07ed3b84bff859df",
+    "crates/hoyadb-core/src/model/mod.rs": "9b8132927cd06a8c92d62aa7ca74a8f74c6e1e19ed5082c46b98fd023cbbae79",
+    "crates/hoyadb-core/src/model/query.rs": "224ad496a17f2fc702ed808baa7ff2c1fbbd8f41fcf982e6b7174b32e54bd67f",
+    "crates/hoyadb-core/src/model/reactive.rs": "50ffa02c20a1d2b9a12d33aaf796e3625f88fc8dfdb0112ee4c805bdc86b384d",
+    "crates/hoyadb-core/src/model/schema.rs": "b9b79984a9ab98de0811722f207a245fe10c82444c2612dc10769b882d338741",
+    "crates/hoyadb-core/src/storage/counters.rs": "ed14dcf6a0c7f0e9b4ee10c5167595404dec5145288da709d7701bf02dbd5af7",
+    "crates/hoyadb-core/src/storage/model.rs": "48faafdadc8aa5e4cb4ef8971e34735bbfc277a0405d27f3a923e1bdf5e592c2",
+    "crates/hoyadb-core/src/storage/observation.rs": "1a09c65d6fd034f888b51a9849a037272f53bc73942b991a4f3d0291dc9998cc",
+    "crates/hoyadb-core/src/storage/snapshot/lifecycle.rs": "21cdee8560896debba4b6ef2084eceec70a635ed9c1c01facf8cec09885ec67e",
+    "crates/hoyadb-core/src/storage/snapshot/mod.rs": "568da1e7cd79247ee2bd46eb3261e762177c2b2023985330222f8d2c67e415ed",
+    "crates/hoyadb-core/src/storage/snapshot/projection.rs": "91aa2fb3d2fe2aca7d3f62c3ea7de5e78bb9ae8decd177d289ec25135134fd29",
+    "crates/hoyadb-core/src/storage/snapshot/sync.rs": "8872799e21edd021f47908510544d0d75e991df0c4a4bbde835a88d67077e0f1",
+    "crates/hoyadb-core/src/storage/snapshot/typed.rs": "0a8ed744aa90dbc75d1dae649a84a20eeaad57601cc7c0d298d0d67000d21386",
+    "crates/hoyadb-core/src/storage/snapshot/undo.rs": "d5fd667e33a76b90e8570a6c975d9d96a24fb223bb40467708e61e6b1d57e5fe",
+    "crates/hoyadb-core/src/storage/sync.rs": "de78f2865309919d3dbbb098d913548f101b2de38e3698beec5d46c4132f1626",
+    "crates/hoyadb-core/src/storage/typed.rs": "fff0af4a0483e096f9768ccdc24e23a445547098895740d747c76c2d7055b7aa",
+    "crates/hoyadb-core/src/storage.rs": "5b7dc18c1d3de75e0aea273ea65675df4f0724bf7b898b3c3ffe0ca3b3175160",
+    "crates/hoyadb-native/Cargo.lock": "a96a5481be73dc5ab125b4cec4b441bedd256f7a1d834694073cba5f342cb951",
+    "crates/hoyadb-native/Cargo.toml": "a5588297516d698ab453b96d30982abcbdb2ed216b80d5aa72be727666feb0c9",
+    "crates/hoyadb-native/include/HoyaNative/module.modulemap": "33326b1780c8a1c82237313f2ee88578d34e816af4ecc3a4a799abfeb23af60c",
+    "crates/hoyadb-native/include/hoyadb.h": "2f61e513be42d3e7aabbd9bb06f02a98d88096551276ae89dd5b30aa28526b48",
+    "crates/hoyadb-native/src/lib.rs": "4cfa3f57fc11b69b09b7a2c9e5e73ce0ae1b13557f90762bba86da417fa19a47",
+    "crates/hoyadb-storage-memory/Cargo.toml": "408ec7aec3268ea5b8fa87d3d2f1980a01000b1da299662ad9d02b43834a371d",
+    "crates/hoyadb-storage-memory/src/lib.rs": "0c26d6799994174b2c6543fc8cc506a8ada788ae761030b70fd8baa3517724f1",
+    "crates/hoyadb-storage-sqlite/Cargo.toml": "7e274ae6f53a43271949403625bfdb4f84ef3601b5029d9fcd2b6238f3fe6f2b",
+    "crates/hoyadb-storage-sqlite/src/bin/entity_restart_fixture.rs": "67bec3f33795cc52d900458c47d261a2cb13cd3427c89335d5a55c7901a3a6dd",
+    "crates/hoyadb-storage-sqlite/src/bin/restart_fixture.rs": "75c241135617e5a5ef5f6877190c21d08b5b8a3afbc454eb06a9da569fc38f2f",
+    "crates/hoyadb-storage-sqlite/src/encryption.rs": "add0aa6bcd9f08ee7831c51063ca8f007d9f75f59a39ab101399699139f17df8",
+    "crates/hoyadb-storage-sqlite/src/lib.rs": "6eb0e7e6200889eda48a0c4e97dfb02a97628fc34d84d02927e43079e66482ed",
+    "crates/hoyadb-storage-sqlite/src/lifecycle.rs": "a335aa8388d67f22a63198daa2108140909f71f2654f33d5f2222dbb75c70241",
+    "crates/hoyadb-storage-sqlite/src/projection.rs": "0dcb0063c412177f4a515e9959d97f0959ac92f163901234cf553bb1a7148ec1",
+    "crates/hoyadb-storage-sqlite/src/query.rs": "063646093bc87bad5af88920e4f355efa1f183ece8a47d5cbd2bc01ef2c596ec",
+    "crates/hoyadb-storage-sqlite/src/sync.rs": "3beb71a7548158b5482967201a4d3d34b7a5b133ad80c20dae2c058919c163a7",
+    "crates/hoyadb-storage-sqlite/src/test_hooks.rs": "4f4c8adbc613dd4132512bd7ea60b657cc9eed14c523ccabf060092edbdf6583",
+    "rust-toolchain.toml": "9500030ccefd0bab631fb7f1763f79f4103eca3a344c36cf15be869e330683bb"
+  },
+  "independent_runtime_manifest_sha256": "d60df38db4f5455e14adfcbf4caa97fee1995e5359068d941368d663a0681b46",
+  "nm": {
+    "path": "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/x86_64-apple-darwin/bin/llvm-nm",
+    "sha256": "eef200891f0e7ad04dc10ee93f6250f93194e363fd66ca388aafc83f3c003ec7",
+    "version": "llvm-nm, compatible with GNU nm\nLLVM (http://llvm.org/):\n  LLVM version 22.1.8-rust-1.98.1-stable\n  Optimized build."
+  },
+  "commands": [
+    {
+      "argv": [
+        "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/x86_64-apple-darwin/bin/llvm-nm",
+        "--version"
+      ],
+      "status": 0,
+      "stdout_sha256": "5504e5249c3421643ff1aa4576e7edc2f727ce3e88bf389fd18321b8d8a30f6f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_prefix": "/tmp/hoyadb-followup-20261031/apple-provider-symbols/nm-version"
+    },
+    {
+      "argv": [
+        "rustc",
+        "--version",
+        "--verbose"
+      ],
+      "status": 0,
+      "stdout_sha256": "2b0608d8a24394ed19f8d435714c610cf8495e308a00e5e3dc7c20af922389d3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_prefix": "/tmp/hoyadb-followup-20261031/apple-provider-symbols/rustc-version"
+    },
+    {
+      "argv": [
+        "xcrun",
+        "lipo",
+        "-archs",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/swift/Artifacts/HoyaNative.xcframework/macos-x86_64/libhoyadb_native.a"
+      ],
+      "status": 0,
+      "stdout_sha256": "aaf631698ae5160ceb04a97681a14887fdcab47cd6e0f163c87485b3b1340b62",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_prefix": "/tmp/hoyadb-followup-20261031/apple-provider-symbols/macos-x86_64-archs"
+    },
+    {
+      "argv": [
+        "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/x86_64-apple-darwin/bin/llvm-nm",
+        "--undefined-only",
+        "--just-symbol-name",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/swift/Artifacts/HoyaNative.xcframework/macos-x86_64/libhoyadb_native.a"
+      ],
+      "status": 0,
+      "stdout_sha256": "788fd0f32005be9bbce55825a94d722ad44284d83435d36ebccf1ccc2585c8c2",
+      "stderr_sha256": "070e3f49c46608192cfed8c94fe8a5f99644c645ee831936ea5f0d46295e66a9",
+      "raw_output_prefix": "/tmp/hoyadb-followup-20261031/apple-provider-symbols/macos-x86_64-x86_64-undefined"
+    },
+    {
+      "argv": [
+        "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/x86_64-apple-darwin/bin/llvm-nm",
+        "--defined-only",
+        "--just-symbol-name",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/swift/Artifacts/HoyaNative.xcframework/macos-x86_64/libhoyadb_native.a"
+      ],
+      "status": 0,
+      "stdout_sha256": "7988e0ac60036b4b884b899e3ac80682b08086e37fa4031bb6649c525bc1a05b",
+      "stderr_sha256": "070e3f49c46608192cfed8c94fe8a5f99644c645ee831936ea5f0d46295e66a9",
+      "raw_output_prefix": "/tmp/hoyadb-followup-20261031/apple-provider-symbols/macos-x86_64-x86_64-defined"
+    },
+    {
+      "argv": [
+        "xcrun",
+        "lipo",
+        "-archs",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/swift/Artifacts/HoyaNative.xcframework/ios-arm64/libhoyadb_native.a"
+      ],
+      "status": 0,
+      "stdout_sha256": "c1669e1d8edca98769c37d494b76442a1d6e5ffffd7b4da1fb63aef8ebaf6f01",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_prefix": "/tmp/hoyadb-followup-20261031/apple-provider-symbols/ios-arm64-archs"
+    },
+    {
+      "argv": [
+        "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/x86_64-apple-darwin/bin/llvm-nm",
+        "--undefined-only",
+        "--just-symbol-name",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/swift/Artifacts/HoyaNative.xcframework/ios-arm64/libhoyadb_native.a"
+      ],
+      "status": 0,
+      "stdout_sha256": "9e32f760df4eafd837b02de1ba36caf3ab6f047564cc8c0935f69cde5321c876",
+      "stderr_sha256": "460ea0de979f4050ff6c5f5ac1e1bdbc63f4527e7f23a9f91ecf655a6453c974",
+      "raw_output_prefix": "/tmp/hoyadb-followup-20261031/apple-provider-symbols/ios-arm64-arm64-undefined"
+    },
+    {
+      "argv": [
+        "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/x86_64-apple-darwin/bin/llvm-nm",
+        "--defined-only",
+        "--just-symbol-name",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/swift/Artifacts/HoyaNative.xcframework/ios-arm64/libhoyadb_native.a"
+      ],
+      "status": 0,
+      "stdout_sha256": "b1dda021ad0b96bbc06013587d14662dfe1c785d8eb8ebea59ae67fe9611f24f",
+      "stderr_sha256": "460ea0de979f4050ff6c5f5ac1e1bdbc63f4527e7f23a9f91ecf655a6453c974",
+      "raw_output_prefix": "/tmp/hoyadb-followup-20261031/apple-provider-symbols/ios-arm64-arm64-defined"
+    },
+    {
+      "argv": [
+        "xcrun",
+        "lipo",
+        "-archs",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/swift/Artifacts/HoyaNative.xcframework/ios-arm64_x86_64-simulator/libhoyadb_native.a"
+      ],
+      "status": 0,
+      "stdout_sha256": "9cb483fd3739db2602d4c5bf672f4af954dc6dad82b36e8642b034af58f11c11",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_prefix": "/tmp/hoyadb-followup-20261031/apple-provider-symbols/ios-arm64_x86_64-simulator-archs"
+    },
+    {
+      "argv": [
+        "xcrun",
+        "lipo",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/swift/Artifacts/HoyaNative.xcframework/ios-arm64_x86_64-simulator/libhoyadb_native.a",
+        "-thin",
+        "x86_64",
+        "-output",
+        "/tmp/hoyadb-followup-20261031/tmpgggbrkfu/x86_64.a"
+      ],
+      "status": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_prefix": "/tmp/hoyadb-followup-20261031/apple-provider-symbols/ios-arm64_x86_64-simulator-x86_64-thin"
+    },
+    {
+      "argv": [
+        "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/x86_64-apple-darwin/bin/llvm-nm",
+        "--undefined-only",
+        "--just-symbol-name",
+        "/tmp/hoyadb-followup-20261031/tmpgggbrkfu/x86_64.a"
+      ],
+      "status": 0,
+      "stdout_sha256": "624d156392013f6d7e30d4beea0bbff775748162e1afbeaf3f0d6f70b154a4ae",
+      "stderr_sha256": "ea21e0dc25213228759df22708b93ac859a65019051f0aebe22661051093cd5a",
+      "raw_output_prefix": "/tmp/hoyadb-followup-20261031/apple-provider-symbols/ios-arm64_x86_64-simulator-x86_64-undefined"
+    },
+    {
+      "argv": [
+        "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/x86_64-apple-darwin/bin/llvm-nm",
+        "--defined-only",
+        "--just-symbol-name",
+        "/tmp/hoyadb-followup-20261031/tmpgggbrkfu/x86_64.a"
+      ],
+      "status": 0,
+      "stdout_sha256": "050c9b0c1e6d530843e5805e592ece94703f0ec8d5522544a419e97f92c5ff78",
+      "stderr_sha256": "ea21e0dc25213228759df22708b93ac859a65019051f0aebe22661051093cd5a",
+      "raw_output_prefix": "/tmp/hoyadb-followup-20261031/apple-provider-symbols/ios-arm64_x86_64-simulator-x86_64-defined"
+    },
+    {
+      "argv": [
+        "xcrun",
+        "lipo",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/swift/Artifacts/HoyaNative.xcframework/ios-arm64_x86_64-simulator/libhoyadb_native.a",
+        "-thin",
+        "arm64",
+        "-output",
+        "/tmp/hoyadb-followup-20261031/tmpgggbrkfu/arm64.a"
+      ],
+      "status": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_prefix": "/tmp/hoyadb-followup-20261031/apple-provider-symbols/ios-arm64_x86_64-simulator-arm64-thin"
+    },
+    {
+      "argv": [
+        "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/x86_64-apple-darwin/bin/llvm-nm",
+        "--undefined-only",
+        "--just-symbol-name",
+        "/tmp/hoyadb-followup-20261031/tmpgggbrkfu/arm64.a"
+      ],
+      "status": 0,
+      "stdout_sha256": "c80452b83f3b4b1506e80f84ae88e3170ed6c3b9675cc0b995b8058a2f333553",
+      "stderr_sha256": "e66dfd6220bcf4d151b462ffb61a15eda35e90e0e4c3f83f92f3f58eebb784bd",
+      "raw_output_prefix": "/tmp/hoyadb-followup-20261031/apple-provider-symbols/ios-arm64_x86_64-simulator-arm64-undefined"
+    },
+    {
+      "argv": [
+        "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/x86_64-apple-darwin/bin/llvm-nm",
+        "--defined-only",
+        "--just-symbol-name",
+        "/tmp/hoyadb-followup-20261031/tmpgggbrkfu/arm64.a"
+      ],
+      "status": 0,
+      "stdout_sha256": "1b17a3fa10df7f2aeafa84e388020c608111b4892797233385f6351430b2ff9c",
+      "stderr_sha256": "e66dfd6220bcf4d151b462ffb61a15eda35e90e0e4c3f83f92f3f58eebb784bd",
+      "raw_output_prefix": "/tmp/hoyadb-followup-20261031/apple-provider-symbols/ios-arm64_x86_64-simulator-arm64-defined"
+    }
+  ],
+  "libraries": {
+    "macos-x86_64/libhoyadb_native.a": {
+      "sha256": "b92e3f272c9d7d9d300b929dea395e95f328699c1fd00c66d386cf7920220fa1",
+      "architectures": [
+        "x86_64"
+      ],
+      "per_arch": {
+        "x86_64": {
+          "thin_sha256": "b92e3f272c9d7d9d300b929dea395e95f328699c1fd00c66d386cf7920220fa1",
+          "imported_symbols": {
+            "CommonCrypto": [
+              "_CCCryptorCreate",
+              "_CCCryptorFinal",
+              "_CCCryptorRelease",
+              "_CCCryptorUpdate",
+              "_CCHmacFinal",
+              "_CCHmacInit",
+              "_CCHmacUpdate",
+              "_CCKeyDerivationPBKDF",
+              "_CCRandomGenerateBytes"
+            ],
+            "Security": [
+              "_SecRandomCopyBytes",
+              "_kSecRandomDefault"
+            ]
+          },
+          "libtomcrypt_symbols": []
+        }
+      }
+    },
+    "ios-arm64/libhoyadb_native.a": {
+      "sha256": "45a3de496a37a8c047929a2137884f691323258ead9489c8f6bb860b339d502d",
+      "architectures": [
+        "arm64"
+      ],
+      "per_arch": {
+        "arm64": {
+          "thin_sha256": "45a3de496a37a8c047929a2137884f691323258ead9489c8f6bb860b339d502d",
+          "imported_symbols": {
+            "CommonCrypto": [
+              "_CCCryptorCreate",
+              "_CCCryptorFinal",
+              "_CCCryptorRelease",
+              "_CCCryptorUpdate",
+              "_CCHmacFinal",
+              "_CCHmacInit",
+              "_CCHmacUpdate",
+              "_CCKeyDerivationPBKDF",
+              "_CCRandomGenerateBytes"
+            ],
+            "Security": [
+              "_SecRandomCopyBytes",
+              "_kSecRandomDefault"
+            ]
+          },
+          "libtomcrypt_symbols": []
+        }
+      }
+    },
+    "ios-arm64_x86_64-simulator/libhoyadb_native.a": {
+      "sha256": "cc1c464928deff25a2d496b37e313745d98974ad5a6fe94b77799375c1bbf1e8",
+      "architectures": [
+        "x86_64",
+        "arm64"
+      ],
+      "per_arch": {
+        "x86_64": {
+          "thin_sha256": "bd5b1a34dc69021e8e092926e9ff8b2747337b08a856c3b91acc16b2c3691595",
+          "imported_symbols": {
+            "CommonCrypto": [
+              "_CCCryptorCreate",
+              "_CCCryptorFinal",
+              "_CCCryptorRelease",
+              "_CCCryptorUpdate",
+              "_CCHmacFinal",
+              "_CCHmacInit",
+              "_CCHmacUpdate",
+              "_CCKeyDerivationPBKDF",
+              "_CCRandomGenerateBytes"
+            ],
+            "Security": [
+              "_SecRandomCopyBytes",
+              "_kSecRandomDefault"
+            ]
+          },
+          "libtomcrypt_symbols": []
+        },
+        "arm64": {
+          "thin_sha256": "97c08f003e471a276ffe44a421f4eacc4fffc0105637e5997c87205afd7c3606",
+          "imported_symbols": {
+            "CommonCrypto": [
+              "_CCCryptorCreate",
+              "_CCCryptorFinal",
+              "_CCCryptorRelease",
+              "_CCCryptorUpdate",
+              "_CCHmacFinal",
+              "_CCHmacInit",
+              "_CCHmacUpdate",
+              "_CCKeyDerivationPBKDF",
+              "_CCRandomGenerateBytes"
+            ],
+            "Security": [
+              "_SecRandomCopyBytes",
+              "_kSecRandomDefault"
+            ]
+          },
+          "libtomcrypt_symbols": []
+        }
+      }
+    }
+  },
+  "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)\nbinary: rustc\ncommit-hash: 48a229ceaefd4985c50990b14116b6d856af0985\ncommit-date: 2026-09-01\nhost: x86_64-apple-darwin\nrelease: 1.98.1\nLLVM version: 22.1.8",
+  "libtomcrypt_symbol_patterns": [
+    "(ltc_|tomcrypt|register_cipher|register_hash|register_prng|sqlcipher_ltc)",
+    "^_(find_cipher|find_hash|cipher_descriptor|hash_descriptor|prng_descriptor|crypt_argchk|pkcs_5_alg2|hmac_init|aes_setup|rijndael_|sha1_init|sha256_init|sha512_init|fortuna_)"
+  ],
+  "retained_toolchain_inputs_verified": true,
+  "old_corpus_rejection": "stale-provider-evidence: CommonCrypto evidence for macos-x86_64/libhoyadb_native.a does not match the shipped library bytes"
+}

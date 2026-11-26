@@ -1,0 +1,3 @@
+HOYA_SWIFT_GENERAL_CONSUMER_GREEN mode=writer schemas=2 protected=SQLCipher4.19.0 automatic_observers=2 commands=cancel-fifo queue=frozen-retry entity=automatic pull=stale-refetch hook=async migration=authored elapsed_s=8.701191151048988
+HOYA_SWIFT_GENERAL_CONSUMER_GREEN mode=reader protected_restart=independent wrong_key=unchanged rows=lossless-i64-float queue=frozen-retry mapping=guarded elapsed_s=5.580140198930167
+HOYA_SWIFT_IOS_INDEPENDENT_WRITER_READER_GREEN

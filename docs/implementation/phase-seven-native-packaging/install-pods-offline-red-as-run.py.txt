@@ -1,0 +1,102 @@
+"""Restricted CocoaPods install with process-level network denial and fresh owned CP_HOME/CP_CACHE.
+
+Same verified inputs/environment as install-pods.py. Network is denied for pod and every child via
+macOS sandbox-exec (deprecated but present); a probe inside the same profile must observe EPERM.
+No global firewall/proxy/DNS/HOME change. The previous Pods tree and locks are preserved, not deleted.
+"""
+from pathlib import Path
+import hashlib
+import json
+import os
+import subprocess
+import sys
+
+repo = Path(__file__).resolve().parents[2]
+stage = repo / 'target/phase-seven-rn'
+label = sys.argv[1]
+evidence = stage / f'offline-{label}'
+evidence.mkdir()
+consumer = Path((stage / 'owned-consumer-root.txt').read_text().strip())
+assert consumer.name.startswith('hoyadb-phase7-rn-consumer-')
+approved = repo / 'target/phase-seven-activation/npm/node_modules'
+profile = '(version 1)(allow default)(deny network*)'
+sandbox = ['sandbox-exec', '-p', profile]
+
+archives = json.loads((repo / 'target/phase-seven-activation/ios-verified.json').read_text())['archives']
+selected = {}
+for item in archives:
+    if '-debug.tar.gz' not in item['name']:
+        continue
+    path = repo / 'target/phase-seven-activation/ios' / item['name']
+    data = path.read_bytes()
+    assert hashlib.sha256(data).hexdigest() == item['sha256'] and hashlib.sha512(data).hexdigest() == item['sha512']
+    selected[item['name']] = str(path)
+assert len(selected) == 3
+
+
+def find(fragment):
+    return next(v for k, v in selected.items() if fragment in k)
+
+
+for name in ['REACT_NATIVE_OVERRIDE_HERMES_DIR', 'HERMES_COMMIT', 'RCT_TESTONLY_RNCORE_VERSION', 'RCT_DEPS_VERSION']:
+    assert name not in os.environ, 'unexpected inherited source/version override: ' + name
+home, cache = consumer / f'.pod-home-offline-{label}', consumer / f'.pod-cache-offline-{label}'
+assert not home.exists() and not cache.exists()
+env = {
+    'CP_HOME_DIR': str(home), 'CP_CACHE_DIR': str(cache),
+    'RCT_USE_PREBUILT_RNCORE': '1', 'RCT_TESTONLY_RNCORE_TARBALL_PATH': find('reactnative-core-debug'),
+    'RCT_USE_RN_DEP': '1', 'RCT_USE_LOCAL_RN_DEP': find('reactnative-dependencies-debug'),
+    'HERMES_ENGINE_TARBALL_PATH': find('hermes-ios-debug'),
+    'RCT_BUILD_HERMES_FROM_SOURCE': 'false', 'RCT_HERMES_V1_ENABLED': '1',
+    'RCT_SYMBOLICATE_PREBUILT_FRAMEWORKS': '0', 'RCT_NEW_ARCH_ENABLED': '1',
+    'RCT_NO_LAUNCH_PACKAGER': '1', 'COCOAPODS_DISABLE_STATS': 'true',
+}
+tools = json.loads((stage / 'ruby-tools-current.json').read_text())
+expected = {line.split('|')[0]: line.split('|')[1]
+            for line in (repo / 'target/phase-seven-native/rn-ruby-tool-closure.txt').read_text().splitlines() if '|' in line}
+assert all(expected.get(name) == item['version'] for name, item in tools['specs'].items())
+assert all(expected.get(item['name']) == item['version'] for item in tools['available_plugins'])
+tool_hashes = {p: hashlib.sha256(Path(p).read_bytes()).hexdigest() for p in tools['loaded_features'] if Path(p).is_file()}
+recorded_tools = json.loads((stage / 'ruby-tool-source-sha256.json').read_text())
+assert tool_hashes == recorded_tools, 'loaded Ruby tool sources changed since the reviewed closure'
+
+probe = subprocess.run(sandbox + ['ruby', '-rsocket', '-e',
+                                  'begin; TCPSocket.new("127.0.0.1", 9); rescue => e; puts e.class; end'],
+                       stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, timeout=60)
+assert probe.stdout.strip() == 'Errno::EPERM', probe.stdout
+
+
+def snapshot():
+    return {str(p.relative_to(approved)): hashlib.sha256(p.read_bytes()).hexdigest()
+            for p in sorted(approved.rglob('*')) if p.is_file() and not p.is_symlink()}
+
+
+ios = consumer / 'ios'
+preserved = {}
+for name in ['Podfile.lock', 'Pods/Manifest.lock']:
+    if (ios / name).exists():
+        preserved[name] = hashlib.sha256((ios / name).read_bytes()).hexdigest()
+        (evidence / ('before-' + name.replace('/', '-'))).write_bytes((ios / name).read_bytes())
+if (ios / 'Pods').exists():
+    (ios / 'Pods').rename(ios / f'Pods-before-offline-{label}')  # Preserved owned tree, not deleted.
+before = snapshot()
+command = sandbox + ['pod', 'install', '--no-repo-update']
+record = {'argv': command, 'cwd': str(ios), 'environment_overrides': env, 'sandbox_probe': probe.stdout.strip(),
+          'archives_double_hash_checked': selected, 'loaded_tool_files_hashed': len(tool_hashes),
+          'preserved_previous_locks_sha256': preserved, 'previous_pods_tree': str(ios / f'Pods-before-offline-{label}')}
+try:
+    with (evidence / 'pod-install.txt').open('w') as output:
+        result = subprocess.run(command, cwd=ios, env=dict(os.environ, **env), stdout=output, stderr=subprocess.STDOUT,
+                                timeout=900)
+    record['exit_code'] = result.returncode
+finally:
+    after = snapshot()
+    record['approved_node_source_differences'] = {n: {'before': before.get(n), 'after': after.get(n)}
+                                                  for n in before.keys() | after.keys() if before.get(n) != after.get(n)}
+    record['cp_home_files'] = sorted(str(p.relative_to(home)) for p in home.rglob('*') if p.is_file()) if home.exists() else []
+    lock = ios / 'Podfile.lock'
+    record['podfile_lock_sha256'] = hashlib.sha256(lock.read_bytes()).hexdigest() if lock.exists() else None
+    (evidence / 'pod-install-command.json').write_text(json.dumps(record, indent=2) + '\n')
+assert not record['approved_node_source_differences'], 'approved installation source changed'
+result.check_returncode()
+print('HOYA_RN_NETWORK_DENIED_POD_INSTALL_COMPLETE_GRAPH_REVIEW_REQUIRED', flush=True)

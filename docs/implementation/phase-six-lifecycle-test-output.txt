@@ -1,0 +1,445 @@
+
+Meaningful5-caseRED
+TAP version 13
+# Subtest: S01 protected open rejects missing or malformed key before any RPC
+ok 1 - S01 protected open rejects missing or malformed key before any RPC
+  ---
+  duration_ms: 2.370438
+  type: 'test'
+  ...
+# Subtest: S10 supplied raw key produces exactly one secure open without client retention
+ok 2 - S10 supplied raw key produces exactly one secure open without client retention
+  ---
+  duration_ms: 3.822327
+  type: 'test'
+  ...
+# Subtest: S10 secure RPC failure never retries as an unprotected open
+ok 3 - S10 secure RPC failure never retries as an unprotected open
+  ---
+  duration_ms: 0.644199
+  type: 'test'
+  ...
+# Subtest: S10 duplicate protected or legacy opens are Busy before a second RPC
+not ok 4 - S10 duplicate protected or legacy opens are Busy before a second RPC
+  ---
+  duration_ms: 1.083369
+  type: 'test'
+  location: '/Users/boristacyniak/Projects/alocasia/hoyadb/spikes/storage-browser/command-client-security.test.mjs:87:1'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected rejection.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    kind: 'Busy'
+  operator: 'rejects'
+  stack: |-
+    async TestContext.<anonymous> (file:///Users/boristacyniak/Projects/alocasia/hoyadb/spikes/storage-browser/command-client-security.test.mjs:91:49)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: S10 close during pending open never publishes a late handle and waits for disposal acknowledgement
+not ok 5 - S10 close during pending open never publishes a late handle and waits for disposal acknowledgement
+  ---
+  duration_ms: 8.912609
+  type: 'test'
+  location: '/Users/boristacyniak/Projects/alocasia/hoyadb/spikes/storage-browser/command-client-security.test.mjs:97:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    close cannot finish while its open reply is pending
+
+    true !== false
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: false
+  actual: true
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///Users/boristacyniak/Projects/alocasia/hoyadb/spikes/storage-browser/command-client-security.test.mjs:103:27)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: S10 close waits for a failed opening without inventing an owner close
+not ok 6 - S10 close waits for a failed opening without inventing an owner close
+  ---
+  duration_ms: 1.158523
+  type: 'test'
+  location: '/Users/boristacyniak/Projects/alocasia/hoyadb/spikes/storage-browser/command-client-security.test.mjs:114:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    true !== false
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: false
+  actual: true
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///Users/boristacyniak/Projects/alocasia/hoyadb/spikes/storage-browser/command-client-security.test.mjs:119:25)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: S10 failed late-handle disposal retains ownership for one shared retry
+not ok 7 - S10 failed late-handle disposal retains ownership for one shared retry
+  ---
+  duration_ms: 0.856018
+  type: 'test'
+  location: '/Users/boristacyniak/Projects/alocasia/hoyadb/spikes/storage-browser/command-client-security.test.mjs:125:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+
+    + undefined
+    - 'Closed'
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'Closed'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///Users/boristacyniak/Projects/alocasia/hoyadb/spikes/storage-browser/command-client-security.test.mjs:130:31)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: S10 a fresh open after cancelled-open cleanup uses only fresh configuration
+not ok 8 - S10 a fresh open after cancelled-open cleanup uses only fresh configuration
+  ---
+  duration_ms: 0.518175
+  type: 'test'
+  location: '/Users/boristacyniak/Projects/alocasia/hoyadb/spikes/storage-browser/command-client-security.test.mjs:140:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+
+    + undefined
+    - 'Closed'
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'Closed'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///Users/boristacyniak/Projects/alocasia/hoyadb/spikes/storage-browser/command-client-security.test.mjs:144:31)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 3
+# fail 5
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 113.749934
+
+Focused8-caseGREEN
+TAP version 13
+# Subtest: S01 protected open rejects missing or malformed key before any RPC
+ok 1 - S01 protected open rejects missing or malformed key before any RPC
+  ---
+  duration_ms: 2.545456
+  type: 'test'
+  ...
+# Subtest: S10 supplied raw key produces exactly one secure open without client retention
+ok 2 - S10 supplied raw key produces exactly one secure open without client retention
+  ---
+  duration_ms: 4.216013
+  type: 'test'
+  ...
+# Subtest: S10 secure RPC failure never retries as an unprotected open
+ok 3 - S10 secure RPC failure never retries as an unprotected open
+  ---
+  duration_ms: 0.706707
+  type: 'test'
+  ...
+# Subtest: S10 duplicate protected or legacy opens are Busy before a second RPC
+ok 4 - S10 duplicate protected or legacy opens are Busy before a second RPC
+  ---
+  duration_ms: 1.144451
+  type: 'test'
+  ...
+# Subtest: S10 close during pending open never publishes a late handle and waits for disposal acknowledgement
+ok 5 - S10 close during pending open never publishes a late handle and waits for disposal acknowledgement
+  ---
+  duration_ms: 6.423189
+  type: 'test'
+  ...
+# Subtest: S10 close waits for a failed opening without inventing an owner close
+ok 6 - S10 close waits for a failed opening without inventing an owner close
+  ---
+  duration_ms: 0.731496
+  type: 'test'
+  ...
+# Subtest: S10 failed late-handle disposal retains ownership for one shared retry
+ok 7 - S10 failed late-handle disposal retains ownership for one shared retry
+  ---
+  duration_ms: 1.397887
+  type: 'test'
+  ...
+# Subtest: S10 a fresh open after cancelled-open cleanup uses only fresh configuration
+ok 8 - S10 a fresh open after cancelled-open cleanup uses only fresh configuration
+  ---
+  duration_ms: 0.886227
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 112.040446
+
+Full38-caseGREEN
+TAP version 13
+# Subtest: S01 protected open rejects missing or malformed key before any RPC
+ok 1 - S01 protected open rejects missing or malformed key before any RPC
+  ---
+  duration_ms: 2.413483
+  type: 'test'
+  ...
+# Subtest: S10 supplied raw key produces exactly one secure open without client retention
+ok 2 - S10 supplied raw key produces exactly one secure open without client retention
+  ---
+  duration_ms: 4.699777
+  type: 'test'
+  ...
+# Subtest: S10 secure RPC failure never retries as an unprotected open
+ok 3 - S10 secure RPC failure never retries as an unprotected open
+  ---
+  duration_ms: 0.787092
+  type: 'test'
+  ...
+# Subtest: S10 duplicate protected or legacy opens are Busy before a second RPC
+ok 4 - S10 duplicate protected or legacy opens are Busy before a second RPC
+  ---
+  duration_ms: 2.092831
+  type: 'test'
+  ...
+# Subtest: S10 close during pending open never publishes a late handle and waits for disposal acknowledgement
+ok 5 - S10 close during pending open never publishes a late handle and waits for disposal acknowledgement
+  ---
+  duration_ms: 6.103099
+  type: 'test'
+  ...
+# Subtest: S10 close waits for a failed opening without inventing an owner close
+ok 6 - S10 close waits for a failed opening without inventing an owner close
+  ---
+  duration_ms: 0.809836
+  type: 'test'
+  ...
+# Subtest: S10 failed late-handle disposal retains ownership for one shared retry
+ok 7 - S10 failed late-handle disposal retains ownership for one shared retry
+  ---
+  duration_ms: 1.680756
+  type: 'test'
+  ...
+# Subtest: S10 a fresh open after cancelled-open cleanup uses only fresh configuration
+ok 8 - S10 a fresh open after cancelled-open cleanup uses only fresh configuration
+  ---
+  duration_ms: 0.977499
+  type: 'test'
+  ...
+# Subtest: S11 handler context rejects strict and non-strict nested mutation through awaits
+ok 9 - S11 handler context rejects strict and non-strict nested mutation through awaits
+  ---
+  duration_ms: 5.951187
+  type: 'test'
+  ...
+# Subtest: E01 entity calls capture trusted context atomically with each mutation
+ok 10 - E01 entity calls capture trusted context atomically with each mutation
+  ---
+  duration_ms: 4.664874
+  type: 'test'
+  ...
+# Subtest: E13 pull keeps opaque UTF-8 body across bounded chunks and one production apply
+ok 11 - E13 pull keeps opaque UTF-8 body across bounded chunks and one production apply
+  ---
+  duration_ms: 12.754422
+  type: 'test'
+  ...
+# Subtest: E18 reset changes foreign generation and callbacks only after successful core reset
+ok 12 - E18 reset changes foreign generation and callbacks only after successful core reset
+  ---
+  duration_ms: 0.841537
+  type: 'test'
+  ...
+# Subtest: E18 late transport completion cannot clear a replacement generation sync pump
+ok 13 - E18 late transport completion cannot clear a replacement generation sync pump
+  ---
+  duration_ms: 23.965988
+  type: 'test'
+  ...
+# Subtest: E18 close and reopen can start a new pump while the old transport remains suspended
+ok 14 - E18 close and reopen can start a new pump while the old transport remains suspended
+  ---
+  duration_ms: 21.967952
+  type: 'test'
+  ...
+# Subtest: H01 host invokes its awaited handler and returns the owned result
+ok 15 - H01 host invokes its awaited handler and returns the owned result
+  ---
+  duration_ms: 2.285426
+  type: 'test'
+  ...
+# Subtest: H03 unsafe integer Number coercion rejects before transport
+ok 16 - H03 unsafe integer Number coercion rejects before transport
+  ---
+  duration_ms: 0.588962
+  type: 'test'
+  ...
+# Subtest: H01 two owners execute FIFO and active cancellation releases a never-settling handler
+ok 17 - H01 two owners execute FIFO and active cancellation releases a never-settling handler
+  ---
+  duration_ms: 2.95341
+  type: 'test'
+  ...
+# Subtest: H02 cancellation while finish reply is delayed preserves committed success
+ok 18 - H02 cancellation while finish reply is delayed preserves committed success
+  ---
+  duration_ms: 1.448882
+  type: 'test'
+  ...
+# Subtest: H01 pending begin waits for a release signal without polling or calling handler
+ok 19 - H01 pending begin waits for a release signal without polling or calling handler
+  ---
+  duration_ms: 12.889951
+  type: 'test'
+  ...
+# Subtest: H06 owned HTTP response and application plan survive active-handler Busy without repeating work
+ok 20 - H06 owned HTTP response and application plan survive active-handler Busy without repeating work
+  ---
+  duration_ms: 30.81897
+  type: 'test'
+  ...
+# Subtest: H06 a finish wake during an awaited mapper is replayed when the old batch has no deadline
+ok 21 - H06 a finish wake during an awaited mapper is replayed when the old batch has no deadline
+  ---
+  duration_ms: 11.853005
+  type: 'test'
+  ...
+# Subtest: H04 bounded event pages retain one drain guard and callback liveness
+ok 22 - H04 bounded event pages retain one drain guard and callback liveness
+  ---
+  duration_ms: 0.894955
+  type: 'test'
+  ...
+# Subtest: H06 each bounded prepare prefix is a separate nonempty HTTP array
+ok 23 - H06 each bounded prepare prefix is a separate nonempty HTTP array
+  ---
+  duration_ms: 2.780663
+  type: 'test'
+  ...
+# (node:31579) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: S13 command-page.js describes sanitized RPC failure using local operation and static kind
+ok 24 - S13 command-page.js describes sanitized RPC failure using local operation and static kind
+  ---
+  duration_ms: 10.951786
+  type: 'test'
+  ...
+# Subtest: S13 command-page.js never copies a raw browser worker-event message
+ok 25 - S13 command-page.js never copies a raw browser worker-event message
+  ---
+  duration_ms: 3.38853
+  type: 'test'
+  ...
+# Subtest: S13 entity-page.js describes sanitized RPC failure using local operation and static kind
+ok 26 - S13 entity-page.js describes sanitized RPC failure using local operation and static kind
+  ---
+  duration_ms: 3.091074
+  type: 'test'
+  ...
+# Subtest: S13 entity-page.js never copies a raw browser worker-event message
+ok 27 - S13 entity-page.js never copies a raw browser worker-event message
+  ---
+  duration_ms: 2.913393
+  type: 'test'
+  ...
+# Subtest: S13 reactive-page.js describes sanitized RPC failure using local operation and static kind
+ok 28 - S13 reactive-page.js describes sanitized RPC failure using local operation and static kind
+  ---
+  duration_ms: 3.857729
+  type: 'test'
+  ...
+# Subtest: S13 reactive-page.js never copies a raw browser worker-event message
+ok 29 - S13 reactive-page.js never copies a raw browser worker-event message
+  ---
+  duration_ms: 2.755848
+  type: 'test'
+  ...
+# Subtest: S13 reactive checks/reactive_conformance preserves a sanitized failure's kind and harness-local case
+ok 30 - S13 reactive checks/reactive_conformance preserves a sanitized failure's kind and harness-local case
+  ---
+  duration_ms: 1.099683
+  type: 'test'
+  ...
+# Subtest: S13 Q01/review_large_sets preserves a sanitized failure's kind and harness-local case
+ok 31 - S13 Q01/review_large_sets preserves a sanitized failure's kind and harness-local case
+  ---
+  duration_ms: 0.193253
+  type: 'test'
+  ...
+# Subtest: S13 Q01 large observations/navigation/reverse dependencies preserves a sanitized failure's kind and harness-local case
+ok 32 - S13 Q01 large observations/navigation/reverse dependencies preserves a sanitized failure's kind and harness-local case
+  ---
+  duration_ms: 1.348861
+  type: 'test'
+  ...
+# (node:31580) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: S13 worker fallback never serializes raw foreign errors or fixture context
+ok 33 - S13 worker fallback never serializes raw foreign errors or fixture context
+  ---
+  duration_ms: 6.295842
+  type: 'test'
+  ...
+# Subtest: S10 worker preserves only allowlisted typed kinds and strips every extra field
+ok 34 - S10 worker preserves only allowlisted typed kinds and strips every extra field
+  ---
+  duration_ms: 17.273157
+  type: 'test'
+  ...
+# Subtest: S13 foreign kind strings cannot turn arbitrary data into a public error kind
+ok 35 - S13 foreign kind strings cannot turn arbitrary data into a public error kind
+  ---
+  duration_ms: 1.712139
+  type: 'test'
+  ...
+# Subtest: S10 successful secure RPC owner blocks shutdown until its explicit close
+ok 36 - S10 successful secure RPC owner blocks shutdown until its explicit close
+  ---
+  duration_ms: 2.129819
+  type: 'test'
+  ...
+# Subtest: S10 failed secure RPC open never registers an owner or blocks shutdown
+ok 37 - S10 failed secure RPC open never registers an owner or blocks shutdown
+  ---
+  duration_ms: 1.929585
+  type: 'test'
+  ...
+# Subtest: S06 keyed shared test control routes only with an exact key and no active owners
+ok 38 - S06 keyed shared test control routes only with an exact key and no active owners
+  ---
+  duration_ms: 2.412808
+  type: 'test'
+  ...
+1..38
+# tests 38
+# suites 0
+# pass 38
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 239.977021
+
+AllJavaScriptsyntax
+18 JS/MJS files syntax passed

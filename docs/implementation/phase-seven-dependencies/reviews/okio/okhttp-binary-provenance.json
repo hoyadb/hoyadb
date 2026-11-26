@@ -1,0 +1,7 @@
+{
+  "url": "https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.9.2/okhttp-4.9.2.jar",
+  "sha256": "3b2ee1b768c1df28c30d2fe6b38dda4d2c519210e30ca3d27950618c563c92de",
+  "bytes": 792108,
+  "executed": false,
+  "inspection": "JDK javap static disassembly only"
+}

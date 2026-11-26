@@ -1,0 +1,30 @@
+checking /Users/boristacyniak/Projects/alocasia/hoyadb/bindings/swift/Artifacts/HoyaNative.xcframework
+test_claimed_slices_only (__main__.XCFrameworkPackaging.test_claimed_slices_only) ... ok
+test_every_slice_uses_one_static_library_basename (__main__.XCFrameworkPackaging.test_every_slice_uses_one_static_library_basename) ... ok
+test_headers_and_module_map_present_per_slice (__main__.XCFrameworkPackaging.test_headers_and_module_map_present_per_slice) ... ok
+test_notice_packaging_closure (__main__.XCFrameworkPackaging.test_notice_packaging_closure) ... FAIL
+test_two_package_manager_copies_import_one_module (__main__.XCFrameworkPackaging.test_two_package_manager_copies_import_one_module) ... ok
+
+======================================================================
+FAIL: test_notice_packaging_closure (__main__.XCFrameworkPackaging.test_notice_packaging_closure)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/swift/check_artifacts.py", line 86, in test_notice_packaging_closure
+    summary = notices.validate_framework(framework, native / "third-party", native / "Cargo.lock",
+                                         expected_parent_sha256)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/native/tools/apple_notices.py", line 359, in validate_framework
+    raise NoticeError('missing-packaging', f'{framework.name} has no {PACKAGING} (notice-free artifact)')
+apple_notices.NoticeError: missing-packaging: HoyaNative.xcframework has no packaging.json (notice-free artifact)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/swift/check_artifacts.py", line 89, in test_notice_packaging_closure
+    self.fail(str(error))
+    ~~~~~~~~~^^^^^^^^^^^^
+AssertionError: missing-packaging: HoyaNative.xcframework has no packaging.json (notice-free artifact)
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.894s
+
+FAILED (failures=1)

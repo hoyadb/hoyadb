@@ -1,0 +1,25 @@
+{
+  "reviewer": "Claude Opus 5.5 (runtime reported claude-opus-5-5)",
+  "verdict": "PASS, commit together with follow-up-3 fixture",
+  "source_hashes": {
+    ".gitattributes": "5098173837e85f14799ba4670ec6f89a6c863c9e2d9779dacee1b3706b40f930",
+    "tests/tooling/git_provenance.py": "9323bdf9f1165cb5df844b7438e8aa0d79922bd8b37e7581d40593ab500f31cc"
+  },
+  "packet_index_sha256": "35561dde48042873d07756b008e96759ae765947211d2542404b3a997a5867d8",
+  "resolution": "Attribute, test and complete exact follow-up-3 evidence packet are one commit, ensuring a clean checkout includes the regression fixture.",
+  "scope": "Focused DEF-0027 review; zero final Phase 7 rounds counted.",
+  "committed_byte_verification": {
+    "all_23_task_files_equal_working_bytes": true,
+    "checked_commit": "33e49c7",
+    "whitespace_check_exit": 2,
+    "findings_by_path": {
+      "docs/implementation/phase-seven-git-preservation/license-directory-extension/red.txt": 1,
+      "docs/implementation/phase-seven-security-remediation-followup-3/licenses/jdom-2.0.6.1-LICENSE.txt": 55,
+      "docs/implementation/phase-seven-security-remediation-followup-3/licenses/jline-3.24.1-LICENSE.txt": 1,
+      "docs/implementation/phase-seven-security-remediation-followup-3/sources/kotlin-web-site-build-tools-api.md": 4
+    },
+    "record": "staged-whitespace.txt.json",
+    "classification": "Original upstream license/source excerpts and preserved RED output; no whitespace suppression.",
+    "execution_correction": "The shell continued to commit after the diagnostic path-classification script exited nonzero; all staged bytes had been checked before that exit. Root then independently rechecked all committed blobs and added this complete report."
+  }
+}

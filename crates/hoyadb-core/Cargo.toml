@@ -1,0 +1,16 @@
+[package]
+name = "hoyadb-core"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+# SPEC-0037 R4: test instrumentation only; never enabled by production builds.
+[features]
+work-counters = []
+
+[dev-dependencies]
+hoyadb-core = { path = ".", features = ["work-counters"] }
+
+[lints]
+workspace = true

@@ -1,0 +1,12 @@
+checking /Users/boristacyniak/Projects/alocasia/hoyadb/bindings/swift/Artifacts/HoyaNative.xcframework
+test_claimed_slices_only (__main__.XCFrameworkPackaging.test_claimed_slices_only) ... ok
+test_every_slice_uses_one_static_library_basename (__main__.XCFrameworkPackaging.test_every_slice_uses_one_static_library_basename) ... ok
+test_headers_and_module_map_present_per_slice (__main__.XCFrameworkPackaging.test_headers_and_module_map_present_per_slice) ... ok
+test_notice_packaging_closure (__main__.XCFrameworkPackaging.test_notice_packaging_closure) ... {'result': 'framework-valid', 'framework': 'HoyaNative.xcframework', 'parent_sha256': 'c19233a6d34e76628ae42c4870be5c6add4fa39c7f4fb9ed46678da95a532496', 'packaging_sha256': '47e27eb8d68e55022e34ea227a9c5882b4a84fc56bede14c21e5ae3fb92947de', 'index_sha256': '65a591b52a3a632526c1b1f930980cc8a7f2bd561af020b7e6e8fb19eb72bde6', 'members': 39, 'native_members': 10, 'notice_members': 28}
+ok
+test_two_package_manager_copies_import_one_module (__main__.XCFrameworkPackaging.test_two_package_manager_copies_import_one_module) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 1.091s
+
+OK

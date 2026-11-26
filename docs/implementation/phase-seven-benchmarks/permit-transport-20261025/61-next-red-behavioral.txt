@@ -1,0 +1,115 @@
+.......FFFFFEEF.....................FF...
+======================================================================
+ERROR: test_N06_claimed_unstarted_permit_stays_until_revoke_which_blocks_until_recover (test_browser_server.BrowserControllerTests.test_N06_claimed_unstarted_permit_stays_until_revoke_which_blocks_until_recover)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/test_browser_server.py", line 594, in test_N06_claimed_unstarted_permit_stays_until_revoke_which_blocks_until_recover
+    self.assertEqual(collector.next_permit()["status"], "permit")
+                     ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+
+======================================================================
+ERROR: test_N07_drift_between_admit_and_consumption_rejects_before_any_worker_and_blocks (test_browser_server.BrowserControllerTests.test_N07_drift_between_admit_and_consumption_rejects_before_any_worker_and_blocks) (transported=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/test_browser_server.py", line 620, in test_N07_drift_between_admit_and_consumption_rejects_before_any_worker_and_blocks
+    self.assertEqual(collector.next_permit()["status"], "permit")
+                     ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+
+======================================================================
+FAIL: test_N01_no_permit_returns_bounded_timeout_without_admission_or_state (test_browser_server.BrowserControllerTests.test_N01_no_permit_returns_bounded_timeout_without_admission_or_state)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/test_browser_server.py", line 537, in test_N01_no_permit_returns_bounded_timeout_without_admission_or_state
+    self.assertEqual(collector.next_permit(), {"status": "none", "reason": "timeout"})
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: None != {'status': 'none', 'reason': 'timeout'}
+
+======================================================================
+FAIL: test_N02_admit_before_request_claims_once_and_never_redelivers (test_browser_server.BrowserControllerTests.test_N02_admit_before_request_claims_once_and_never_redelivers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/test_browser_server.py", line 545, in test_N02_admit_before_request_claims_once_and_never_redelivers
+    self.assertEqual(collector.next_permit(), {"status": "permit", "coordinates": self.WARM})
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: None != {'status': 'permit', 'coordinates': {'kin[75 chars]:1'}}
+
+======================================================================
+FAIL: test_N02_request_before_admit_wakes_and_second_waiter_is_rejected_without_waiting (test_browser_server.BrowserControllerTests.test_N02_request_before_admit_wakes_and_second_waiter_is_rejected_without_waiting)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/test_browser_server.py", line 556, in test_N02_request_before_admit_wakes_and_second_waiter_is_rejected_without_waiting
+    thread, result = self.waiting(collector)
+                     ~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/test_browser_server.py", line 530, in waiting
+    self.assertTrue(collector.waiter)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_N03_active_worker_rejects_immediately_and_cannot_claim_a_later_permit (test_browser_server.BrowserControllerTests.test_N03_active_worker_rejects_immediately_and_cannot_claim_a_later_permit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/test_browser_server.py", line 570, in test_N03_active_worker_rejects_immediately_and_cannot_claim_a_later_permit
+    with self.assertRaises(RunnerError):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+AssertionError: RunnerError not raised
+
+======================================================================
+FAIL: test_N05_waiter_wakes_on_cancel_and_on_shutdown (test_browser_server.BrowserControllerTests.test_N05_waiter_wakes_on_cancel_and_on_shutdown)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/test_browser_server.py", line 578, in test_N05_waiter_wakes_on_cancel_and_on_shutdown
+    thread, result = self.waiting(collector)
+                     ~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/test_browser_server.py", line 530, in waiting
+    self.assertTrue(collector.waiter)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_N07_drift_between_admit_and_consumption_rejects_before_any_worker_and_blocks (test_browser_server.BrowserControllerTests.test_N07_drift_between_admit_and_consumption_rejects_before_any_worker_and_blocks) (transported=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/test_browser_server.py", line 622, in test_N07_drift_between_admit_and_consumption_rejects_before_any_worker_and_blocks
+    with self.assertRaises(RunnerError):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+AssertionError: RunnerError not raised
+
+======================================================================
+FAIL: test_N04_next_route_is_exact_post_and_never_issues_or_consumes (test_browser_server.BrowserHTTPTests.test_N04_next_route_is_exact_post_and_never_issues_or_consumes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/test_browser_server.py", line 721, in test_N04_next_route_is_exact_post_and_never_issues_or_consumes
+    self.assertEqual(self.post(url + "/benchmark/next", b"{}"), (200, {"status": "none", "reason": "timeout"}))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Tuples differ: (409, None) != (200, {'status': 'none', 'reason': 'timeout'})
+
+First differing element 0:
+409
+200
+
+- (409, None)
++ (200, {'reason': 'timeout', 'status': 'none'})
+
+======================================================================
+FAIL: test_N05_server_shutdown_wakes_a_waiting_request_and_leaves_no_thread (test_browser_server.BrowserHTTPTests.test_N05_server_shutdown_wakes_a_waiting_request_and_leaves_no_thread)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/test_browser_server.py", line 742, in test_N05_server_shutdown_wakes_a_waiting_request_and_leaves_no_thread
+    self.assertEqual(result["value"], (200, {"status": "none", "reason": "cancelled"}))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Tuples differ: (409, None) != (200, {'status': 'none', 'reason': 'cancelled'})
+
+First differing element 0:
+409
+200
+
+- (409, None)
++ (200, {'reason': 'cancelled', 'status': 'none'})
+
+----------------------------------------------------------------------
+Ran 40 tests in 14.352s
+
+FAILED (failures=8, errors=2)

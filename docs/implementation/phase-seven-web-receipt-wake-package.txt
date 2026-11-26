@@ -1,0 +1,841 @@
+[
+  {
+    "id": "@hoyadb/client@0.1.0",
+    "name": "@hoyadb/client",
+    "version": "0.1.0",
+    "size": 1481367,
+    "unpackedSize": 5512629,
+    "shasum": "4655ebfe6aa56c4f41572d9613f6d47cba4a9532",
+    "integrity": "sha512-dtWUDPSHO1ollYRdjCPBef4vXQ/1QtCs1lW546aFhrgp2jp5Bwr5LA/J/RASoNYIHKNBoJvilN7jh5E2m69s4w==",
+    "filename": "hoyadb-client-0.1.0.tgz",
+    "files": [
+      {
+        "path": "LICENSES.md",
+        "size": 965,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 8195,
+        "mode": 420
+      },
+      {
+        "path": "SOURCE-MANIFEST.json",
+        "size": 10458,
+        "mode": 420
+      },
+      {
+        "path": "index.d.ts",
+        "size": 11579,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/bitflags-2.13.2/LICENSE-APACHE",
+        "size": 10847,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/bitflags-2.13.2/LICENSE-MIT",
+        "size": 1071,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/bumpalo-3.20.3/LICENSE-APACHE",
+        "size": 10847,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/bumpalo-3.20.3/LICENSE-MIT",
+        "size": 1059,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/cc-1.10.0/LICENSE-APACHE",
+        "size": 10847,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/cc-1.10.0/LICENSE-MIT",
+        "size": 1057,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/cfg-if-1.0.5/LICENSE-APACHE",
+        "size": 10847,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/cfg-if-1.0.5/LICENSE-MIT",
+        "size": 1057,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/fallible-iterator-0.3.0/LICENSE-APACHE",
+        "size": 11358,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/fallible-iterator-0.3.0/LICENSE-MIT",
+        "size": 1078,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/fallible-streaming-iterator-0.1.9/LICENSE-APACHE",
+        "size": 11358,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/fallible-streaming-iterator-0.1.9/LICENSE-MIT",
+        "size": 1086,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/find-msvc-tools-0.1.15/LICENSE-APACHE",
+        "size": 10847,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/find-msvc-tools-0.1.15/LICENSE-MIT",
+        "size": 1057,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/futures-core-0.3.34/LICENSE-APACHE",
+        "size": 10874,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/futures-core-0.3.34/LICENSE-MIT",
+        "size": 1094,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/futures-task-0.3.34/LICENSE-APACHE",
+        "size": 10874,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/futures-task-0.3.34/LICENSE-MIT",
+        "size": 1094,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/futures-util-0.3.34/LICENSE-APACHE",
+        "size": 10874,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/futures-util-0.3.34/LICENSE-MIT",
+        "size": 1094,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/index.json",
+        "size": 25911,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/js-sys-0.3.106/LICENSE-APACHE",
+        "size": 10847,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/js-sys-0.3.106/LICENSE-MIT",
+        "size": 1057,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/libsqlite3-sys-0.38.1/LICENSE",
+        "size": 1067,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/once_cell-1.21.4/LICENSE-APACHE",
+        "size": 10847,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/once_cell-1.21.4/LICENSE-MIT",
+        "size": 1023,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/pin-project-lite-0.2.17/LICENSE-APACHE",
+        "size": 10174,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/pin-project-lite-0.2.17/LICENSE-MIT",
+        "size": 1023,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/pkg-config-0.3.34/LICENSE-APACHE",
+        "size": 10847,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/pkg-config-0.3.34/LICENSE-MIT",
+        "size": 1057,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/proc-macro2-1.0.107/LICENSE-APACHE",
+        "size": 9723,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/proc-macro2-1.0.107/LICENSE-MIT",
+        "size": 1023,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/quote-1.0.47/LICENSE-APACHE",
+        "size": 9723,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/quote-1.0.47/LICENSE-MIT",
+        "size": 1023,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/rsqlite-vfs-0.2.0/LICENSE",
+        "size": 1061,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/rusqlite-0.40.1/LICENSE",
+        "size": 1067,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/rustversion-1.0.23/LICENSE-APACHE",
+        "size": 9723,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/rustversion-1.0.23/LICENSE-MIT",
+        "size": 1023,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/shlex-2.0.1/LICENSE-APACHE",
+        "size": 566,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/shlex-2.0.1/LICENSE-MIT",
+        "size": 1092,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/slab-0.4.12/LICENSE",
+        "size": 1055,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/smallvec-1.16.4/LICENSE-APACHE",
+        "size": 10847,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/smallvec-1.16.4/LICENSE-MIT",
+        "size": 1072,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/sqlcipher-src-419.0.6+sqlcipher-4.19.0-sqlite-3.53.4-libtomcrypt-1.18.2/LICENSE",
+        "size": 1073,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/sqlite-wasm-rs-0.6.2/LICENSE",
+        "size": 1061,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/sqlite-wasm-vfs-0.3.0/LICENSE",
+        "size": 1061,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/syn-3.0.9/LICENSE-APACHE",
+        "size": 9723,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/syn-3.0.9/LICENSE-MIT",
+        "size": 1023,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/thiserror-2.0.21/LICENSE-APACHE",
+        "size": 9723,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/thiserror-2.0.21/LICENSE-MIT",
+        "size": 1023,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/thiserror-impl-2.0.21/LICENSE-APACHE",
+        "size": 9723,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/thiserror-impl-2.0.21/LICENSE-MIT",
+        "size": 1023,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/tokio-1.54.1/LICENSE",
+        "size": 1070,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/unicode-ident-1.0.27/LICENSE-APACHE",
+        "size": 9723,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/unicode-ident-1.0.27/LICENSE-MIT",
+        "size": 1023,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/unicode-ident-1.0.27/LICENSE-UNICODE",
+        "size": 1995,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/vcpkg-0.2.15/LICENSE-APACHE",
+        "size": 11050,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/vcpkg-0.2.15/LICENSE-MIT",
+        "size": 1082,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/wasm-bindgen-0.2.129/LICENSE-APACHE",
+        "size": 10847,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/wasm-bindgen-0.2.129/LICENSE-MIT",
+        "size": 1057,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/wasm-bindgen-futures-0.4.79/LICENSE-APACHE",
+        "size": 10847,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/wasm-bindgen-futures-0.4.79/LICENSE-MIT",
+        "size": 1057,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/wasm-bindgen-macro-0.2.129/LICENSE-APACHE",
+        "size": 10847,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/wasm-bindgen-macro-0.2.129/LICENSE-MIT",
+        "size": 1057,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/wasm-bindgen-macro-support-0.2.129/LICENSE-APACHE",
+        "size": 10847,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/wasm-bindgen-macro-support-0.2.129/LICENSE-MIT",
+        "size": 1057,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/wasm-bindgen-shared-0.2.129/LICENSE-APACHE",
+        "size": 10847,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/wasm-bindgen-shared-0.2.129/LICENSE-MIT",
+        "size": 1057,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/web-sys-0.3.106/LICENSE-APACHE",
+        "size": 10847,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/web-sys-0.3.106/LICENSE-MIT",
+        "size": 1057,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/zeroize-1.9.1/LICENSE-APACHE",
+        "size": 11358,
+        "mode": 420
+      },
+      {
+        "path": "licenses/crates/zeroize-1.9.1/LICENSE-MIT",
+        "size": 1082,
+        "mode": 420
+      },
+      {
+        "path": "licenses/sqlcipher/LICENSE-libtomcrypt",
+        "size": 718,
+        "mode": 420
+      },
+      {
+        "path": "licenses/sqlcipher/LICENSE-sqlcipher",
+        "size": 1463,
+        "mode": 420
+      },
+      {
+        "path": "licenses/sqlcipher/LICENSE-sqlcipher-src",
+        "size": 1073,
+        "mode": 420
+      },
+      {
+        "path": "licenses/sqlcipher/LICENSE-sqlite",
+        "size": 1485,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 673,
+        "mode": 420
+      },
+      {
+        "path": "src/client.js",
+        "size": 27178,
+        "mode": 420
+      },
+      {
+        "path": "src/errors.js",
+        "size": 752,
+        "mode": 420
+      },
+      {
+        "path": "src/index.js",
+        "size": 301,
+        "mode": 420
+      },
+      {
+        "path": "src/query.js",
+        "size": 1171,
+        "mode": 420
+      },
+      {
+        "path": "src/runtime.js",
+        "size": 2226,
+        "mode": 420
+      },
+      {
+        "path": "src/time.js",
+        "size": 730,
+        "mode": 420
+      },
+      {
+        "path": "src/utf8.js",
+        "size": 622,
+        "mode": 420
+      },
+      {
+        "path": "src/values.js",
+        "size": 4493,
+        "mode": 420
+      },
+      {
+        "path": "src/wasm/Cargo.lock",
+        "size": 9752,
+        "mode": 420
+      },
+      {
+        "path": "src/wasm/hoyadb_web_bg.wasm",
+        "size": 5001038,
+        "mode": 420
+      },
+      {
+        "path": "src/wasm/hoyadb_web_bg.wasm.d.ts",
+        "size": 2764,
+        "mode": 420
+      },
+      {
+        "path": "src/wasm/hoyadb_web.d.ts",
+        "size": 4032,
+        "mode": 420
+      },
+      {
+        "path": "src/wasm/hoyadb_web.js",
+        "size": 27050,
+        "mode": 420
+      },
+      {
+        "path": "src/web-entry.js",
+        "size": 71,
+        "mode": 420
+      },
+      {
+        "path": "src/web.js",
+        "size": 2734,
+        "mode": 420
+      },
+      {
+        "path": "src/worker-host.js",
+        "size": 2060,
+        "mode": 420
+      },
+      {
+        "path": "src/worker.js",
+        "size": 442,
+        "mode": 420
+      },
+      {
+        "path": "web.d.ts",
+        "size": 193,
+        "mode": 420
+      }
+    ],
+    "entryCount": 99,
+    "bundled": []
+  }
+]
+npm warn config init.author.name Use `--init-author-name` instead.
+npm warn config init.author.email Use `--init-author-email` instead.
+npm warn config init.author.url Use `--init-author-url` instead.
+npm warn Unknown user config "email". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+[
+  {
+    "id": "@hoyadb/testing@0.1.0",
+    "name": "@hoyadb/testing",
+    "version": "0.1.0",
+    "size": 9465,
+    "unpackedSize": 23283,
+    "shasum": "513357631143404d081e43a7b7ace31b3e492dc2",
+    "integrity": "sha512-eI2hxzvm4SFh+YEDrPJ2/1/BdVzlHTvKU/zB9MQTOf8wjrG/FkA1eLhSgj8RwaW3yjG2zKVz4pE+3PlWIlayMA==",
+    "filename": "hoyadb-testing-0.1.0.tgz",
+    "files": [
+      {
+        "path": "LICENSES.md",
+        "size": 411,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 8195,
+        "mode": 420
+      },
+      {
+        "path": "SOURCE-MANIFEST.json",
+        "size": 10458,
+        "mode": 420
+      },
+      {
+        "path": "index.d.ts",
+        "size": 1074,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 447,
+        "mode": 420
+      },
+      {
+        "path": "src/index.js",
+        "size": 2698,
+        "mode": 420
+      }
+    ],
+    "entryCount": 6,
+    "bundled": []
+  }
+]
+npm warn config init.author.name Use `--init-author-name` instead.
+npm warn config init.author.email Use `--init-author-email` instead.
+npm warn config init.author.url Use `--init-author-url` instead.
+npm warn Unknown user config "email". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+added 2 packages in 748ms
+npm warn config init.author.name Use `--init-author-name` instead.
+npm warn config init.author.email Use `--init-author-email` instead.
+npm warn config init.author.url Use `--init-author-url` instead.
+npm warn Unknown user config "email". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+[
+  {
+    "name": "G01/G03/G04 unrelated A schema all typed cells and three relation kinds",
+    "ok": true
+  },
+  {
+    "name": "G01 unrelated B HasMany uses the same caller-defined facade",
+    "ok": true
+  },
+  {
+    "name": "G04 admitted In operands cross4096 and32766 through the existing core planner",
+    "ok": true
+  },
+  {
+    "name": "G11 keyed batch fitting full images and latest same-ID transitions stay exact",
+    "ok": true
+  },
+  {
+    "name": "G11 byte-exact terminal prefix progresses once without losing either event",
+    "ok": true
+  },
+  {
+    "name": "G03 core codecs preserve extrema Float Unicode and reject duplicates",
+    "ok": true
+  },
+  {
+    "name": "G05 membership columns count delegate shared observation groups",
+    "ok": true
+  },
+  {
+    "name": "G05 real managed count initial delivery and unpostponed deadline need no manual drain",
+    "ok": true
+  },
+  {
+    "name": "G06/G20/TC16 awaited handler immutable context optimistic rows and queue offline",
+    "ok": true
+  },
+  {
+    "name": "G19/G21/TC16 real fake transport correlates applied rejected and dropped ACK retries",
+    "ok": true
+  },
+  {
+    "name": "G12/G13/G14 passive async hooks preserve staged sequence authority and stale refetch",
+    "ok": true
+  },
+  {
+    "name": "G17/G18 mixed command entity correlation and checkpoint progress use shared core",
+    "ok": true
+  },
+  {
+    "name": "G02/G22 retained backend authored seven-step migration and failure preservation",
+    "ok": true
+  },
+  {
+    "name": "G05 managed prepare transition delivered without another operation",
+    "ok": true
+  },
+  {
+    "name": "G05 managed receive transition delivered without another operation",
+    "ok": true
+  },
+  {
+    "name": "G19 external wire receipt wakes sleeping local reconciliation before retry deadline",
+    "ok": true
+  }
+]
+{
+  "reports": [
+    {
+      "id": "TC17.1",
+      "ok": true
+    },
+    {
+      "id": "TC16.1",
+      "ok": true
+    },
+    {
+      "id": "TC17.3",
+      "ok": true
+    },
+    {
+      "id": "TC17.4",
+      "ok": true
+    },
+    {
+      "id": "TC17.5",
+      "ok": true
+    },
+    {
+      "id": "TC16.2",
+      "ok": true,
+      "comparison": "exact row/relation/subscription/command assertions repeated per real adapter"
+    },
+    {
+      "id": "TC16.7",
+      "ok": true
+    },
+    {
+      "id": "TC16.8",
+      "ok": true,
+      "ordinary_id": "test-fixed-id-001",
+      "command_id": "local:test-fixed-id-001",
+      "approval": "ADR-0035"
+    },
+    {
+      "id": "TC16.3",
+      "ok": true
+    },
+    {
+      "id": "TC16.4",
+      "ok": true
+    },
+    {
+      "id": "TC16.5",
+      "ok": true
+    },
+    {
+      "id": "TC16.6",
+      "ok": true
+    },
+    {
+      "id": "TC17.6",
+      "ok": true
+    },
+    {
+      "id": "TC17.7",
+      "ok": true
+    },
+    {
+      "id": "TC17.8",
+      "ok": true,
+      "network_successes": "0"
+    },
+    {
+      "id": "TC17.2",
+      "ok": true
+    }
+  ],
+  "rows": [
+    {
+      "id": "local:order-2",
+      "fields": {
+        "customer_id": {
+          "kind": "reference",
+          "value": "cust_123"
+        },
+        "placed_at": {
+          "kind": "timestamp",
+          "value": "1789473600000"
+        },
+        "status": {
+          "kind": "string",
+          "value": "pending"
+        },
+        "total_cents": {
+          "kind": "integer",
+          "value": "200"
+        }
+      }
+    },
+    {
+      "id": "local:order-3",
+      "fields": {
+        "customer_id": {
+          "kind": "reference",
+          "value": "cust_123"
+        },
+        "placed_at": {
+          "kind": "timestamp",
+          "value": "1789473600000"
+        },
+        "status": {
+          "kind": "string",
+          "value": "pending"
+        },
+        "total_cents": {
+          "kind": "integer",
+          "value": "200"
+        }
+      }
+    },
+    {
+      "id": "local:test-fixed-id-001",
+      "fields": {
+        "customer_id": {
+          "kind": "reference",
+          "value": "cust_123"
+        },
+        "placed_at": {
+          "kind": "timestamp",
+          "value": "1789473600000"
+        },
+        "status": {
+          "kind": "string",
+          "value": "pending"
+        },
+        "total_cents": {
+          "kind": "integer",
+          "value": "200"
+        }
+      }
+    },
+    {
+      "id": "pending-1",
+      "fields": {
+        "customer_id": {
+          "kind": "reference",
+          "value": "cust_123"
+        },
+        "placed_at": {
+          "kind": "timestamp",
+          "value": "1789473600000"
+        },
+        "status": {
+          "kind": "string",
+          "value": "pending"
+        },
+        "total_cents": {
+          "kind": "integer",
+          "value": "200"
+        }
+      }
+    },
+    {
+      "id": "pending-2",
+      "fields": {
+        "customer_id": {
+          "kind": "reference",
+          "value": "cust_123"
+        },
+        "placed_at": {
+          "kind": "timestamp",
+          "value": "1789473600000"
+        },
+        "status": {
+          "kind": "string",
+          "value": "pending"
+        },
+        "total_cents": {
+          "kind": "integer",
+          "value": "200"
+        }
+      }
+    },
+    {
+      "id": "pending-3",
+      "fields": {
+        "customer_id": {
+          "kind": "reference",
+          "value": "cust_123"
+        },
+        "placed_at": {
+          "kind": "timestamp",
+          "value": "1789473600000"
+        },
+        "status": {
+          "kind": "string",
+          "value": "pending"
+        },
+        "total_cents": {
+          "kind": "integer",
+          "value": "200"
+        }
+      }
+    }
+  ]
+}
+PASS independent packed npm consumer: types + actual WASM/core memory
+PACKED_BROWSER_SERVER http://127.0.0.1:8878/browser.html parent=39552 child=39806 root=/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-sdk-consumer-Dpc1HD
+Removed exact task-owned temporary consumer /var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-sdk-consumer-Dpc1HD

@@ -1,0 +1,634 @@
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF..FFFFFFFFFFFFFFFFF...........................
+======================================================================
+FAIL: test_sr22d_capture_rules_still_apply_to_dual_images (__main__.DualResident.test_sr22d_capture_rules_still_apply_to_dual_images)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 536, in test_sr22d_capture_rules_still_apply_to_dual_images
+    self.rejected_with(check([jvm([cached(LIBSYSTEM), cached_image(KERNEL_IMAGE, slide=SLIDE + 0x1000)])], evidence_v2()), 'different slides')
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 404, in rejected_with
+    self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ('different slides', ['native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib', 'native library with missing digest outside reviewed system cache: /usr/lib/system/libsystem_kernel.dylib', "system cache record: record fields: missing []; unexpected ['dual_resident_images']"])
+
+======================================================================
+FAIL: test_sr22d_changed_missing_extra_or_incomplete_host_file_evidence_rejects (__main__.DualResident.test_sr22d_changed_missing_extra_or_incomplete_host_file_evidence_rejects) (label='sha changed', side='pre')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 510, in test_sr22d_changed_missing_extra_or_incomplete_host_file_evidence_rejects
+    self.rejected_with(check([jvm([cached(LIBSYSTEM), cached_image(KERNEL_IMAGE)])], evidence_v2(**{side: changed})),
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                       '%s-capture host: dual_resident_files' % side)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 404, in rejected_with
+    self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ('pre-capture host: dual_resident_files', ['native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib', 'native library with missing digest outside reviewed system cache: /usr/lib/system/libsystem_kernel.dylib', "system cache record: record fields: missing []; unexpected ['dual_resident_images']"])
+
+======================================================================
+FAIL: test_sr22d_changed_missing_extra_or_incomplete_host_file_evidence_rejects (__main__.DualResident.test_sr22d_changed_missing_extra_or_incomplete_host_file_evidence_rejects) (label='sha changed', side='post')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 510, in test_sr22d_changed_missing_extra_or_incomplete_host_file_evidence_rejects
+    self.rejected_with(check([jvm([cached(LIBSYSTEM), cached_image(KERNEL_IMAGE)])], evidence_v2(**{side: changed})),
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                       '%s-capture host: dual_resident_files' % side)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 404, in rejected_with
+    self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ('post-capture host: dual_resident_files', ['native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib', 'native library with missing digest outside reviewed system cache: /usr/lib/system/libsystem_kernel.dylib', "system cache record: record fields: missing []; unexpected ['dual_resident_images']"])
+
+======================================================================
+FAIL: test_sr22d_changed_missing_extra_or_incomplete_host_file_evidence_rejects (__main__.DualResident.test_sr22d_changed_missing_extra_or_incomplete_host_file_evidence_rejects) (label='bytes changed', side='pre')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 510, in test_sr22d_changed_missing_extra_or_incomplete_host_file_evidence_rejects
+    self.rejected_with(check([jvm([cached(LIBSYSTEM), cached_image(KERNEL_IMAGE)])], evidence_v2(**{side: changed})),
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                       '%s-capture host: dual_resident_files' % side)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 404, in rejected_with
+    self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ('pre-capture host: dual_resident_files', ['native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib', 'native library with missing digest outside reviewed system cache: /usr/lib/system/libsystem_kernel.dylib', "system cache record: record fields: missing []; unexpected ['dual_resident_images']"])
+
+======================================================================
+FAIL: test_sr22d_changed_missing_extra_or_incomplete_host_file_evidence_rejects (__main__.DualResident.test_sr22d_changed_missing_extra_or_incomplete_host_file_evidence_rejects) (label='bytes changed', side='post')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 510, in test_sr22d_changed_missing_extra_or_incomplete_host_file_evidence_rejects
+    self.rejected_with(check([jvm([cached(LIBSYSTEM), cached_image(KERNEL_IMAGE)])], evidence_v2(**{side: changed})),
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                       '%s-capture host: dual_resident_files' % side)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 404, in rejected_with
+    self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ('post-capture host: dual_resident_files', ['native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib', 'native library with missing digest outside reviewed system cache: /usr/lib/system/libsystem_kernel.dylib', "system cache record: record fields: missing []; unexpected ['dual_resident_images']"])
+
+======================================================================
+FAIL: test_sr22d_changed_missing_extra_or_incomplete_host_file_evidence_rejects (__main__.DualResident.test_sr22d_changed_missing_extra_or_incomplete_host_file_evidence_rejects) (label='bytes type', side='pre')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 510, in test_sr22d_changed_missing_extra_or_incomplete_host_file_evidence_rejects
+    self.rejected_with(check([jvm([cached(LIBSYSTEM), cached_image(KERNEL_IMAGE)])], evidence_v2(**{side: changed})),
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                       '%s-capture host: dual_resident_files' % side)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 404, in rejected_with
+    self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ('pre-capture host: dual_resident_files', ['native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib', 'native library with missing digest outside reviewed system cache: /usr/lib/system/libsystem_kernel.dylib', "system cache record: record fields: missing []; unexpected ['dual_resident_images']"])
+
+======================================================================
+FAIL: test_sr22d_changed_missing_extra_or_incomplete_host_file_evidence_rejects (__main__.DualResident.test_sr22d_changed_missing_extra_or_incomplete_host_file_evidence_rejects) (label='bytes type', side='post')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 510, in test_sr22d_changed_missing_extra_or_incomplete_host_file_evidence_rejects
+    self.rejected_with(check([jvm([cached(LIBSYSTEM), cached_image(KERNEL_IMAGE)])], evidence_v2(**{side: changed})),
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                       '%s-capture host: dual_resident_files' % side)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 404, in rejected_with
+    self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ('post-capture host: dual_resident_files', ['native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib', 'native library with missing digest outside reviewed system cache: /usr/lib/system/libsystem_kernel.dylib', "system cache record: record fields: missing []; unexpected ['dual_resident_images']"])
+
+======================================================================
+FAIL: test_sr22d_changed_missing_extra_or_incomplete_host_file_evidence_rejects (__main__.DualResident.test_sr22d_changed_missing_extra_or_incomplete_host_file_evidence_rejects) (label='missing entry', side='pre')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 510, in test_sr22d_changed_missing_extra_or_incomplete_host_file_evidence_rejects
+    self.rejected_with(check([jvm([cached(LIBSYSTEM), cached_image(KERNEL_IMAGE)])], evidence_v2(**{side: changed})),
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                       '%s-capture host: dual_resident_files' % side)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 404, in rejected_with
+    self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ('pre-capture host: dual_resident_files', ['native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib', 'native library with missing digest outside reviewed system cache: /usr/lib/system/libsystem_kernel.dylib', "system cache record: record fields: missing []; unexpected ['dual_resident_images']"])
+
+======================================================================
+FAIL: test_sr22d_changed_missing_extra_or_incomplete_host_file_evidence_rejects (__main__.DualResident.test_sr22d_changed_missing_extra_or_incomplete_host_file_evidence_rejects) (label='missing entry', side='post')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 510, in test_sr22d_changed_missing_extra_or_incomplete_host_file_evidence_rejects
+    self.rejected_with(check([jvm([cached(LIBSYSTEM), cached_image(KERNEL_IMAGE)])], evidence_v2(**{side: changed})),
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                       '%s-capture host: dual_resident_files' % side)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 404, in rejected_with
+    self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ('post-capture host: dual_resident_files', ['native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib', 'native library with missing digest outside reviewed system cache: /usr/lib/system/libsystem_kernel.dylib', "system cache record: record fields: missing []; unexpected ['dual_resident_images']"])
+
+======================================================================
+FAIL: test_sr22d_changed_missing_extra_or_incomplete_host_file_evidence_rejects (__main__.DualResident.test_sr22d_changed_missing_extra_or_incomplete_host_file_evidence_rejects) (label='extra entry', side='pre')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 510, in test_sr22d_changed_missing_extra_or_incomplete_host_file_evidence_rejects
+    self.rejected_with(check([jvm([cached(LIBSYSTEM), cached_image(KERNEL_IMAGE)])], evidence_v2(**{side: changed})),
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                       '%s-capture host: dual_resident_files' % side)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 404, in rejected_with
+    self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ('pre-capture host: dual_resident_files', ['native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib', 'native library with missing digest outside reviewed system cache: /usr/lib/system/libsystem_kernel.dylib', "system cache record: record fields: missing []; unexpected ['dual_resident_images']"])
+
+======================================================================
+FAIL: test_sr22d_changed_missing_extra_or_incomplete_host_file_evidence_rejects (__main__.DualResident.test_sr22d_changed_missing_extra_or_incomplete_host_file_evidence_rejects) (label='extra entry', side='post')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 510, in test_sr22d_changed_missing_extra_or_incomplete_host_file_evidence_rejects
+    self.rejected_with(check([jvm([cached(LIBSYSTEM), cached_image(KERNEL_IMAGE)])], evidence_v2(**{side: changed})),
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                       '%s-capture host: dual_resident_files' % side)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 404, in rejected_with
+    self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ('post-capture host: dual_resident_files', ['native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib', 'native library with missing digest outside reviewed system cache: /usr/lib/system/libsystem_kernel.dylib', "system cache record: record fields: missing []; unexpected ['dual_resident_images']"])
+
+======================================================================
+FAIL: test_sr22d_changed_missing_extra_or_incomplete_host_file_evidence_rejects (__main__.DualResident.test_sr22d_changed_missing_extra_or_incomplete_host_file_evidence_rejects) (label='incomplete entry', side='pre')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 510, in test_sr22d_changed_missing_extra_or_incomplete_host_file_evidence_rejects
+    self.rejected_with(check([jvm([cached(LIBSYSTEM), cached_image(KERNEL_IMAGE)])], evidence_v2(**{side: changed})),
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                       '%s-capture host: dual_resident_files' % side)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 404, in rejected_with
+    self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ('pre-capture host: dual_resident_files', ['native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib', 'native library with missing digest outside reviewed system cache: /usr/lib/system/libsystem_kernel.dylib', "system cache record: record fields: missing []; unexpected ['dual_resident_images']"])
+
+======================================================================
+FAIL: test_sr22d_changed_missing_extra_or_incomplete_host_file_evidence_rejects (__main__.DualResident.test_sr22d_changed_missing_extra_or_incomplete_host_file_evidence_rejects) (label='incomplete entry', side='post')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 510, in test_sr22d_changed_missing_extra_or_incomplete_host_file_evidence_rejects
+    self.rejected_with(check([jvm([cached(LIBSYSTEM), cached_image(KERNEL_IMAGE)])], evidence_v2(**{side: changed})),
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                       '%s-capture host: dual_resident_files' % side)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 404, in rejected_with
+    self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ('post-capture host: dual_resident_files', ['native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib', 'native library with missing digest outside reviewed system cache: /usr/lib/system/libsystem_kernel.dylib', "system cache record: record fields: missing []; unexpected ['dual_resident_images']"])
+
+======================================================================
+FAIL: test_sr22d_changed_missing_extra_or_incomplete_host_file_evidence_rejects (__main__.DualResident.test_sr22d_changed_missing_extra_or_incomplete_host_file_evidence_rejects) (label='non-dict', side='pre')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 510, in test_sr22d_changed_missing_extra_or_incomplete_host_file_evidence_rejects
+    self.rejected_with(check([jvm([cached(LIBSYSTEM), cached_image(KERNEL_IMAGE)])], evidence_v2(**{side: changed})),
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                       '%s-capture host: dual_resident_files' % side)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 404, in rejected_with
+    self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ('pre-capture host: dual_resident_files', ['native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib', 'native library with missing digest outside reviewed system cache: /usr/lib/system/libsystem_kernel.dylib', "system cache record: record fields: missing []; unexpected ['dual_resident_images']"])
+
+======================================================================
+FAIL: test_sr22d_changed_missing_extra_or_incomplete_host_file_evidence_rejects (__main__.DualResident.test_sr22d_changed_missing_extra_or_incomplete_host_file_evidence_rejects) (label='non-dict', side='post')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 510, in test_sr22d_changed_missing_extra_or_incomplete_host_file_evidence_rejects
+    self.rejected_with(check([jvm([cached(LIBSYSTEM), cached_image(KERNEL_IMAGE)])], evidence_v2(**{side: changed})),
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                       '%s-capture host: dual_resident_files' % side)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 404, in rejected_with
+    self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ('post-capture host: dual_resident_files', ['native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib', 'native library with missing digest outside reviewed system cache: /usr/lib/system/libsystem_kernel.dylib', "system cache record: record fields: missing []; unexpected ['dual_resident_images']"])
+
+======================================================================
+FAIL: test_sr22d_digest_bearing_cache_claim_rejects_even_with_disk_hash (__main__.DualResident.test_sr22d_digest_bearing_cache_claim_rejects_even_with_disk_hash)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 533, in test_sr22d_digest_bearing_cache_claim_rejects_even_with_disk_hash
+    self.rejected_with(check([jvm([cached(LIBSYSTEM), claim])], evidence_v2()), 'file-backed library claims a reviewed system cache path: ' + KERNEL)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 404, in rejected_with
+    self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ('file-backed library claims a reviewed system cache path: /usr/lib/system/libsystem_kernel.dylib', ['native library outside reviewed inventory and trusted baseline: /usr/lib/system/libsystem_kernel.dylib', 'native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib', "system cache record: record fields: missing []; unexpected ['dual_resident_images']"])
+
+======================================================================
+FAIL: test_sr22d_malformed_or_unregistered_subset_entries_reject (__main__.DualResident.test_sr22d_malformed_or_unregistered_subset_entries_reject) (label='absent')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 493, in test_sr22d_malformed_or_unregistered_subset_entries_reject
+    self.rejected_with(result, 'system cache record: dual_resident_images')
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 404, in rejected_with
+    self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ('system cache record: dual_resident_images', ['native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib', 'native library with missing digest outside reviewed system cache: /usr/lib/system/libsystem_kernel.dylib', 'system cache record: schema'])
+
+======================================================================
+FAIL: test_sr22d_malformed_or_unregistered_subset_entries_reject (__main__.DualResident.test_sr22d_malformed_or_unregistered_subset_entries_reject) (label='non-dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 493, in test_sr22d_malformed_or_unregistered_subset_entries_reject
+    self.rejected_with(result, 'system cache record: dual_resident_images')
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 404, in rejected_with
+    self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ('system cache record: dual_resident_images', ['native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib', 'native library with missing digest outside reviewed system cache: /usr/lib/system/libsystem_kernel.dylib', "system cache record: record fields: missing []; unexpected ['dual_resident_images']"])
+
+======================================================================
+FAIL: test_sr22d_malformed_or_unregistered_subset_entries_reject (__main__.DualResident.test_sr22d_malformed_or_unregistered_subset_entries_reject) (label='unregistered')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 493, in test_sr22d_malformed_or_unregistered_subset_entries_reject
+    self.rejected_with(result, 'system cache record: dual_resident_images')
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 404, in rejected_with
+    self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ('system cache record: dual_resident_images', ['native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib', 'native library with missing digest outside reviewed system cache: /usr/lib/system/libsystem_kernel.dylib', "system cache record: record fields: missing []; unexpected ['dual_resident_images']"])
+
+======================================================================
+FAIL: test_sr22d_malformed_or_unregistered_subset_entries_reject (__main__.DualResident.test_sr22d_malformed_or_unregistered_subset_entries_reject) (label='alias')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 493, in test_sr22d_malformed_or_unregistered_subset_entries_reject
+    self.rejected_with(result, 'system cache record: dual_resident_images')
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 404, in rejected_with
+    self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ('system cache record: dual_resident_images', ['native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib', 'native library with missing digest outside reviewed system cache: /usr/lib/system/libsystem_kernel.dylib', "system cache record: record fields: missing []; unexpected ['dual_resident_images']"])
+
+======================================================================
+FAIL: test_sr22d_malformed_or_unregistered_subset_entries_reject (__main__.DualResident.test_sr22d_malformed_or_unregistered_subset_entries_reject) (label='wildcard')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 493, in test_sr22d_malformed_or_unregistered_subset_entries_reject
+    self.rejected_with(result, 'system cache record: dual_resident_images')
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 404, in rejected_with
+    self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ('system cache record: dual_resident_images', ['native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib', 'native library with missing digest outside reviewed system cache: /usr/lib/system/libsystem_kernel.dylib', "system cache record: record fields: missing []; unexpected ['dual_resident_images']"])
+
+======================================================================
+FAIL: test_sr22d_malformed_or_unregistered_subset_entries_reject (__main__.DualResident.test_sr22d_malformed_or_unregistered_subset_entries_reject) (label='prefix')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 493, in test_sr22d_malformed_or_unregistered_subset_entries_reject
+    self.rejected_with(result, 'system cache record: dual_resident_images')
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 404, in rejected_with
+    self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ('system cache record: dual_resident_images', ['native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib', 'native library with missing digest outside reviewed system cache: /usr/lib/system/libsystem_kernel.dylib', "system cache record: record fields: missing []; unexpected ['dual_resident_images']"])
+
+======================================================================
+FAIL: test_sr22d_malformed_or_unregistered_subset_entries_reject (__main__.DualResident.test_sr22d_malformed_or_unregistered_subset_entries_reject) (label='bytes bool')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 493, in test_sr22d_malformed_or_unregistered_subset_entries_reject
+    self.rejected_with(result, 'system cache record: dual_resident_images')
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 404, in rejected_with
+    self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ('system cache record: dual_resident_images', ['native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib', 'native library with missing digest outside reviewed system cache: /usr/lib/system/libsystem_kernel.dylib', "system cache record: record fields: missing []; unexpected ['dual_resident_images']"])
+
+======================================================================
+FAIL: test_sr22d_malformed_or_unregistered_subset_entries_reject (__main__.DualResident.test_sr22d_malformed_or_unregistered_subset_entries_reject) (label='bytes zero')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 493, in test_sr22d_malformed_or_unregistered_subset_entries_reject
+    self.rejected_with(result, 'system cache record: dual_resident_images')
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 404, in rejected_with
+    self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ('system cache record: dual_resident_images', ['native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib', 'native library with missing digest outside reviewed system cache: /usr/lib/system/libsystem_kernel.dylib', "system cache record: record fields: missing []; unexpected ['dual_resident_images']"])
+
+======================================================================
+FAIL: test_sr22d_malformed_or_unregistered_subset_entries_reject (__main__.DualResident.test_sr22d_malformed_or_unregistered_subset_entries_reject) (label='bytes negative')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 493, in test_sr22d_malformed_or_unregistered_subset_entries_reject
+    self.rejected_with(result, 'system cache record: dual_resident_images')
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 404, in rejected_with
+    self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ('system cache record: dual_resident_images', ['native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib', 'native library with missing digest outside reviewed system cache: /usr/lib/system/libsystem_kernel.dylib', "system cache record: record fields: missing []; unexpected ['dual_resident_images']"])
+
+======================================================================
+FAIL: test_sr22d_malformed_or_unregistered_subset_entries_reject (__main__.DualResident.test_sr22d_malformed_or_unregistered_subset_entries_reject) (label='bytes float')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 493, in test_sr22d_malformed_or_unregistered_subset_entries_reject
+    self.rejected_with(result, 'system cache record: dual_resident_images')
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 404, in rejected_with
+    self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ('system cache record: dual_resident_images', ['native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib', 'native library with missing digest outside reviewed system cache: /usr/lib/system/libsystem_kernel.dylib', "system cache record: record fields: missing []; unexpected ['dual_resident_images']"])
+
+======================================================================
+FAIL: test_sr22d_malformed_or_unregistered_subset_entries_reject (__main__.DualResident.test_sr22d_malformed_or_unregistered_subset_entries_reject) (label='bytes string')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 493, in test_sr22d_malformed_or_unregistered_subset_entries_reject
+    self.rejected_with(result, 'system cache record: dual_resident_images')
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 404, in rejected_with
+    self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ('system cache record: dual_resident_images', ['native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib', 'native library with missing digest outside reviewed system cache: /usr/lib/system/libsystem_kernel.dylib', "system cache record: record fields: missing []; unexpected ['dual_resident_images']"])
+
+======================================================================
+FAIL: test_sr22d_malformed_or_unregistered_subset_entries_reject (__main__.DualResident.test_sr22d_malformed_or_unregistered_subset_entries_reject) (label='sha uppercase')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 493, in test_sr22d_malformed_or_unregistered_subset_entries_reject
+    self.rejected_with(result, 'system cache record: dual_resident_images')
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 404, in rejected_with
+    self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ('system cache record: dual_resident_images', ['native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib', 'native library with missing digest outside reviewed system cache: /usr/lib/system/libsystem_kernel.dylib', "system cache record: record fields: missing []; unexpected ['dual_resident_images']"])
+
+======================================================================
+FAIL: test_sr22d_malformed_or_unregistered_subset_entries_reject (__main__.DualResident.test_sr22d_malformed_or_unregistered_subset_entries_reject) (label='sha short')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 493, in test_sr22d_malformed_or_unregistered_subset_entries_reject
+    self.rejected_with(result, 'system cache record: dual_resident_images')
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 404, in rejected_with
+    self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ('system cache record: dual_resident_images', ['native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib', 'native library with missing digest outside reviewed system cache: /usr/lib/system/libsystem_kernel.dylib', "system cache record: record fields: missing []; unexpected ['dual_resident_images']"])
+
+======================================================================
+FAIL: test_sr22d_malformed_or_unregistered_subset_entries_reject (__main__.DualResident.test_sr22d_malformed_or_unregistered_subset_entries_reject) (label='sha missing')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 493, in test_sr22d_malformed_or_unregistered_subset_entries_reject
+    self.rejected_with(result, 'system cache record: dual_resident_images')
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 404, in rejected_with
+    self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ('system cache record: dual_resident_images', ['native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib', 'native library with missing digest outside reviewed system cache: /usr/lib/system/libsystem_kernel.dylib', "system cache record: record fields: missing []; unexpected ['dual_resident_images']"])
+
+======================================================================
+FAIL: test_sr22d_malformed_or_unregistered_subset_entries_reject (__main__.DualResident.test_sr22d_malformed_or_unregistered_subset_entries_reject) (label='extra value field')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 493, in test_sr22d_malformed_or_unregistered_subset_entries_reject
+    self.rejected_with(result, 'system cache record: dual_resident_images')
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 404, in rejected_with
+    self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ('system cache record: dual_resident_images', ['native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib', 'native library with missing digest outside reviewed system cache: /usr/lib/system/libsystem_kernel.dylib', "system cache record: record fields: missing []; unexpected ['dual_resident_images']"])
+
+======================================================================
+FAIL: test_sr22d_pre_and_post_each_match_record_even_when_wrong_values_agree (__main__.DualResident.test_sr22d_pre_and_post_each_match_record_even_when_wrong_values_agree)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 466, in test_sr22d_pre_and_post_each_match_record_even_when_wrong_values_agree
+    self.rejected_with(result, 'pre-capture host: dual_resident_files')
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 404, in rejected_with
+    self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ('pre-capture host: dual_resident_files', ['native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib', "system cache record: record fields: missing []; unexpected ['dual_resident_images']"])
+
+======================================================================
+FAIL: test_sr22d_v1_host_carrying_dual_resident_files_rejects (__main__.DualResident.test_sr22d_v1_host_carrying_dual_resident_files_rejects) (side='pre')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 451, in test_sr22d_v1_host_carrying_dual_resident_files_rejects
+    self.rejected_with(check([jvm([cached(LIBSYSTEM)])], evidence(**{side: changed})),
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                       '%s-capture host: dual_resident_files' % side)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 404, in rejected_with
+    self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ('pre-capture host: dual_resident_files', ['native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib', 'pre-capture host record incomplete'])
+
+======================================================================
+FAIL: test_sr22d_v1_host_carrying_dual_resident_files_rejects (__main__.DualResident.test_sr22d_v1_host_carrying_dual_resident_files_rejects) (side='post')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 451, in test_sr22d_v1_host_carrying_dual_resident_files_rejects
+    self.rejected_with(check([jvm([cached(LIBSYSTEM)])], evidence(**{side: changed})),
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                       '%s-capture host: dual_resident_files' % side)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 404, in rejected_with
+    self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ('post-capture host: dual_resident_files', ['native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib', 'post-capture host record incomplete'])
+
+======================================================================
+FAIL: test_sr22d_v2_dual_image_can_be_mandatory (__main__.DualResident.test_sr22d_v2_dual_image_can_be_mandatory)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 423, in test_sr22d_v2_dual_image_can_be_mandatory
+    self.assertTrue(check([jvm([cached(LIBSYSTEM), cached_image(KERNEL_IMAGE)])], evidence_v2(record)).ok)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_sr22d_v2_dual_resident_image_classifies_once_as_system_cache (__main__.DualResident.test_sr22d_v2_dual_resident_image_classifies_once_as_system_cache)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 409, in test_sr22d_v2_dual_resident_image_classifies_once_as_system_cache
+    self.assertTrue(result.ok, result.violations)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : [Violation(source='kotlin-compiler', setting='native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib'), Violation(source='kotlin-compiler', setting='native library with missing digest outside reviewed system cache: /usr/lib/system/libsystem_kernel.dylib'), Violation(source='system-cache', setting="system cache record: record fields: missing []; unexpected ['dual_resident_images']")]
+
+======================================================================
+FAIL: test_sr22d_v2_empty_dual_set_grants_no_exception (__main__.DualResident.test_sr22d_v2_empty_dual_set_grants_no_exception)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 428, in test_sr22d_v2_empty_dual_set_grants_no_exception
+    self.assertTrue(check([jvm([cached(LIBSYSTEM), cached_image(KERNEL_IMAGE)])], evidence_v2(record)).ok)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_sr22d_v2_host_missing_dual_resident_files_rejects (__main__.DualResident.test_sr22d_v2_host_missing_dual_resident_files_rejects) (side='pre')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 459, in test_sr22d_v2_host_missing_dual_resident_files_rejects
+    self.rejected_with(check([jvm([cached(LIBSYSTEM)])], evidence_v2(**{side: changed})),
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                       '%s-capture host: dual_resident_files' % side)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 404, in rejected_with
+    self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ('pre-capture host: dual_resident_files', ['native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib', "system cache record: record fields: missing []; unexpected ['dual_resident_images']"])
+
+======================================================================
+FAIL: test_sr22d_v2_host_missing_dual_resident_files_rejects (__main__.DualResident.test_sr22d_v2_host_missing_dual_resident_files_rejects) (side='post')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 459, in test_sr22d_v2_host_missing_dual_resident_files_rejects
+    self.rejected_with(check([jvm([cached(LIBSYSTEM)])], evidence_v2(**{side: changed})),
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                       '%s-capture host: dual_resident_files' % side)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 404, in rejected_with
+    self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ('post-capture host: dual_resident_files', ['native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib', "system cache record: record fields: missing []; unexpected ['dual_resident_images']"])
+
+======================================================================
+FAIL: test_sr22d_v2_reviewed_alias_resolves_to_canonical_dual_image (__main__.DualResident.test_sr22d_v2_reviewed_alias_resolves_to_canonical_dual_image)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 417, in test_sr22d_v2_reviewed_alias_resolves_to_canonical_dual_image
+    self.assertTrue(result.ok, result.violations)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : [Violation(source='kotlin-compiler', setting='native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib'), Violation(source='kotlin-compiler', setting='native library with missing digest outside reviewed system cache: /usr/lib/system/libsystem_kernel_alias.dylib'), Violation(source='system-cache', setting="system cache record: record fields: missing []; unexpected ['dual_resident_images']")]
+
+======================================================================
+FAIL: test_sr22d_wrong_path_kinds_reject_per_side (__main__.DualResident.test_sr22d_wrong_path_kinds_reject_per_side) (kind='symlink', side='pre')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 519, in test_sr22d_wrong_path_kinds_reject_per_side
+    self.rejected_with(check([jvm([cached(LIBSYSTEM)])], evidence_v2(**{side: changed})),
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                       '%s-capture host: dual-resident image_path_status' % side)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 404, in rejected_with
+    self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ('pre-capture host: dual-resident image_path_status', ['native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib', "system cache record: record fields: missing []; unexpected ['dual_resident_images']"])
+
+======================================================================
+FAIL: test_sr22d_wrong_path_kinds_reject_per_side (__main__.DualResident.test_sr22d_wrong_path_kinds_reject_per_side) (kind='symlink', side='post')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 519, in test_sr22d_wrong_path_kinds_reject_per_side
+    self.rejected_with(check([jvm([cached(LIBSYSTEM)])], evidence_v2(**{side: changed})),
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                       '%s-capture host: dual-resident image_path_status' % side)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 404, in rejected_with
+    self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ('post-capture host: dual-resident image_path_status', ['native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib', "system cache record: record fields: missing []; unexpected ['dual_resident_images']"])
+
+======================================================================
+FAIL: test_sr22d_wrong_path_kinds_reject_per_side (__main__.DualResident.test_sr22d_wrong_path_kinds_reject_per_side) (kind='absent', side='pre')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 519, in test_sr22d_wrong_path_kinds_reject_per_side
+    self.rejected_with(check([jvm([cached(LIBSYSTEM)])], evidence_v2(**{side: changed})),
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                       '%s-capture host: dual-resident image_path_status' % side)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 404, in rejected_with
+    self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ('pre-capture host: dual-resident image_path_status', ['native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib', "system cache record: record fields: missing []; unexpected ['dual_resident_images']"])
+
+======================================================================
+FAIL: test_sr22d_wrong_path_kinds_reject_per_side (__main__.DualResident.test_sr22d_wrong_path_kinds_reject_per_side) (kind='absent', side='post')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 519, in test_sr22d_wrong_path_kinds_reject_per_side
+    self.rejected_with(check([jvm([cached(LIBSYSTEM)])], evidence_v2(**{side: changed})),
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                       '%s-capture host: dual-resident image_path_status' % side)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 404, in rejected_with
+    self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ('post-capture host: dual-resident image_path_status', ['native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib', "system cache record: record fields: missing []; unexpected ['dual_resident_images']"])
+
+======================================================================
+FAIL: test_sr22d_wrong_path_kinds_reject_per_side (__main__.DualResident.test_sr22d_wrong_path_kinds_reject_per_side) (kind='other', side='pre')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 519, in test_sr22d_wrong_path_kinds_reject_per_side
+    self.rejected_with(check([jvm([cached(LIBSYSTEM)])], evidence_v2(**{side: changed})),
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                       '%s-capture host: dual-resident image_path_status' % side)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 404, in rejected_with
+    self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ('pre-capture host: dual-resident image_path_status', ['native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib', "system cache record: record fields: missing []; unexpected ['dual_resident_images']"])
+
+======================================================================
+FAIL: test_sr22d_wrong_path_kinds_reject_per_side (__main__.DualResident.test_sr22d_wrong_path_kinds_reject_per_side) (kind='other', side='post')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 519, in test_sr22d_wrong_path_kinds_reject_per_side
+    self.rejected_with(check([jvm([cached(LIBSYSTEM)])], evidence_v2(**{side: changed})),
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                       '%s-capture host: dual-resident image_path_status' % side)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 404, in rejected_with
+    self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ('post-capture host: dual-resident image_path_status', ['native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib', "system cache record: record fields: missing []; unexpected ['dual_resident_images']"])
+
+======================================================================
+FAIL: test_sr22d_wrong_path_kinds_reject_per_side (__main__.DualResident.test_sr22d_wrong_path_kinds_reject_per_side) (kind='regular_file', side='pre')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 519, in test_sr22d_wrong_path_kinds_reject_per_side
+    self.rejected_with(check([jvm([cached(LIBSYSTEM)])], evidence_v2(**{side: changed})),
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                       '%s-capture host: dual-resident image_path_status' % side)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 404, in rejected_with
+    self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ('pre-capture host: dual-resident image_path_status', ['native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib', "system cache record: record fields: missing []; unexpected ['dual_resident_images']"])
+
+======================================================================
+FAIL: test_sr22d_wrong_path_kinds_reject_per_side (__main__.DualResident.test_sr22d_wrong_path_kinds_reject_per_side) (kind='regular_file', side='post')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 519, in test_sr22d_wrong_path_kinds_reject_per_side
+    self.rejected_with(check([jvm([cached(LIBSYSTEM)])], evidence_v2(**{side: changed})),
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                       '%s-capture host: dual-resident image_path_status' % side)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 404, in rejected_with
+    self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ('post-capture host: dual-resident image_path_status', ['native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib', "system cache record: record fields: missing []; unexpected ['dual_resident_images']"])
+
+======================================================================
+FAIL: test_sr22d_wrong_path_kinds_reject_per_side (__main__.DualResident.test_sr22d_wrong_path_kinds_reject_per_side)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 523, in test_sr22d_wrong_path_kinds_reject_per_side
+    self.rejected_with(check([jvm([cached(LIBSYSTEM)])], evidence_v2(pre=changed)), 'reviewed cache path not absent as a file: ' + LIBZ)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 404, in rejected_with
+    self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ('reviewed cache path not absent as a file: /usr/lib/libz.1.dylib', ['native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib', "system cache record: record fields: missing []; unexpected ['dual_resident_images']"])
+
+----------------------------------------------------------------------
+Ran 41 tests in 0.065s
+
+FAILED (failures=49)
+exit=1

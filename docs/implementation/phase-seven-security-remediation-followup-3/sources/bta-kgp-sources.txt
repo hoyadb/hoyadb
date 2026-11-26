@@ -1,0 +1,32 @@
+org/jetbrains/kotlin/compilerRunner/GradleKotlinCompilerRunner.kt:65: runViaBuildToolsApi: Boolean,
+org/jetbrains/kotlin/compilerRunner/GradleKotlinCompilerRunner.kt:71: return if (runViaBuildToolsApi) {
+org/jetbrains/kotlin/gradle/dsl/KotlinProjectExtension.kt:17: import org.jetbrains.kotlin.buildtools.api.ExperimentalBuildToolsApi
+org/jetbrains/kotlin/gradle/dsl/KotlinProjectExtension.kt:159: @ExperimentalBuildToolsApi
+org/jetbrains/kotlin/gradle/dsl/KotlinProjectExtension.kt:160: override val compilerVersion: Property<String> =
+org/jetbrains/kotlin/gradle/internal/KotlinDependenciesManagement.kt:25: internal const val KOTLIN_BUILD_TOOLS_API_IMPL = "kotlin-build-tools-impl"
+org/jetbrains/kotlin/gradle/plugin/AbstractKotlinPlugin.kt:41: internal const val BUILD_TOOLS_API_CLASSPATH_CONFIGURATION_NAME = "kotlinBuildToolsApiClasspath"
+org/jetbrains/kotlin/gradle/plugin/KotlinPluginWrapper.kt:29: import org.jetbrains.kotlin.gradle.internal.KOTLIN_BUILD_TOOLS_API_IMPL
+org/jetbrains/kotlin/gradle/plugin/KotlinPluginWrapper.kt:110: .maybeCreateResolvable(BUILD_TOOLS_API_CLASSPATH_CONFIGURATION_NAME)
+org/jetbrains/kotlin/gradle/plugin/KotlinPluginWrapper.kt:112: project.dependencies.add(it.name, "$KOTLIN_MODULE_GROUP:$KOTLIN_BUILD_TOOLS_API_IMPL")
+org/jetbrains/kotlin/gradle/plugin/KotlinPluginWrapper.kt:118: versionConstraint.strictly(project.kotlinExtensionOrNull?.compilerVersion?.get() ?: pluginVersion)
+org/jetbrains/kotlin/gradle/plugin/KotlinPluginWrapper.kt:129: val classpathConfiguration = when (task.runViaBuildToolsApi.get()) {
+org/jetbrains/kotlin/gradle/plugin/KotlinPluginWrapper.kt:130: true -> BUILD_TOOLS_API_CLASSPATH_CONFIGURATION_NAME
+org/jetbrains/kotlin/gradle/plugin/PropertiesProvider.kt:51: import org.jetbrains.kotlin.gradle.plugin.PropertiesProvider.PropertyNames.KOTLIN_RUN_COMPILER_VIA_BUILD_TOOLS_API
+org/jetbrains/kotlin/gradle/plugin/PropertiesProvider.kt:405: get() = booleanProvider(KOTLIN_RUN_COMPILER_VIA_BUILD_TOOLS_API).orElse(false)
+org/jetbrains/kotlin/gradle/plugin/PropertiesProvider.kt:465: get() = booleanProperty(PropertyNames.KOTLIN_SUPPRESS_BUILD_TOOLS_API_VERSION_CONSISTENCY_CHECKS) ?: false
+org/jetbrains/kotlin/gradle/plugin/PropertiesProvider.kt:701: val KOTLIN_RUN_COMPILER_VIA_BUILD_TOOLS_API = property("kotlin.compiler.runViaBuildToolsApi")
+org/jetbrains/kotlin/gradle/plugin/PropertiesProvider.kt:708: val KOTLIN_SUPPRESS_BUILD_TOOLS_API_VERSION_CONSISTENCY_CHECKS =
+org/jetbrains/kotlin/gradle/plugin/diagnostics/KotlinToolingDiagnostics.kt:12: import org.jetbrains.kotlin.gradle.internal.KOTLIN_BUILD_TOOLS_API_IMPL
+org/jetbrains/kotlin/gradle/plugin/diagnostics/KotlinToolingDiagnostics.kt:1079: Artifact $KOTLIN_MODULE_GROUP:$KOTLIN_BUILD_TOOLS_API_IMPL must have version aligned with the version of KGP when compilation via the Build Tools API is disabled.
+org/jetbrains/kotlin/gradle/plugin/mpp/compilationImpl/KotlinCreateNativeCompileTasksSideEffect.kt:49: task.runViaBuildToolsApi.value(false).disallowChanges() // K/N is not yet supported
+org/jetbrains/kotlin/gradle/scripting/internal/ScriptingGradleSubplugin.kt:132: val compilerClasspath = project.configurations.named(BUILD_TOOLS_API_CLASSPATH_CONFIGURATION_NAME)
+org/jetbrains/kotlin/gradle/targets/native/KotilnNativeConfigureBinariesSideEffect.kt:123: task.runViaBuildToolsApi.value(false).disallowChanges() // K/N is not yet supported
+org/jetbrains/kotlin/gradle/tasks/AbstractKotlinCompile.kt:198: runViaBuildToolsApi.get(),
+org/jetbrains/kotlin/gradle/tasks/AbstractKotlinCompileTool.kt:134: internal abstract val runViaBuildToolsApi: Property<Boolean>
+org/jetbrains/kotlin/gradle/tasks/configuration/AbstractKotlinCompileConfig.kt:95: task.runViaBuildToolsApi.convention(propertiesProvider.runKotlinCompilerViaBuildToolsApi).finalizeValueOnRead()
+org/jetbrains/kotlin/gradle/tasks/configuration/KotlinCompileConfig.kt:19: import org.jetbrains.kotlin.gradle.internal.KOTLIN_BUILD_TOOLS_API_IMPL
+org/jetbrains/kotlin/gradle/tasks/configuration/KotlinCompileConfig.kt:22: import org.jetbrains.kotlin.gradle.plugin.BUILD_TOOLS_API_CLASSPATH_CONFIGURATION_NAME
+org/jetbrains/kotlin/gradle/tasks/configuration/KotlinCompileConfig.kt:180: .find { it.group == KOTLIN_MODULE_GROUP && it.module == KOTLIN_BUILD_TOOLS_API_IMPL }
+org/jetbrains/kotlin/gradle/tasks/configuration/KotlinCompileConfig.kt:189: val classpath = project.configurations.named(BUILD_TOOLS_API_CLASSPATH_CONFIGURATION_NAME)
+org/jetbrains/kotlin/cli/metadata/MetadataUtils.kt:22: compilerVersion = KotlinCompilerVersion.getVersion(),
+org/jetbrains/kotlin/serialization/deserialization/IncompatibleVersionErrorData.kt:12: val compilerVersion: T,

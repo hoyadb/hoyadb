@@ -1,0 +1,15 @@
+{
+  "namespace": "hoyadb-spec23-5d936457-2f63-428b-8903-a5e40ba6367e",
+  "done": true,
+  "allPassed": true,
+  "checks": [
+    "runtime",
+    "W05 simulated unavailable capability",
+    "W05 actual capabilities and initialization",
+    "W02/W03 page reload before insertion",
+    "L01 live adapter prevents shutdown",
+    "L02 pool owns handles after adapter disposal",
+    "L02 acknowledged shutdown permits cleanup before termination",
+    "cleanup"
+  ]
+}

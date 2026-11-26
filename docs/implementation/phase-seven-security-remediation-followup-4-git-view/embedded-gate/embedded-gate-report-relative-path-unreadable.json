@@ -1,0 +1,36 @@
+{
+ "components": [
+  {
+   "confidence": "unreadable_container",
+   "container": "kotlin-gradle-plugin-2.1.20-gradle85.jar",
+   "coordinate": null,
+   "evidence": "target/phase-seven-rn/android/repo/org/jetbrains/kotlin/kotlin-gradle-plugin/2.1.20/kotlin-gradle-plugin-2.1.20-gradle85.jar",
+   "ga": null,
+   "namespaces": [],
+   "version": null
+  },
+  {
+   "confidence": "unreadable_container",
+   "container": "kotlin-compiler-embeddable-2.1.20.jar",
+   "coordinate": null,
+   "evidence": "target/phase-seven-rn/android/repo/org/jetbrains/kotlin/kotlin-compiler-embeddable/2.1.20/kotlin-compiler-embeddable-2.1.20.jar",
+   "ga": null,
+   "namespaces": [],
+   "version": null
+  }
+ ],
+ "findings": [],
+ "rejections": [
+  {
+   "component": "target/phase-seven-rn/android/repo/org/jetbrains/kotlin/kotlin-gradle-plugin/2.1.20/kotlin-gradle-plugin-2.1.20-gradle85.jar",
+   "container": "kotlin-gradle-plugin-2.1.20-gradle85.jar",
+   "reason": "unreadable container"
+  },
+  {
+   "component": "target/phase-seven-rn/android/repo/org/jetbrains/kotlin/kotlin-compiler-embeddable/2.1.20/kotlin-compiler-embeddable-2.1.20.jar",
+   "container": "kotlin-compiler-embeddable-2.1.20.jar",
+   "reason": "unreadable container"
+  }
+ ],
+ "status": "rejected"
+}

@@ -1,0 +1,3 @@
+observed DIAGNOSTIC {"index":null,"stage":"setup","timed_value_ns":null,"wall_ns":33331134318}
+observed DIAGNOSTIC {"index":null,"stage":"fixture_validation","timed_value_ns":null,"wall_ns":3180797499}
+exit=1

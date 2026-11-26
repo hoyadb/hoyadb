@@ -1,0 +1,10 @@
+# SPEC-0044 / TC-0048: core behavior is exercised by dependent adapter tests.
+# The full native workspace is the default; do not limit it to core unit tests.
+test_workspace = true
+additional_cargo_args = ["--offline", "--locked"]
+output = "target/quality/mutation"
+timeout_multiplier = 3.0
+minimum_test_timeout = 60.0
+
+# No source/function exclusions or baseline suppression. Use --file/--re only
+# for explicitly labelled focused investigations, then broaden the scope.

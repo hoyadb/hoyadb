@@ -1,0 +1,59 @@
+.........EEE.............................................
+======================================================================
+ERROR: test_DEF0023_waiter_retires_when_a_direct_start_wins_the_lock_for_each_start_route (test_browser_server.BrowserControllerTests.test_DEF0023_waiter_retires_when_a_direct_start_wins_the_lock_for_each_start_route) (route='warm')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/test_browser_server.py", line 672, in test_DEF0023_waiter_retires_when_a_direct_start_wins_the_lock_for_each_start_route
+    self.assertNotIn("claim", [event["event"] for event in self.control()])
+                                                           ~~~~~~~~~~~~^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/test_browser_server.py", line 228, in control
+    return [json.loads(line) for line in (self.output / "control.jsonl").read_text().splitlines()]
+                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/local/Cellar/python@3.14/3.14.8/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 787, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.14/3.14.8/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-browser-controller-test-pfcrb0om/control.jsonl'
+
+======================================================================
+ERROR: test_DEF0023_waiter_retires_when_a_direct_start_wins_the_lock_for_each_start_route (test_browser_server.BrowserControllerTests.test_DEF0023_waiter_retires_when_a_direct_start_wins_the_lock_for_each_start_route) (route='cold')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/test_browser_server.py", line 672, in test_DEF0023_waiter_retires_when_a_direct_start_wins_the_lock_for_each_start_route
+    self.assertNotIn("claim", [event["event"] for event in self.control()])
+                                                           ~~~~~~~~~~~~^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/test_browser_server.py", line 228, in control
+    return [json.loads(line) for line in (self.output / "control.jsonl").read_text().splitlines()]
+                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/local/Cellar/python@3.14/3.14.8/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 787, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.14/3.14.8/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-browser-controller-test-pfcrb0om/control.jsonl'
+
+======================================================================
+ERROR: test_DEF0023_waiter_retires_when_a_direct_start_wins_the_lock_for_each_start_route (test_browser_server.BrowserControllerTests.test_DEF0023_waiter_retires_when_a_direct_start_wins_the_lock_for_each_start_route) (route='resources')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/test_browser_server.py", line 672, in test_DEF0023_waiter_retires_when_a_direct_start_wins_the_lock_for_each_start_route
+    self.assertNotIn("claim", [event["event"] for event in self.control()])
+                                                           ~~~~~~~~~~~~^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/test_browser_server.py", line 228, in control
+    return [json.loads(line) for line in (self.output / "control.jsonl").read_text().splitlines()]
+                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/local/Cellar/python@3.14/3.14.8/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 787, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.14/3.14.8/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-browser-controller-test-pfcrb0om/control.jsonl'
+
+----------------------------------------------------------------------
+Ran 55 tests in 4.519s
+
+FAILED (errors=3)

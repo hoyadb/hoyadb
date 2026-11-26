@@ -1,0 +1,150 @@
+{
+  "archive": {
+    "entries": [
+      "package/Artifacts/HoyaNative.xcframework/Info.plist",
+      "package/Artifacts/HoyaNative.xcframework/NOTICE.md",
+      "package/Artifacts/HoyaNative.xcframework/ios-arm64/Headers/HoyaNative/module.modulemap",
+      "package/Artifacts/HoyaNative.xcframework/ios-arm64/Headers/hoyadb.h",
+      "package/Artifacts/HoyaNative.xcframework/ios-arm64/libhoyadb_native.a",
+      "package/Artifacts/HoyaNative.xcframework/ios-arm64_x86_64-simulator/Headers/HoyaNative/module.modulemap",
+      "package/Artifacts/HoyaNative.xcframework/ios-arm64_x86_64-simulator/Headers/hoyadb.h",
+      "package/Artifacts/HoyaNative.xcframework/ios-arm64_x86_64-simulator/libhoyadb_native.a",
+      "package/Artifacts/HoyaNative.xcframework/macos-x86_64/Headers/HoyaNative/module.modulemap",
+      "package/Artifacts/HoyaNative.xcframework/macos-x86_64/Headers/hoyadb.h",
+      "package/Artifacts/HoyaNative.xcframework/macos-x86_64/libhoyadb_native.a",
+      "package/Artifacts/HoyaNative.xcframework/native-build-parent.json",
+      "package/Artifacts/HoyaNative.xcframework/packaging.json",
+      "package/Artifacts/HoyaNative.xcframework/third-party/index.json",
+      "package/Artifacts/HoyaNative.xcframework/third-party/native/sqlcipher-4.19.0/LICENSE-sqlcipher",
+      "package/Artifacts/HoyaNative.xcframework/third-party/native/sqlite-3.53.4/LICENSE-sqlite",
+      "package/Artifacts/HoyaNative.xcframework/third-party/rust/bitflags-2.13.2/LICENSE-APACHE",
+      "package/Artifacts/HoyaNative.xcframework/third-party/rust/bitflags-2.13.2/LICENSE-MIT",
+      "package/Artifacts/HoyaNative.xcframework/third-party/rust/cc-1.10.0/LICENSE-APACHE",
+      "package/Artifacts/HoyaNative.xcframework/third-party/rust/cc-1.10.0/LICENSE-MIT",
+      "package/Artifacts/HoyaNative.xcframework/third-party/rust/fallible-iterator-0.3.0/LICENSE-APACHE",
+      "package/Artifacts/HoyaNative.xcframework/third-party/rust/fallible-iterator-0.3.0/LICENSE-MIT",
+      "package/Artifacts/HoyaNative.xcframework/third-party/rust/fallible-streaming-iterator-0.1.9/LICENSE-APACHE",
+      "package/Artifacts/HoyaNative.xcframework/third-party/rust/fallible-streaming-iterator-0.1.9/LICENSE-MIT",
+      "package/Artifacts/HoyaNative.xcframework/third-party/rust/find-msvc-tools-0.1.15/LICENSE-APACHE",
+      "package/Artifacts/HoyaNative.xcframework/third-party/rust/find-msvc-tools-0.1.15/LICENSE-MIT",
+      "package/Artifacts/HoyaNative.xcframework/third-party/rust/libsqlite3-sys-0.38.1/LICENSE",
+      "package/Artifacts/HoyaNative.xcframework/third-party/rust/pkg-config-0.3.34/LICENSE-APACHE",
+      "package/Artifacts/HoyaNative.xcframework/third-party/rust/pkg-config-0.3.34/LICENSE-MIT",
+      "package/Artifacts/HoyaNative.xcframework/third-party/rust/rusqlite-0.40.1/LICENSE",
+      "package/Artifacts/HoyaNative.xcframework/third-party/rust/shlex-2.0.1/LICENSE-APACHE",
+      "package/Artifacts/HoyaNative.xcframework/third-party/rust/shlex-2.0.1/LICENSE-MIT",
+      "package/Artifacts/HoyaNative.xcframework/third-party/rust/smallvec-1.16.4/LICENSE-APACHE",
+      "package/Artifacts/HoyaNative.xcframework/third-party/rust/smallvec-1.16.4/LICENSE-MIT",
+      "package/Artifacts/HoyaNative.xcframework/third-party/rust/sqlcipher-src-419.0.6+sqlcipher-4.19.0-sqlite-3.53.4-libtomcrypt-1.18.2/LICENSE",
+      "package/Artifacts/HoyaNative.xcframework/third-party/rust/vcpkg-0.2.15/LICENSE-APACHE",
+      "package/Artifacts/HoyaNative.xcframework/third-party/rust/vcpkg-0.2.15/LICENSE-MIT",
+      "package/Artifacts/HoyaNative.xcframework/third-party/rust/zeroize-1.9.1/LICENSE-APACHE",
+      "package/Artifacts/HoyaNative.xcframework/third-party/rust/zeroize-1.9.1/LICENSE-MIT",
+      "package/Artifacts/HoyaNative.xcframework/third-party/toolchain/rust-1.98.1/COPYRIGHT-library.html",
+      "package/HoyaDBReactNative.podspec",
+      "package/README.md",
+      "package/android/build.gradle",
+      "package/android/src/main/AndroidManifest.xml",
+      "package/android/src/main/java/dev/hoyadb/HoyaDBModule.java",
+      "package/android/src/main/java/dev/hoyadb/HoyaDBPackage.java",
+      "package/index.d.ts",
+      "package/ios/HoyaDBModule.h",
+      "package/ios/HoyaDBModule.mm",
+      "package/ios/HoyaNativeHost.h",
+      "package/ios/HoyaNativeHost.mm",
+      "package/package.json",
+      "package/react-native.config.cjs",
+      "package/src/NativeHoyaDB.ts",
+      "package/src/channel.js",
+      "package/src/index.js"
+    ],
+    "file": "hoyadb-react-native-0.1.0.tgz",
+    "sha256": "83ba210612181fbd3b5ca3d746cde4577f5ca521df4256c4f0b6e5c54a5cbc75",
+    "sha512": "fa24d745ce119f9620f8701e1b83492859a404376a71c0b23b3f38f7951f5848d7bcbe30e295aa950653cb1f1e40be9ee0a19641797ddd0b2b4880e4506476d3"
+  },
+  "expected_parent_sha256": "c19233a6d34e76628ae42c4870be5c6add4fa39c7f4fb9ed46678da95a532496",
+  "format": 1,
+  "head_commit": "ab68ce6e5394745abba7540cac8b8ab6b181343b",
+  "pack": {
+    "argv": [
+      "npm",
+      "pack",
+      "--ignore-scripts",
+      "--json",
+      "--pack-destination",
+      "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/def-0030/rn-pack/final-1/packed"
+    ],
+    "cwd": "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native",
+    "exit_code": 0,
+    "stderr": "npm warn config init.author.name Use `--init-author-name` instead.\nnpm warn config init.author.email Use `--init-author-email` instead.\nnpm warn config init.author.url Use `--init-author-url` instead.\nnpm warn Unknown user config \"email\". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.\n",
+    "stdout": "[\n  {\n    \"id\": \"@hoyadb/react-native@0.1.0\",\n    \"name\": \"@hoyadb/react-native\",\n    \"version\": \"0.1.0\",\n    \"size\": 35633179,\n    \"unpackedSize\": 116136256,\n    \"shasum\": \"a2d35e539464f24e0172388a5af787c70f3df7db\",\n    \"integrity\": \"sha512-+iTXRc4Rn5Yg+HAeG4NJKFmkBDdqccCyOz8495UfWEjXvL4w4pWqlQZTyx8eQL6e4KGWQXl93QsrSIDkUGR20w==\",\n    \"filename\": \"hoyadb-react-native-0.1.0.tgz\",\n    \"files\": [\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/Info.plist\",\n        \"size\": 1693,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/ios-arm64_x86_64-simulator/Headers/hoyadb.h\",\n        \"size\": 2171,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/ios-arm64_x86_64-simulator/Headers/HoyaNative/module.modulemap\",\n        \"size\": 60,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/ios-arm64_x86_64-simulator/libhoyadb_native.a\",\n        \"size\": 56854480,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/ios-arm64/Headers/hoyadb.h\",\n        \"size\": 2171,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/ios-arm64/Headers/HoyaNative/module.modulemap\",\n        \"size\": 60,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/ios-arm64/libhoyadb_native.a\",\n        \"size\": 28398384,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/macos-x86_64/Headers/hoyadb.h\",\n        \"size\": 2171,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/macos-x86_64/Headers/HoyaNative/module.modulemap\",\n        \"size\": 60,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/macos-x86_64/libhoyadb_native.a\",\n        \"size\": 29143544,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/native-build-parent.json\",\n        \"size\": 12311,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/NOTICE.md\",\n        \"size\": 4042,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/packaging.json\",\n        \"size\": 5036,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/third-party/index.json\",\n        \"size\": 49664,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/third-party/native/sqlcipher-4.19.0/LICENSE-sqlcipher\",\n        \"size\": 1463,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/third-party/native/sqlite-3.53.4/LICENSE-sqlite\",\n        \"size\": 1485,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/third-party/rust/bitflags-2.13.2/LICENSE-APACHE\",\n        \"size\": 10847,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/third-party/rust/bitflags-2.13.2/LICENSE-MIT\",\n        \"size\": 1071,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/third-party/rust/cc-1.10.0/LICENSE-APACHE\",\n        \"size\": 10847,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/third-party/rust/cc-1.10.0/LICENSE-MIT\",\n        \"size\": 1057,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/third-party/rust/fallible-iterator-0.3.0/LICENSE-APACHE\",\n        \"size\": 11358,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/third-party/rust/fallible-iterator-0.3.0/LICENSE-MIT\",\n        \"size\": 1078,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/third-party/rust/fallible-streaming-iterator-0.1.9/LICENSE-APACHE\",\n        \"size\": 11358,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/third-party/rust/fallible-streaming-iterator-0.1.9/LICENSE-MIT\",\n        \"size\": 1086,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/third-party/rust/find-msvc-tools-0.1.15/LICENSE-APACHE\",\n        \"size\": 10847,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/third-party/rust/find-msvc-tools-0.1.15/LICENSE-MIT\",\n        \"size\": 1057,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/third-party/rust/libsqlite3-sys-0.38.1/LICENSE\",\n        \"size\": 1067,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/third-party/rust/pkg-config-0.3.34/LICENSE-APACHE\",\n        \"size\": 10847,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/third-party/rust/pkg-config-0.3.34/LICENSE-MIT\",\n        \"size\": 1057,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/third-party/rust/rusqlite-0.40.1/LICENSE\",\n        \"size\": 1067,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/third-party/rust/shlex-2.0.1/LICENSE-APACHE\",\n        \"size\": 566,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/third-party/rust/shlex-2.0.1/LICENSE-MIT\",\n        \"size\": 1092,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/third-party/rust/smallvec-1.16.4/LICENSE-APACHE\",\n        \"size\": 10847,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/third-party/rust/smallvec-1.16.4/LICENSE-MIT\",\n        \"size\": 1072,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/third-party/rust/sqlcipher-src-419.0.6+sqlcipher-4.19.0-sqlite-3.53.4-libtomcrypt-1.18.2/LICENSE\",\n        \"size\": 1073,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/third-party/rust/vcpkg-0.2.15/LICENSE-APACHE\",\n        \"size\": 11050,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/third-party/rust/vcpkg-0.2.15/LICENSE-MIT\",\n        \"size\": 1082,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/third-party/rust/zeroize-1.9.1/LICENSE-APACHE\",\n        \"size\": 11358,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/third-party/rust/zeroize-1.9.1/LICENSE-MIT\",\n        \"size\": 1082,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/third-party/toolchain/rust-1.98.1/COPYRIGHT-library.html\",\n        \"size\": 1512520,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"HoyaDBReactNative.podspec\",\n        \"size\": 772,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"README.md\",\n        \"size\": 3350,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"android/build.gradle\",\n        \"size\": 370,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"android/src/main/AndroidManifest.xml\",\n        \"size\": 72,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"android/src/main/java/dev/hoyadb/HoyaDBModule.java\",\n        \"size\": 7966,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"android/src/main/java/dev/hoyadb/HoyaDBPackage.java\",\n        \"size\": 801,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"index.d.ts\",\n        \"size\": 934,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"ios/HoyaDBModule.h\",\n        \"size\": 105,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"ios/HoyaDBModule.mm\",\n        \"size\": 5018,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"ios/HoyaNativeHost.h\",\n        \"size\": 432,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"ios/HoyaNativeHost.mm\",\n        \"size\": 7147,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"package.json\",\n        \"size\": 802,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"react-native.config.cjs\",\n        \"size\": 171,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"src/channel.js\",\n        \"size\": 1364,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"src/index.js\",\n        \"size\": 1225,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"src/NativeHoyaDB.ts\",\n        \"size\": 546,\n        \"mode\": 420\n      }\n    ],\n    \"entryCount\": 56,\n    \"bundled\": []\n  }\n]\n"
+  },
+  "package_root": "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native",
+  "repo_root": "/Users/boristacyniak/Projects/alocasia/hoyadb",
+  "source_framework": "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/swift/Artifacts/HoyaNative.xcframework",
+  "source_identity": {
+    "framework_members": 40,
+    "head_identical": [
+      "package/HoyaDBReactNative.podspec",
+      "package/README.md",
+      "package/android/build.gradle",
+      "package/android/src/main/AndroidManifest.xml",
+      "package/android/src/main/java/dev/hoyadb/HoyaDBModule.java",
+      "package/android/src/main/java/dev/hoyadb/HoyaDBPackage.java",
+      "package/index.d.ts",
+      "package/ios/HoyaDBModule.h",
+      "package/ios/HoyaDBModule.mm",
+      "package/ios/HoyaNativeHost.h",
+      "package/ios/HoyaNativeHost.mm",
+      "package/package.json",
+      "package/react-native.config.cjs",
+      "package/src/NativeHoyaDB.ts",
+      "package/src/channel.js",
+      "package/src/index.js"
+    ]
+  },
+  "validations": [
+    {
+      "label": "source",
+      "path": "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/swift/Artifacts/HoyaNative.xcframework",
+      "summary": {
+        "framework": "HoyaNative.xcframework",
+        "index_sha256": "65a591b52a3a632526c1b1f930980cc8a7f2bd561af020b7e6e8fb19eb72bde6",
+        "members": 39,
+        "native_members": 10,
+        "notice_members": 28,
+        "packaging_sha256": "47e27eb8d68e55022e34ea227a9c5882b4a84fc56bede14c21e5ae3fb92947de",
+        "parent_sha256": "c19233a6d34e76628ae42c4870be5c6add4fa39c7f4fb9ed46678da95a532496",
+        "result": "framework-valid"
+      }
+    },
+    {
+      "label": "package-copy",
+      "path": "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/Artifacts/HoyaNative.xcframework",
+      "summary": {
+        "framework": "HoyaNative.xcframework",
+        "index_sha256": "65a591b52a3a632526c1b1f930980cc8a7f2bd561af020b7e6e8fb19eb72bde6",
+        "members": 39,
+        "native_members": 10,
+        "notice_members": 28,
+        "packaging_sha256": "47e27eb8d68e55022e34ea227a9c5882b4a84fc56bede14c21e5ae3fb92947de",
+        "parent_sha256": "c19233a6d34e76628ae42c4870be5c6add4fa39c7f4fb9ed46678da95a532496",
+        "result": "framework-valid"
+      }
+    },
+    {
+      "label": "extracted",
+      "path": "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/def-0030/rn-pack/final-1/extracted/Artifacts/HoyaNative.xcframework",
+      "summary": {
+        "framework": "HoyaNative.xcframework",
+        "index_sha256": "65a591b52a3a632526c1b1f930980cc8a7f2bd561af020b7e6e8fb19eb72bde6",
+        "members": 39,
+        "native_members": 10,
+        "notice_members": 28,
+        "packaging_sha256": "47e27eb8d68e55022e34ea227a9c5882b4a84fc56bede14c21e5ae3fb92947de",
+        "parent_sha256": "c19233a6d34e76628ae42c4870be5c6add4fa39c7f4fb9ed46678da95a532496",
+        "result": "framework-valid"
+      }
+    }
+  ]
+}

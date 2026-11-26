@@ -1,0 +1,25 @@
+[
+  {
+    "name": "rn-0.86.3-MIT",
+    "url": "https://raw.githubusercontent.com/react/react-native/95cffbff2e071e278987c7d7cd51fbc970dd5622/LICENSE",
+    "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+    "bytes": 1088
+  },
+  {
+    "name": "rn-gradle-codegen-MIT",
+    "url": "https://raw.githubusercontent.com/react/react-native/4829a675c80e64f7c170b0f30d24b3808b7663d3/LICENSE",
+    "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+    "bytes": 1088
+  },
+  {
+    "name": "hermes-compiler-LICENSE",
+    "url": "https://raw.githubusercontent.com/facebook/hermes/3477757eb2475555cf8d8df24bfb1deb0613880d/LICENSE",
+    "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+    "bytes": 1088
+  },
+  {
+    "name": "hermes-compiler-NOTICE",
+    "url": "https://raw.githubusercontent.com/facebook/hermes/3477757eb2475555cf8d8df24bfb1deb0613880d/NOTICE",
+    "error": "HTTP Error 404: Not Found"
+  }
+]

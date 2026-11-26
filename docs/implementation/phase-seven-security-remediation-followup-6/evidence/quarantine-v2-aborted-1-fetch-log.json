@@ -1,0 +1,29 @@
+[
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http/4.1.139.Final/netty-codec-http-4.1.139.Final.pom",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http/4.1.139.Final/netty-codec-http-4.1.139.Final.pom",
+  "exit_code": 0,
+  "bytes": 4972,
+  "sha256": "ef3288bcc98a8b50067cd6611bbf07d43d5f7179c7d62a987846024a6ee9f78d",
+  "sha1": "591455de031718241806cd73e7e71d76a0afb4de"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-parent/4.1.139.Final/netty-parent-4.1.139.Final.pom",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-parent/4.1.139.Final/netty-parent-4.1.139.Final.pom",
+  "exit_code": 0,
+  "bytes": 108887,
+  "sha256": "317741e835ed1a1abdba936f40f21795d2d404112a3d1616a507b37219949477",
+  "sha1": "c1cd08a6d72a046ba146bcfb48871d757b6473b3"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/9/oss-parent-9.pom",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/9/oss-parent-9.pom",
+  "exit_code": 0,
+  "bytes": 6569,
+  "sha256": "fb40265f982548212ff82e362e59732b2187ec6f0d80182885c14ef1f982827a",
+  "sha1": "e5cdc4d23b86d79c436f16fed20853284e868f65"
+ }
+]

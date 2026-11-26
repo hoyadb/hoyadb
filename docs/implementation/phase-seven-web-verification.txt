@@ -1,0 +1,55 @@
+
+--- final-python.txt ---
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+OK
+
+--- final-syntax.txt ---
+PASS node --check: 41 JS/MJS source files
+
+--- final-guide-example.txt ---
+Exact first JavaScript fenced block from docs/guides/sdk-integration.md executed unchanged in installed-tarball consumer.
+Command: node /var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-sdk-consumer-HsAdw2/guide-example.mjs
+Exit:0; assertions passed, no stdout/stderr.
+
+--- final-hash-closure.txt ---
+PASS unchanged 187 source hashes and 8 ordinary/instrumented artifact hashes across final matrix
+
+--- final-cleanup.json ---
+{
+  "ownedTabsClosed": [
+    "452af819-acd9-4669-a5cc-fbb9172e025b",
+    "ab34a61a-8758-4c1b-85ca-61088fa6fff9",
+    "96c09f22-d2d5-4434-8d3f-1ced9ca6f48a"
+  ],
+  "verifiedStoppedPids": [
+    79155,
+    79340,
+    90430,
+    90652,
+    92049,
+    92234
+  ],
+  "verifiedNoListeners": [
+    8877,
+    8878
+  ],
+  "removedExactTempRoots": [
+    "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-sdk-consumer-HvjcJO",
+    "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-sdk-consumer-aXQcG2",
+    "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-sdk-consumer-HsAdw2"
+  ],
+  "removedTaskGeneratedParentTargetArchives": [
+    "/Users/boristacyniak/Projects/alocasia/target/phase-seven-web/tarballs/hoyadb-client-0.1.0.tgz",
+    "/Users/boristacyniak/Projects/alocasia/target/phase-seven-web/tarballs/hoyadb-testing-0.1.0.tgz"
+  ],
+  "retainedArchiveCopies": "target/phase-seven-web/tarballs",
+  "logicalCleanup": {
+    "ordinary": "passed exact-owned removal and pre/post pool tuple equality",
+    "instrumented": "passed neighbor encrypted canary exact-byte equality and pre/post pool tuple equality",
+    "retry": "passed exact two-name removal after worker termination"
+  },
+  "poolQualification": "Numeric pool tuples asserted in-browser but not emitted; successful equality assertion recorded, no invented measurements."
+}

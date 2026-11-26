@@ -1,0 +1,23 @@
+bitflags LICENSE-APACHE crate_entry_sha_match True
+bitflags LICENSE-MIT crate_entry_sha_match True
+cc LICENSE-APACHE crate_entry_sha_match True
+cc LICENSE-MIT crate_entry_sha_match True
+fallible-iterator LICENSE-APACHE crate_entry_sha_match True
+fallible-iterator LICENSE-MIT crate_entry_sha_match True
+fallible-streaming-iterator LICENSE-APACHE crate_entry_sha_match True
+fallible-streaming-iterator LICENSE-MIT crate_entry_sha_match True
+find-msvc-tools LICENSE-APACHE crate_entry_sha_match True
+find-msvc-tools LICENSE-MIT crate_entry_sha_match True
+libsqlite3-sys LICENSE git_checkout ['/Users/boristacyniak/.cargo/git/checkouts/rusqlite-8e5e8204e489f2fd/661107f'] [True]
+pkg-config LICENSE-APACHE crate_entry_sha_match True
+pkg-config LICENSE-MIT crate_entry_sha_match True
+rusqlite LICENSE git_checkout ['/Users/boristacyniak/.cargo/git/checkouts/rusqlite-8e5e8204e489f2fd/661107f'] [True]
+shlex LICENSE-APACHE crate_entry_sha_match True
+shlex LICENSE-MIT crate_entry_sha_match True
+smallvec LICENSE-APACHE crate_entry_sha_match True
+smallvec LICENSE-MIT crate_entry_sha_match True
+sqlcipher-src LICENSE crate_entry_sha_match True
+vcpkg LICENSE-APACHE crate_entry_sha_match True
+vcpkg LICENSE-MIT crate_entry_sha_match True
+zeroize LICENSE-APACHE crate_entry_sha_match True
+zeroize LICENSE-MIT crate_entry_sha_match True

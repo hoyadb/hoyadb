@@ -1,0 +1,48 @@
+[
+  {
+    "coordinate": "com.squareup.okio:okio-jvm:3.4.0",
+    "url": "https://repo.maven.apache.org/maven2/com/squareup/okio/okio-jvm/3.4.0/okio-jvm-3.4.0-sources.jar",
+    "archive_sha256": "724af2ce287bf9b101194df419ebbe3765debf516c6a2e26b9d67c168d902778",
+    "inspected_source_count": 77,
+    "intersectWith_matches": [
+      {
+        "file": "jvmMain/okio/Pipe.kt",
+        "lines": [
+          "this.timeout().intersectWith(this@Pipe.sink.timeout()) { this.block() }"
+        ]
+      },
+      {
+        "file": "jvmMain/okio/Timeout.kt",
+        "lines": [
+          "inline fun <T> intersectWith(other: Timeout, block: () -> T): T {"
+        ]
+      }
+    ],
+    "retained_sources": [
+      "jvmMain/okio/AsyncTimeout.kt",
+      "jvmMain/okio/ForwardingTimeout.kt",
+      "jvmMain/okio/GzipSource.kt",
+      "jvmMain/okio/Timeout.kt",
+      "commonMain/okio/Timeout.kt"
+    ],
+    "executed": false,
+    "retained_source_root": "reviews/okio/source/okio-jvm-3.4.0"
+  },
+  {
+    "coordinate": "com.squareup.okhttp3:okhttp:4.9.2",
+    "url": "https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.9.2/okhttp-4.9.2-sources.jar",
+    "archive_sha256": "4fec72984bfe747f5cc8aece795dd486a219e74c12ad0425eee703f08bbcf9c6",
+    "inspected_source_count": 123,
+    "intersectWith_matches": [
+      {
+        "file": "okhttp3/MultipartReader.kt",
+        "lines": [
+          "source.timeout().intersectWith(timeout) {",
+          "error(\"unreachable\") // TODO(jwilson): fix intersectWith() to return T."
+        ]
+      }
+    ],
+    "retained_sources": [],
+    "executed": false
+  }
+]

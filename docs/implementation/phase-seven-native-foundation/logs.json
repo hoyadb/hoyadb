@@ -1,0 +1,94 @@
+{
+  "logs": [
+    {
+      "path": "native-abi-boundary-red.txt",
+      "raw_sha256": "7bbf0bcfeef94c50f47ef0bdf4529b459999d372dc1ef81ce9836d5f1eef2a27",
+      "presentation_sha256": "0159d06eee93c1a52cd4d15ea7d832264afbefc22a1c335a61dc7eaa3c04aa37",
+      "normalization": "outer whitespace only"
+    },
+    {
+      "path": "native-abi-red.txt",
+      "raw_sha256": "70ed14be75bc5ce0beb0ea7855837f4c7145df6d69152cb941f61b5517d42fa7",
+      "presentation_sha256": "4286f85788d6adf1d24d8d41ca4a935cff288b463a367f71eb2b35ec491eb285",
+      "normalization": "outer whitespace only"
+    },
+    {
+      "path": "native-abi-green.txt",
+      "raw_sha256": "c7dff9e10f97dc610cea152b3100cfc815e404e6d1468f04901f8c6750c196f7",
+      "presentation_sha256": "2c316ef78921010ad274952490e3c993e1704c80af628438a8b89b03424cd748",
+      "normalization": "outer whitespace only"
+    },
+    {
+      "path": "native-preflight-red.txt",
+      "raw_sha256": "9c98a12f3cbd34134b1df04d673bdde908a4896e8931ad7d6ab8b66c4e3b50e9",
+      "presentation_sha256": "57cbab7fd1cba779b91201557777c680e6a66206afd753053267a6a2cb0fa5cd",
+      "normalization": "outer whitespace only"
+    },
+    {
+      "path": "native-preflight-green.txt",
+      "raw_sha256": "72fd1b01477748470f29b00ec86bbf5ec0f4ce3add2863f89be6085d0c7fc7c7",
+      "presentation_sha256": "7a1a4bc2c7d47cf336452677c1c7cb704c528249be5bfe288ddac490623a0191",
+      "normalization": "outer whitespace only"
+    },
+    {
+      "path": "native-preflight-clippy.txt",
+      "raw_sha256": "6def7f2d1dc218ed0d44d5dcc4c560d7a748e6f803c62fc18bae84a636186c3f",
+      "presentation_sha256": "020f09db968b37f5416bd605a74760aab16b5eebc2e0a26889aa9467fad07ef2",
+      "normalization": "outer whitespace only"
+    },
+    {
+      "path": "root-foundation-tests.txt",
+      "raw_sha256": "70bb4ecdf50fa54a53ae9820cec86b574ceeee4de06737bba13f42cd51bd6351",
+      "presentation_sha256": "c46fe25c9651f2d407bc00a0df34a828acf596d267b5855453614c738412b25e",
+      "normalization": "outer whitespace only"
+    },
+    {
+      "path": "jni-red.txt",
+      "raw_sha256": "cbdbc9d0ad9256e142758baf6b991738f50bce679882e228674b252b015dc5e4",
+      "presentation_sha256": "cbdbc9d0ad9256e142758baf6b991738f50bce679882e228674b252b015dc5e4",
+      "normalization": "outer whitespace only"
+    },
+    {
+      "path": "jni-host-green.txt",
+      "raw_sha256": "e963f4e3f495d76c15fffd76e0c33a07caf724796cdfa5e440b7ea253d975c95",
+      "presentation_sha256": "e963f4e3f495d76c15fffd76e0c33a07caf724796cdfa5e440b7ea253d975c95",
+      "normalization": "outer whitespace only"
+    },
+    {
+      "path": "jni-preflight-red.txt",
+      "raw_sha256": "6c77e092a7168acc4ebcc4c657b0be9199a510c5dab9566c5762e8aa2cb0b4ca",
+      "presentation_sha256": "6c77e092a7168acc4ebcc4c657b0be9199a510c5dab9566c5762e8aa2cb0b4ca",
+      "normalization": "outer whitespace only"
+    },
+    {
+      "path": "jni-preflight-green.txt",
+      "raw_sha256": "3affd39e7432eee41a24c919d34dd0103526e4b288dbd0e02b501879b439be52",
+      "presentation_sha256": "3affd39e7432eee41a24c919d34dd0103526e4b288dbd0e02b501879b439be52",
+      "normalization": "outer whitespace only"
+    },
+    {
+      "path": "jni-current-x86_64.txt",
+      "raw_sha256": "6c250e646ab470a331f3bbb3c9bfceafcdefe07b1eab31a9883ab108152475bb",
+      "presentation_sha256": "6c250e646ab470a331f3bbb3c9bfceafcdefe07b1eab31a9883ab108152475bb",
+      "normalization": "outer whitespace only"
+    },
+    {
+      "path": "jni-current-arm64.txt",
+      "raw_sha256": "f6b862e3e93fe7db094260465f0271fd9b6ff94e659bdfad0d3dc457f6e79d5f",
+      "presentation_sha256": "f6b862e3e93fe7db094260465f0271fd9b6ff94e659bdfad0d3dc457f6e79d5f",
+      "normalization": "outer whitespace only"
+    },
+    {
+      "path": "entropy-red.txt",
+      "raw_sha256": "8380e0ab53608757335bbea304dd7044da40d0c6715b120ddef5ed4222a9b07d",
+      "presentation_sha256": "8380e0ab53608757335bbea304dd7044da40d0c6715b120ddef5ed4222a9b07d",
+      "normalization": "outer whitespace only"
+    },
+    {
+      "path": "entropy-green.txt",
+      "raw_sha256": "8c48acb224f8764d5f5c84a0615fde648461b1401395c7ae0c7a702e0d710e8c",
+      "presentation_sha256": "8c48acb224f8764d5f5c84a0615fde648461b1401395c7ae0c7a702e0d710e8c",
+      "normalization": "outer whitespace only"
+    }
+  ]
+}

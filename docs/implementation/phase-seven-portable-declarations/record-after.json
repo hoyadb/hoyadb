@@ -1,0 +1,798 @@
+{
+  "phase": "after",
+  "tool": {
+    "which": "/Users/boristacyniak/.nvm/versions/node/v22.18.0/bin/tsc",
+    "package_sha256": "3722b30210616a13a3213ded11575ba6b2dbab10c32a5ef67afca8513e27017e",
+    "native_sha256": "76e4987d060ef8207875a53a73619ce665ff16fb2800c0d57a452e21c829bd7b",
+    "node": "v22.18.0"
+  },
+  "commands": [
+    {
+      "label": "build",
+      "argv": [
+        "node",
+        "scripts/build.mjs"
+      ],
+      "cwd": "<tmp>/repo/bindings/javascript",
+      "exit": 0,
+      "signal": null,
+      "output": "Built local client/testing artifacts from checked-in JS and prebuilt general WASM\n"
+    },
+    {
+      "label": "check-build",
+      "argv": [
+        "node",
+        "scripts/check-build.mjs"
+      ],
+      "cwd": "<tmp>/repo/bindings/javascript",
+      "exit": 0,
+      "signal": null,
+      "output": "PASS local package trees include exact declarations, own package links and generated WASM\n"
+    },
+    {
+      "label": "packed-consumer",
+      "argv": [
+        "node",
+        "scripts/packed-consumer.mjs"
+      ],
+      "cwd": "<tmp>/repo/bindings/javascript",
+      "exit": 0,
+      "signal": null,
+      "output": "[\n  {\n    \"id\": \"@hoyadb/client@0.1.0\",\n    \"name\": \"@hoyadb/client\",\n    \"version\": \"0.1.0\",\n    \"size\": 1481408,\n    \"unpackedSize\": 5512775,\n    \"shasum\": \"597481741b36656226d66adfe7cd6c653f94cddb\",\n    \"integrity\": \"sha512-vqHRWC7okAOjUO+8HEP3usx1zeEPiIpcTOeh78+bVfXE2hWKyJy1y0luRU+TAC12TDbeeSKr5ftaorCezZcBew==\",\n    \"filename\": \"hoyadb-client-0.1.0.tgz\",\n    \"files\": [\n      {\n        \"path\": \"LICENSES.md\",\n        \"size\": 965,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"README.md\",\n        \"size\": 8195,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"SOURCE-MANIFEST.json\",\n        \"size\": 10458,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"index.d.ts\",\n        \"size\": 11725,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/bitflags-2.13.2/LICENSE-APACHE\",\n        \"size\": 10847,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/bitflags-2.13.2/LICENSE-MIT\",\n        \"size\": 1071,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/bumpalo-3.20.3/LICENSE-APACHE\",\n        \"size\": 10847,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/bumpalo-3.20.3/LICENSE-MIT\",\n        \"size\": 1059,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/cc-1.10.0/LICENSE-APACHE\",\n        \"size\": 10847,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/cc-1.10.0/LICENSE-MIT\",\n        \"size\": 1057,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/cfg-if-1.0.5/LICENSE-APACHE\",\n        \"size\": 10847,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/cfg-if-1.0.5/LICENSE-MIT\",\n        \"size\": 1057,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/fallible-iterator-0.3.0/LICENSE-APACHE\",\n        \"size\": 11358,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/fallible-iterator-0.3.0/LICENSE-MIT\",\n        \"size\": 1078,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/fallible-streaming-iterator-0.1.9/LICENSE-APACHE\",\n        \"size\": 11358,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/fallible-streaming-iterator-0.1.9/LICENSE-MIT\",\n        \"size\": 1086,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/find-msvc-tools-0.1.15/LICENSE-APACHE\",\n        \"size\": 10847,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/find-msvc-tools-0.1.15/LICENSE-MIT\",\n        \"size\": 1057,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/futures-core-0.3.34/LICENSE-APACHE\",\n        \"size\": 10874,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/futures-core-0.3.34/LICENSE-MIT\",\n        \"size\": 1094,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/futures-task-0.3.34/LICENSE-APACHE\",\n        \"size\": 10874,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/futures-task-0.3.34/LICENSE-MIT\",\n        \"size\": 1094,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/futures-util-0.3.34/LICENSE-APACHE\",\n        \"size\": 10874,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/futures-util-0.3.34/LICENSE-MIT\",\n        \"size\": 1094,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/index.json\",\n        \"size\": 25911,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/js-sys-0.3.106/LICENSE-APACHE\",\n        \"size\": 10847,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/js-sys-0.3.106/LICENSE-MIT\",\n        \"size\": 1057,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/libsqlite3-sys-0.38.1/LICENSE\",\n        \"size\": 1067,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/once_cell-1.21.4/LICENSE-APACHE\",\n        \"size\": 10847,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/once_cell-1.21.4/LICENSE-MIT\",\n        \"size\": 1023,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/pin-project-lite-0.2.17/LICENSE-APACHE\",\n        \"size\": 10174,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/pin-project-lite-0.2.17/LICENSE-MIT\",\n        \"size\": 1023,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/pkg-config-0.3.34/LICENSE-APACHE\",\n        \"size\": 10847,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/pkg-config-0.3.34/LICENSE-MIT\",\n        \"size\": 1057,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/proc-macro2-1.0.107/LICENSE-APACHE\",\n        \"size\": 9723,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/proc-macro2-1.0.107/LICENSE-MIT\",\n        \"size\": 1023,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/quote-1.0.47/LICENSE-APACHE\",\n        \"size\": 9723,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/quote-1.0.47/LICENSE-MIT\",\n        \"size\": 1023,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/rsqlite-vfs-0.2.0/LICENSE\",\n        \"size\": 1061,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/rusqlite-0.40.1/LICENSE\",\n        \"size\": 1067,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/rustversion-1.0.23/LICENSE-APACHE\",\n        \"size\": 9723,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/rustversion-1.0.23/LICENSE-MIT\",\n        \"size\": 1023,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/shlex-2.0.1/LICENSE-APACHE\",\n        \"size\": 566,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/shlex-2.0.1/LICENSE-MIT\",\n        \"size\": 1092,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/slab-0.4.12/LICENSE\",\n        \"size\": 1055,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/smallvec-1.16.4/LICENSE-APACHE\",\n        \"size\": 10847,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/smallvec-1.16.4/LICENSE-MIT\",\n        \"size\": 1072,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/sqlcipher-src-419.0.6+sqlcipher-4.19.0-sqlite-3.53.4-libtomcrypt-1.18.2/LICENSE\",\n        \"size\": 1073,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/sqlite-wasm-rs-0.6.2/LICENSE\",\n        \"size\": 1061,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/sqlite-wasm-vfs-0.3.0/LICENSE\",\n        \"size\": 1061,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/syn-3.0.9/LICENSE-APACHE\",\n        \"size\": 9723,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/syn-3.0.9/LICENSE-MIT\",\n        \"size\": 1023,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/thiserror-2.0.21/LICENSE-APACHE\",\n        \"size\": 9723,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/thiserror-2.0.21/LICENSE-MIT\",\n        \"size\": 1023,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/thiserror-impl-2.0.21/LICENSE-APACHE\",\n        \"size\": 9723,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/thiserror-impl-2.0.21/LICENSE-MIT\",\n        \"size\": 1023,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/tokio-1.54.1/LICENSE\",\n        \"size\": 1070,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/unicode-ident-1.0.27/LICENSE-APACHE\",\n        \"size\": 9723,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/unicode-ident-1.0.27/LICENSE-MIT\",\n        \"size\": 1023,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/unicode-ident-1.0.27/LICENSE-UNICODE\",\n        \"size\": 1995,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/vcpkg-0.2.15/LICENSE-APACHE\",\n        \"size\": 11050,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/vcpkg-0.2.15/LICENSE-MIT\",\n        \"size\": 1082,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/wasm-bindgen-0.2.129/LICENSE-APACHE\",\n        \"size\": 10847,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/wasm-bindgen-0.2.129/LICENSE-MIT\",\n        \"size\": 1057,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/wasm-bindgen-futures-0.4.79/LICENSE-APACHE\",\n        \"size\": 10847,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/wasm-bindgen-futures-0.4.79/LICENSE-MIT\",\n        \"size\": 1057,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/wasm-bindgen-macro-0.2.129/LICENSE-APACHE\",\n        \"size\": 10847,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/wasm-bindgen-macro-0.2.129/LICENSE-MIT\",\n        \"size\": 1057,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/wasm-bindgen-macro-support-0.2.129/LICENSE-APACHE\",\n        \"size\": 10847,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/wasm-bindgen-macro-support-0.2.129/LICENSE-MIT\",\n        \"size\": 1057,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/wasm-bindgen-shared-0.2.129/LICENSE-APACHE\",\n        \"size\": 10847,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/wasm-bindgen-shared-0.2.129/LICENSE-MIT\",\n        \"size\": 1057,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/web-sys-0.3.106/LICENSE-APACHE\",\n        \"size\": 10847,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/web-sys-0.3.106/LICENSE-MIT\",\n        \"size\": 1057,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/zeroize-1.9.1/LICENSE-APACHE\",\n        \"size\": 11358,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/crates/zeroize-1.9.1/LICENSE-MIT\",\n        \"size\": 1082,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/sqlcipher/LICENSE-libtomcrypt\",\n        \"size\": 718,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/sqlcipher/LICENSE-sqlcipher\",\n        \"size\": 1463,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/sqlcipher/LICENSE-sqlcipher-src\",\n        \"size\": 1073,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"licenses/sqlcipher/LICENSE-sqlite\",\n        \"size\": 1485,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"package.json\",\n        \"size\": 673,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"src/client.js\",\n        \"size\": 27178,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"src/errors.js\",\n        \"size\": 752,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"src/index.js\",\n        \"size\": 301,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"src/query.js\",\n        \"size\": 1171,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"src/runtime.js\",\n        \"size\": 2226,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"src/time.js\",\n        \"size\": 730,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"src/utf8.js\",\n        \"size\": 622,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"src/values.js\",\n        \"size\": 4493,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"src/wasm/Cargo.lock\",\n        \"size\": 9752,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"src/wasm/hoyadb_web_bg.wasm\",\n        \"size\": 5001038,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"src/wasm/hoyadb_web_bg.wasm.d.ts\",\n        \"size\": 2764,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"src/wasm/hoyadb_web.d.ts\",\n        \"size\": 4032,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"src/wasm/hoyadb_web.js\",\n        \"size\": 27050,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"src/web-entry.js\",\n        \"size\": 71,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"src/web.js\",\n        \"size\": 2734,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"src/worker-host.js\",\n        \"size\": 2060,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"src/worker.js\",\n        \"size\": 442,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"web.d.ts\",\n        \"size\": 193,\n        \"mode\": 420\n      }\n    ],\n    \"entryCount\": 99,\n    \"bundled\": []\n  }\n]\n[\n  {\n    \"id\": \"@hoyadb/testing@0.1.0\",\n    \"name\": \"@hoyadb/testing\",\n    \"version\": \"0.1.0\",\n    \"size\": 9465,\n    \"unpackedSize\": 23283,\n    \"shasum\": \"513357631143404d081e43a7b7ace31b3e492dc2\",\n    \"integrity\": \"sha512-eI2hxzvm4SFh+YEDrPJ2/1/BdVzlHTvKU/zB9MQTOf8wjrG/FkA1eLhSgj8RwaW3yjG2zKVz4pE+3PlWIlayMA==\",\n    \"filename\": \"hoyadb-testing-0.1.0.tgz\",\n    \"files\": [\n      {\n        \"path\": \"LICENSES.md\",\n        \"size\": 411,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"README.md\",\n        \"size\": 8195,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"SOURCE-MANIFEST.json\",\n        \"size\": 10458,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"index.d.ts\",\n        \"size\": 1074,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"package.json\",\n        \"size\": 447,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"src/index.js\",\n        \"size\": 2698,\n        \"mode\": 420\n      }\n    ],\n    \"entryCount\": 6,\n    \"bundled\": []\n  }\n]\n\nadded 2 packages in 851ms\n[\n  {\n    \"name\": \"G01/G03/G04 unrelated A schema all typed cells and three relation kinds\",\n    \"ok\": true\n  },\n  {\n    \"name\": \"G01 unrelated B HasMany uses the same caller-defined facade\",\n    \"ok\": true\n  },\n  {\n    \"name\": \"G04 admitted In operands cross4096 and32766 through the existing core planner\",\n    \"ok\": true\n  },\n  {\n    \"name\": \"G11 keyed batch fitting full images and latest same-ID transitions stay exact\",\n    \"ok\": true\n  },\n  {\n    \"name\": \"G11 byte-exact terminal prefix progresses once without losing either event\",\n    \"ok\": true\n  },\n  {\n    \"name\": \"G03 core codecs preserve extrema Float Unicode and reject duplicates\",\n    \"ok\": true\n  },\n  {\n    \"name\": \"G05 membership columns count delegate shared observation groups\",\n    \"ok\": true\n  },\n  {\n    \"name\": \"G05 real managed count initial delivery and unpostponed deadline need no manual drain\",\n    \"ok\": true\n  },\n  {\n    \"name\": \"G06/G20/TC16 awaited handler immutable context optimistic rows and queue offline\",\n    \"ok\": true\n  },\n  {\n    \"name\": \"G19/G21/TC16 real fake transport correlates applied rejected and dropped ACK retries\",\n    \"ok\": true\n  },\n  {\n    \"name\": \"G12/G13/G14 passive async hooks preserve staged sequence authority and stale refetch\",\n    \"ok\": true\n  },\n  {\n    \"name\": \"G17/G18 mixed command entity correlation and checkpoint progress use shared core\",\n    \"ok\": true\n  },\n  {\n    \"name\": \"G02/G22 retained backend authored seven-step migration and failure preservation\",\n    \"ok\": true\n  },\n  {\n    \"name\": \"G05 managed prepare transition delivered without another operation\",\n    \"ok\": true\n  },\n  {\n    \"name\": \"G05 managed receive transition delivered without another operation\",\n    \"ok\": true\n  },\n  {\n    \"name\": \"G19 external wire receipt wakes sleeping local reconciliation before retry deadline\",\n    \"ok\": true\n  }\n]\n{\n  \"reports\": [\n    {\n      \"id\": \"TC17.1\",\n      \"ok\": true\n    },\n    {\n      \"id\": \"TC16.1\",\n      \"ok\": true\n    },\n    {\n      \"id\": \"TC17.3\",\n      \"ok\": true\n    },\n    {\n      \"id\": \"TC17.4\",\n      \"ok\": true\n    },\n    {\n      \"id\": \"TC17.5\",\n      \"ok\": true\n    },\n    {\n      \"id\": \"TC16.2\",\n      \"ok\": true,\n      \"comparison\": \"exact row/relation/subscription/command assertions repeated per real adapter\"\n    },\n    {\n      \"id\": \"TC16.7\",\n      \"ok\": true\n    },\n    {\n      \"id\": \"TC16.8\",\n      \"ok\": true,\n      \"ordinary_id\": \"test-fixed-id-001\",\n      \"command_id\": \"local:test-fixed-id-001\",\n      \"approval\": \"ADR-0035\"\n    },\n    {\n      \"id\": \"TC16.3\",\n      \"ok\": true\n    },\n    {\n      \"id\": \"TC16.4\",\n      \"ok\": true\n    },\n    {\n      \"id\": \"TC16.5\",\n      \"ok\": true\n    },\n    {\n      \"id\": \"TC16.6\",\n      \"ok\": true\n    },\n    {\n      \"id\": \"TC17.6\",\n      \"ok\": true\n    },\n    {\n      \"id\": \"TC17.7\",\n      \"ok\": true\n    },\n    {\n      \"id\": \"TC17.8\",\n      \"ok\": true,\n      \"network_successes\": \"0\"\n    },\n    {\n      \"id\": \"TC17.2\",\n      \"ok\": true\n    }\n  ],\n  \"rows\": [\n    {\n      \"id\": \"local:order-2\",\n      \"fields\": {\n        \"customer_id\": {\n          \"kind\": \"reference\",\n          \"value\": \"cust_123\"\n        },\n        \"placed_at\": {\n          \"kind\": \"timestamp\",\n          \"value\": \"1789473600000\"\n        },\n        \"status\": {\n          \"kind\": \"string\",\n          \"value\": \"pending\"\n        },\n        \"total_cents\": {\n          \"kind\": \"integer\",\n          \"value\": \"200\"\n        }\n      }\n    },\n    {\n      \"id\": \"local:order-3\",\n      \"fields\": {\n        \"customer_id\": {\n          \"kind\": \"reference\",\n          \"value\": \"cust_123\"\n        },\n        \"placed_at\": {\n          \"kind\": \"timestamp\",\n          \"value\": \"1789473600000\"\n        },\n        \"status\": {\n          \"kind\": \"string\",\n          \"value\": \"pending\"\n        },\n        \"total_cents\": {\n          \"kind\": \"integer\",\n          \"value\": \"200\"\n        }\n      }\n    },\n    {\n      \"id\": \"local:test-fixed-id-001\",\n      \"fields\": {\n        \"customer_id\": {\n          \"kind\": \"reference\",\n          \"value\": \"cust_123\"\n        },\n        \"placed_at\": {\n          \"kind\": \"timestamp\",\n          \"value\": \"1789473600000\"\n        },\n        \"status\": {\n          \"kind\": \"string\",\n          \"value\": \"pending\"\n        },\n        \"total_cents\": {\n          \"kind\": \"integer\",\n          \"value\": \"200\"\n        }\n      }\n    },\n    {\n      \"id\": \"pending-1\",\n      \"fields\": {\n        \"customer_id\": {\n          \"kind\": \"reference\",\n          \"value\": \"cust_123\"\n        },\n        \"placed_at\": {\n          \"kind\": \"timestamp\",\n          \"value\": \"1789473600000\"\n        },\n        \"status\": {\n          \"kind\": \"string\",\n          \"value\": \"pending\"\n        },\n        \"total_cents\": {\n          \"kind\": \"integer\",\n          \"value\": \"200\"\n        }\n      }\n    },\n    {\n      \"id\": \"pending-2\",\n      \"fields\": {\n        \"customer_id\": {\n          \"kind\": \"reference\",\n          \"value\": \"cust_123\"\n        },\n        \"placed_at\": {\n          \"kind\": \"timestamp\",\n          \"value\": \"1789473600000\"\n        },\n        \"status\": {\n          \"kind\": \"string\",\n          \"value\": \"pending\"\n        },\n        \"total_cents\": {\n          \"kind\": \"integer\",\n          \"value\": \"200\"\n        }\n      }\n    },\n    {\n      \"id\": \"pending-3\",\n      \"fields\": {\n        \"customer_id\": {\n          \"kind\": \"reference\",\n          \"value\": \"cust_123\"\n        },\n        \"placed_at\": {\n          \"kind\": \"timestamp\",\n          \"value\": \"1789473600000\"\n        },\n        \"status\": {\n          \"kind\": \"string\",\n          \"value\": \"pending\"\n        },\n        \"total_cents\": {\n          \"kind\": \"integer\",\n          \"value\": \"200\"\n        }\n      }\n    }\n  ]\n}\nPASS independent packed npm consumer: types + actual WASM/core memory\nRemoved exact task-owned temporary consumer /var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-sdk-consumer-AgP66c\nnpm warn config init.author.name Use `--init-author-name` instead.\nnpm warn config init.author.email Use `--init-author-email` instead.\nnpm warn config init.author.url Use `--init-author-url` instead.\nnpm warn Unknown user config \"email\". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.\nnpm warn config init.author.name Use `--init-author-name` instead.\nnpm warn config init.author.email Use `--init-author-email` instead.\nnpm warn config init.author.url Use `--init-author-url` instead.\nnpm warn Unknown user config \"email\". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.\nnpm warn config init.author.name Use `--init-author-name` instead.\nnpm warn config init.author.email Use `--init-author-email` instead.\nnpm warn config init.author.url Use `--init-author-url` instead.\nnpm warn Unknown user config \"email\". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.\n"
+    },
+    {
+      "label": "rn-install",
+      "argv": [
+        "npm",
+        "install",
+        "--offline",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-portable-declarations/after/hoyadb-client-0.1.0.tgz",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-portable-declarations/after/hoyadb-testing-0.1.0.tgz"
+      ],
+      "cwd": "<tmp>/repo/rn",
+      "exit": 0,
+      "signal": null,
+      "output": "\nadded 2 packages in 885ms\nnpm warn config init.author.name Use `--init-author-name` instead.\nnpm warn config init.author.email Use `--init-author-email` instead.\nnpm warn config init.author.url Use `--init-author-url` instead.\nnpm warn Unknown user config \"email\". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.\n"
+    },
+    {
+      "label": "list tsconfig.rn-portable.es2022.json",
+      "argv": [
+        "tsc",
+        "-p",
+        "tsconfig.rn-portable.es2022.json",
+        "--listFilesOnly"
+      ],
+      "cwd": "<tmp>/repo/rn",
+      "exit": 0,
+      "signal": null,
+      "output": "<tool>/lib.es5.d.ts\n<tool>/lib.es2015.d.ts\n<tool>/lib.es2016.d.ts\n<tool>/lib.es2017.d.ts\n<tool>/lib.es2018.d.ts\n<tool>/lib.es2019.d.ts\n<tool>/lib.es2020.d.ts\n<tool>/lib.es2021.d.ts\n<tool>/lib.es2022.d.ts\n<tool>/lib.es2015.core.d.ts\n<tool>/lib.es2015.collection.d.ts\n<tool>/lib.es2015.generator.d.ts\n<tool>/lib.es2015.iterable.d.ts\n<tool>/lib.es2015.promise.d.ts\n<tool>/lib.es2015.proxy.d.ts\n<tool>/lib.es2015.reflect.d.ts\n<tool>/lib.es2015.symbol.d.ts\n<tool>/lib.es2015.symbol.wellknown.d.ts\n<tool>/lib.es2016.array.include.d.ts\n<tool>/lib.es2016.intl.d.ts\n<tool>/lib.es2017.arraybuffer.d.ts\n<tool>/lib.es2017.date.d.ts\n<tool>/lib.es2017.object.d.ts\n<tool>/lib.es2017.sharedmemory.d.ts\n<tool>/lib.es2017.string.d.ts\n<tool>/lib.es2017.intl.d.ts\n<tool>/lib.es2017.typedarrays.d.ts\n<tool>/lib.es2018.asyncgenerator.d.ts\n<tool>/lib.es2018.asynciterable.d.ts\n<tool>/lib.es2018.intl.d.ts\n<tool>/lib.es2018.promise.d.ts\n<tool>/lib.es2018.regexp.d.ts\n<tool>/lib.es2019.array.d.ts\n<tool>/lib.es2019.object.d.ts\n<tool>/lib.es2019.string.d.ts\n<tool>/lib.es2019.symbol.d.ts\n<tool>/lib.es2019.intl.d.ts\n<tool>/lib.es2020.bigint.d.ts\n<tool>/lib.es2020.date.d.ts\n<tool>/lib.es2020.promise.d.ts\n<tool>/lib.es2020.sharedmemory.d.ts\n<tool>/lib.es2020.string.d.ts\n<tool>/lib.es2020.symbol.wellknown.d.ts\n<tool>/lib.es2020.intl.d.ts\n<tool>/lib.es2020.number.d.ts\n<tool>/lib.es2021.promise.d.ts\n<tool>/lib.es2021.string.d.ts\n<tool>/lib.es2021.weakref.d.ts\n<tool>/lib.es2021.intl.d.ts\n<tool>/lib.es2022.array.d.ts\n<tool>/lib.es2022.error.d.ts\n<tool>/lib.es2022.intl.d.ts\n<tool>/lib.es2022.object.d.ts\n<tool>/lib.es2022.string.d.ts\n<tool>/lib.es2022.regexp.d.ts\n<tool>/lib.decorators.d.ts\n<tool>/lib.decorators.legacy.d.ts\n<tmp>/repo/rn/node_modules/@hoyadb/client/index.d.ts\n<tmp>/repo/rn/node_modules/@hoyadb/react-native/index.d.ts\n<tmp>/repo/rn/node_modules/@hoyadb/testing/index.d.ts\n<tmp>/repo/rn/rn-portable.ts"
+    },
+    {
+      "label": "check tsconfig.rn-portable.es2022.json",
+      "argv": [
+        "tsc",
+        "-p",
+        "tsconfig.rn-portable.es2022.json"
+      ],
+      "cwd": "<tmp>/repo/rn",
+      "exit": 0,
+      "signal": null,
+      "output": ""
+    },
+    {
+      "label": "list tsconfig.rn-portable.es2022-dom.json",
+      "argv": [
+        "tsc",
+        "-p",
+        "tsconfig.rn-portable.es2022-dom.json",
+        "--listFilesOnly"
+      ],
+      "cwd": "<tmp>/repo/rn",
+      "exit": 0,
+      "signal": null,
+      "output": "<tool>/lib.es5.d.ts\n<tool>/lib.es2015.d.ts\n<tool>/lib.es2016.d.ts\n<tool>/lib.es2017.d.ts\n<tool>/lib.es2018.d.ts\n<tool>/lib.es2019.d.ts\n<tool>/lib.es2020.d.ts\n<tool>/lib.es2021.d.ts\n<tool>/lib.es2022.d.ts\n<tool>/lib.dom.d.ts\n<tool>/lib.es2015.core.d.ts\n<tool>/lib.es2015.collection.d.ts\n<tool>/lib.es2015.generator.d.ts\n<tool>/lib.es2015.iterable.d.ts\n<tool>/lib.es2015.promise.d.ts\n<tool>/lib.es2015.proxy.d.ts\n<tool>/lib.es2015.reflect.d.ts\n<tool>/lib.es2015.symbol.d.ts\n<tool>/lib.es2015.symbol.wellknown.d.ts\n<tool>/lib.es2016.array.include.d.ts\n<tool>/lib.es2016.intl.d.ts\n<tool>/lib.es2017.arraybuffer.d.ts\n<tool>/lib.es2017.date.d.ts\n<tool>/lib.es2017.object.d.ts\n<tool>/lib.es2017.sharedmemory.d.ts\n<tool>/lib.es2017.string.d.ts\n<tool>/lib.es2017.intl.d.ts\n<tool>/lib.es2017.typedarrays.d.ts\n<tool>/lib.es2018.asyncgenerator.d.ts\n<tool>/lib.es2018.asynciterable.d.ts\n<tool>/lib.es2018.intl.d.ts\n<tool>/lib.es2018.promise.d.ts\n<tool>/lib.es2018.regexp.d.ts\n<tool>/lib.es2019.array.d.ts\n<tool>/lib.es2019.object.d.ts\n<tool>/lib.es2019.string.d.ts\n<tool>/lib.es2019.symbol.d.ts\n<tool>/lib.es2019.intl.d.ts\n<tool>/lib.es2020.bigint.d.ts\n<tool>/lib.es2020.date.d.ts\n<tool>/lib.es2020.promise.d.ts\n<tool>/lib.es2020.sharedmemory.d.ts\n<tool>/lib.es2020.string.d.ts\n<tool>/lib.es2020.symbol.wellknown.d.ts\n<tool>/lib.es2020.intl.d.ts\n<tool>/lib.es2020.number.d.ts\n<tool>/lib.es2021.promise.d.ts\n<tool>/lib.es2021.string.d.ts\n<tool>/lib.es2021.weakref.d.ts\n<tool>/lib.es2021.intl.d.ts\n<tool>/lib.es2022.array.d.ts\n<tool>/lib.es2022.error.d.ts\n<tool>/lib.es2022.intl.d.ts\n<tool>/lib.es2022.object.d.ts\n<tool>/lib.es2022.string.d.ts\n<tool>/lib.es2022.regexp.d.ts\n<tool>/lib.decorators.d.ts\n<tool>/lib.decorators.legacy.d.ts\n<tmp>/repo/rn/node_modules/@hoyadb/client/index.d.ts\n<tmp>/repo/rn/node_modules/@hoyadb/react-native/index.d.ts\n<tmp>/repo/rn/node_modules/@hoyadb/testing/index.d.ts\n<tmp>/repo/rn/rn-portable.ts"
+    },
+    {
+      "label": "check tsconfig.rn-portable.es2022-dom.json",
+      "argv": [
+        "tsc",
+        "-p",
+        "tsconfig.rn-portable.es2022-dom.json"
+      ],
+      "cwd": "<tmp>/repo/rn",
+      "exit": 0,
+      "signal": null,
+      "output": ""
+    },
+    {
+      "label": "list tsconfig.portable.es2022.json",
+      "argv": [
+        "tsc",
+        "-p",
+        "tsconfig.portable.es2022.json",
+        "--listFilesOnly"
+      ],
+      "cwd": "<tmp>/repo/rn",
+      "exit": 0,
+      "signal": null,
+      "output": "<tool>/lib.es5.d.ts\n<tool>/lib.es2015.d.ts\n<tool>/lib.es2016.d.ts\n<tool>/lib.es2017.d.ts\n<tool>/lib.es2018.d.ts\n<tool>/lib.es2019.d.ts\n<tool>/lib.es2020.d.ts\n<tool>/lib.es2021.d.ts\n<tool>/lib.es2022.d.ts\n<tool>/lib.es2015.core.d.ts\n<tool>/lib.es2015.collection.d.ts\n<tool>/lib.es2015.generator.d.ts\n<tool>/lib.es2015.iterable.d.ts\n<tool>/lib.es2015.promise.d.ts\n<tool>/lib.es2015.proxy.d.ts\n<tool>/lib.es2015.reflect.d.ts\n<tool>/lib.es2015.symbol.d.ts\n<tool>/lib.es2015.symbol.wellknown.d.ts\n<tool>/lib.es2016.array.include.d.ts\n<tool>/lib.es2016.intl.d.ts\n<tool>/lib.es2017.arraybuffer.d.ts\n<tool>/lib.es2017.date.d.ts\n<tool>/lib.es2017.object.d.ts\n<tool>/lib.es2017.sharedmemory.d.ts\n<tool>/lib.es2017.string.d.ts\n<tool>/lib.es2017.intl.d.ts\n<tool>/lib.es2017.typedarrays.d.ts\n<tool>/lib.es2018.asyncgenerator.d.ts\n<tool>/lib.es2018.asynciterable.d.ts\n<tool>/lib.es2018.intl.d.ts\n<tool>/lib.es2018.promise.d.ts\n<tool>/lib.es2018.regexp.d.ts\n<tool>/lib.es2019.array.d.ts\n<tool>/lib.es2019.object.d.ts\n<tool>/lib.es2019.string.d.ts\n<tool>/lib.es2019.symbol.d.ts\n<tool>/lib.es2019.intl.d.ts\n<tool>/lib.es2020.bigint.d.ts\n<tool>/lib.es2020.date.d.ts\n<tool>/lib.es2020.promise.d.ts\n<tool>/lib.es2020.sharedmemory.d.ts\n<tool>/lib.es2020.string.d.ts\n<tool>/lib.es2020.symbol.wellknown.d.ts\n<tool>/lib.es2020.intl.d.ts\n<tool>/lib.es2020.number.d.ts\n<tool>/lib.es2021.promise.d.ts\n<tool>/lib.es2021.string.d.ts\n<tool>/lib.es2021.weakref.d.ts\n<tool>/lib.es2021.intl.d.ts\n<tool>/lib.es2022.array.d.ts\n<tool>/lib.es2022.error.d.ts\n<tool>/lib.es2022.intl.d.ts\n<tool>/lib.es2022.object.d.ts\n<tool>/lib.es2022.string.d.ts\n<tool>/lib.es2022.regexp.d.ts\n<tool>/lib.decorators.d.ts\n<tool>/lib.decorators.legacy.d.ts\n<tmp>/repo/rn/node_modules/@hoyadb/client/index.d.ts\n<tmp>/repo/rn/node_modules/@hoyadb/testing/index.d.ts\n<tmp>/repo/rn/portable.ts"
+    },
+    {
+      "label": "check tsconfig.portable.es2022.json",
+      "argv": [
+        "tsc",
+        "-p",
+        "tsconfig.portable.es2022.json"
+      ],
+      "cwd": "<tmp>/repo/rn",
+      "exit": 0,
+      "signal": null,
+      "output": ""
+    },
+    {
+      "label": "list tsconfig.portable.es2022-dom.json",
+      "argv": [
+        "tsc",
+        "-p",
+        "tsconfig.portable.es2022-dom.json",
+        "--listFilesOnly"
+      ],
+      "cwd": "<tmp>/repo/rn",
+      "exit": 0,
+      "signal": null,
+      "output": "<tool>/lib.es5.d.ts\n<tool>/lib.es2015.d.ts\n<tool>/lib.es2016.d.ts\n<tool>/lib.es2017.d.ts\n<tool>/lib.es2018.d.ts\n<tool>/lib.es2019.d.ts\n<tool>/lib.es2020.d.ts\n<tool>/lib.es2021.d.ts\n<tool>/lib.es2022.d.ts\n<tool>/lib.dom.d.ts\n<tool>/lib.es2015.core.d.ts\n<tool>/lib.es2015.collection.d.ts\n<tool>/lib.es2015.generator.d.ts\n<tool>/lib.es2015.iterable.d.ts\n<tool>/lib.es2015.promise.d.ts\n<tool>/lib.es2015.proxy.d.ts\n<tool>/lib.es2015.reflect.d.ts\n<tool>/lib.es2015.symbol.d.ts\n<tool>/lib.es2015.symbol.wellknown.d.ts\n<tool>/lib.es2016.array.include.d.ts\n<tool>/lib.es2016.intl.d.ts\n<tool>/lib.es2017.arraybuffer.d.ts\n<tool>/lib.es2017.date.d.ts\n<tool>/lib.es2017.object.d.ts\n<tool>/lib.es2017.sharedmemory.d.ts\n<tool>/lib.es2017.string.d.ts\n<tool>/lib.es2017.intl.d.ts\n<tool>/lib.es2017.typedarrays.d.ts\n<tool>/lib.es2018.asyncgenerator.d.ts\n<tool>/lib.es2018.asynciterable.d.ts\n<tool>/lib.es2018.intl.d.ts\n<tool>/lib.es2018.promise.d.ts\n<tool>/lib.es2018.regexp.d.ts\n<tool>/lib.es2019.array.d.ts\n<tool>/lib.es2019.object.d.ts\n<tool>/lib.es2019.string.d.ts\n<tool>/lib.es2019.symbol.d.ts\n<tool>/lib.es2019.intl.d.ts\n<tool>/lib.es2020.bigint.d.ts\n<tool>/lib.es2020.date.d.ts\n<tool>/lib.es2020.promise.d.ts\n<tool>/lib.es2020.sharedmemory.d.ts\n<tool>/lib.es2020.string.d.ts\n<tool>/lib.es2020.symbol.wellknown.d.ts\n<tool>/lib.es2020.intl.d.ts\n<tool>/lib.es2020.number.d.ts\n<tool>/lib.es2021.promise.d.ts\n<tool>/lib.es2021.string.d.ts\n<tool>/lib.es2021.weakref.d.ts\n<tool>/lib.es2021.intl.d.ts\n<tool>/lib.es2022.array.d.ts\n<tool>/lib.es2022.error.d.ts\n<tool>/lib.es2022.intl.d.ts\n<tool>/lib.es2022.object.d.ts\n<tool>/lib.es2022.string.d.ts\n<tool>/lib.es2022.regexp.d.ts\n<tool>/lib.decorators.d.ts\n<tool>/lib.decorators.legacy.d.ts\n<tmp>/repo/rn/node_modules/@hoyadb/client/index.d.ts\n<tmp>/repo/rn/node_modules/@hoyadb/testing/index.d.ts\n<tmp>/repo/rn/portable.ts"
+    },
+    {
+      "label": "check tsconfig.portable.es2022-dom.json",
+      "argv": [
+        "tsc",
+        "-p",
+        "tsconfig.portable.es2022-dom.json"
+      ],
+      "cwd": "<tmp>/repo/rn",
+      "exit": 0,
+      "signal": null,
+      "output": ""
+    }
+  ],
+  "temporary": [
+    "/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-def0026-after-zqqj1f"
+  ],
+  "mirror_sources": {
+    "bindings/javascript/README.md": "59967ecf21171694f519e3de4e00b6dee3322720bf7b0696a6302012c7214a65",
+    "bindings/javascript/client/LICENSES.md": "46fb9ef3e4c0a5524a6c61618f23618baf041116b821ec5e9c0e1bd92a02424c",
+    "bindings/javascript/client/index.d.ts": "4b2d759489e1fa83a4738153f59a597c6002e147e3d9dddcd099eb2e3aa9391c",
+    "bindings/javascript/client/package.json": "3db2631cd7625855a785d4692ba6db24b09ce4e2ca54e61d10f4c46f2e28f58a",
+    "bindings/javascript/client/src/client.js": "e2250b4c5623ca450f8b97d3989fa756873b5f4727285a48b65a46127fd36f20",
+    "bindings/javascript/client/src/errors.js": "567e599075aec41ed384bb0d1b61c8bc7fcec0b3a5121b4230785360ac0c5c75",
+    "bindings/javascript/client/src/index.js": "eed2171c2caefae409abf0de369c52de174c71f97ea0b76d8f14f87fab5eaf26",
+    "bindings/javascript/client/src/query.js": "545485e313f3b59e78ee593ba9efb78ffbdfe22b74f1faab30a7f36e7536561a",
+    "bindings/javascript/client/src/runtime.js": "1501ee4c69adfc5c5623832a3898ff218a5958c6251f389cf435480e0bbee176",
+    "bindings/javascript/client/src/time.js": "583308cc8d00b2c0da0aa08ffe74fca6f7c2bd358b0aad5c87c22cc33ef8cb2d",
+    "bindings/javascript/client/src/utf8.js": "05a6b092d309ccdcf314684d3365491eaf88d22727fd1a92471acd9af41b37d4",
+    "bindings/javascript/client/src/values.js": "d2954646c65f748c068cf643f313de7ad6e44e38384f3e23db6a07a3068a23a8",
+    "bindings/javascript/client/src/web-entry.js": "5de646093cf2b7e873d1b3d71a1c75566455eef3ad44b9a58b23725d13a83968",
+    "bindings/javascript/client/src/web.js": "0d5cd7a8e4b1955622a552ce51cf50cd99f9f07bc376cf77540da0ad44590172",
+    "bindings/javascript/client/src/worker-host.js": "b490883d6cbf96dc6b6393caccc317bdc627d4e7321b2db623bfd39c8c743b80",
+    "bindings/javascript/client/src/worker.js": "f90ff3fecc8bd2ef8d23c462e7837ed66916612eec188e4eafb3c6035953a9f0",
+    "bindings/javascript/client/test/determinism.test.mjs": "aeb9bc355b7a0543d274466cb0c31cbe757b102328b00579b0205cc6858f7ab8",
+    "bindings/javascript/client/test/entity-api.test.mjs": "00bf1a8925e199cd7eb07f73609073c3e0ac57864ef613beec719c7f0ccdf91f",
+    "bindings/javascript/client/test/host-regressions.test.mjs": "ff715df75463f731908b20a756f124a2d70b998be884110db65c3e506bc90eaf",
+    "bindings/javascript/client/test/interface.test.mjs": "3baae49f309bdb3fababfd63440fddcc602fe51f8c68818ca2995313ac38b875",
+    "bindings/javascript/client/test/lifecycle.test.mjs": "43a34424dc0d09ba6991f962edcb7c3f4c9ac4f6b63cbef05f745701c3890fac",
+    "bindings/javascript/client/test/managed-observation.test.mjs": "28395f25a2d627b3c44c36955c1efbaae28b85407109961796509e55886d6986",
+    "bindings/javascript/client/test/merge.test.mjs": "7725784808c77aedfdf701225da2dd08ab0c5080f3dddcfcb25015f32feff216",
+    "bindings/javascript/client/test/release.test.mjs": "3ef4f733303f655139d5b91a83cbcf586c96722c165a828f645ead21f52c3c09",
+    "bindings/javascript/client/test/schemas.mjs": "c75f11cbcfeffcc63ab84409671ac8fb4f14998761b746d98b03a4845ba50029",
+    "bindings/javascript/client/test/stale-sync.test.mjs": "41a312a664634dccc25e0336c32ced23c39abade25d2f30ded386887eac7f72e",
+    "bindings/javascript/client/test/sync-observation.test.mjs": "3571d47b280d4bd9536b3370e710a28bb98da9a036d15e6d39bb667e206c4402",
+    "bindings/javascript/client/test/web-channel.test.mjs": "eff2b099bdfd1982b86dece4c66db4d3c5de801c64059329b5d33dcd7ac5677d",
+    "bindings/javascript/client/test/worker.test.mjs": "9006919c25383a1c802b6fc7de1b079150ef2edadf88ad63ea04f6f31780c6a9",
+    "bindings/javascript/client/web.d.ts": "9964f4b5a62fb0a2b7d666a3213a42d2288d93fe133d4c2dcc984427ea1f953c",
+    "bindings/javascript/consumer/__pycache__/consumer_server.cpython-314.pyc": "a48e00a5588b807b1144b12c5d350b1cf175652605a1d774aa366b14f1ca1064",
+    "bindings/javascript/consumer/__pycache__/consumer_server_test.cpython-314.pyc": "7c298f5b9dcd8476ddd8b7784ee15e9cd6f5e07ed65908f6464e7f89bb09ef35",
+    "bindings/javascript/consumer/browser.html": "dff2d812bdc26b371a2d164398594514713110d6ee168a6b85e7ffdde086c232",
+    "bindings/javascript/consumer/browser.mjs": "86ee9fddf0e6427699874729a36f884c9c7c59c3ab86fa71dbdbeb9a66b56860",
+    "bindings/javascript/consumer/conformance.mjs": "8480d56c4683d8276b8675b29db05abc4d439f65f96f319b8e9bdf649fb9a3a8",
+    "bindings/javascript/consumer/consumer_server.py": "496df71f01efec8799783b679b34833d4136b7333578e9c1c124fe93a5baad2d",
+    "bindings/javascript/consumer/consumer_server_test.py": "d11d9da5a900be111b8cf494b096cfd403033e5b30b2c69ccd8054da4b7cc9e0",
+    "bindings/javascript/consumer/control-client.mjs": "53fdfcc938eb2251a8055f696f77cb31d54b59b8fbd93d01a2d25710e371321b",
+    "bindings/javascript/consumer/control-worker.mjs": "806c129840a77856e70b85c68752f6086784c0e612f45c1068010188b85af5d3",
+    "bindings/javascript/consumer/control.html": "3c8a028f7d3d7671b95205c5cc9124d4c1e64ed696513117416f7ce416f7f636",
+    "bindings/javascript/consumer/control.mjs": "ecdd30b5f0a77b92bcf4015108793ad785c76e6f2d68a4a0f1baad475ceb6410",
+    "bindings/javascript/consumer/memory.mjs": "36aee82ac503e250c4096f9d175d29795bd0d2e40c0034688820e2dcf6ba5398",
+    "bindings/javascript/consumer/offline-memory.mjs": "f15b26e6979f005ad0ebb1cf7c84c8633e04258dc11c326d26e577e4a95e5687",
+    "bindings/javascript/consumer/portable.ts": "de891a300744a8a5840edaf000cf7dba3ceeeb5e00d93c11bc9c117fc3e5d505",
+    "bindings/javascript/consumer/types.ts": "1821c549d8bc0c5c1e9fef6aa21070c4c46a3468cab82009c734fc8564ddb0c1",
+    "bindings/javascript/consumer/walkthrough.mjs": "cd24ad27a5ddecbada8cf7d49cdd1f9b627e106cfaa03cff91a39174e511e319",
+    "bindings/javascript/consumer/worker-retry.html": "a46bc8ab50149ddb0f3b5952d6d612b6c40672e13f6aec34390b7d3a03c6bcd5",
+    "bindings/javascript/consumer/worker-retry.mjs": "77120550dcd2c5f4a5cbc695eec4d1b2980b9ca48e0f832417ebd940ba651da3",
+    "bindings/javascript/package-lock.json": "9a54aa5a8f63239f16e3d77ce7a1c61f911c610abe6baf51baf48f0a64ed1921",
+    "bindings/javascript/package.json": "30e41761181d64fd1cf9fff4d50118ab5d0183dd0c9795b6969494dc4b6c127f",
+    "bindings/javascript/scripts/build.mjs": "96b1561c9e4d277107511e7785492a9b205eb62054374adbc4dcf1deb02c1831",
+    "bindings/javascript/scripts/check-build.mjs": "3b7466ad9514e0b3e3a223c51e610c77395cdbefe4c16d92a208a79e3e9c0828",
+    "bindings/javascript/scripts/freeze.mjs": "0f861ab85ef7b213631081458fe63caf9b6e79a3be7e82756525afec20d85af8",
+    "bindings/javascript/scripts/packed-consumer.mjs": "c84e0e6ec58878400d420cc62a988ef19ceedad050db9775bf52eb989a288091",
+    "bindings/javascript/testing/LICENSES.md": "9b4cff3a81cdcb21c8f40bdbfc634472655f4b80f58b734521e61ef256f98ff1",
+    "bindings/javascript/testing/index.d.ts": "81c71c6c759cc71456ed2db5c16d2e094a4f1de4fc4b367760e420e750a50d3b",
+    "bindings/javascript/testing/package.json": "32b25827644a48f155574ce3dcdc4825cd9ed6fb842c5f58ae028a1905c00081",
+    "bindings/javascript/testing/src/index.js": "c31795763a5971afd63c6794895c43083af03a1fe5a9221425c2c468fbe6c3ac",
+    "bindings/javascript/testing/test/transport.test.mjs": "d8aeb8c69428fd9ff0b2ad98cacf9a7c5b2de4b4b8d05c46cb3b76a569166e7f",
+    "bindings/javascript/third-party/bitflags-2.13.2/LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+    "bindings/javascript/third-party/bitflags-2.13.2/LICENSE-MIT": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb",
+    "bindings/javascript/third-party/bumpalo-3.20.3/LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+    "bindings/javascript/third-party/bumpalo-3.20.3/LICENSE-MIT": "65f94e99ddaf4f5d1782a6dae23f35d4293a9a01444a13135a6887017d353cee",
+    "bindings/javascript/third-party/cc-1.10.0/LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+    "bindings/javascript/third-party/cc-1.10.0/LICENSE-MIT": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+    "bindings/javascript/third-party/cfg-if-1.0.5/LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+    "bindings/javascript/third-party/cfg-if-1.0.5/LICENSE-MIT": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+    "bindings/javascript/third-party/fallible-iterator-0.3.0/LICENSE-APACHE": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08",
+    "bindings/javascript/third-party/fallible-iterator-0.3.0/LICENSE-MIT": "0816e154b159ba255c563f7c8c7df5bbb8cc5fc96f5ab8cf9f4743b4f41fe7eb",
+    "bindings/javascript/third-party/fallible-streaming-iterator-0.1.9/LICENSE-APACHE": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08",
+    "bindings/javascript/third-party/fallible-streaming-iterator-0.1.9/LICENSE-MIT": "8dcec5569a9be5b0e086c80faed6f1aefa670af0ec29cecc2f714303096887e0",
+    "bindings/javascript/third-party/find-msvc-tools-0.1.15/LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+    "bindings/javascript/third-party/find-msvc-tools-0.1.15/LICENSE-MIT": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+    "bindings/javascript/third-party/futures-core-0.3.34/LICENSE-APACHE": "275c491d6d1160553c32fd6127061d7f9606c3ea25abfad6ca3f6ed088785427",
+    "bindings/javascript/third-party/futures-core-0.3.34/LICENSE-MIT": "6652c868f35dfe5e8ef636810a4e576b9d663f3a17fb0f5613ad73583e1b88fd",
+    "bindings/javascript/third-party/futures-task-0.3.34/LICENSE-APACHE": "275c491d6d1160553c32fd6127061d7f9606c3ea25abfad6ca3f6ed088785427",
+    "bindings/javascript/third-party/futures-task-0.3.34/LICENSE-MIT": "6652c868f35dfe5e8ef636810a4e576b9d663f3a17fb0f5613ad73583e1b88fd",
+    "bindings/javascript/third-party/futures-util-0.3.34/LICENSE-APACHE": "275c491d6d1160553c32fd6127061d7f9606c3ea25abfad6ca3f6ed088785427",
+    "bindings/javascript/third-party/futures-util-0.3.34/LICENSE-MIT": "6652c868f35dfe5e8ef636810a4e576b9d663f3a17fb0f5613ad73583e1b88fd",
+    "bindings/javascript/third-party/index.json": "a41372506527f8107beec256bd76c645b87bc01a1c746a9ddeecd4cbe1fb1fee",
+    "bindings/javascript/third-party/js-sys-0.3.106/LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+    "bindings/javascript/third-party/js-sys-0.3.106/LICENSE-MIT": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+    "bindings/javascript/third-party/libsqlite3-sys-0.38.1/LICENSE": "c10c1f27337546471e5f7e4e97fdd398b35b9d4e126115dcd22de8d8e65abf6f",
+    "bindings/javascript/third-party/once_cell-1.21.4/LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+    "bindings/javascript/third-party/once_cell-1.21.4/LICENSE-MIT": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3",
+    "bindings/javascript/third-party/pin-project-lite-0.2.17/LICENSE-APACHE": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+    "bindings/javascript/third-party/pin-project-lite-0.2.17/LICENSE-MIT": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3",
+    "bindings/javascript/third-party/pkg-config-0.3.34/LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+    "bindings/javascript/third-party/pkg-config-0.3.34/LICENSE-MIT": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+    "bindings/javascript/third-party/proc-macro2-1.0.107/LICENSE-APACHE": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a",
+    "bindings/javascript/third-party/proc-macro2-1.0.107/LICENSE-MIT": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3",
+    "bindings/javascript/third-party/quote-1.0.47/LICENSE-APACHE": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a",
+    "bindings/javascript/third-party/quote-1.0.47/LICENSE-MIT": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3",
+    "bindings/javascript/third-party/rsqlite-vfs-0.2.0/LICENSE": "e1c1975c3474cce31722836f101a40ffaf1cc784e4d2f38ce3e77b9712934e78",
+    "bindings/javascript/third-party/rusqlite-0.40.1/LICENSE": "c10c1f27337546471e5f7e4e97fdd398b35b9d4e126115dcd22de8d8e65abf6f",
+    "bindings/javascript/third-party/rustversion-1.0.23/LICENSE-APACHE": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a",
+    "bindings/javascript/third-party/rustversion-1.0.23/LICENSE-MIT": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3",
+    "bindings/javascript/third-party/shlex-2.0.1/LICENSE-APACHE": "553fffcd9b1cb158bc3e9edc35da85ca5c3b3d7d2e61c883ebcfa8a65814b583",
+    "bindings/javascript/third-party/shlex-2.0.1/LICENSE-MIT": "4455bf75a91154108304cb283e0fea9948c14f13e20d60887cf2552449dea3b1",
+    "bindings/javascript/third-party/slab-0.4.12/LICENSE": "8ce0830173fdac609dfb4ea603fdc002c2f4af0dc9b1a005653f5da9cf534b18",
+    "bindings/javascript/third-party/smallvec-1.16.4/LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+    "bindings/javascript/third-party/smallvec-1.16.4/LICENSE-MIT": "0b28172679e0009b655da42797c03fd163a3379d5cfa67ba1f1655e974a2a1a9",
+    "bindings/javascript/third-party/sqlcipher-src-419.0.6+sqlcipher-4.19.0-sqlite-3.53.4-libtomcrypt-1.18.2/LICENSE": "413f82e0f4f8191a8624a7b7b2c9809466f7f3d930ad52a74ad29f2dd907881d",
+    "bindings/javascript/third-party/sqlite-wasm-rs-0.6.2/LICENSE": "e1c1975c3474cce31722836f101a40ffaf1cc784e4d2f38ce3e77b9712934e78",
+    "bindings/javascript/third-party/sqlite-wasm-vfs-0.3.0/LICENSE": "e1c1975c3474cce31722836f101a40ffaf1cc784e4d2f38ce3e77b9712934e78",
+    "bindings/javascript/third-party/syn-3.0.9/LICENSE-APACHE": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a",
+    "bindings/javascript/third-party/syn-3.0.9/LICENSE-MIT": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3",
+    "bindings/javascript/third-party/thiserror-2.0.21/LICENSE-APACHE": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a",
+    "bindings/javascript/third-party/thiserror-2.0.21/LICENSE-MIT": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3",
+    "bindings/javascript/third-party/thiserror-impl-2.0.21/LICENSE-APACHE": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a",
+    "bindings/javascript/third-party/thiserror-impl-2.0.21/LICENSE-MIT": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3",
+    "bindings/javascript/third-party/tokio-1.54.1/LICENSE": "253cd04c6714889df2d32f3f64d669179a1c95c76ac43c40882c52eb06bc3552",
+    "bindings/javascript/third-party/unicode-ident-1.0.27/LICENSE-APACHE": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a",
+    "bindings/javascript/third-party/unicode-ident-1.0.27/LICENSE-MIT": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3",
+    "bindings/javascript/third-party/unicode-ident-1.0.27/LICENSE-UNICODE": "f7db81051789b729fea528a63ec4c938fdcb93d9d61d97dc8cc2e9df6d47f2a1",
+    "bindings/javascript/third-party/vcpkg-0.2.15/LICENSE-APACHE": "60c93a31f490375aadf64098b75f10715010379541021e00261045d7800611d3",
+    "bindings/javascript/third-party/vcpkg-0.2.15/LICENSE-MIT": "016d20f335060a70e79d9fcf8dfaa6201114d65d592211f4bdfb8ae9ca2bc1dc",
+    "bindings/javascript/third-party/wasm-bindgen-0.2.129/LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+    "bindings/javascript/third-party/wasm-bindgen-0.2.129/LICENSE-MIT": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+    "bindings/javascript/third-party/wasm-bindgen-futures-0.4.79/LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+    "bindings/javascript/third-party/wasm-bindgen-futures-0.4.79/LICENSE-MIT": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+    "bindings/javascript/third-party/wasm-bindgen-macro-0.2.129/LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+    "bindings/javascript/third-party/wasm-bindgen-macro-0.2.129/LICENSE-MIT": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+    "bindings/javascript/third-party/wasm-bindgen-macro-support-0.2.129/LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+    "bindings/javascript/third-party/wasm-bindgen-macro-support-0.2.129/LICENSE-MIT": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+    "bindings/javascript/third-party/wasm-bindgen-shared-0.2.129/LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+    "bindings/javascript/third-party/wasm-bindgen-shared-0.2.129/LICENSE-MIT": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+    "bindings/javascript/third-party/web-sys-0.3.106/LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+    "bindings/javascript/third-party/web-sys-0.3.106/LICENSE-MIT": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+    "bindings/javascript/third-party/zeroize-1.9.1/LICENSE-APACHE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "bindings/javascript/third-party/zeroize-1.9.1/LICENSE-MIT": "8c7516d4b27b1e495be5e38b612298b63de48d05f49cdac94f70f3cd70f8864b",
+    "bindings/web/Cargo.lock": "228d794bdc40d80fbb43b424af72b0d8c6e24fe3f3c447c5a4a2e5a0785ebf89",
+    "bindings/web/pkg/hoyadb_web.d.ts": "87b4a8b90dc768d6e1fb6529f2720c0e6341d06a93084e0807cd937bc3e76e54",
+    "bindings/web/pkg/hoyadb_web.js": "e8ce3818ada01488fe3daca00164f1487cadf744e928ac769ae62d5e53f87c17",
+    "bindings/web/pkg/hoyadb_web_bg.wasm": "f54f6b37b2ff8942d0b1b3d5ccbee61de690ee02a08b54b374369a598dd963b7",
+    "bindings/web/pkg/hoyadb_web_bg.wasm.d.ts": "c92dbad0c9dee3a4e029f3e6626fc05559702d9a66bf71f73dad0537df68a30d",
+    "bindings/web/src/lib.rs": "fc932ad83e510467daf2c2967b5171d4394bf26375feedc10a313f3c20a338ce",
+    "crates/hoyadb-bindings/src/budget.rs": "8efe83e4524fa929e9da3d8e5e2a65d014e72fb33b44da0c1effe8b31e8d5e15",
+    "crates/hoyadb-bindings/src/codec.rs": "eef07eec01e3d3cf00b0328d93061becb1127369a293dc4c33d3669e258787a1",
+    "crates/hoyadb-bindings/src/commands.rs": "d054b96d1b018747c9ef3510fe4747bba435e894a23dc2cd5ab6f759e73c215f",
+    "crates/hoyadb-bindings/src/data.rs": "a828b4b8afda985e380cd50abcff3ee333854839f3449f369ecc2c118be8c372",
+    "crates/hoyadb-bindings/src/engine.rs": "0ec9daf66925ede06126c3613fb2fa856c51ae82019bafde9cf2e9d2af1ff968",
+    "crates/hoyadb-bindings/src/entities.rs": "c4b93592b14ffa0f1812e35a37b0358a53ac3a945a1a71577f7e449ee400d56b",
+    "crates/hoyadb-bindings/src/lib.rs": "6093398fa60cc3ecb40f318b043d8e5c9d3681e655838bd1fdff06fc1bca0d14",
+    "crates/hoyadb-bindings/src/observations.rs": "86c4a6cec76d3a45b72fb4970219d34d42e8cca1367ed70c4002801903df8de6",
+    "crates/hoyadb-bindings/src/reconciliation.rs": "c1146c9b4c74e89f240b7dee83673a90a3aa7e7675c179cfceec229b0cb29988",
+    "crates/hoyadb-core/src/command/entity.rs": "4cd52a8d8b1498bace74960b7c2cf9cfc8d2e5883461ffe542c44db5c8149918",
+    "crates/hoyadb-core/src/command/entity_owner.rs": "bf80f821009b014f9f60a41a433fc92b7bb8141d00638425ccf57ac23dc04838",
+    "crates/hoyadb-core/src/command/execution.rs": "2dbff03b78930a04bfce4a96136f6593ba3c75391ad405c142ccd3985a069590",
+    "crates/hoyadb-core/src/command/json.rs": "64419603b3ee2d5a890a50d688ed4cd29ce0612136565672103df102c48d3e6c",
+    "crates/hoyadb-core/src/command/merge.rs": "30b4b0793deb5a3778aa7991d4c5b6dd010fc15de3e8d05976678192a7cb2728",
+    "crates/hoyadb-core/src/command/mod.rs": "13e7e273787ec911341ccc31ae672f9dc82187346aba7ef7236a785c4b714d56",
+    "crates/hoyadb-core/src/command/owner.rs": "1219be28a22385cb4ac03626fded586969808282c678e6b40240925f37c88717",
+    "crates/hoyadb-core/src/command/proposed.rs": "e9628729dde8c3d2f9a9dc081635995d9feee3ebcd951b1f386f6bc829f768ef",
+    "crates/hoyadb-core/src/command/pull.rs": "3e00878f88e9be95ae0289c05b7191b0693eb0f3e5c7da63b54245e470ea8af5",
+    "crates/hoyadb-core/src/command/queue.rs": "a0fc1c2252af878836b4b5b1681673f77ccef6ea8f0bece91274260e6a347996",
+    "crates/hoyadb-core/src/command/reconcile.rs": "cd33873c6d54a42b6b507b9ca29be0cae32775bb8b7c00e4a3963c7ae848f8de",
+    "crates/hoyadb-core/src/command/records.rs": "ad299835d15df77b025156239976cc1681600f951c730f554c548d02fd12dabc",
+    "crates/hoyadb-core/src/command/security.rs": "8c119eb27d7a4a64ca0f49f44cd02c23322a19bef1bec360482037d1dbbe1710",
+    "crates/hoyadb-core/src/command/sync.rs": "97aaa3df8c903efbef06453040149419740ae0b1a218e47956d04abada5c262f",
+    "crates/hoyadb-core/src/lib.rs": "9484a9eb3fcf563086c450d1746c7c6a76f8347f26f7928240c77ccebe9433db",
+    "crates/hoyadb-core/src/model/database.rs": "6ac9d0df29bdd7e5c242b09cdc63eb5153bf10378fb742737eeac3481d9d1a35",
+    "crates/hoyadb-core/src/model/migration.rs": "db9cfabe28b4f9a511f2dc77f93e2ae2f2db4096b192277e07ed3b84bff859df",
+    "crates/hoyadb-core/src/model/mod.rs": "9b8132927cd06a8c92d62aa7ca74a8f74c6e1e19ed5082c46b98fd023cbbae79",
+    "crates/hoyadb-core/src/model/query.rs": "462e7329287e21ca866627173ca5e1dd09f5cbf98febf9242b443c9f4fef739d",
+    "crates/hoyadb-core/src/model/reactive.rs": "b20c18ee68e45a6585fed92720ac221485869c13fad01935b7a9ca1418d87037",
+    "crates/hoyadb-core/src/model/schema.rs": "b9b79984a9ab98de0811722f207a245fe10c82444c2612dc10769b882d338741",
+    "crates/hoyadb-core/src/storage.rs": "e52b7582e3f997a1a6ecb5dee126e97ca98976f6e29580c60b01a2b4ad42d3a8",
+    "crates/hoyadb-core/src/storage/model.rs": "4ae2c5d3b465fd3fcfad7ff8d3ad734decc6884a370d1dbaa8110ef35ae8ca30",
+    "crates/hoyadb-core/src/storage/observation.rs": "1a09c65d6fd034f888b51a9849a037272f53bc73942b991a4f3d0291dc9998cc",
+    "crates/hoyadb-core/src/storage/snapshot/lifecycle.rs": "b0ae5e041abd56436f62785f9d2d9278ead36d9e1616aaaf41e384df8c60ee10",
+    "crates/hoyadb-core/src/storage/snapshot/mod.rs": "f974c092f3779d50f2fcc69a8099d0e91cb71775282886630603f7baf12f9861",
+    "crates/hoyadb-core/src/storage/snapshot/projection.rs": "91aa2fb3d2fe2aca7d3f62c3ea7de5e78bb9ae8decd177d289ec25135134fd29",
+    "crates/hoyadb-core/src/storage/snapshot/sync.rs": "15f109b8a92b3aaaf6e2297afc9e007fd2828445813a7a23a3e9efe2ae0ccf94",
+    "crates/hoyadb-core/src/storage/snapshot/typed.rs": "848c8af97832720530952b88ec59dacb1c83e1c451edec1ad9b99c7fde739c30",
+    "crates/hoyadb-core/src/storage/sync.rs": "3538587fcd2eafb98edc2cb8cf55dd9a395434ec9562cd314ff0a94e40a898f6",
+    "crates/hoyadb-core/src/storage/typed.rs": "f04b224134a1e78d1d41eeba2d83a3ecc0619dbf5a82b02f6ca0a3cf75365078",
+    "crates/hoyadb-storage-memory/src/lib.rs": "0c26d6799994174b2c6543fc8cc506a8ada788ae761030b70fd8baa3517724f1",
+    "crates/hoyadb-storage-sqlite/src/bin/entity_restart_fixture.rs": "67bec3f33795cc52d900458c47d261a2cb13cd3427c89335d5a55c7901a3a6dd",
+    "crates/hoyadb-storage-sqlite/src/bin/restart_fixture.rs": "136cd650706bbaa274e21fbf67c218318f15487b281e4ee69f4b47d797191acd",
+    "crates/hoyadb-storage-sqlite/src/encryption.rs": "add0aa6bcd9f08ee7831c51063ca8f007d9f75f59a39ab101399699139f17df8",
+    "crates/hoyadb-storage-sqlite/src/lib.rs": "bbe8b09f3fd7413cbf78dd667bbc946b189a6024f3c67782033d36bbd3e5a0c4",
+    "crates/hoyadb-storage-sqlite/src/lifecycle.rs": "d7d94dadf858b846f4ffc4b3e6a1add96ed7fbdc7d7463947c380ab3e29c711f",
+    "crates/hoyadb-storage-sqlite/src/projection.rs": "0dcb0063c412177f4a515e9959d97f0959ac92f163901234cf553bb1a7148ec1",
+    "crates/hoyadb-storage-sqlite/src/query.rs": "063646093bc87bad5af88920e4f355efa1f183ece8a47d5cbd2bc01ef2c596ec",
+    "crates/hoyadb-storage-sqlite/src/sync.rs": "91c671600e5bceefbb5c1d306ab9af0a18d5408c39d23d3daf2107344e9208d7",
+    "licenses/sqlcipher/LICENSE-libtomcrypt": "1ba8f8006c93ac386e117f5721080192b2b29c1e3e8f75dfe577ff4e2c3459a8",
+    "licenses/sqlcipher/LICENSE-sqlcipher": "2a2826f6acf46fa650730cf42cbb22a642be33a7ef119c9c4f4bf6daf3bef48e",
+    "licenses/sqlcipher/LICENSE-sqlcipher-src": "413f82e0f4f8191a8624a7b7b2c9809466f7f3d930ad52a74ad29f2dd907881d",
+    "licenses/sqlcipher/LICENSE-sqlite": "85806d613cfda5901f848b3b5b4b04396c8c64e89c97c0af3706c42b0c44bb47"
+  },
+  "tarballs": {
+    "hoyadb-client-0.1.0.tgz": {
+      "bytes": 1481408,
+      "sha256": "fb710c70c87cbc8f327d7ee2b97b6eb4365ed25c63c6938c25553b51124c17ad"
+    },
+    "hoyadb-testing-0.1.0.tgz": {
+      "bytes": 9465,
+      "sha256": "808802a4b4e0d341a3d0fbc2fce38d535d5ad3ff12e464e18b32a082a8d5d9f1"
+    }
+  },
+  "package_files": {
+    "client/package/LICENSES.md": {
+      "bytes": 965,
+      "sha256": "46fb9ef3e4c0a5524a6c61618f23618baf041116b821ec5e9c0e1bd92a02424c"
+    },
+    "client/package/README.md": {
+      "bytes": 8195,
+      "sha256": "59967ecf21171694f519e3de4e00b6dee3322720bf7b0696a6302012c7214a65"
+    },
+    "client/package/SOURCE-MANIFEST.json": {
+      "bytes": 10458,
+      "sha256": "f5db7e2acf23b3f8c3b1d1b7f36fb5bcb1b51f184f8dcea9feeb38bcb48e7c9f"
+    },
+    "client/package/index.d.ts": {
+      "bytes": 11725,
+      "sha256": "4b2d759489e1fa83a4738153f59a597c6002e147e3d9dddcd099eb2e3aa9391c"
+    },
+    "client/package/licenses/crates/bitflags-2.13.2/LICENSE-APACHE": {
+      "bytes": 10847,
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "client/package/licenses/crates/bitflags-2.13.2/LICENSE-MIT": {
+      "bytes": 1071,
+      "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+    },
+    "client/package/licenses/crates/bumpalo-3.20.3/LICENSE-APACHE": {
+      "bytes": 10847,
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "client/package/licenses/crates/bumpalo-3.20.3/LICENSE-MIT": {
+      "bytes": 1059,
+      "sha256": "65f94e99ddaf4f5d1782a6dae23f35d4293a9a01444a13135a6887017d353cee"
+    },
+    "client/package/licenses/crates/cc-1.10.0/LICENSE-APACHE": {
+      "bytes": 10847,
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "client/package/licenses/crates/cc-1.10.0/LICENSE-MIT": {
+      "bytes": 1057,
+      "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+    },
+    "client/package/licenses/crates/cfg-if-1.0.5/LICENSE-APACHE": {
+      "bytes": 10847,
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "client/package/licenses/crates/cfg-if-1.0.5/LICENSE-MIT": {
+      "bytes": 1057,
+      "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+    },
+    "client/package/licenses/crates/fallible-iterator-0.3.0/LICENSE-APACHE": {
+      "bytes": 11358,
+      "sha256": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08"
+    },
+    "client/package/licenses/crates/fallible-iterator-0.3.0/LICENSE-MIT": {
+      "bytes": 1078,
+      "sha256": "0816e154b159ba255c563f7c8c7df5bbb8cc5fc96f5ab8cf9f4743b4f41fe7eb"
+    },
+    "client/package/licenses/crates/fallible-streaming-iterator-0.1.9/LICENSE-APACHE": {
+      "bytes": 11358,
+      "sha256": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08"
+    },
+    "client/package/licenses/crates/fallible-streaming-iterator-0.1.9/LICENSE-MIT": {
+      "bytes": 1086,
+      "sha256": "8dcec5569a9be5b0e086c80faed6f1aefa670af0ec29cecc2f714303096887e0"
+    },
+    "client/package/licenses/crates/find-msvc-tools-0.1.15/LICENSE-APACHE": {
+      "bytes": 10847,
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "client/package/licenses/crates/find-msvc-tools-0.1.15/LICENSE-MIT": {
+      "bytes": 1057,
+      "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+    },
+    "client/package/licenses/crates/futures-core-0.3.34/LICENSE-APACHE": {
+      "bytes": 10874,
+      "sha256": "275c491d6d1160553c32fd6127061d7f9606c3ea25abfad6ca3f6ed088785427"
+    },
+    "client/package/licenses/crates/futures-core-0.3.34/LICENSE-MIT": {
+      "bytes": 1094,
+      "sha256": "6652c868f35dfe5e8ef636810a4e576b9d663f3a17fb0f5613ad73583e1b88fd"
+    },
+    "client/package/licenses/crates/futures-task-0.3.34/LICENSE-APACHE": {
+      "bytes": 10874,
+      "sha256": "275c491d6d1160553c32fd6127061d7f9606c3ea25abfad6ca3f6ed088785427"
+    },
+    "client/package/licenses/crates/futures-task-0.3.34/LICENSE-MIT": {
+      "bytes": 1094,
+      "sha256": "6652c868f35dfe5e8ef636810a4e576b9d663f3a17fb0f5613ad73583e1b88fd"
+    },
+    "client/package/licenses/crates/futures-util-0.3.34/LICENSE-APACHE": {
+      "bytes": 10874,
+      "sha256": "275c491d6d1160553c32fd6127061d7f9606c3ea25abfad6ca3f6ed088785427"
+    },
+    "client/package/licenses/crates/futures-util-0.3.34/LICENSE-MIT": {
+      "bytes": 1094,
+      "sha256": "6652c868f35dfe5e8ef636810a4e576b9d663f3a17fb0f5613ad73583e1b88fd"
+    },
+    "client/package/licenses/crates/index.json": {
+      "bytes": 25911,
+      "sha256": "a41372506527f8107beec256bd76c645b87bc01a1c746a9ddeecd4cbe1fb1fee"
+    },
+    "client/package/licenses/crates/js-sys-0.3.106/LICENSE-APACHE": {
+      "bytes": 10847,
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "client/package/licenses/crates/js-sys-0.3.106/LICENSE-MIT": {
+      "bytes": 1057,
+      "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+    },
+    "client/package/licenses/crates/libsqlite3-sys-0.38.1/LICENSE": {
+      "bytes": 1067,
+      "sha256": "c10c1f27337546471e5f7e4e97fdd398b35b9d4e126115dcd22de8d8e65abf6f"
+    },
+    "client/package/licenses/crates/once_cell-1.21.4/LICENSE-APACHE": {
+      "bytes": 10847,
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "client/package/licenses/crates/once_cell-1.21.4/LICENSE-MIT": {
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "client/package/licenses/crates/pin-project-lite-0.2.17/LICENSE-APACHE": {
+      "bytes": 10174,
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    "client/package/licenses/crates/pin-project-lite-0.2.17/LICENSE-MIT": {
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "client/package/licenses/crates/pkg-config-0.3.34/LICENSE-APACHE": {
+      "bytes": 10847,
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "client/package/licenses/crates/pkg-config-0.3.34/LICENSE-MIT": {
+      "bytes": 1057,
+      "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+    },
+    "client/package/licenses/crates/proc-macro2-1.0.107/LICENSE-APACHE": {
+      "bytes": 9723,
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "client/package/licenses/crates/proc-macro2-1.0.107/LICENSE-MIT": {
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "client/package/licenses/crates/quote-1.0.47/LICENSE-APACHE": {
+      "bytes": 9723,
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "client/package/licenses/crates/quote-1.0.47/LICENSE-MIT": {
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "client/package/licenses/crates/rsqlite-vfs-0.2.0/LICENSE": {
+      "bytes": 1061,
+      "sha256": "e1c1975c3474cce31722836f101a40ffaf1cc784e4d2f38ce3e77b9712934e78"
+    },
+    "client/package/licenses/crates/rusqlite-0.40.1/LICENSE": {
+      "bytes": 1067,
+      "sha256": "c10c1f27337546471e5f7e4e97fdd398b35b9d4e126115dcd22de8d8e65abf6f"
+    },
+    "client/package/licenses/crates/rustversion-1.0.23/LICENSE-APACHE": {
+      "bytes": 9723,
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "client/package/licenses/crates/rustversion-1.0.23/LICENSE-MIT": {
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "client/package/licenses/crates/shlex-2.0.1/LICENSE-APACHE": {
+      "bytes": 566,
+      "sha256": "553fffcd9b1cb158bc3e9edc35da85ca5c3b3d7d2e61c883ebcfa8a65814b583"
+    },
+    "client/package/licenses/crates/shlex-2.0.1/LICENSE-MIT": {
+      "bytes": 1092,
+      "sha256": "4455bf75a91154108304cb283e0fea9948c14f13e20d60887cf2552449dea3b1"
+    },
+    "client/package/licenses/crates/slab-0.4.12/LICENSE": {
+      "bytes": 1055,
+      "sha256": "8ce0830173fdac609dfb4ea603fdc002c2f4af0dc9b1a005653f5da9cf534b18"
+    },
+    "client/package/licenses/crates/smallvec-1.16.4/LICENSE-APACHE": {
+      "bytes": 10847,
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "client/package/licenses/crates/smallvec-1.16.4/LICENSE-MIT": {
+      "bytes": 1072,
+      "sha256": "0b28172679e0009b655da42797c03fd163a3379d5cfa67ba1f1655e974a2a1a9"
+    },
+    "client/package/licenses/crates/sqlcipher-src-419.0.6+sqlcipher-4.19.0-sqlite-3.53.4-libtomcrypt-1.18.2/LICENSE": {
+      "bytes": 1073,
+      "sha256": "413f82e0f4f8191a8624a7b7b2c9809466f7f3d930ad52a74ad29f2dd907881d"
+    },
+    "client/package/licenses/crates/sqlite-wasm-rs-0.6.2/LICENSE": {
+      "bytes": 1061,
+      "sha256": "e1c1975c3474cce31722836f101a40ffaf1cc784e4d2f38ce3e77b9712934e78"
+    },
+    "client/package/licenses/crates/sqlite-wasm-vfs-0.3.0/LICENSE": {
+      "bytes": 1061,
+      "sha256": "e1c1975c3474cce31722836f101a40ffaf1cc784e4d2f38ce3e77b9712934e78"
+    },
+    "client/package/licenses/crates/syn-3.0.9/LICENSE-APACHE": {
+      "bytes": 9723,
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "client/package/licenses/crates/syn-3.0.9/LICENSE-MIT": {
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "client/package/licenses/crates/thiserror-2.0.21/LICENSE-APACHE": {
+      "bytes": 9723,
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "client/package/licenses/crates/thiserror-2.0.21/LICENSE-MIT": {
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "client/package/licenses/crates/thiserror-impl-2.0.21/LICENSE-APACHE": {
+      "bytes": 9723,
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "client/package/licenses/crates/thiserror-impl-2.0.21/LICENSE-MIT": {
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "client/package/licenses/crates/tokio-1.54.1/LICENSE": {
+      "bytes": 1070,
+      "sha256": "253cd04c6714889df2d32f3f64d669179a1c95c76ac43c40882c52eb06bc3552"
+    },
+    "client/package/licenses/crates/unicode-ident-1.0.27/LICENSE-APACHE": {
+      "bytes": 9723,
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "client/package/licenses/crates/unicode-ident-1.0.27/LICENSE-MIT": {
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "client/package/licenses/crates/unicode-ident-1.0.27/LICENSE-UNICODE": {
+      "bytes": 1995,
+      "sha256": "f7db81051789b729fea528a63ec4c938fdcb93d9d61d97dc8cc2e9df6d47f2a1"
+    },
+    "client/package/licenses/crates/vcpkg-0.2.15/LICENSE-APACHE": {
+      "bytes": 11050,
+      "sha256": "60c93a31f490375aadf64098b75f10715010379541021e00261045d7800611d3"
+    },
+    "client/package/licenses/crates/vcpkg-0.2.15/LICENSE-MIT": {
+      "bytes": 1082,
+      "sha256": "016d20f335060a70e79d9fcf8dfaa6201114d65d592211f4bdfb8ae9ca2bc1dc"
+    },
+    "client/package/licenses/crates/wasm-bindgen-0.2.129/LICENSE-APACHE": {
+      "bytes": 10847,
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "client/package/licenses/crates/wasm-bindgen-0.2.129/LICENSE-MIT": {
+      "bytes": 1057,
+      "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+    },
+    "client/package/licenses/crates/wasm-bindgen-futures-0.4.79/LICENSE-APACHE": {
+      "bytes": 10847,
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "client/package/licenses/crates/wasm-bindgen-futures-0.4.79/LICENSE-MIT": {
+      "bytes": 1057,
+      "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+    },
+    "client/package/licenses/crates/wasm-bindgen-macro-0.2.129/LICENSE-APACHE": {
+      "bytes": 10847,
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "client/package/licenses/crates/wasm-bindgen-macro-0.2.129/LICENSE-MIT": {
+      "bytes": 1057,
+      "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+    },
+    "client/package/licenses/crates/wasm-bindgen-macro-support-0.2.129/LICENSE-APACHE": {
+      "bytes": 10847,
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "client/package/licenses/crates/wasm-bindgen-macro-support-0.2.129/LICENSE-MIT": {
+      "bytes": 1057,
+      "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+    },
+    "client/package/licenses/crates/wasm-bindgen-shared-0.2.129/LICENSE-APACHE": {
+      "bytes": 10847,
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "client/package/licenses/crates/wasm-bindgen-shared-0.2.129/LICENSE-MIT": {
+      "bytes": 1057,
+      "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+    },
+    "client/package/licenses/crates/web-sys-0.3.106/LICENSE-APACHE": {
+      "bytes": 10847,
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "client/package/licenses/crates/web-sys-0.3.106/LICENSE-MIT": {
+      "bytes": 1057,
+      "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+    },
+    "client/package/licenses/crates/zeroize-1.9.1/LICENSE-APACHE": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "client/package/licenses/crates/zeroize-1.9.1/LICENSE-MIT": {
+      "bytes": 1082,
+      "sha256": "8c7516d4b27b1e495be5e38b612298b63de48d05f49cdac94f70f3cd70f8864b"
+    },
+    "client/package/licenses/sqlcipher/LICENSE-libtomcrypt": {
+      "bytes": 718,
+      "sha256": "1ba8f8006c93ac386e117f5721080192b2b29c1e3e8f75dfe577ff4e2c3459a8"
+    },
+    "client/package/licenses/sqlcipher/LICENSE-sqlcipher": {
+      "bytes": 1463,
+      "sha256": "2a2826f6acf46fa650730cf42cbb22a642be33a7ef119c9c4f4bf6daf3bef48e"
+    },
+    "client/package/licenses/sqlcipher/LICENSE-sqlcipher-src": {
+      "bytes": 1073,
+      "sha256": "413f82e0f4f8191a8624a7b7b2c9809466f7f3d930ad52a74ad29f2dd907881d"
+    },
+    "client/package/licenses/sqlcipher/LICENSE-sqlite": {
+      "bytes": 1485,
+      "sha256": "85806d613cfda5901f848b3b5b4b04396c8c64e89c97c0af3706c42b0c44bb47"
+    },
+    "client/package/package.json": {
+      "bytes": 673,
+      "sha256": "4a5be61c903cd506d7802fda1e2aa6a4b7cce56dcb4f8c9c9c2214bdf0661950"
+    },
+    "client/package/src/client.js": {
+      "bytes": 27178,
+      "sha256": "e2250b4c5623ca450f8b97d3989fa756873b5f4727285a48b65a46127fd36f20"
+    },
+    "client/package/src/errors.js": {
+      "bytes": 752,
+      "sha256": "567e599075aec41ed384bb0d1b61c8bc7fcec0b3a5121b4230785360ac0c5c75"
+    },
+    "client/package/src/index.js": {
+      "bytes": 301,
+      "sha256": "eed2171c2caefae409abf0de369c52de174c71f97ea0b76d8f14f87fab5eaf26"
+    },
+    "client/package/src/query.js": {
+      "bytes": 1171,
+      "sha256": "545485e313f3b59e78ee593ba9efb78ffbdfe22b74f1faab30a7f36e7536561a"
+    },
+    "client/package/src/runtime.js": {
+      "bytes": 2226,
+      "sha256": "1501ee4c69adfc5c5623832a3898ff218a5958c6251f389cf435480e0bbee176"
+    },
+    "client/package/src/time.js": {
+      "bytes": 730,
+      "sha256": "583308cc8d00b2c0da0aa08ffe74fca6f7c2bd358b0aad5c87c22cc33ef8cb2d"
+    },
+    "client/package/src/utf8.js": {
+      "bytes": 622,
+      "sha256": "05a6b092d309ccdcf314684d3365491eaf88d22727fd1a92471acd9af41b37d4"
+    },
+    "client/package/src/values.js": {
+      "bytes": 4493,
+      "sha256": "d2954646c65f748c068cf643f313de7ad6e44e38384f3e23db6a07a3068a23a8"
+    },
+    "client/package/src/wasm/Cargo.lock": {
+      "bytes": 9752,
+      "sha256": "228d794bdc40d80fbb43b424af72b0d8c6e24fe3f3c447c5a4a2e5a0785ebf89"
+    },
+    "client/package/src/wasm/hoyadb_web.d.ts": {
+      "bytes": 4032,
+      "sha256": "87b4a8b90dc768d6e1fb6529f2720c0e6341d06a93084e0807cd937bc3e76e54"
+    },
+    "client/package/src/wasm/hoyadb_web.js": {
+      "bytes": 27050,
+      "sha256": "e8ce3818ada01488fe3daca00164f1487cadf744e928ac769ae62d5e53f87c17"
+    },
+    "client/package/src/wasm/hoyadb_web_bg.wasm": {
+      "bytes": 5001038,
+      "sha256": "f54f6b37b2ff8942d0b1b3d5ccbee61de690ee02a08b54b374369a598dd963b7"
+    },
+    "client/package/src/wasm/hoyadb_web_bg.wasm.d.ts": {
+      "bytes": 2764,
+      "sha256": "c92dbad0c9dee3a4e029f3e6626fc05559702d9a66bf71f73dad0537df68a30d"
+    },
+    "client/package/src/web-entry.js": {
+      "bytes": 71,
+      "sha256": "5de646093cf2b7e873d1b3d71a1c75566455eef3ad44b9a58b23725d13a83968"
+    },
+    "client/package/src/web.js": {
+      "bytes": 2734,
+      "sha256": "0d5cd7a8e4b1955622a552ce51cf50cd99f9f07bc376cf77540da0ad44590172"
+    },
+    "client/package/src/worker-host.js": {
+      "bytes": 2060,
+      "sha256": "b490883d6cbf96dc6b6393caccc317bdc627d4e7321b2db623bfd39c8c743b80"
+    },
+    "client/package/src/worker.js": {
+      "bytes": 442,
+      "sha256": "f90ff3fecc8bd2ef8d23c462e7837ed66916612eec188e4eafb3c6035953a9f0"
+    },
+    "client/package/web.d.ts": {
+      "bytes": 193,
+      "sha256": "9964f4b5a62fb0a2b7d666a3213a42d2288d93fe133d4c2dcc984427ea1f953c"
+    },
+    "testing/package/LICENSES.md": {
+      "bytes": 411,
+      "sha256": "9b4cff3a81cdcb21c8f40bdbfc634472655f4b80f58b734521e61ef256f98ff1"
+    },
+    "testing/package/README.md": {
+      "bytes": 8195,
+      "sha256": "59967ecf21171694f519e3de4e00b6dee3322720bf7b0696a6302012c7214a65"
+    },
+    "testing/package/SOURCE-MANIFEST.json": {
+      "bytes": 10458,
+      "sha256": "f5db7e2acf23b3f8c3b1d1b7f36fb5bcb1b51f184f8dcea9feeb38bcb48e7c9f"
+    },
+    "testing/package/index.d.ts": {
+      "bytes": 1074,
+      "sha256": "81c71c6c759cc71456ed2db5c16d2e094a4f1de4fc4b367760e420e750a50d3b"
+    },
+    "testing/package/package.json": {
+      "bytes": 447,
+      "sha256": "945ccd04e4f9fe50e6337a4fc7d33f41a1eeaad984f6bbd064e56de4ed7dba14"
+    },
+    "testing/package/src/index.js": {
+      "bytes": 2698,
+      "sha256": "c31795763a5971afd63c6794895c43083af03a1fe5a9221425c2c468fbe6c3ac"
+    }
+  },
+  "react_native_copied": {
+    "bindings/react-native/package.json": "d5dcb80697a8db699204017193237278ac6d0aaaeeefa0b84f37bf3a21985b8d",
+    "bindings/react-native/index.d.ts": "8ea711a2dea25e530b4c011b28bf265e31877b27fc33219de20d92e22f3edd44"
+  },
+  "probes": {
+    "rn-portable.ts": "dd367d417e4c2fdd87a7f83f763ead4713268933d42112755cc8e7bc968a052a",
+    "bindings/javascript/consumer/portable.ts": "de891a300744a8a5840edaf000cf7dba3ceeeb5e00d93c11bc9c117fc3e5d505",
+    "bindings/javascript/consumer/types.ts": "1821c549d8bc0c5c1e9fef6aa21070c4c46a3468cab82009c734fc8564ddb0c1"
+  },
+  "temporary_removed": true
+}

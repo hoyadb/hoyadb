@@ -1,0 +1,191 @@
+[
+  {
+    "argv": [
+      "xcrun",
+      "simctl",
+      "list",
+      "devices",
+      "--json"
+    ],
+    "start_s": 0.025,
+    "timeout_s": 60,
+    "exit_code": 0,
+    "output": "{\n  \"devices\" : {\n    \"com.apple.CoreSimulator.SimRuntime.iOS-18-2\" : [\n      {\n        \"availabilityError\" : \"runtime profile not found using \\\"System\\\" match policy\",\n        \"dataPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/C6F286EA-E0C8-4716-A111-9AC1572F3BE3\\/data\",\n        \"dataPathSize\" : 18337792,\n        \"logPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Logs\\/CoreSimulator\\/C6F286EA-E0C8-4716-A111-9AC1572F3BE3\",\n        \"udid\" : \"C6F286EA-E0C8-4716-A111-9AC1572F3BE3\",\n        \"isAvailable\" : false,\n        \"deviceTypeIdentifier\" : \"com.apple.CoreSimulator.SimDeviceType.iPhone-16-Pro\",\n        \"state\" : \"Shutdown\",\n        \"name\" : \"iPhone 16 Pro\"\n      },\n      {\n        \"availabilityError\" : \"runtime profile not found using \\\"System\\\" match policy\",\n        \"dataPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/244D465E-007E-4A87-9AB9-ADA733FFA400\\/data\",\n        \"dataPathSize\" : 18337792,\n        \"logPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Logs\\/CoreSimulator\\/244D465E-007E-4A87-9AB9-ADA733FFA400\",\n        \"udid\" : \"244D465E-007E-4A87-9AB9-ADA733FFA400\",\n        \"isAvailable\" : false,\n        \"deviceTypeIdentifier\" : \"com.apple.CoreSimulator.SimDeviceType.iPhone-16-Pro-Max\",\n        \"state\" : \"Shutdown\",\n        \"name\" : \"iPhone 16 Pro Max\"\n      },\n      {\n        \"availabilityError\" : \"runtime profile not found using \\\"System\\\" match policy\",\n        \"dataPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/AAECDDE9-0028-4DA5-96EF-8E97D94926D5\\/data\",\n        \"dataPathSize\" : 18337792,\n        \"logPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Logs\\/CoreSimulator\\/AAECDDE9-0028-4DA5-96EF-8E97D94926D5\",\n        \"udid\" : \"AAECDDE9-0028-4DA5-96EF-8E97D94926D5\",\n        \"isAvailable\" : false,\n        \"deviceTypeIdentifier\" : \"com.apple.CoreSimulator.SimDeviceType.iPhone-16\",\n        \"state\" : \"Shutdown\",\n        \"name\" : \"iPhone 16\"\n      },\n      {\n        \"availabilityError\" : \"runtime profile not found using \\\"System\\\" match policy\",\n        \"dataPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/5D5F18BD-FB4E-4EDB-B7AA-0B97264B00E0\\/data\",\n        \"dataPathSize\" : 18337792,\n        \"logPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Logs\\/CoreSimulator\\/5D5F18BD-FB4E-4EDB-B7AA-0B97264B00E0\",\n        \"udid\" : \"5D5F18BD-FB4E-4EDB-B7AA-0B97264B00E0\",\n        \"isAvailable\" : false,\n        \"deviceTypeIdentifier\" : \"com.apple.CoreSimulator.SimDeviceType.iPhone-16-Plus\",\n        \"state\" : \"Shutdown\",\n        \"name\" : \"iPhone 16 Plus\"\n      },\n      {\n        \"availabilityError\" : \"runtime profile not found using \\\"System\\\" match policy\",\n        \"dataPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/FCFA2497-3B28-41BD-8081-82D5C2846B86\\/data\",\n        \"dataPathSize\" : 18337792,\n        \"logPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Logs\\/CoreSimulator\\/FCFA2497-3B28-41BD-8081-82D5C2846B86\",\n        \"udid\" : \"FCFA2497-3B28-41BD-8081-82D5C2846B86\",\n        \"isAvailable\" : false,\n        \"deviceTypeIdentifier\" : \"com.apple.CoreSimulator.SimDeviceType.iPhone-SE-3rd-generation\",\n        \"state\" : \"Shutdown\",\n        \"name\" : \"iPhone SE (3rd generation)\"\n      },\n      {\n        \"availabilityError\" : \"runtime profile not found using \\\"System\\\" match policy\",\n        \"dataPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/145B5F1F-6835-44FF-A714-39040830E7AD\\/data\",\n        \"dataPathSize\" : 18337792,\n        \"logPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Logs\\/CoreSimulator\\/145B5F1F-6835-44FF-A714-39040830E7AD\",\n        \"udid\" : \"145B5F1F-6835-44FF-A714-39040830E7AD\",\n        \"isAvailable\" : false,\n        \"deviceTypeIdentifier\" : \"com.apple.CoreSimulator.SimDeviceType.iPad-Pro-11-inch-M4-8GB\",\n        \"state\" : \"Shutdown\",\n        \"name\" : \"iPad Pro 11-inch (M4)\"\n      },\n      {\n        \"availabilityError\" : \"runtime profile not found using \\\"System\\\" match policy\",\n        \"dataPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/59B84E03-DB6D-4543-A208-7F9646D579D2\\/data\",\n        \"dataPathSize\" : 18337792,\n        \"logPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Logs\\/CoreSimulator\\/59B84E03-DB6D-4543-A208-7F9646D579D2\",\n        \"udid\" : \"59B84E03-DB6D-4543-A208-7F9646D579D2\",\n        \"isAvailable\" : false,\n        \"deviceTypeIdentifier\" : \"com.apple.CoreSimulator.SimDeviceType.iPad-Pro-13-inch-M4-8GB\",\n        \"state\" : \"Shutdown\",\n        \"name\" : \"iPad Pro 13-inch (M4)\"\n      },\n      {\n        \"availabilityError\" : \"runtime profile not found using \\\"System\\\" match policy\",\n        \"dataPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/53E98A4F-3304-4513-A26B-3C484C0D5019\\/data\",\n        \"dataPathSize\" : 18337792,\n        \"logPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Logs\\/CoreSimulator\\/53E98A4F-3304-4513-A26B-3C484C0D5019\",\n        \"udid\" : \"53E98A4F-3304-4513-A26B-3C484C0D5019\",\n        \"isAvailable\" : false,\n        \"deviceTypeIdentifier\" : \"com.apple.CoreSimulator.SimDeviceType.iPad-Air-11-inch-M2\",\n        \"state\" : \"Shutdown\",\n        \"name\" : \"iPad Air 11-inch (M2)\"\n      },\n      {\n        \"availabilityError\" : \"runtime profile not found using \\\"System\\\" match policy\",\n        \"dataPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/159EBA26-B56F-4104-88FB-ECB7A1A9317B\\/data\",\n        \"dataPathSize\" : 18337792,\n        \"logPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Logs\\/CoreSimulator\\/159EBA26-B56F-4104-88FB-ECB7A1A9317B\",\n        \"udid\" : \"159EBA26-B56F-4104-88FB-ECB7A1A9317B\",\n        \"isAvailable\" : false,\n        \"deviceTypeIdentifier\" : \"com.apple.CoreSimulator.SimDeviceType.iPad-Air-13-inch-M2\",\n        \"state\" : \"Shutdown\",\n        \"name\" : \"iPad Air 13-inch (M2)\"\n      },\n      {\n        \"availabilityError\" : \"runtime profile not found using \\\"System\\\" match policy\",\n        \"dataPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/C80A6EFE-BFAE-4156-9375-4EFA4C5E2A93\\/data\",\n        \"dataPathSize\" : 18337792,\n        \"logPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Logs\\/CoreSimulator\\/C80A6EFE-BFAE-4156-9375-4EFA4C5E2A93\",\n        \"udid\" : \"C80A6EFE-BFAE-4156-9375-4EFA4C5E2A93\",\n        \"isAvailable\" : false,\n        \"deviceTypeIdentifier\" : \"com.apple.CoreSimulator.SimDeviceType.iPad-mini-A17-Pro\",\n        \"state\" : \"Shutdown\",\n        \"name\" : \"iPad mini (A17 Pro)\"\n      },\n      {\n        \"availabilityError\" : \"runtime profile not found using \\\"System\\\" match policy\",\n        \"dataPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/40C90EE7-677E-4BDD-A810-B4D90E149823\\/data\",\n        \"dataPathSize\" : 18337792,\n        \"logPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Logs\\/CoreSimulator\\/40C90EE7-677E-4BDD-A810-B4D90E149823\",\n        \"udid\" : \"40C90EE7-677E-4BDD-A810-B4D90E149823\",\n        \"isAvailable\" : false,\n        \"deviceTypeIdentifier\" : \"com.apple.CoreSimulator.SimDeviceType.iPad-10th-generation\",\n        \"state\" : \"Shutdown\",\n        \"name\" : \"iPad (10th generation)\"\n      }\n    ],\n    \"com.apple.CoreSimulator.SimRuntime.iOS-26-5\" : [\n      {\n        \"lastBootedAt\" : \"2026-10-24T21:57:55Z\",\n        \"dataPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/CC525A65-D03E-4F9D-8936-DD16BBFD9664\\/data\",\n        \"dataPathSize\" : 1852633088,\n        \"logPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Logs\\/CoreSimulator\\/CC525A65-D03E-4F9D-8936-DD16BBFD9664\",\n        \"udid\" : \"CC525A65-D03E-4F9D-8936-DD16BBFD9664\",\n        \"isAvailable\" : true,\n        \"logPathSize\" : 245760,\n        \"deviceTypeIdentifier\" : \"com.apple.CoreSimulator.SimDeviceType.iPhone-17-Pro\",\n        \"state\" : \"Shutdown\",\n        \"name\" : \"HoyaDB-Phase7-Owned\"\n      },\n      {\n        \"lastBootedAt\" : \"2026-10-23T21:15:27Z\",\n        \"dataPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/199B358B-EAE7-4194-A366-D19388881473\\/data\",\n        \"dataPathSize\" : 5136560128,\n        \"logPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Logs\\/CoreSimulator\\/199B358B-EAE7-4194-A366-D19388881473\",\n        \"udid\" : \"199B358B-EAE7-4194-A366-D19388881473\",\n        \"isAvailable\" : true,\n        \"logPathSize\" : 536576,\n        \"deviceTypeIdentifier\" : \"com.apple.CoreSimulator.SimDeviceType.iPhone-17-Pro\",\n        \"state\" : \"Booted\",\n        \"name\" : \"iPhone 17 Pro\"\n      },\n      {\n        \"dataPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/86445BD0-FB16-4A89-99FB-252CE756F7B7\\/data\",\n        \"dataPathSize\" : 18337792,\n        \"logPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Logs\\/CoreSimulator\\/86445BD0-FB16-4A89-99FB-252CE756F7B7\",\n        \"udid\" : \"86445BD0-FB16-4A89-99FB-252CE756F7B7\",\n        \"isAvailable\" : true,\n        \"deviceTypeIdentifier\" : \"com.apple.CoreSimulator.SimDeviceType.iPhone-17-Pro-Max\",\n        \"state\" : \"Shutdown\",\n        \"name\" : \"iPhone 17 Pro Max\"\n      },\n      {\n        \"dataPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/99D0B1A2-A8B9-4198-BB41-D149862CBB3A\\/data\",\n        \"dataPathSize\" : 18337792,\n        \"logPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Logs\\/CoreSimulator\\/99D0B1A2-A8B9-4198-BB41-D149862CBB3A\",\n        \"udid\" : \"99D0B1A2-A8B9-4198-BB41-D149862CBB3A\",\n        \"isAvailable\" : true,\n        \"deviceTypeIdentifier\" : \"com.apple.CoreSimulator.SimDeviceType.iPhone-17e\",\n        \"state\" : \"Shutdown\",\n        \"name\" : \"iPhone 17e\"\n      },\n      {\n        \"dataPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/0E2D8BD6-9376-4522-A02E-6E22B697D042\\/data\",\n        \"dataPathSize\" : 18337792,\n        \"logPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Logs\\/CoreSimulator\\/0E2D8BD6-9376-4522-A02E-6E22B697D042\",\n        \"udid\" : \"0E2D8BD6-9376-4522-A02E-6E22B697D042\",\n        \"isAvailable\" : true,\n        \"deviceTypeIdentifier\" : \"com.apple.CoreSimulator.SimDeviceType.iPhone-Air\",\n        \"state\" : \"Shutdown\",\n        \"name\" : \"iPhone Air\"\n      },\n      {\n        \"dataPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/B91A981F-F72B-441B-85D9-55218A899819\\/data\",\n        \"dataPathSize\" : 18337792,\n        \"logPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Logs\\/CoreSimulator\\/B91A981F-F72B-441B-85D9-55218A899819\",\n        \"udid\" : \"B91A981F-F72B-441B-85D9-55218A899819\",\n        \"isAvailable\" : true,\n        \"deviceTypeIdentifier\" : \"com.apple.CoreSimulator.SimDeviceType.iPhone-17\",\n        \"state\" : \"Shutdown\",\n        \"name\" : \"iPhone 17\"\n      },\n      {\n        \"dataPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/C90CE187-86EB-441A-BB71-15C2B8AA7AC2\\/data\",\n        \"dataPathSize\" : 18337792,\n        \"logPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Logs\\/CoreSimulator\\/C90CE187-86EB-441A-BB71-15C2B8AA7AC2\",\n        \"udid\" : \"C90CE187-86EB-441A-BB71-15C2B8AA7AC2\",\n        \"isAvailable\" : true,\n        \"deviceTypeIdentifier\" : \"com.apple.CoreSimulator.SimDeviceType.iPad-Pro-13-inch-M5-12GB\",\n        \"state\" : \"Shutdown\",\n        \"name\" : \"iPad Pro 13-inch (M5)\"\n      },\n      {\n        \"dataPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/1B1F264A-2DD0-4D05-B4CF-60C3093CFFF9\\/data\",\n        \"dataPathSize\" : 18337792,\n        \"logPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Logs\\/CoreSimulator\\/1B1F264A-2DD0-4D05-B4CF-60C3093CFFF9\",\n        \"udid\" : \"1B1F264A-2DD0-4D05-B4CF-60C3093CFFF9\",\n        \"isAvailable\" : true,\n        \"deviceTypeIdentifier\" : \"com.apple.CoreSimulator.SimDeviceType.iPad-Pro-11-inch-M5-12GB\",\n        \"state\" : \"Shutdown\",\n        \"name\" : \"iPad Pro 11-inch (M5)\"\n      },\n      {\n        \"dataPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/3D4FE44D-797B-4440-8BBD-DF0F0A3BD707\\/data\",\n        \"dataPathSize\" : 18337792,\n        \"logPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Logs\\/CoreSimulator\\/3D4FE44D-797B-4440-8BBD-DF0F0A3BD707\",\n        \"udid\" : \"3D4FE44D-797B-4440-8BBD-DF0F0A3BD707\",\n        \"isAvailable\" : true,\n        \"deviceTypeIdentifier\" : \"com.apple.CoreSimulator.SimDeviceType.iPad-mini-A17-Pro\",\n        \"state\" : \"Shutdown\",\n        \"name\" : \"iPad mini (A17 Pro)\"\n      },\n      {\n        \"dataPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/9455D3E9-2840-4919-985E-8111B39C3A55\\/data\",\n        \"dataPathSize\" : 18337792,\n        \"logPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Logs\\/CoreSimulator\\/9455D3E9-2840-4919-985E-8111B39C3A55\",\n        \"udid\" : \"9455D3E9-2840-4919-985E-8111B39C3A55\",\n        \"isAvailable\" : true,\n        \"deviceTypeIdentifier\" : \"com.apple.CoreSimulator.SimDeviceType.iPad-A16\",\n        \"state\" : \"Shutdown\",\n        \"name\" : \"iPad (A16)\"\n      }\n    ]\n  }\n}\n",
+    "elapsed_s": 0.279
+  },
+  {
+    "argv": [
+      "xcrun",
+      "simctl",
+      "boot",
+      "CC525A65-D03E-4F9D-8936-DD16BBFD9664"
+    ],
+    "start_s": 0.305,
+    "timeout_s": 180,
+    "exit_code": 0,
+    "output": "",
+    "elapsed_s": 0.745
+  },
+  {
+    "argv": [
+      "xcrun",
+      "simctl",
+      "bootstatus",
+      "CC525A65-D03E-4F9D-8936-DD16BBFD9664",
+      "-b"
+    ],
+    "start_s": 1.051,
+    "timeout_s": 300,
+    "exit_code": 0,
+    "output": "Monitoring boot status for HoyaDB-Phase7-Owned (CC525A65-D03E-4F9D-8936-DD16BBFD9664).\n[2026-10-24 23:47:38 +0000] Status=1, isTerminal=NO, Elapsed=00:01.\n\tWaiting on BackBoard\n\n[2026-10-24 23:47:45 +0000] Status=4, isTerminal=NO, Elapsed=00:08.\n\tWaiting on System App\n\n[2026-10-24 23:47:45 +0000] Status=4, isTerminal=NO, Elapsed=00:08.\n\tWaiting on System App\n\n[2026-10-24 23:47:46 +0000] Status=4, isTerminal=NO, Elapsed=00:09.\n\tWaiting on System App\n\n[2026-10-24 23:47:47 +0000] Status=4, isTerminal=NO, Elapsed=00:10.\n\tWaiting on System App\n\n[2026-10-24 23:47:48 +0000] Status=4, isTerminal=NO, Elapsed=00:11.\n\tWaiting on System App\n\n[2026-10-24 23:47:49 +0000] Status=4, isTerminal=NO, Elapsed=00:12.\n\tWaiting on System App\n\n[2026-10-24 23:47:50 +0000] Status=4, isTerminal=NO, Elapsed=00:13.\n\tWaiting on System App\n\n[2026-10-24 23:47:51 +0000] Status=4, isTerminal=NO, Elapsed=00:14.\n\tWaiting on System App\n\n[2026-10-24 23:47:52 +0000] Status=4, isTerminal=NO, Elapsed=00:15.\n\tWaiting on System App\n\n[2026-10-24 23:47:53 +0000] Status=4, isTerminal=NO, Elapsed=00:16.\n\tWaiting on System App\n\n[2026-10-24 23:47:54 +0000] Status=4, isTerminal=NO, Elapsed=00:17.\n\tWaiting on System App\n\n[2026-10-24 23:47:55 +0000] Status=4, isTerminal=NO, Elapsed=00:18.\n\tWaiting on System App\n\n[2026-10-24 23:47:57 +0000] Status=4, isTerminal=NO, Elapsed=00:20.\n\tWaiting on System App\n\n[2026-10-24 23:47:57 +0000] Status=4, isTerminal=NO, Elapsed=00:20.\n\tWaiting on System App\n\n[2026-10-24 23:47:58 +0000] Status=4, isTerminal=NO, Elapsed=00:21.\n\tWaiting on System App\n\n[2026-10-24 23:47:59 +0000] Status=4, isTerminal=NO, Elapsed=00:22.\n\tWaiting on System App\n\n[2026-10-24 23:48:00 +0000] Status=4, isTerminal=NO, Elapsed=00:23.\n\tWaiting on System App\n\n[2026-10-24 23:48:01 +0000] Status=4, isTerminal=NO, Elapsed=00:24.\n\tWaiting on System App\n\n[2026-10-24 23:48:02 +0000] Status=4294967295, isTerminal=YES, Elapsed=00:25.\n\tFinished\n\n",
+    "elapsed_s": 25.189
+  },
+  {
+    "argv": [
+      "xcrun",
+      "simctl",
+      "install",
+      "CC525A65-D03E-4F9D-8936-DD16BBFD9664",
+      "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/ios-build-e/DerivedData/Build/Products/Debug-iphonesimulator/HoyaConsumer.app"
+    ],
+    "start_s": 26.241,
+    "timeout_s": 300,
+    "exit_code": 0,
+    "output": "",
+    "elapsed_s": 12.994
+  },
+  {
+    "argv": [
+      "xcrun",
+      "simctl",
+      "launch",
+      "--terminate-running-process",
+      "--stdout=/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/ios-run-a/all-stdout.txt",
+      "--stderr=/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/ios-run-a/all-stderr.txt",
+      "CC525A65-D03E-4F9D-8936-DD16BBFD9664",
+      "dev.hoyadb.phase7.rn.consumer"
+    ],
+    "start_s": 39.237,
+    "timeout_s": 120,
+    "exit_code": 0,
+    "output": "dev.hoyadb.phase7.rn.consumer: 59348\n",
+    "elapsed_s": 3.374
+  },
+  {
+    "argv": [
+      "xcrun",
+      "simctl",
+      "terminate",
+      "CC525A65-D03E-4F9D-8936-DD16BBFD9664",
+      "dev.hoyadb.phase7.rn.consumer"
+    ],
+    "start_s": 69.375,
+    "timeout_s": 60,
+    "exit_code": 0,
+    "output": "",
+    "elapsed_s": 0.929
+  },
+  {
+    "argv": [
+      "xcrun",
+      "simctl",
+      "launch",
+      "--terminate-running-process",
+      "--stdout=/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/ios-run-a/writer-stdout.txt",
+      "--stderr=/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/ios-run-a/writer-stderr.txt",
+      "CC525A65-D03E-4F9D-8936-DD16BBFD9664",
+      "dev.hoyadb.phase7.rn.consumer"
+    ],
+    "start_s": 70.308,
+    "timeout_s": 120,
+    "exit_code": 0,
+    "output": "dev.hoyadb.phase7.rn.consumer: 60062\n",
+    "elapsed_s": 1.048
+  },
+  {
+    "argv": [
+      "xcrun",
+      "simctl",
+      "terminate",
+      "CC525A65-D03E-4F9D-8936-DD16BBFD9664",
+      "dev.hoyadb.phase7.rn.consumer"
+    ],
+    "start_s": 72.676,
+    "timeout_s": 60,
+    "exit_code": 0,
+    "output": "",
+    "elapsed_s": 0.87
+  },
+  {
+    "argv": [
+      "xcrun",
+      "simctl",
+      "launch",
+      "--terminate-running-process",
+      "--stdout=/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/ios-run-a/reader-stdout.txt",
+      "--stderr=/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/ios-run-a/reader-stderr.txt",
+      "CC525A65-D03E-4F9D-8936-DD16BBFD9664",
+      "dev.hoyadb.phase7.rn.consumer"
+    ],
+    "start_s": 73.551,
+    "timeout_s": 120,
+    "exit_code": 0,
+    "output": "dev.hoyadb.phase7.rn.consumer: 60126\n",
+    "elapsed_s": 1.481
+  },
+  {
+    "argv": [
+      "xcrun",
+      "simctl",
+      "terminate",
+      "CC525A65-D03E-4F9D-8936-DD16BBFD9664",
+      "dev.hoyadb.phase7.rn.consumer"
+    ],
+    "start_s": 76.418,
+    "timeout_s": 60,
+    "exit_code": 0,
+    "output": "",
+    "elapsed_s": 0.84
+  },
+  {
+    "argv": [
+      "xcrun",
+      "simctl",
+      "uninstall",
+      "CC525A65-D03E-4F9D-8936-DD16BBFD9664",
+      "dev.hoyadb.phase7.rn.consumer"
+    ],
+    "start_s": 77.415,
+    "timeout_s": 120,
+    "exit_code": 0,
+    "output": "",
+    "elapsed_s": 1.067
+  },
+  {
+    "argv": [
+      "xcrun",
+      "simctl",
+      "shutdown",
+      "CC525A65-D03E-4F9D-8936-DD16BBFD9664"
+    ],
+    "start_s": 78.485,
+    "timeout_s": 120,
+    "exit_code": 0,
+    "output": "",
+    "elapsed_s": 3.954
+  },
+  {
+    "argv": [
+      "xcrun",
+      "simctl",
+      "list",
+      "devices",
+      "--json"
+    ],
+    "start_s": 82.441,
+    "timeout_s": 60,
+    "exit_code": 0,
+    "output": "{\n  \"devices\" : {\n    \"com.apple.CoreSimulator.SimRuntime.iOS-18-2\" : [\n      {\n        \"availabilityError\" : \"runtime profile not found using \\\"System\\\" match policy\",\n        \"dataPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/C6F286EA-E0C8-4716-A111-9AC1572F3BE3\\/data\",\n        \"dataPathSize\" : 18337792,\n        \"logPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Logs\\/CoreSimulator\\/C6F286EA-E0C8-4716-A111-9AC1572F3BE3\",\n        \"udid\" : \"C6F286EA-E0C8-4716-A111-9AC1572F3BE3\",\n        \"isAvailable\" : false,\n        \"deviceTypeIdentifier\" : \"com.apple.CoreSimulator.SimDeviceType.iPhone-16-Pro\",\n        \"state\" : \"Shutdown\",\n        \"name\" : \"iPhone 16 Pro\"\n      },\n      {\n        \"availabilityError\" : \"runtime profile not found using \\\"System\\\" match policy\",\n        \"dataPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/244D465E-007E-4A87-9AB9-ADA733FFA400\\/data\",\n        \"dataPathSize\" : 18337792,\n        \"logPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Logs\\/CoreSimulator\\/244D465E-007E-4A87-9AB9-ADA733FFA400\",\n        \"udid\" : \"244D465E-007E-4A87-9AB9-ADA733FFA400\",\n        \"isAvailable\" : false,\n        \"deviceTypeIdentifier\" : \"com.apple.CoreSimulator.SimDeviceType.iPhone-16-Pro-Max\",\n        \"state\" : \"Shutdown\",\n        \"name\" : \"iPhone 16 Pro Max\"\n      },\n      {\n        \"availabilityError\" : \"runtime profile not found using \\\"System\\\" match policy\",\n        \"dataPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/AAECDDE9-0028-4DA5-96EF-8E97D94926D5\\/data\",\n        \"dataPathSize\" : 18337792,\n        \"logPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Logs\\/CoreSimulator\\/AAECDDE9-0028-4DA5-96EF-8E97D94926D5\",\n        \"udid\" : \"AAECDDE9-0028-4DA5-96EF-8E97D94926D5\",\n        \"isAvailable\" : false,\n        \"deviceTypeIdentifier\" : \"com.apple.CoreSimulator.SimDeviceType.iPhone-16\",\n        \"state\" : \"Shutdown\",\n        \"name\" : \"iPhone 16\"\n      },\n      {\n        \"availabilityError\" : \"runtime profile not found using \\\"System\\\" match policy\",\n        \"dataPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/5D5F18BD-FB4E-4EDB-B7AA-0B97264B00E0\\/data\",\n        \"dataPathSize\" : 18337792,\n        \"logPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Logs\\/CoreSimulator\\/5D5F18BD-FB4E-4EDB-B7AA-0B97264B00E0\",\n        \"udid\" : \"5D5F18BD-FB4E-4EDB-B7AA-0B97264B00E0\",\n        \"isAvailable\" : false,\n        \"deviceTypeIdentifier\" : \"com.apple.CoreSimulator.SimDeviceType.iPhone-16-Plus\",\n        \"state\" : \"Shutdown\",\n        \"name\" : \"iPhone 16 Plus\"\n      },\n      {\n        \"availabilityError\" : \"runtime profile not found using \\\"System\\\" match policy\",\n        \"dataPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/FCFA2497-3B28-41BD-8081-82D5C2846B86\\/data\",\n        \"dataPathSize\" : 18337792,\n        \"logPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Logs\\/CoreSimulator\\/FCFA2497-3B28-41BD-8081-82D5C2846B86\",\n        \"udid\" : \"FCFA2497-3B28-41BD-8081-82D5C2846B86\",\n        \"isAvailable\" : false,\n        \"deviceTypeIdentifier\" : \"com.apple.CoreSimulator.SimDeviceType.iPhone-SE-3rd-generation\",\n        \"state\" : \"Shutdown\",\n        \"name\" : \"iPhone SE (3rd generation)\"\n      },\n      {\n        \"availabilityError\" : \"runtime profile not found using \\\"System\\\" match policy\",\n        \"dataPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/145B5F1F-6835-44FF-A714-39040830E7AD\\/data\",\n        \"dataPathSize\" : 18337792,\n        \"logPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Logs\\/CoreSimulator\\/145B5F1F-6835-44FF-A714-39040830E7AD\",\n        \"udid\" : \"145B5F1F-6835-44FF-A714-39040830E7AD\",\n        \"isAvailable\" : false,\n        \"deviceTypeIdentifier\" : \"com.apple.CoreSimulator.SimDeviceType.iPad-Pro-11-inch-M4-8GB\",\n        \"state\" : \"Shutdown\",\n        \"name\" : \"iPad Pro 11-inch (M4)\"\n      },\n      {\n        \"availabilityError\" : \"runtime profile not found using \\\"System\\\" match policy\",\n        \"dataPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/59B84E03-DB6D-4543-A208-7F9646D579D2\\/data\",\n        \"dataPathSize\" : 18337792,\n        \"logPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Logs\\/CoreSimulator\\/59B84E03-DB6D-4543-A208-7F9646D579D2\",\n        \"udid\" : \"59B84E03-DB6D-4543-A208-7F9646D579D2\",\n        \"isAvailable\" : false,\n        \"deviceTypeIdentifier\" : \"com.apple.CoreSimulator.SimDeviceType.iPad-Pro-13-inch-M4-8GB\",\n        \"state\" : \"Shutdown\",\n        \"name\" : \"iPad Pro 13-inch (M4)\"\n      },\n      {\n        \"availabilityError\" : \"runtime profile not found using \\\"System\\\" match policy\",\n        \"dataPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/53E98A4F-3304-4513-A26B-3C484C0D5019\\/data\",\n        \"dataPathSize\" : 18337792,\n        \"logPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Logs\\/CoreSimulator\\/53E98A4F-3304-4513-A26B-3C484C0D5019\",\n        \"udid\" : \"53E98A4F-3304-4513-A26B-3C484C0D5019\",\n        \"isAvailable\" : false,\n        \"deviceTypeIdentifier\" : \"com.apple.CoreSimulator.SimDeviceType.iPad-Air-11-inch-M2\",\n        \"state\" : \"Shutdown\",\n        \"name\" : \"iPad Air 11-inch (M2)\"\n      },\n      {\n        \"availabilityError\" : \"runtime profile not found using \\\"System\\\" match policy\",\n        \"dataPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/159EBA26-B56F-4104-88FB-ECB7A1A9317B\\/data\",\n        \"dataPathSize\" : 18337792,\n        \"logPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Logs\\/CoreSimulator\\/159EBA26-B56F-4104-88FB-ECB7A1A9317B\",\n        \"udid\" : \"159EBA26-B56F-4104-88FB-ECB7A1A9317B\",\n        \"isAvailable\" : false,\n        \"deviceTypeIdentifier\" : \"com.apple.CoreSimulator.SimDeviceType.iPad-Air-13-inch-M2\",\n        \"state\" : \"Shutdown\",\n        \"name\" : \"iPad Air 13-inch (M2)\"\n      },\n      {\n        \"availabilityError\" : \"runtime profile not found using \\\"System\\\" match policy\",\n        \"dataPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/C80A6EFE-BFAE-4156-9375-4EFA4C5E2A93\\/data\",\n        \"dataPathSize\" : 18337792,\n        \"logPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Logs\\/CoreSimulator\\/C80A6EFE-BFAE-4156-9375-4EFA4C5E2A93\",\n        \"udid\" : \"C80A6EFE-BFAE-4156-9375-4EFA4C5E2A93\",\n        \"isAvailable\" : false,\n        \"deviceTypeIdentifier\" : \"com.apple.CoreSimulator.SimDeviceType.iPad-mini-A17-Pro\",\n        \"state\" : \"Shutdown\",\n        \"name\" : \"iPad mini (A17 Pro)\"\n      },\n      {\n        \"availabilityError\" : \"runtime profile not found using \\\"System\\\" match policy\",\n        \"dataPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/40C90EE7-677E-4BDD-A810-B4D90E149823\\/data\",\n        \"dataPathSize\" : 18337792,\n        \"logPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Logs\\/CoreSimulator\\/40C90EE7-677E-4BDD-A810-B4D90E149823\",\n        \"udid\" : \"40C90EE7-677E-4BDD-A810-B4D90E149823\",\n        \"isAvailable\" : false,\n        \"deviceTypeIdentifier\" : \"com.apple.CoreSimulator.SimDeviceType.iPad-10th-generation\",\n        \"state\" : \"Shutdown\",\n        \"name\" : \"iPad (10th generation)\"\n      }\n    ],\n    \"com.apple.CoreSimulator.SimRuntime.iOS-26-5\" : [\n      {\n        \"lastBootedAt\" : \"2026-10-24T23:47:36Z\",\n        \"dataPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/CC525A65-D03E-4F9D-8936-DD16BBFD9664\\/data\",\n        \"dataPathSize\" : 2271420416,\n        \"logPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Logs\\/CoreSimulator\\/CC525A65-D03E-4F9D-8936-DD16BBFD9664\",\n        \"udid\" : \"CC525A65-D03E-4F9D-8936-DD16BBFD9664\",\n        \"isAvailable\" : true,\n        \"logPathSize\" : 344064,\n        \"deviceTypeIdentifier\" : \"com.apple.CoreSimulator.SimDeviceType.iPhone-17-Pro\",\n        \"state\" : \"Shutdown\",\n        \"name\" : \"HoyaDB-Phase7-Owned\"\n      },\n      {\n        \"lastBootedAt\" : \"2026-10-23T21:15:27Z\",\n        \"dataPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/199B358B-EAE7-4194-A366-D19388881473\\/data\",\n        \"dataPathSize\" : 5136494592,\n        \"logPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Logs\\/CoreSimulator\\/199B358B-EAE7-4194-A366-D19388881473\",\n        \"udid\" : \"199B358B-EAE7-4194-A366-D19388881473\",\n        \"isAvailable\" : true,\n        \"logPathSize\" : 536576,\n        \"deviceTypeIdentifier\" : \"com.apple.CoreSimulator.SimDeviceType.iPhone-17-Pro\",\n        \"state\" : \"Booted\",\n        \"name\" : \"iPhone 17 Pro\"\n      },\n      {\n        \"dataPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/86445BD0-FB16-4A89-99FB-252CE756F7B7\\/data\",\n        \"dataPathSize\" : 18337792,\n        \"logPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Logs\\/CoreSimulator\\/86445BD0-FB16-4A89-99FB-252CE756F7B7\",\n        \"udid\" : \"86445BD0-FB16-4A89-99FB-252CE756F7B7\",\n        \"isAvailable\" : true,\n        \"deviceTypeIdentifier\" : \"com.apple.CoreSimulator.SimDeviceType.iPhone-17-Pro-Max\",\n        \"state\" : \"Shutdown\",\n        \"name\" : \"iPhone 17 Pro Max\"\n      },\n      {\n        \"dataPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/99D0B1A2-A8B9-4198-BB41-D149862CBB3A\\/data\",\n        \"dataPathSize\" : 18337792,\n        \"logPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Logs\\/CoreSimulator\\/99D0B1A2-A8B9-4198-BB41-D149862CBB3A\",\n        \"udid\" : \"99D0B1A2-A8B9-4198-BB41-D149862CBB3A\",\n        \"isAvailable\" : true,\n        \"deviceTypeIdentifier\" : \"com.apple.CoreSimulator.SimDeviceType.iPhone-17e\",\n        \"state\" : \"Shutdown\",\n        \"name\" : \"iPhone 17e\"\n      },\n      {\n        \"dataPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/0E2D8BD6-9376-4522-A02E-6E22B697D042\\/data\",\n        \"dataPathSize\" : 18337792,\n        \"logPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Logs\\/CoreSimulator\\/0E2D8BD6-9376-4522-A02E-6E22B697D042\",\n        \"udid\" : \"0E2D8BD6-9376-4522-A02E-6E22B697D042\",\n        \"isAvailable\" : true,\n        \"deviceTypeIdentifier\" : \"com.apple.CoreSimulator.SimDeviceType.iPhone-Air\",\n        \"state\" : \"Shutdown\",\n        \"name\" : \"iPhone Air\"\n      },\n      {\n        \"dataPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/B91A981F-F72B-441B-85D9-55218A899819\\/data\",\n        \"dataPathSize\" : 18337792,\n        \"logPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Logs\\/CoreSimulator\\/B91A981F-F72B-441B-85D9-55218A899819\",\n        \"udid\" : \"B91A981F-F72B-441B-85D9-55218A899819\",\n        \"isAvailable\" : true,\n        \"deviceTypeIdentifier\" : \"com.apple.CoreSimulator.SimDeviceType.iPhone-17\",\n        \"state\" : \"Shutdown\",\n        \"name\" : \"iPhone 17\"\n      },\n      {\n        \"dataPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/C90CE187-86EB-441A-BB71-15C2B8AA7AC2\\/data\",\n        \"dataPathSize\" : 18337792,\n        \"logPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Logs\\/CoreSimulator\\/C90CE187-86EB-441A-BB71-15C2B8AA7AC2\",\n        \"udid\" : \"C90CE187-86EB-441A-BB71-15C2B8AA7AC2\",\n        \"isAvailable\" : true,\n        \"deviceTypeIdentifier\" : \"com.apple.CoreSimulator.SimDeviceType.iPad-Pro-13-inch-M5-12GB\",\n        \"state\" : \"Shutdown\",\n        \"name\" : \"iPad Pro 13-inch (M5)\"\n      },\n      {\n        \"dataPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/1B1F264A-2DD0-4D05-B4CF-60C3093CFFF9\\/data\",\n        \"dataPathSize\" : 18337792,\n        \"logPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Logs\\/CoreSimulator\\/1B1F264A-2DD0-4D05-B4CF-60C3093CFFF9\",\n        \"udid\" : \"1B1F264A-2DD0-4D05-B4CF-60C3093CFFF9\",\n        \"isAvailable\" : true,\n        \"deviceTypeIdentifier\" : \"com.apple.CoreSimulator.SimDeviceType.iPad-Pro-11-inch-M5-12GB\",\n        \"state\" : \"Shutdown\",\n        \"name\" : \"iPad Pro 11-inch (M5)\"\n      },\n      {\n        \"dataPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/3D4FE44D-797B-4440-8BBD-DF0F0A3BD707\\/data\",\n        \"dataPathSize\" : 18337792,\n        \"logPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Logs\\/CoreSimulator\\/3D4FE44D-797B-4440-8BBD-DF0F0A3BD707\",\n        \"udid\" : \"3D4FE44D-797B-4440-8BBD-DF0F0A3BD707\",\n        \"isAvailable\" : true,\n        \"deviceTypeIdentifier\" : \"com.apple.CoreSimulator.SimDeviceType.iPad-mini-A17-Pro\",\n        \"state\" : \"Shutdown\",\n        \"name\" : \"iPad mini (A17 Pro)\"\n      },\n      {\n        \"dataPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/9455D3E9-2840-4919-985E-8111B39C3A55\\/data\",\n        \"dataPathSize\" : 18337792,\n        \"logPath\" : \"\\/Users\\/boristacyniak\\/Library\\/Logs\\/CoreSimulator\\/9455D3E9-2840-4919-985E-8111B39C3A55\",\n        \"udid\" : \"9455D3E9-2840-4919-985E-8111B39C3A55\",\n        \"isAvailable\" : true,\n        \"deviceTypeIdentifier\" : \"com.apple.CoreSimulator.SimDeviceType.iPad-A16\",\n        \"state\" : \"Shutdown\",\n        \"name\" : \"iPad (A16)\"\n      }\n    ]\n  }\n}\n",
+    "elapsed_s": 0.532
+  }
+]

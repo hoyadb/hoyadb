@@ -1,0 +1,613 @@
+{
+  "format": 1,
+  "status": "reviewed_for_implementation",
+  "authority": [
+    "TC-0037",
+    "API-0011",
+    "benchmarks/PLAN.md"
+  ],
+  "source_workload": {
+    "path": "benchmarks/workloads.json",
+    "sha256": "e1963c2f3a94c6efc45345a4ae0855805c3f62582e29d794840f1a8e5103e82d",
+    "base_commit": "5a69083",
+    "amendment": "exact existing native boundary fixture and canonical Float output"
+  },
+  "classes": [
+    "browser-sdk/memory",
+    "browser-sdk/opfs-protected"
+  ],
+  "fixture": "TC-0036-A",
+  "schema": {
+    "tables": {
+      "article_tags": {
+        "columns": {},
+        "relations": {
+          "article": {
+            "foreign_key": "article_id",
+            "kind": "ToOne",
+            "optional": false,
+            "table": "articles"
+          },
+          "tag": {
+            "foreign_key": "tag_id",
+            "kind": "ToOne",
+            "optional": false,
+            "table": "tags"
+          }
+        }
+      },
+      "articles": {
+        "columns": {
+          "active": {
+            "kind": "Boolean",
+            "optional": false
+          },
+          "at": {
+            "kind": "Timestamp",
+            "optional": false
+          },
+          "note": {
+            "kind": "String",
+            "optional": true
+          },
+          "ratio": {
+            "kind": "Float",
+            "optional": false
+          },
+          "score": {
+            "kind": "Integer",
+            "optional": false
+          },
+          "title": {
+            "kind": "String",
+            "optional": false
+          }
+        },
+        "relations": {
+          "author": {
+            "foreign_key": "author_id",
+            "kind": "ToOne",
+            "optional": false,
+            "table": "authors"
+          },
+          "tags": {
+            "kind": "ManyToMany",
+            "source_relation": "article",
+            "table": "tags",
+            "target_relation": "tag",
+            "through": "article_tags"
+          }
+        }
+      },
+      "authors": {
+        "columns": {
+          "name": {
+            "kind": "String",
+            "optional": false
+          }
+        },
+        "relations": {}
+      },
+      "tags": {
+        "columns": {
+          "label": {
+            "kind": "String",
+            "optional": false
+          }
+        },
+        "relations": {}
+      }
+    },
+    "version": "1"
+  },
+  "dataset": {
+    "active": "i%2==0",
+    "article_ids": "article:<6-digit decimal i>",
+    "article_tags": 0,
+    "at": "1700000000000+i",
+    "author_count": "N/10",
+    "author_ids": "author:<6-digit decimal floor(i/10)>",
+    "note": "absent even i; note-<i> odd i",
+    "ratio": "i+0.25",
+    "score": "i",
+    "seed_version": 1,
+    "tags": 0,
+    "title": "東京🌿-<i>",
+    "validation_page_limit": 100
+  },
+  "cohorts": [
+    {
+      "N": 100,
+      "Q": 0,
+      "observers": 0,
+      "operation": "point"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "observers": 0,
+      "operation": "point"
+    },
+    {
+      "N": 10000,
+      "Q": 0,
+      "observers": 0,
+      "operation": "point"
+    },
+    {
+      "N": 100,
+      "Q": 0,
+      "observers": 0,
+      "operation": "selective"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "observers": 0,
+      "operation": "selective"
+    },
+    {
+      "N": 10000,
+      "Q": 0,
+      "observers": 0,
+      "operation": "selective"
+    },
+    {
+      "N": 100,
+      "Q": 0,
+      "observers": 0,
+      "operation": "sorted-related"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "observers": 0,
+      "operation": "sorted-related"
+    },
+    {
+      "N": 10000,
+      "Q": 0,
+      "observers": 0,
+      "operation": "sorted-related"
+    },
+    {
+      "N": 100,
+      "Q": 0,
+      "observers": 0,
+      "operation": "batch-insert"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "observers": 0,
+      "operation": "batch-insert"
+    },
+    {
+      "N": 10000,
+      "Q": 0,
+      "observers": 0,
+      "operation": "batch-insert"
+    },
+    {
+      "N": 100,
+      "Q": 0,
+      "observers": 0,
+      "operation": "batch-update"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "observers": 0,
+      "operation": "batch-update"
+    },
+    {
+      "N": 10000,
+      "Q": 0,
+      "observers": 0,
+      "operation": "batch-update"
+    },
+    {
+      "N": 100,
+      "Q": 0,
+      "observers": 0,
+      "operation": "batch-remove"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "observers": 0,
+      "operation": "batch-remove"
+    },
+    {
+      "N": 10000,
+      "Q": 0,
+      "observers": 0,
+      "operation": "batch-remove"
+    },
+    {
+      "N": 100,
+      "Q": 0,
+      "observers": 0,
+      "operation": "optimistic-command"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "observers": 0,
+      "operation": "optimistic-command"
+    },
+    {
+      "N": 10000,
+      "Q": 0,
+      "observers": 0,
+      "operation": "optimistic-command"
+    },
+    {
+      "N": 100,
+      "Q": 0,
+      "observers": 0,
+      "operation": "entity-patch"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "observers": 0,
+      "operation": "entity-patch"
+    },
+    {
+      "N": 10000,
+      "Q": 0,
+      "observers": 0,
+      "operation": "entity-patch"
+    },
+    {
+      "N": 100,
+      "Q": 0,
+      "observers": 0,
+      "operation": "non-noop-pull"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "observers": 0,
+      "operation": "non-noop-pull"
+    },
+    {
+      "N": 10000,
+      "Q": 0,
+      "observers": 0,
+      "operation": "non-noop-pull"
+    },
+    {
+      "N": 100,
+      "Q": 0,
+      "observers": 0,
+      "operation": "reset"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "observers": 0,
+      "operation": "reset"
+    },
+    {
+      "N": 10000,
+      "Q": 0,
+      "observers": 0,
+      "operation": "reset"
+    },
+    {
+      "N": 1000,
+      "Q": 10,
+      "observers": 0,
+      "operation": "optimistic-command"
+    },
+    {
+      "N": 1000,
+      "Q": 100,
+      "observers": 0,
+      "operation": "optimistic-command"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "mode": "membership",
+      "observers": 1,
+      "operation": "reactivity",
+      "sharing": "equivalent"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "mode": "columns",
+      "observers": 1,
+      "operation": "reactivity",
+      "sharing": "equivalent"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "mode": "count",
+      "observers": 1,
+      "operation": "reactivity",
+      "sharing": "equivalent"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "mode": "membership",
+      "observers": 1,
+      "operation": "reactivity",
+      "sharing": "distinct"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "mode": "columns",
+      "observers": 1,
+      "operation": "reactivity",
+      "sharing": "distinct"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "mode": "count",
+      "observers": 1,
+      "operation": "reactivity",
+      "sharing": "distinct"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "mode": "membership",
+      "observers": 10,
+      "operation": "reactivity",
+      "sharing": "equivalent"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "mode": "columns",
+      "observers": 10,
+      "operation": "reactivity",
+      "sharing": "equivalent"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "mode": "count",
+      "observers": 10,
+      "operation": "reactivity",
+      "sharing": "equivalent"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "mode": "membership",
+      "observers": 10,
+      "operation": "reactivity",
+      "sharing": "distinct"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "mode": "columns",
+      "observers": 10,
+      "operation": "reactivity",
+      "sharing": "distinct"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "mode": "count",
+      "observers": 10,
+      "operation": "reactivity",
+      "sharing": "distinct"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "mode": "membership",
+      "observers": 100,
+      "operation": "reactivity",
+      "sharing": "equivalent"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "mode": "columns",
+      "observers": 100,
+      "operation": "reactivity",
+      "sharing": "equivalent"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "mode": "count",
+      "observers": 100,
+      "operation": "reactivity",
+      "sharing": "equivalent"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "mode": "membership",
+      "observers": 100,
+      "operation": "reactivity",
+      "sharing": "distinct"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "mode": "columns",
+      "observers": 100,
+      "operation": "reactivity",
+      "sharing": "distinct"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "mode": "count",
+      "observers": 100,
+      "operation": "reactivity",
+      "sharing": "distinct"
+    },
+    {
+      "N": 100,
+      "Q": 0,
+      "extra_probe_rows": 1,
+      "observers": 0,
+      "operation": "boundary-known"
+    }
+  ],
+  "sampling": {
+    "cold_processes": 10,
+    "independent_runs": 5,
+    "samples": 30,
+    "warmups": 5
+  },
+  "engine_options": {
+    "capacity": "1000",
+    "history": "100",
+    "initial_delay_ms": "1000",
+    "multiplier": "2",
+    "max_delay_ms": "60000"
+  },
+  "namespace": "55555555555555555555555555555555",
+  "timers": {
+    "actual": "performance.now",
+    "raw_unit": "ms",
+    "summary_unit": "ns",
+    "conversion": "round((end_ms-start_ms)*1000000), checked nonnegative safe integer; retain original floating ms too",
+    "resolution": "minimum positive observed delta from10000 consecutive readings, not a hardware guarantee",
+    "count_scheduler": "unchanged SDK monotonic/timer defaults, no manual drain polling",
+    "callback_watchdog_ms": 60000,
+    "budget": null
+  },
+  "endpoint": "actual installed JS SDK invocation -> checked decoded SDK return; byte accounting wraps production channel without changing frames",
+  "reaction_endpoints": [
+    "write_invocation_to_first_callback",
+    "write_invocation_to_last_callback",
+    "successful_mutation_reply_observed_by_host_to_first_callback",
+    "successful_mutation_reply_observed_by_host_to_last_callback"
+  ],
+  "cold": [
+    {
+      "operation": "create",
+      "N": 0,
+      "classes": [
+        "browser-sdk/memory",
+        "browser-sdk/opfs-protected"
+      ]
+    },
+    {
+      "operation": "reopen",
+      "N": [
+        100,
+        1000,
+        10000
+      ],
+      "classes": [
+        "browser-sdk/opfs-protected"
+      ]
+    },
+    {
+      "operation": "upgrade",
+      "N": 1000,
+      "migration": "v1->v2 AddColumn optionalString benchmark_extra",
+      "classes": [
+        "browser-sdk/opfs-protected"
+      ]
+    }
+  ],
+  "correctness_only": [
+    {
+      "N": 100,
+      "Q": [
+        10,
+        100
+      ],
+      "operation": "retry"
+    },
+    {
+      "authority": "unchanged existing conformance case",
+      "capacity": 500,
+      "operation": "capacity-stress"
+    }
+  ],
+  "proof": {
+    "hash": "SHA256 of canonical UTF8 record plus newline, prefix excluded",
+    "max_fetch_rows": 100,
+    "ordering": [
+      "articles:score:Asc",
+      "authors:id:Asc",
+      "tags:verified-empty-null-marker",
+      "article_tags:verified-empty-null-marker"
+    ],
+    "phases": [
+      "initial",
+      "final"
+    ],
+    "protocol": "PROOF/1",
+    "ready": "READY/1 notification after actual decoded SDK open, before proof; controller receipt includes browser message/HTTP scheduling",
+    "record": {
+      "row": "typed Row or null for verified empty table",
+      "table": "String"
+    },
+    "retained": "counts/hashes only, no row payload files",
+    "timing": "outside all timed endpoints before and after cohort",
+    "transport": "bounded proof lines posted to owned stdlib HTTP fixture; same independent Python oracle as native protocol, no browser-side-only digest substitutes"
+  },
+  "resources": {
+    "cycles": 30,
+    "timed_artifact": "ordinary optimized package worker",
+    "resource_artifact": "separate harness worker importing unchanged ordinary WASM and production worker host; same SDK operations, not pooled with latency class",
+    "js_memory": "feature-detect measureUserAgentSpecificMemory in secure cross-origin-isolated fixture; preserve raw implementation types/attribution; unsupported/timeout unknown",
+    "wasm_memory": "actual instantiated ordinary export memory.buffer.byteLength in separate harness worker only; allocated linear memory, not live Rust heap or RSS; ordinary SDK-worker metric unknown if inaccessible, no same-worker-allocation claim",
+    "opfs_bytes": "read-only recursive regular-file sizes in exact task-origin hoyadb-v1 pool plus exact-closed-name encrypted export lengths; before/after states and unassigned pool cost separate",
+    "package_bytes": "actual local tarball compressed bytes plus exact installed JS/WASM/notices files and gzip fixed mtime=0",
+    "retained": {
+      "N": 100,
+      "cycles": 30,
+      "observers": 1,
+      "mode": "membership",
+      "phases": [
+        "baseline",
+        "after_open",
+        "after_close"
+      ],
+      "protocol": "BROWSER-RESOURCE/1 bounded checkpoint JSON then fixed CONTINUE",
+      "proof": "first/final independent PROOF/1; explicit intermediate complete fixture validation",
+      "timing": "untimed separate worker, no latency samples",
+      "native_rusage": "not applicable; direct wait4/RSS1 remains native-class evidence, not browser RSS",
+      "classes": {
+        "browser-sdk/memory": "fresh-memory-per-cycle: each cycle opens a new in-worker memory database in the one harness worker, seeds N100 before its after_open checkpoint, observes, validates and closes",
+        "browser-sdk/opfs-protected": "same-owned-store-reopen: cycle0 creates and seeds one exact owned closed logical store N100 before its after_open checkpoint; cycles1-29 same-key reopen that closed store without reseed, reset or deletion; exact controls cleanup, canary and pool verification only after the final close; distinct from native thirty-fresh-store semantics and never pooled or compared with it"
+      }
+    }
+  },
+  "ownership": {
+    "logical_prefix": "phase-seven-sdk-owned-bench-",
+    "pool": "hoyadb-v1",
+    "active_workers": 1,
+    "fresh_worker_each_cohort_run": true,
+    "cleanup": "close owners, terminate worker, inspect/cleanup only exact recorded owned names via default-off controls, assert neighbor canary and pre/post pool assignment; no whole directory removal"
+  },
+  "next_behavioral_reds": [
+    "strict exact51 cohort/schema/count metadata validation, no Cartesian expansion",
+    "SDK endpoint uses public methods and actual callbacks; missing callbacks fail sample",
+    "independent literal dataset oracle rejects plausible wrong typed data and absent Null distinctions",
+    "timers preserve real endpoints/unit conversion and reject fabricated/negative/nonfinite durations",
+    "cold flow launches10 distinct workers and includes bootstrap vs open endpoints separately",
+    "resource probe refuses unsupported/foreign paths and labels unavailable measurements unknown",
+    "failed/contaminated/source-mismatched samples cannot produce accepted summary"
+  ],
+  "measurements": "not_started",
+  "operation_details": {
+    "batch-insert": "new IDs article:N..N+9 with exact last10baseline fieldsets; valid existing authors",
+    "batch-remove": "first10exact rows, exact before/after",
+    "batch-update": "first10titles changed-<iteration>-<index>, exact before/after",
+    "boundary-known": "extra row id benchmark:extrema; baseline article0 fields overridden score i64MAX, at i64MIN, ratio Float42.0 input/canonical Float42 output, title 東京🌿<NUL>extrema, note present Null; exact schema/protection/point read, then remove probe; N+1 declared",
+    "queue-baseline": "Q10/100 durable no-op commands Sent, attempts1,due2000 after prepare at1000,jitter0; new sample push at1000; exact QueueStatus restoration"
+  }
+}

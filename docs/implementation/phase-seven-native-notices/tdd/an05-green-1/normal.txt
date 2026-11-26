@@ -1,0 +1,69 @@
+test_android_link_input_on_apple_rejects (__main__.AN01SourceCorpus.test_android_link_input_on_apple_rejects) ... ok
+test_android_runtime_role_on_apple_rejects (__main__.AN01SourceCorpus.test_android_runtime_role_on_apple_rejects) ... ok
+test_build_crate_claimed_linked_rejects (__main__.AN01SourceCorpus.test_build_crate_claimed_linked_rejects) ... ok
+test_changed_notice_rejects (__main__.AN01SourceCorpus.test_changed_notice_rejects) ... ok
+test_changed_text_rejects (__main__.AN01SourceCorpus.test_changed_text_rejects) ... ok
+test_crate_checksum_mismatch_rejects (__main__.AN01SourceCorpus.test_crate_checksum_mismatch_rejects) ... ok
+test_libtomcrypt_symbols_in_evidence_reject (__main__.AN01SourceCorpus.test_libtomcrypt_symbols_in_evidence_reject) ... ok
+test_linked_libtomcrypt_on_apple_rejects (__main__.AN01SourceCorpus.test_linked_libtomcrypt_on_apple_rejects) ... ok
+test_linked_package_without_text_rejects (__main__.AN01SourceCorpus.test_linked_package_without_text_rejects) ... ok
+test_lock_bytes_mismatch_rejects (__main__.AN01SourceCorpus.test_lock_bytes_mismatch_rejects) ... ok
+test_missing_text_rejects (__main__.AN01SourceCorpus.test_missing_text_rejects) ... ok
+test_ndk_aggregate_on_apple_rejects (__main__.AN01SourceCorpus.test_ndk_aggregate_on_apple_rejects) ... ok
+test_os_crypto_provider_must_be_recorded_separately (__main__.AN01SourceCorpus.test_os_crypto_provider_must_be_recorded_separately) ... ok
+test_unattributed_graph_member_rejects (__main__.AN01SourceCorpus.test_unattributed_graph_member_rejects) ... ok
+test_unclassified_lock_package_rejects (__main__.AN01SourceCorpus.test_unclassified_lock_package_rejects) ... ok
+test_unexpected_corpus_file_rejects (__main__.AN01SourceCorpus.test_unexpected_corpus_file_rejects) ... ok
+test_unknown_role_rejects (__main__.AN01SourceCorpus.test_unknown_role_rejects) ... ok
+test_unsafe_text_path_rejects (__main__.AN01SourceCorpus.test_unsafe_text_path_rejects) ... ok
+test_valid_corpus_is_accepted_in_both_modes (__main__.AN01SourceCorpus.test_valid_corpus_is_accepted_in_both_modes) ... ok
+test_build_artifacts_always_finalizes_notices (__main__.AN02BuildOrchestration.test_build_artifacts_always_finalizes_notices) ... ok
+test_build_artifacts_fails_without_a_valid_corpus (__main__.AN02BuildOrchestration.test_build_artifacts_fails_without_a_valid_corpus) ... ok
+test_missing_or_wrong_parent_digest_fails_instead_of_skipping (__main__.AN02CheckArtifacts.test_missing_or_wrong_parent_digest_fails_instead_of_skipping) ... ok
+test_trusted_parent_digest_passes (__main__.AN02CheckArtifacts.test_trusted_parent_digest_passes) ... ok
+test_changed_native_member_rejects (__main__.AN02Framework.test_changed_native_member_rejects) ... ok
+test_changed_notice_rejects (__main__.AN02Framework.test_changed_notice_rejects) ... ok
+test_consistent_notice_rewrite_is_checked_against_source_corpus (__main__.AN02Framework.test_consistent_notice_rewrite_is_checked_against_source_corpus) ... ok
+test_consistent_record_rewrite_cannot_self_certify (__main__.AN02Framework.test_consistent_record_rewrite_cannot_self_certify)
+A changed library plus a rewritten parent copy and packaging record must still reject. ... ok
+test_directory_existence_alone_cannot_pass (__main__.AN02Framework.test_directory_existence_alone_cannot_pass) ... ok
+test_finalize_adds_exact_closure_and_keeps_native_bytes (__main__.AN02Framework.test_finalize_adds_exact_closure_and_keeps_native_bytes) ... ok
+test_finalize_refuses_invalid_corpus_before_writing (__main__.AN02Framework.test_finalize_refuses_invalid_corpus_before_writing) ... ok
+test_finalize_refuses_unexpected_input_tree (__main__.AN02Framework.test_finalize_refuses_unexpected_input_tree) ... ok
+test_notice_free_framework_is_rejected (__main__.AN02Framework.test_notice_free_framework_is_rejected) ... ok
+test_removed_notice_rejects (__main__.AN02Framework.test_removed_notice_rejects) ... ok
+test_removed_packaging_record_rejects (__main__.AN02Framework.test_removed_packaging_record_rejects) ... ok
+test_stale_provider_evidence_rejects (__main__.AN02Framework.test_stale_provider_evidence_rejects)
+The CommonCrypto/Security role is bound to the shipped library bytes, not just asserted. ... ok
+test_unexpected_member_rejects (__main__.AN02Framework.test_unexpected_member_rejects) ... ok
+test_wrong_expected_parent_rejects (__main__.AN02Framework.test_wrong_expected_parent_rejects) ... ok
+test_pack_accepts_paths_relative_to_the_caller (__main__.AN02ReactNativePack.test_pack_accepts_paths_relative_to_the_caller) ... ok
+test_pack_refuses_notice_free_source_before_npm (__main__.AN02ReactNativePack.test_pack_refuses_notice_free_source_before_npm) ... ok
+test_pack_refuses_to_overwrite_an_existing_archive (__main__.AN02ReactNativePack.test_pack_refuses_to_overwrite_an_existing_archive) ... ok
+test_pack_requires_the_trusted_parent_digest (__main__.AN02ReactNativePack.test_pack_requires_the_trusted_parent_digest) ... ok
+test_pack_validates_before_tar_and_after_extraction (__main__.AN02ReactNativePack.test_pack_validates_before_tar_and_after_extraction) ... ok
+test_build_script_uses_the_shared_finalizer (__main__.AN03Static.test_build_script_uses_the_shared_finalizer) ... ok
+test_tools_use_explicit_checks_only (__main__.AN03Static.test_tools_use_explicit_checks_only) ... ok
+test_generated_member_outside_the_validated_framework_rejects (__main__.AN05PackSourceIdentity.test_generated_member_outside_the_validated_framework_rejects) ... ok
+test_head_identical_sources_and_validated_framework_pass (__main__.AN05PackSourceIdentity.test_head_identical_sources_and_validated_framework_pass) ... ok
+test_shipped_npmignore_excludes_only_gradle_and_build_state (__main__.AN05PackSourceIdentity.test_shipped_npmignore_excludes_only_gradle_and_build_state) ... ok
+test_tracked_but_modified_file_rejects_before_extraction (__main__.AN05PackSourceIdentity.test_tracked_but_modified_file_rejects_before_extraction) ... ok
+test_untracked_package_file_rejects_before_extraction (__main__.AN05PackSourceIdentity.test_untracked_package_file_rejects_before_extraction) ... ok
+test_wrong_git_root_rejects_before_npm (__main__.AN05PackSourceIdentity.test_wrong_git_root_rejects_before_npm) ... FAIL
+
+======================================================================
+FAIL: test_wrong_git_root_rejects_before_npm (__main__.AN05PackSourceIdentity.test_wrong_git_root_rejects_before_npm)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/native/tools/test_apple_notices.py", line 760, in test_wrong_git_root_rejects_before_npm
+    self.expect_rejected(result, 'git-root-mismatch', mode)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/native/tools/test_apple_notices.py", line 162, in expect_rejected
+    self.assertIn(f'REJECTED {reason}:', result.stderr, mode)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'REJECTED git-root-mismatch:' not found in "REJECTED io-error: [Errno 2] No such file or directory: '/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-def0030-mlckigij/000-normal-root/bindings/bindings/native/tools/apple_notices.py'\n" : normal
+
+----------------------------------------------------------------------
+Ran 50 tests in 41.748s
+
+FAILED (failures=1)

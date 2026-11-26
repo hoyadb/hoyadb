@@ -1,0 +1,16 @@
+TRACE observation operation=observe
+TRACE observation completed=observe ok=true
+TRACE observation operation=drain
+TRACE observation completed=drain ok=true
+TRACE observation operation=insert
+TRACE observation completed=insert ok=true
+TRACE observation operation=drain
+TRACE observation completed=drain ok=true
+TRACE observation operation=close
+TRACE observation operation=unsubscribe
+TRACE observation completed=close ok=true
+TRACE observation completed=unsubscribe ok=false
+PASS K06_initial_callback_selected_executor_cancel_and_reentrant_drain
+PASS K06_count_deadline_is_single_unpostponed_injected_timer
+
+exit=0

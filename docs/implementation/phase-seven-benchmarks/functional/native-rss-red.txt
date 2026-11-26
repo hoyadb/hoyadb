@@ -1,0 +1,22 @@
+   Compiling hoyadb-benchmark v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/native)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.30s
+     Running unittests src/lib.rs (benchmarks/native/target/debug/deps/hoyadb_benchmark-0e7a7c369aeaba1a)
+
+running 1 test
+test tests::p03_rss_cycles_are_real_owned_owners_with_full_first_and_final_proof ... FAILED
+
+failures:
+
+---- tests::p03_rss_cycles_are_real_owned_owners_with_full_first_and_final_proof stdout ----
+
+thread 'tests::p03_rss_cycles_are_real_owned_owners_with_full_first_and_final_proof' (82170685) panicked at src/lib.rs:1397:12:
+called `Result::unwrap()` on an `Err` value: "RSS cycles pending"
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    tests::p03_rss_cycles_are_real_owned_owners_with_full_first_and_final_proof
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 6 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `--lib`

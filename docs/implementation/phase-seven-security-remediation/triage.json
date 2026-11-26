@@ -1,0 +1,854 @@
+{
+ "status": "PROPOSAL ONLY; no remediation implemented or activated",
+ "rows": [
+  {
+   "id": "GHSA-3p8m-j85q-pgmj",
+   "severity": "MODERATE",
+   "component": "io.netty:netty-codec:4.1.110.Final",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "4.1.125.Final"
+   ],
+   "applicability": "present (AGP -> grpc-netty 1.69.1); only AGP caller is a gRPC/Netty channel user for device/test tooling, not resource compilation",
+   "proposed_target": "4.1.139.Final (all 11 netty modules aligned)",
+   "remediation": "R2"
+  },
+  {
+   "id": "GHSA-558v-64gr-wgg4",
+   "severity": "HIGH",
+   "component": "io.netty:netty-codec:4.1.110.Final",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "4.1.136.Final"
+   ],
+   "applicability": "present (AGP -> grpc-netty 1.69.1); only AGP caller is a gRPC/Netty channel user for device/test tooling, not resource compilation",
+   "proposed_target": "4.1.139.Final (all 11 netty modules aligned)",
+   "remediation": "R2"
+  },
+  {
+   "id": "GHSA-mj4r-2hfc-f8p6",
+   "severity": "HIGH",
+   "component": "io.netty:netty-codec:4.1.110.Final",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "4.1.133.Final"
+   ],
+   "applicability": "present (AGP -> grpc-netty 1.69.1); only AGP caller is a gRPC/Netty channel user for device/test tooling, not resource compilation",
+   "proposed_target": "4.1.139.Final (all 11 netty modules aligned)",
+   "remediation": "R2"
+  },
+  {
+   "id": "GHSA-38f8-5428-x5cv",
+   "severity": "MODERATE",
+   "component": "io.netty:netty-codec-http:4.1.110.Final",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "4.1.133.Final",
+    "4.2.13.Final"
+   ],
+   "applicability": "present (AGP -> grpc-netty 1.69.1); only AGP caller is a gRPC/Netty channel user for device/test tooling, not resource compilation",
+   "proposed_target": "4.1.139.Final (all 11 netty modules aligned)",
+   "remediation": "R2"
+  },
+  {
+   "id": "GHSA-4mp9-239f-g9hg",
+   "severity": "MODERATE",
+   "component": "io.netty:netty-codec-http:4.1.110.Final",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "4.1.136.Final",
+    "4.2.16.Final"
+   ],
+   "applicability": "present (AGP -> grpc-netty 1.69.1); only AGP caller is a gRPC/Netty channel user for device/test tooling, not resource compilation",
+   "proposed_target": "4.1.139.Final (all 11 netty modules aligned)",
+   "remediation": "R2"
+  },
+  {
+   "id": "GHSA-57rv-r2g8-2cj3",
+   "severity": "HIGH",
+   "component": "io.netty:netty-codec-http:4.1.110.Final",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "4.1.133.Final",
+    "4.2.13.Final"
+   ],
+   "applicability": "present (AGP -> grpc-netty 1.69.1); only AGP caller is a gRPC/Netty channel user for device/test tooling, not resource compilation",
+   "proposed_target": "4.1.139.Final (all 11 netty modules aligned)",
+   "remediation": "R2"
+  },
+  {
+   "id": "GHSA-6cqp-g7gg-8hr5",
+   "severity": "MODERATE",
+   "component": "io.netty:netty-codec-http:4.1.110.Final",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "4.1.136.Final",
+    "4.2.16.Final"
+   ],
+   "applicability": "present (AGP -> grpc-netty 1.69.1); only AGP caller is a gRPC/Netty channel user for device/test tooling, not resource compilation",
+   "proposed_target": "4.1.139.Final (all 11 netty modules aligned)",
+   "remediation": "R2"
+  },
+  {
+   "id": "GHSA-6jqx-86gh-f27w",
+   "severity": "HIGH",
+   "component": "io.netty:netty-codec-http:4.1.110.Final",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "4.1.136.Final",
+    "4.2.16.Final"
+   ],
+   "applicability": "present (AGP -> grpc-netty 1.69.1); only AGP caller is a gRPC/Netty channel user for device/test tooling, not resource compilation",
+   "proposed_target": "4.1.139.Final (all 11 netty modules aligned)",
+   "remediation": "R2"
+  },
+  {
+   "id": "GHSA-84h7-rjj3-6jx4",
+   "severity": "MODERATE",
+   "component": "io.netty:netty-codec-http:4.1.110.Final",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "4.1.129.Final",
+    "4.2.8.Final"
+   ],
+   "applicability": "present (AGP -> grpc-netty 1.69.1); only AGP caller is a gRPC/Netty channel user for device/test tooling, not resource compilation",
+   "proposed_target": "4.1.139.Final (all 11 netty modules aligned)",
+   "remediation": "R2"
+  },
+  {
+   "id": "GHSA-8c42-7qj2-3j46",
+   "severity": "MODERATE",
+   "component": "io.netty:netty-codec-http:4.1.110.Final",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "4.1.137.Final",
+    "4.2.17.Final"
+   ],
+   "applicability": "present (AGP -> grpc-netty 1.69.1); only AGP caller is a gRPC/Netty channel user for device/test tooling, not resource compilation",
+   "proposed_target": "4.1.139.Final (all 11 netty modules aligned)",
+   "remediation": "R2"
+  },
+  {
+   "id": "GHSA-f6hv-jmp6-3vwv",
+   "severity": "HIGH",
+   "component": "io.netty:netty-codec-http:4.1.110.Final",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "4.1.133.Final",
+    "4.2.13.Final"
+   ],
+   "applicability": "present (AGP -> grpc-netty 1.69.1); only AGP caller is a gRPC/Netty channel user for device/test tooling, not resource compilation",
+   "proposed_target": "4.1.139.Final (all 11 netty modules aligned)",
+   "remediation": "R2"
+  },
+  {
+   "id": "GHSA-fghv-69vj-qj49",
+   "severity": "LOW",
+   "component": "io.netty:netty-codec-http:4.1.110.Final",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "4.1.125.Final",
+    "4.2.5.Final"
+   ],
+   "applicability": "present (AGP -> grpc-netty 1.69.1); only AGP caller is a gRPC/Netty channel user for device/test tooling, not resource compilation",
+   "proposed_target": "4.1.139.Final (all 11 netty modules aligned)",
+   "remediation": "R2"
+  },
+  {
+   "id": "GHSA-gcjf-9mgh-3p7g",
+   "severity": "MODERATE",
+   "component": "io.netty:netty-codec-http:4.1.110.Final",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "4.1.136.Final",
+    "4.2.16.Final"
+   ],
+   "applicability": "present (AGP -> grpc-netty 1.69.1); only AGP caller is a gRPC/Netty channel user for device/test tooling, not resource compilation",
+   "proposed_target": "4.1.139.Final (all 11 netty modules aligned)",
+   "remediation": "R2"
+  },
+  {
+   "id": "GHSA-hvcg-qmg6-jm4c",
+   "severity": "MODERATE",
+   "component": "io.netty:netty-codec-http:4.1.110.Final",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "4.1.135.Final",
+    "4.2.15.Final"
+   ],
+   "applicability": "present (AGP -> grpc-netty 1.69.1); only AGP caller is a gRPC/Netty channel user for device/test tooling, not resource compilation",
+   "proposed_target": "4.1.139.Final (all 11 netty modules aligned)",
+   "remediation": "R2"
+  },
+  {
+   "id": "GHSA-jppx-w49h-x2qq",
+   "severity": "HIGH",
+   "component": "io.netty:netty-codec-http:4.1.110.Final",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "4.1.136.Final",
+    "4.2.16.Final"
+   ],
+   "applicability": "present (AGP -> grpc-netty 1.69.1); only AGP caller is a gRPC/Netty channel user for device/test tooling, not resource compilation",
+   "proposed_target": "4.1.139.Final (all 11 netty modules aligned)",
+   "remediation": "R2"
+  },
+  {
+   "id": "GHSA-m4cv-j2px-7723",
+   "severity": "MODERATE",
+   "component": "io.netty:netty-codec-http:4.1.110.Final",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "4.1.133.Final",
+    "4.2.13.Final"
+   ],
+   "applicability": "present (AGP -> grpc-netty 1.69.1); only AGP caller is a gRPC/Netty channel user for device/test tooling, not resource compilation",
+   "proposed_target": "4.1.139.Final (all 11 netty modules aligned)",
+   "remediation": "R2"
+  },
+  {
+   "id": "GHSA-mvh2-crg5-v77c",
+   "severity": "HIGH",
+   "component": "io.netty:netty-codec-http:4.1.110.Final",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "4.1.136.Final",
+    "4.2.16.Final"
+   ],
+   "applicability": "present (AGP -> grpc-netty 1.69.1); only AGP caller is a gRPC/Netty channel user for device/test tooling, not resource compilation",
+   "proposed_target": "4.1.139.Final (all 11 netty modules aligned)",
+   "remediation": "R2"
+  },
+  {
+   "id": "GHSA-pwqr-wmgm-9rr8",
+   "severity": "HIGH",
+   "component": "io.netty:netty-codec-http:4.1.110.Final",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "4.1.132.Final",
+    "4.2.10.Final"
+   ],
+   "applicability": "present (AGP -> grpc-netty 1.69.1); only AGP caller is a gRPC/Netty channel user for device/test tooling, not resource compilation",
+   "proposed_target": "4.1.139.Final (all 11 netty modules aligned)",
+   "remediation": "R2"
+  },
+  {
+   "id": "GHSA-q4f6-jm68-57ww",
+   "severity": "MODERATE",
+   "component": "io.netty:netty-codec-http:4.1.110.Final",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "4.1.136.Final",
+    "4.2.16.Final"
+   ],
+   "applicability": "present (AGP -> grpc-netty 1.69.1); only AGP caller is a gRPC/Netty channel user for device/test tooling, not resource compilation",
+   "proposed_target": "4.1.139.Final (all 11 netty modules aligned)",
+   "remediation": "R2"
+  },
+  {
+   "id": "GHSA-v8h7-rr48-vmmv",
+   "severity": "MODERATE",
+   "component": "io.netty:netty-codec-http:4.1.110.Final",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "4.1.133.Final",
+    "4.2.13.Final"
+   ],
+   "applicability": "present (AGP -> grpc-netty 1.69.1); only AGP caller is a gRPC/Netty channel user for device/test tooling, not resource compilation",
+   "proposed_target": "4.1.139.Final (all 11 netty modules aligned)",
+   "remediation": "R2"
+  },
+  {
+   "id": "GHSA-xxqh-mfjm-7mv9",
+   "severity": "MODERATE",
+   "component": "io.netty:netty-codec-http:4.1.110.Final",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "4.1.133.Final",
+    "4.2.13.Final"
+   ],
+   "applicability": "present (AGP -> grpc-netty 1.69.1); only AGP caller is a gRPC/Netty channel user for device/test tooling, not resource compilation",
+   "proposed_target": "4.1.139.Final (all 11 netty modules aligned)",
+   "remediation": "R2"
+  },
+  {
+   "id": "GHSA-563q-j3cm-6jxm",
+   "severity": "MODERATE",
+   "component": "io.netty:netty-codec-http2:4.1.110.Final",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "4.1.135.Final",
+    "4.2.15.Final"
+   ],
+   "applicability": "present (AGP -> grpc-netty 1.69.1); only AGP caller is a gRPC/Netty channel user for device/test tooling, not resource compilation",
+   "proposed_target": "4.1.139.Final (all 11 netty modules aligned)",
+   "remediation": "R2"
+  },
+  {
+   "id": "GHSA-5x3r-wrvg-rp6q",
+   "severity": "MODERATE",
+   "component": "io.netty:netty-codec-http2:4.1.110.Final",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "4.1.135.Final",
+    "4.2.15.Final"
+   ],
+   "applicability": "present (AGP -> grpc-netty 1.69.1); only AGP caller is a gRPC/Netty channel user for device/test tooling, not resource compilation",
+   "proposed_target": "4.1.139.Final (all 11 netty modules aligned)",
+   "remediation": "R2"
+  },
+  {
+   "id": "GHSA-93wv-jw9v-4972",
+   "severity": "HIGH",
+   "component": "io.netty:netty-codec-http2:4.1.110.Final",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "4.1.136.Final",
+    "4.2.16.Final"
+   ],
+   "applicability": "present (AGP -> grpc-netty 1.69.1); only AGP caller is a gRPC/Netty channel user for device/test tooling, not resource compilation",
+   "proposed_target": "4.1.139.Final (all 11 netty modules aligned)",
+   "remediation": "R2"
+  },
+  {
+   "id": "GHSA-c2gf-v879-257j",
+   "severity": "MODERATE",
+   "component": "io.netty:netty-codec-http2:4.1.110.Final",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "4.1.135.Final",
+    "4.2.15.Final"
+   ],
+   "applicability": "present (AGP -> grpc-netty 1.69.1); only AGP caller is a gRPC/Netty channel user for device/test tooling, not resource compilation",
+   "proposed_target": "4.1.139.Final (all 11 netty modules aligned)",
+   "remediation": "R2"
+  },
+  {
+   "id": "GHSA-c69g-56f8-xwqj",
+   "severity": "MODERATE",
+   "component": "io.netty:netty-codec-http2:4.1.110.Final",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "4.1.136.Final",
+    "4.2.16.Final"
+   ],
+   "applicability": "present (AGP -> grpc-netty 1.69.1); only AGP caller is a gRPC/Netty channel user for device/test tooling, not resource compilation",
+   "proposed_target": "4.1.139.Final (all 11 netty modules aligned)",
+   "remediation": "R2"
+  },
+  {
+   "id": "GHSA-f6hv-jmp6-3vwv",
+   "severity": "HIGH",
+   "component": "io.netty:netty-codec-http2:4.1.110.Final",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "4.1.133.Final",
+    "4.2.13.Final"
+   ],
+   "applicability": "present (AGP -> grpc-netty 1.69.1); only AGP caller is a gRPC/Netty channel user for device/test tooling, not resource compilation",
+   "proposed_target": "4.1.139.Final (all 11 netty modules aligned)",
+   "remediation": "R2"
+  },
+  {
+   "id": "GHSA-prj3-ccx8-p6x4",
+   "severity": "HIGH",
+   "component": "io.netty:netty-codec-http2:4.1.110.Final",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "4.1.124.Final",
+    "4.2.4.Final"
+   ],
+   "applicability": "present (AGP -> grpc-netty 1.69.1); only AGP caller is a gRPC/Netty channel user for device/test tooling, not resource compilation",
+   "proposed_target": "4.1.139.Final (all 11 netty modules aligned)",
+   "remediation": "R2"
+  },
+  {
+   "id": "GHSA-w9fj-cfpg-grvv",
+   "severity": "HIGH",
+   "component": "io.netty:netty-codec-http2:4.1.110.Final",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "4.1.132.Final",
+    "4.2.11.Final"
+   ],
+   "applicability": "present (AGP -> grpc-netty 1.69.1); only AGP caller is a gRPC/Netty channel user for device/test tooling, not resource compilation",
+   "proposed_target": "4.1.139.Final (all 11 netty modules aligned)",
+   "remediation": "R2"
+  },
+  {
+   "id": "GHSA-389x-839f-4rhx",
+   "severity": "MODERATE",
+   "component": "io.netty:netty-common:4.1.110.Final",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "4.1.118.Final"
+   ],
+   "applicability": "present (AGP -> grpc-netty 1.69.1); only AGP caller is a gRPC/Netty channel user for device/test tooling, not resource compilation",
+   "proposed_target": "4.1.139.Final (all 11 netty modules aligned)",
+   "remediation": "R2"
+  },
+  {
+   "id": "GHSA-xq3w-v528-46rv",
+   "severity": "MODERATE",
+   "component": "io.netty:netty-common:4.1.110.Final",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "4.1.115.Final"
+   ],
+   "applicability": "present (AGP -> grpc-netty 1.69.1); only AGP caller is a gRPC/Netty channel user for device/test tooling, not resource compilation",
+   "proposed_target": "4.1.139.Final (all 11 netty modules aligned)",
+   "remediation": "R2"
+  },
+  {
+   "id": "GHSA-3qp7-7mw8-wx86",
+   "severity": "HIGH",
+   "component": "io.netty:netty-handler:4.1.110.Final",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "4.1.135.Final",
+    "4.2.15.Final"
+   ],
+   "applicability": "present (AGP -> grpc-netty 1.69.1); only AGP caller is a gRPC/Netty channel user for device/test tooling, not resource compilation",
+   "proposed_target": "4.1.139.Final (all 11 netty modules aligned)",
+   "remediation": "R2"
+  },
+  {
+   "id": "GHSA-4g8c-wm8x-jfhw",
+   "severity": "HIGH",
+   "component": "io.netty:netty-handler:4.1.110.Final",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "4.1.118.Final"
+   ],
+   "applicability": "present (AGP -> grpc-netty 1.69.1); only AGP caller is a gRPC/Netty channel user for device/test tooling, not resource compilation",
+   "proposed_target": "4.1.139.Final (all 11 netty modules aligned)",
+   "remediation": "R2"
+  },
+  {
+   "id": "GHSA-c4c3-7fpv-j4q5",
+   "severity": "CRITICAL",
+   "component": "io.netty:netty-handler:4.1.110.Final",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "4.1.137.Final",
+    "4.2.17.Final"
+   ],
+   "applicability": "present (AGP -> grpc-netty 1.69.1); only AGP caller is a gRPC/Netty channel user for device/test tooling, not resource compilation",
+   "proposed_target": "4.1.139.Final (all 11 netty modules aligned)",
+   "remediation": "R2"
+  },
+  {
+   "id": "GHSA-c653-97m9-rcg9",
+   "severity": "HIGH",
+   "component": "io.netty:netty-handler:4.1.110.Final",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "4.1.135.Final",
+    "4.2.15.Final"
+   ],
+   "applicability": "present (AGP -> grpc-netty 1.69.1); only AGP caller is a gRPC/Netty channel user for device/test tooling, not resource compilation",
+   "proposed_target": "4.1.139.Final (all 11 netty modules aligned)",
+   "remediation": "R2"
+  },
+  {
+   "id": "GHSA-fccg-mwvh-qqg4",
+   "severity": "MODERATE",
+   "component": "io.netty:netty-handler:4.1.110.Final",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "4.1.137.Final",
+    "4.2.17.Final"
+   ],
+   "applicability": "present (AGP -> grpc-netty 1.69.1); only AGP caller is a gRPC/Netty channel user for device/test tooling, not resource compilation",
+   "proposed_target": "4.1.139.Final (all 11 netty modules aligned)",
+   "remediation": "R2"
+  },
+  {
+   "id": "GHSA-x4gw-5cx5-pgmh",
+   "severity": "HIGH",
+   "component": "io.netty:netty-handler:4.1.110.Final",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "4.1.135.Final",
+    "4.2.15.Final"
+   ],
+   "applicability": "present (AGP -> grpc-netty 1.69.1); only AGP caller is a gRPC/Netty channel user for device/test tooling, not resource compilation",
+   "proposed_target": "4.1.139.Final (all 11 netty modules aligned)",
+   "remediation": "R2"
+  },
+  {
+   "id": "GHSA-45q3-82m4-75jr",
+   "severity": "LOW",
+   "component": "io.netty:netty-handler-proxy:4.1.110.Final",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "4.1.133.Final",
+    "4.2.13.Final"
+   ],
+   "applicability": "present (AGP -> grpc-netty 1.69.1); only AGP caller is a gRPC/Netty channel user for device/test tooling, not resource compilation",
+   "proposed_target": "4.1.139.Final (all 11 netty modules aligned)",
+   "remediation": "R2"
+  },
+  {
+   "id": "GHSA-4265-ccf5-phj5",
+   "severity": "MODERATE",
+   "component": "org.apache.commons:commons-compress:1.21",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "1.26.0"
+   ],
+   "applicability": "present (AGP -> sdklib/repository/sdk-common); SDK archive/package handling; SDK downloads are disabled by restriction",
+   "proposed_target": "1.28.0 (+commons-io 2.20.0, commons-lang3 3.18.0, commons-codec 1.19.0 new)",
+   "remediation": "R2"
+  },
+  {
+   "id": "GHSA-4g9r-vxhx-9pgx",
+   "severity": "MODERATE",
+   "component": "org.apache.commons:commons-compress:1.21",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "1.26.0"
+   ],
+   "applicability": "present (AGP -> sdklib/repository/sdk-common); SDK archive/package handling; SDK downloads are disabled by restriction",
+   "proposed_target": "1.28.0 (+commons-io 2.20.0, commons-lang3 3.18.0, commons-codec 1.19.0 new)",
+   "remediation": "R2"
+  },
+  {
+   "id": "GHSA-3677-xxcr-wjqv",
+   "severity": "HIGH",
+   "component": "org.bitbucket.b_c:jose4j:0.9.5",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "0.9.6"
+   ],
+   "applicability": "present; only caller bundletool 1.18.1 (bundle/APK-set tasks), not plain assemble",
+   "proposed_target": "0.9.6 (+slf4j-api 1.7.36 if absent)",
+   "remediation": "R2"
+  },
+  {
+   "id": "GHSA-wg6q-6289-32hp",
+   "severity": "MODERATE",
+   "component": "org.bouncycastle:bcpkix-jdk18on:1.79",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "1.84"
+   ],
+   "applicability": "present AND loaded in ordinary debug builds (sdk-common debug-keystore generation; okhttp/netty platform probes); advisory functions (GOST CTR, rfc822 name constraints, LDAP store, hostile ASN.1) are not fed untrusted input by approved commands",
+   "proposed_target": "1.85.2 bcprov/bcpkix/bcutil (1.86 latest)",
+   "remediation": "R2"
+  },
+  {
+   "id": "GHSA-574f-3g2m-x479",
+   "severity": "CRITICAL",
+   "component": "org.bouncycastle:bcprov-jdk18on:1.79",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "1.80.2",
+    "1.81.1",
+    "1.84"
+   ],
+   "applicability": "present AND loaded in ordinary debug builds (sdk-common debug-keystore generation; okhttp/netty platform probes); advisory functions (GOST CTR, rfc822 name constraints, LDAP store, hostile ASN.1) are not fed untrusted input by approved commands",
+   "proposed_target": "1.85.2 bcprov/bcpkix/bcutil (1.86 latest)",
+   "remediation": "R2"
+  },
+  {
+   "id": "GHSA-9pwp-9qqc-pr26",
+   "severity": "CRITICAL",
+   "component": "org.bouncycastle:bcprov-jdk18on:1.79",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "1.85"
+   ],
+   "applicability": "present AND loaded in ordinary debug builds (sdk-common debug-keystore generation; okhttp/netty platform probes); advisory functions (GOST CTR, rfc822 name constraints, LDAP store, hostile ASN.1) are not fed untrusted input by approved commands",
+   "proposed_target": "1.85.2 bcprov/bcpkix/bcutil (1.86 latest)",
+   "remediation": "R2"
+  },
+  {
+   "id": "GHSA-c3fc-8qff-9hwx",
+   "severity": "MODERATE",
+   "component": "org.bouncycastle:bcprov-jdk18on:1.79",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "1.84"
+   ],
+   "applicability": "present AND loaded in ordinary debug builds (sdk-common debug-keystore generation; okhttp/netty platform probes); advisory functions (GOST CTR, rfc822 name constraints, LDAP store, hostile ASN.1) are not fed untrusted input by approved commands",
+   "proposed_target": "1.85.2 bcprov/bcpkix/bcutil (1.86 latest)",
+   "remediation": "R2"
+  },
+  {
+   "id": "GHSA-qp49-qgx5-5m26",
+   "severity": "HIGH",
+   "component": "org.bouncycastle:bcprov-jdk18on:1.79",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "1.85"
+   ],
+   "applicability": "present AND loaded in ordinary debug builds (sdk-common debug-keystore generation; okhttp/netty platform probes); advisory functions (GOST CTR, rfc822 name constraints, LDAP store, hostile ASN.1) are not fed untrusted input by approved commands",
+   "proposed_target": "1.85.2 bcprov/bcpkix/bcutil (1.86 latest)",
+   "remediation": "R2"
+  },
+  {
+   "id": "GHSA-2363-cqg2-863c",
+   "severity": "HIGH",
+   "component": "org.jdom:jdom2:2.0.6",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "2.0.6.1"
+   ],
+   "applicability": "present; only caller jetifier-processor; consumer leaves android.enableJetifier unset (AGP 8 default false) so not loaded",
+   "proposed_target": "2.0.6.1",
+   "remediation": "R2"
+  },
+  {
+   "id": "GHSA-r937-wjx7-w2jp",
+   "severity": "MODERATE",
+   "component": "org.jetbrains.kotlin:kotlin-gradle-plugin:2.1.20",
+   "origin": "ADR-0035 original native scan",
+   "scope": "build-only (nativeBuildTools)",
+   "advisory_fixed_versions": [
+    "2.4.20-Beta1"
+   ],
+   "applicability": "NOT APPLICABLE: fix commit bf51df6 (KT-86604) changes only KAPT incremental cache JavaClassCacheManager; that class is absent from all 203 approved/proposed JARs and no kapt/annotation-processing artifact is in the union",
+   "proposed_target": "2.4.20 (not needed: N/A)",
+   "remediation": "R4"
+  },
+  {
+   "id": "GHSA-5mg8-w23w-74h3",
+   "severity": "LOW",
+   "component": "com.google.guava:guava:31.0.1-jre",
+   "origin": "compiler addendum OSV",
+   "scope": "build compile-only",
+   "applicability": "compile-only classpath of official RN plugin; RN plugin main sources import no Guava; never executed",
+   "proposed_target": "approved 33.3.1-jre",
+   "remediation": "R1"
+  },
+  {
+   "id": "GHSA-7g45-4rm6-3mm3",
+   "severity": "MODERATE",
+   "component": "com.google.guava:guava:31.0.1-jre",
+   "origin": "compiler addendum OSV",
+   "scope": "build compile-only",
+   "applicability": "same as above",
+   "proposed_target": "approved 33.3.1-jre",
+   "remediation": "R1"
+  },
+  {
+   "id": "GHSA-343h-94h5-c4wr",
+   "severity": "LOW",
+   "component": "relocated lz4-java 1.7.1 inside kotlin-compiler-embeddable 2.1.20",
+   "origin": "compiler addendum embedded OSV",
+   "scope": "build (compiler process)",
+   "applicability": "class present, no embedded caller (LZ4BlockInputStream unused)",
+   "proposed_target": "no fixed Kotlin release: versions.lz4-java=1.7.1 at v2.1.20..v2.4.21 and master",
+   "remediation": "R3"
+  },
+  {
+   "id": "GHSA-4v53-57pg-c464",
+   "severity": "MODERATE",
+   "component": "relocated lz4-java 1.7.1 inside kotlin-compiler-embeddable 2.1.20",
+   "origin": "compiler addendum embedded OSV",
+   "scope": "build (compiler process)",
+   "applicability": "class present, no embedded caller (LZ4BlockInputStream unused)",
+   "proposed_target": "no fixed Kotlin release: versions.lz4-java=1.7.1 at v2.1.20..v2.4.21 and master",
+   "remediation": "R3"
+  },
+  {
+   "id": "GHSA-6cx8-rjf8-pr8g",
+   "severity": "MODERATE",
+   "component": "relocated lz4-java 1.7.1 inside kotlin-compiler-embeddable 2.1.20",
+   "origin": "compiler addendum embedded OSV",
+   "scope": "build (compiler process)",
+   "applicability": "class present, no embedded caller (LZ4DecompressorWithLength unused)",
+   "proposed_target": "no fixed Kotlin release: versions.lz4-java=1.7.1 at v2.1.20..v2.4.21 and master",
+   "remediation": "R3"
+  },
+  {
+   "id": "GHSA-cmp6-m4wj-q63q",
+   "severity": "HIGH",
+   "component": "relocated lz4-java 1.7.1 inside kotlin-compiler-embeddable 2.1.20",
+   "origin": "compiler addendum embedded OSV",
+   "scope": "build (compiler process)",
+   "applicability": "REACHABLE same path; Java (non-JNI) implementation in use",
+   "proposed_target": "no fixed Kotlin release: versions.lz4-java=1.7.1 at v2.1.20..v2.4.21 and master",
+   "remediation": "R3"
+  },
+  {
+   "id": "GHSA-gm45-99xc-r7wv",
+   "severity": "MODERATE",
+   "component": "relocated lz4-java 1.7.1 inside kotlin-compiler-embeddable 2.1.20",
+   "origin": "compiler addendum embedded OSV",
+   "scope": "build (compiler process)",
+   "applicability": "class present, no embedded caller (LZ4FrameInputStream unused)",
+   "proposed_target": "no fixed Kotlin release: versions.lz4-java=1.7.1 at v2.1.20..v2.4.21 and master",
+   "remediation": "R3"
+  },
+  {
+   "id": "GHSA-mcr4-qmvw-px4g",
+   "severity": "HIGH",
+   "component": "relocated lz4-java 1.7.1 inside kotlin-compiler-embeddable 2.1.20",
+   "origin": "compiler addendum embedded OSV",
+   "scope": "build (compiler process)",
+   "applicability": "not on default path: CompressionUtil uses fastestJavaInstance() unless -Didea.use.native.compression=true; no macOS JNI lib embedded",
+   "proposed_target": "no fixed Kotlin release: versions.lz4-java=1.7.1 at v2.1.20..v2.4.21 and master",
+   "remediation": "R3"
+  },
+  {
+   "id": "GHSA-vqf4-7m7x-wgfc",
+   "severity": "HIGH",
+   "component": "relocated lz4-java 1.7.1 inside kotlin-compiler-embeddable 2.1.20",
+   "origin": "compiler addendum embedded OSV",
+   "scope": "build (compiler process)",
+   "applicability": "REACHABLE: Java fast decompressor via CompressionUtil <- IntelliJ PersistentMapWal/CompressedAppendableFile <- Kotlin incremental storage (LazyStorage/AppendableLazyStorage); input = local IC caches",
+   "proposed_target": "no fixed Kotlin release: versions.lz4-java=1.7.1 at v2.1.20..v2.4.21 and master",
+   "remediation": "R3"
+  },
+  {
+   "id": "GHSA-xx22-p4ch-683r",
+   "severity": "MODERATE",
+   "component": "relocated lz4-java 1.7.1 inside kotlin-compiler-embeddable 2.1.20",
+   "origin": "compiler addendum embedded OSV",
+   "scope": "build (compiler process)",
+   "applicability": "not on default path: JNI XXHash only; CompressionUtil references no XXHash",
+   "proposed_target": "no fixed Kotlin release: versions.lz4-java=1.7.1 at v2.1.20..v2.4.21 and master",
+   "remediation": "R3"
+  },
+  {
+   "id": "GHSA-2qrg-x229-3v8q",
+   "component": "relocated log4j fork 1.2.17.2 inside kotlin-compiler-embeddable",
+   "origin": "compiler addendum embedded OSV",
+   "scope": "build",
+   "applicability": "NOT APPLICABLE: only Level, Priority and lf5 config present; affected classes absent",
+   "proposed_target": "n/a",
+   "remediation": "R5"
+  },
+  {
+   "id": "GHSA-65fg-84f6-3jq3",
+   "component": "relocated log4j fork 1.2.17.2 inside kotlin-compiler-embeddable",
+   "origin": "compiler addendum embedded OSV",
+   "scope": "build",
+   "applicability": "NOT APPLICABLE: only Level, Priority and lf5 config present; affected classes absent",
+   "proposed_target": "n/a",
+   "remediation": "R5"
+  },
+  {
+   "id": "GHSA-f7vh-qwp3-x37m",
+   "component": "relocated log4j fork 1.2.17.2 inside kotlin-compiler-embeddable",
+   "origin": "compiler addendum embedded OSV",
+   "scope": "build",
+   "applicability": "NOT APPLICABLE: only Level, Priority and lf5 config present; affected classes absent",
+   "proposed_target": "n/a",
+   "remediation": "R5"
+  },
+  {
+   "id": "GHSA-fp5r-v3w9-4333",
+   "component": "relocated log4j fork 1.2.17.2 inside kotlin-compiler-embeddable",
+   "origin": "compiler addendum embedded OSV",
+   "scope": "build",
+   "applicability": "NOT APPLICABLE: only Level, Priority and lf5 config present; affected classes absent",
+   "proposed_target": "n/a",
+   "remediation": "R5"
+  },
+  {
+   "id": "GHSA-vp98-w2p3-mv35",
+   "component": "relocated log4j fork 1.2.17.2 inside kotlin-compiler-embeddable",
+   "origin": "compiler addendum embedded OSV",
+   "scope": "build",
+   "applicability": "NOT APPLICABLE: only Level, Priority and lf5 config present; affected classes absent",
+   "proposed_target": "n/a",
+   "remediation": "R5"
+  },
+  {
+   "id": "GHSA-w9p3-5cr8-m3jj",
+   "component": "relocated log4j fork 1.2.17.2 inside kotlin-compiler-embeddable",
+   "origin": "compiler addendum embedded OSV",
+   "scope": "build",
+   "applicability": "NOT APPLICABLE: only Level, Priority and lf5 config present; affected classes absent",
+   "proposed_target": "n/a",
+   "remediation": "R5"
+  },
+  {
+   "id": "GHSA-735f-pc8j-v9w8",
+   "component": "relocated protobuf 2.6.1-1 inside kotlin-compiler-embeddable",
+   "origin": "compiler addendum embedded OSV (upstream base)",
+   "scope": "build",
+   "applicability": "present; parses Kotlin metadata from compile-classpath inputs, all hash-pinned approved artifacts; fork patch status unknown",
+   "proposed_target": "none available (Kotlin ships protobuf-relocated 2.6.1-x through master)",
+   "remediation": "R6"
+  },
+  {
+   "id": "GHSA-h4h5-3hr4-j3g2",
+   "component": "relocated protobuf 2.6.1-1 inside kotlin-compiler-embeddable",
+   "origin": "compiler addendum embedded OSV (upstream base)",
+   "scope": "build",
+   "applicability": "present; parses Kotlin metadata from compile-classpath inputs, all hash-pinned approved artifacts; fork patch status unknown",
+   "proposed_target": "none available (Kotlin ships protobuf-relocated 2.6.1-x through master)",
+   "remediation": "R6"
+  },
+  {
+   "id": "GHSA-wrvw-hg22-4m67",
+   "component": "relocated protobuf 2.6.1-1 inside kotlin-compiler-embeddable",
+   "origin": "compiler addendum embedded OSV (upstream base)",
+   "scope": "build",
+   "applicability": "present; parses Kotlin metadata from compile-classpath inputs, all hash-pinned approved artifacts; fork patch status unknown",
+   "proposed_target": "none available (Kotlin ships protobuf-relocated 2.6.1-x through master)",
+   "remediation": "R6"
+  },
+  {
+   "id": "GHSA-j288-q9x7-2f5v",
+   "severity": "MODERATE",
+   "component": "commons-lang3 3.16.0 shaded inside approved kotlin-gradle-plugin 2.1.20-gradle85 (pom.properties byte-bound)",
+   "origin": "NEW: this triage embedded scan (not in ADR-0035 47)",
+   "scope": "build (Gradle plugin classloader)",
+   "applicability": "ClassUtils present and type-reachable only from shaded commons-compress/io internals; no KGP code passes untrusted class names",
+   "proposed_target": "KGP >=2.3.21 catalog declares commons-lang 3.18.0 (shaded bytes unverified); outside RN0.86 Kotlin 2.1.20 pin",
+   "remediation": "R7"
+  }
+ ]
+}

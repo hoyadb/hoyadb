@@ -1,0 +1,28 @@
+// TC-0036 G01/G12/G20: preloaded real WASM memory path is hermetic.
+import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
+import init, { Facade } from '../pkg/hoyadb_web.js';
+const bytes = await readFile(new URL('../pkg/hoyadb_web_bg.wasm', import.meta.url));
+await init({ module_or_path: bytes });
+globalThis.fetch = () => { throw Error('memory must not fetch'); };
+Object.defineProperty(globalThis, 'navigator', { configurable: true, get() { throw Error('memory must not access OPFS'); } });
+Object.defineProperty(globalThis, 'crypto', { configurable: true, get() { throw Error('injected namespace must not request entropy'); } });
+const facade = new Facade();
+const frame = (op, owner, args) => JSON.stringify({ abi: '1', op, owner, args });
+const ok = response => { const value = JSON.parse(response); assert.equal(value.abi, '1'); assert.equal(value.ok, true, response); return value.value; };
+const empty = {};
+const store = ok(facade.call(frame('memory_store', null, empty)));
+const schema = { version: '1', tables: { sensors: { columns: { label: { kind: 'String', optional: false } }, relations: {} } } };
+const args = { engine: { kind: 'memory', store }, schema, migrations: [], namespace: '10101010101010101010101010101010', options: { capacity: '1000', history: '100', initial_delay_ms: '1000', multiplier: '2', max_delay_ms: '60000' } };
+let owner = ok(facade.open(frame('open', null, args), new Uint8Array()));
+const inserted = ok(facade.call(frame('insert', owner, { table: 'sensors', fields: { label: { kind: 'string', value: '東京\0🌿' } }, proposed_id: 'test-fixed-id-001' })));
+assert.equal(inserted.id, 'test-fixed-id-001');
+ok(facade.call(frame('close', owner, empty)));
+owner = ok(facade.open(frame('open', null, args), new Uint8Array()));
+const rows = ok(facade.call(frame('fetch', owner, { query: { table: 'sensors', predicates: [], order: null, limit: null, source: null } })));
+assert.deepEqual(rows, [inserted]);
+assert.deepEqual(ok(facade.call(frame('protection', owner, empty))), { encrypted: false, cipher: 'none', version: 'not_applicable', backup: 'not_applicable' });
+ok(facade.call(frame('close', owner, empty)));
+ok(facade.call(frame('memory_drop', null, { store })));
+facade.free();
+console.log('PASS real preloaded WASM retained-memory/CRUD/UTF8/hermetic capabilities');

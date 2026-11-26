@@ -1,0 +1,117 @@
+{
+  "format": 1,
+  "observed_unix_ns": 1792878497851516000,
+  "provider_model": "claude/claude-opus-5-5",
+  "mode": "auto",
+  "thinking": "high",
+  "operator_request": "Delegate remaining implementation to Claude Opus5.5 with precise task scope to conserve Codex quota",
+  "coordination": "root owns Git, registry allocation, operator decisions, quiet-window admission and independent final review; no implementation agent stages/commits/publishes",
+  "agents": [
+    {
+      "id": "e12f986c-4329-4936-822c-466c82878956",
+      "task": "Complete native/browser benchmark pipeline, DEF0020, reviewed admission, real measurements/resources/footprints, then measured budget proposal",
+      "owned": [
+        "benchmarks/**",
+        "bindings/javascript/benchmark/**",
+        "new phase-seven-benchmarks evidence",
+        "existing DEF0020 with coordinated TC0037"
+      ],
+      "handoff": "target/phase-seven-browser-bench/HANDOFF_OPUS.md"
+    },
+    {
+      "id": "7518debe-cf5c-4d38-8e40-52dad61e663b",
+      "task": "Complete Kotlin final AAR/certificate/notices/Maven packaging, full current checks and actual23case independentAPK",
+      "owned": [
+        "bindings/android/**",
+        "new Kotlin/Android evidence",
+        "existing related DEF resolutions after matching proof"
+      ],
+      "handoff": "target/phase-seven-kotlin/HANDOFF_OPUS.md"
+    },
+    {
+      "id": "a010f2b1-c783-4760-bed0-5f160b418926",
+      "task": "Complete native packaging, currentSwift iOS proof, actualReactNative iOS/Android public package consumers and final platform gates",
+      "owned": [
+        "bindings/native/**",
+        "bindings/swift/**",
+        "bindings/react-native/**",
+        "new matching native/Swift/RN evidence"
+      ],
+      "handoff": "target/phase-seven-native/HANDOFF_OPUS.md"
+    }
+  ],
+  "read_only_scaling_investigation": {
+    "id": "b7d655b2-bede-46bd-82a9-4813dc96483d",
+    "configured_model": "claude-opus-5-5",
+    "task": "Trace reset/bootstrap work and distinguish verified redundant work from contaminated wall-time hypotheses before full measurements",
+    "owned": [
+      "new target/phase-seven-core-scaling diagnostic notes only"
+    ],
+    "constraints": "Completed source-only investigation; no core/storage/benchmark optimization authorized"
+  },
+  "portable_declaration_correction": {
+    "id": "b7d655b2-bede-46bd-82a9-4813dc96483d",
+    "preparation": "DEF-0026 committed at abdf25c",
+    "status": "completed declaration-only correction and packed probes committed82cffb8; runtime bytes unchanged",
+    "task": "Fix portable host declaration DOM dependency with packed ES2022-only and DOM regressions; preserve runtime bytes",
+    "owned": [
+      "bindings/javascript/client/index.d.ts",
+      "minimal declaration fixtures/check scripts in bindings/javascript/consumer or scripts",
+      "new phase-seven-portable-declarations evidence"
+    ],
+    "constraints": "No runtime JS/WASM/Rust/SDK algorithm, Android/RN/Swift or benchmark changes; no dependencies; no staging/commits"
+  },
+  "kotlin_compiler_addendum_preparation": {
+    "id": "a010f2b1-c783-4760-bed0-5f160b418926",
+    "task": "Prepare quarantined marker and exact Kotlin2.1.20 compiler-configuration review closure",
+    "owned": [
+      "new phase-seven-kotlin-compiler-addendum evidence",
+      "target/phase-seven-rn/compiler-review"
+    ],
+    "constraints": "Inert metadata/archive review only; no new input activation, compilation or registry/approval invention before explicit operator approval",
+    "status": "approved exact v2 by operator; native owner assigned bounded graph validation; compilation held for security handback",
+    "reviewer": "7518debe-cf5c-4d38-8e40-52dad61e663b (read-only, did not author compiler packet)"
+  },
+  "independent_final_reviewer": {
+    "id": "e6f3b33e-7787-43bb-904f-646b096c9154",
+    "requested_model": "claude-opus-5-5",
+    "configured_model": "claude-opus-5-5",
+    "fallback_reason": "Historical initial CLI launch failed; later reviewer runtime confirmed requested Opus5.5 without root environment changes",
+    "status": "Runtime model confirmed by reviewer as claude-opus-5-5; focused prep reviews complete; zero final clean rounds counted"
+  },
+  "constraints": [
+    "Full reviewed tests and genuine RED/GREEN; preserve prior failures and exact source/artifact identities",
+    "No new runtime dependency, SDK algorithm duplication, unknown plugin, JDK download, source fallback or customer-store operation",
+    "No benchmark measurements without root-coordinated quiet admission; full matrix/counts remain unchanged",
+    "Codex predecessors frozen/idle, exact handoff manifests retained",
+    "Do not edit user formatting/CI/.agents or another active lane"
+  ],
+  "phase_seven_complete": false,
+  "quiet_window_decision": {
+    "operator_choice": "After RN Android is complete",
+    "status": "accepted measurements held until RN Android completion and explicit coordinated admission",
+    "does_not_authorize": "Stopping unrelated user workloads or activating unapproved compiler dependencies"
+  },
+  "security_remediation": {
+    "id": "7518debe-cf5c-4d38-8e40-52dad61e663b",
+    "task": "Implement approved SPEC0034/TC0038 pure build guards and embedded scanner with TDD; prepare exact quarantined remediation closure and compiler fork applicability evidence",
+    "owned": [
+      "bindings/react-native/tools/security/**",
+      "new separately indexed security remediation follow-up evidence",
+      "target/phase-seven-security-remediation/**"
+    ],
+    "constraints": "Prep approved at1915c25 with6b16bf6 clarifications; no Gradle/compiler activation, no RN controller edits, no unreviewed coordinate execution or inferred residual acceptance"
+  },
+  "next_phase_decision": "After Phase7, two clean Opus5.5 reviews and delegated coverage: propose next phase from verified gaps; no defined roadmap Phase8 yet",
+  "repository_assembler_correction": {
+    "id": "a010f2b1-c783-4760-bed0-5f160b418926",
+    "status": "DEF0028 implemented; root16tests pass normal and optimized, exact874file real repository verifies; compilation held",
+    "evidence": "phase-seven-rn-def-0028-root-verification.json"
+  },
+  "benchmark_preflight_correction": {
+    "id": "e12f986c-4329-4936-822c-466c82878956",
+    "status": "DEF0029 implemented; root93tests pass normal and optimized; focused independent review passes; no measurements",
+    "constraints": "No measurements or source/artifact relabelling; historical captures immutable",
+    "evidence": "phase-seven-browser-preflight-verification.json"
+  }
+}

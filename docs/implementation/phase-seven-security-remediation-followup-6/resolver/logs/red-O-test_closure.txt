@@ -1,0 +1,31 @@
+EF
+======================================================================
+ERROR: test_import_bom_is_recorded_as_metadata_requirement (__main__.NamespaceAgnostic.test_import_bom_is_recorded_as_metadata_requirement)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-security-remediation/tools/test_closure.py", line 47, in test_import_bom_is_recorded_as_metadata_requirement
+    C.imports.clear()
+    ^^^^^^^^^
+AttributeError: module 'closure' has no attribute 'imports'
+
+======================================================================
+FAIL: test_pom_without_xmlns_keeps_deps_licenses_parent (__main__.NamespaceAgnostic.test_pom_without_xmlns_keeps_deps_licenses_parent)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-security-remediation/tools/test_closure.py", line 40, in test_pom_without_xmlns_keeps_deps_licenses_parent
+    self.assertEqual([(d['g'], d['a'], d['v']) for d in model['deps']], [('x', 'dep', '2')], ns or 'no-ns')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: [] != [('x', 'dep', '2')]
+
+Second list contains 1 additional elements.
+First extra element 0:
+('x', 'dep', '2')
+
+- []
++ [('x', 'dep', '2')] : no-ns
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.003s
+
+FAILED (failures=1, errors=1)
+exit=1

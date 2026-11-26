@@ -1,0 +1,35 @@
+[
+  {
+    "name": "metro-bundle",
+    "argv": [
+      "sandbox-exec",
+      "-p",
+      "(version 1)(allow default)(deny network*)",
+      "node",
+      "node_modules/react-native/cli.js",
+      "bundle",
+      "--platform",
+      "ios",
+      "--dev",
+      "false",
+      "--minify",
+      "false",
+      "--reset-cache",
+      "--entry-file",
+      "index.js",
+      "--bundle-output",
+      "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/ios-build-a/main.jsbundle.js",
+      "--sourcemap-output",
+      "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/ios-build-a/main.jsbundle.js.map",
+      "--assets-dest",
+      "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/ios-build-a/assets"
+    ],
+    "cwd": "/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-phase7-rn-consumer-v8cue5dl",
+    "environment_overrides": {
+      "TMPDIR": "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/ios-build-a/tmp/",
+      "NODE_ENV": "production"
+    },
+    "exit_code": 1,
+    "elapsed_s": 5.755
+  }
+]

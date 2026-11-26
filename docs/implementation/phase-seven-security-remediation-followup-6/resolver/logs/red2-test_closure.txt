@@ -1,0 +1,19 @@
+..E
+======================================================================
+ERROR: test_properties_resolve_without_and_with_namespace (__main__.NamespaceAgnostic.test_properties_resolve_without_and_with_namespace)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-security-remediation/tools/test_closure.py", line 49, in test_properties_resolve_without_and_with_namespace
+    model = self.run_with(files)('x', 'child', '1')
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-security-remediation/tools/closure.py", line 77, in model
+    base = model(text(parent, 'groupId'), text(parent, 'artifactId'), text(parent, 'version'))
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-security-remediation/tools/closure.py", line 80, in model
+    props[p.tag.split('}')[1]] = (p.text or '').strip()
+          ~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.004s
+
+FAILED (errors=1)
+exit=1

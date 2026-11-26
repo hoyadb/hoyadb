@@ -1,0 +1,64 @@
+name: Documentation
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: documentation
+  cancel-in-progress: false
+
+jobs:
+  build:
+    if: github.ref == 'refs/heads/main'
+    runs-on: [self-hosted, macOS, X64, hoyadb-native-reviewed]
+    environment: documentation-build
+    concurrency:
+      group: native-reviewed
+      cancel-in-progress: false
+    timeout-minutes: 180
+    permissions:
+      contents: read
+      pages: read
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
+          submodules: false
+      - name: Verify and build the complete public documentation
+        shell: bash
+        run: |
+          set -euo pipefail
+          cargo fetch --locked
+          cargo fetch --manifest-path examples/Cargo.toml --locked
+          cargo fetch --manifest-path crates/hoyadb-native/Cargo.toml --locked
+          cargo fetch --manifest-path crates/hoyadb-web/Cargo.toml --locked
+          npm ci --offline --ignore-scripts --no-audit --no-fund
+          python3 docs/public/verify.py
+          python3 docs/public/build.py
+          node docs/public/browser-check.mjs
+          python3 docs/public/build.py --skip-rustdoc
+          touch docs/public/dist/.nojekyll
+      - uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5.0.0
+      - uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3.0.1
+        with:
+          path: docs/public/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy verified documentation
+        id: deployment
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4.0.5

@@ -1,0 +1,36 @@
+{
+  "androidDebug": {
+    "components": 87,
+    "failures": 0,
+    "removed": [
+      "com.squareup.okio:okio:2.9.0"
+    ],
+    "added": [
+      "com.squareup.okio:okio-jvm:3.4.0",
+      "com.squareup.okio:okio:3.4.0"
+    ]
+  },
+  "androidRelease": {
+    "components": 87,
+    "failures": 0,
+    "removed": [
+      "com.squareup.okio:okio:2.9.0"
+    ],
+    "added": [
+      "com.squareup.okio:okio-jvm:3.4.0",
+      "com.squareup.okio:okio:3.4.0"
+    ]
+  },
+  "kotlinSdkRuntime": {
+    "components": 2,
+    "failures": 0,
+    "removed": [],
+    "added": []
+  },
+  "nativeBuildTools": {
+    "components": 145,
+    "failures": 0,
+    "removed": [],
+    "added": []
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "argv": [
+    "sandbox-exec",
+    "-p",
+    "(version 1)(allow default)(deny network*)",
+    "pod",
+    "install",
+    "--no-repo-update"
+  ],
+  "cwd": "/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-phase7-rn-consumer-v8cue5dl/ios",
+  "environment_overrides": {
+    "CP_HOME_DIR": "/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-phase7-rn-consumer-v8cue5dl/.pod-home-offline-a",
+    "CP_CACHE_DIR": "/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-phase7-rn-consumer-v8cue5dl/.pod-cache-offline-a",
+    "RCT_USE_PREBUILT_RNCORE": "1",
+    "RCT_TESTONLY_RNCORE_TARBALL_PATH": "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-activation/ios/react-native-artifacts-0.86.3-reactnative-core-debug.tar.gz",
+    "RCT_USE_RN_DEP": "1",
+    "RCT_USE_LOCAL_RN_DEP": "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-activation/ios/react-native-artifacts-0.86.3-reactnative-dependencies-debug.tar.gz",
+    "HERMES_ENGINE_TARBALL_PATH": "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-activation/ios/hermes-ios-250829098.0.17-hermes-ios-debug.tar.gz",
+    "RCT_BUILD_HERMES_FROM_SOURCE": "false",
+    "RCT_HERMES_V1_ENABLED": "1",
+    "RCT_SYMBOLICATE_PREBUILT_FRAMEWORKS": "0",
+    "RCT_NEW_ARCH_ENABLED": "1",
+    "RCT_NO_LAUNCH_PACKAGER": "1",
+    "COCOAPODS_DISABLE_STATS": "true"
+  },
+  "sandbox_probe": "Errno::EPERM",
+  "archives_double_hash_checked": {
+    "react-native-artifacts-0.86.3-reactnative-core-debug.tar.gz": "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-activation/ios/react-native-artifacts-0.86.3-reactnative-core-debug.tar.gz",
+    "react-native-artifacts-0.86.3-reactnative-dependencies-debug.tar.gz": "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-activation/ios/react-native-artifacts-0.86.3-reactnative-dependencies-debug.tar.gz",
+    "hermes-ios-250829098.0.17-hermes-ios-debug.tar.gz": "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-activation/ios/hermes-ios-250829098.0.17-hermes-ios-debug.tar.gz"
+  },
+  "loaded_tool_files_hashed": 599,
+  "preserved_previous_locks_sha256": {
+    "Podfile.lock": "1457ebaec29445b91494c9e0c62049db8189e5f413641a6a082781461bd4e220",
+    "Pods/Manifest.lock": "1457ebaec29445b91494c9e0c62049db8189e5f413641a6a082781461bd4e220"
+  },
+  "previous_pods_tree": "/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-phase7-rn-consumer-v8cue5dl/ios/Pods-before-offline-a",
+  "exit_code": 1,
+  "approved_node_source_differences": {},
+  "cp_home_files": [],
+  "podfile_lock_sha256": "1457ebaec29445b91494c9e0c62049db8189e5f413641a6a082781461bd4e220"
+}

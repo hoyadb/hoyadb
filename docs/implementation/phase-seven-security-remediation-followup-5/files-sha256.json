@@ -1,0 +1,18 @@
+{
+ "README.md": "c3d61b4d962abd8fb30f307f01e1d32250b2c1cf9eb8cae813ebe560847574d8",
+ "final-green/green-run-identity.json": "96db535dc2d852c16fd1c516094d0cd2cd4ffb2f1f7db328a6d15e6d57d72257",
+ "final-green/green_identity.py.txt": "e2cf428b15417db0d64ac0ba41c3a7f2d63bda7f67b247304831043bd1eee7e3",
+ "final-green/normal-test_embedded_scan.txt": "e41f5b5abb045943ad8cdeaf6888b08e484050b9a2af42746411083a598e0cff",
+ "final-green/normal-test_init_script_guard.txt": "383e0baf215e9424889987d6e0826730370a7d89175bac3f9d7c2fa76c2b1879",
+ "final-green/normal-test_java_properties.txt": "e88eaf6e50984f6551445a6c9e77e4ca9e63f0e93ed442e493d2682e576a4f19",
+ "final-green/normal-test_kotlin_guard.txt": "3f278e9a0d3659260bf3e59e26c3a98caef38f9866d53b26d04c45c62c76f3e9",
+ "final-green/normal-test_symbol_guard.txt": "b1e2df9be5b3e954c2d2d25efcf39cb02fe4e10735e67c33a5bb9488485289d7",
+ "final-green/optimized-test_embedded_scan.txt": "1ab5546329c2181a220edbbeaf99fbda859d171835676a99754b7a1dbe40cab1",
+ "final-green/optimized-test_init_script_guard.txt": "df9561bfe4b17e0102bbeffafe70223d77966f4af2e504901a54e57f0c10732e",
+ "final-green/optimized-test_java_properties.txt": "c10ceef375d8373ad71f2dddce32d1f09c348648fa3c4c5effe52ef4d33f1f62",
+ "final-green/optimized-test_kotlin_guard.txt": "f562682910958127163111043f1d667788f7b070ec2ee995ad357a45b15a583c",
+ "final-green/optimized-test_symbol_guard.txt": "0490208e5a254f2f2e6e0f70f7a5ee55157accf27688d6887c0492cc0a5b37e0",
+ "final-manifest.json": "fc683600c208410a7765fdd87f6fe7121ed094c7730f1862e4bd1bc84aeb7b60",
+ "logs/red-O-test_kotlin_guard.txt": "afa820f98aa0f0dbe3f64216b9d307af4afdf69360ff53500601cb6f2e670c06",
+ "logs/red-test_kotlin_guard.txt": "21e2b4829f4bf9dc23679254d93b12311b169fd47d84dbc2ffb459ca0aa80361"
+}

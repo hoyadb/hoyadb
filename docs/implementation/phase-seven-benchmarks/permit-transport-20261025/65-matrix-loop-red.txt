@@ -1,0 +1,182 @@
+TAP version 13
+# Subtest: P01 cohort flow uses exact warm protocol then closes and proves cleanup before acceptance
+ok 1 - P01 cohort flow uses exact warm protocol then closes and proves cleanup before acceptance
+  ---
+  duration_ms: 60.928216
+  type: 'test'
+  ...
+# Subtest: P01 a failed sample remains failed evidence while close and cleanup still execute
+ok 2 - P01 a failed sample remains failed evidence while close and cleanup still execute
+  ---
+  duration_ms: 29.352676
+  type: 'test'
+  ...
+# Subtest: P01 quiet rejection starts no worker or fixture
+ok 3 - P01 quiet rejection starts no worker or fixture
+  ---
+  duration_ms: 3.637272
+  type: 'test'
+  ...
+# Subtest: P02 cold flow sends READY before full proof, keeps one measured sample and retires the worker before finish
+ok 4 - P02 cold flow sends READY before full proof, keeps one measured sample and retires the worker before finish
+  ---
+  duration_ms: 14.07071
+  type: 'test'
+  ...
+# Subtest: P02 failed cold open keeps failed evidence without a fabricated sample
+ok 5 - P02 failed cold open keeps failed evidence without a fabricated sample
+  ---
+  duration_ms: 2.513223
+  type: 'test'
+  ...
+# Subtest: P03 finish documents carry the retired fixture footprint separately from validated lifecycle
+ok 6 - P03 finish documents carry the retired fixture footprint separately from validated lifecycle
+  ---
+  duration_ms: 9.992005
+  type: 'test'
+  ...
+# Subtest: N08 page loop runs exactly the parent-permitted sequence with permit coordinates and stops on none
+not ok 7 - N08 page loop runs exactly the parent-permitted sequence with permit coordinates and stops on none
+  ---
+  duration_ms: 16.729038
+  type: 'test'
+  location: '/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/javascript/benchmark/flow.test.mjs:13:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+    + []
+    - [
+    -   'next',
+    -   'cold:{"engine":"memory","operation":"create","n":0,"run":1,"worker_id":"cold:1"}',
+    -   'next',
+    -   'warm:{"engine":"memory","cohort":0,"run":1,"worker_id":"w:1"}',
+    -   'next'
+    - ]
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0: 'next'
+    1: 'cold:{"engine":"memory","operation":"create","n":0,"run":1,"worker_id":"cold:1"}'
+    2: 'next'
+    3: 'warm:{"engine":"memory","cohort":0,"run":1,"worker_id":"w:1"}'
+    4: 'next'
+  actual:
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///Users/boristacyniak/Projects/alocasia/hoyadb/bindings/javascript/benchmark/flow.test.mjs:13:319)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: N08 a failed or rejected flow stops the loop without replay or another permit request
+not ok 8 - N08 a failed or rejected flow stops the loop without replay or another permit request
+  ---
+  duration_ms: 7.394023
+  type: 'test'
+  location: '/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/javascript/benchmark/flow.test.mjs:14:1'
+  failureType: 'testCodeFailure'
+  error: "Cannot read properties of null (reading 'stopped')"
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    TestContext.<anonymous> (file:///Users/boristacyniak/Projects/alocasia/hoyadb/bindings/javascript/benchmark/flow.test.mjs:14:444)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: N08 unknown permit kinds or malformed replies stop before any flow
+not ok 9 - N08 unknown permit kinds or malformed replies stop before any flow
+  ---
+  duration_ms: 4.739235
+  type: 'test'
+  location: '/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/javascript/benchmark/flow.test.mjs:15:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+    + []
+    - [
+    -   'next'
+    - ]
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0: 'next'
+  actual:
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///Users/boristacyniak/Projects/alocasia/hoyadb/bindings/javascript/benchmark/flow.test.mjs:15:325)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: P01 transport batches original proof lines and sends exact controller coordinates
+ok 10 - P01 transport batches original proof lines and sends exact controller coordinates
+  ---
+  duration_ms: 111.761548
+  type: 'test'
+  ...
+# Subtest: P01 controller rejection remains observable and never auto-retries
+ok 11 - P01 controller rejection remains observable and never auto-retries
+  ---
+  duration_ms: 4.277207
+  type: 'test'
+  ...
+# Subtest: P01 unadmitted run cannot emit proof or samples and oversized frame rejects before fetch
+ok 12 - P01 unadmitted run cannot emit proof or samples and oversized frame rejects before fetch
+  ---
+  duration_ms: 20.052239
+  type: 'test'
+  ...
+# Subtest: P02 cold transport keeps ten-worker coordinates and endpoint stream separate from warm
+ok 13 - P02 cold transport keeps ten-worker coordinates and endpoint stream separate from warm
+  ---
+  duration_ms: 3.230702
+  type: 'test'
+  ...
+# Subtest: P03 resource transport admits one exact untimed run and returns the controller acknowledgement
+ok 14 - P03 resource transport admits one exact untimed run and returns the controller acknowledgement
+  ---
+  duration_ms: 3.491569
+  type: 'test'
+  ...
+# Subtest: N04 page permit request is the exact empty POST and returns the controller reply unchanged
+not ok 15 - N04 page permit request is the exact empty POST and returns the controller reply unchanged
+  ---
+  duration_ms: 16.013625
+  type: 'test'
+  location: '/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/javascript/benchmark/http.test.mjs:12:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+    + null
+    - {
+    -   reason: 'timeout',
+    -   status: 'none'
+    - }
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    status: 'none'
+    reason: 'timeout'
+  actual: ~
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///Users/boristacyniak/Projects/alocasia/hoyadb/bindings/javascript/benchmark/http.test.mjs:12:266)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+1..15
+# tests 15
+# suites 0
+# pass 11
+# fail 4
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1584.154799

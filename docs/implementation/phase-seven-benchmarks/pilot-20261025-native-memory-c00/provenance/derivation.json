@@ -1,0 +1,54 @@
+{
+ "byte_identical_to_original": [
+  "capture/build.txt",
+  "capture/manifest.json",
+  "capture/parent.console.txt",
+  "capture/parent.control",
+  "capture/parent.wall-end.txt",
+  "capture/parent.wall-start.txt",
+  "capture/warm-memory-00-1-config.json",
+  "capture/warm-memory-00-1-raw.json",
+  "capture/warm-memory-00-2-config.json",
+  "capture/warm-memory-00-2-raw.json",
+  "capture/warm-memory-00-3-config.json",
+  "capture/warm-memory-00-3-raw.json",
+  "capture/warm-memory-00-4-config.json",
+  "capture/warm-memory-00-4-raw.json",
+  "capture/warm-memory-00-5-config.json",
+  "capture/warm-memory-00-5-raw.json",
+  "driver/80-pilot-readiness-hashes.json",
+  "driver/admit-one.sh",
+  "driver/observe.sh"
+ ],
+ "derived": {
+  "capture/parent.observations.txt": {
+   "derived_sha256": "9485a44138b455a72af553715dbd5b8ab3d9aeaaf202b18209ec8838f5d812eb",
+   "lines": 550,
+   "original_sha256": "37b9af4ba36618b697984b99e1c9be5a7209b106c33db11d5cb33ae43a83c756"
+  },
+  "driver/81-pilot-environment-before-go.txt": {
+   "derived_sha256": "f7dec92afe3cea9c9102cd53194c007047735f2d64aabc4f7f1d039e77fb6525",
+   "lines": 70,
+   "original_sha256": "3157972824a32aea1dfbdfc84cb09a8051471acf4e67fb9ca0860d8a9741b452"
+  }
+ },
+ "format": 1,
+ "original_cut": {
+  "files": 22,
+  "files_sha256_json_sha256": "a128871f307782f0ead73df653d273994b859325f4785f661d2fa95d06438886",
+  "location": "target/phase-seven-browser-bench/opus/pilot-20261025-native-memory-c00-unsanitized-docs-cut (local, outside version control)"
+ },
+ "purpose": "privacy/data-minimization view for version control; benchmark records unchanged",
+ "rewritten": {
+  "README.md": {
+   "note": "authored text revised to remove an unrelated project name and to distinguish byte-identical records from sanitized views",
+   "original_sha256": "c238175668b601df65d4c8ab26e488950e78e319b0011e4cc0e8b491ac61f7b7"
+  }
+ },
+ "sanitizer": {
+  "command": "python3 -I sanitize_environment.py <original> <derived>",
+  "path": "target/phase-seven-browser-bench/opus/sanitize_environment.py (local, outside version control; contains unrelated-project match patterns)",
+  "sha256": "4c83e5eefc6949fdd70092eb8d63c7f8a6e08b3028cd1b7cc3b18aca387c248c",
+  "transformation": "line-preserving: in ps lines keep PID, %CPU and elapsed and replace the external command with a marked category (task-owned benchmark commands kept exact); replace listener process names/addresses with marked categories; replace booted simulator identifier; system binaries keep basename only, marked when the original capture had cut the path; all other lines (timestamps, load, pmset, battery, CPU/memory, admission/worker chronology) unchanged"
+ }
+}

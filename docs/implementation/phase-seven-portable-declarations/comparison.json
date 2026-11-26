@@ -1,0 +1,57 @@
+{
+  "note": "Per-file comparison of extracted before/after packed tarballs built from the same mirrored sources and prebuilt WASM; only the source index.d.ts differs.",
+  "tarballs": {
+    "before": {
+      "hoyadb-client-0.1.0.tgz": {
+        "bytes": 1481367,
+        "sha256": "b1cec02df8393a7348517a8ae447340aad1f02a66e128f2a5ad491b1dd509530"
+      },
+      "hoyadb-testing-0.1.0.tgz": {
+        "bytes": 9465,
+        "sha256": "808802a4b4e0d341a3d0fbc2fce38d535d5ad3ff12e464e18b32a082a8d5d9f1"
+      }
+    },
+    "after": {
+      "hoyadb-client-0.1.0.tgz": {
+        "bytes": 1481408,
+        "sha256": "fb710c70c87cbc8f327d7ee2b97b6eb4365ed25c63c6938c25553b51124c17ad"
+      },
+      "hoyadb-testing-0.1.0.tgz": {
+        "bytes": 9465,
+        "sha256": "808802a4b4e0d341a3d0fbc2fce38d535d5ad3ff12e464e18b32a082a8d5d9f1"
+      }
+    }
+  },
+  "historical_shared_tarballs_sha256": {
+    "hoyadb-client-0.1.0.tgz": "b1cec02df8393a7348517a8ae447340aad1f02a66e128f2a5ad491b1dd509530",
+    "hoyadb-testing-0.1.0.tgz": "808802a4b4e0d341a3d0fbc2fce38d535d5ad3ff12e464e18b32a082a8d5d9f1"
+  },
+  "file_count": {
+    "before": 105,
+    "after": 105
+  },
+  "same_file_set": true,
+  "changed": {
+    "client/package/index.d.ts": {
+      "before": {
+        "bytes": 11579,
+        "sha256": "0fb04bd3b8bd2dd639215e9299816c6eddd999d81a8aab749e41625390ccd151"
+      },
+      "after": {
+        "bytes": 11725,
+        "sha256": "4b2d759489e1fa83a4738153f59a597c6002e147e3d9dddcd099eb2e3aa9391c"
+      }
+    }
+  },
+  "non_declaration_files": 100,
+  "non_declaration_identical": true,
+  "declaration_files_identical_except_changed": [
+    "client/package/src/wasm/hoyadb_web.d.ts",
+    "client/package/src/wasm/hoyadb_web_bg.wasm.d.ts",
+    "client/package/web.d.ts",
+    "testing/package/index.d.ts"
+  ],
+  "mirror_source_deltas": [
+    "bindings/javascript/client/index.d.ts"
+  ]
+}

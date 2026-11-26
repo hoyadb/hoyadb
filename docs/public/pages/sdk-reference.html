@@ -1,0 +1,204 @@
+<h2 id="application">Application API</h2>
+<p>Start with <a href="getting-started.html">the complete JavaScript app</a>. The public browser entry and <code>@hoyadb/client/node</code> open builder-branded schemas with plain values. <code>@hoyadb/client/host</code> retains the tagged advanced API below. A numeric version alone does not change that API.</p>
+<table><thead><tr><th>Surface</th><th>Use</th></tr></thead><tbody>
+<tr><td><code>defineSchema</code>, <code>table</code>, <code>column</code>, <code>relation</code></td><td>Declare an immutable application schema. <code>applicationSchema</code> deliberately converts an existing wire schema.</td></tr>
+<tr><td><code>openDatabase</code></td><td>Open memory with automatic runtime bootstrap. Browser filename storage requires a caller-owned key. Node's default runtime supports memory.</td></tr>
+<tr><td><code>db.query</code>, <code>db.related</code></td><td>Lazy queries with symbolic operators, plain predicates and flat rows; to-one relation getters are lazy queries.</td></tr>
+<tr><td><code>query.observe</code>, <code>observeCount</code></td><td>Return an unsubscribe function immediately; await its <code>ready</code> property for registration. Call it to dispose.</td></tr>
+<tr><td><code>db.table(name)</code></td><td>Insert rows or obtain a handle with <code>findById</code>. A handle exposes asynchronous <code>fetch</code>, partial <code>update</code> and <code>remove</code>. Fields named update remain data.</td></tr>
+<tr><td><code>defineCommand</code>, <code>db.command</code></td><td>Define a reusable named handler, bind it to an explicit owner, then execute plain args. <code>executeWithReceipt</code> also returns the queue key.</td></tr>
+<tr><td><code>observeOutcome</code>, <code>observeStatus</code>, <code>observeProgress</code></td><td>Subscribe to plain values with the same immediate unsubscribe/ready lifetime.</td></tr>
+<tr><td><code>configureEntities</code>, <code>reconfigureEntities</code></td><td>Explicit persistent entity opt-in; unconfigured tables stay local.</td></tr>
+<tr><td><code>preparePush</code>, <code>receive</code></td><td>Manually exchange plain envelope/outcome arrays through the real core codec.</td></tr>
+<tr><td><code>pendingReconciliations</code>, <code>reconcile</code></td><td>Read persisted kind, created-ID map and outcome. Command mappings remain application-defined. Missing entity-created identity mappings are filled before core validation.</td></tr>
+<tr><td><code>sync</code>, <code>startSync</code>, <code>stopSync</code></td><td>Await a push/reconcile/pull pass, or start background push plus periodic pull. Awaited errors reject; background failures reach the redacted sink, while Busy pull ticks are skipped.</td></tr>
+<tr><td><code>rollback</code>, <code>cancel</code>, <code>forget</code>, <code>reset</code>, <code>close</code></td><td>Use existing core recovery rules and explicit lifetime cleanup.</td></tr>
+<tr><td><code>db.raw</code></td><td>Advanced tagged owner for operations outside the application convenience API.</td></tr>
+</tbody></table>
+<p>All exact signatures are included in <a href="sdk-declarations.html">the generated declarations</a>. Swift and Kotlin retain their existing native surfaces; the JavaScript convenience names are not invented aliases for those SDKs.</p>
+<h2>Advanced tagged host reference</h2>
+<h2 id="overview">SDK reference</h2>
+<p>This page describes what each public JavaScript host method does. Exact signatures are generated from the
+declarations in <a href="sdk-declarations.html">SDK declarations</a>; the source of truth is
+<a href="source:packages/client/index.d.ts">index.d.ts</a>. Swift, Kotlin, React Native and the C ABI
+expose the same operations; see their generated pages: <a href="swift-reference.html">Swift</a>,
+<a href="kotlin-reference.html">Kotlin</a>, <a href="react-native-reference.html">React Native</a> and
+<a href="native-reference.html">native</a>. Every method that talks to the core returns a Promise and
+rejects with an <code>Error</code> carrying a static <code>kind</code>.</p>
+
+<h2 id="module">Module functions</h2>
+<dl>
+  <dt><code>createRuntime(channel, options)</code></dt>
+  <dd>Wraps a channel to the core, an object with <code>open(input, key)</code> and <code>call(input)</code>. Use the
+  optional <code>namespace</code> entropy source when the host has no default.</dd>
+  <dt><code>createWebRuntime(options)</code> (browser entry only)</dt>
+  <dd>Starts or reuses the dedicated worker that owns OPFS storage. Pass <code>worker</code> to supply your own.</dd>
+  <dt><code>openDatabase(options)</code></dt>
+  <dd>Creates a <code>Database</code> with the host options and opens it. Equivalent to <code>new Database(runtime,
+  options)</code> followed by <code>open(options)</code>.</dd>
+  <dt><code>defineSchema(schema)</code></dt>
+  <dd>Returns an immutable copy of a schema declaration: a version and tables of columns and relations
+  (<code>ToOne</code>, <code>HasMany</code>, <code>ManyToMany</code>).</dd>
+  <dt><code>query(table, source)</code></dt>
+  <dd>Builds a detached <code>Query</code> to pass to <code>db.fetch</code> or <code>Scope.fetch</code>. It has no
+  database, so call <code>fetch</code> and <code>observe</code> on <code>db.query(table)</code> instead.</dd>
+  <dt><code>j</code></dt>
+  <dd>Builders for tagged cells and JSON values: <code>null</code>, <code>boolean</code>, <code>string</code>,
+  <code>reference</code>, <code>integer</code>, <code>timestamp</code>, <code>float</code>, <code>array</code>,
+  <code>object</code>.</dd>
+  <dt><code>copyOwned(value)</code>, <code>immutableOwned(value)</code></dt>
+  <dd>Deep-copy a value, or deep-copy and freeze it, so later caller mutation cannot affect the SDK.</dd>
+</dl>
+
+<h2 id="runtime">Runtime</h2>
+<dl>
+  <dt><code>createMemoryStore()</code>, <code>dropMemoryStore(store)</code></dt>
+  <dd>Create or release a retained memory store whose rows survive owner close and reopen. A store belongs to one
+  runtime and allows one open owner at a time.</dd>
+  <dt><code>decodeJson(body)</code>, <code>encodeJson(value)</code></dt>
+  <dd>Parse or produce wire JSON with the core codec, so integers keep their full width.</dd>
+  <dt><code>call</code>, <code>open</code>, <code>namespace</code>, <code>jitter</code></dt>
+  <dd>Low-level channel access, used by <code>Database</code>.</dd>
+</dl>
+
+<h2 id="lifecycle">Database lifecycle</h2>
+<dl>
+  <dt><code>open(options)</code></dt>
+  <dd>Opens the engine with the schema and any authored <code>migrations</code>. Store options are
+  <code>capacity</code>, <code>history</code> and the retry delays. If a <code>transport</code> is given,
+  automatic sync starts.</dd>
+  <dt><code>close()</code></dt>
+  <dd>Stops sync, invalidates subscriptions and stale callbacks, and releases the owner.</dd>
+  <dt><code>schema()</code>, <code>protection()</code>, <code>diagnostics()</code></dt>
+  <dd>Return the active schema, the storage protection (<code>encrypted</code>, <code>cipher</code>,
+  <code>version</code>, <code>backup</code>) and bounded, payload-free counters.</dd>
+  <dt><code>owner</code></dt>
+  <dd>The open owner handle, or <code>null</code> when closed.</dd>
+</dl>
+
+<h2 id="data">Reading and writing</h2>
+<dl>
+  <dt><code>query(table)</code>, <code>related(table, id, relation)</code></dt>
+  <dd>Build a <code>Query</code> bound to this database. <code>where</code>, <code>whereIn</code>,
+  <code>orderBy</code> and <code>limit</code> refine it; <code>fetch</code> runs it, and <code>observe</code>
+  subscribes to it.</dd>
+  <dt><code>fetch(query)</code></dt>
+  <dd>Runs a query or query data and returns the complete row list, or fails with <code>LimitExceeded</code>.</dd>
+  <dt><code>insert(table, fields)</code>, <code>replace(table, id, fields)</code>, <code>remove(table, id)</code></dt>
+  <dd>Write one row. <code>replace</code> supplies the whole row; <code>remove</code> resolves to whether a row
+  existed.</dd>
+  <dt><code>batch(writes)</code></dt>
+  <dd>Applies several <code>insert</code>, <code>replace</code> and <code>remove</code> writes atomically and returns
+  the committed changes.</dd>
+  <dt><code>link</code>, <code>unlink</code></dt>
+  <dd>Add or remove a many-to-many association through its join table.</dd>
+</dl>
+
+<h2 id="observe">Observation</h2>
+<dl>
+  <dt><code>observe(query, callback, mode, columns)</code>, <code>observeData(...)</code></dt>
+  <dd>Subscribe to a query. These two are the same operation. Modes are <code>membership</code>,
+  <code>columns</code> and <code>count</code>. The callback receives the snapshot and later changes in order; a
+  returned Promise is not awaited, and a throw retires the listener.</dd>
+  <dt><code>unsubscribe(handle)</code></dt>
+  <dd>Stops any data, status, outcome or progress subscription.</dd>
+  <dt><code>drain(now)</code>, <code>refresh()</code></dt>
+  <dd>Deliver pending events now, or recompute observations. Managed observations do both automatically.</dd>
+  <dt><code>observationStats()</code></dt>
+  <dd>Counts of observation groups, observers and materialized rows.</dd>
+</dl>
+
+<h2 id="commands">Commands</h2>
+<dl>
+  <dt><code>execute(definition, args, handler, options)</code></dt>
+  <dd>Runs a named command handler with a <code>Scope</code> and commits its writes once, queuing the command
+  durably. Resolves to its <code>key</code> and handler <code>result</code>. Pass an abort <code>signal</code>
+  in <code>options</code> to cancel before commit.</dd>
+  <dt><code>Scope</code></dt>
+  <dd>The handler's view: <code>args</code>, the captured <code>context</code>, and <code>fetch</code>,
+  <code>insert</code>, <code>replace</code>, <code>remove</code>, <code>batch</code>, <code>link</code> and
+  <code>unlink</code> staged until the handler returns. Rows a command creates need <code>local:</code> IDs.</dd>
+</dl>
+
+<h2 id="sync">Queue and sync</h2>
+<dl>
+  <dt><code>startSync(transport, reconcile)</code>, <code>stopSync()</code>, <code>sync()</code></dt>
+  <dd>Start or stop automatic push cycles, or run one now. Only the transport's <code>push</code> is used.
+  <code>reconcile</code> receives each pending outcome and returns its plan. A conflicting plan is not retried in
+  the same pass.</dd>
+  <dt><code>preparePush(now, jitter)</code></dt>
+  <dd>Freezes the next eligible writes. Returns their <code>envelopes</code>, the next deadline and whether more
+  remain.</dd>
+  <dt><code>receiveWire(body)</code>, <code>receive(key, outcome)</code>, <code>receiveEntity(...)</code></dt>
+  <dd>Record the backend's answers: a whole outcome array, or one command or entity outcome. An outcome of
+  <code>null</code> records a receipt without a final result.</dd>
+  <dt><code>requestRedelivery(key, now)</code></dt>
+  <dd>Re-arms an acknowledged command whose final outcome was lost, keeping its frozen bytes.</dd>
+  <dt><code>pendingReconciliations()</code></dt>
+  <dd>Lists outcomes still waiting for the application's decision.</dd>
+  <dt><code>reconcile(key, plan)</code>, <code>reconcileGuarded(key, plan, guards)</code></dt>
+  <dd>Confirm an applied or corrected command. The plan's <code>mappings</code> name the server ID of every local
+  ID it created; its <code>writes</code> carry authoritative corrections. Guards give the expected current value of
+  each row written outside the command. A correction that cannot be proven safe fails with
+  <code>RollbackConflict</code> and changes nothing.</dd>
+  <dt><code>rollback(key)</code>, <code>cancel(key)</code>, <code>forget(key)</code></dt>
+  <dd>Undo a processed rejection, withdraw queued, sent or rejected work, or remove finished history. A cancel inverse conflict records Cancelled and keeps recovery data even though it returns RollbackConflict. Rollback refuses
+  with <code>RollbackConflict</code> if later edits would be overwritten.</dd>
+  <dt><code>queueStatus()</code>, <code>observeStatus(callback)</code>, <code>observeOutcome(key, callback)</code></dt>
+  <dd>Inspect queued writes: state, attempts, the next deadline, and <code>awaiting_key</code> when an earlier
+  write to the same row must resolve first. Or subscribe to status or to one command's outcome.</dd>
+</dl>
+
+<h2 id="entities">Entity sync</h2>
+<dl>
+  <dt><code>configureEntities(scope, tables)</code>, <code>reconfigureEntities(scope, tables)</code></dt>
+  <dd>Opt tables into per-field entity sync, or change that configuration.</dd>
+  <dt><code>patch</code>, <code>entityBatch</code>, <code>entityLink</code>, <code>entityUnlink</code></dt>
+  <dd>Local entity edits that record stamped field changes for push.</dd>
+  <dt><code>pullOnce(transport)</code>, <code>syncProgress()</code>, <code>observeProgress(callback)</code></dt>
+  <dd>Apply backend pages until complete, and report bootstrap progress.</dd>
+  <dt><code>setMergeHooks(hooks)</code></dt>
+  <dd>Per-table functions that propose a merged row, or <code>null</code>; the core validates every proposal.</dd>
+  <dt><code>reset(mode)</code></dt>
+  <dd>Restart entity sync, with <code>preserve_recovery</code> (the default) or <code>discard_recovery</code>.</dd>
+</dl>
+
+<h2 id="testing">Testing package</h2>
+<dl>
+  <dt><code>openMemoryDatabase(options)</code></dt>
+  <dd>Opens a real memory database for tests. A 32-hex <code>namespace</code> is required, and no key is allowed.</dd>
+  <dt><code>createClock(initial)</code></dt>
+  <dd>A manual clock with <code>set(value)</code>.</dd>
+  <dt><code>createFakeTransport({runtime, handlers, entityHandlers, pull})</code></dt>
+  <dd>A backend stand-in that decodes pushed envelopes with the core codec. It calls your handler for each
+  command or entity table, and records every push in <code>pushes</code>.</dd>
+</dl>
+
+<h2 id="background">Background errors</h2>
+<p>The <code>onBackgroundError</code> option receives <code>{source, kind, token}</code> for failures outside an
+awaited call. The source is <code>observation</code>, <code>callback</code>, <code>sync</code>,
+<code>merge</code> or <code>timer</code>, and each fact is reported once per owner. Never included: messages,
+payloads, keys or rows. In the current JavaScript SDK the <code>merge</code> source is declared but not emitted;
+merge-hook failures reject <code>pullOnce</code>. A throwing callback is reported with kind
+<code>CallbackFailure</code>.</p>
+
+<h2 id="naming">Naming across SDKs</h2>
+<p>The SDKs share one model, but a few names differ:</p>
+<table>
+  <thead><tr><th>Concept</th><th>JavaScript</th><th>Swift</th><th>Kotlin</th></tr></thead>
+  <tbody>
+    <tr><td>Run a command</td><td><code>execute</code></td><td><code>command</code></td><td><code>command</code>, <code>startCommand</code></td></tr>
+    <tr><td>Stop automatic sync</td><td><code>stopSync</code></td><td><code>stopSync</code></td><td><code>SyncDriver.close</code></td></tr>
+    <tr><td>Status subscription</td><td><code>observeStatus</code></td><td><code>observeQueueStatus</code></td><td><code>observeStatus</code></td></tr>
+    <tr><td>Queue entries</td><td><code>commands</code></td><td><code>entries</code></td><td><code>commands</code></td></tr>
+    <tr><td>Release a memory store</td><td><code>dropMemoryStore</code></td><td><code>MemoryStore.dispose</code></td><td><code>MemoryStore.drop</code></td></tr>
+    <tr><td>Entity reset</td><td><code>reset(mode)</code></td><td>advanced <code>execute</code> only</td><td><code>reset(ResetMode)</code></td></tr>
+  </tbody>
+</table>
+
+<h2 id="planned">Planned, not implemented</h2>
+<p>SPEC-0040 specifies a per-database stop-or-discard conflict policy: <code>ConflictPolicy</code> with
+<code>set_conflict_policy</code>, the reporting operations <code>reconcile_resolving</code>,
+<code>rollback_resolving</code> and <code>discard</code>, a <code>discarded</code> queue state and an SDK
+<code>onResolution</code> callback. None of these exist in the current source. Until they ship, rollback and correction conflicts return
+<code>RollbackConflict</code> with nothing changed; cancel can retain a Cancelled state with unresolved recovery data.</p>

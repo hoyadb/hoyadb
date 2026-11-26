@@ -1,0 +1,41 @@
+Compiling find-msvc-tools v0.1.15
+   Compiling shlex v2.0.1
+   Compiling sqlcipher-src v419.0.6+sqlcipher-4.19.0-sqlite-3.53.4-libtomcrypt-1.18.2
+   Compiling vcpkg v0.2.15
+   Compiling pkg-config v0.3.34
+   Compiling smallvec v1.16.4
+   Compiling fallible-iterator v0.3.0
+   Compiling hoyadb-core v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-core)
+   Compiling fallible-streaming-iterator v0.1.9
+   Compiling bitflags v2.13.2
+   Compiling zeroize v1.9.1
+   Compiling cc v1.10.0
+   Compiling libsqlite3-sys v0.38.1 (https://github.com/rusqlite/rusqlite?rev=661107f6eb5d7477c61be1221744de3ad96c53e7#661107f6)
+   Compiling hoyadb-storage-memory v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-storage-memory)
+   Compiling rusqlite v0.40.1 (https://github.com/rusqlite/rusqlite?rev=661107f6eb5d7477c61be1221744de3ad96c53e7#661107f6)
+   Compiling hoyadb-storage-sqlite v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-storage-sqlite)
+   Compiling hoyadb-bindings v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-bindings)
+   Compiling hoyadb-native v0.1.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/native)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 11.74s
+     Running unittests src/lib.rs (bindings/native/target/debug/deps/hoyadb_native-0c600122144c2530)
+
+running 1 test
+test tests::abi_version_is_one ... FAILED
+
+failures:
+
+---- tests::abi_version_is_one stdout ----
+
+thread 'tests::abi_version_is_one' (81740551) panicked at src/lib.rs:48:9:
+assertion `left == right` failed
+  left: 0
+ right: 1
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    tests::abi_version_is_one
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `--lib`

@@ -1,0 +1,28 @@
+{
+  "argv": [
+    "swift",
+    "build",
+    "--package-path",
+    "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-phase7-consumer-s2413p0r",
+    "--scratch-path",
+    "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-native/ios-current/scratch",
+    "--triple",
+    "x86_64-apple-ios15.1-simulator",
+    "--sdk",
+    "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk",
+    "-Xswiftc",
+    "-warnings-as-errors",
+    "-Xswiftc",
+    "-Xclang-linker",
+    "-Xswiftc",
+    "-isysroot",
+    "-Xswiftc",
+    "-Xclang-linker",
+    "-Xswiftc",
+    "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk"
+  ],
+  "exit_code": 0,
+  "elapsed_s": 23.808745762100443,
+  "env_overrides": {},
+  "clean_scratch": true
+}

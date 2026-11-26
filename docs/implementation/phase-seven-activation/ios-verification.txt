@@ -1,0 +1,7 @@
+VERIFIED react-native-artifacts-0.86.3-reactnative-core-debug.tar.gz 98779707 5737
+VERIFIED react-native-artifacts-0.86.3-reactnative-dependencies-debug.tar.gz 18746275 2061
+VERIFIED hermes-ios-250829098.0.17-hermes-ios-debug.tar.gz 32748118 116
+VERIFIED react-native-artifacts-0.86.3-reactnative-core-release.tar.gz 31000150 5737
+VERIFIED react-native-artifacts-0.86.3-reactnative-dependencies-release.tar.gz 10420036 2061
+VERIFIED hermes-ios-250829098.0.17-hermes-ios-release.tar.gz 25541302 116
+ALL_SIX_ARCHIVES_VERIFIED

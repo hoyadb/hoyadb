@@ -1,0 +1,87 @@
+from pathlib import Path
+import hashlib, importlib.util, json, re, shutil, subprocess, tempfile
+root=Path('/Users/boristacyniak/Projects/alocasia/hoyadb')
+task=Path('/tmp/hoyadb-followup-20261031')
+out=root/'docs/implementation/approved-engineering-evidence'
+raw=task/'apple-provider-symbols'
+framework=root/'bindings/swift/Artifacts/HoyaNative.xcframework'
+parent_path=root/'bindings/swift/Artifacts/native-build.json'
+index_path=root/'crates/hoyadb-native/third-party/index.json'
+nm=Path('/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/x86_64-apple-darwin/bin/llvm-nm')
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+def fail(message):raise RuntimeError(message)
+old=index_path.read_bytes();index=json.loads(old);parent=json.loads(parent_path.read_bytes())
+for name,value in parent['source_sha256'].items():
+ if sha(root/name)!=value:fail('Native build source drift: '+name)
+frozen=json.loads((task/'policy-current-manifest.json').read_bytes())
+for name,value in frozen['sources'].items():
+ if sha(root/name)!=value:fail('Runtime source drift: '+name)
+raw.mkdir();out.mkdir(exist_ok=True)
+report={'scope':'Fresh imported-symbol and archive provenance for current Apple build; not runtime/platform/legal certification','old_index_sha256':hashlib.sha256(old).hexdigest(),'native_parent_sha256':sha(parent_path),'native_sources':parent['source_sha256'],'independent_runtime_manifest_sha256':sha(task/'policy-current-manifest.json'),'nm':{'path':str(nm),'sha256':sha(nm)},'commands':[],'libraries':{}}
+def run(args,label):
+ p=subprocess.run([str(x) for x in args],capture_output=True)
+ (raw/(label+'.stdout')).write_bytes(p.stdout);(raw/(label+'.stderr')).write_bytes(p.stderr)
+ report['commands'].append({'argv':[str(x) for x in args],'status':p.returncode,'stdout_sha256':hashlib.sha256(p.stdout).hexdigest(),'stderr_sha256':hashlib.sha256(p.stderr).hexdigest(),'raw_output_prefix':str(raw/label)})
+ if p.returncode:fail('Inspector failed: '+str(args)+' '+p.stderr.decode()[-1500:])
+ if p.stderr and not all(line.endswith(': no symbols') for line in p.stderr.decode().splitlines()):fail('Unrecognized inspector stderr: '+p.stderr.decode()[:1500])
+ return p.stdout.decode()
+report['nm']['version']=run([nm,'--version'],'nm-version').strip()
+report['rustc']=run(['rustc','--version','--verbose'],'rustc-version').strip()
+arches={'macos-x86_64':['x86_64'],'ios-arm64':['arm64'],'ios-arm64_x86_64-simulator':['x86_64','arm64']}
+ltc=re.compile(r'(ltc_|tomcrypt|register_cipher|register_hash|register_prng|sqlcipher_ltc)',re.I)
+extra=re.compile(r'^_(find_cipher|find_hash|cipher_descriptor|hash_descriptor|prng_descriptor|crypt_argchk|pkcs_5_alg2|hmac_init|aes_setup|rijndael_|sha1_init|sha256_init|sha512_init|fortuna_)')
+report['libtomcrypt_symbol_patterns']=[ltc.pattern,extra.pattern]
+providers={'CommonCrypto':[],'Security':[]}
+with tempfile.TemporaryDirectory(dir=task) as temp:
+ for slice_id,expected in arches.items():
+  library=framework/slice_id/'libhoyadb_native.a';relative=str(library.relative_to(framework));digest=sha(library)
+  if parent['artifact_files_sha256'].get('HoyaNative.xcframework/'+relative)!=digest:fail('Library parent mismatch: '+relative)
+  actual=run(['xcrun','lipo','-archs',library],slice_id+'-archs').split()
+  if set(actual)!=set(expected):fail('Architecture mismatch: '+repr(actual))
+  per_arch={};union={'CommonCrypto':set(),'Security':set()}
+  for arch in expected:
+   thin=library
+   if len(expected)>1:
+    thin=Path(temp)/(arch+'.a');run(['xcrun','lipo',library,'-thin',arch,'-output',thin],slice_id+'-'+arch+'-thin')
+   name=slice_id+'-'+arch
+   undefined=run([nm,'--undefined-only','--just-symbol-name',thin],name+'-undefined')
+   defined=run([nm,'--defined-only','--just-symbol-name',thin],name+'-defined')
+   def symbols(value):return {line.strip() for line in value.splitlines() if line.strip() and not line.rstrip().endswith(':')}
+   und,defs=symbols(undefined),symbols(defined)
+   found=sorted(s for s in und|defs if ltc.search(s) or extra.match(s))
+   if found:fail('Unexpected LibTomCrypt symbols: '+repr(found))
+   imports={key:sorted(s for s in und-defs if s.startswith(prefix)) for key,prefix in [('CommonCrypto',('_CC',)),('Security',('_Sec','_kSec'))]}
+   if any(not value for value in imports.values()):fail('Missing provider imports: '+repr(imports))
+   if any(s.startswith(('_CC','_Sec','_kSec')) for s in defs):fail('Provider symbols defined in archive')
+   for key,value in imports.items():union[key].update(value)
+   per_arch[arch]={'thin_sha256':sha(thin),'imported_symbols':imports,'libtomcrypt_symbols':found}
+  if sha(library)!=digest:fail('Archive changed during inspection')
+  report['libraries'][relative]={'sha256':digest,'architectures':actual,'per_arch':per_arch}
+  for key in providers:providers[key].append({'library':relative,'sha256':digest,'architectures':expected,'imported_symbols':sorted(union[key]),'libtomcrypt_symbols':0})
+# Source/toolchain inventory is unchanged, and each retained std link-input digest is checked.
+for p in index['packages']:
+ if p.get('role')=='toolchain_aggregate':
+  for item in p['verified_link_inputs']:
+   if sha(Path(item['path']))!=item['sha256']:fail('Retained toolchain input changed: '+item['path'])
+report['retained_toolchain_inputs_verified']=True
+for name,value in parent['source_sha256'].items():
+ if sha(root/name)!=value:fail('Native build source changed during inspection')
+if index_path.read_bytes()!=old or sha(nm)!=report['nm']['sha256']:fail('Input changed during capture')
+# Prove the unmodified finalizer rejects this exact fresh framework with old provider evidence.
+spec=importlib.util.spec_from_file_location('apple_notices',root/'crates/hoyadb-native/tools/apple_notices.py');notices=importlib.util.module_from_spec(spec);spec.loader.exec_module(notices)
+try:notices.finalize_framework(framework,parent_path,index_path.parent,root/'crates/hoyadb-native/Cargo.lock')
+except notices.NoticeError as error:
+ if error.reason!='stale-provider-evidence':fail('Unexpected finalizer failure: '+str(error))
+ report['old_corpus_rejection']=str(error)
+else:fail('Expected stale current provider evidence to reject')
+old_target=out/'apple-notice-index-before-20261031.json'
+with old_target.open('xb') as f:f.write(old)
+parent_target=out/'apple-native-build-parent-20261031.json'
+with parent_target.open('xb') as f:f.write(parent_path.read_bytes())
+report_target=out/'apple-provider-refresh-20261031.json'
+with report_target.open('x') as f:json.dump(report,f,indent=2);f.write('\n')
+for p in index['packages']:
+ if p['name'] in providers:p['evidence']=providers[p['name']]
+index['provider_evidence_source']={'file':str(parent_path.relative_to(root)),'sha256':sha(parent_path),'derivation':{'file':str(report_target.relative_to(root)),'sha256':sha(report_target)}}
+index_path.write_text(json.dumps(index,indent=2)+'\n')
+print(json.dumps({'old_index_sha256':report['old_index_sha256'],'new_index_sha256':sha(index_path),'parent_sha256':sha(parent_path),'evidence':str(report_target),'libraries':list(report['libraries'])},indent=2))

@@ -1,0 +1,19 @@
+   Compiling find-msvc-tools v0.1.15
+   Compiling shlex v2.0.1
+   Compiling pkg-config v0.3.34
+   Compiling sqlcipher-src v419.0.6+sqlcipher-4.19.0-sqlite-3.53.4-libtomcrypt-1.18.2
+   Compiling vcpkg v0.2.15
+   Compiling hoyadb-core v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-core)
+   Compiling bitflags v2.13.2
+   Compiling smallvec v1.16.4
+   Compiling fallible-iterator v0.3.0
+   Compiling fallible-streaming-iterator v0.1.9
+   Compiling zeroize v1.9.1
+   Compiling cc v1.10.0
+   Compiling libsqlite3-sys v0.38.1 (https://github.com/rusqlite/rusqlite?rev=661107f6eb5d7477c61be1221744de3ad96c53e7#661107f6)
+   Compiling hoyadb-storage-memory v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-storage-memory)
+   Compiling rusqlite v0.40.1 (https://github.com/rusqlite/rusqlite?rev=661107f6eb5d7477c61be1221744de3ad96c53e7#661107f6)
+   Compiling hoyadb-storage-sqlite v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-storage-sqlite)
+   Compiling hoyadb-bindings v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-bindings)
+   Compiling hoyadb-benchmark v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/native)
+    Finished `release` profile [optimized] target(s) in 1m 07s

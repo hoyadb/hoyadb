@@ -1,0 +1,27 @@
+{
+  "typescript": {
+    "path": "typescript.ts",
+    "status": "executed"
+  },
+  "react-native": {
+    "path": "react-native.mjs",
+    "status": "executed"
+  },
+  "react-native-bootstrap": {
+    "path": "react-native-bootstrap.mjs",
+    "status": "source-checked",
+    "reason": "Native TurboModule app not built; current exported symbols checked only"
+  },
+  "swift": {
+    "path": "swift/Sources/TodoGuide/main.swift",
+    "status": "executed"
+  },
+  "c": {
+    "path": "c/todo.c",
+    "status": "executed"
+  },
+  "kotlin": {
+    "path": "kotlin/TodoGuide.kt",
+    "status": "executed"
+  }
+}

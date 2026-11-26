@@ -1,0 +1,104 @@
+"""Owned RN iOS consumer build: Metro bundle -> Hermes bytecode -> xcodebuild, all network-denied.
+
+Uses only the reviewed installed graph (network-denied Pod install) and the owned consumer. Each step
+records argv, environment overrides, exit code and output; approved npm sources are hashed before and
+after. Metro cache and TMPDIR are owned/empty; no shared or remote cache. Usage: ios-build.py <label>
+"""
+from pathlib import Path
+import hashlib
+import json
+import os
+import subprocess
+import sys
+import time
+
+repo = Path(__file__).resolve().parents[2]
+stage = repo / 'target/phase-seven-rn'
+label = sys.argv[1]
+out = stage / f'ios-build-{label}'
+out.mkdir()
+consumer = Path((stage / 'owned-consumer-root.txt').read_text().strip())
+approved = repo / 'target/phase-seven-activation/npm/node_modules'
+ios = consumer / 'ios'
+sandbox = ['sandbox-exec', '-p', '(version 1)(allow default)(deny network*)']
+tmp = out / 'tmp'
+tmp.mkdir()
+derived = out / 'DerivedData'
+steps = []
+
+
+def snapshot():
+    return {str(p.relative_to(approved)): hashlib.sha256(p.read_bytes()).hexdigest()
+            for p in sorted(approved.rglob('*')) if p.is_file() and not p.is_symlink()}
+
+
+def step(name, argv, cwd, env=None, timeout=1800):
+    entry = {'name': name, 'argv': argv, 'cwd': str(cwd), 'environment_overrides': env or {}}
+    steps.append(entry)
+    started = time.monotonic()
+    try:
+        with (out / f'{name}.txt').open('w') as log:
+            p = subprocess.run(argv, cwd=cwd, env=dict(os.environ, **(env or {})), stdout=log, stderr=subprocess.STDOUT,
+                               timeout=timeout)
+        entry['exit_code'] = p.returncode
+    except subprocess.TimeoutExpired:
+        entry['timed_out'] = True
+        raise
+    finally:
+        entry['elapsed_s'] = round(time.monotonic() - started, 3)
+        (out / 'steps.json').write_text(json.dumps(steps, indent=2) + '\n')
+    if p.returncode:
+        raise RuntimeError(f'{name} exit {p.returncode}')
+
+
+probe = subprocess.run(sandbox + ['ruby', '-rsocket', '-e',
+                                  'begin; TCPSocket.new("127.0.0.1", 9); rescue => e; puts e.class; end'],
+                       stdout=subprocess.PIPE, text=True, timeout=60)
+assert probe.stdout.strip() == 'Errno::EPERM', probe.stdout
+assert (ios / 'Podfile.lock').read_bytes() == (ios / 'Pods/Manifest.lock').read_bytes()
+record = {'consumer': str(consumer), 'sandbox_probe': probe.stdout.strip(),
+          'podfile_lock_sha256': hashlib.sha256((ios / 'Podfile.lock').read_bytes()).hexdigest(),
+          'owned_package_sha256': {str(p.relative_to(consumer)): hashlib.sha256(p.read_bytes()).hexdigest()
+                                   for p in sorted((consumer / 'packages').glob('*.tgz'))},
+          'consumer_sources_sha256': {p.name: hashlib.sha256(p.read_bytes()).hexdigest()
+                                      for p in sorted(consumer.glob('*.mjs')) + [consumer / 'index.js']}}
+before = snapshot()
+try:
+    env = {'TMPDIR': str(tmp) + '/', 'NODE_ENV': 'production'}
+    step('metro-bundle', sandbox + ['node', 'node_modules/react-native/cli.js', 'bundle', '--platform', 'ios',
+                                    '--dev', 'false', '--minify', 'false', '--reset-cache', '--entry-file', 'index.js',
+                                    '--bundle-output', str(out / 'main.jsbundle.js'),
+                                    '--sourcemap-output', str(out / 'main.jsbundle.js.map'),
+                                    '--assets-dest', str(out / 'assets')], consumer, env)
+    hermesc = ios / 'Pods/hermes-engine/destroot/bin/hermesc'
+    step('hermesc', sandbox + [str(hermesc), '-emit-binary', '-max-diagnostic-width=80', '-O',
+                               '-out', str(consumer / 'main.jsbundle'), str(out / 'main.jsbundle.js')], consumer)
+    magic = (consumer / 'main.jsbundle').read_bytes()[:8]
+    record['bundle'] = {'js_sha256': hashlib.sha256((out / 'main.jsbundle.js').read_bytes()).hexdigest(),
+                        'hbc_sha256': hashlib.sha256((consumer / 'main.jsbundle').read_bytes()).hexdigest(),
+                        'hbc_magic_hex': magic.hex()}
+    # Not wrapped: SwiftPM applies its own manifest sandbox and nested sandbox_apply is refused
+    # (ios-build-b). Network denial for this step and its XPC build service is NOT proven.
+    record['xcodebuild_network_denied'] = False
+    step('xcodebuild', ['xcodebuild', '-workspace', 'HoyaConsumer.xcworkspace', '-scheme', 'HoyaConsumer',
+                                  '-configuration', 'Debug', '-sdk', 'iphonesimulator', '-arch', 'x86_64',
+                                  '-derivedDataPath', str(derived), '-disableAutomaticPackageResolution',
+                                  'ONLY_ACTIVE_ARCH=YES', 'build'], ios, {'TMPDIR': str(tmp) + '/'}, timeout=3600)
+    app = derived / 'Build/Products/Debug-iphonesimulator/HoyaConsumer.app'
+    binary = app / 'HoyaConsumer'
+    if (app / 'HoyaConsumer.debug.dylib').is_file():  # Debug builds keep app code in the debug dylib.
+        binary = app / 'HoyaConsumer.debug.dylib'
+    symbols = subprocess.run(['nm', '-gU', str(binary)], stdout=subprocess.PIPE, text=True, timeout=120).stdout
+    exports = sorted(line.split()[-1] for line in symbols.splitlines() if ' _hoyadb_' in line)
+    linked = subprocess.run(['otool', '-L', str(binary)], stdout=subprocess.PIPE, text=True, timeout=60).stdout
+    record['app'] = {'path': str(app), 'binary_sha256': hashlib.sha256(binary.read_bytes()).hexdigest(),
+                     'hoyadb_c_exports': exports, 'otool_L': linked,
+                     'embedded_files_with_hoyadb': sorted(str(p.relative_to(app)) for p in app.rglob('*hoya*'))}
+    record['result'] = 'BUILD_GREEN'
+finally:
+    after = snapshot()
+    record['approved_node_source_differences'] = {n: [before.get(n), after.get(n)] for n in before.keys() | after.keys()
+                                                  if before.get(n) != after.get(n)}
+    (out / 'build.json').write_text(json.dumps(record, indent=2) + '\n')
+assert not record['approved_node_source_differences']
+print('HOYA_RN_IOS_BUILD_GREEN ' + record['app']['binary_sha256'], flush=True)

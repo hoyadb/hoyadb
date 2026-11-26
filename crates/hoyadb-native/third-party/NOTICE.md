@@ -1,0 +1,67 @@
+# HoyaDB Apple native package third-party notices
+
+Local, unpublished `HoyaNative.xcframework` (Swift package artifact and the copy
+inside the React Native package). First-party HoyaDB code uses MIT; its license
+text is included as `third-party/LICENSE`. This is not a legal compliance
+certification or SBOM. The machine-checked inventory is
+[third-party/index.json](third-party/index.json): every listed text is copied
+byte-for-byte from a verified source recorded there, and the packaging
+validator rejects a missing, changed, unexpected or unclassified entry. Paths
+are relative to the XCFramework root; in the source tree the same files sit
+beside this NOTICE under bindings/native/third-party/.
+
+## Linked into `libhoyadb_native.a`
+
+Rust crates on the normal dependency graph of every Apple target
+(x86_64-apple-darwin, aarch64-apple-ios, aarch64-apple-ios-sim, x86_64-apple-ios):
+
+| Component | Version | License | Texts |
+| --- | --- | --- | --- |
+| bitflags | 2.13.2 | MIT OR Apache-2.0 | third-party/rust/bitflags-2.13.2/ |
+| fallible-iterator | 0.3.0 | MIT/Apache-2.0 | third-party/rust/fallible-iterator-0.3.0/ |
+| fallible-streaming-iterator | 0.1.9 | MIT/Apache-2.0 | third-party/rust/fallible-streaming-iterator-0.1.9/ |
+| libsqlite3-sys | 0.38.1 | MIT | third-party/rust/libsqlite3-sys-0.38.1/ |
+| rusqlite | 0.40.1 | MIT | third-party/rust/rusqlite-0.40.1/ |
+| smallvec | 1.16.4 | MIT OR Apache-2.0 | third-party/rust/smallvec-1.16.4/ |
+| zeroize | 1.9.1 | Apache-2.0 OR MIT | third-party/rust/zeroize-1.9.1/ |
+
+C code compiled from the sqlcipher-src source package. The Apple build uses the
+CommonCrypto crypto provider; LibTomCrypt source is present in that package but
+is not compiled or linked here (no LibTomCrypt symbols in any slice):
+
+| Component | Version | License | Texts |
+| --- | --- | --- | --- |
+| SQLCipher | 4.19.0 | BSD-3-Clause | third-party/native/sqlcipher-4.19.0/LICENSE-sqlcipher |
+| SQLite | 3.53.4 | blessing | third-party/native/sqlite-3.53.4/LICENSE-sqlite |
+
+## Provided by the operating system (not redistributed)
+
+The static libraries import CommonCrypto (`_CC*`, from the SQLCipher provider
+and the Rust standard library's random source) and Security
+(`_SecRandomCopyBytes`, `_kSecRandomDefault`) symbols, which resolve against
+Apple's system frameworks when an app links. No Apple framework code is
+included in this artifact. The index records the imported symbols per library,
+bound to each library's SHA256.
+
+## Build-only (no code in the shipped library)
+
+| Component | Version | License | Texts |
+| --- | --- | --- | --- |
+| cc | 1.10.0 | MIT OR Apache-2.0 | third-party/rust/cc-1.10.0/ |
+| find-msvc-tools | 0.1.15 | MIT OR Apache-2.0 | third-party/rust/find-msvc-tools-0.1.15/ |
+| pkg-config | 0.3.34 | MIT OR Apache-2.0 | third-party/rust/pkg-config-0.3.34/ |
+| shlex | 2.0.1 | MIT OR Apache-2.0 | third-party/rust/shlex-2.0.1/ |
+| sqlcipher-src | 419.0.6+sqlcipher-4.19.0-sqlite-3.53.4-libtomcrypt-1.18.2 | MIT AND BSD-3-Clause AND blessing AND WTFPL | third-party/rust/sqlcipher-src-419.0.6+sqlcipher-4.19.0-sqlite-3.53.4-libtomcrypt-1.18.2/ |
+| vcpkg | 0.2.15 | MIT/Apache-2.0 | third-party/rust/vcpkg-0.2.15/ |
+
+sqlcipher-src supplies the C sources above.
+
+## Toolchain aggregate notice (supplemental)
+
+The pinned Rust 1.98.1 toolchain statically links standard-library sysroot
+crates into each slice (addr2line, adler2, alloc, cfg_if, compiler_builtins, core, gimli, hashbrown, libc, memchr, miniz_oxide, object, panic_unwind, rustc_demangle, rustc_std_workspace_alloc, rustc_std_workspace_core, std, std_detect, unwind). Their exact rlib paths
+and SHA256 are in the index. The byte-exact, version-bound aggregate text is
+third-party/toolchain/rust-1.98.1/COPYRIGHT-library.html. It is an aggregate
+notice: not every item it lists is linked, and some linked sysroot crates are
+not named in it (addr2line, adler2, compiler_builtins, miniz_oxide, panic_unwind, rustc_std_workspace_alloc, rustc_std_workspace_core, std_detect). The Android NDK aggregate
+does not apply to these artifacts.

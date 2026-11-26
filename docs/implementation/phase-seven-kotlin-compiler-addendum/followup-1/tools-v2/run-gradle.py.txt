@@ -1,0 +1,40 @@
+"""Run the metadata-only consumer: online (write locks) or offline (verify identical). Records command/env/inputs."""
+from pathlib import Path
+import hashlib, json, os, subprocess, sys, time, shutil
+here = Path(__file__).resolve().parents[1]
+mode = sys.argv[1]
+meta = here / 'metadata'
+home = here / 'gradle-home'
+jdk = Path('/Users/boristacyniak/.sdkman/candidates/java/17.0.1-tem')
+gradle = Path('/Users/boristacyniak/.gradle/wrapper/dists/gradle-9.3.1-bin/23ovyewtku6u96viwx3xl3oks/gradle-9.3.1/bin/gradle')
+launcher = next((gradle.parent.parent / 'lib').glob('gradle-launcher-*.jar'))
+digest = lambda p: hashlib.sha256(Path(p).read_bytes()).hexdigest()
+# The reviewed packet's gradle_launcher_sha256 is the bin/gradle script of this same distribution.
+if not (digest(gradle) == 'e8aca393bbb50d5096c2c6f624f282dd2ab7f065a730209588be92f4a6100dd7'):
+    raise SystemExit('Gradle script differs from the reviewed metadata consumer')
+if mode == 'online':
+    if not (not home.exists()):
+        raise SystemExit('fresh GRADLE_USER_HOME required')
+for name in ['GRADLE_OPTS', 'JAVA_TOOL_OPTIONS', '_JAVA_OPTIONS']:
+    if not (name not in os.environ):
+        raise SystemExit(name)
+argv = [str(gradle), '--no-daemon', '--no-build-cache', '--no-configuration-cache', '--console=plain', '--max-workers=2']
+argv += ['--write-locks'] if mode == 'online' else ['--offline']
+argv += ['captureMetadata']
+env = dict(os.environ, JAVA_HOME=str(jdk), GRADLE_USER_HOME=str(home))
+inputs = {str(p.relative_to(meta)): digest(p) for p in sorted(meta.rglob('*')) if p.is_file() and p.name in ('build.gradle', 'settings.gradle', 'gradle.properties')}
+record = {'mode': mode, 'argv': argv, 'cwd': str(meta), 'environment_overrides': {'JAVA_HOME': str(jdk), 'GRADLE_USER_HOME': str(home)},
+          'input_sha256': inputs, 'gradle_launcher_sha256': digest(gradle), 'gradle_launcher_jar_sha256': digest(launcher), 'started_unix_ns': time.time_ns()}
+out = here / f'gradle-{mode}' if len(sys.argv) < 3 else here / f'gradle-{mode}-{sys.argv[2]}'
+out.mkdir()
+p = subprocess.run(argv, cwd=meta, env=env, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, timeout=1800)
+record['exit_code'] = p.returncode
+(out / 'output.txt').write_text(p.stdout)
+for name in ['resolution.json', 'gradle.lockfile', 'included-build-classpaths/gradle.lockfile']:
+    src = meta / name
+    if src.exists():
+        dst = out / name.replace('/', '__')
+        shutil.copy2(src, dst)
+        record.setdefault('outputs_sha256', {})[name] = digest(src)
+(out / 'command.json').write_text(json.dumps(record, indent=2) + '\n')
+print(mode, 'exit', p.returncode, json.dumps(record.get('outputs_sha256', {}), indent=1))

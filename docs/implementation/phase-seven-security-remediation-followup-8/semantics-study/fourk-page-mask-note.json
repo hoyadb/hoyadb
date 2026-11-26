@@ -1,0 +1,47 @@
+{
+ "question": "Concrete value of FOURK_PAGE_MASK used by xnu x86_64 shared-region slide masking (follow-up 7 residual)",
+ "answer": "FOURK_PAGE_MASK = 0xFFF (FOURK_PAGE_SIZE 0x1000, FOURK_PAGE_SHIFT 12); so SLIDE_AMOUNT_MASK = ~0xFFF and the x86_64 shared-cache slide is a multiple of 4096",
+ "tag": "apple-oss-distributions/xnu xnu-12377.121.6 (nearest published; host xnu-12377.161.15)",
+ "definition": {
+  "url": "https://github.com/apple-oss-distributions/xnu/blob/xnu-12377.121.6/osfmk/vm/vm_protos.h#L186-L188",
+  "file_sha256": "606d20bdf7a0710a49300d5a1b59d25d42591dfa041c1516b53754bf9878b2c9",
+  "guards_open_at_definition": [
+   "L29 XNU_KERNEL_PRIVATE (kernel-private; vm_unix.c is kernel source)",
+   "L31 include guard _VM_VM_PROTOS_H_"
+  ],
+  "not_inside": "the arm64/ARM_ARCH_7K block L180-L184 (SIXTEENK_* definitions) or the __arm64__ block starting L190; architecture-independent"
+ },
+ "use": {
+  "url": "https://github.com/apple-oss-distributions/xnu/blob/xnu-12377.121.6/bsd/vm/vm_unix.c#L2044-L2048",
+  "x86_64_branch": "L2044-L2045 #if defined(__x86_64__) SLIDE_AMOUNT_MASK ~FOURK_PAGE_MASK",
+  "applied": "L2281 slide_amount = (random_val % max_slide) & SLIDE_AMOUNT_MASK",
+  "file_sha256": "822a007542978158ddc0ad13ed8d8a2bcaef35cbb61a03dbd8a01625b9776861"
+ },
+ "include_chain": [
+  "bsd/vm/vm_unix.c L107 includes <vm/vm_protos_internal.h> (L33 includes <vm/vm_protos.h>)",
+  "bsd/vm/vm_unix.c L116 includes <vm/vm_page.h> (L72 includes <vm/vm_protos.h>)"
+ ],
+ "headers_searched_without_definition": [
+  "apple-xnu-12377.121.6/bsd/vm/vm_unix.c",
+  "apple-xnu-12377.121.6/osfmk/i386/pmap.h",
+  "apple-xnu-12377.121.6/osfmk/mach/arm/vm_param.h",
+  "apple-xnu-12377.121.6/osfmk/mach/i386/vm_param.h",
+  "apple-xnu-12377.121.6/osfmk/mach/machine/vm_param.h",
+  "apple-xnu-12377.121.6/osfmk/mach/shared_region.h",
+  "apple-xnu-12377.121.6/osfmk/mach/vm_param.h",
+  "apple-xnu-12377.121.6/osfmk/mach/vm_types.h",
+  "apple-xnu-12377.121.6/osfmk/vm/pmap.h",
+  "apple-xnu-12377.121.6/osfmk/vm/vm_kern_xnu.h",
+  "apple-xnu-12377.121.6/osfmk/vm/vm_map.h",
+  "apple-xnu-12377.121.6/osfmk/vm/vm_map_internal.h",
+  "apple-xnu-12377.121.6/osfmk/vm/vm_map_xnu.h",
+  "apple-xnu-12377.121.6/osfmk/vm/vm_page.h",
+  "apple-xnu-12377.121.6/osfmk/vm/vm_protos_internal.h",
+  "apple-xnu-12377.121.6/osfmk/vm/vm_shared_region.c",
+  "apple-xnu-12377.121.6/osfmk/vm/vm_shared_region.h",
+  "apple-xnu-12377.121.6/osfmk/vm/vm_shared_region_internal.h"
+ ],
+ "installed_sdk": "xcrun SDK usr/include and Kernel.framework: no FOURK_PAGE definition (kernel-private macro not shipped)",
+ "residual": "value from nearest published tag, not the host build; consistent with the guard taking slide_alignment as a reviewed input (4096 for the studied x86_64h cache)",
+ "no_excerpts_in_docs": true
+}

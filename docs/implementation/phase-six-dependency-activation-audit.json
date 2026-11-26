@@ -1,0 +1,17 @@
+[
+  {
+    "lock": "Cargo.lock",
+    "external_packages": 35,
+    "outside_approved_graph": []
+  },
+  {
+    "lock": "spikes/cross-platform/native/Cargo.lock",
+    "external_packages": 35,
+    "outside_approved_graph": []
+  },
+  {
+    "lock": "spikes/storage-browser/Cargo.lock",
+    "external_packages": 39,
+    "outside_approved_graph": []
+  }
+]

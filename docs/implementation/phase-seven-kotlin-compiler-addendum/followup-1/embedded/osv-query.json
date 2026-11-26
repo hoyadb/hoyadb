@@ -1,0 +1,123 @@
+{
+  "queries": [
+    {
+      "package": {
+        "name": "org.jetbrains.intellij.deps.fastutil:intellij-deps-fastutil",
+        "ecosystem": "Maven"
+      },
+      "version": "8.5.4-9"
+    },
+    {
+      "package": {
+        "name": "org.lz4:lz4-java",
+        "ecosystem": "Maven"
+      },
+      "version": "1.7.1"
+    },
+    {
+      "package": {
+        "name": "org.jline:jline",
+        "ecosystem": "Maven"
+      },
+      "version": "3.24.1"
+    },
+    {
+      "package": {
+        "name": "org.fusesource.jansi:jansi",
+        "ecosystem": "Maven"
+      },
+      "version": "2.4.0"
+    },
+    {
+      "package": {
+        "name": "com.fasterxml:aalto-xml",
+        "ecosystem": "Maven"
+      },
+      "version": "1.3.0"
+    },
+    {
+      "package": {
+        "name": "org.codehaus.woodstox:stax2-api",
+        "ecosystem": "Maven"
+      },
+      "version": "4.2.1"
+    },
+    {
+      "package": {
+        "name": "one.util:streamex",
+        "ecosystem": "Maven"
+      },
+      "version": "0.7.2"
+    },
+    {
+      "package": {
+        "name": "org.jetbrains.kotlinx:kotlinx-collections-immutable-jvm",
+        "ecosystem": "Maven"
+      },
+      "version": "0.3.7"
+    },
+    {
+      "package": {
+        "name": "io.vavr:vavr",
+        "ecosystem": "Maven"
+      },
+      "version": "0.10.4"
+    },
+    {
+      "package": {
+        "name": "com.google.guava:guava",
+        "ecosystem": "Maven"
+      },
+      "version": "33.3.1-jre"
+    },
+    {
+      "package": {
+        "name": "org.jetbrains.intellij.deps:asm-all",
+        "ecosystem": "Maven"
+      },
+      "version": "9.6.1"
+    },
+    {
+      "package": {
+        "name": "org.jetbrains.intellij.deps:log4j",
+        "ecosystem": "Maven"
+      },
+      "version": "1.2.17.2"
+    },
+    {
+      "package": {
+        "name": "javax.inject:javax.inject",
+        "ecosystem": "Maven"
+      },
+      "version": "1"
+    },
+    {
+      "package": {
+        "name": "it.unimi.dsi:fastutil",
+        "ecosystem": "Maven"
+      },
+      "version": "8.5.4"
+    },
+    {
+      "package": {
+        "name": "log4j:log4j",
+        "ecosystem": "Maven"
+      },
+      "version": "1.2.17"
+    },
+    {
+      "package": {
+        "name": "com.google.protobuf:protobuf-java",
+        "ecosystem": "Maven"
+      },
+      "version": "2.6.1"
+    },
+    {
+      "package": {
+        "name": "org.ow2.asm:asm",
+        "ecosystem": "Maven"
+      },
+      "version": "9.6.1"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+module HoyaNative {
+    header "../hoyadb.h"
+    export *
+}

@@ -1,0 +1,80 @@
+{
+  "specification_commit": "523e394",
+  "prep_review": "Claude Opus 5.5 approved with no blockers; added recommended nonvacuous document-corpus assertions",
+  "before": {
+    ".gitattributes": "74099aae11d421da42c2d2d18267434b03960b037e33362a8e0b15a6acd27dce",
+    "tests/tooling/git_provenance.py": "ae9e13310d3bcef19859844e56f2ead68144653d9fde71ae1ced97e5f6528ee9"
+  },
+  "after": {
+    ".gitattributes": "5098173837e85f14799ba4670ec6f89a6c863c9e2d9779dacee1b3706b40f930",
+    "tests/tooling/git_provenance.py": "9323bdf9f1165cb5df844b7438e8aa0d79922bd8b37e7581d40593ab500f31cc"
+  },
+  "logs": {
+    "red.txt": {
+      "command": "python3 -I tests/tooling/git_provenance.py",
+      "exit": 1,
+      "original_sha256": "469f56552894fb9d86a8d22f3b4b2b31615f6d2ae904ea4ffc433482b71e390c",
+      "derived_sha256": "cba152b18f9622870bc23d38b57a24c4fe26ecd1766fdacddc91c0e0e2c3d8a0",
+      "derivation": "replace exact absolute repository prefix with <repo>",
+      "raw_local": "target/phase-seven-git-license-directory-extension/red.txt",
+      "failures": 23,
+      "by_mode": {
+        "input": 2,
+        "true": 21
+      },
+      "errors": 0
+    },
+    "green.txt": {
+      "command": "python3 -I tests/tooling/git_provenance.py",
+      "exit": 0,
+      "original_sha256": "18a7f1cd4f3c3b65c594e2f9eaf12adcadb4f07f4bbc909d7fa83ae3fb1e1c72",
+      "derived_sha256": "18a7f1cd4f3c3b65c594e2f9eaf12adcadb4f07f4bbc909d7fa83ae3fb1e1c72",
+      "derivation": "replace exact absolute repository prefix with <repo>",
+      "raw_local": "target/phase-seven-git-license-directory-extension/green.txt"
+    },
+    "green-O.txt": {
+      "command": "python3 -I -O tests/tooling/git_provenance.py",
+      "exit": 0,
+      "original_sha256": "abe9123964b54d75a10fa89f5e604dc070e499c9779eab77c90b0accc93d9e7c",
+      "derived_sha256": "abe9123964b54d75a10fa89f5e604dc070e499c9779eab77c90b0accc93d9e7c",
+      "derivation": "replace exact absolute repository prefix with <repo>",
+      "raw_local": "target/phase-seven-git-license-directory-extension/green-O.txt"
+    }
+  },
+  "protected_license_paths": [
+    "docs/implementation/phase-seven-dependencies/licenses/maven/archive-review.json",
+    "docs/implementation/phase-seven-dependencies/licenses/maven/bouncycastle-1.79-LICENSE.html",
+    "docs/implementation/phase-seven-dependencies/licenses/maven/javax.inject-1-source-license-header.txt",
+    "docs/implementation/phase-seven-dependencies/licenses/maven/jdom2-2.0.6-LICENSE.txt",
+    "docs/implementation/phase-seven-dependencies/licenses/maven/kxml2-2.3.0-source-license-header.txt",
+    "docs/implementation/phase-seven-dependencies/licenses/upstream/hermes-compiler-LICENSE",
+    "docs/implementation/phase-seven-dependencies/licenses/upstream/provenance.json",
+    "docs/implementation/phase-seven-dependencies/licenses/upstream/rn-0.86.3-MIT",
+    "docs/implementation/phase-seven-dependencies/licenses/upstream/rn-gradle-codegen-MIT",
+    "docs/implementation/phase-seven-security-remediation-followup-1/licenses/jose4j-0.9.6-source-header.txt",
+    "docs/implementation/phase-seven-security-remediation-followup-1/licenses/netty-4.1.139.Final-LICENSE.txt",
+    "docs/implementation/phase-seven-security-remediation-followup-1/licenses/netty-4.1.139.Final-NOTICE.txt",
+    "docs/implementation/phase-seven-security-remediation-followup-1/licenses/slf4j-1.7.36-LICENSE.txt",
+    "docs/implementation/phase-seven-security-remediation-followup-3/licenses/intellij-community-233.13135.103-LICENSE.txt",
+    "docs/implementation/phase-seven-security-remediation-followup-3/licenses/intellij-community-233.13135.103-NOTICE.txt",
+    "docs/implementation/phase-seven-security-remediation-followup-3/licenses/javax.inject-1-source-license-header.txt",
+    "docs/implementation/phase-seven-security-remediation-followup-3/licenses/jdom-2.0.6.1-LICENSE.txt",
+    "docs/implementation/phase-seven-security-remediation-followup-3/licenses/jline-3.24.1-LICENSE.txt",
+    "docs/implementation/phase-seven-security-remediation-followup-3/licenses/log4j-1.2.17-LICENSE",
+    "docs/implementation/phase-seven-security-remediation-followup-3/licenses/log4j-1.2.17-NOTICE",
+    "docs/implementation/phase-seven-security-remediation-followup-3/licenses/protobuf-v2.6.1-LICENSE",
+    "docs/implementation/phase-seven-security-remediation/sources/licenses/jansi-2.4.0-license.txt",
+    "docs/implementation/phase-seven-security-remediation/sources/licenses/kotlinx-collections-immutable-0.3.7-LICENSE.txt",
+    "docs/implementation/phase-seven-security-remediation/sources/licenses/lz4-java-1.7.1-LICENSE.txt",
+    "docs/implementation/phase-seven-security-remediation/sources/licenses/streamex-0.7.2-LICENSE",
+    "docs/implementation/phase-seven-security-remediation/sources/licenses/vavr-0.10.4-LICENSE"
+  ],
+  "controls": [
+    "Actual isolated clean and checkout filters with input/true/false",
+    "Explicit JDOM path and CRLF-bearing document capture required",
+    "Ordinary Database.kt still converts under core.autocrlf=true",
+    "iOS component-licenses presentation corpus remains outside attribute class"
+  ],
+  "followup3_index_sha256": "35561dde48042873d07756b008e96759ae765947211d2542404b3a997a5867d8",
+  "scope": "Git byte preservation only; no package/runtime bytes or Git user configuration changed"
+}

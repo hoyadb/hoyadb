@@ -1,0 +1,35 @@
+from pathlib import Path
+import json,hashlib,subprocess,shlex
+root=Path('/Users/boristacyniak/Projects/alocasia/hoyadb');stage=root/'target/monstera-android32-20261107';toolchain=Path('/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin');ndk=Path('/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64');ar=ndk/'bin/llvm-ar'
+sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+result={'scope':'Fresh32bit static archive and exact NDK driver plan provenance, not runtime proof','toolchain_version':'1.98.1','archive_inspector':{'path':str(ar),'sha256':sha(ar)},'abis':{}}
+for abi,target in [('armeabi-v7a','armv7-linux-androideabi'),('x86','i686-linux-android')]:
+ archive=stage/('rust-'+abi)/target/'release/libhoyadb_native.a'
+ members=subprocess.check_output([str(ar),'t',str(archive)],text=True);(stage/('archive-members-'+abi+'.txt')).write_text(members)
+ names=set(members.splitlines());inputs=[]
+ for candidate in sorted((toolchain/'lib/rustlib'/target/'lib').glob('*.rlib')):
+  rlib=subprocess.check_output([str(ar),'t',str(candidate)],text=True).splitlines()
+  shared=sorted(n for n in rlib if n.endswith('.o') and n in names)
+  if shared:inputs.append({'abi':abi,'path':str(candidate),'sha256':sha(candidate),'matched_members':shared})
+ assert inputs
+ plan=(stage/('link-plan-'+abi+'.txt')).read_text()
+ lines=[shlex.split(line) for line in plan.splitlines() if line.lstrip().startswith('"')]
+ link=next(line for line in lines if Path(line[0]).name=='ld.lld');dirs=[Path(s[2:]).resolve() for s in link if s.startswith('-L')]
+ added=[]
+ for item in link[1:]:
+  if item.startswith('-l:'):
+   p=next(d/item[3:] for d in dirs if (d/item[3:]).is_file())
+  elif item.startswith('/') and Path(item).name in ['crtbegin_so.o','crtend_so.o','libclang_rt.builtins-arm-android.a','libclang_rt.builtins-i686-android.a']:
+   p=Path(item).resolve()
+  else:continue
+  if str(p) not in [v['path'] for v in added]:added.append({'abi':abi,'path':str(p),'sha256':sha(p)})
+ assert len(added)==4
+ result['abis'][abi]={'archive':str(archive),'archive_sha256':sha(archive),'archive_members_sha256':hashlib.sha256(members.encode()).hexdigest(),'ndk_driver_plan_sha256':hashlib.sha256(plan.encode()).hexdigest(),'rust_inputs':inputs,'ndk_inputs':added}
+index_path=root/'bindings/android/third-party/index.json';data=index_path.read_bytes();index=json.loads(data);result['prior_notice_index_sha256']=hashlib.sha256(data).hexdigest();(stage/'android-notice-index-before.json').write_bytes(data)
+for name,key in [('rust-std','rust_inputs'),('ndk-toolchain-runtime','ndk_inputs')]:
+ entries=next(p for p in index['packages'] if p['name']==name)['verified_link_inputs']
+ assert not any(p['abi'] in result['abis'] for p in entries)
+ for record in result['abis'].values():entries.extend({k:v for k,v in item.items() if k!='matched_members'} for item in record[key])
+(stage/'android32-link-inputs.json').write_text(json.dumps(result,indent=2)+'\n')
+(stage/'android-notice-index-proposed.json').write_text(json.dumps(index,indent=2)+'\n')
+print(json.dumps({abi:{'rust_inputs':len(r['rust_inputs']),'ndk_inputs':len(r['ndk_inputs'])} for abi,r in result['abis'].items()}))

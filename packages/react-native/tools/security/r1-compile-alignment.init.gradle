@@ -1,0 +1,42 @@
+// SPEC-0034 R1 / TC-0038 SR-01: upgrade-only compile alignment for the UNCHANGED official
+// @react-native/gradle-plugin build (rootProject "gradle-plugin-root").
+//
+// Supported Gradle API only: one dedicated declarable, non-resolvable, non-consumable configuration
+// holds `require` (upgrade-only) dependency constraints, and only the named projects' main
+// `compileClasspath` extends from it. No force, exclusion, substitution, rule or source change.
+// Versions are the already-approved identities (ADR-0035 union) also selected by the plugin runtime.
+// Validated statically by init_script_guard.py; the resolved graph is proved by the runner (SR-01/02).
+
+def HOYADB_R1_BUILD = 'gradle-plugin-root'
+def HOYADB_R1_PROJECTS = [':react-native-gradle-plugin', ':settings-plugin', ':shared']
+def HOYADB_R1_CONFIGURATION = 'compileClasspath'
+def HOYADB_R1_CONSTRAINTS = [
+    'com.google.guava:guava'                        : '33.3.1-jre',
+    'com.google.code.gson:gson'                     : '2.11.0',
+    'com.google.errorprone:error_prone_annotations' : '2.30.0',
+]
+
+gradle.projectsLoaded { loaded ->
+    if (loaded.rootProject.name != HOYADB_R1_BUILD) {
+        return
+    }
+    loaded.rootProject.allprojects { project ->
+        if (!(project.path in HOYADB_R1_PROJECTS)) {
+            return
+        }
+        def holder = project.configurations.create('hoyadbSecurityCompileConstraints') {
+            canBeResolved = false
+            canBeConsumed = false
+            description = 'SPEC-0034 R1 upgrade-only compile alignment constraints'
+        }
+        HOYADB_R1_CONSTRAINTS.each { module, required ->
+            project.dependencies.constraints.add(holder.name, module) {
+                version { require required }
+                because 'SPEC-0034 R1: align compile classpath with approved runtime selection'
+            }
+        }
+        project.configurations.matching { it.name == HOYADB_R1_CONFIGURATION }.configureEach { classpath ->
+            classpath.extendsFrom(holder)
+        }
+    }
+}

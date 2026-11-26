@@ -1,0 +1,1 @@
+Assertion failed: (rng_get_bytes(output, sizeof(output), callback) == (succeeds ? sizeof(output) : 0)), function check, file entropy.c, line 54.

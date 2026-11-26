@@ -1,0 +1,94 @@
+{
+  "status": "APPROVED BY OPERATOR: EXACT BUILD-ONLY DEPENDENCY ADDITIONS; REMAINING EXECUTION AND SECURITY GATES APPLY",
+  "recorded_date": "2026-10-26",
+  "authority": "ADR-0035 separate-component approval requirement",
+  "operator_question": "Approve the exact build-only dependency additions in commit 565c2bc: the reviewed bootstrap files and security upgrades? ADR-0035 requires separate approval for these newly discovered components. This approval would keep the existing restricted-build controls and would not accept the remaining compiler vulnerabilities.",
+  "operator_answer": "Approve the exact reviewed additions (Recommended)",
+  "approved_proposal_commit": "565c2bc8aae4af46fc029b1642af5dee4a2f690d",
+  "proposal_file": "docs/implementation/phase-seven-build-delta-decision/proposal.json",
+  "proposal_sha256": "5a634cf663b111275f9dad1bf7f4179e4fa82f92f3ead85b87d3614d99f0a6a1",
+  "bootstrap": {
+    "index_sha256": "01a1e9149c04216b18aa75f2bb080ccc14f5183c18dc719d5e533f45b0ee333e",
+    "bundle_sha256": "e0d5e13532e625808fc72723f7282d0bda42143ff1c1e46cf67a7b0bf5165f3f",
+    "proposal": "docs/implementation/phase-seven-rn-bootstrap-addendum/bundle.json",
+    "files": 6,
+    "jars": 2
+  },
+  "r2": {
+    "index_sha256": "3689f7bb50c630463d8613cc6296c115dc086e60690c88d47d7b411c6481b18b",
+    "allowlist_sha256": "cf9608e88b682a24bcd4065a70d654881fa65d237bf46aec589ac345aeb42dc9",
+    "proposal": "docs/implementation/phase-seven-security-remediation-followup-6/evidence/r2-allowlist-v2.json",
+    "listed_files": 49,
+    "already_present_byte_identical": [
+      "org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.pom",
+      "org/slf4j/slf4j-parent/1.7.36/slf4j-parent-1.7.36.pom",
+      "org/sonatype/oss/oss-parent/9/oss-parent-9.pom"
+    ],
+    "new_files": 46,
+    "jars": 21,
+    "jar_bytes": 19808511
+  },
+  "approved_scope": "Only the exact six reviewed bootstrap files and 49 R2 allowlist files, under the existing restricted local build policy. Three R2 metadata files are already present byte-identically; 52 files are new. This permits exact-input repository preparation, not a claim about actual Gradle selection or remediation success.",
+  "verification": {
+    "approved_proposal_commit": "565c2bc8aae4af46fc029b1642af5dee4a2f690d",
+    "packet_verification": {
+      "docs/implementation/phase-seven-rn-bootstrap-addendum": {
+        "entries": 58,
+        "index_sha256": "01a1e9149c04216b18aa75f2bb080ccc14f5183c18dc719d5e533f45b0ee333e"
+      },
+      "docs/implementation/phase-seven-security-remediation-followup-6": {
+        "entries": 38,
+        "index_sha256": "3689f7bb50c630463d8613cc6296c115dc086e60690c88d47d7b411c6481b18b"
+      },
+      "docs/implementation/phase-seven-build-delta-decision": {
+        "entries": 5,
+        "index_sha256": "7bcb946a2bb380d30fac210af5e216da452625e4d1db27b12130828d19973b89"
+      }
+    },
+    "listed_inputs_rehashed": 55,
+    "bootstrap_inputs": 6,
+    "r2_inputs": 49,
+    "new_inputs": 52,
+    "overlap_paths": [
+      "org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.pom",
+      "org/slf4j/slf4j-parent/1.7.36/slf4j-parent-1.7.36.pom",
+      "org/sonatype/oss/oss-parent/9/oss-parent-9.pom"
+    ],
+    "baseline_plan_sha256": "9ff3ff84ae0d8f675ea9b6850babb40c452f009701ea1dae8af7cddd2781abac",
+    "assembler_sha256": "0dbe70ee3b080c898deffe640d7b8059c803d15e60799364b9572ec8856cbdff",
+    "expected_repository_entries": 926,
+    "expected_counts": {
+      "binary": 264,
+      "metadata": 662
+    }
+  },
+  "activation_validation_cases_before_preparation": {
+    "DA01": "Rehash the approved packet indexes and all 55 listed inputs and match the frozen 565c2bc blobs before repository preparation",
+    "DA02": "The fresh plan is exactly the verified original 874-entry plan plus 52 new approved paths; keep the three byte-identical overlaps and original provenance, with no overwrite or extra path",
+    "DA03": "Use the unchanged DEF-0028 assembler and verifier; require 926 exact output files (264 binaries,662 metadata), verify in normal and optimized Python, and reverify the untouched original repository",
+    "DA04": "Repository preparation executes no JAR,JVM,Gradle,compiler or native payload, launches no network operation and alters no build/controller/runtime pin"
+  },
+  "activation_status_at_recording": "NOT YET PERFORMED; outcome must be recorded separately",
+  "execution_restrictions": [
+    "Verify exact hashes before use; task-owned inputs and isolated Gradle homes only",
+    "Keep offline/outbound-denied execution, no remote/shared cache, no JDK/SDK/tool downloads or source fallback",
+    "Stop on unknown or unapproved components, extra graph selections, or shipped runtime drift",
+    "No Gradle/compiler/build/control execution is authorized by this record while the existing remediation and observation holds remain",
+    "No publication,push,tag,global configuration or user-store operation"
+  ],
+  "unresolved_and_not_approved": [
+    "CVE-2024-7254 and CVE-2022-3171 compiler-embedded protobuf findings remain open",
+    "Observation-contract D1 and native-residual D2 at b69613a remain unanswered",
+    "Concrete native/cache baseline approval and actual LZ4/native observation remain required",
+    "Several embedded forks still have unknown versions or unsupported advisory coordinates",
+    "Real graph selection, compatibility and unchanged shipped runtime remain unproven"
+  ],
+  "separate_decisions_preserved": {
+    "D1": "PENDING",
+    "D2": "PENDING",
+    "compiler_advisory_acceptance": "NONE INFERRED",
+    "compiler_execution_hold": "UNCHANGED"
+  },
+  "phase_seven_complete": false,
+  "clean_final_opus55_rounds": 0
+}

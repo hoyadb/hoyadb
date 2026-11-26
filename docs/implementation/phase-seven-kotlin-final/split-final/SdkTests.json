@@ -1,0 +1,7 @@
+{
+  "classpath": "/data/local/tmp/hoyadb-kotlin-owned-faa53e5487274cfb9852426aa21ff5e9/SdkTests.dex:/data/local/tmp/hoyadb-kotlin-owned-faa53e5487274cfb9852426aa21ff5e9/runtime-6403125c1456a5d4ce2ff79d3d8d52d27458ac281126865f426dd73b454a36bf.dex",
+  "sdk_dex_sha256": "b18e2c185c4bc7c868685aac32976e318c751bf88552ef62f2092a3f661b5e0f",
+  "runtime_dex_sha256": "6403125c1456a5d4ce2ff79d3d8d52d27458ac281126865f426dd73b454a36bf",
+  "artifact_manifest_sha256": "a094d7b67591a91c52c8e0452660592d1c10df0b876725c0640aeee9683a5216",
+  "exit": 0
+}

@@ -1,0 +1,218 @@
+#!/usr/bin/env python3
+"""TC-0038 SR-23 steps 6-7: analyze a completed probe directory. Executes only the Python byte walker.
+
+Usage: jdk_probe_analyze.py <probe-dir> <bytewalk.py>
+Writes <probe-dir>/analysis-local.json (may contain values; stays local) and <probe-dir>/outcome.json
+(names, digests, counts, PIDs, reviewed paths, environment/property NAMES, allowlisted JDK facts, booleans only).
+"""
+from collections import defaultdict
+import hashlib
+import json
+import os
+from pathlib import Path
+import re
+import subprocess
+import sys
+
+PROBE = Path(sys.argv[1]).resolve()
+WALKER = Path(sys.argv[2]).resolve()
+JDK = '/Users/boristacyniak/.sdkman/candidates/java/17.0.1-tem'
+SIX = ['jdk.NativeLibrary', 'jdk.JVMInformation', 'jdk.InitialSystemProperty', 'jdk.InitialEnvironmentVariable',
+       'jdk.Shutdown', 'jdk.ProcessStart']
+LOG = json.loads((PROBE / 'probe-log.json').read_text())
+steps = {s['name']: s for s in LOG['steps']}
+sha = lambda p: hashlib.sha256(Path(p).read_bytes()).hexdigest()
+DECOR = re.compile(r'^\[\s*[0-9.]+s\]\[\s*(\d+)\s*\]\[\s*(\d+)\s*\] (.*)$')  # v2: decorators are space-padded
+
+
+def walk(path):
+    p = subprocess.run([sys.executable, '-I', '-B', str(WALKER), str(path)], stdout=subprocess.PIPE, timeout=60, check=True)
+    return json.loads(p.stdout)
+
+
+def summary_table(text):
+    rows = {}
+    for line in text.splitlines():
+        m = re.match(r'^\s(jdk\.\w+)\s+(\d+)\s+(\d+)\s*$', line)
+        if m:
+            rows[m.group(1)] = {'count': int(m.group(2)), 'bytes': int(m.group(3))}
+    head = {k: v.strip() for k, v in re.findall(r'^\s(Version|Chunks|Start|Duration):\s*(.*)$', text, re.M)}
+    return rows, head
+
+
+def log_lines(path):
+    pids, lines, malformed = set(), [], 0
+    for raw in path.read_text(errors='replace').splitlines():
+        m = DECOR.match(raw)
+        if not m:
+            malformed += 1
+            continue
+        pids.add(int(m.group(1)))
+        lines.append(m.group(3))
+    data = path.read_bytes()
+    return {'lines': len(lines), 'malformed': malformed, 'pids': sorted(pids), 'newline_terminated': data.endswith(b'\n') or not data}, lines
+
+
+def by_key(events):
+    grouped = defaultdict(list)
+    for e in events:
+        grouped[e['values']['key']].append(e['values']['value'])
+    return grouped
+
+
+def mode_analysis(mode):
+    run_dir = Path(LOG['final_runs'][mode])
+    step = steps['version-' + mode + ('-retry1' if run_dir.name.endswith('-retry1') else '')]
+    pid = step['spawned_pid']
+    rec = Path(LOG['recordings'][mode][0])
+    printed = json.loads((PROBE / ('decode-%s-print' % mode) / 'stdout.txt').read_text())['recording']['events']
+    events = defaultdict(list)
+    for e in printed:
+        events[e['type']].append(e)
+    rows, head = summary_table((PROBE / ('decode-%s-summary' % mode) / 'stdout.txt').read_text())
+    local, out = {}, {'run_dir': str(run_dir), 'attempt': step['name'], 'spawned_pid': pid, 'returncode': step['returncode'],
+                      'elapsed_s': step['elapsed_s'], 'recording': {'file': rec.name, 'sha256': sha(rec), 'bytes': rec.stat().st_size}}
+    out['bytewalk'] = walk(rec)
+    out['summary_header'] = head
+    out['summary_counts'] = rows
+    out['summary_nonzero_extras'] = {k: v['count'] for k, v in rows.items() if v['count'] and k not in SIX}
+    out['requested_six_counts_summary'] = {k: rows.get(k, {}).get('count') for k in SIX}
+    out['requested_six_counts_print'] = {k: len(events.get(k, [])) for k in SIX}
+    out['print_types_outside_six'] = sorted(set(events) - set(SIX))
+    # PID agreement
+    jvminfo = events.get('jdk.JVMInformation', [])
+    m = re.match(r'hotspot-pid-(\d+)-', rec.name)
+    classlog = sorted(run_dir.glob('classload-*.log'))
+    cl_stats, cl_lines = log_lines(classlog[0]) if len(classlog) == 1 else ({}, [])
+    out['pid_agreement'] = {'spawned': pid, 'jvminformation': sorted({e['values']['pid'] for e in jvminfo}),
+                            'recording_filename': int(m.group(1)) if m else None,
+                            'classlog_filename': [int(re.search(r'(\d+)', p.name).group(1)) for p in classlog],
+                            'classlog_decorator': cl_stats.get('pids')}
+    agree = {pid} == set(out['pid_agreement']['jvminformation']) == {out['pid_agreement']['recording_filename']} \
+        == set(out['pid_agreement']['classlog_filename']) == set(cl_stats.get('pids') or [])
+    out['pid_agreement']['all_equal'] = bool(agree)
+    # JVMInformation
+    local['jvminformation'] = [e['values'] for e in jvminfo]
+    out['jvminformation'] = {'count': len(jvminfo), 'jvmName': sorted({e['values']['jvmName'] for e in jvminfo}),
+                             'jvmVersion_contains_17_0_1_12': all('17.0.1+12' in e['values']['jvmVersion'] for e in jvminfo),
+                             'javaArguments': sorted({e['values'].get('javaArguments') or '' for e in jvminfo}),
+                             'jvmArguments_sha256': sorted({hashlib.sha256((e['values'].get('jvmArguments') or '').encode()).hexdigest() for e in jvminfo}),
+                             'jvmFlags_empty': all(not e['values'].get('jvmFlags') for e in jvminfo),
+                             'begin_end_equal': len({json.dumps(e['values'], sort_keys=True, default=str) for e in
+                                                     [{**x, 'values': {k: v for k, v in x['values'].items() if k != 'startTime'}} for x in jvminfo]}) == 1}
+    args = (jvminfo[0]['values'].get('jvmArguments') or '') if jvminfo else ''
+    tokens = args.split(' ')
+    out['jvm_arguments_tokens_space_split'] = len(tokens)
+    out['capture_options_present_as_exact_space_tokens'] = {o: (o in tokens) for o in step['capture_options']}
+    local['jvmArguments'] = args
+    local['jvmArguments_run_normalized'] = args.replace(str(run_dir), '<run>')
+    # Environment
+    env_events = by_key(events.get('jdk.InitialEnvironmentVariable', []))
+    constructed = set(step['env_names'])
+    local['environment'] = dict(env_events)
+    out['environment'] = {'recorded_names': sorted(env_events), 'constructed_names': sorted(constructed),
+                          'launcher_added_names': sorted(set(env_events) - constructed), 'missing_constructed_names': sorted(constructed - set(env_events)),
+                          'emissions_per_name': sorted({len(v) for v in env_events.values()}),
+                          'begin_end_equal_per_name': {k: len(set(v)) == 1 for k, v in sorted(env_events.items())},
+                          'recorded_equals_constructed_for_constructed_names': {k: (set(env_events.get(k, [])) == {step['env'][k]}) for k in sorted(constructed)}}
+    # System properties
+    prop_events = by_key(events.get('jdk.InitialSystemProperty', []))
+    local['system_properties'] = dict(prop_events)
+    tmpdir = prop_events.get('java.io.tmpdir', [])
+    out['system_properties'] = {'names': sorted(prop_events), 'emissions_per_name': sorted({len(v) for v in prop_events.values()}),
+                                'begin_end_equal_per_name': {k: len(set(v)) == 1 for k, v in sorted(prop_events.items())},
+                                'java_io_tmpdir_equals_owned_tmp': bool(tmpdir) and set(tmpdir) == {str(run_dir / 'tmp')},
+                                'java_home_equals_pinned': set(prop_events.get('java.home', [])) == {JDK}}
+    # Native libraries
+    natives = events.get('jdk.NativeLibrary', [])
+    per_name = defaultdict(list)
+    for e in natives:
+        per_name[e['values']['name']].append((e['values']['baseAddress'], e['values']['topAddress']))
+    names = sorted(per_name)
+    local['native_library_names'] = names
+    jdk_names = sorted(n[len(JDK) + 1:] for n in names if n.startswith(JDK + '/'))
+    other = [n for n in names if not n.startswith(JDK + '/')]
+    absent = [n for n in other if not os.path.lexists(n)]
+    present = [n for n in other if os.path.lexists(n)]
+    present_kinds = {n: ('symlink' if os.path.islink(n) else 'regular' if os.path.isfile(n) else 'other') for n in present}
+    local['native_present_outside_jdk'] = present
+    out['native'] = {'events': len(natives), 'unique_names': len(names), 'names_sha256': hashlib.sha256('\n'.join(names).encode()).hexdigest(),
+                     'emissions_per_name': sorted({len(v) for v in per_name.values()}),
+                     'top_address_all_zero': all(t == 0 for v in per_name.values() for _, t in v),
+                     'base_address_all_nonzero': all(b for v in per_name.values() for b, _ in v),
+                     'base_address_stable_begin_end': all(len({b for b, _ in v}) == 1 for v in per_name.values()),
+                     'jdk_home_relative_names': jdk_names,
+                     'outside_jdk_absent_as_file_count': len(absent), 'outside_jdk_present_as_file_count': len(present),
+                     'outside_jdk_present_as_file': {n: {'kind': k, 'sha256': sha(n) if k == 'regular' else None} for n, k in sorted(present_kinds.items())},
+                     'libSystem_B_present': '/usr/lib/libSystem.B.dylib' in per_name,
+                     'libjvm_present': JDK + '/lib/server/libjvm.dylib' in per_name,
+                     'java_launcher_present': any(n.endswith('/bin/java') for n in names)}
+    # Shutdown / ProcessStart
+    out['shutdown'] = {'count': len(events.get('jdk.Shutdown', [])), 'reasons': sorted({e['values'].get('reason') for e in events.get('jdk.Shutdown', [])})}
+    out['process_start'] = {'count': len(events.get('jdk.ProcessStart', []))}
+    # Class-load positive control
+    out['classload'] = dict(cl_stats, file=classlog[0].name if classlog else None,
+                            java_lang_Object_loaded=any(l.startswith('java.lang.Object source:') for l in cl_lines),
+                            java_lang_Shutdown_loaded=any(l.startswith('java.lang.Shutdown source:') for l in cl_lines))
+    # Candidate logs
+    cands = {}
+    for p in sorted(run_dir.glob('log-*.log')):
+        stats, lines = log_lines(p)
+        loaded = sorted({re.sub(r', handle .*$', '', l[len('Loaded library '):]) for l in lines if l.startswith('Loaded library ')})
+        cands[p.name] = dict(stats, loaded_library_lines=sum(l.startswith('Loaded library ') for l in lines),
+                             loaded_jdk_relative=sorted(x[len(JDK) + 1:] for x in loaded if x.startswith(JDK + '/')),
+                             loaded_outside_jdk=len([x for x in loaded if not x.startswith(JDK + '/')]),
+                             unloaded_library_lines=sum(l.startswith('Unloaded library') for l in lines),  # v3: exact prefix, not substring
+                             registering_lines=sum(l.startswith('[Registering JNI native method') for l in lines),
+                             dynamic_linking_lines=sum(l.startswith('[Dynamic-linking native method') for l in lines))
+    out['candidate_logs'] = cands
+    # Inventory and leftovers
+    inventory = {str(p.relative_to(run_dir)): {'bytes': p.stat().st_size, 'sha256': sha(p)} for p in sorted(run_dir.rglob('*')) if p.is_file()}
+    out['inventory'] = inventory
+    out['owned_dirs_contents'] = {d: sorted(str(p.relative_to(run_dir / d)) for p in (run_dir / d).rglob('*')) for d in ('tmp', 'repo', 'work', 'home')}
+    out['leftovers'] = {'crash_logs': [k for k in inventory if 'hs_err' in k or 'replay_pid' in k],
+                        'extra_recordings': [k for k in inventory if k.endswith('.jfr') and k != 'jfr/' + rec.name],
+                        'rotated_logs': [k for k in inventory if re.search(r'\.log\.\d+$', k)]}
+    text = (run_dir / 'stdout.txt').read_text(errors='replace') + (run_dir / 'stderr.txt').read_text(errors='replace')
+    out['sandbox_denial_symptoms_in_child_output'] = sorted({s for s in ('Operation not permitted', 'deny', 'sandbox', 'Permission denied') if s in text})
+    out['child_output_sha256'] = {'stdout': step['stdout_sha256'], 'stderr': step['stderr_sha256']}
+    return out, local
+
+
+outcome = {'schema': 'hoyadb.sr23-probe-outcome/1', 'probe_dir': str(PROBE), 'harness_sha256': LOG['harness_sha256'], 'walker_sha256': sha(WALKER),
+           'analyzer_sha256': sha(__file__), 'pins_before': LOG['pins_before'], 'pins_after': LOG['pins_after'], 'jfc': LOG['jfc'],
+           'help': {'tag_count': len(LOG['help_tags']), 'tags': LOG['help_tags'], 'stdout_sha256': steps['xlog-help']['stdout_sha256'],
+                    'spawned_pid': steps['xlog-help']['spawned_pid'], 'returncode': steps['xlog-help']['returncode']},
+           'candidates': LOG['candidates'], 'selected_candidates_before_version_runs': LOG['selected_candidates_before_version_runs'],
+           'narrowed_retries': LOG.get('narrowed_retries', []), 'attempts': [], 'decoders': [], 'modes': {}}
+local_all = {}
+for s in LOG['steps']:
+    item = {k: s.get(k) for k in ('name', 'spawned_pid', 'returncode', 'elapsed_s', 'started_utc', 'ended_utc', 'stdout_sha256', 'stderr_sha256',
+                                  'env_names', 'killed_after_timeout', 'unsupported_logging', 'requested_candidates', 'probe_failure')}
+    item['argv_template'] = [a.replace(str(PROBE), '<probe>') for a in s['argv']]
+    if 'capture_options' in s:
+        item['capture_options_template'] = [a.replace(str(PROBE), '<probe>') for a in s['capture_options']]
+    item['inventory'] = s['inventory']
+    (outcome['decoders'] if s['name'].startswith('decode-') else outcome['attempts']).append(item)
+for name in ('version-A', 'version-B'):
+    if name in steps and steps[name].get('unsupported_logging', {}).get('diagnostic_present'):
+        recs = [Path(steps[name]['dir']) / k for k in steps[name]['inventory'] if k.endswith('.jfr')]
+        outcome.setdefault('failed_attempt_bytewalk', {})[name] = [walk(r) for r in recs]
+for mode in ('A', 'B'):
+    outcome['modes'][mode], local_all[mode] = mode_analysis(mode)
+a, b = local_all['A'], local_all['B']
+outcome['a_b'] = {'jvmArguments_equal_after_run_path_normalization': a['jvmArguments_run_normalized'] == b['jvmArguments_run_normalized'],
+                  'native_name_sets_equal': a['native_library_names'] == b['native_library_names'],
+                  'environment_name_sets_equal': sorted(a['environment']) == sorted(b['environment']),
+                  'property_name_sets_equal': sorted(a['system_properties']) == sorted(b['system_properties'])}
+(PROBE / 'analysis-local.json').write_text(json.dumps(local_all, indent=1, default=str) + '\n')
+(PROBE / 'outcome.json').write_text(json.dumps(outcome, indent=1, default=str) + '\n')
+print(json.dumps({m: {'walk_ok': o['bytewalk']['ok'], 'pid_all_equal': o['pid_agreement']['all_equal'], 'six_print': o['requested_six_counts_print'],
+                      'extras': o['summary_nonzero_extras'], 'native': {k: o['native'][k] for k in ('unique_names', 'emissions_per_name', 'top_address_all_zero',
+                      'libSystem_B_present', 'libjvm_present', 'outside_jdk_absent_as_file_count', 'outside_jdk_present_as_file_count', 'base_address_stable_begin_end')},
+                      'env': {k: o['environment'][k] for k in ('recorded_names', 'launcher_added_names', 'missing_constructed_names', 'emissions_per_name')},
+                      'tmpdir_ok': o['system_properties']['java_io_tmpdir_equals_owned_tmp'], 'props': len(o['system_properties']['names']),
+                      'shutdown': o['shutdown'], 'procstart': o['process_start'], 'classload': {k: o['classload'][k] for k in ('lines', 'malformed', 'java_lang_Object_loaded', 'java_lang_Shutdown_loaded', 'newline_terminated')},
+                      'opts_in_args': o['capture_options_present_as_exact_space_tokens'], 'leftovers': o['leftovers'], 'owned': o['owned_dirs_contents'],
+                      'denial': o['sandbox_denial_symptoms_in_child_output']} for m, o in outcome['modes'].items()}, indent=1)[:9000])
+print('a_b', outcome['a_b'])

@@ -1,0 +1,46 @@
+E.F.......
+======================================================================
+ERROR: test_cli_unreadable_or_missing_container_is_rejected_not_open (__main__.Gate.test_cli_unreadable_or_missing_container_is_rejected_not_open)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_embedded_scan.py", line 89, in test_cli_unreadable_or_missing_container_is_rejected_not_open
+    self.assertEqual(E.main(['--plan', str(plan), '--out', str(out)]), 2)
+                     ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/embedded_scan.py", line 131, in main
+    components += inventory(item['path'], item['own_coordinate'], plan.get('relocation_prefixes', []),
+                  ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                            plan.get('namespace_map', {}), plan.get('source_declared', {}))
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/embedded_scan.py", line 28, in inventory
+    with zipfile.ZipFile(jar) as archive:
+         ~~~~~~~~~~~~~~~^^^^^
+  File "/usr/local/Cellar/python@3.14/3.14.8/Frameworks/Python.framework/Versions/3.14/lib/python3.14/zipfile/__init__.py", line 1505, in __init__
+    self._RealGetContents()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/local/Cellar/python@3.14/3.14.8/Frameworks/Python.framework/Versions/3.14/lib/python3.14/zipfile/__init__.py", line 1572, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+
+======================================================================
+FAIL: test_flat_and_nested_relocated_packages_are_all_accounted (__main__.Gate.test_flat_and_nested_relocated_packages_are_all_accounted)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_embedded_scan.py", line 78, in test_flat_and_nested_relocated_packages_are_all_accounted
+    self.assertEqual(keys, {P + 'javax/inject/': 2, P + 'org/jdom/': 1, P + 'gnu/trove/': 1, P + 'com/example/shaded/': 2})
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'org[13 chars]tlin/com/example/shaded/': 2} != {'org[13 chars]tlin/javax/inject/': 2, 'org/jetbrains/kotlin/[94 chars]': 2}
+- {'org/jetbrains/kotlin/com/example/shaded/': 2}
+?                                               ^
+
++ {'org/jetbrains/kotlin/com/example/shaded/': 2,
+?                                               ^
+
++  'org/jetbrains/kotlin/gnu/trove/': 1,
++  'org/jetbrains/kotlin/javax/inject/': 2,
++  'org/jetbrains/kotlin/org/jdom/': 1}
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.142s
+
+FAILED (failures=1, errors=1)
+exit=1

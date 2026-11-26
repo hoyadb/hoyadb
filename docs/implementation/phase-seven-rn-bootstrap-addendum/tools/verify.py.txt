@@ -1,0 +1,67 @@
+"""Inert verification of the bootstrap quarantine (explicit checks; reads bytes only)."""
+from pathlib import Path
+import hashlib, json, zipfile
+import xml.etree.ElementTree as ET
+here = Path(__file__).resolve().parents[1]
+H = lambda b, a='sha256': hashlib.new(a, b).hexdigest()
+ns = {'m': 'http://maven.apache.org/POM/4.0.0'}
+cache = here / 'gradle-home/caches/modules-2/files-2.1'
+gradle_lib = Path('/Users/boristacyniak/.gradle/wrapper/dists/gradle-9.3.1-bin/23ovyewtku6u96viwx3xl3oks/gradle-9.3.1/lib')
+repo_v2 = here.parent / 'android/repo-v2'
+report = {}
+for comp in sorted((here / 'closure').iterdir()):
+    files = {}
+    module = None
+    for f in sorted(comp.iterdir()):
+        if f.suffix in ('.sha1', '.asc', '.sha256', '.sha512') or '.http-' in f.name:
+            continue
+        data = f.read_bytes()
+        rec = {'bytes': len(data), 'sha256': H(data), 'sha512': H(data, 'sha512'), 'sha1': H(data, 'sha1')}
+        side = f.with_name(f.name + '.sha1')
+        rec['sha1_sidecar_match'] = side.is_file() and side.read_text().split()[0].strip().lower() == rec['sha1']
+        rec['strong_sidecars_published'] = [a for a in ('sha256', 'sha512') if f.with_name(f.name + '.' + a).is_file()]
+        rec['asc_present'] = f.with_name(f.name + '.asc').is_file()
+        hits = [p for p in cache.rglob(f.name) if p.is_file()]
+        rec['gradle_independent_retrieval_match'] = (all(p.read_bytes() == data for p in hits) if hits else None)
+        if f.suffix == '.module':
+            module = json.loads(data)
+        if f.suffix == '.pom':
+            text = data.decode('utf-8')
+            if '<!ENTITY' in text:
+                raise SystemExit('entity declaration in POM ' + f.name)
+            root = ET.fromstring(data)
+            rec['licenses'] = [(l.findtext('m:name', namespaces=ns) or '').strip() for l in root.findall('m:licenses/m:license', ns)]
+            par = root.find('m:parent', ns)
+            rec['parent'] = ':'.join((par.findtext('m:' + k, namespaces=ns) or '').strip() for k in ('groupId', 'artifactId', 'version')) if par is not None else None
+            rec['dependencies'] = [':'.join((d.findtext('m:' + k, namespaces=ns) or '').strip() for k in ('groupId', 'artifactId', 'version', 'scope'))
+                                   for d in root.findall('m:dependencies/m:dependency', ns)]
+            rec['packaging'] = (root.findtext('m:packaging', namespaces=ns) or 'jar').strip()
+        if f.suffix == '.jar':
+            with zipfile.ZipFile(f) as z:
+                names = z.namelist()
+            rec['entries'] = len(names)
+            rec['license_files'] = sorted(n for n in names if 'LICENSE' in n.upper() or 'NOTICE' in n.upper())
+            bundled = gradle_lib / f.name
+            if bundled.is_file():
+                rec['gradle_distribution_copy'] = {'path': str(bundled), 'sha256': H(bundled.read_bytes()), 'byte_identical_to_maven': bundled.read_bytes() == data}
+        approved_copy = repo_v2 / f.name
+        files[f.name] = rec
+    if module:
+        declared = {mf['name']: mf for var in module.get('variants', []) for mf in var.get('files', [])}
+        for name, rec in files.items():
+            if name in declared:
+                rec['publisher_module_sha256_match'] = declared[name].get('sha256') == rec['sha256']
+                rec['publisher_module_sha512_match'] = declared[name].get('sha512') == rec['sha512']
+        report[comp.name + ':module_dependencies'] = sorted({f"{d['group']}:{d['module']}:{d.get('version', {})}" for var in module.get('variants', []) for d in var.get('dependencies', [])})
+    report[comp.name] = files
+(here / 'verification.json').write_text(json.dumps(report, indent=2) + '\n')
+bad = [(c, n, k) for c, fs in report.items() if isinstance(fs, dict) for n, r in fs.items() for k in ('sha1_sidecar_match', 'publisher_module_sha256_match', 'publisher_module_sha512_match', 'gradle_independent_retrieval_match') if r.get(k) is False]
+print('mismatches', bad)
+for c, fs in report.items():
+    if isinstance(fs, dict):
+        for n, r in fs.items():
+            print(c, n, r['bytes'], r['sha256'][:12], 'mod256', r.get('publisher_module_sha256_match'), 'dist', r.get('gradle_distribution_copy', {}).get('byte_identical_to_maven'), 'lic', r.get('licenses'), 'parent', r.get('parent'))
+    else:
+        print(c, fs)
+if bad:
+    raise SystemExit(1)

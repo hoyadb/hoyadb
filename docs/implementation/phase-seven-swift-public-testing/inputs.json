@@ -1,0 +1,34 @@
+{
+  "swift-post-quiet-red.txt": {
+    "copy": "initial-red.txt",
+    "sha256": "148de30522e8b00d1611933bea74f9539378a12969642df3c1bf6cb3b2c5cfc0"
+  },
+  "swift-stopped-driver-red.txt": {
+    "copy": "stopped-driver-red.txt",
+    "sha256": "d48418f3b860f55d31d784d9d2d415e97168d853195d0aa5833a6807d89d7c37"
+  },
+  "swift-testing-foundation-green-fake-red.txt": {
+    "copy": "helpers-unblocked-fake-red.txt",
+    "sha256": "0c628e2d7f627cc59f6038133b1117ec9517743feb1fef76a0be9fff5feab701"
+  },
+  "swift-public-testing-lifecycle-green.txt": {
+    "copy": "44-green-before-format.txt",
+    "sha256": "031c9e67f481e4d00cd92805711dc8d2118cf4db784c4d93101a71d3de3a6c42"
+  },
+  "swift-format-public-testing-green.txt": {
+    "copy": "strict-format-green.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "swift-format-public-testing-write.txt": {
+    "copy": "formatter-write.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "swift-public-walkthrough-build.txt": {
+    "copy": "public-consumer-build.txt",
+    "sha256": "9b4a6a876e13ad30de8a79cb7e03881d90d94657e944e97e0ee2be19681d9cb4"
+  },
+  "swift-public-walkthrough-run.txt": {
+    "copy": "consumer-missing-root-failure.txt",
+    "sha256": "9916c997b34e2d596e0417b80140c87add4c9bf8be14d8402eab31cce2e68c55"
+  }
+}

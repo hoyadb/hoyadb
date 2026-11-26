@@ -1,0 +1,26 @@
+"""Independent read-only recomputation of the DEF-0030 framework closure (does not import repo code)."""
+import hashlib,json,os,sys
+from pathlib import Path
+H=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
+PARENT_SHA='c19233a6d34e76628ae42c4870be5c6add4fa39c7f4fb9ed46678da95a532496'
+corpus=Path('bindings/native/third-party');parent=json.loads(Path('bindings/swift/Artifacts/native-build.json').read_bytes())
+assert H('bindings/swift/Artifacts/native-build.json')==PARENT_SHA
+def files(d):
+  out={}
+  for dp,dn,fn in os.walk(d):
+    for n in dn+fn:
+      if os.path.islink(os.path.join(dp,n)): out['SYMLINK:'+n]=None
+    for n in fn: out[os.path.relpath(os.path.join(dp,n),d)]=Path(dp)/n
+  return out
+for fw in sys.argv[1:]:
+  fw=Path(fw);act=files(fw);exp={}
+  for k,v in parent['artifact_files_sha256'].items(): exp[k.split('/',1)[1]]=v
+  native=dict(exp)
+  exp['native-build-parent.json']=PARENT_SHA
+  for rel,p in files(corpus).items(): exp['NOTICE.md' if rel=='NOTICE.md' else 'third-party/'+rel]=H(p)
+  extra=sorted(set(act)-set(exp)-{'packaging.json'});missing=sorted(set(exp)-set(act))
+  wrong=sorted(k for k in exp if k in act and H(act[k])!=exp[k])
+  pk=json.loads(act['packaging.json'].read_bytes()) if 'packaging.json' in act else None
+  pk_ok=pk is not None and pk.get('members')==dict(sorted(exp.items())) and pk['parent']=={'file':'native-build-parent.json','sha256':PARENT_SHA} and pk['notice_index']['sha256']==H(corpus/'index.json') and pk.get('framework')==fw.name and set(pk)=={'format','framework','parent','notice_index','members'}
+  hdr=[k for k in act if '/Headers/' in k];notice_in_headers=[k for k in hdr if 'third-party' in k or 'NOTICE' in k]
+  print(fw,'files',len(act),'expected',len(exp)+1,'native',len(native),'extra',extra,'missing',missing,'wrong',wrong,'packaging_exact',pk_ok,'notices_in_headers',notice_in_headers,'packaging_sha',H(act['packaging.json'])[:16] if pk else None)

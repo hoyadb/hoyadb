@@ -1,0 +1,17 @@
+[package]
+name = "hoyadb-native-spike"
+version = "0.0.0"
+edition = "2024"
+publish = false
+
+[lib]
+crate-type = ["staticlib", "rlib"]
+
+[dependencies]
+hoyadb-cross-platform-spike = { path = ".." }
+hoyadb-core = { path = "../../../crates/hoyadb-core" }
+hoyadb-storage-memory = { path = "../../../crates/hoyadb-storage-memory" }
+hoyadb-storage-sqlite = { path = "../../../crates/hoyadb-storage-sqlite" }
+rusqlite = { git = "https://github.com/rusqlite/rusqlite", rev = "661107f6eb5d7477c61be1221744de3ad96c53e7", default-features = false, features = ["bundled-sqlcipher"] }
+
+zeroize = "=1.9.1"

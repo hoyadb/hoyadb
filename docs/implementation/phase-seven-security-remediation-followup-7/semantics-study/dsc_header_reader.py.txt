@@ -1,0 +1,9 @@
+import struct,sys,uuid,json
+D='/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/'
+f=open(D+'dyld_shared_cache_x86_64h','rb'); h=f.read(0x400)
+u32=lambda o:struct.unpack_from('<I',h,o)[0]; u64=lambda o:struct.unpack_from('<Q',h,o)[0]
+out={'magic':h[:16].rstrip(b'\0').decode(),'mappingOffset':u32(16),'uuid':str(uuid.UUID(bytes=h[88:104])).upper(),'cacheType':u64(104),
+ 'imagesTextOffset':u64(136),'imagesTextCount':u64(144),'platform':u32(216),'formatVersion_bits':hex(u32(220)),'sharedRegionStart':hex(u64(224)),
+ 'sharedRegionSize':hex(u64(232)),'maxSlide':hex(u64(240)),'osVersion':hex(u32(364)),'subCacheArrayOffset':u32(392),'subCacheArrayCount':u32(396),
+ 'symbolFileUUID':str(uuid.UUID(bytes=h[400:416])).upper(),'imagesOffset':u32(448),'imagesCount':u32(452),'codeSignatureOffset':u64(40),'codeSignatureSize':u64(48)}
+print(json.dumps(out,indent=1))

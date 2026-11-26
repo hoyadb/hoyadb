@@ -1,0 +1,63 @@
+{
+  "fetched_utc": "2026-10-24T21:51:18.524426+00:00",
+  "tool": "curl -sS -L --proto =https --max-time 60",
+  "purpose": "license/notice text only; never executed; no dependency",
+  "files": [
+    {
+      "file": "apache-LICENSE-2.0.txt",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "http": 200,
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "file": "kotlin-v2.1.20-license-LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/JetBrains/kotlin/v2.1.20/license/LICENSE.txt",
+      "http": 200,
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "file": "kotlin-v2.1.20-license-NOTICE.txt",
+      "url": "https://raw.githubusercontent.com/JetBrains/kotlin/v2.1.20/license/NOTICE.txt",
+      "http": 200,
+      "bytes": 482,
+      "sha256": "0b09a83d3ef7795c7dec65e815866597c066c53898f2852a76599b8f5552941a"
+    },
+    {
+      "file": "kotlin-v2.1.20-license-README.md",
+      "url": "https://raw.githubusercontent.com/JetBrains/kotlin/v2.1.20/license/README.md",
+      "http": 200,
+      "bytes": 17091,
+      "sha256": "7b9ed2fce6cb756174326571ef57e641e7b22c439c87ee7e2ab85e9be9751d95"
+    },
+    {
+      "file": "kotlin-v2.1.20-third_party-gwt_license.txt",
+      "url": "https://raw.githubusercontent.com/JetBrains/kotlin/v2.1.20/license/third_party/gwt_license.txt",
+      "http": 200,
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "file": "kotlin-v2.1.20-third_party-threetenbp_license.txt",
+      "url": "https://raw.githubusercontent.com/JetBrains/kotlin/v2.1.20/license/third_party/threetenbp_license.txt",
+      "http": 200,
+      "bytes": 1520,
+      "sha256": "d1bc53b493a3ab387b42717ed5c4b1976a5048996f81154278100bff86d39331"
+    },
+    {
+      "file": "kotlin-v2.1.20-third_party-guava_license.txt",
+      "url": "https://raw.githubusercontent.com/JetBrains/kotlin/v2.1.20/license/third_party/guava_license.txt",
+      "http": 200,
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "file": "kotlin-v2.1.20-third_party-boost_LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/JetBrains/kotlin/v2.1.20/license/third_party/boost_LICENSE.txt",
+      "http": 200,
+      "bytes": 1337,
+      "sha256": "8d8291caf1cee26d23acf3eb67c9f9a2d58f1c681b16a4fbe8cbfb9e3c0b5a9b"
+    }
+  ]
+}

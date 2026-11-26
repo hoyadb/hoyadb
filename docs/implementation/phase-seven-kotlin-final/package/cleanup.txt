@@ -1,0 +1,14 @@
+target/phase-seven-kotlin/opus/consumer-project-1.txt dev.hoyadb.consumer.pf576cff50b654aa8 uninstall=Success
+target/phase-seven-kotlin/opus/consumer-project-2-diag.txt dev.hoyadb.consumer.p1792f6bbea994f7d uninstall=Success
+target/phase-seven-kotlin/opus/consumer-project-3-diag.txt dev.hoyadb.consumer.p12760cab584741f3 uninstall=Success
+target/phase-seven-kotlin/opus/consumer-project-4-diag.txt dev.hoyadb.consumer.p42642cda336a4a20 uninstall=Success
+target/phase-seven-kotlin/opus/consumer-project-5.txt dev.hoyadb.consumer.p3da12aeea39a48c0 uninstall=Success
+target/phase-seven-kotlin/opus/consumer-project-6.txt dev.hoyadb.consumer.p190acb2728454df1 uninstall=Success
+target/phase-seven-kotlin/opus/consumer-project-7.txt dev.hoyadb.consumer.pac27769a949f4844 not-installed
+remaining hoyadb packages: 0
+OK: killing emulator, bye bye
+OK
+emu kill exit=0
+qemu remaining: 0
+List of devices attached
+

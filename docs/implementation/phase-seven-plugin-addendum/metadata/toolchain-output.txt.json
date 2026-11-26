@@ -1,0 +1,7 @@
+{
+  "format": 1,
+  "original_name": "toolchain-output.txt",
+  "original_bytes": 787,
+  "original_sha256": "0cde2b350aec5aa200e204e9f0a6d5770d19e9b0d91eef57a1f3ebd744fd1e10",
+  "utf8": "To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.3.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.\nDaemon will be stopped at the end of the build \n\n> Task :javaToolchains\n\n + Options\n     | Auto-detection:     Disabled\n     | Auto-download:      Disabled\n\n + Eclipse Temurin JDK 17 (17.0.1+12)\n     | Location:           /Users/boristacyniak/.sdkman/candidates/java/17.0.1-tem\n     | Language Version:   17\n     | Vendor:             Eclipse Temurin\n     | Architecture:       x86_64\n     | Is JDK:             true\n     | Detected by:        Gradle property 'org.gradle.java.installations.paths'\n\n\nBUILD SUCCESSFUL in 13s\n1 actionable task: 1 executed\n"
+}

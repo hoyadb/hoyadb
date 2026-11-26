@@ -1,0 +1,3 @@
+ADMIT {"coordinates":{"kind":"cold","engine":"memory","operation":"create","n":0,"run":1,"worker_id":"def23:1"},"environment":{"declared":"contaminated DEF-0023 regression"}}
+ADMIT {"coordinates":{"kind":"resources","engine":"memory","run":1,"worker_id":"def23-resources:1"}}
+CANCEL {"reason":"DEF-0023 regression complete"}

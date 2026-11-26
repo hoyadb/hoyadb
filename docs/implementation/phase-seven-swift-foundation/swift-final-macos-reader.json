@@ -1,0 +1,5 @@
+{
+  "encoding": "utf-8",
+  "original_sha256": "879843785e015f44ea79da123f4778eb179fb5bbd96e4628c8db72123f9c40cf",
+  "stdout": "HOYA_SWIFT_GENERAL_CONSUMER_GREEN mode=reader protected_restart=independent wrong_key=unchanged rows=lossless-i64-float queue=frozen-retry mapping=guarded\n\n"
+}

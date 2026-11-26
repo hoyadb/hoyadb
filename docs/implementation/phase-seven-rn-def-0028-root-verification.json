@@ -1,0 +1,59 @@
+{
+  "defect": "DEF-0028",
+  "status": "root verification passed; final Phase7 review remains pending",
+  "evidence_index_sha256": "29cd41a2336739fc0f2f9151dda305e46c03c6af998dbc240c5d6aea034519d0",
+  "indexed_identities_rehashed": 40,
+  "mismatches": 0,
+  "unindexed_evidence_files": 0,
+  "permanent_source_sha256": {
+    "bindings/react-native/tools/android/prepare_repo.py": "0dbe70ee3b080c898deffe640d7b8059c803d15e60799364b9572ec8856cbdff",
+    "bindings/react-native/tools/android/test_prepare_repo.py": "bed30179c5264a2e6b1590db0c17ccd7d4507fc1b653af5022466a048315443a",
+    "bindings/react-native/tools/android/testdata/prepare-repo-v1.py.txt": "f76c2a5c04518d10da1f2bc1f0325b55ec66ba42575c09a953523eb70e651d6f"
+  },
+  "root_test_runs": [
+    {
+      "command": "python3 -I bindings/react-native/tools/android/test_prepare_repo.py",
+      "exit_code": 0,
+      "tests": 16,
+      "duration_seconds": 66.355
+    },
+    {
+      "command": "python3 -I -O bindings/react-native/tools/android/test_prepare_repo.py",
+      "exit_code": 0,
+      "tests": 16,
+      "duration_seconds": 66.395
+    }
+  ],
+  "real_repository_verify": {
+    "command": "python3 -I -O bindings/react-native/tools/android/prepare_repo.py verify --inputs target/phase-seven-rn/android/plan.json --out target/phase-seven-rn/android/repo-v2 --record target/phase-seven-rn/android/repo-v2.record.json",
+    "exit_code": 0,
+    "counts": {
+      "binary": 241,
+      "metadata": 633
+    },
+    "inventory_sha256": "71d657709f942a212f96be924a1a9349db0ea341b237d327d4372c5b79fdd661"
+  },
+  "evidence_review": {
+    "lossless_log_wrappers_validated": 5,
+    "recorded_normal_optimized_real_records_byte_identical": true,
+    "controller_rejection_records_inspected": [
+      "missing-file",
+      "integrity",
+      "missing-record"
+    ],
+    "steps_in_each_record": 0,
+    "controller_ordering": "source and recorded integration inspection; root did not rerun controller or Gradle"
+  },
+  "limitations": [
+    "Plan creation is the trusted approval boundary; a caller-supplied plan is not dependency approval",
+    "Initial experimental fix preceded formal prep; stub RED and v1 mechanism replay are distinguished from the unpreserved incident script",
+    "Controller remains task-specific under ignored target; permanent unit tests verify shared routine, not Gradle invocation order",
+    "No Gradle, compiler, browser or performance work was launched for root verification",
+    "No coverage percentage or final Phase7 clean review claimed"
+  ],
+  "traceability": {
+    "violations": 0,
+    "rtm": "up to date"
+  },
+  "focused_review": "phase-seven-assembler-preflight-focused-review.json"
+}

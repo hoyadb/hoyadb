@@ -1,0 +1,2990 @@
+{
+  "status": "PROPOSED exact dependency/source-review bundle; NOT approved, installed, built or runtime validated",
+  "recorded_utc": "2026-10-24T16:44:57.422714+00:00",
+  "npm": {
+    "manifest": "npm/package.json",
+    "lock": "npm/package-lock.json",
+    "manifest_sha256": "b14eaef462c945b37504afff9a976caf67699cce0602f69e733cdd9004b5b5a9",
+    "lock_sha256": "c05cb6a927e86bd25a1a076df5e7d911745bad9773f21dca5e9149b153df8b2b",
+    "locations": 477,
+    "distinct_identities": 451,
+    "audit_known_advisories": 0,
+    "exact_inventory": "npm/package-inventory.json"
+  },
+  "maven": {
+    "resolution": "native/resolution.json",
+    "lock": "native/gradle.lockfile",
+    "lock_sha256": "20f0ff0bd6d259e9faa28fc5606ca028411ba6e0490fdcbe79d8e84531f865b1",
+    "consumer": "Metadata-only Gradle9.3.1 builtin java plugin; no AGP/Kotlin plugin applied; local rule mirrors inspected Kotlin2.1.20 androidJvm-to-jvm compatibility. This is not an actual AGP app lock or runtime proof.",
+    "configurations": {
+      "androidDebug": {
+        "external_components": 87,
+        "unresolved": 0
+      },
+      "androidRelease": {
+        "external_components": 87,
+        "unresolved": 0
+      },
+      "kotlinSdkRuntime": {
+        "external_components": 2,
+        "unresolved": 0
+      },
+      "nativeBuildTools": {
+        "external_components": 145,
+        "unresolved": 0
+      }
+    },
+    "selected_inventory": "native/selected-inventory.json",
+    "selected_artifacts": "native/artifact-index.json",
+    "runtime_change": {
+      "removed": [
+        "com.squareup.okio:okio:2.9.0"
+      ],
+      "added": [
+        "com.squareup.okio:okio:3.4.0",
+        "com.squareup.okio:okio-jvm:3.4.0"
+      ],
+      "osv_new_coordinates": "reviews/okio/osv-new-coordinates.json",
+      "osv_known_runtime_advisories_after_change": 0,
+      "compatibility_evidence": "reviews/okio/source-review.json",
+      "limitations": "Upstream strong compatibility claim has Timeout.intersectWith ABI exception; actual OkHttp4.9.2 relevant call is inlined in inspected javap. Actual HTTP/RN/mobile compatibility must pass after approval.",
+      "osv_all_runtime_coordinates": "reviews/okio/osv-all-patched-runtimes.json"
+    },
+    "build_advisories": {
+      "affected_coordinates": 12,
+      "distinct_nonwithdrawn_advisories": 47,
+      "severity_counts": {
+        "HIGH": 18,
+        "MODERATE": 24,
+        "LOW": 2,
+        "CRITICAL": 3
+      },
+      "affected": [
+        {
+          "coordinate": "io.netty:netty-codec:4.1.110.Final",
+          "configurations": [
+            "nativeBuildTools"
+          ],
+          "advisories": [
+            {
+              "id": "GHSA-3p8m-j85q-pgmj",
+              "summary": "Netty's decoders vulnerable to DoS via zip bomb style attack",
+              "severity": "MODERATE",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "4.1.125.Final"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/security/advisories/GHSA-3p8m-j85q-pgmj"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-58057"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/commit/9d804c54ce962408ae6418255a83a13924f7145d"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/netty/netty"
+                }
+              ]
+            },
+            {
+              "id": "GHSA-558v-64gr-wgg4",
+              "summary": "Netty: [Bzip2Decoder] Infinite Loop in RLE State Machine Leads to Event-Loop Thread Hang",
+              "severity": "HIGH",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "4.1.136.Final"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/security/advisories/GHSA-558v-64gr-wgg4"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/netty/netty"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/releases/tag/netty-4.1.136.Final"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/releases/tag/netty-4.2.16.Final"
+                }
+              ]
+            },
+            {
+              "id": "GHSA-mj4r-2hfc-f8p6",
+              "summary": "Netty Lz4FrameDecoder is vulnerable to resource exhaustion ",
+              "severity": "HIGH",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "4.1.133.Final"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/security/advisories/GHSA-mj4r-2hfc-f8p6"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42583"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/netty/netty"
+                }
+              ]
+            }
+          ],
+          "selected_dependency_path": [
+            "root project :",
+            "com.android.tools.build:gradle:8.12.0",
+            "io.grpc:grpc-netty:1.69.1",
+            "io.netty:netty-codec-http2:4.1.110.Final",
+            "io.netty:netty-codec:4.1.110.Final"
+          ]
+        },
+        {
+          "coordinate": "io.netty:netty-codec-http:4.1.110.Final",
+          "configurations": [
+            "nativeBuildTools"
+          ],
+          "advisories": [
+            {
+              "id": "GHSA-38f8-5428-x5cv",
+              "summary": "Netty vulnerable to HTTP Request Smuggling due to malformed Transfer-Encoding",
+              "severity": "MODERATE",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "4.2.0.Alpha1"
+                    },
+                    {
+                      "fixed": "4.2.13.Final"
+                    }
+                  ]
+                },
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "4.1.133.Final"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/security/advisories/GHSA-38f8-5428-x5cv"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42585"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://datatracker.ietf.org/doc/html/rfc9112#name-message-body-length"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/netty/netty"
+                }
+              ]
+            },
+            {
+              "id": "GHSA-4mp9-239f-g9hg",
+              "summary": "Netty: WebSockets V07/V08 handshaker missing Connection/Upgrade validation",
+              "severity": "MODERATE",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "4.2.0.Final"
+                    },
+                    {
+                      "fixed": "4.2.16.Final"
+                    }
+                  ]
+                },
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "4.1.136.Final"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/security/advisories/GHSA-4mp9-239f-g9hg"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/netty/netty"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/releases/tag/netty-4.1.136.Final"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/releases/tag/netty-4.2.16.Final"
+                }
+              ]
+            },
+            {
+              "id": "GHSA-57rv-r2g8-2cj3",
+              "summary": "Netty has HttpClientCodec response desynchronization",
+              "severity": "HIGH",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "4.2.0.Alpha1"
+                    },
+                    {
+                      "fixed": "4.2.13.Final"
+                    }
+                  ]
+                },
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "4.1.133.Final"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/security/advisories/GHSA-57rv-r2g8-2cj3"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42584"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/netty/netty"
+                }
+              ]
+            },
+            {
+              "id": "GHSA-6cqp-g7gg-8hr5",
+              "summary": "Netty: Security Control Bypass via CORS Short-Circuit Failure",
+              "severity": "MODERATE",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "4.2.0.Final"
+                    },
+                    {
+                      "fixed": "4.2.16.Final"
+                    }
+                  ]
+                },
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "4.1.136.Final"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/security/advisories/GHSA-6cqp-g7gg-8hr5"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56746"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/netty/netty"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/releases/tag/netty-4.1.136.Final"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/releases/tag/netty-4.2.16.Final"
+                }
+              ]
+            },
+            {
+              "id": "GHSA-6jqx-86gh-f27w",
+              "summary": "Netty SPDY SETTINGS frame count materializes unbounded settings map",
+              "severity": "HIGH",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "4.2.0.Final"
+                    },
+                    {
+                      "fixed": "4.2.16.Final"
+                    }
+                  ]
+                },
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "4.1.0.Final"
+                    },
+                    {
+                      "fixed": "4.1.136.Final"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/security/advisories/GHSA-6jqx-86gh-f27w"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55831"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/commit/5b68c61f37aa4a3045cba624cbea239655c9003b"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/commit/bb2ff68a1fb71cb4b0eb9a9e17b66c52aff680c6"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/netty/netty"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/releases/tag/netty-4.1.136.Final"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/releases/tag/netty-4.2.16.Final"
+                }
+              ]
+            },
+            {
+              "id": "GHSA-84h7-rjj3-6jx4",
+              "summary": "Netty has a CRLF Injection vulnerability in io.netty.handler.codec.http.HttpRequestEncoder",
+              "severity": "MODERATE",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "4.2.0.Alpha1"
+                    },
+                    {
+                      "fixed": "4.2.8.Final"
+                    }
+                  ]
+                },
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "4.1.129.Final"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/security/advisories/GHSA-84h7-rjj3-6jx4"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-67735"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/commit/77e81f1e5944d98b3acf887d3aa443b252752e94"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/netty/netty"
+                }
+              ]
+            },
+            {
+              "id": "GHSA-8c42-7qj2-3j46",
+              "summary": "Netty Vulnerable to Cache Poisoning and Information Disclosure via CORS Vary Header Overwrite",
+              "severity": "MODERATE",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "4.2.0.Final"
+                    },
+                    {
+                      "fixed": "4.2.17.Final"
+                    }
+                  ]
+                },
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "4.1.137.Final"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/security/advisories/GHSA-8c42-7qj2-3j46"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/pull/17213"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/pull/17217"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/netty/netty"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/releases/tag/netty-4.1.137.Final"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/releases/tag/netty-4.2.17.Final"
+                }
+              ]
+            },
+            {
+              "id": "GHSA-f6hv-jmp6-3vwv",
+              "summary": "Netty: HttpContentDecompressor maxAllocation bypass when Content-Encoding set to br/zstd/snappy leads to decompression bomb DoS",
+              "severity": "HIGH",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "4.2.0.Alpha1"
+                    },
+                    {
+                      "fixed": "4.2.13.Final"
+                    }
+                  ]
+                },
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "4.1.133.Final"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/security/advisories/GHSA-f6hv-jmp6-3vwv"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42587"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/netty/netty"
+                }
+              ]
+            },
+            {
+              "id": "GHSA-fghv-69vj-qj49",
+              "summary": "Netty vulnerable to request smuggling due to incorrect parsing of chunk extensions",
+              "severity": "LOW",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "4.1.125.Final"
+                    }
+                  ]
+                },
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "4.2.0.Alpha1"
+                    },
+                    {
+                      "fixed": "4.2.5.Final"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/security/advisories/GHSA-fghv-69vj-qj49"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-58056"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/JLLeitschuh/unCVEed/issues/1"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/issues/15522"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/github/advisory-database/pull/6092"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/pull/15611"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/commit/edb55fd8e0a3bcbd85881e423464f585183d1284"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://datatracker.ietf.org/doc/html/rfc9112#name-chunked-transfer-coding"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/netty/netty"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://w4ke.info/2025/06/18/funky-chunks.html"
+                }
+              ]
+            },
+            {
+              "id": "GHSA-gcjf-9mgh-3p7g",
+              "summary": "Netty: CRLF Injection via Multipart Filename in Netty HttpPostRequestEncoder",
+              "severity": "MODERATE",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "4.2.0.Final"
+                    },
+                    {
+                      "fixed": "4.2.16.Final"
+                    }
+                  ]
+                },
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "4.1.136.Final"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/security/advisories/GHSA-gcjf-9mgh-3p7g"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/netty/netty"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/releases/tag/netty-4.1.136.Final"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/releases/tag/netty-4.2.16.Final"
+                }
+              ]
+            },
+            {
+              "id": "GHSA-hvcg-qmg6-jm4c",
+              "summary": "Netty: HttpObjectDecoder skips arbitrary initial control characters when only initial CRLF characters are permitted",
+              "severity": "MODERATE",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "4.2.0.Final"
+                    },
+                    {
+                      "fixed": "4.2.15.Final"
+                    }
+                  ]
+                },
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "4.1.135.Final"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/security/advisories/GHSA-hvcg-qmg6-jm4c"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50020"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/netty/netty"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/releases/tag/netty-4.1.135.Final"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/releases/tag/netty-4.2.15.Final"
+                }
+              ]
+            },
+            {
+              "id": "GHSA-jppx-w49h-x2qq",
+              "summary": "Netty: [SpdyHttpDecoder] ByteBuf Reference Leak on RST_STREAM Leads to Native Memory Exhaustion",
+              "severity": "HIGH",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "4.2.0.Final"
+                    },
+                    {
+                      "fixed": "4.2.16.Final"
+                    }
+                  ]
+                },
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "4.1.0.Final"
+                    },
+                    {
+                      "fixed": "4.1.136.Final"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/security/advisories/GHSA-jppx-w49h-x2qq"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56745"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/commit/5b68c61f37aa4a3045cba624cbea239655c9003b"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/commit/bb2ff68a1fb71cb4b0eb9a9e17b66c52aff680c6"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/netty/netty"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/releases/tag/netty-4.1.136.Final"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/releases/tag/netty-4.2.16.Final"
+                }
+              ]
+            },
+            {
+              "id": "GHSA-m4cv-j2px-7723",
+              "summary": "Netty vulnerable to HTTP Request Smuggling due to incorrect chunk size parsing",
+              "severity": "MODERATE",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "4.2.0.Alpha1"
+                    },
+                    {
+                      "fixed": "4.2.13.Final"
+                    }
+                  ]
+                },
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "4.1.133.Final"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/security/advisories/GHSA-m4cv-j2px-7723"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42580"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/netty/netty"
+                }
+              ]
+            },
+            {
+              "id": "GHSA-mvh2-crg5-v77c",
+              "summary": "Netty SPDY zlib header block continues decoded expansion after maxHeaderSize truncation",
+              "severity": "HIGH",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "4.2.0.Final"
+                    },
+                    {
+                      "fixed": "4.2.16.Final"
+                    }
+                  ]
+                },
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "4.1.0.Final"
+                    },
+                    {
+                      "fixed": "4.1.136.Final"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/security/advisories/GHSA-mvh2-crg5-v77c"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55833"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/commit/5b68c61f37aa4a3045cba624cbea239655c9003b"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/commit/bb2ff68a1fb71cb4b0eb9a9e17b66c52aff680c6"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/netty/netty"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/releases/tag/netty-4.1.136.Final"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/releases/tag/netty-4.2.16.Final"
+                }
+              ]
+            },
+            {
+              "id": "GHSA-pwqr-wmgm-9rr8",
+              "summary": "Netty: HTTP Request Smuggling via Chunked Extension Quoted-String Parsing",
+              "severity": "HIGH",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "4.1.132.Final"
+                    }
+                  ]
+                },
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "4.2.0.Alpha1"
+                    },
+                    {
+                      "fixed": "4.2.10.Final"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/security/advisories/GHSA-pwqr-wmgm-9rr8"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33870"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/netty/netty"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://w4ke.info/2025/06/18/funky-chunks.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://w4ke.info/2025/10/29/funky-chunks-2.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.rfc-editor.org/rfc/rfc9110"
+                }
+              ]
+            },
+            {
+              "id": "GHSA-q4f6-jm68-57ww",
+              "summary": "Netty: [HttpContentEncoder] Unbounded Per-Connection Queue Growth via HTTP/1.1 Pipelining Leads to Denial of Service",
+              "severity": "MODERATE",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "4.2.0.Final"
+                    },
+                    {
+                      "fixed": "4.2.16.Final"
+                    }
+                  ]
+                },
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "4.1.136.Final"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/security/advisories/GHSA-q4f6-jm68-57ww"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/netty/netty"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/releases/tag/netty-4.1.136.Final"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/releases/tag/netty-4.2.16.Final"
+                }
+              ]
+            },
+            {
+              "id": "GHSA-v8h7-rr48-vmmv",
+              "summary": "Netty: Start-Line Injection in DefaultHttpRequest.setUri() Allows HTTP Request Smuggling and RTSP Request Injection",
+              "severity": "MODERATE",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "4.1.133.Final"
+                    }
+                  ]
+                },
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "4.2.0.Alpha1"
+                    },
+                    {
+                      "fixed": "4.2.13.Final"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/security/advisories/GHSA-v8h7-rr48-vmmv"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41417"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/netty/netty"
+                }
+              ]
+            },
+            {
+              "id": "GHSA-xxqh-mfjm-7mv9",
+              "summary": "Netty HTTP/1.0 TE+CL Coexistence Bypasses Smuggling Sanitization",
+              "severity": "MODERATE",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "4.2.0.Alpha1"
+                    },
+                    {
+                      "fixed": "4.2.13.Final"
+                    }
+                  ]
+                },
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "4.1.133.Final"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/security/advisories/GHSA-xxqh-mfjm-7mv9"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42581"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/netty/netty"
+                }
+              ]
+            }
+          ],
+          "selected_dependency_path": [
+            "root project :",
+            "com.android.tools.build:gradle:8.12.0",
+            "io.grpc:grpc-netty:1.69.1",
+            "io.netty:netty-codec-http2:4.1.110.Final",
+            "io.netty:netty-codec-http:4.1.110.Final"
+          ]
+        },
+        {
+          "coordinate": "io.netty:netty-codec-http2:4.1.110.Final",
+          "configurations": [
+            "nativeBuildTools"
+          ],
+          "advisories": [
+            {
+              "id": "GHSA-563q-j3cm-6jxm",
+              "summary": "Netty susceptible to HTTP/2 Reset Attack with different on-the-wire signature",
+              "severity": "MODERATE",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "4.2.0.Final"
+                    },
+                    {
+                      "fixed": "4.2.15.Final"
+                    }
+                  ]
+                },
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "4.1.135.Final"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/security/advisories/GHSA-563q-j3cm-6jxm"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50560"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/netty/netty"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/releases/tag/netty-4.1.135.Final"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/releases/tag/netty-4.2.15.Final"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.rfc-editor.org/rfc/rfc9113.html#name-defined-settings"
+                }
+              ]
+            },
+            {
+              "id": "GHSA-5x3r-wrvg-rp6q",
+              "summary": "Netty HTTP/2: Advertised MAX_CONCURRENT_STREAMS are not enforced",
+              "severity": "MODERATE",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "4.2.0.Final"
+                    },
+                    {
+                      "fixed": "4.2.15.Final"
+                    }
+                  ]
+                },
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "4.1.135.Final"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/security/advisories/GHSA-5x3r-wrvg-rp6q"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47244"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/netty/netty"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/releases/tag/netty-4.1.135.Final"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/releases/tag/netty-4.2.15.Final"
+                }
+              ]
+            },
+            {
+              "id": "GHSA-93wv-jw9v-4972",
+              "summary": "Netty: HTTP/2 decompression leaks ByteBuf reference count when the decompressor channel is already closed (Direct memory leak / OOM DoS)",
+              "severity": "HIGH",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "4.2.0"
+                    },
+                    {
+                      "fixed": "4.2.16.Final"
+                    }
+                  ]
+                },
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "4.1.0.Final"
+                    },
+                    {
+                      "fixed": "4.1.136.Final"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/security/advisories/GHSA-93wv-jw9v-4972"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56819"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/commit/5b68c61f37aa4a3045cba624cbea239655c9003b"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/commit/bb2ff68a1fb71cb4b0eb9a9e17b66c52aff680c6"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/netty/netty"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/releases/tag/netty-4.1.136.Final"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/releases/tag/netty-4.2.16.Final"
+                }
+              ]
+            },
+            {
+              "id": "GHSA-c2gf-v879-257j",
+              "summary": "netty-codec-http2: ByteBuf Reference-Count Leak in DelegatingDecompressorFrameListener Leads to Memory Exhaustion",
+              "severity": "MODERATE",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "4.1.135.Final"
+                    }
+                  ]
+                },
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "4.2.0.Alpha1"
+                    },
+                    {
+                      "fixed": "4.2.15.Final"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/security/advisories/GHSA-c2gf-v879-257j"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48043"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/commit/db6138b168699736a6463c367e12ad0a4c36a25e"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/commit/3d45a1e4e8eb99144f716e54be5ac57e525fa7ca"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-48043.json"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/releases/tag/netty-4.2.15.Final"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/releases/tag/netty-4.1.135.Final"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/netty/netty"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2488442"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/security/cve/CVE-2026-48043"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:66488"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:65126"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:54435"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:53806"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:53646"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:53645"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:53644"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:50085"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:48151"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:48124"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:41951"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:37390"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:36820"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:34608"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:26586"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:26018"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:26017"
+                }
+              ]
+            },
+            {
+              "id": "GHSA-c69g-56f8-xwqj",
+              "summary": "Netty: [codec-http2] Lack of Host Header Deduplication in HTTP/2\u2192HTTP/1.x Translation Leads to Request Routing Bypass",
+              "severity": "MODERATE",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "4.2.0.Final"
+                    },
+                    {
+                      "fixed": "4.2.16.Final"
+                    }
+                  ]
+                },
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "4.1.136.Final"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/security/advisories/GHSA-c69g-56f8-xwqj"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/netty/netty"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/releases/tag/netty-4.1.136.Final"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/releases/tag/netty-4.2.16.Final"
+                }
+              ]
+            },
+            {
+              "id": "GHSA-f6hv-jmp6-3vwv",
+              "summary": "Netty: HttpContentDecompressor maxAllocation bypass when Content-Encoding set to br/zstd/snappy leads to decompression bomb DoS",
+              "severity": "HIGH",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "4.2.0.Alpha1"
+                    },
+                    {
+                      "fixed": "4.2.13.Final"
+                    }
+                  ]
+                },
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "4.1.133.Final"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/security/advisories/GHSA-f6hv-jmp6-3vwv"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42587"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/netty/netty"
+                }
+              ]
+            },
+            {
+              "id": "GHSA-prj3-ccx8-p6x4",
+              "summary": "Netty affected by MadeYouReset HTTP/2 DDoS vulnerability",
+              "severity": "HIGH",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "4.2.0.Alpha1"
+                    },
+                    {
+                      "fixed": "4.2.4.Final"
+                    }
+                  ]
+                },
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "4.1.124.Final"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/security/advisories/GHSA-prj3-ccx8-p6x4"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-55163"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/grpc/grpc-java/commit/6462ef9a11980e168c21d90bbc7245c728fd1a7a"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/commit/be53dc3c9acd9af2e20d0c3c07cd77115a594cf1"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/netty/netty"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.kb.cert.org/vuls/id/767506"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2025/08/16/1"
+                }
+              ]
+            },
+            {
+              "id": "GHSA-w9fj-cfpg-grvv",
+              "summary": "Netty HTTP/2 CONTINUATION Frame Flood DoS via Zero-Byte Frame Bypass",
+              "severity": "HIGH",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "4.1.132.Final"
+                    }
+                  ]
+                },
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "4.2.0.Alpha1"
+                    },
+                    {
+                      "fixed": "4.2.11.Final"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/security/advisories/GHSA-w9fj-cfpg-grvv"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33871"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/netty/netty"
+                }
+              ]
+            }
+          ],
+          "selected_dependency_path": [
+            "root project :",
+            "com.android.tools.build:gradle:8.12.0",
+            "io.grpc:grpc-netty:1.69.1",
+            "io.netty:netty-codec-http2:4.1.110.Final"
+          ]
+        },
+        {
+          "coordinate": "io.netty:netty-common:4.1.110.Final",
+          "configurations": [
+            "nativeBuildTools"
+          ],
+          "advisories": [
+            {
+              "id": "GHSA-389x-839f-4rhx",
+              "summary": "Denial of Service attack on windows app using Netty",
+              "severity": "MODERATE",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "4.1.118.Final"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/security/advisories/GHSA-389x-839f-4rhx"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-25193"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/commit/d1fbda62d3a47835d3fb35db8bd42ecc205a5386"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/netty/netty"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20250221-0006"
+                }
+              ]
+            },
+            {
+              "id": "GHSA-xq3w-v528-46rv",
+              "summary": "Denial of Service attack on windows app using netty",
+              "severity": "MODERATE",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "4.1.115.Final"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/security/advisories/GHSA-xq3w-v528-46rv"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-47535"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/commit/fbf7a704a82e7449b48bd0bbb679f5661c6d61a3"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/netty/netty"
+                }
+              ]
+            }
+          ],
+          "selected_dependency_path": [
+            "root project :",
+            "com.android.tools.build:gradle:8.12.0",
+            "io.grpc:grpc-netty:1.69.1",
+            "io.netty:netty-codec-http2:4.1.110.Final",
+            "io.netty:netty-common:4.1.110.Final"
+          ]
+        },
+        {
+          "coordinate": "io.netty:netty-handler:4.1.110.Final",
+          "configurations": [
+            "nativeBuildTools"
+          ],
+          "advisories": [
+            {
+              "id": "GHSA-3qp7-7mw8-wx86",
+              "summary": "Netty has an IPv6 Subnet Filter Bypass via Incorrect Comparator Masking",
+              "severity": "HIGH",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "4.2.0.Final"
+                    },
+                    {
+                      "fixed": "4.2.15.Final"
+                    }
+                  ]
+                },
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "4.1.135.Final"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/security/advisories/GHSA-3qp7-7mw8-wx86"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44249"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/netty/netty"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/releases/tag/netty-4.1.135.Final"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/releases/tag/netty-4.2.15.Final"
+                }
+              ]
+            },
+            {
+              "id": "GHSA-4g8c-wm8x-jfhw",
+              "summary": "SslHandler doesn't correctly validate packets which can lead to native crash when using native SSLEngine",
+              "severity": "HIGH",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "4.1.91.Final"
+                    },
+                    {
+                      "fixed": "4.1.118.Final"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/security/advisories/GHSA-4g8c-wm8x-jfhw"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-24970"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/commit/87f40725155b2f89adfde68c7732f97c153676c4"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/netty/netty"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20250221-0005"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.vicarius.io/vsociety/posts/cve-2025-24970-netty-vulnerability-detection"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.vicarius.io/vsociety/posts/cve-2025-24970-netty-vulnerability-mitigation"
+                }
+              ]
+            },
+            {
+              "id": "GHSA-c4c3-7fpv-j4q5",
+              "summary": "Netty: SNI Routing Bypass via Fragmented TLS ClientHello Causing Fallback to Default SslContext",
+              "severity": "CRITICAL",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "4.2.0.Final"
+                    },
+                    {
+                      "fixed": "4.2.17.Final"
+                    }
+                  ]
+                },
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "4.1.137.Final"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/security/advisories/GHSA-c4c3-7fpv-j4q5"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75595"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/pull/17213"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/pull/17217"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/commit/1b5abc6443b63726c72cdd285af2feb7ddbb8ff7"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/commit/9e0519239108a69b7e9bbc5e9182ee139a0d7961"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/netty/netty"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/releases/tag/netty-4.1.137.Final"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/releases/tag/netty-4.2.17.Final"
+                }
+              ]
+            },
+            {
+              "id": "GHSA-c653-97m9-rcg9",
+              "summary": "Netty: Wrapping plain trust manager silently disables hostname verification",
+              "severity": "HIGH",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "4.2.0.Final"
+                    },
+                    {
+                      "fixed": "4.2.15.Final"
+                    }
+                  ]
+                },
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "4.1.135.Final"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/security/advisories/GHSA-c653-97m9-rcg9"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50010"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/netty/netty"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/releases/tag/netty-4.1.135.Final"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/releases/tag/netty-4.2.15.Final"
+                }
+              ]
+            },
+            {
+              "id": "GHSA-fccg-mwvh-qqg4",
+              "summary": "Netty: Fragmented ClientHello records trigger quadratic pre-handshake reassembly in default SNI parsing",
+              "severity": "MODERATE",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "4.2.0.Final"
+                    },
+                    {
+                      "fixed": "4.2.17.Final"
+                    }
+                  ]
+                },
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "4.1.137.Final"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/security/advisories/GHSA-fccg-mwvh-qqg4"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75596"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/pull/17213"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/pull/17217"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/commit/1b5abc6443b63726c72cdd285af2feb7ddbb8ff7"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/commit/9e0519239108a69b7e9bbc5e9182ee139a0d7961"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/netty/netty"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/releases/tag/netty-4.1.137.Final"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/releases/tag/netty-4.2.17.Final"
+                }
+              ]
+            },
+            {
+              "id": "GHSA-x4gw-5cx5-pgmh",
+              "summary": "Netty: SNI handler pre-allocates up to 16 MiB from nine attacker bytes",
+              "severity": "HIGH",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "4.2.0.Final"
+                    },
+                    {
+                      "fixed": "4.2.15.Final"
+                    }
+                  ]
+                },
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "4.1.135.Final"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/security/advisories/GHSA-x4gw-5cx5-pgmh"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45416"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/netty/netty"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/releases/tag/netty-4.1.135.Final"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/releases/tag/netty-4.2.15.Final"
+                }
+              ]
+            }
+          ],
+          "selected_dependency_path": [
+            "root project :",
+            "com.android.tools.build:gradle:8.12.0",
+            "io.grpc:grpc-netty:1.69.1",
+            "io.netty:netty-codec-http2:4.1.110.Final",
+            "io.netty:netty-handler:4.1.110.Final"
+          ]
+        },
+        {
+          "coordinate": "io.netty:netty-handler-proxy:4.1.110.Final",
+          "configurations": [
+            "nativeBuildTools"
+          ],
+          "advisories": [
+            {
+              "id": "GHSA-45q3-82m4-75jr",
+              "summary": "Netty has HTTP Header Injection via HttpProxyHandler Disabled Validation (Incomplete Fix CVE-2025-67735)",
+              "severity": "LOW",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "4.1.133.Final"
+                    }
+                  ]
+                },
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "4.2.0.Alpha1"
+                    },
+                    {
+                      "fixed": "4.2.13.Final"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/security/advisories/GHSA-45q3-82m4-75jr"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42578"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-84h7-rjj3-6jx4"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/netty/netty"
+                }
+              ]
+            }
+          ],
+          "selected_dependency_path": [
+            "root project :",
+            "com.android.tools.build:gradle:8.12.0",
+            "io.grpc:grpc-netty:1.69.1",
+            "io.netty:netty-handler-proxy:4.1.110.Final"
+          ]
+        },
+        {
+          "coordinate": "org.apache.commons:commons-compress:1.21",
+          "configurations": [
+            "nativeBuildTools"
+          ],
+          "advisories": [
+            {
+              "id": "GHSA-4265-ccf5-phj5",
+              "summary": "Apache Commons Compress: OutOfMemoryError unpacking broken Pack200 file",
+              "severity": "MODERATE",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "1.21"
+                    },
+                    {
+                      "fixed": "1.26.0"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-26308"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/apache/commons-compress"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread/ch5yo2d21p7vlqrhll9b17otbyq4npfg"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20240307-0009"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2024/02/19/2"
+                }
+              ]
+            },
+            {
+              "id": "GHSA-4g9r-vxhx-9pgx",
+              "summary": "Apache Commons Compress: Denial of service caused by an infinite loop for a corrupted DUMP file",
+              "severity": "MODERATE",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "1.3"
+                    },
+                    {
+                      "fixed": "1.26.0"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-25710"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/apache/commons-compress"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread/cz8qkcwphy4cx8gltn932ln51cbtq6kf"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20240307-0010"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://seclists.org/fulldisclosure/2024/Aug/37"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2024/02/19/1"
+                }
+              ]
+            }
+          ],
+          "selected_dependency_path": [
+            "root project :",
+            "com.android.tools.build:gradle:8.12.0",
+            "com.android.tools:sdk-common:31.12.0",
+            "org.apache.commons:commons-compress:1.21"
+          ]
+        },
+        {
+          "coordinate": "org.bitbucket.b_c:jose4j:0.9.5",
+          "configurations": [
+            "nativeBuildTools"
+          ],
+          "advisories": [
+            {
+              "id": "GHSA-3677-xxcr-wjqv",
+              "summary": "jose4j is vulnerable to DoS via compressed JWE content",
+              "severity": "HIGH",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "0.9.6"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-29371"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://bitbucket.org/b_c/jose4j/commits/19a90a64c47bb07c4aa5462f1316d5c293d81fcf"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://bitbucket.org/b_c/jose4j/issues/220/vuln-zip-bomb-attack"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://bitbucket.org/b_c/jose4j/wiki/Home"
+                }
+              ]
+            }
+          ],
+          "selected_dependency_path": [
+            "root project :",
+            "com.android.tools.build:gradle:8.12.0",
+            "com.android.tools.build:bundletool:1.18.1",
+            "org.bitbucket.b_c:jose4j:0.9.5"
+          ]
+        },
+        {
+          "coordinate": "org.bouncycastle:bcpkix-jdk18on:1.79",
+          "configurations": [
+            "nativeBuildTools"
+          ],
+          "advisories": [
+            {
+              "id": "GHSA-wg6q-6289-32hp",
+              "summary": "Bouncy Castle Crypto Package For Java: Use of a Broken or Risky Cryptographic Algorithm vulnerability in bcpkix modules",
+              "severity": "MODERATE",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "1.49"
+                    },
+                    {
+                      "fixed": "1.84"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5588"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/bcgit/bc-java/commit/656bae0dbd9b1521f840521ff786e78749fe3057"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/bcgit/bc-java"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/bcgit/bc-java/wiki/CVE%E2%80%902026%E2%80%905588"
+                }
+              ]
+            }
+          ],
+          "selected_dependency_path": [
+            "root project :",
+            "com.android.tools.build:gradle:8.12.0",
+            "org.bouncycastle:bcpkix-jdk18on:1.79"
+          ]
+        },
+        {
+          "coordinate": "org.bouncycastle:bcprov-jdk18on:1.79",
+          "configurations": [
+            "nativeBuildTools"
+          ],
+          "advisories": [
+            {
+              "id": "GHSA-574f-3g2m-x479",
+              "summary": "Bouncy Castle for Java GOST 28147 CTR mode reuses keystream after 255 blocks",
+              "severity": "CRITICAL",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "1.59"
+                    },
+                    {
+                      "fixed": "1.80.2"
+                    }
+                  ]
+                },
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "1.81.0"
+                    },
+                    {
+                      "fixed": "1.81.1"
+                    }
+                  ]
+                },
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "1.82"
+                    },
+                    {
+                      "fixed": "1.84"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-14813"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/bcgit/bc-java/commit/b42574345414e4b7c8051b16fa1fafe01c29871f"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/bcgit/bc-java/commit/701686cb0184cd9ae103c801b3581fdf95c6d4f3"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:11720"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:60248"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:60249"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:60250"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:60251"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:60252"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:60254"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:60256"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:60259"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:66488"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/security/cve/CVE-2025-14813"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2458640"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/bcgit/bc-java"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/bcgit/bc-java/wiki/CVE%E2%80%902025%E2%80%9014813"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.access.redhat.com/data/csaf/v2/vex/2025/cve-2025-14813.json"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:11721"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:13631"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:14272"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:14276"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:17668"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:18054"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:18055"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:18059"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:21772"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:24977"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:53644"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:53645"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:53646"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:53806"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:60239"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:60246"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:60247"
+                }
+              ]
+            },
+            {
+              "id": "GHSA-9pwp-9qqc-pr26",
+              "summary": "Bouncy Castle: Name Constraints bypass via trailing dot in rfc822Name and URI",
+              "severity": "CRITICAL",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "1.85"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8763"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/bcgit/bc-java/commit/2c28b253a44681fbbc562561eab6ad383d2ae558"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/bcgit/bc-java"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/bcgit/bc-java/releases/tag/r1rv85v2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/bcgit/bc-java/wiki/CVE%E2%80%902026%E2%80%908763"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/bcgit/bc-java/wiki/CVE-2026-8763"
+                }
+              ]
+            },
+            {
+              "id": "GHSA-c3fc-8qff-9hwx",
+              "summary": "Bouncy Castle has an LDAP injection",
+              "severity": "MODERATE",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "1.74"
+                    },
+                    {
+                      "fixed": "1.84"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0636"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/bcgit/bc-java/commit/d20cdb8430e09224114fec0179a71859929fcbde"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/bcgit/bc-java"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/bcgit/bc-java/wiki/CVE%E2%80%902026%E2%80%900636"
+                }
+              ]
+            },
+            {
+              "id": "GHSA-qp49-qgx5-5m26",
+              "summary": "Bouncy Castle: Lazy ASN.1 sequence forcing resets nesting-depth guard",
+              "severity": "HIGH",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "1.85"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13506"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/bcgit/bc-java/commit/77454da9b3dcaaa2991412d1c3c1a6e1a338ff84"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/bcgit/bc-java"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/bcgit/bc-java/wiki/CVE-2026-13506"
+                }
+              ]
+            }
+          ],
+          "selected_dependency_path": [
+            "root project :",
+            "com.android.tools.build:gradle:8.12.0",
+            "com.android.tools:sdk-common:31.12.0",
+            "org.bouncycastle:bcprov-jdk18on:1.79"
+          ]
+        },
+        {
+          "coordinate": "org.jdom:jdom2:2.0.6",
+          "configurations": [
+            "nativeBuildTools"
+          ],
+          "advisories": [
+            {
+              "id": "GHSA-2363-cqg2-863c",
+              "summary": "XML External Entity (XXE) Injection in JDOM",
+              "severity": "HIGH",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "2.0.6.1"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-33813"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hunterhacker/jdom/issues/189"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hunterhacker/jdom/pull/188"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hunterhacker/jdom/commit/dd4f3c2fc7893edd914954c73eb577f925a7d361"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpujul2022.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/EWFVYTHGILOQXUA7U3SPOERQXL7OPSZG"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/AH46QHE5GIMT6BL6C3GDTOYF27JYILXM"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2021/07/msg00012.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2021/06/msg00026.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rfb7a93e40ebeb1e0068cde0bf3834dcab46bb1ef06d6424db48ed9fd@%3Cdev.tika.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rbc075a4ac85e7a8e47420b7383f16ffa0af3b792b8423584735f369f@%3Cissues.solr.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r9974f64723875052e02787b2a5eda689ac5247c71b827d455e5dc9a6@%3Cissues.solr.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r89b3800cfabb1e773e49425e5d4239c28a659839a2eca6af3431482e@%3Cissues.solr.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r845e987b7cd8efe610284958e997b84583f5a98d3394adc09e3482fe@%3Cissues.solr.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r6db397ae7281ead825338200d1f62d2827585a70797cc9ac0c4bd23f@%3Cissues.solr.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r5674106135bb1a6ef57483f4c63a9c44bca85d0e2a8a05895a8f1d89@%3Cissues.solr.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r21c406c7ed88fe340db7dbae75e58355159e6c324037c7d5547bf40b@%3Cissues.solr.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hunterhacker/jdom/releases/tag/JDOM-2.0.6.1"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hunterhacker/jdom/releases"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/hunterhacker/jdom"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://alephsecurity.com/vulns/aleph-2021003"
+                }
+              ]
+            }
+          ],
+          "selected_dependency_path": [
+            "root project :",
+            "com.android.tools.build:gradle:8.12.0",
+            "com.android.tools.build.jetifier:jetifier-processor:1.0.0-beta10",
+            "org.jdom:jdom2:2.0.6"
+          ]
+        },
+        {
+          "coordinate": "org.jetbrains.kotlin:kotlin-gradle-plugin:2.1.20",
+          "configurations": [
+            "nativeBuildTools"
+          ],
+          "advisories": [
+            {
+              "id": "GHSA-r937-wjx7-w2jp",
+              "summary": "JetBrains Kotlin: Unsafe Deserialization in Kotlin Build Cache Enables Code Execution",
+              "severity": "MODERATE",
+              "withdrawn": null,
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "2.4.20-Beta1"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53914"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/JetBrains/kotlin/commit/bf51df665b458fda7c3eaf436c4d88dc119d7ec6"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/JetBrains/kotlin"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/JetBrains/kotlin/releases/tag/v2.4.20-Beta1"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.jetbrains.com/privacy-security/issues-fixed"
+                }
+              ]
+            }
+          ],
+          "selected_dependency_path": [
+            "root project :",
+            "org.jetbrains.kotlin:kotlin-gradle-plugin:2.1.20"
+          ]
+        }
+      ],
+      "assessment": "Version matches; no exploit reproduction or blanket unreachability claim. Only nativeBuildTools, not packaged app runtime. Explicit operator risk acceptance required for this unchanged official tool graph."
+    },
+    "additional_license_evidence": {
+      "javax.inject:javax.inject:1": {
+        "license": "Apache-2.0",
+        "evidence": "licenses/maven/javax.inject-1-source-license-header.txt"
+      },
+      "net.sf.kxml:kxml2:2.3.0": {
+        "license": "MIT-style permission notice",
+        "evidence": "licenses/maven/kxml2-2.3.0-source-license-header.txt"
+      },
+      "org.jdom:jdom2:2.0.6": {
+        "license": "JDOM license (retained full text; naming/attribution conditions)",
+        "evidence": "licenses/maven/jdom2-2.0.6-LICENSE.txt"
+      },
+      "org.bouncycastle:bcpkix-jdk18on:1.79": {
+        "license": "Bouncy Castle MIT-style permission notice",
+        "evidence": "licenses/maven/bouncycastle-1.79-LICENSE.html"
+      },
+      "org.bouncycastle:bcprov-jdk18on:1.79": {
+        "license": "Bouncy Castle MIT-style permission notice",
+        "evidence": "licenses/maven/bouncycastle-1.79-LICENSE.html"
+      },
+      "org.bouncycastle:bcutil-jdk18on:1.79": {
+        "license": "Bouncy Castle MIT-style permission notice",
+        "evidence": "licenses/maven/bouncycastle-1.79-LICENSE.html"
+      }
+    },
+    "artifact_count": 222,
+    "artifact_archives_computed_sha256": 88,
+    "artifact_index_sha256": "453e019dbbf21d23a109ece733ba80be30a315da20da38d512ffb8804e185cc6",
+    "selected_unique_coordinates": 229
+  },
+  "ios": {
+    "source": "SRI-verified react-native0.86.3 archive + fixed RN/codegen source packages already in npm graph",
+    "local_source_podspec_inventory": "ios/static-podspec-inventory.json",
+    "local_source_podspecs": 81,
+    "prebuilt_artifacts": [
+      {
+        "pod": "React-core",
+        "version": "0.86.3",
+        "mode": "debug",
+        "url": "https://repo.maven.apache.org/maven2/com/facebook/react/react-native-artifacts/0.86.3/react-native-artifacts-0.86.3-reactnative-core-debug.tar.gz",
+        "checksums": {
+          "sha256": "95283572f0d46919c8e208811d7470eca174d47b6152505f205d805867f99e1f",
+          "sha512": "81d9f8430808196fb609ee88e976b8bd03a720692d2028b779ff1d9991d0109cfa812103854b52f88741f3d00f4d6f6f0ccc822548c208630f5295a0fc843d8e",
+          "sha1": "8ac2940e64497547e3258f06b7345e0a4d18b452"
+        },
+        "archive_downloaded": false,
+        "head_error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "pod": "React-dependencies",
+        "version": "0.86.3",
+        "mode": "debug",
+        "url": "https://repo.maven.apache.org/maven2/com/facebook/react/react-native-artifacts/0.86.3/react-native-artifacts-0.86.3-reactnative-dependencies-debug.tar.gz",
+        "checksums": {
+          "sha256": "fa019419384f6f859655fec80b2d20736bb0441bb911cb1944b91719322ae512",
+          "sha512": "a3b29060d3c2e6d893754a6aa0021ae3a98cfa3b8bebdd9cb6edd0ad871c0ba5f44e5112b6c103fce75fef86af2e23b568c3ade8560657277565d83e04c5feaa",
+          "sha1": "ed90fb8939131939c47f3404e052ec98a571960c"
+        },
+        "archive_downloaded": false,
+        "head_error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "pod": "hermes-engine",
+        "version": "250829098.0.17",
+        "mode": "debug",
+        "url": "https://repo.maven.apache.org/maven2/com/facebook/hermes/hermes-ios/250829098.0.17/hermes-ios-250829098.0.17-hermes-ios-debug.tar.gz",
+        "checksums": {
+          "sha256": "01ff9328903b2d8e4184b6efd9003eb33959ba1c1913c13258fefc42e16c20c2",
+          "sha512": "4b95eb7d29b49f7a9c18050953986e6f25eb8391d83961283d7b2b27e6f8f5c4b2fc787d3248805c11f814d994495d13ffd8550ce55124e6088acbeb798877b1",
+          "sha1": "6a3a561f7462a4a233327f86441d1090f930dbb3"
+        },
+        "archive_downloaded": false,
+        "head_error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "pod": "React-core",
+        "version": "0.86.3",
+        "mode": "release",
+        "url": "https://repo.maven.apache.org/maven2/com/facebook/react/react-native-artifacts/0.86.3/react-native-artifacts-0.86.3-reactnative-core-release.tar.gz",
+        "checksums": {
+          "sha256": "05359752100c0db4be9229423fc673eb3b981ba97aa6210707b878a708320a98",
+          "sha512": "551de879ac974ffd3deb24d845fedf5bdcb8247bf2ea3d39da337b19968d788f526f111850f3d9f4c57cd98ddbce75501c11707e480b13e8b0f5302db260a30f",
+          "sha1": "4deb283f1b51d5f7dff121d353dadd93c97c43a2"
+        },
+        "archive_downloaded": false,
+        "head_error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "pod": "React-dependencies",
+        "version": "0.86.3",
+        "mode": "release",
+        "url": "https://repo.maven.apache.org/maven2/com/facebook/react/react-native-artifacts/0.86.3/react-native-artifacts-0.86.3-reactnative-dependencies-release.tar.gz",
+        "checksums": {
+          "sha256": "5e06070fdad3315f9f3020283d16875395f93e8a59e175be36d8971e64095892",
+          "sha512": "1d2081edd00c4600e9c9b810e30b733e14524f92767ab78aa22d1b3a6943753af3044cfab49762a3c0533d9bdbeec50867291b9d9a00652ca7681594cca9847c",
+          "sha1": "7021ddd280b78a814f18cf8fde0c6f891bac75b9"
+        },
+        "archive_downloaded": true,
+        "head_error": "HTTP Error 403: Forbidden",
+        "archive_sri_sha256_verified": true,
+        "archive_bytes": 10420036,
+        "license_files": [],
+        "file_inventory_count": 1827
+      },
+      {
+        "pod": "hermes-engine",
+        "version": "250829098.0.17",
+        "mode": "release",
+        "url": "https://repo.maven.apache.org/maven2/com/facebook/hermes/hermes-ios/250829098.0.17/hermes-ios-250829098.0.17-hermes-ios-release.tar.gz",
+        "checksums": {
+          "sha256": "2967ee51b41bd433b3027dda875e96194354e2b4d715f9f186fd0c04ccef309d",
+          "sha512": "9581891bceaff8e73163f4420870d8567f313f944d35371ce71b17ea7bb1a27b84b2dc6f9b3907940a644002319978373e89c25750b9cf52279d721d87d9e979",
+          "sha1": "651906aa5330795ac2982aab76e530c4c22dc0a1"
+        },
+        "archive_downloaded": false,
+        "head_error": "HTTP Error 403: Forbidden"
+      }
+    ],
+    "third_party_component_source_license_inventory": "ios/component-licenses/inventory.json",
+    "scope": "Only six exact named/checksummed prebuilt containers for debug/release. Their internal complete source SBOM is not supplied/independently proved; component attribution source metadata is not proof of exact binary composition. No fully evaluated Podfile.lock exists.",
+    "source_fallback": "NOT approved. Unknown/missing/checksum-mismatched prebuilt artifacts must stop; do not let upstream availability checks silently choose source dependencies."
+  },
+  "approved_operations_if_operator_accepts": [
+    "Fetch only approved immutable archives and verify their SRI/SHA256 pins; retain actual archive license/notice files.",
+    "Install the exact npm lock with lifecycle scripts disabled into task-owned consumer directories.",
+    "Run only separately source-reviewed official codegen/build commands against owned synthetic projects; no package initializer or unreviewed lifecycle hook.",
+    "Use isolated Gradle homes, disable remote and shared/untrusted build caches; --no-build-cache is the preferred stronger control. Work offline after exact inputs are fetched/verified; do not build untrusted projects.",
+    "Produce actual AGP/CocoaPods locks and compare all resolved external components/artifact hashes against this approved allowlist; stop on additions/unknown fallbacks.",
+    "Validate protected Android/iOS/RN consumers, HTTP/restart/cancellation and release packaging after approval; no platform support claimed beforehand."
+  ],
+  "not_included": [
+    "Android crypto build mechanism must reuse already-approved source/provider graph or receive its own exact additional dependency approval in the same final bundle.",
+    "No new Ruby gem resolution/install; existing CocoaPods1.16.2/Xcode toolchain is recorded as pre-existing tool input.",
+    "No Rust mobile target install, simulator/AVD operation, package publication or production source change."
+  ],
+  "android_provider": "Reuse approved Phase6 SQLCipher/LibTomCrypt sources per parent RFD; target provider/build path still needs security review before build. No new provider package is approved by this packet."
+}

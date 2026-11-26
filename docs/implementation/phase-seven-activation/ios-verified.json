@@ -1,0 +1,101 @@
+{
+  "format": 1,
+  "mode": "approved exact archive bytes and inventory only; no extraction or execution",
+  "earlier_attempt": {
+    "client": "Python urllib",
+    "result": "HTTP403 on first exact core-debug GET; no archive accepted",
+    "retry": "existing curl exact URL, strong hashes still mandatory"
+  },
+  "archives": [
+    {
+      "name": "react-native-artifacts-0.86.3-reactnative-core-debug.tar.gz",
+      "url": "https://repo.maven.apache.org/maven2/com/facebook/react/react-native-artifacts/0.86.3/react-native-artifacts-0.86.3-reactnative-core-debug.tar.gz",
+      "source": "exact approved HTTPS GET via existing curl",
+      "bytes": 98779707,
+      "sha256": "95283572f0d46919c8e208811d7470eca174d47b6152505f205d805867f99e1f",
+      "sha512": "81d9f8430808196fb609ee88e976b8bd03a720692d2028b779ff1d9991d0109cfa812103854b52f88741f3d00f4d6f6f0ccc822548c208630f5295a0fc843d8e",
+      "strong_hashes_match": true,
+      "members": 5737,
+      "unpacked_declared_bytes": 651614272,
+      "inventory_path": "target/phase-seven-activation/ios/react-native-artifacts-0.86.3-reactnative-core-debug.tar.gz.inventory.json",
+      "inventory_sha256": "d15d1fd6d0b7512a38bfd758540c6f41cfbafd6383fa46e1894166549dc17170",
+      "inventory_safe": true,
+      "extracted": false
+    },
+    {
+      "name": "react-native-artifacts-0.86.3-reactnative-dependencies-debug.tar.gz",
+      "url": "https://repo.maven.apache.org/maven2/com/facebook/react/react-native-artifacts/0.86.3/react-native-artifacts-0.86.3-reactnative-dependencies-debug.tar.gz",
+      "source": "exact approved HTTPS GET via existing curl",
+      "bytes": 18746275,
+      "sha256": "fa019419384f6f859655fec80b2d20736bb0441bb911cb1944b91719322ae512",
+      "sha512": "a3b29060d3c2e6d893754a6aa0021ae3a98cfa3b8bebdd9cb6edd0ad871c0ba5f44e5112b6c103fce75fef86af2e23b568c3ade8560657277565d83e04c5feaa",
+      "strong_hashes_match": true,
+      "members": 2061,
+      "unpacked_declared_bytes": 94041684,
+      "inventory_path": "target/phase-seven-activation/ios/react-native-artifacts-0.86.3-reactnative-dependencies-debug.tar.gz.inventory.json",
+      "inventory_sha256": "79966dde1f45329db94e33b44c6fb4804e1c2c39d22b211d6f31c25e0981abe2",
+      "inventory_safe": true,
+      "extracted": false
+    },
+    {
+      "name": "hermes-ios-250829098.0.17-hermes-ios-debug.tar.gz",
+      "url": "https://repo.maven.apache.org/maven2/com/facebook/hermes/hermes-ios/250829098.0.17/hermes-ios-250829098.0.17-hermes-ios-debug.tar.gz",
+      "source": "exact approved HTTPS GET via existing curl",
+      "bytes": 32748118,
+      "sha256": "01ff9328903b2d8e4184b6efd9003eb33959ba1c1913c13258fefc42e16c20c2",
+      "sha512": "4b95eb7d29b49f7a9c18050953986e6f25eb8391d83961283d7b2b27e6f8f5c4b2fc787d3248805c11f814d994495d13ffd8550ce55124e6088acbeb798877b1",
+      "strong_hashes_match": true,
+      "members": 116,
+      "unpacked_declared_bytes": 109471308,
+      "inventory_path": "target/phase-seven-activation/ios/hermes-ios-250829098.0.17-hermes-ios-debug.tar.gz.inventory.json",
+      "inventory_sha256": "24f32a5f6f73b3fa47e374382c3a4c278b8d4ffa7193528da5efda01baf3a2e7",
+      "inventory_safe": true,
+      "extracted": false
+    },
+    {
+      "name": "react-native-artifacts-0.86.3-reactnative-core-release.tar.gz",
+      "url": "https://repo.maven.apache.org/maven2/com/facebook/react/react-native-artifacts/0.86.3/react-native-artifacts-0.86.3-reactnative-core-release.tar.gz",
+      "source": "exact approved HTTPS GET via existing curl",
+      "bytes": 31000150,
+      "sha256": "05359752100c0db4be9229423fc673eb3b981ba97aa6210707b878a708320a98",
+      "sha512": "551de879ac974ffd3deb24d845fedf5bdcb8247bf2ea3d39da337b19968d788f526f111850f3d9f4c57cd98ddbce75501c11707e480b13e8b0f5302db260a30f",
+      "strong_hashes_match": true,
+      "members": 5737,
+      "unpacked_declared_bytes": 128640824,
+      "inventory_path": "target/phase-seven-activation/ios/react-native-artifacts-0.86.3-reactnative-core-release.tar.gz.inventory.json",
+      "inventory_sha256": "0c1bb47431b527a20c212b57c3e566bd27e0ec7c4a3f4114164e214c641af232",
+      "inventory_safe": true,
+      "extracted": false
+    },
+    {
+      "name": "react-native-artifacts-0.86.3-reactnative-dependencies-release.tar.gz",
+      "url": "https://repo.maven.apache.org/maven2/com/facebook/react/react-native-artifacts/0.86.3/react-native-artifacts-0.86.3-reactnative-dependencies-release.tar.gz",
+      "source": "rehash existing preparation cache",
+      "bytes": 10420036,
+      "sha256": "5e06070fdad3315f9f3020283d16875395f93e8a59e175be36d8971e64095892",
+      "sha512": "1d2081edd00c4600e9c9b810e30b733e14524f92767ab78aa22d1b3a6943753af3044cfab49762a3c0533d9bdbeec50867291b9d9a00652ca7681594cca9847c",
+      "strong_hashes_match": true,
+      "members": 2061,
+      "unpacked_declared_bytes": 46925154,
+      "inventory_path": "target/phase-seven-activation/ios/react-native-artifacts-0.86.3-reactnative-dependencies-release.tar.gz.inventory.json",
+      "inventory_sha256": "57000f8c394ff9b688df0781b0e9d8cccf8251ed18bcd9f5b5d7ee8a16cfaa6f",
+      "inventory_safe": true,
+      "extracted": false
+    },
+    {
+      "name": "hermes-ios-250829098.0.17-hermes-ios-release.tar.gz",
+      "url": "https://repo.maven.apache.org/maven2/com/facebook/hermes/hermes-ios/250829098.0.17/hermes-ios-250829098.0.17-hermes-ios-release.tar.gz",
+      "source": "exact approved HTTPS GET via existing curl",
+      "bytes": 25541302,
+      "sha256": "2967ee51b41bd433b3027dda875e96194354e2b4d715f9f186fd0c04ccef309d",
+      "sha512": "9581891bceaff8e73163f4420870d8567f313f944d35371ce71b17ea7bb1a27b84b2dc6f9b3907940a644002319978373e89c25750b9cf52279d721d87d9e979",
+      "strong_hashes_match": true,
+      "members": 116,
+      "unpacked_declared_bytes": 93934980,
+      "inventory_path": "target/phase-seven-activation/ios/hermes-ios-250829098.0.17-hermes-ios-release.tar.gz.inventory.json",
+      "inventory_sha256": "44c7feb65ac8724bd7871751b4e3af1e0c71024fbc8c07fcbd6a9786f904cc3e",
+      "inventory_safe": true,
+      "extracted": false
+    }
+  ]
+}

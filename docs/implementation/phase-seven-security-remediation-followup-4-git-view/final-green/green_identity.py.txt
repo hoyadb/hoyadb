@@ -1,0 +1,44 @@
+#!/usr/bin/env python3
+"""Run the security guard suites (normal + -O) and bind results to exact source hashes and interpreter identity."""
+import datetime
+import hashlib
+import json
+from pathlib import Path
+import platform
+import re
+import subprocess
+import sys
+
+ROOT = Path(__file__).resolve().parents[3]
+SEC = ROOT / 'bindings/react-native/tools/security'
+OUT = Path(sys.argv[1])
+SUITES = ['test_kotlin_guard', 'test_symbol_guard', 'test_embedded_scan', 'test_init_script_guard']
+
+
+def sources():
+    return {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(SEC.iterdir()) if p.is_file()}
+
+
+OUT.mkdir(parents=True, exist_ok=False)
+before = sources()
+interpreter = Path(sys.executable).resolve()
+runs = []
+for mode, flags in (('normal', ['-I', '-B']), ('optimized', ['-I', '-O', '-B'])):
+    for suite in SUITES:
+        command = [str(interpreter), *flags, str(SEC / (suite + '.py'))]
+        started = datetime.datetime.now(datetime.timezone.utc).isoformat()
+        p = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, timeout=300)
+        log = OUT / f'{mode}-{suite}.txt'
+        log.write_bytes(p.stdout)
+        text = p.stdout.decode('utf-8', 'replace')
+        ran = re.search(r'Ran (\d+) tests', text)
+        runs.append({'mode': mode, 'suite': suite, 'command': command, 'started_utc': started, 'exit': p.returncode,
+                     'tests': int(ran.group(1)) if ran else None, 'ok': p.returncode == 0 and '\nOK' in text,
+                     'log': log.name, 'log_sha256': hashlib.sha256(p.stdout).hexdigest()})
+after = sources()
+identity = {'python': platform.python_version(), 'implementation': platform.python_implementation(),
+            'interpreter': str(interpreter), 'interpreter_sha256': hashlib.sha256(interpreter.read_bytes()).hexdigest(),
+            'platform': platform.platform(), 'sources_before': before, 'sources_after': after, 'sources_unchanged': before == after,
+            'runs': runs, 'all_ok': all(r['ok'] for r in runs), 'total_tests_per_mode': sum(r['tests'] or 0 for r in runs) // 2}
+(OUT / 'green-run-identity.json').write_text(json.dumps(identity, indent=1) + '\n')
+print('all_ok', identity['all_ok'], 'tests per mode', identity['total_tests_per_mode'], 'sources unchanged', identity['sources_unchanged'])

@@ -1,0 +1,59 @@
+import groovy.json.JsonOutput
+import org.gradle.api.attributes.*
+import org.gradle.api.attributes.java.TargetJvmVersion
+import org.gradle.api.attributes.plugin.GradlePluginApiVersion
+
+// CHECK-ONLY: the RN consumer's Groovy buildscript classpath (android/build.gradle classpath block plus the
+// included react-native-gradle-plugin runtime dependencies). Groovy scripts receive no embedded-Kotlin pins.
+// Metadata resolution only with Gradle's builtin java plugin:
+// attributes from Gradle 9.3.1 DefaultScriptClassPathResolver; strict constraints from Gradle's
+// EmbeddedKotlinProvider.pinEmbeddedKotlinDependenciesOn (gradle-kotlin-dsl-embedded-kotlin.properties).
+// No plugin is applied and no dependency JAR is loaded.
+plugins { id 'java' }
+repositories {
+    google()
+    mavenCentral()
+}
+def scriptClasspath = { String name ->
+    configurations.create(name) {
+        canBeConsumed = false
+        canBeResolved = true
+        attributes {
+            attribute(Usage.USAGE_ATTRIBUTE, objects.named(Usage, Usage.JAVA_RUNTIME))
+            attribute(Category.CATEGORY_ATTRIBUTE, objects.named(Category, Category.LIBRARY))
+            attribute(LibraryElements.LIBRARY_ELEMENTS_ATTRIBUTE, objects.named(LibraryElements, LibraryElements.JAR))
+            attribute(Bundling.BUNDLING_ATTRIBUTE, objects.named(Bundling, Bundling.EXTERNAL))
+            attribute(TargetJvmVersion.TARGET_JVM_VERSION_ATTRIBUTE, 17)
+            attribute(GradlePluginApiVersion.GRADLE_PLUGIN_API_VERSION_ATTRIBUTE, objects.named(GradlePluginApiVersion, gradle.gradleVersion))
+        }
+        resolutionStrategy.activateDependencyLocking()
+    }
+}
+scriptClasspath('consumerBuildscriptClasspath')
+['com.android.tools.build:gradle:8.12.0', 'org.jetbrains.kotlin:kotlin-gradle-plugin:2.1.20',
+ // react-native-gradle-plugin runtime dependencies (libs.versions.toml) and KGP's default kotlin-stdlib
+ 'com.google.code.gson:gson:2.8.9', 'com.google.guava:guava:31.0.1-jre', 'com.squareup:javapoet:1.13.0',
+ 'org.jetbrains.kotlin:kotlin-stdlib:2.1.20'].each { dependencies.add('consumerBuildscriptClasspath', it) }
+
+tasks.register('captureMetadata') {
+    doLast {
+        def report = [gradle: gradle.gradleVersion, java: System.getProperty('java.version'),
+                      status: 'Metadata resolution only; builtin java plugin; no plugin applied; no dependency code executed', configurations: [:]]
+        ['consumerBuildscriptClasspath'].each { name ->
+            def result = configurations[name].incoming.resolutionResult
+            def components = []; def edges = []; def failures = []
+            result.allComponents.each { c ->
+                components.add([id: c.id.displayName, reason: c.selectionReason.descriptions.collect { it.description },
+                                variants: c.variants.collect { v -> [name: v.displayName, attributes: v.attributes.keySet().collectEntries { a -> [(a.name): v.attributes.getAttribute(a).toString()] }] }])
+            }
+            result.allDependencies.each { d ->
+                if (d instanceof org.gradle.api.artifacts.result.ResolvedDependencyResult) edges.add([from: d.from.id.displayName, requested: d.requested.displayName, selected: d.selected.id.displayName, constraint: d.constraint])
+                if (d instanceof org.gradle.api.artifacts.result.UnresolvedDependencyResult) failures.add([requested: d.attempted.displayName, failure: d.failure.message, details: d.failure.cause?.message])
+            }
+            report.configurations[name] = [attributes: configurations[name].attributes.keySet().collectEntries { a -> [(a.name): configurations[name].attributes.getAttribute(a).toString()] },
+                                           components: components, edges: edges, failures: failures]
+        }
+        file('resolution.json').text = JsonOutput.prettyPrint(JsonOutput.toJson(report)) + '\n'
+        if (report.configurations.any { n, v -> !v.failures.empty }) throw new GradleException('Metadata graph unresolved; see resolution.json')
+    }
+}

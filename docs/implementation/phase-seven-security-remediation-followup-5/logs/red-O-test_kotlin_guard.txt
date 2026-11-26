@@ -1,0 +1,15 @@
+....F......................
+======================================================================
+FAIL: test_guard_uses_independent_properties_module (__main__.LaunchGuard.test_guard_uses_independent_properties_module)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py", line 123, in test_guard_uses_independent_properties_module
+    self.assertIs(G.MalformedProperties, java_properties.MalformedProperties)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: <class 'kotlin_guard.MalformedProperties'> is not <class 'java_properties.MalformedProperties'>
+
+----------------------------------------------------------------------
+Ran 27 tests in 0.103s
+
+FAILED (failures=1)
+exit=1

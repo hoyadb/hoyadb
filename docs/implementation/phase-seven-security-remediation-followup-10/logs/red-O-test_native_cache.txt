@@ -1,0 +1,54 @@
+....FF.....................................
+======================================================================
+FAIL: test_sr22d_missing_image_identity_rejects_instead_of_raising (__main__.DualResident.test_sr22d_missing_image_identity_rejects_instead_of_raising) (key='install_path', index=0)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 503, in test_sr22d_missing_image_identity_rejects_instead_of_raising
+    direct = N.check_host(N.SystemCacheEvidence(record, {}, {}))
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 173, in check_host
+    errors = _record_errors(record)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 117, in _record_errors
+    errors += _dual_errors(record)
+              ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 123, in _dual_errors
+    canonical = {i['install_path'] for i in images} if isinstance(images, list) and all(isinstance(i, dict) for i in images) else set()
+                 ~^^^^^^^^^^^^^^^^
+KeyError: 'install_path'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 506, in test_sr22d_missing_image_identity_rejects_instead_of_raising
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised KeyError instead of rejecting
+
+======================================================================
+FAIL: test_sr22d_missing_image_identity_rejects_instead_of_raising (__main__.DualResident.test_sr22d_missing_image_identity_rejects_instead_of_raising) (key='install_path', index=3)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 503, in test_sr22d_missing_image_identity_rejects_instead_of_raising
+    direct = N.check_host(N.SystemCacheEvidence(record, {}, {}))
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 173, in check_host
+    errors = _record_errors(record)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 117, in _record_errors
+    errors += _dual_errors(record)
+              ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 123, in _dual_errors
+    canonical = {i['install_path'] for i in images} if isinstance(images, list) and all(isinstance(i, dict) for i in images) else set()
+                 ~^^^^^^^^^^^^^^^^
+KeyError: 'install_path'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 506, in test_sr22d_missing_image_identity_rejects_instead_of_raising
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised KeyError instead of rejecting
+
+----------------------------------------------------------------------
+Ran 42 tests in 0.050s
+
+FAILED (failures=2)
+exit=1

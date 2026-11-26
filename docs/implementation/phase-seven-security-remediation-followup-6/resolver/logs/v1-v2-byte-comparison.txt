@@ -1,0 +1,58 @@
+v2 files 262 v1 files 252 common 251 byte mismatches []
+only in v2: ['org.junit/junit-bom/5.13.1/junit-bom-5.13.1.module', 'org.junit/junit-bom/5.13.1/junit-bom-5.13.1.module.asc', 'org.junit/junit-bom/5.13.1/junit-bom-5.13.1.module.md5', 'org.junit/junit-bom/5.13.1/junit-bom-5.13.1.module.sha1', 'org.junit/junit-bom/5.13.1/junit-bom-5.13.1.module.sha256', 'org.junit/junit-bom/5.13.1/junit-bom-5.13.1.module.sha512', 'org.junit/junit-bom/5.13.1/junit-bom-5.13.1.pom.asc', 'org.junit/junit-bom/5.13.1/junit-bom-5.13.1.pom.md5', 'org.junit/junit-bom/5.13.1/junit-bom-5.13.1.pom.sha1', 'org.junit/junit-bom/5.13.1/junit-bom-5.13.1.pom.sha256', 'org.junit/junit-bom/5.13.1/junit-bom-5.13.1.pom.sha512']
+only in v1: ['org.bouncycastle/bcprov-jdk18on/1.85.2/bcprov-jdk18on-1.85.2.pom']
+v1 POMs with no v1 primary-fetch record 26 ['io.netty/netty-buffer/4.1.139.Final/netty-buffer-4.1.139.Final.pom', 'io.netty/netty-codec-http/4.1.139.Final/netty-codec-http-4.1.139.Final.pom', 'io.netty/netty-codec-http2/4.1.139.Final/netty-codec-http2-4.1.139.Final.pom', 'io.netty/netty-codec-socks/4.1.139.Final/netty-codec-socks-4.1.139.Final.pom', 'io.netty/netty-codec/4.1.139.Final/netty-codec-4.1.139.Final.pom', 'io.netty/netty-common/4.1.139.Final/netty-common-4.1.139.Final.pom', 'io.netty/netty-handler-proxy/4.1.139.Final/netty-handler-proxy-4.1.139.Final.pom', 'io.netty/netty-handler/4.1.139.Final/netty-handler-4.1.139.Final.pom', 'io.netty/netty-parent/4.1.139.Final/netty-parent-4.1.139.Final.pom', 'io.netty/netty-resolver/4.1.139.Final/netty-resolver-4.1.139.Final.pom', 'io.netty/netty-transport-native-unix-common/4.1.139.Final/netty-transport-native-unix-common-4.1.139.Final.pom', 'io.netty/netty-transport/4.1.139.Final/netty-transport-4.1.139.Final.pom', 'org.apache.commons/commons-compress/1.28.0/commons-compress-1.28.0.pom', 'org.apache.commons/commons-lang3/3.18.0/commons-lang3-3.18.0.pom', 'org.apache.commons/commons-parent/85/commons-parent-85.pom', 'org.apache/apache/35/apache-35.pom', 'org.bitbucket.b_c/jose4j/0.9.6/jose4j-0.9.6.pom', 'org.bouncycastle/bcpkix-jdk18on/1.85/bcpkix-jdk18on-1.85.pom', 'org.bouncycastle/bcprov-jdk18on/1.85.2/bcprov-jdk18on-1.85.2.pom', 'org.bouncycastle/bcprov-jdk18on/1.85/bcprov-jdk18on-1.85.pom', 'org.bouncycastle/bcutil-jdk18on/1.85/bcutil-jdk18on-1.85.pom', 'org.jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.pom', 'org.junit/junit-bom/5.13.1/junit-bom-5.13.1.pom', 'org.slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.pom', 'org.slf4j/slf4j-parent/1.7.36/slf4j-parent-1.7.36.pom', 'org.sonatype.oss/oss-parent/9/oss-parent-9.pom']
+{
+ "org.junit:junit-bom:5.13.1": {
+  "junit-bom-5.13.1.pom": {
+   "bytes": 5649,
+   "sha256": "fa68451ea830572ed43ffe51d75b6a05f7a5e665a602a51f49d6be02063a65f3",
+   "sha512": "e1c4acc68f7114cd501754d07e51a9345bc1106623ea9e38cd6d40b1886cea7f8f6fa227da9d71da608b6691ef1f9d75d11253567350fbb4a949770a1cb7023e",
+   "gradle_metadata_marker": true,
+   "sidecars": {
+    "sha1": {
+     "published": "4a2b7185be9155ef83499f1da0ef2f15e0f4fffd",
+     "match": true
+    },
+    "sha256": {
+     "published": "fa68451ea830572ed43ffe51d75b6a05f7a5e665a602a51f49d6be02063a65f3",
+     "match": true
+    },
+    "sha512": {
+     "published": "e1c4acc68f7114cd501754d07e51a9345bc1106623ea9e38cd6d40b1886cea7f8f6fa227da9d71da608b6691ef1f9d75d11253567350fbb4a949770a1cb7023e",
+     "match": true
+    },
+    "md5": {
+     "published": "2abd6856b7c41e318e793dfb52f4df68",
+     "match": true
+    },
+    "asc_present": true
+   }
+  },
+  "junit-bom-5.13.1.module": {
+   "bytes": 6994,
+   "sha256": "33c07ab9724790a6e5859ba07d69117ac530439724545a81c4179e3272c75de8",
+   "sha512": "b3e821345032cb9182822539189ed51eb9cdddc52c90e0806d00befaf3dbe9d704c081c1a3db03776c2b622575a5d9abe68d778852ad94707429698611bbb6a2",
+   "gradle_metadata_marker": null,
+   "sidecars": {
+    "sha1": {
+     "published": "b3c6e34138c8ee0befa60784860167bc95701ab8",
+     "match": true
+    },
+    "sha256": {
+     "published": "33c07ab9724790a6e5859ba07d69117ac530439724545a81c4179e3272c75de8",
+     "match": true
+    },
+    "sha512": {
+     "published": "b3e821345032cb9182822539189ed51eb9cdddc52c90e0806d00befaf3dbe9d704c081c1a3db03776c2b622575a5d9abe68d778852ad94707429698611bbb6a2",
+     "match": true
+    },
+    "md5": {
+     "published": "f91c40c020f29369b9cf30e74a035efc",
+     "match": true
+    },
+    "asc_present": true
+   }
+  }
+ }
+}

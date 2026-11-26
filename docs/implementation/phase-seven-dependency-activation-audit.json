@@ -1,0 +1,14 @@
+{
+  "Cargo.lock": {
+    "external_packages": 35,
+    "outside_approved_phase_six_graph": []
+  },
+  "bindings/native/Cargo.lock": {
+    "external_packages": 35,
+    "outside_approved_phase_six_graph": []
+  },
+  "bindings/web/Cargo.lock": {
+    "external_packages": 39,
+    "outside_approved_phase_six_graph": []
+  }
+}

@@ -1,0 +1,4 @@
+PASS K09_packaged_fake_auto_correlations_mixed_i64_reorder_duplicate_and_drop
+PASS K10_sync_retains_actual_response_and_mapper_across_shared_FIFO_Busy
+
+exit=0

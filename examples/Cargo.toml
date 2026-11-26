@@ -1,0 +1,12 @@
+[package]
+name = "hoyadb-doc-examples"
+version = "0.0.0"
+edition = "2024"
+publish = false
+
+[workspace]
+
+[dependencies]
+hoyadb-core = { path = "../crates/hoyadb-core" }
+hoyadb-storage-memory = { path = "../crates/hoyadb-storage-memory" }
+hoyadb-storage-sqlite = { path = "../crates/hoyadb-storage-sqlite" }

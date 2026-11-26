@@ -1,0 +1,39 @@
+{
+ "final_sources_sha256": {
+  "README.md": "fbfdf9eced3bb171009a8074ae31cc5cb1adc6779f0261f431bcf488b28db973",
+  "classfile.py": "d6cddefb56da9ba602a4b85c5e885f47ef03d90a983fb4eb09e18e98f218f6cd",
+  "embedded_scan.py": "20299d9e0518c489effe4e4e6d5c22f485be015cc7a1a56f5adac0e845ad9833",
+  "fixtures.py": "98435b6272b53931ef9261d8dd4d813679a40f5aaeabca067ab35a041c719ed2",
+  "init_script_guard.py": "a03132fa672aa67b56672de7f7b8aec0f4814974fc2485277fee5ad61ef7135a",
+  "java_properties.py": "1520ebe4d58b2667aa4e7df242387ff63c46d1bac0971216bb02320b3a17beab",
+  "kotlin_guard.py": "d88d53f50dfb4eb0a62e57032829198d43cdc5c2416f237924e423a1481b48fa",
+  "r1-compile-alignment.init.gradle": "74aa545a6c82cbdc434e71328653979715659818603a6c0d60627245e8d1f9a0",
+  "symbol_guard.py": "56668e924bca2606d5eb2f5dc8983cf7e1c2a22998ba38679d86e23feb26c0a9",
+  "test_embedded_scan.py": "e017988682145333f92540b8cf9c41e66601ecf0050e8565c58d90fcef53e114",
+  "test_init_script_guard.py": "d172782de62399add70feed1df9c2a5e23aafc38bce5bb6453d40c48011a925a",
+  "test_java_properties.py": "5d52254eef75884ba61dc901f22624fb61fb1be919f23e16807458c1a7431eea",
+  "test_kotlin_guard.py": "69d36b8175212303618aa106948559591110b423efa0603fc8dc5123cc1bbbdb",
+  "test_symbol_guard.py": "6993bb6abb3bd5cc9176c048e96db9f0391f76e3b05edd603b655cd7f6019f9c"
+ },
+ "source_count": 14,
+ "r1_init_script_sha256_pin": "74aa545a6c82cbdc434e71328653979715659818603a6c0d60627245e8d1f9a0",
+ "independent_parser": {
+  "java_properties.py": "1520ebe4d58b2667aa4e7df242387ff63c46d1bac0971216bb02320b3a17beab",
+  "test_java_properties.py": "5d52254eef75884ba61dc901f22624fb61fb1be919f23e16807458c1a7431eea",
+  "unchanged_from_root_delivery": true
+ },
+ "interpreter": {
+  "python": "3.14.8",
+  "path": "/usr/local/Cellar/python@3.14/3.14.8/Frameworks/Python.framework/Versions/3.14/bin/python3.14",
+  "sha256": "5f923e627e0bc2c9ad28334bfd32429e8b5b41b0a996e64ed46258220ebca184"
+ },
+ "green": {
+  "all_ok": true,
+  "tests_per_mode": 81
+ },
+ "git_views": {
+  "phase-seven-security-remediation-followup-2-git-view": "d6010f9f021f04153700e025add965ce8c431b63623b1f7b190300c68b83818b",
+  "phase-seven-security-remediation-followup-4-git-view": "fb9b661c5fb18110861f4da3f7d86c03d0d099e8ad60d555bfb63aa78d6e676a"
+ },
+ "frozen_raw_cuts_local": "target/phase-seven-security-remediation/frozen-cuts/ (followup-1..4, byte-exact, ignored)"
+}

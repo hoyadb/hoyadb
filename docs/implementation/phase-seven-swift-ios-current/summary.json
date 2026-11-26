@@ -1,0 +1,22 @@
+{
+  "udid": "CC525A65-D03E-4F9D-8936-DD16BBFD9664",
+  "bundle_id": "dev.hoyadb.phase7.owned.consumer",
+  "binary_sha256": "cffdc52e090d2ac278138ac7fae92dee5b2b5feae1e83a30895631d9145cf82b",
+  "modes": {
+    "writer": {
+      "proof": "HOYA_SWIFT_GENERAL_CONSUMER_GREEN mode=writer schemas=2 protected=SQLCipher4.19.0 automatic_observers=2 commands=cancel-fifo queue=frozen-retry entity=automatic pull=stale-refetch hook=async migration=authored\n",
+      "stdout": "TC17.1 PASS engine=memory zero_network_schema=true\nTC16.1 TC17.3 PASS engine=memory pending=3 ordinary_fixed_id=exact relation=core\nTC16.2 TC16.7 TC16.8 TC17.4 TC17.5 PASS engine=memory command_id=local:test-fixed-id-001 items=2 clock=2026-09-15T12:00:00Z\nTC16.3 TC16.4 PASS engine=memory real_fake_contract=keyed\nTC16.5 PASS engine=memory business_rejection=true\nTC16.6 PASS engine=memory dropped_ack_sent_retry=true\nTC17.6 TC17.7 TC17.8 PASS engine=memory entity_queued=true network_successes=0\nTC17.2 PASS engine=memory authored_migration=true\nTC17.1 PASS engine=protected zero_network_schema=true\nTC16.1 TC17.3 PASS engine=protected pending=3 ordinary_fixed_id=exact relation=core\nTC16.2 TC16.7 TC16.8 TC17.4 TC17.5 PASS engine=protected command_id=local:test-fixed-id-001 items=2 clock=2026-09-15T12:00:00Z\nTC16.3 TC16.4 PASS engine=protected real_fake_contract=keyed\nTC16.5 PASS engine=protected business_rejection=true\nTC16.6 PASS engine=protected dropped_ack_sent_retry=true\nTC17.6 TC17.7 TC17.8 PASS engine=protected entity_queued=true network_successes=0\nTC17.2 PASS engine=protected authored_migration=true\nHOYA_SWIFT_GENERAL_CONSUMER_GREEN mode=writer schemas=2 protected=SQLCipher4.19.0 automatic_observers=2 commands=cancel-fifo queue=frozen-retry entity=automatic pull=stale-refetch hook=async migration=authored\n\n",
+      "elapsed_s": 7.63
+    },
+    "reader": {
+      "proof": "HOYA_SWIFT_GENERAL_CONSUMER_GREEN mode=reader protected_restart=independent wrong_key=unchanged rows=lossless-i64-float queue=frozen-retry mapping=guarded\n",
+      "stdout": "HOYA_SWIFT_GENERAL_CONSUMER_GREEN mode=reader protected_restart=independent wrong_key=unchanged rows=lossless-i64-float queue=frozen-retry mapping=guarded\n\n",
+      "elapsed_s": 5.468
+    }
+  },
+  "current44_swift_source": true,
+  "initial_state": "Shutdown",
+  "data_container": "/Users/boristacyniak/Library/Developer/CoreSimulator/Devices/CC525A65-D03E-4F9D-8936-DD16BBFD9664/data/Containers/Data/Application/FCF78518-703A-49E0-B814-551B68420144",
+  "result": "PASS",
+  "final_state": "Shutdown"
+}

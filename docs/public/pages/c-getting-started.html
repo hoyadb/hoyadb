@@ -1,0 +1,84 @@
+<h2>Run a Todo app over the C ABI</h2>
+<p>This follows the same flow as <a href="getting-started.html">JavaScript</a>: open a database, read and watch tasks,
+add one with a command, then sync it. Every snippet comes from <a href="source:examples/c/todo.c">one C
+program</a> that the documentation build compiles with warnings as errors and runs.</p>
+<p>The C interface is not a database API with functions per operation. It is a framed JSON ABI declared in
+<a href="source:crates/hoyadb-native/include/hoyadb.h"><code>hoyadb.h</code></a>: you send one JSON frame, such as
+<code>{"abi":"1","op":"fetch","owner":"…","args":{…}}</code>, and receive one JSON reply,
+<code>{"abi":"1","ok":true,"value":…}</code> or <code>{"abi":"1","ok":false,"error":{"kind":…}}</code>. The Swift, Kotlin
+and React Native bindings are built on these same frames. Use it to write a binding for another language, or when you need
+exact control. The <a href="native-reference.html">native reference</a> gives the C signatures and ownership rules; the <a href="source:docs/design/contracts/API-0011-general-platform-sdk.md">platform contract</a> defines the operation frames.</p>
+<p>Build the static library with
+<code>cargo build --manifest-path crates/hoyadb-native/Cargo.toml --release --offline --locked</code>, then link
+<code>libhoyadb_native.a</code> with the <code>Security</code> and <code>CoreFoundation</code> frameworks on Apple platforms.
+<code>python3 docs/public/run_native.py build</code> and <code>python3 docs/public/run_native.py c</code> reproduce the
+documentation build.</p>
+
+<h2>1. Replies are borrowed</h2>
+<p>Every call takes a collector function and a context pointer. The collector below copies the reply into memory the
+application owns, and <code>call</code> sends one frame and returns that copy. Two small helpers are defined at the top of
+the full file: <code>CHECK</code> prints a message and exits when a condition fails, and <code>ok</code> tests whether a
+reply starts with <code>"ok":true</code>.</p>
+{{example:c:reply}}
+<p>Status 0 means the library called the collector exactly once with one complete reply, and those bytes are valid only
+during that call. Copy them before the collector returns. The library never returns memory for you to free: the copy is
+yours, so you free it. Status 1 (an invalid call) or 2 (a contained internal failure) means there is no complete reply to
+read. Status 0 still needs a check of <code>"ok"</code>, because a rejected operation is an ordinary reply; this
+example's <code>call</code> stops on any reply that is not ok. In an app, report the error kind instead of exiting.</p>
+<p>The example keeps its JSON handling short. It builds frames with <code>snprintf</code> into one 4 KiB
+<code>frame</code> buffer, from values the library returned, and its <code>string_after</code> helper copies the string
+that follows a marker in a reply. That only works for these known fixtures. A real application should use a JSON
+library.</p>
+
+<h2>2. Open</h2>
+<p>First confirm that the library speaks ABI 1. Then one open frame carries the whole configuration: engine, schema,
+migrations, namespace and options. Counts and times are decimal strings. Memory storage takes no key.</p>
+{{example:c:open}}
+<p>The reply's value is an owner handle that every later frame names. A key never goes into JSON: a protected store
+takes its 32 key bytes as a separate argument. See <a href="persistence.html">persistence</a> and
+<a href="security.html">key ownership</a>.</p>
+
+<h2>3. Query</h2>
+<p>A fetch frame carries the same query shape as the other bindings: a table, predicates, an order, a limit and a
+source. Values are tagged with their kind.</p>
+{{example:c:query}}
+<p>A new database has no tasks, so the value is an empty array. Rows come back as objects with an <code>id</code> and
+fields.</p>
+
+<h2>4. Observe</h2>
+<p>There are no callbacks into your code. <code>observe</code> returns a subscription handle, and <code>drain</code>
+returns the events that are ready, when you choose to ask.</p>
+{{example:c:observe}}
+<p>The first event for a subscription is its current result, here no rows. Drain again after writes, for example once
+per frame of your UI loop.</p>
+
+<h2>5. Start a command</h2>
+<p>A command is several frames: a request ticket, <code>begin</code>, the handler's scoped writes, then
+<code>finish</code>. Your C code between <code>begin</code> and <code>finish</code> is the local handler. It starts with a
+ticket.</p>
+{{example:c:command}}
+
+<p>Keep the ticket: every frame of this command names it.</p>
+
+<h2>6. Run the local handler</h2>
+<p><code>begin</code> carries the definition, the arguments and the captured context; its value is true once the
+command is admitted. <code>scope_insert</code> writes through the command, and <code>finish</code> commits its writes
+together and returns the command's key. Rows a command creates use proposed IDs that start with
+<code>local:</code>.</p>
+{{example:c:execute}}
+<p>The next drain shows the task to the subscription from step 4. The example fixes the time at 1000 ms so that it is
+repeatable; pass the current time in an app. The context is information for your server, not proof of who the user
+is.</p>
+
+<h2>7. Sync and confirm</h2>
+<p><code>prepare_push</code> returns the waiting commands as envelopes. Your server runs its own handler for
+<code>add-task-v1</code> and answers each envelope; pass that answer body to <code>receive_wire</code>. Then
+<code>reconcile</code> the command, mapping every <code>local:</code> ID it created to the ID your server assigned.</p>
+{{example:c:sync}}
+<p>Afterwards the task is stored as <code>server-task-1</code> and the local ID no longer exists. See
+<a href="reconciliation.html">reconciliation</a>.</p>
+
+<h2>8. Close</h2>
+<p>Unsubscribe, close the owner, then free the strings you copied.</p>
+{{example:c:close}}
+<p>The <a href="verification.html#case-c">verification result</a> records the build and the run.</p>

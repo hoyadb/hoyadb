@@ -1,0 +1,80 @@
+{
+  "scope": "Integration of completed native packaging, Swift and RN iOS source/evidence; RN Android and full Phase7 remain incomplete",
+  "source_manifest_sha256": "25b6435b6955ebf6a149f2b7ce2e8a51d0f71715b2d3e296e91d4b87a9a4b924",
+  "root_hash_checks": {
+    "selected_source_files": 116,
+    "selected_evidence_files": 110,
+    "mismatches": 0,
+    "original_handoff_before_projection": "117source and161evidence hashes had matched; userCargo and bootstrapproposal intentionally excluded from this integration binding"
+  },
+  "root_executed_checks": [
+    {
+      "command": "python3 -I bindings/swift/check_artifacts.py",
+      "tests": 5,
+      "exit_code": 0,
+      "seconds": 8.079,
+      "scope": "Slice names/layout/artifact hashes and bounded two-copy Swift import typecheck; no simulator execution"
+    },
+    {
+      "command": "node --test bindings/react-native/test/channel.test.mjs",
+      "tests": 3,
+      "exit_code": 0,
+      "scope": "Opaque frame/key ownership, listener retirement and namespace validation"
+    }
+  ],
+  "not_reexecuted_by_root_this_cut": [
+    "The prior44Swift tests and actualiOSHermes51case/writer/reader captures remain author evidence for their exact cuts",
+    "No Android Gradle compilation or RN Android emulator execution",
+    "No accepted performance measurement or coverage instrumentation"
+  ],
+  "selection_exclusions": [
+    "bindings/native/Cargo.toml pre-existing trailing-blank-line change",
+    "bindings/react-native/tools/security/** active security lane",
+    "Bootstrap addendum is a separate proposal awaiting review/approval, not an active input",
+    "Generated Artifacts, node_modules, .gradle and build state, including external unknown-owner writes",
+    "Unrelated user Rust formatting, CI, docs and .editorconfig work"
+  ],
+  "source_review_status": "Focused independent review passed for completed iOS/native integration; native notice omission is now tracked in DEF0030 and must close before redistribution completeness",
+  "clean_final_review_rounds": 0,
+  "reviewer": {
+    "agent_id": "e6f3b33e-7787-43bb-904f-646b096c9154",
+    "model": "claude-opus-5-5",
+    "scope": "Static source/evidence review; not final Phase7 round",
+    "source_hashes_checked": 117,
+    "in_scope_evidence_files_checked": 110,
+    "blocking_source_defects": 0,
+    "packaging_open": "DEF0030 native notice corpus missing"
+  },
+  "evidence_selection": {
+    "completed_native_swift_rn_evidence_files": 110,
+    "bootstrap_proposal_files_excluded": 51,
+    "all_handoff_evidence_files_rehashed": 161
+  },
+  "original_handoff_sha256": "ba1b0f364982f40bb46967a4bcffef3ddabe929a348f70264524bdbc87550cb2",
+  "prior_native_build_sha256": "c19233a6d34e76628ae42c4870be5c6add4fa39c7f4fb9ed46678da95a532496",
+  "whitespace_check": {
+    "complete_staged_exit": 2,
+    "findings": [
+      "docs/implementation/phase-seven-native-packaging/modulemap-red.txt:56: trailing whitespace.",
+      "docs/implementation/phase-seven-native-packaging/modulemap-red.txt:60: trailing whitespace.",
+      "docs/implementation/phase-seven-native-packaging/modulemap-red.txt:66: trailing whitespace.",
+      "docs/implementation/phase-seven-native-packaging/modulemap-red.txt:70: trailing whitespace.",
+      "docs/implementation/phase-seven-native-packaging/modulemap-red.txt:73: trailing whitespace.",
+      "docs/implementation/phase-seven-native-packaging/modulemap-red.txt:79: trailing whitespace.",
+      "docs/implementation/phase-seven-native-packaging/modulemap-red.txt:82: trailing whitespace.",
+      "docs/implementation/phase-seven-native-packaging/modulemap-red.txt:86: trailing whitespace.",
+      "docs/implementation/phase-seven-native-packaging/modulemap-red.txt:93: trailing whitespace.",
+      "docs/implementation/phase-seven-rn-ios/build-b/xcodebuild.txt:19: new blank line at EOF.",
+      "docs/implementation/phase-seven-rn-ios/build-g/xcodebuild-tail.txt:5: new blank line at EOF.",
+      "docs/implementation/phase-seven-swift-ios-current/reader-stdout.txt:2: new blank line at EOF.",
+      "docs/implementation/phase-seven-swift-ios-current/writer-stdout.txt:18: new blank line at EOF."
+    ],
+    "interpretation": "Preserved original test/build/stdout formatting only; authored executable sources check clean. No whitespace/diff check disabled and no complete whitespace pass claimed."
+  },
+  "staged_selection": {
+    "paths_selected": 170,
+    "existing_staged_files_byte_exact": true,
+    "excluded_user_cargo_overlay": true,
+    "generated_native_binaries_staged": false
+  }
+}

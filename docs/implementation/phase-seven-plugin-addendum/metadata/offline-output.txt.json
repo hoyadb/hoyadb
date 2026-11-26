@@ -1,0 +1,7 @@
+{
+  "format": 1,
+  "original_name": "offline-output.txt",
+  "original_bytes": 451,
+  "original_sha256": "d0a9b7e3ad0e8293a6f18a379cc37e43f6b9f45e6491a12a6578aa41fa4b708a",
+  "utf8": "To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.3.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.\nDaemon will be stopped at the end of the build \n> Task :captureMetadata\nPersisted dependency lock state for root project 'hoyadb-phase-seven-plugin-metadata-only'\n\nBUILD SUCCESSFUL in 29s\n1 actionable task: 1 executed\n"
+}

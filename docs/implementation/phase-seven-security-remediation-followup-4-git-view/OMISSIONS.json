@@ -1,0 +1,25 @@
+{
+ "derived_from_cut": "phase-seven-security-remediation-followup-4",
+ "original_index_sha256": "22f30a1bd38753da115aaf973c98453bad34899eeaf1ad8728a5a4ce20988cc5",
+ "original_index_preserved_locally_at": "target/phase-seven-security-remediation/frozen-cuts/phase-seven-security-remediation-followup-4/files-sha256.json",
+ "omitted": [
+  {
+   "original_path": "jdk17-Properties.java-header.txt",
+   "original_sha256": "81fa72b5fe39c57b56fd129877925426563a604bfbb4db7f419240fdca74da4b",
+   "original_bytes": 1213,
+   "reason": "verbatim header excerpt of the JDK source file",
+   "official_source_location": "https://github.com/openjdk/jdk17u/blob/jdk-17.0.1%2B12/src/java.base/share/classes/java/util/Properties.java",
+   "local_pinned_source": "/Users/boristacyniak/.sdkman/candidates/java/17.0.1-tem/lib/src.zip!java.base/java/util/Properties.java (src.zip sha256 ca83182867c87850\u2026)",
+   "raw_preserved_locally_at": "target/phase-seven-security-remediation/frozen-cuts/phase-seven-security-remediation-followup-4/jdk17-Properties.java-header.txt"
+  },
+  {
+   "original_path": "jdk17-legal-ASSEMBLY_EXCEPTION.txt",
+   "original_sha256": "a44eb7b5caf5534c6ef536b21edb40b4d6babf91bf97d9d45596868618b2c6fb",
+   "original_bytes": 1522,
+   "reason": "copy of the JDK distribution legal text (referenced by location instead)",
+   "official_source_location": "JDK 17.0.1 distribution legal/java.base/ASSEMBLY_EXCEPTION",
+   "local_pinned_source": "/Users/boristacyniak/.sdkman/candidates/java/17.0.1-tem/legal/java.base/ASSEMBLY_EXCEPTION",
+   "raw_preserved_locally_at": "target/phase-seven-security-remediation/frozen-cuts/phase-seven-security-remediation-followup-4/jdk17-legal-ASSEMBLY_EXCEPTION.txt"
+  }
+ ]
+}

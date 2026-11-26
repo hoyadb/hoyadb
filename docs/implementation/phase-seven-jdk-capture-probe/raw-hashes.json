@@ -1,0 +1,222 @@
+{
+ "probe_dir": "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-security-remediation/jdk-capture-probe-1",
+ "note": "raw files stay local (contain environment/property values, decoder output, ProcessStart-capable records); names and hashes only",
+ "files": {
+  "analysis-local-analyzer-v1-superseded.json": {
+   "bytes": 97664,
+   "sha256": "17f0b5dec27e14e0be022533ddc71d8c335c7b3dca1c2a8f15899940b74e7dc4"
+  },
+  "analysis-local-analyzer-v2-superseded.json": {
+   "bytes": 98788,
+   "sha256": "597bd68b1f1493b626e3482f7d1545b477a74645f45b8cac1298bcbaac41d2cc"
+  },
+  "analysis-local.json": {
+   "bytes": 98788,
+   "sha256": "597bd68b1f1493b626e3482f7d1545b477a74645f45b8cac1298bcbaac41d2cc"
+  },
+  "analyze-v2-stdout.txt": {
+   "bytes": 5668,
+   "sha256": "8a47743ff8b650ca640e6ac0768f599be79f8b646225ba790f02748a8b233871"
+  },
+  "analyze-v3-stdout.txt": {
+   "bytes": 5668,
+   "sha256": "8a47743ff8b650ca640e6ac0768f599be79f8b646225ba790f02748a8b233871"
+  },
+  "decode-A-print/stderr.txt": {
+   "bytes": 188,
+   "sha256": "377f6951a2546bdcab094e3beab49f0eca8518f9ab7b6ca8cfb8fc6ec191d5d8"
+  },
+  "decode-A-print/stdout.txt": {
+   "bytes": 319882,
+   "sha256": "c1007cef65837de15f1cff5370a3608650bebe9b2b7b48d87a1f3bf15eae8cf3"
+  },
+  "decode-A-summary/stderr.txt": {
+   "bytes": 190,
+   "sha256": "30feecb8b0a90f7d04d4dc5be1f5a5c91a7cc352c4f3db1abb27b62ddbf8b6aa"
+  },
+  "decode-A-summary/stdout.txt": {
+   "bytes": 11364,
+   "sha256": "bfd37f10c5baebe33a78ddd3fd5cf7740e4684f229a8d836de71e669bd6ac082"
+  },
+  "decode-B-print/stderr.txt": {
+   "bytes": 188,
+   "sha256": "bb3b9392591e5eb32ab0ea02a0c67f4686fae5046c7362c97bda6c56cf613a99"
+  },
+  "decode-B-print/stdout.txt": {
+   "bytes": 322843,
+   "sha256": "1c886a2662e8064716ed32d9a0eb0d4f12d3afa9c0f938d82429a8d733cf083d"
+  },
+  "decode-B-summary/stderr.txt": {
+   "bytes": 190,
+   "sha256": "41895c060f309a03bcdc360ca8ef83052a2bf6c5454c0028e6a5a0dccea3515f"
+  },
+  "decode-B-summary/stdout.txt": {
+   "bytes": 11364,
+   "sha256": "ed9b11287a9b40c16c76649e28e5875842458172077420fe68661d220a21a99d"
+  },
+  "help/stderr.txt": {
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "help/stdout.txt": {
+   "bytes": 4987,
+   "sha256": "945cb44794268eef782d4999f21f0e95ff259a62e39c35d0ef189c41c3303ef7"
+  },
+  "jfc/sr23-probe.jfc": {
+   "bytes": 963,
+   "sha256": "bb7466813e9ca254602267a47f85e6f7cffe70480ad5f49ce3b3db448c0ce653"
+  },
+  "outcome-analyzer-v1-superseded.json": {
+   "bytes": 68582,
+   "sha256": "df9c5902621e92db3e83f994f43176f33c34f3a8a3060212f1234363065409fc"
+  },
+  "outcome-analyzer-v2-superseded.json": {
+   "bytes": 69686,
+   "sha256": "aa83db0d857cc7394e032ce7ab199f2dd5fc8a8e5ef47bc6516037677073fbde"
+  },
+  "outcome.json": {
+   "bytes": 69726,
+   "sha256": "49af96029d7162d0b253899ccc08f0fa05ac715c7e64816d8ead5d612fe3aa9d"
+  },
+  "probe-log.json": {
+   "bytes": 44940,
+   "sha256": "07f5181498b0a08036851cf65133a6c0c6cb281a8329a1396460451a2007ada6"
+  },
+  "run-A/classload-56830.log": {
+   "bytes": 109086,
+   "sha256": "bcdd83ccc760787d69b5a605bc5f138b616e310ff669ced53dbb8e925a48348b"
+  },
+  "run-A/jfr/hotspot-pid-56830-id-1-2026_10_26_01_25_31.jfr": {
+   "bytes": 204236,
+   "sha256": "f27f80b4104f72be033f15b1f26adf9f4a654e759c6ea5183ff52c3d5aa302fb"
+  },
+  "run-A/log-jni_resolve-56830.log": {
+   "bytes": 29140,
+   "sha256": "a4d9784429fb575f23f0a242f1323f50ae34ce1bf971ad024d75f2f7707a38fa"
+  },
+  "run-A/log-library-56830.log": {
+   "bytes": 12448,
+   "sha256": "d8f1b4ab04b32c8c998efe103a7835ea30475fe84d97fdaf869fb46287b31f60"
+  },
+  "run-A/log-library_load-56830.log": {
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "run-A/log-library_unload-56830.log": {
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "run-A/log-os_library-56830.log": {
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "run-A/log-os_library_load-56830.log": {
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "run-A/log-os_library_unload-56830.log": {
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "run-A/stderr.txt": {
+   "bytes": 182,
+   "sha256": "8ab7fe7d83e713317b4c9bf7c3ab910b1e2230d23ce25b22849a6d6e71555c2f"
+  },
+  "run-A/stdout.txt": {
+   "bytes": 1018,
+   "sha256": "3321009c288e2526b0b6806ebf0de5ab315bf7ef247fd38f3deb6899a5264521"
+  },
+  "run-A-retry1/classload-56845.log": {
+   "bytes": 108833,
+   "sha256": "4a4d6e92dc50f560fb894abcaff9f025196380491e881442c490a9f268b33278"
+  },
+  "run-A-retry1/jfr/hotspot-pid-56845-id-1-2026_10_26_01_25_31.jfr": {
+   "bytes": 202414,
+   "sha256": "aac79f12978faa7f36f979c2df66ba7386dca73de764fc2d9c29189beadd8903"
+  },
+  "run-A-retry1/log-jni_resolve-56845.log": {
+   "bytes": 29002,
+   "sha256": "5aa26c9be4e528b736a8086cc4d8ad7ecb2cf48e53ec19bfbc03ed343dac52e1"
+  },
+  "run-A-retry1/log-library-56845.log": {
+   "bytes": 12365,
+   "sha256": "2d9516ec697249fe581f173a6493e86508ae01f97df34ce402acb8e5ed5e6216"
+  },
+  "run-A-retry1/stderr.txt": {
+   "bytes": 182,
+   "sha256": "8ab7fe7d83e713317b4c9bf7c3ab910b1e2230d23ce25b22849a6d6e71555c2f"
+  },
+  "run-A-retry1/stdout.txt": {
+   "bytes": 221,
+   "sha256": "1348c3352cd84a9bf2365a7a9902575fe05eabf670d5224955ccfd2c7989a547"
+  },
+  "run-B/classload-56846.log": {
+   "bytes": 108833,
+   "sha256": "450a5673c2d127de41a83002666b635d15459ceef2e313c27b910b382b65b629"
+  },
+  "run-B/jfr/hotspot-pid-56846-id-1-2026_10_26_01_25_32.jfr": {
+   "bytes": 208538,
+   "sha256": "3a5c2b18a6317673a47d3d806b8c3f7336f75f5bc55297cb2bc3c1af5bc03615"
+  },
+  "run-B/log-jni_resolve-56846.log": {
+   "bytes": 29002,
+   "sha256": "59a5e17ddbfa3c26171ac90af1f72d56063c28bbb9037919890d6484d55eff47"
+  },
+  "run-B/log-library-56846.log": {
+   "bytes": 12365,
+   "sha256": "5255d06e90d5c168c978ce8757f4f8503c2cf272767b62fcf7fd527f4b19907f"
+  },
+  "run-B/log-library_load-56846.log": {
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "run-B/log-library_unload-56846.log": {
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "run-B/log-os_library-56846.log": {
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "run-B/log-os_library_load-56846.log": {
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "run-B/log-os_library_unload-56846.log": {
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "run-B/stderr.txt": {
+   "bytes": 2354,
+   "sha256": "328e85e371c93f369c52a5623c9c01ac2d7f914aa2bf07c2b1f45ce01272b02b"
+  },
+  "run-B/stdout.txt": {
+   "bytes": 1018,
+   "sha256": "e1671a7f98c35f4f726898012fff63391e1ebfb7f26f286cf8e66730b0219a20"
+  },
+  "run-B-retry1/classload-56868.log": {
+   "bytes": 108833,
+   "sha256": "e3c9dee1c5bb0c59158599b4358dbc51b2828da6103f7b93b0fda8b26bef8dab"
+  },
+  "run-B-retry1/jfr/hotspot-pid-56868-id-1-2026_10_26_01_25_32.jfr": {
+   "bytes": 204837,
+   "sha256": "2bf83125c62bcbf4fbb8ecc3219bfdb0e4b67c2f15edb8ef8c15f505dde7e15e"
+  },
+  "run-B-retry1/log-jni_resolve-56868.log": {
+   "bytes": 29002,
+   "sha256": "cf1f2d8e6ff56176861f9fbcf49f48d6c0ececec9b3e2b46ae7ef27b87985479"
+  },
+  "run-B-retry1/log-library-56868.log": {
+   "bytes": 12365,
+   "sha256": "65595994c203773214ccd4e8d9e9bfea07d4846fdff0a861127bf74c4849187b"
+  },
+  "run-B-retry1/stderr.txt": {
+   "bytes": 1415,
+   "sha256": "3c7c2da96ce79978fdf61efa99d2e2651bd93a9368fbcc2f696f2fab7a2d250b"
+  },
+  "run-B-retry1/stdout.txt": {
+   "bytes": 221,
+   "sha256": "158312e6d3b48bdde7dac3a444b15ebcc74a8facc2e1fb0741de9e3d1435994f"
+  }
+ }
+}

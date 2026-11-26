@@ -1,0 +1,216 @@
+{
+ "format": 1,
+ "head": "2603a747c9d861ab474a6cd5e86be8c25de9366c",
+ "files": [
+  {
+   "path": "benchmarks/admission-plan.md",
+   "bytes": 4763,
+   "sha256": "49eb273d45adcc753d9fbaeb9adb2ea1fd1eebfa8cd1e41ed97c7a4c2cbab717"
+  },
+  {
+   "path": "benchmarks/browser-plan.md",
+   "bytes": 20153,
+   "sha256": "b555f85ff2a2148f90e0854b6834d30354c48ea9304ca742511feab9fc7521bf"
+  },
+  {
+   "path": "benchmarks/browser-workloads.json",
+   "bytes": 15865,
+   "sha256": "f330108a10ced476fd53f017c9b74430a2c7fa8728f8129d5a55ab73ff18ea6b"
+  },
+  {
+   "path": "benchmarks/run.py",
+   "bytes": 31107,
+   "sha256": "12c394d565ebfcbccdf74ca13e6fa02ec133598d1bc7069c7e8c29df999d96fc"
+  },
+  {
+   "path": "benchmarks/test_runner.py",
+   "bytes": 17051,
+   "sha256": "f83c2a047b3dd94ce36efa76dad4538bc82eb9efad625d52b0e3537c2f2d1952"
+  },
+  {
+   "path": "benchmarks/browser_run.py",
+   "bytes": 17385,
+   "sha256": "519ae03b96099e6b5939009b27ed53b54e127ad9d5b25bc3638250655ac9ae64"
+  },
+  {
+   "path": "benchmarks/browser_server.py",
+   "bytes": 32668,
+   "sha256": "519af482c2cd34ea10bf14d70b3112c0e9d78e738005efca77a74bb57bf715fd"
+  },
+  {
+   "path": "benchmarks/test_browser_run.py",
+   "bytes": 12027,
+   "sha256": "5316ed8dce38b2cd726eacb57583058e4e1336ff02c6f0445440caeaf1e56eaa"
+  },
+  {
+   "path": "benchmarks/test_browser_server.py",
+   "bytes": 34284,
+   "sha256": "492b225b9f8e6b9b822552f50b770e89c6d331e78aff4f7ae19953b8addde772"
+  },
+  {
+   "path": "benchmarks/derive_reactive_endpoint.py",
+   "bytes": 8889,
+   "sha256": "a632782195340cb10d73742cb4103cd3ca00bc40174da21e5f610e5bc66d8da9"
+  },
+  {
+   "path": "benchmarks/test_reactive_derivation.py",
+   "bytes": 9733,
+   "sha256": "3109f21e1b03dfdf9dbfa90654b2c75c073dec9e887dda43eff110847eea9371"
+  },
+  {
+   "path": "benchmarks/actual_reactive_endpoint.py",
+   "bytes": 3143,
+   "sha256": "d678cd1bf8aeea692036601b7268d972798c68a4b343e729e4880590e6f41158"
+  },
+  {
+   "path": "benchmarks/actual_admission.py",
+   "bytes": 4002,
+   "sha256": "bf867fd74a47d0d4133f5503faa49086564bf388531f54d1279db2b75d13ce1b"
+  },
+  {
+   "path": "benchmarks/cost_diagnostic.py",
+   "bytes": 6924,
+   "sha256": "9fb72571ff73715ea7ea750f1170ad7dcd63881321f3d0bf5d70c3c8ed8ca11b"
+  },
+  {
+   "path": "benchmarks/test_cost_diagnostic.py",
+   "bytes": 2322,
+   "sha256": "4d33cc3091822c9941741b30c64e3ae86fc928ad4936e0d3efbb7dffc70b71b9"
+  },
+  {
+   "path": "benchmarks/native/src/bin/cost-diagnostic.rs",
+   "bytes": 2604,
+   "sha256": "f2340ecff1fedf099626c418f597b6cadc1ca5ffd913a34ffb6bf3967d248a62"
+  },
+  {
+   "path": "docs/design/defects/DEF-0020-native-reactive-benchmark-endpoint.md",
+   "bytes": 5776,
+   "sha256": "5b665a39e7410ff0c7cfcdf553afa391d4d779a16ce3507d3468a038d6d406af"
+  },
+  {
+   "path": "bindings/javascript/benchmark/browser.html",
+   "bytes": 457,
+   "sha256": "15e7556b6fa578908efe4d52bf597afc64b6144b79e9677bcf5b6ac8d70c4758"
+  },
+  {
+   "path": "bindings/javascript/benchmark/browser.mjs",
+   "bytes": 8117,
+   "sha256": "d924a038fac860326a3f271cdb5dd1e9b8887b9d9f43d62e5d8918bb0b83a73a"
+  },
+  {
+   "path": "bindings/javascript/benchmark/cold.mjs",
+   "bytes": 1276,
+   "sha256": "8cd24ebd2905d6c2acf0746607eceec26366d0a9bb535d23606d8c21331b7c33"
+  },
+  {
+   "path": "bindings/javascript/benchmark/cold.test.mjs",
+   "bytes": 2481,
+   "sha256": "6d1a2264b76324db83a57cb70684ec63d1e6373e3d44342f1c5b68fbf42ac65f"
+  },
+  {
+   "path": "bindings/javascript/benchmark/correctness.mjs",
+   "bytes": 1685,
+   "sha256": "4415b3173929503f12b935cc701c1e7a1858d8f49c7ad89e421aea85c241430c"
+  },
+  {
+   "path": "bindings/javascript/benchmark/flow.mjs",
+   "bytes": 2751,
+   "sha256": "a74dbde64a1c4c8d97b8d7e72d63b023b56307ff701cd96b9d778dbe17eccca2"
+  },
+  {
+   "path": "bindings/javascript/benchmark/flow.test.mjs",
+   "bytes": 5325,
+   "sha256": "5a819ed49b00fd2c780199fd6149babbe3c09e6392a0bf49435207ea23bdac7d"
+  },
+  {
+   "path": "bindings/javascript/benchmark/harness.mjs",
+   "bytes": 14927,
+   "sha256": "6fcec49c635cb2c8b6c3e167ab11d75357c5c7a27d547f9e488b73d7d7684247"
+  },
+  {
+   "path": "bindings/javascript/benchmark/harness.test.mjs",
+   "bytes": 11597,
+   "sha256": "8769248e88a6c30df6f9d49359c58d408a7a5bcfb4bb29377b24a80337778e94"
+  },
+  {
+   "path": "bindings/javascript/benchmark/http.mjs",
+   "bytes": 1911,
+   "sha256": "849e755c5c8f69a9cadd8f739273ca9cb94c817d06da3f004e697a4b96bcc033"
+  },
+  {
+   "path": "bindings/javascript/benchmark/http.test.mjs",
+   "bytes": 3685,
+   "sha256": "e12331c363971a58003d19bfd2b5105d3ab3e7359dd67e59314be3f826cd9a90"
+  },
+  {
+   "path": "bindings/javascript/benchmark/platform.mjs",
+   "bytes": 8146,
+   "sha256": "953cb1ab66975c028858a8f9b395cbeb89883328d9d5f18573f3a756d7cfb6b0"
+  },
+  {
+   "path": "bindings/javascript/benchmark/platform.test.mjs",
+   "bytes": 14847,
+   "sha256": "9ef6ad467727d17d49d47a80c6c8dd3e1310d15def13ee71aaff8793fc947eb7"
+  },
+  {
+   "path": "bindings/javascript/benchmark/proof.mjs",
+   "bytes": 1082,
+   "sha256": "6f4f553d8e131d715825d2ddd10fa247ed5a10d327cf52a4c7f0032ac4cffa05"
+  },
+  {
+   "path": "bindings/javascript/benchmark/proof.test.mjs",
+   "bytes": 1545,
+   "sha256": "e7b46993f6a74d5afe730fab3d464c5537b70ea9d5171965199feb80a229bdb1"
+  },
+  {
+   "path": "bindings/javascript/benchmark/protocol.mjs",
+   "bytes": 2809,
+   "sha256": "7c39b9e1b5ed9407cedceedd2725033401f1a4dd21c82788932ab7e0ca7bf8f5"
+  },
+  {
+   "path": "bindings/javascript/benchmark/protocol.test.mjs",
+   "bytes": 3080,
+   "sha256": "8c70ac2213b4567e6abafdaea1505c869af94eb0ce0f5383fe7a9453be1c90d8"
+  },
+  {
+   "path": "bindings/javascript/benchmark/resource-worker.mjs",
+   "bytes": 879,
+   "sha256": "2f80b563ec54aabcd9e53dca25ddf627ffb89132c52d1f2ae21168c7d2909325"
+  },
+  {
+   "path": "bindings/javascript/benchmark/resources.mjs",
+   "bytes": 3900,
+   "sha256": "ef82da1977782ce7467c4d3ca19a1bedebce0b46ddcf636854155b14e1e3ff62"
+  },
+  {
+   "path": "bindings/javascript/benchmark/resources.test.mjs",
+   "bytes": 6734,
+   "sha256": "ebe57904d84357e4d1c8b67eae62ef0e8045a95faedaac31b6174911d7605f48"
+  },
+  {
+   "path": "bindings/javascript/benchmark/run.mjs",
+   "bytes": 2472,
+   "sha256": "e2e67d19060fc1f8de0da413528e4986b6854bbbc465361d9a14b1ac175915ba"
+  },
+  {
+   "path": "bindings/javascript/benchmark/run.test.mjs",
+   "bytes": 2935,
+   "sha256": "afe5431c36be05d89147c6a8285ec6ed5a28dd73a50849c911446bef83d5ac7d"
+  },
+  {
+   "path": "bindings/javascript/benchmark/storage.mjs",
+   "bytes": 2594,
+   "sha256": "08739256347b5b27aa404a646dbaeacc7bb524116e67c9ab23d1efbafe4aea01"
+  },
+  {
+   "path": "bindings/javascript/benchmark/storage.test.mjs",
+   "bytes": 4352,
+   "sha256": "6b3521eaa5963c6ce18c626be1d00820e66d0ff76dc4a68298c566d95c9be965"
+  }
+ ],
+ "closure_sha256": "278f6c90071cd29b52970c627cfe8a6fda000317be2b9ea7936e80c2e2b5ecba",
+ "untouched_user_overlays": [
+  "benchmarks/native/src/lib.rs",
+  "benchmarks/native/src/main.rs (pre-existing rustfmt overlays, not edited by this lane)"
+ ]
+}

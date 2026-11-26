@@ -1,0 +1,32 @@
+{
+  "status": "APPROVED BY OPERATOR; SECURITY REMEDIATION AND VERIFICATION REQUIRED",
+  "authority": "ADR-0035 separate-component approval requirement",
+  "operator_answer": "Yes, go use them and fix security issues. Also, finalize this step. Review with Claude Opus 5.5 (2 feed back of no issues). Then use agents (sol, opus, ...) to implement the full coverage of the code. then implement the next phase",
+  "approved_proposal_commit": "5e771f2",
+  "index_sha256": "2182049f4dd8b8623b04ff4c45dbf7e2fb5d79f171f34693e1384493e2b674e5",
+  "bundle_sha256": "364a420165b6f4301d90b23179e43f26c78de6e75b9f1059d7c97f30fc3cafcf",
+  "approved_scope": "Exact marker, seventeen build-process JARs and recorded metadata, pinned reviewed JDK17.0.1-tem and installed AAPT2 option, under the existing restricted build policy. Runtime pins remain unchanged.",
+  "approval_verification": {
+    "indexed_files_rehashed": 123,
+    "mismatches": 0,
+    "new_unindexed_local_cache_files": "metadata/.gradle/9.8.1 and metadata/build/reports were observed after the frozen cut. They are outside the approved index, are not approved inputs and were not deleted or activated by root."
+  },
+  "security_followup": "The operator also requests actual security remediation. Approval is not a security fix or permission to hide advisories. Investigate applicable findings, prepare reviewed exact remediation and regression cases before changes, preserve residuals honestly, and verify resulting build/runtime graphs.",
+  "execution_restrictions": [
+    "Existing isolated task-owned trusted offline build policy, verified hashes, no shared/remote cache, no JDK/SDK/formatter downloads or source fallback",
+    "Correct the runner JDK and pin local AAPT2 before activation",
+    "Stop on any unknown component, unreviewed artifact or app/SDK runtime pin drift",
+    "Root holds compiler execution pending reviewed security remediation handback",
+    "No publication, push, tag or user-store operation"
+  ],
+  "ordered_followup": [
+    "Complete Phase7 including RN Android, security remediation, required measured baseline, packaging and integration gates",
+    "Two final issue-focused Claude Opus5.5 review rounds with no unresolved issues on matching final artifacts; fix real findings and repeat affected checks",
+    "Delegate and implement the ADR0036 coverage requirement after the Phase7 review gate, with measured component-level line/branch coverage and justified reviewed gaps",
+    "Propose the next phase from verified remaining gaps; roadmap currently ends at Phase7"
+  ],
+  "next_phase_operator_answer": "Propose the next phase from verified remaining gaps",
+  "phase_seven_complete": false,
+  "coverage_implemented": false,
+  "clean_final_opus55_rounds": 0
+}

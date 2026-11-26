@@ -1,0 +1,281 @@
+"""Owned RN Android consumer build through the unchanged official includeBuild, offline, outbound-denied.
+
+Usage: build.py <label> graph|assemble. 'graph' configures the build and writes the selected build and
+debug-runtime graphs for comparison before any compile; 'assemble' then runs :app:assembleDebug.
+Gradle and every child run under sandbox-exec denying non-loopback outbound connections (Gradle daemons,
+workers and Kotlin compile talk over loopback). The only repository content is ./repo (prepared from
+approved inputs) plus the Kotlin lane's certified maven-final repository; remote repositories declared
+by official scripts stay unused because Gradle runs --offline with a fresh GRADLE_USER_HOME.
+"""
+from pathlib import Path
+import glob
+import hashlib
+import json
+import os
+import re
+import shutil
+import subprocess
+import sys
+import time
+
+repo_root = Path(__file__).resolve().parents[3]
+here = Path(__file__).resolve().parent
+label, mode = sys.argv[1], sys.argv[2]
+out = here / f'build-{label}'
+out.mkdir()
+stage = repo_root / 'target/phase-seven-rn'
+consumer = Path((stage / 'owned-consumer-root.txt').read_text().strip())
+approved = repo_root / 'target/phase-seven-activation/npm/node_modules'
+example = repo_root / 'bindings/react-native/Examples/GeneralConsumer'
+# DEF-0028: the repository is assembled by the permanent repo-owned tool from the trusted plan and must be
+# verified against that plan and its success record before ANY subprocess (and therefore before Gradle).
+local_repo = here / 'repo-v2'
+repo_plan = here / 'plan.json'
+repo_record = here / 'repo-v2.record.json'
+for flag, value in zip(sys.argv[3:], sys.argv[4:]):
+    if flag == '--repo':
+        local_repo = Path(value)
+    elif flag == '--record':
+        repo_record = Path(value)
+final_repo = repo_root / 'target/phase-seven-kotlin/opus/maven-final'
+profile = '(version 1)(allow default)(deny network-outbound)(allow network-outbound (remote ip "localhost:*"))'
+sandbox = ['sandbox-exec', '-p', profile]
+# Reviewed JDK (approved compiler bundle 364a4201 required_jdk); runner corrected from Homebrew openjdk@17.
+jdk = Path('/Users/boristacyniak/.sdkman/candidates/java/17.0.1-tem')
+aapt2 = Path.home() / 'Library/Android/sdk/build-tools/36.1.0/aapt2'
+gradle = Path(glob.glob(str(Path.home() / '.gradle/wrapper/dists/gradle-9.3.1-bin/*/gradle-9.3.1/bin/gradle'))[0])
+sdk = Path.home() / 'Library/Android/sdk'
+record = {'label': label, 'mode': mode, 'consumer': str(consumer), 'profile': profile, 'jdk': str(jdk),
+          'gradle': str(gradle), 'sdk': str(sdk), 'steps': []}
+
+
+def digest_file(path):
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
+import importlib.util
+_spec = importlib.util.spec_from_file_location('prepare_repo', repo_root / 'bindings/react-native/tools/android/prepare_repo.py')
+prepare_repo = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(prepare_repo)
+try:
+    record['repository_verification'] = prepare_repo.verify_repository(repo_plan, local_repo, repo_record)
+except prepare_repo.RepositoryError as error:
+    record['repository_verification'] = {'rejected': str(error)}
+    (out / 'build.json').write_text(json.dumps(record, indent=2) + '\n')
+    raise SystemExit('REPOSITORY REJECTED before any subprocess: ' + str(error))
+if mode == 'verify-only':
+    (out / 'build.json').write_text(json.dumps(record, indent=2) + '\n')
+    print('HOYA_RN_ANDROID_REPOSITORY_VERIFIED ' + json.dumps(record['repository_verification']), flush=True)
+    sys.exit(0)
+if digest_file(Path(os.path.realpath(jdk / 'bin/java'))) != '2c663a2f4677833e1305ea553aa188af1e22aca92a85f39e6189ae0708e5f8b4':
+    raise SystemExit('JDK differs from the reviewed 17.0.1-tem java binary')
+if digest_file(aapt2) != '347ae46c83960aed14dd88e132f80a82c1b3456000384d234cee23c412533b03':
+    raise SystemExit('installed aapt2 differs from the approved override binary')
+record['jdk_java_sha256'] = '2c663a2f4677833e1305ea553aa188af1e22aca92a85f39e6189ae0708e5f8b4'
+record['aapt2_override'] = {'path': str(aapt2), 'sha256': '347ae46c83960aed14dd88e132f80a82c1b3456000384d234cee23c412533b03'}
+# SECURITY HOLD: configuring the consumer compiles the official included plugin build, which loads the newly
+# approved Kotlin compiler. Root's security triage must hand back first.
+if mode not in ('included-graph', 'verify-only') and '--security-handback-confirmed' not in sys.argv[3:]:
+    raise SystemExit('HOLD: consumer graph/assemble compiles the included build with the new compiler; awaiting security handback')
+
+
+def save():
+    (out / 'build.json').write_text(json.dumps(record, indent=2) + '\n')
+
+
+def digest(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def tree(root):
+    return {str(p.relative_to(root)): digest(p) for p in sorted(root.rglob('*')) if p.is_file() and not p.is_symlink()}
+
+
+def step(name, argv, cwd, env=None, timeout=3600):
+    entry = {'name': name, 'argv': argv, 'cwd': str(cwd)}
+    record['steps'].append(entry)
+    started = time.monotonic()
+    try:
+        with (out / f'{name}.txt').open('w') as log:
+            p = subprocess.run(argv, cwd=cwd, env=env, stdout=log, stderr=subprocess.STDOUT, timeout=timeout)
+        entry['exit_code'] = p.returncode
+    except subprocess.TimeoutExpired:
+        entry['timed_out'] = True
+        raise
+    finally:
+        entry['elapsed_s'] = round(time.monotonic() - started, 3)
+        save()
+    if p.returncode:
+        raise RuntimeError(f'{name} exit {p.returncode}')
+
+
+
+def approved_union():
+    idx = json.loads((repo_root / 'docs/implementation/phase-seven-dependencies/native/artifact-index.json').read_text())['artifacts']
+    union = {a['coordinate'] for a in idx}
+    union |= set(json.loads((repo_root / 'docs/implementation/phase-seven-plugin-addendum/bundle.json').read_text())['additional_plugin_coordinates'])
+    compiler = json.loads((repo_root / 'docs/implementation/phase-seven-kotlin-compiler-addendum/bundle.json').read_text())
+    union |= {c['coordinate'] for c in compiler['additional_jar_components'] + compiler['metadata_only_components']}
+    union.add(compiler['marker']['coordinate'])
+    return union
+
+
+def compare_graphs(logs):
+    union = approved_union()
+    result = {'per_log': {}, 'unapproved': {}}
+    for log in logs:
+        selected, unresolved = set(), []
+        for line in log.read_text().splitlines():
+            m = re.search(r'--- (.+)$', line)
+            if not m:
+                continue
+            item = re.sub(r' \((\*|c|n)\)$', '', m.group(1)).strip()
+            if item.startswith('project ') or item.endswith('FAILED'):
+                if item.endswith('FAILED'):
+                    unresolved.append(item)
+                continue
+            if ' -> ' in item:
+                left, right = item.split(' -> ', 1)
+                parts = left.split(':')
+                coordinate = f'{parts[0]}:{parts[1]}:{right.split()[0]}'
+            else:
+                parts = item.split(':')
+                if len(parts) < 3:
+                    continue
+                coordinate = ':'.join(parts[:3]).split()[0]
+            selected.add(coordinate)
+        unknown = sorted(c for c in selected if c not in union)
+        result['per_log'][log.name] = {'selected': sorted(selected), 'unresolved': unresolved, 'unapproved': unknown}
+        if unknown or unresolved:
+            result['unapproved'][log.name] = unknown + unresolved
+    return result
+
+
+# Probe the exact profile: loopback connects allowed, non-loopback outbound denied without contact.
+probe = subprocess.run(sandbox + ['ruby', '-rsocket', '-e',
+                                  'begin; Socket.tcp("192.0.2.1", 9, connect_timeout: 2); puts "allowed"; rescue => e; puts e.class; end'],
+                       stdout=subprocess.PIPE, text=True, timeout=30)
+if probe.stdout.strip() != 'Errno::EPERM':
+    raise SystemExit('outbound denial probe failed: ' + probe.stdout)
+record['outbound_probe'] = probe.stdout.strip()
+
+# Official includeBuild writes .gradle/build inside the plugin; use a hash-identical owned copy.
+scope = consumer / 'node_modules/@react-native'
+if scope.is_symlink():
+    target = scope.resolve()
+    scope.unlink()
+    scope.mkdir()
+    for entry in sorted(target.iterdir()):
+        if entry.name == 'gradle-plugin':
+            shutil.copytree(entry, scope / entry.name, symlinks=True)
+        else:
+            (scope / entry.name).symlink_to(entry, target_is_directory=entry.is_dir())
+plugin_source = approved / '@react-native/gradle-plugin'
+copy_tree = {k: v for k, v in tree(scope / 'gradle-plugin').items()
+             if not k.startswith(('.gradle/', '.kotlin/')) and '/build/' not in '/' + k}
+# Compare with the reviewed Oct-24 snapshot of approved files: the live approved tree later gained 9 Gradle
+# state files from another actor (approved-gradle-plugin-integrity.json); its 63 reviewed files are unchanged.
+snapshot = json.loads((stage / 'approved-node-source-before.json').read_text())
+reviewed = {k[len('@react-native/gradle-plugin/'):]: v for k, v in snapshot.items() if k.startswith('@react-native/gradle-plugin/')}
+if copy_tree != reviewed:
+    raise SystemExit('owned gradle-plugin copy differs from the reviewed approved snapshot')
+live = tree(plugin_source)
+if any(live.get(k) != v for k, v in reviewed.items()):
+    raise SystemExit('reviewed approved gradle-plugin files changed')
+record['approved_gradle_plugin_live_extra_files'] = sorted(set(live) - set(reviewed))
+record['gradle_plugin_files_verified'] = len(copy_tree)
+
+shutil.copytree(example / 'android', consumer / 'android', dirs_exist_ok=True)
+for name in ['index.js', 'conformance.mjs', 'walkthrough.mjs', 'mixed.mjs', 'guards.mjs', 'retained.mjs', 'schemas.mjs']:
+    if (consumer / name).read_bytes() != (example / name).read_bytes():
+        raise SystemExit('consumer source differs from example: ' + name)
+
+# Fixed-bytes Hermes bundle: Metro (outbound denied) then the same-version hermesc used for iOS.
+assets = consumer / 'android/app/src/main/assets'
+assets.mkdir(parents=True, exist_ok=True)
+tmp = out / 'tmp'
+tmp.mkdir()
+node_env = dict(os.environ, TMPDIR=str(tmp) + '/', NODE_ENV='production')
+if mode != 'included-graph':
+  step('metro-bundle', sandbox + ['node', 'node_modules/react-native/cli.js', 'bundle', '--platform', 'android',
+                                  '--dev', 'false', '--minify', 'false', '--reset-cache', '--entry-file', 'index.js',
+                                  '--bundle-output', str(out / 'index.android.bundle.js'),
+                                  '--assets-dest', str(out / 'res')], consumer, node_env)
+  step('hermesc', sandbox + [str(consumer / 'ios/Pods/hermes-engine/destroot/bin/hermesc'), '-emit-binary',
+                             '-max-diagnostic-width=80', '-O', '-out', str(assets / 'index.android.bundle'),
+                             str(out / 'index.android.bundle.js')], consumer)
+  record['bundle'] = {'js_sha256': digest(out / 'index.android.bundle.js'),
+                      'hbc_sha256': digest(assets / 'index.android.bundle'),
+                      'hbc_magic_hex': (assets / 'index.android.bundle').read_bytes()[:8].hex()}
+
+home = out / 'gradle-home'
+home.mkdir()
+(home / 'gradle.properties').write_text('\n'.join([
+    'org.gradle.java.installations.auto-download=false',
+    'org.gradle.java.installations.auto-detect=false',
+    f'org.gradle.java.installations.paths={jdk}',
+    'org.gradle.caching=false',
+    'org.gradle.configuration-cache=false',
+    'android.builder.sdkDownload=false',
+    'kotlin.compiler.execution.strategy=in-process',
+    'org.gradle.jvmargs=-Xmx4g -XX:MaxMetaspaceSize=1g -Djava.net.preferIPv4Stack=true',
+]) + '\n')
+init = out / 'local-repository.init.gradle'
+init.write_text('''// Owned run input: the verified local repository is consulted first in every build.
+def local = System.getenv('HOYA_LOCAL_MAVEN')
+beforeSettings { settings ->
+  settings.pluginManagement.repositories { maven { url = uri(local) } }
+}
+allprojects {
+  buildscript.repositories { maven { url = uri(local) } }
+  repositories { maven { url = uri(local) } }
+}
+''')
+env = dict(os.environ, GRADLE_USER_HOME=str(home), JAVA_HOME=str(jdk), ANDROID_HOME=str(sdk),
+           ANDROID_SDK_ROOT=str(sdk), HOYA_LOCAL_MAVEN=local_repo.as_uri(), TMPDIR=str(tmp) + '/',
+           PATH=str(jdk / 'bin') + os.pathsep + os.environ['PATH'],
+           # Java dual-stack sockets present loopback as IPv6-mapped, which the localhost filter rejects.
+           JAVA_TOOL_OPTIONS='-Djava.net.preferIPv4Stack=true')
+for name in ['GRADLE_OPTS', 'JAVA_TOOL_OPTIONS', '_JAVA_OPTIONS', 'ORG_GRADLE_PROJECT_hoyaMavenRepository']:
+    if name in os.environ:
+        raise SystemExit('unexpected inherited ' + name)
+base = sandbox + [str(gradle), '--offline', '--no-daemon', '--no-build-cache', '--no-configuration-cache',
+                  '--init-script', str(init), f'-PhoyaMavenRepository={final_repo.as_uri()}',
+                  f'-Pandroid.aapt2FromMavenOverride={aapt2}', '--stacktrace']
+record['final_repo_sha256'] = tree(final_repo)
+record['local_repo_files'] = len(tree(local_repo))
+before = tree(approved)
+try:
+    step('gradle-version', base[:3] + [str(gradle), '--version'], consumer / 'android', env, 300)
+    if mode == 'included-graph':
+        # Configure only the official included build (KGP/ktfmt/foojay applied; approved). Dependency graphs only:
+        # no compile task, no artifact transform, so the new compiler is resolved but never loaded.
+        plugin_root = scope / 'gradle-plugin'
+        projects = [':shared', ':settings-plugin', ':react-native-gradle-plugin']
+        step('included-build-environment', base + ['buildEnvironment'] + [p + ':buildEnvironment' for p in projects], plugin_root, env)
+        for cfg in ['compileClasspath', 'runtimeClasspath', 'kotlinCompilerClasspath', 'kotlinBuildToolsApiClasspath', 'kotlinCompilerPluginClasspathMain']:
+            argv = base + [part for p in projects for part in (p + ':dependencies', '--configuration', cfg)]
+            step('included-' + cfg, argv, plugin_root, env)
+        record['graph'] = compare_graphs(sorted(out.glob('included-*.txt')))
+        if record['graph']['unapproved']:
+            save()
+            raise SystemExit('STOP: unapproved component(s) selected: ' + json.dumps(record['graph']['unapproved']))
+    else:
+        step('build-environment', base + ['buildEnvironment', ':app:buildEnvironment'], consumer / 'android', env)
+        step('runtime-graph', base + [':app:dependencies', '--configuration', 'debugRuntimeClasspath'], consumer / 'android', env)
+        graph = (out / 'runtime-graph.txt').read_text() + (out / 'build-environment.txt').read_text()
+        record['selected_coordinates'] = sorted(set(re.findall(r'([\w.\-]+:[\w.\-]+):[\w.\-]+ -> ([\w.\-]+)', graph)) |
+                                                set((m[0], m[1]) for m in re.findall(r'--- ([\w.\-]+:[\w.\-]+):([\w.\-]+)(?:\s|$)', graph)))
+        if mode == 'assemble':
+            step('assemble-debug', base + [':app:assembleDebug'], consumer / 'android', env)
+            apk = consumer / 'android/app/build/outputs/apk/debug/app-debug.apk'
+            record['apk'] = {'path': str(apk), 'sha256': digest(apk)}
+finally:
+    after = tree(approved)
+    record['approved_node_source_differences'] = {n: [before.get(n), after.get(n)] for n in before.keys() | after.keys()
+                                                  if before.get(n) != after.get(n)}
+    record['gradle_home_files'] = sorted(str(p.relative_to(home)) for p in home.rglob('*') if p.is_file())[:2000]
+    save()
+if record['approved_node_source_differences']:
+    raise SystemExit('approved npm sources changed')
+print('HOYA_RN_ANDROID_' + mode.upper() + '_GREEN', flush=True)

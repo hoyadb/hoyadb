@@ -1,0 +1,1235 @@
+FFFFFFEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
+======================================================================
+ERROR: test_sr22c_effective_environment_is_mandatory_and_checked (__main__.LoaderEnvironment.test_sr22c_effective_environment_is_mandatory_and_checked)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 294, in test_sr22c_effective_environment_is_mandatory_and_checked
+    result = check([jvm([], environment={'DYLD_INSERT_LIBRARIES': '/tmp/' + SECRET})])
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22a_each_entry_classified_exactly_once (__main__.SystemCacheIdentity.test_sr22a_each_entry_classified_exactly_once)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 130, in test_sr22a_each_entry_classified_exactly_once
+    both = G.check_observed_jvms([jvm([{'name': 'libjansi.jnilib', 'sha256': 'b' * 64}])], ['kotlin-compiler'],
+                                 native_inventory=PAYLOADS, native_baseline={'libjansi.jnilib': 'b' * 64}, system_cache=evidence())
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22a_missing_digest_is_never_a_general_exemption (__main__.SystemCacheIdentity.test_sr22a_missing_digest_is_never_a_general_exemption)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 118, in test_sr22a_missing_digest_is_never_a_general_exemption
+    self.rejected(check([jvm([cached(LIBZ)])]), 'missing digest')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22a_regular_file_cannot_enter_through_cache_class (__main__.SystemCacheIdentity.test_sr22a_regular_file_cannot_enter_through_cache_class)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 123, in test_sr22a_regular_file_cannot_enter_through_cache_class
+    self.rejected(check([jvm([cached(LIBZ, sha256='e' * 64)])], evidence()), 'file-backed')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22a_repeated_chunk_event_for_same_image_counts_once (__main__.SystemCacheIdentity.test_sr22a_repeated_chunk_event_for_same_image_counts_once)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 113, in test_sr22a_repeated_chunk_event_for_same_image_counts_once
+    result = check([jvm([cached(LIBZ), cached(LIBZ)])], evidence())
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22a_reviewed_cache_images_close_and_report_three_bins (__main__.SystemCacheIdentity.test_sr22a_reviewed_cache_images_close_and_report_three_bins)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 105, in test_sr22a_reviewed_cache_images_close_and_report_three_bins
+    result = check([jvm(libs)], evidence())
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_address_semantics_are_pinned (__main__.SystemCacheIdentity.test_sr22b_address_semantics_are_pinned)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 222, in test_sr22b_address_semantics_are_pinned
+    self.rejected(check([jvm([cached(LIBZ, top_address=0x7ff812dc5000 + SLIDE)])], evidence()), 'top_address')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_aliases_need_explicit_review (__main__.SystemCacheIdentity.test_sr22b_aliases_need_explicit_review)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 250, in test_sr22b_aliases_need_explicit_review
+    self.rejected(check([jvm([cached(SECURITY, name=ALIAS)])], evidence()), 'missing digest')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_alignment_is_the_reviewed_architecture_value (__main__.SystemCacheIdentity.test_sr22b_alignment_is_the_reviewed_architecture_value)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 211, in test_sr22b_alignment_is_the_reviewed_architecture_value
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(record)), 'slide_alignment')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_any_host_identity_change_rejects_in_pre_or_post (__main__.SystemCacheIdentity.test_sr22b_any_host_identity_change_rejects_in_pre_or_post) (label='os.product_build_version', side='pre')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 159, in test_sr22b_any_host_identity_change_rejects_in_pre_or_post
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(**{side: changed})), 'host identity')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_any_host_identity_change_rejects_in_pre_or_post (__main__.SystemCacheIdentity.test_sr22b_any_host_identity_change_rejects_in_pre_or_post) (label='os.product_build_version', side='post')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 159, in test_sr22b_any_host_identity_change_rejects_in_pre_or_post
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(**{side: changed})), 'host identity')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_any_host_identity_change_rejects_in_pre_or_post (__main__.SystemCacheIdentity.test_sr22b_any_host_identity_change_rejects_in_pre_or_post) (label='os.build_id', side='pre')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 159, in test_sr22b_any_host_identity_change_rejects_in_pre_or_post
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(**{side: changed})), 'host identity')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_any_host_identity_change_rejects_in_pre_or_post (__main__.SystemCacheIdentity.test_sr22b_any_host_identity_change_rejects_in_pre_or_post) (label='os.build_id', side='post')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 159, in test_sr22b_any_host_identity_change_rejects_in_pre_or_post
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(**{side: changed})), 'host identity')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_any_host_identity_change_rejects_in_pre_or_post (__main__.SystemCacheIdentity.test_sr22b_any_host_identity_change_rejects_in_pre_or_post) (label='os.product_version_extra', side='pre')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 159, in test_sr22b_any_host_identity_change_rejects_in_pre_or_post
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(**{side: changed})), 'host identity')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_any_host_identity_change_rejects_in_pre_or_post (__main__.SystemCacheIdentity.test_sr22b_any_host_identity_change_rejects_in_pre_or_post) (label='os.product_version_extra', side='post')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 159, in test_sr22b_any_host_identity_change_rejects_in_pre_or_post
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(**{side: changed})), 'host identity')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_any_host_identity_change_rejects_in_pre_or_post (__main__.SystemCacheIdentity.test_sr22b_any_host_identity_change_rejects_in_pre_or_post) (label='os.system_version_plist_sha256', side='pre')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 159, in test_sr22b_any_host_identity_change_rejects_in_pre_or_post
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(**{side: changed})), 'host identity')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_any_host_identity_change_rejects_in_pre_or_post (__main__.SystemCacheIdentity.test_sr22b_any_host_identity_change_rejects_in_pre_or_post) (label='os.system_version_plist_sha256', side='post')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 159, in test_sr22b_any_host_identity_change_rejects_in_pre_or_post
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(**{side: changed})), 'host identity')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_any_host_identity_change_rejects_in_pre_or_post (__main__.SystemCacheIdentity.test_sr22b_any_host_identity_change_rejects_in_pre_or_post) (label='host_integrity', side='pre')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 159, in test_sr22b_any_host_identity_change_rejects_in_pre_or_post
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(**{side: changed})), 'host identity')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_any_host_identity_change_rejects_in_pre_or_post (__main__.SystemCacheIdentity.test_sr22b_any_host_identity_change_rejects_in_pre_or_post) (label='host_integrity', side='post')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 159, in test_sr22b_any_host_identity_change_rejects_in_pre_or_post
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(**{side: changed})), 'host identity')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_any_host_identity_change_rejects_in_pre_or_post (__main__.SystemCacheIdentity.test_sr22b_any_host_identity_change_rejects_in_pre_or_post) (label='arch', side='pre')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 159, in test_sr22b_any_host_identity_change_rejects_in_pre_or_post
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(**{side: changed})), 'host identity')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_any_host_identity_change_rejects_in_pre_or_post (__main__.SystemCacheIdentity.test_sr22b_any_host_identity_change_rejects_in_pre_or_post) (label='arch', side='post')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 159, in test_sr22b_any_host_identity_change_rejects_in_pre_or_post
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(**{side: changed})), 'host identity')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_any_host_identity_change_rejects_in_pre_or_post (__main__.SystemCacheIdentity.test_sr22b_any_host_identity_change_rejects_in_pre_or_post) (label='cache_dir', side='pre')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 159, in test_sr22b_any_host_identity_change_rejects_in_pre_or_post
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(**{side: changed})), 'host identity')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_any_host_identity_change_rejects_in_pre_or_post (__main__.SystemCacheIdentity.test_sr22b_any_host_identity_change_rejects_in_pre_or_post) (label='cache_dir', side='post')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 159, in test_sr22b_any_host_identity_change_rejects_in_pre_or_post
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(**{side: changed})), 'host identity')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_any_host_identity_change_rejects_in_pre_or_post (__main__.SystemCacheIdentity.test_sr22b_any_host_identity_change_rejects_in_pre_or_post) (label='cache.main_uuid', side='pre')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 159, in test_sr22b_any_host_identity_change_rejects_in_pre_or_post
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(**{side: changed})), 'host identity')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_any_host_identity_change_rejects_in_pre_or_post (__main__.SystemCacheIdentity.test_sr22b_any_host_identity_change_rejects_in_pre_or_post) (label='cache.main_uuid', side='post')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 159, in test_sr22b_any_host_identity_change_rejects_in_pre_or_post
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(**{side: changed})), 'host identity')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_any_host_identity_change_rejects_in_pre_or_post (__main__.SystemCacheIdentity.test_sr22b_any_host_identity_change_rejects_in_pre_or_post) (label='cache.subcache uuid', side='pre')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 159, in test_sr22b_any_host_identity_change_rejects_in_pre_or_post
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(**{side: changed})), 'host identity')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_any_host_identity_change_rejects_in_pre_or_post (__main__.SystemCacheIdentity.test_sr22b_any_host_identity_change_rejects_in_pre_or_post) (label='cache.subcache uuid', side='post')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 159, in test_sr22b_any_host_identity_change_rejects_in_pre_or_post
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(**{side: changed})), 'host identity')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_any_host_identity_change_rejects_in_pre_or_post (__main__.SystemCacheIdentity.test_sr22b_any_host_identity_change_rejects_in_pre_or_post) (label='cache.extra subcache', side='pre')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 159, in test_sr22b_any_host_identity_change_rejects_in_pre_or_post
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(**{side: changed})), 'host identity')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_any_host_identity_change_rejects_in_pre_or_post (__main__.SystemCacheIdentity.test_sr22b_any_host_identity_change_rejects_in_pre_or_post) (label='cache.extra subcache', side='post')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 159, in test_sr22b_any_host_identity_change_rejects_in_pre_or_post
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(**{side: changed})), 'host identity')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_any_host_identity_change_rejects_in_pre_or_post (__main__.SystemCacheIdentity.test_sr22b_any_host_identity_change_rejects_in_pre_or_post) (label='cache.max_slide', side='pre')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 159, in test_sr22b_any_host_identity_change_rejects_in_pre_or_post
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(**{side: changed})), 'host identity')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_any_host_identity_change_rejects_in_pre_or_post (__main__.SystemCacheIdentity.test_sr22b_any_host_identity_change_rejects_in_pre_or_post) (label='cache.max_slide', side='post')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 159, in test_sr22b_any_host_identity_change_rejects_in_pre_or_post
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(**{side: changed})), 'host identity')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_any_host_identity_change_rejects_in_pre_or_post (__main__.SystemCacheIdentity.test_sr22b_any_host_identity_change_rejects_in_pre_or_post) (label='cache.images_count', side='pre')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 159, in test_sr22b_any_host_identity_change_rejects_in_pre_or_post
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(**{side: changed})), 'host identity')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_any_host_identity_change_rejects_in_pre_or_post (__main__.SystemCacheIdentity.test_sr22b_any_host_identity_change_rejects_in_pre_or_post) (label='cache.images_count', side='post')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 159, in test_sr22b_any_host_identity_change_rejects_in_pre_or_post
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(**{side: changed})), 'host identity')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_any_host_identity_change_rejects_in_pre_or_post (__main__.SystemCacheIdentity.test_sr22b_any_host_identity_change_rejects_in_pre_or_post) (label='cache_files sha256', side='pre')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 159, in test_sr22b_any_host_identity_change_rejects_in_pre_or_post
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(**{side: changed})), 'host identity')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_any_host_identity_change_rejects_in_pre_or_post (__main__.SystemCacheIdentity.test_sr22b_any_host_identity_change_rejects_in_pre_or_post) (label='cache_files sha256', side='post')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 159, in test_sr22b_any_host_identity_change_rejects_in_pre_or_post
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(**{side: changed})), 'host identity')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_any_host_identity_change_rejects_in_pre_or_post (__main__.SystemCacheIdentity.test_sr22b_any_host_identity_change_rejects_in_pre_or_post) (label='cache_files extra file', side='pre')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 159, in test_sr22b_any_host_identity_change_rejects_in_pre_or_post
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(**{side: changed})), 'host identity')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_any_host_identity_change_rejects_in_pre_or_post (__main__.SystemCacheIdentity.test_sr22b_any_host_identity_change_rejects_in_pre_or_post) (label='cache_files extra file', side='post')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 159, in test_sr22b_any_host_identity_change_rejects_in_pre_or_post
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(**{side: changed})), 'host identity')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_any_host_identity_change_rejects_in_pre_or_post (__main__.SystemCacheIdentity.test_sr22b_any_host_identity_change_rejects_in_pre_or_post) (label='cache_files missing file', side='pre')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 159, in test_sr22b_any_host_identity_change_rejects_in_pre_or_post
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(**{side: changed})), 'host identity')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_any_host_identity_change_rejects_in_pre_or_post (__main__.SystemCacheIdentity.test_sr22b_any_host_identity_change_rejects_in_pre_or_post) (label='cache_files missing file', side='post')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 159, in test_sr22b_any_host_identity_change_rejects_in_pre_or_post
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(**{side: changed})), 'host identity')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_any_host_identity_change_rejects_in_pre_or_post (__main__.SystemCacheIdentity.test_sr22b_any_host_identity_change_rejects_in_pre_or_post) (label='image identity uuid', side='pre')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 159, in test_sr22b_any_host_identity_change_rejects_in_pre_or_post
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(**{side: changed})), 'host identity')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_any_host_identity_change_rejects_in_pre_or_post (__main__.SystemCacheIdentity.test_sr22b_any_host_identity_change_rejects_in_pre_or_post) (label='image identity uuid', side='post')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 159, in test_sr22b_any_host_identity_change_rejects_in_pre_or_post
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(**{side: changed})), 'host identity')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_any_host_identity_change_rejects_in_pre_or_post (__main__.SystemCacheIdentity.test_sr22b_any_host_identity_change_rejects_in_pre_or_post) (label='image identity address', side='pre')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 159, in test_sr22b_any_host_identity_change_rejects_in_pre_or_post
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(**{side: changed})), 'host identity')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_any_host_identity_change_rejects_in_pre_or_post (__main__.SystemCacheIdentity.test_sr22b_any_host_identity_change_rejects_in_pre_or_post) (label='image identity address', side='post')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 159, in test_sr22b_any_host_identity_change_rejects_in_pre_or_post
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(**{side: changed})), 'host identity')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_boot_session_binds_pre_capture_and_post (__main__.SystemCacheIdentity.test_sr22b_boot_session_binds_pre_capture_and_post)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 182, in test_sr22b_boot_session_binds_pre_capture_and_post
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(**{side: changed})), 'boot session')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_discovery_cannot_enroll_itself (__main__.SystemCacheIdentity.test_sr22b_discovery_cannot_enroll_itself)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 266, in test_sr22b_discovery_cannot_enroll_itself
+    result = check([jvm([cached(LIBZ), unknown])], evidence(record))
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_incomplete_host_or_record_rejects (__main__.SystemCacheIdentity.test_sr22b_incomplete_host_or_record_rejects) (side='pre', key='os')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 167, in test_sr22b_incomplete_host_or_record_rejects
+    self.assertFalse(check([jvm([cached(LIBZ)])], evidence(**{side: changed})).ok)
+                     ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_incomplete_host_or_record_rejects (__main__.SystemCacheIdentity.test_sr22b_incomplete_host_or_record_rejects) (side='pre', key='cache_files')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 167, in test_sr22b_incomplete_host_or_record_rejects
+    self.assertFalse(check([jvm([cached(LIBZ)])], evidence(**{side: changed})).ok)
+                     ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_incomplete_host_or_record_rejects (__main__.SystemCacheIdentity.test_sr22b_incomplete_host_or_record_rejects) (side='pre', key='boot_session_uuid')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 167, in test_sr22b_incomplete_host_or_record_rejects
+    self.assertFalse(check([jvm([cached(LIBZ)])], evidence(**{side: changed})).ok)
+                     ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_incomplete_host_or_record_rejects (__main__.SystemCacheIdentity.test_sr22b_incomplete_host_or_record_rejects) (side='pre', key='image_path_status')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 167, in test_sr22b_incomplete_host_or_record_rejects
+    self.assertFalse(check([jvm([cached(LIBZ)])], evidence(**{side: changed})).ok)
+                     ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_incomplete_host_or_record_rejects (__main__.SystemCacheIdentity.test_sr22b_incomplete_host_or_record_rejects) (side='pre', key='cache_image_identities')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 167, in test_sr22b_incomplete_host_or_record_rejects
+    self.assertFalse(check([jvm([cached(LIBZ)])], evidence(**{side: changed})).ok)
+                     ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_incomplete_host_or_record_rejects (__main__.SystemCacheIdentity.test_sr22b_incomplete_host_or_record_rejects) (side='pre', key='host_integrity')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 167, in test_sr22b_incomplete_host_or_record_rejects
+    self.assertFalse(check([jvm([cached(LIBZ)])], evidence(**{side: changed})).ok)
+                     ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_incomplete_host_or_record_rejects (__main__.SystemCacheIdentity.test_sr22b_incomplete_host_or_record_rejects) (side='post', key='os')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 167, in test_sr22b_incomplete_host_or_record_rejects
+    self.assertFalse(check([jvm([cached(LIBZ)])], evidence(**{side: changed})).ok)
+                     ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_incomplete_host_or_record_rejects (__main__.SystemCacheIdentity.test_sr22b_incomplete_host_or_record_rejects) (side='post', key='cache_files')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 167, in test_sr22b_incomplete_host_or_record_rejects
+    self.assertFalse(check([jvm([cached(LIBZ)])], evidence(**{side: changed})).ok)
+                     ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_incomplete_host_or_record_rejects (__main__.SystemCacheIdentity.test_sr22b_incomplete_host_or_record_rejects) (side='post', key='boot_session_uuid')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 167, in test_sr22b_incomplete_host_or_record_rejects
+    self.assertFalse(check([jvm([cached(LIBZ)])], evidence(**{side: changed})).ok)
+                     ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_incomplete_host_or_record_rejects (__main__.SystemCacheIdentity.test_sr22b_incomplete_host_or_record_rejects) (side='post', key='image_path_status')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 167, in test_sr22b_incomplete_host_or_record_rejects
+    self.assertFalse(check([jvm([cached(LIBZ)])], evidence(**{side: changed})).ok)
+                     ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_incomplete_host_or_record_rejects (__main__.SystemCacheIdentity.test_sr22b_incomplete_host_or_record_rejects) (side='post', key='cache_image_identities')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 167, in test_sr22b_incomplete_host_or_record_rejects
+    self.assertFalse(check([jvm([cached(LIBZ)])], evidence(**{side: changed})).ok)
+                     ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_incomplete_host_or_record_rejects (__main__.SystemCacheIdentity.test_sr22b_incomplete_host_or_record_rejects) (side='post', key='host_integrity')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 167, in test_sr22b_incomplete_host_or_record_rejects
+    self.assertFalse(check([jvm([cached(LIBZ)])], evidence(**{side: changed})).ok)
+                     ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_prefix_wildcard_and_whole_cache_enrollment_reject (__main__.SystemCacheIdentity.test_sr22b_prefix_wildcard_and_whole_cache_enrollment_reject) (path='/usr/lib/*')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 238, in test_sr22b_prefix_wildcard_and_whole_cache_enrollment_reject
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(record)), 'images')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_prefix_wildcard_and_whole_cache_enrollment_reject (__main__.SystemCacheIdentity.test_sr22b_prefix_wildcard_and_whole_cache_enrollment_reject) (path='/usr/lib/')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 238, in test_sr22b_prefix_wildcard_and_whole_cache_enrollment_reject
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(record)), 'images')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_prefix_wildcard_and_whole_cache_enrollment_reject (__main__.SystemCacheIdentity.test_sr22b_prefix_wildcard_and_whole_cache_enrollment_reject) (path='/usr/lib/libz.?.dylib')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 238, in test_sr22b_prefix_wildcard_and_whole_cache_enrollment_reject
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(record)), 'images')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_prefix_wildcard_and_whole_cache_enrollment_reject (__main__.SystemCacheIdentity.test_sr22b_prefix_wildcard_and_whole_cache_enrollment_reject) (path='/usr/lib/[a-z]*')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 238, in test_sr22b_prefix_wildcard_and_whole_cache_enrollment_reject
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(record)), 'images')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_prefix_wildcard_and_whole_cache_enrollment_reject (__main__.SystemCacheIdentity.test_sr22b_prefix_wildcard_and_whole_cache_enrollment_reject) (path='usr/lib/libz.1.dylib')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 238, in test_sr22b_prefix_wildcard_and_whole_cache_enrollment_reject
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(record)), 'images')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_prefix_wildcard_and_whole_cache_enrollment_reject (__main__.SystemCacheIdentity.test_sr22b_prefix_wildcard_and_whole_cache_enrollment_reject) (path='')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 238, in test_sr22b_prefix_wildcard_and_whole_cache_enrollment_reject
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(record)), 'images')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_prefix_wildcard_and_whole_cache_enrollment_reject (__main__.SystemCacheIdentity.test_sr22b_prefix_wildcard_and_whole_cache_enrollment_reject)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 241, in test_sr22b_prefix_wildcard_and_whole_cache_enrollment_reject
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(record)), 'images')
+                                               ~~~~~~~~^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 67, in evidence
+    return N.SystemCacheEvidence(expected=record, pre_host=pre or host(record), post_host=post or host(record))
+                                                                  ~~~~^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 56, in host
+    paths = [i['install_path'] for i in record['images']] + list(record['aliases'])
+             ~^^^^^^^^^^^^^^^^
+TypeError: string indices must be integers, not 'str'
+
+======================================================================
+ERROR: test_sr22b_record_schema_and_types_are_exact (__main__.SystemCacheIdentity.test_sr22b_record_schema_and_types_are_exact) (<subtest>)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 280, in test_sr22b_record_schema_and_types_are_exact
+    self.assertFalse(check([jvm([cached(LIBZ)])], evidence(record)).ok)
+                     ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_record_schema_and_types_are_exact (__main__.SystemCacheIdentity.test_sr22b_record_schema_and_types_are_exact) (<subtest>)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 280, in test_sr22b_record_schema_and_types_are_exact
+    self.assertFalse(check([jvm([cached(LIBZ)])], evidence(record)).ok)
+                     ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_record_schema_and_types_are_exact (__main__.SystemCacheIdentity.test_sr22b_record_schema_and_types_are_exact) (<subtest>)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 280, in test_sr22b_record_schema_and_types_are_exact
+    self.assertFalse(check([jvm([cached(LIBZ)])], evidence(record)).ok)
+                     ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_record_schema_and_types_are_exact (__main__.SystemCacheIdentity.test_sr22b_record_schema_and_types_are_exact) (<subtest>)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 280, in test_sr22b_record_schema_and_types_are_exact
+    self.assertFalse(check([jvm([cached(LIBZ)])], evidence(record)).ok)
+                     ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_record_schema_and_types_are_exact (__main__.SystemCacheIdentity.test_sr22b_record_schema_and_types_are_exact) (<subtest>)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 280, in test_sr22b_record_schema_and_types_are_exact
+    self.assertFalse(check([jvm([cached(LIBZ)])], evidence(record)).ok)
+                     ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_record_schema_and_types_are_exact (__main__.SystemCacheIdentity.test_sr22b_record_schema_and_types_are_exact) (<subtest>)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 280, in test_sr22b_record_schema_and_types_are_exact
+    self.assertFalse(check([jvm([cached(LIBZ)])], evidence(record)).ok)
+                     ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_record_schema_and_types_are_exact (__main__.SystemCacheIdentity.test_sr22b_record_schema_and_types_are_exact) (<subtest>)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 280, in test_sr22b_record_schema_and_types_are_exact
+    self.assertFalse(check([jvm([cached(LIBZ)])], evidence(record)).ok)
+                                                  ~~~~~~~~^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 67, in evidence
+    return N.SystemCacheEvidence(expected=record, pre_host=pre or host(record), post_host=post or host(record))
+                                                                  ~~~~^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 60, in host
+    'cache_image_identities': {i['install_path']: {k: i[k] for k in ('image_uuid', 'unslid_load_address', 'text_size')}
+                                                      ~^^^
+KeyError: 'text_size'
+
+======================================================================
+ERROR: test_sr22b_record_schema_and_types_are_exact (__main__.SystemCacheIdentity.test_sr22b_record_schema_and_types_are_exact) (<subtest>)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 280, in test_sr22b_record_schema_and_types_are_exact
+    self.assertFalse(check([jvm([cached(LIBZ)])], evidence(record)).ok)
+                     ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_slide_is_per_jvm (__main__.SystemCacheIdentity.test_sr22b_slide_is_per_jvm)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 205, in test_sr22b_slide_is_per_jvm
+    result = G.check_observed_jvms([first, second], ['kotlin-compiler', 'kotlin-daemon'], system_cache=evidence())
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_slide_must_be_common_bounded_and_aligned (__main__.SystemCacheIdentity.test_sr22b_slide_must_be_common_bounded_and_aligned) (label='mixed')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 198, in test_sr22b_slide_must_be_common_bounded_and_aligned
+    self.rejected(check([jvm(libs)], evidence()), 'slide')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_slide_must_be_common_bounded_and_aligned (__main__.SystemCacheIdentity.test_sr22b_slide_must_be_common_bounded_and_aligned) (label='negative')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 198, in test_sr22b_slide_must_be_common_bounded_and_aligned
+    self.rejected(check([jvm(libs)], evidence()), 'slide')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_slide_must_be_common_bounded_and_aligned (__main__.SystemCacheIdentity.test_sr22b_slide_must_be_common_bounded_and_aligned) (label='unaligned')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 198, in test_sr22b_slide_must_be_common_bounded_and_aligned
+    self.rejected(check([jvm(libs)], evidence()), 'slide')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_slide_must_be_common_bounded_and_aligned (__main__.SystemCacheIdentity.test_sr22b_slide_must_be_common_bounded_and_aligned) (label='at max_slide')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 198, in test_sr22b_slide_must_be_common_bounded_and_aligned
+    self.rejected(check([jvm(libs)], evidence()), 'slide')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_slide_must_be_common_bounded_and_aligned (__main__.SystemCacheIdentity.test_sr22b_slide_must_be_common_bounded_and_aligned) (label='beyond max_slide')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 198, in test_sr22b_slide_must_be_common_bounded_and_aligned
+    self.rejected(check([jvm(libs)], evidence()), 'slide')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_slide_must_be_common_bounded_and_aligned (__main__.SystemCacheIdentity.test_sr22b_slide_must_be_common_bounded_and_aligned)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 199, in test_sr22b_slide_must_be_common_bounded_and_aligned
+    self.assertTrue(check([jvm([cached(LIBZ, slide=0)])], evidence()).ok)
+                    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_uuid_only_identity_cannot_replace_complete_hashes (__main__.SystemCacheIdentity.test_sr22b_uuid_only_identity_cannot_replace_complete_hashes) (record=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 176, in test_sr22b_uuid_only_identity_cannot_replace_complete_hashes
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(record, pre=host(record), post=host(record))), 'cache_files')
+                                                                    ~~~~^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 57, in host
+    return {key: copy.deepcopy(record[key]) for key in N.HOST_IDENTITY_KEYS} | {
+                               ~~~~~~^^^^^
+KeyError: 'cache_files'
+
+======================================================================
+ERROR: test_sr22b_uuid_only_identity_cannot_replace_complete_hashes (__main__.SystemCacheIdentity.test_sr22b_uuid_only_identity_cannot_replace_complete_hashes) (record={})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 176, in test_sr22b_uuid_only_identity_cannot_replace_complete_hashes
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(record, pre=host(record), post=host(record))), 'cache_files')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_uuid_only_identity_cannot_replace_complete_hashes (__main__.SystemCacheIdentity.test_sr22b_uuid_only_identity_cannot_replace_complete_hashes) (record={'dyld_shared_cache_x86_64h': {'bytes': 888602624, 'sha256': None}, 'dyld_shared_cache_x86_64h.01': {'bytes': 805208064, 'sha256': '2222222222222222222222222222222222222222222222222222222222222222'}, 'dyld_shared_cache_x86_64h.map': {'bytes': 1156006, 'sha256': '3333333333333333333333333333333333333333333333333333333333333333'}})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 176, in test_sr22b_uuid_only_identity_cannot_replace_complete_hashes
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(record, pre=host(record), post=host(record))), 'cache_files')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_uuid_only_identity_cannot_replace_complete_hashes (__main__.SystemCacheIdentity.test_sr22b_uuid_only_identity_cannot_replace_complete_hashes) (record={'dyld_shared_cache_x86_64h': {'bytes': 888602624, 'sha256': 'ABC'}, 'dyld_shared_cache_x86_64h.01': {'bytes': 805208064, 'sha256': '2222222222222222222222222222222222222222222222222222222222222222'}, 'dyld_shared_cache_x86_64h.map': {'bytes': 1156006, 'sha256': '3333333333333333333333333333333333333333333333333333333333333333'}})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 176, in test_sr22b_uuid_only_identity_cannot_replace_complete_hashes
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(record, pre=host(record), post=host(record))), 'cache_files')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_uuid_only_identity_cannot_replace_complete_hashes (__main__.SystemCacheIdentity.test_sr22b_uuid_only_identity_cannot_replace_complete_hashes) (record={'dyld_shared_cache_x86_64h': {'bytes': 888602624, 'sha256': '1111111111111111111111111111111111111111111111111111111111111111'}, 'dyld_shared_cache_x86_64h.map': {'bytes': 1156006, 'sha256': '3333333333333333333333333333333333333333333333333333333333333333'}})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 176, in test_sr22b_uuid_only_identity_cannot_replace_complete_hashes
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(record, pre=host(record), post=host(record))), 'cache_files')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+ERROR: test_sr22b_uuid_only_identity_cannot_replace_complete_hashes (__main__.SystemCacheIdentity.test_sr22b_uuid_only_identity_cannot_replace_complete_hashes) (record={'dyld_shared_cache_x86_64h': {'sha256': '1111111111111111111111111111111111111111111111111111111111111111'}, 'dyld_shared_cache_x86_64h.01': {'bytes': 805208064, 'sha256': '2222222222222222222222222222222222222222222222222222222222222222'}, 'dyld_shared_cache_x86_64h.map': {'bytes': 1156006, 'sha256': '3333333333333333333333333333333333333333333333333333333333333333'}})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 176, in test_sr22b_uuid_only_identity_cannot_replace_complete_hashes
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(record, pre=host(record), post=host(record))), 'cache_files')
+                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 92, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: check_observed_jvms() got an unexpected keyword argument 'system_cache'
+
+======================================================================
+FAIL: test_sr22c_dyld_variables_reject_before_launch_by_name_only (__main__.LoaderEnvironment.test_sr22c_dyld_variables_reject_before_launch_by_name_only) (name='DYLD_INSERT_LIBRARIES')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 289, in test_sr22c_dyld_variables_reject_before_launch_by_name_only
+    self.assertFalse(result.ok)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_sr22c_dyld_variables_reject_before_launch_by_name_only (__main__.LoaderEnvironment.test_sr22c_dyld_variables_reject_before_launch_by_name_only) (name='DYLD_LIBRARY_PATH')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 289, in test_sr22c_dyld_variables_reject_before_launch_by_name_only
+    self.assertFalse(result.ok)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_sr22c_dyld_variables_reject_before_launch_by_name_only (__main__.LoaderEnvironment.test_sr22c_dyld_variables_reject_before_launch_by_name_only) (name='DYLD_SHARED_REGION')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 289, in test_sr22c_dyld_variables_reject_before_launch_by_name_only
+    self.assertFalse(result.ok)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_sr22c_dyld_variables_reject_before_launch_by_name_only (__main__.LoaderEnvironment.test_sr22c_dyld_variables_reject_before_launch_by_name_only) (name='DYLD_SHARED_CACHE_DIR')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 289, in test_sr22c_dyld_variables_reject_before_launch_by_name_only
+    self.assertFalse(result.ok)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_sr22c_dyld_variables_reject_before_launch_by_name_only (__main__.LoaderEnvironment.test_sr22c_dyld_variables_reject_before_launch_by_name_only) (name='DYLD_FRAMEWORK_PATH')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 289, in test_sr22c_dyld_variables_reject_before_launch_by_name_only
+    self.assertFalse(result.ok)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_sr22c_dyld_variables_reject_before_launch_by_name_only (__main__.LoaderEnvironment.test_sr22c_dyld_variables_reject_before_launch_by_name_only) (name='DYLD_PRINT_LIBRARIES')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 289, in test_sr22c_dyld_variables_reject_before_launch_by_name_only
+    self.assertFalse(result.ok)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.105s
+
+FAILED (failures=6, errors=85)
+exit=1

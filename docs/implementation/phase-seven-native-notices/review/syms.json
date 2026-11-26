@@ -1,0 +1,87 @@
+{
+ "macos-x86_64/libhoyadb_native.a": {
+  "sha256": "5aba91a0c4f53a726b8e4abaca073b45ff5adc5916666544577d3b7d45fe15e1",
+  "thin": {
+   "members": 363,
+   "non_macho_members": [],
+   "os_imports": [
+    "_CCCryptorCreate",
+    "_CCCryptorFinal",
+    "_CCCryptorRelease",
+    "_CCCryptorUpdate",
+    "_CCHmacFinal",
+    "_CCHmacInit",
+    "_CCHmacUpdate",
+    "_CCKeyDerivationPBKDF",
+    "_CCRandomGenerateBytes",
+    "_SecRandomCopyBytes",
+    "_kSecRandomDefault"
+   ],
+   "ltc": [],
+   "ltc_extra_names": []
+  }
+ },
+ "ios-arm64/libhoyadb_native.a": {
+  "sha256": "64d6fd9ea798dfb8fc03f36dcce9b7e43ce55971756ed937bf4aa5362723244a",
+  "thin": {
+   "members": 458,
+   "non_macho_members": [],
+   "os_imports": [
+    "_CCCryptorCreate",
+    "_CCCryptorFinal",
+    "_CCCryptorRelease",
+    "_CCCryptorUpdate",
+    "_CCHmacFinal",
+    "_CCHmacInit",
+    "_CCHmacUpdate",
+    "_CCKeyDerivationPBKDF",
+    "_CCRandomGenerateBytes",
+    "_SecRandomCopyBytes",
+    "_kSecRandomDefault"
+   ],
+   "ltc": [],
+   "ltc_extra_names": []
+  }
+ },
+ "ios-arm64_x86_64-simulator/libhoyadb_native.a": {
+  "sha256": "bf491fe39f7275b6589063fa4645e050e38d4a2215623311bac6768ff016f396",
+  "x86_64": {
+   "members": 363,
+   "non_macho_members": [],
+   "os_imports": [
+    "_CCCryptorCreate",
+    "_CCCryptorFinal",
+    "_CCCryptorRelease",
+    "_CCCryptorUpdate",
+    "_CCHmacFinal",
+    "_CCHmacInit",
+    "_CCHmacUpdate",
+    "_CCKeyDerivationPBKDF",
+    "_CCRandomGenerateBytes",
+    "_SecRandomCopyBytes",
+    "_kSecRandomDefault"
+   ],
+   "ltc": [],
+   "ltc_extra_names": []
+  },
+  "arm64": {
+   "members": 458,
+   "non_macho_members": [],
+   "os_imports": [
+    "_CCCryptorCreate",
+    "_CCCryptorFinal",
+    "_CCCryptorRelease",
+    "_CCCryptorUpdate",
+    "_CCHmacFinal",
+    "_CCHmacInit",
+    "_CCHmacUpdate",
+    "_CCKeyDerivationPBKDF",
+    "_CCRandomGenerateBytes",
+    "_SecRandomCopyBytes",
+    "_kSecRandomDefault"
+   ],
+   "ltc": [],
+   "ltc_extra_names": []
+  }
+ }
+}

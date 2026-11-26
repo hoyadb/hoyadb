@@ -1,0 +1,146 @@
+test_DEF0029_P01_existing_evidence_after_admit_rejects_without_consuming_the_permit (test_browser_server.BrowserControllerTests.test_DEF0029_P01_existing_evidence_after_admit_rejects_without_consuming_the_permit) ... 
+  test_DEF0029_P01_existing_evidence_after_admit_rejects_without_consuming_the_permit (test_browser_server.BrowserControllerTests.test_DEF0029_P01_existing_evidence_after_admit_rejects_without_consuming_the_permit) (route='warm') ... FAIL
+  test_DEF0029_P01_existing_evidence_after_admit_rejects_without_consuming_the_permit (test_browser_server.BrowserControllerTests.test_DEF0029_P01_existing_evidence_after_admit_rejects_without_consuming_the_permit) (route='cold') ... FAIL
+  test_DEF0029_P01_existing_evidence_after_admit_rejects_without_consuming_the_permit (test_browser_server.BrowserControllerTests.test_DEF0029_P01_existing_evidence_after_admit_rejects_without_consuming_the_permit) (route='resources') ... FAIL
+test_DEF0029_P02_revoke_recover_then_a_different_identity_starts_exactly_once (test_browser_server.BrowserControllerTests.test_DEF0029_P02_revoke_recover_then_a_different_identity_starts_exactly_once) ... 
+  test_DEF0029_P02_revoke_recover_then_a_different_identity_starts_exactly_once (test_browser_server.BrowserControllerTests.test_DEF0029_P02_revoke_recover_then_a_different_identity_starts_exactly_once) (route='warm') ... ERROR
+  test_DEF0029_P02_revoke_recover_then_a_different_identity_starts_exactly_once (test_browser_server.BrowserControllerTests.test_DEF0029_P02_revoke_recover_then_a_different_identity_starts_exactly_once) (route='cold') ... ERROR
+  test_DEF0029_P02_revoke_recover_then_a_different_identity_starts_exactly_once (test_browser_server.BrowserControllerTests.test_DEF0029_P02_revoke_recover_then_a_different_identity_starts_exactly_once) (route='resources') ... ERROR
+test_DEF0029_P03_mismatch_and_drift_keep_their_semantics_and_drift_wins_over_existing_evidence (test_browser_server.BrowserControllerTests.test_DEF0029_P03_mismatch_and_drift_keep_their_semantics_and_drift_wins_over_existing_evidence) ... ok
+
+======================================================================
+ERROR: test_DEF0029_P02_revoke_recover_then_a_different_identity_starts_exactly_once (test_browser_server.BrowserControllerTests.test_DEF0029_P02_revoke_recover_then_a_different_identity_starts_exactly_once) (route='warm')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/benchmarks/test_browser_server.py", line 754, in test_DEF0029_P02_revoke_recover_then_a_different_identity_starts_exactly_once
+    collector.revoke("existing evidence for " + run_id)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>/benchmarks/browser_server.py", line 215, in revoke
+    require(self.allow_measurements and self.state == "admitted" and self.active is None and self.permit is not None
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            and isinstance(reason, str) and reason, "no unconsumed permit to revoke")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>/benchmarks/run.py", line 24, in require
+    raise RunnerError(message)
+run.RunnerError: no unconsumed permit to revoke
+
+======================================================================
+ERROR: test_DEF0029_P02_revoke_recover_then_a_different_identity_starts_exactly_once (test_browser_server.BrowserControllerTests.test_DEF0029_P02_revoke_recover_then_a_different_identity_starts_exactly_once) (route='cold')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/benchmarks/test_browser_server.py", line 754, in test_DEF0029_P02_revoke_recover_then_a_different_identity_starts_exactly_once
+    collector.revoke("existing evidence for " + run_id)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>/benchmarks/browser_server.py", line 215, in revoke
+    require(self.allow_measurements and self.state == "admitted" and self.active is None and self.permit is not None
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            and isinstance(reason, str) and reason, "no unconsumed permit to revoke")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>/benchmarks/run.py", line 24, in require
+    raise RunnerError(message)
+run.RunnerError: no unconsumed permit to revoke
+
+======================================================================
+ERROR: test_DEF0029_P02_revoke_recover_then_a_different_identity_starts_exactly_once (test_browser_server.BrowserControllerTests.test_DEF0029_P02_revoke_recover_then_a_different_identity_starts_exactly_once) (route='resources')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/benchmarks/test_browser_server.py", line 754, in test_DEF0029_P02_revoke_recover_then_a_different_identity_starts_exactly_once
+    collector.revoke("existing evidence for " + run_id)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>/benchmarks/browser_server.py", line 215, in revoke
+    require(self.allow_measurements and self.state == "admitted" and self.active is None and self.permit is not None
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            and isinstance(reason, str) and reason, "no unconsumed permit to revoke")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>/benchmarks/run.py", line 24, in require
+    raise RunnerError(message)
+run.RunnerError: no unconsumed permit to revoke
+
+======================================================================
+FAIL: test_DEF0029_P01_existing_evidence_after_admit_rejects_without_consuming_the_permit (test_browser_server.BrowserControllerTests.test_DEF0029_P01_existing_evidence_after_admit_rejects_without_consuming_the_permit) (route='warm')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/benchmarks/test_browser_server.py", line 741, in test_DEF0029_P01_existing_evidence_after_admit_rejects_without_consuming_the_permit
+    self.assertEqual(self.state_of(collector), before)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'permit': None, 'state': 'active', 'starts': 1, 'ru[70 chars]: []} != {'permit': '{"cohort":0,"engine":"memory","kind":"wa[145 chars]: []}
+  {'active': None,
+   'blocked': [],
+   'claimed': False,
+-  'permit': None,
++  'permit': '{"cohort":0,"engine":"memory","kind":"warm","run":1,"worker_id":"worker:1"}',
+   'runs': {},
+-  'starts': 1,
+?            ^
+
++  'starts': 0,
+?            ^
+
+-  'state': 'active',
+?             ^ ^^
+
++  'state': 'admitted',
+?             ^^^ ^ +
+
+   'workers': set()}
+
+======================================================================
+FAIL: test_DEF0029_P01_existing_evidence_after_admit_rejects_without_consuming_the_permit (test_browser_server.BrowserControllerTests.test_DEF0029_P01_existing_evidence_after_admit_rejects_without_consuming_the_permit) (route='cold')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/benchmarks/test_browser_server.py", line 741, in test_DEF0029_P01_existing_evidence_after_admit_rejects_without_consuming_the_permit
+    self.assertEqual(self.state_of(collector), before)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'permit': None, 'state': 'active', 'starts': 1, 'ru[70 chars]: []} != {'permit': '{"engine":"memory","kind":"cold","n":0,"[161 chars]: []}
+  {'active': None,
+   'blocked': [],
+   'claimed': False,
+-  'permit': None,
++  'permit': '{"engine":"memory","kind":"cold","n":0,"operation":"create","run":1,"worker_id":"worker:1"}',
+   'runs': {},
+-  'starts': 1,
+?            ^
+
++  'starts': 0,
+?            ^
+
+-  'state': 'active',
+?             ^ ^^
+
++  'state': 'admitted',
+?             ^^^ ^ +
+
+   'workers': set()}
+
+======================================================================
+FAIL: test_DEF0029_P01_existing_evidence_after_admit_rejects_without_consuming_the_permit (test_browser_server.BrowserControllerTests.test_DEF0029_P01_existing_evidence_after_admit_rejects_without_consuming_the_permit) (route='resources')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/benchmarks/test_browser_server.py", line 741, in test_DEF0029_P01_existing_evidence_after_admit_rejects_without_consuming_the_permit
+    self.assertEqual(self.state_of(collector), before)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'permit': None, 'state': 'active', 'starts': 1, 'ru[70 chars]: []} != {'permit': '{"engine":"memory","kind":"resources","r[139 chars]: []}
+  {'active': None,
+   'blocked': [],
+   'claimed': False,
+-  'permit': None,
++  'permit': '{"engine":"memory","kind":"resources","run":1,"worker_id":"worker:1"}',
+   'runs': {},
+-  'starts': 1,
+?            ^
+
++  'starts': 0,
+?            ^
+
+-  'state': 'active',
+?             ^ ^^
+
++  'state': 'admitted',
+?             ^^^ ^ +
+
+   'workers': set()}
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.798s
+
+FAILED (failures=3, errors=3)

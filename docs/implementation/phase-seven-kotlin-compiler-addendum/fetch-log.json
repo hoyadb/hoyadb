@@ -1,0 +1,1182 @@
+[
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-gradle-plugin/2.1.20/kotlin-gradle-plugin-2.1.20-sources.jar",
+    "dest": "sources/kotlin-gradle-plugin-2.1.20-sources.jar",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-gradle-plugin/2.1.20/kotlin-gradle-plugin-2.1.20-sources.jar",
+    "bytes": 1238232,
+    "sha256": "a516e48feee115beb43f1188f4af9c7df08bcb20744457e966793aa0773c1eca",
+    "sha1": "7b2e61be20b8f01066644723e5251d61b5a6d56e"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-gradle-plugin/2.1.20/kotlin-gradle-plugin-2.1.20-sources.jar.sha1",
+    "dest": "sources/kotlin-gradle-plugin-2.1.20-sources.jar.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-gradle-plugin/2.1.20/kotlin-gradle-plugin-2.1.20-sources.jar.sha1",
+    "bytes": 40,
+    "sha256": "38c13e29a262e41f9ce633ae3d113cf1a63276fccbf64d205be508d1c416cccb",
+    "sha1": "d2a418625318bf743881a742bdebb6370baac3c0"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-gradle-plugin/2.1.20/kotlin-gradle-plugin-2.1.20-gradle85-sources.jar",
+    "dest": "sources/kotlin-gradle-plugin-2.1.20-gradle85-sources.jar",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-gradle-plugin/2.1.20/kotlin-gradle-plugin-2.1.20-gradle85-sources.jar",
+    "bytes": 2707411,
+    "sha256": "42f574267dd946076ca24f1344cf1d22d5c673333475d9d8e28194b172d6ba5f",
+    "sha1": "61d285bcdd8c350faae3ff3c95d49d945203702c"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/code/gson/gson/2.8.9/gson-2.8.9.pom",
+    "dest": "closure/com.google.code.gson__gson__2.8.9/gson-2.8.9.pom",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/com/google/code/gson/gson/2.8.9/gson-2.8.9.pom",
+    "bytes": 6325,
+    "sha256": "afded6e6a690fbf3ad4ae65ada397f0a90a5f630b303d1b741b9c97926fdd4de",
+    "sha1": "e40b03e4cc2b52efb19af75c07596e9d15a52d82"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/code/gson/gson/2.8.9/gson-2.8.9.pom.sha1",
+    "dest": "closure/com.google.code.gson__gson__2.8.9/gson-2.8.9.pom.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/com/google/code/gson/gson/2.8.9/gson-2.8.9.pom.sha1",
+    "bytes": 40,
+    "sha256": "120eecaf583e0391b956e4a19cdfb6047d2f46b7f372a798673bc94a0d287a1c",
+    "sha1": "c784eadeed165d17c66ec25c9624e6e7a80b0520"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/code/gson/gson/2.8.9/gson-2.8.9.jar",
+    "dest": "closure/com.google.code.gson__gson__2.8.9/gson-2.8.9.jar",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/com/google/code/gson/gson/2.8.9/gson-2.8.9.jar",
+    "bytes": 258075,
+    "sha256": "d3999291855de495c94c743761b8ab5176cfeabe281a5ab0d8e8d45326fd703e",
+    "sha1": "8a432c1d6825781e21a02db2e2c33c5fde2833b9"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/code/gson/gson/2.8.9/gson-2.8.9.jar.sha1",
+    "dest": "closure/com.google.code.gson__gson__2.8.9/gson-2.8.9.jar.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/com/google/code/gson/gson/2.8.9/gson-2.8.9.jar.sha1",
+    "bytes": 40,
+    "sha256": "5b1b5a3acc0b03a44c6ec99618ef4728e1661dda830478df4a701e93247c9020",
+    "sha1": "194d82b6a40943e0fbb26fb511ceaeb55c7e5f05"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/code/gson/gson/2.8.9/gson-2.8.9.jar.asc",
+    "dest": "closure/com.google.code.gson__gson__2.8.9/gson-2.8.9.jar.asc",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/com/google/code/gson/gson/2.8.9/gson-2.8.9.jar.asc",
+    "bytes": 496,
+    "sha256": "007939b3abd5cb5dc6262998e5581e4c8a093ab8a0537c883fc66f402abb1290",
+    "sha1": "44b89e8061221879d24f2c1665139c9ade4e41cf"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.7.1/error_prone_annotations-2.7.1.pom",
+    "dest": "closure/com.google.errorprone__error_prone_annotations__2.7.1/error_prone_annotations-2.7.1.pom",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.7.1/error_prone_annotations-2.7.1.pom",
+    "bytes": 2111,
+    "sha256": "31a872e1149c5f3a8bc05fb4de455e5ea608ecfad1af222cb7637ca6c762ee25",
+    "sha1": "0b0fa22131b64b3985fba347927252af21898984"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.7.1/error_prone_annotations-2.7.1.pom.sha1",
+    "dest": "closure/com.google.errorprone__error_prone_annotations__2.7.1/error_prone_annotations-2.7.1.pom.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.7.1/error_prone_annotations-2.7.1.pom.sha1",
+    "bytes": 40,
+    "sha256": "f7309edab677b0332168eb9849b9280941872aa2fa9bce244542bd4468669cd4",
+    "sha1": "4490404e74952ab65f6aa6709af3998986652a50"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.7.1/error_prone_annotations-2.7.1.jar",
+    "dest": "closure/com.google.errorprone__error_prone_annotations__2.7.1/error_prone_annotations-2.7.1.jar",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.7.1/error_prone_annotations-2.7.1.jar",
+    "bytes": 14835,
+    "sha256": "cd5257c08a246cf8628817ae71cb822be192ef91f6881ca4a3fcff4f1de1cff3",
+    "sha1": "458d9042f7aa6fa9a634df902b37f544e15aacac"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.7.1/error_prone_annotations-2.7.1.jar.sha1",
+    "dest": "closure/com.google.errorprone__error_prone_annotations__2.7.1/error_prone_annotations-2.7.1.jar.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.7.1/error_prone_annotations-2.7.1.jar.sha1",
+    "bytes": 40,
+    "sha256": "e49f6cf1eeaac7ac9e0a626b07f65ca941953fc65f510d763a66cf0e90d71ce7",
+    "sha1": "c87a846c619139ac54a3d15e834742ed39980908"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.7.1/error_prone_annotations-2.7.1.jar.asc",
+    "dest": "closure/com.google.errorprone__error_prone_annotations__2.7.1/error_prone_annotations-2.7.1.jar.asc",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.7.1/error_prone_annotations-2.7.1.jar.asc",
+    "bytes": 833,
+    "sha256": "74760d8077af65dee2fb01ac45bfcaca7a198891af5903ccd27f6bbc925836da",
+    "sha1": "2b50daffbfb541fb0b3c85702a4a64eae26d017b"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.pom",
+    "dest": "closure/com.google.guava__failureaccess__1.0.1/failureaccess-1.0.1.pom",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.pom",
+    "bytes": 2413,
+    "sha256": "e96042ce78fecba0da2be964522947c87b40a291b5fd3cd672a434924103c4b9",
+    "sha1": "e8160e78fdaaf7088621dc1649d9dd2dfcf8d0e8"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.pom.sha1",
+    "dest": "closure/com.google.guava__failureaccess__1.0.1/failureaccess-1.0.1.pom.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.pom.sha1",
+    "bytes": 40,
+    "sha256": "9f747192b77f5b2d56e3e2c0d36f41690ff571176c221ee54031561127f338f2",
+    "sha1": "6dd2b189fece9853311fdeb055de73d90f8dc291"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar",
+    "dest": "closure/com.google.guava__failureaccess__1.0.1/failureaccess-1.0.1.jar",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar",
+    "bytes": 4617,
+    "sha256": "a171ee4c734dd2da837e4b16be9df4661afab72a41adaf31eb84dfdaf936ca26",
+    "sha1": "1dcf1de382a0bf95a3d8b0849546c88bac1292c9"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar.sha1",
+    "dest": "closure/com.google.guava__failureaccess__1.0.1/failureaccess-1.0.1.jar.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar.sha1",
+    "bytes": 40,
+    "sha256": "ae27c468dac54243efa4fc7b3b950e54d51c9aeda7eb35927fbbbdaf2b69d060",
+    "sha1": "48950b684318edd8d9d10a131c44ccd6e218100b"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar.asc",
+    "dest": "closure/com.google.guava__failureaccess__1.0.1/failureaccess-1.0.1.jar.asc",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar.asc",
+    "bytes": 488,
+    "sha256": "c2a8aa58236ddb910edf8de160d9302aae893ad987aa2245eaf98f0fd5208e09",
+    "sha1": "ec16884c2cbb2a66dd58eae23ea35b2eb03dd869"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/guava/guava/31.0.1-jre/guava-31.0.1-jre.pom",
+    "dest": "closure/com.google.guava__guava__31.0.1-jre/guava-31.0.1-jre.pom",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/com/google/guava/guava/31.0.1-jre/guava-31.0.1-jre.pom",
+    "bytes": 10963,
+    "sha256": "2be566920c21c60c5ccaf2827867caff766646e2113b7fcc3ee9c24a40b2f396",
+    "sha1": "d0ec1628dcc04e4835721416103672384ea3136f"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/guava/guava/31.0.1-jre/guava-31.0.1-jre.pom.sha1",
+    "dest": "closure/com.google.guava__guava__31.0.1-jre/guava-31.0.1-jre.pom.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/com/google/guava/guava/31.0.1-jre/guava-31.0.1-jre.pom.sha1",
+    "bytes": 40,
+    "sha256": "32ccea1e545a059111a4da3ed0d9245ecd79ae023db482af03c20c67d404ae9e",
+    "sha1": "a46c5e5182ab89b1e86c4dcfd958f1a8b3bf5470"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/guava/guava/31.0.1-jre/guava-31.0.1-jre.jar",
+    "dest": "closure/com.google.guava__guava__31.0.1-jre/guava-31.0.1-jre.jar",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/com/google/guava/guava/31.0.1-jre/guava-31.0.1-jre.jar",
+    "bytes": 2974216,
+    "sha256": "d5be94d65e87bd219fb3193ad1517baa55a3b88fc91d21cf735826ab5af087b9",
+    "sha1": "119ea2b2bc205b138974d351777b20f02b92704b"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/guava/guava/31.0.1-jre/guava-31.0.1-jre.jar.sha1",
+    "dest": "closure/com.google.guava__guava__31.0.1-jre/guava-31.0.1-jre.jar.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/com/google/guava/guava/31.0.1-jre/guava-31.0.1-jre.jar.sha1",
+    "bytes": 40,
+    "sha256": "db53b5c5151c440f1bf8c7d28bb4a80574ef8578a6f667487ea76e87fb53b159",
+    "sha1": "bfae5967f125014f240f9ebd983ce4cbe8cfc066"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/guava/guava/31.0.1-jre/guava-31.0.1-jre.jar.asc",
+    "dest": "closure/com.google.guava__guava__31.0.1-jre/guava-31.0.1-jre.jar.asc",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/com/google/guava/guava/31.0.1-jre/guava-31.0.1-jre.jar.asc",
+    "bytes": 488,
+    "sha256": "45c8c8235c1c35bd61eae2b48798b2ba700c3833d9c3bf2ed5beb5cc4053eb24",
+    "sha1": "1decc62fe1a47e4f3c13608c90bdd1ad2960aa10"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.pom",
+    "dest": "closure/com.google.j2objc__j2objc-annotations__1.3/j2objc-annotations-1.3.pom",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.pom",
+    "bytes": 2762,
+    "sha256": "5faca824ba115bee458730337dfdb2fcea46ba2fd774d4304edbf30fa6a3f055",
+    "sha1": "47e0dd93285dcc6b33181713bc7e8aed66742964"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.pom.sha1",
+    "dest": "closure/com.google.j2objc__j2objc-annotations__1.3/j2objc-annotations-1.3.pom.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.pom.sha1",
+    "bytes": 40,
+    "sha256": "6e88073dec37b7add47087e8055fb3579a4b81a0bdbdd49fb53f76c3f465bfef",
+    "sha1": "b281e80b767c3efba451be3de479bfebb3dc14db"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar",
+    "dest": "closure/com.google.j2objc__j2objc-annotations__1.3/j2objc-annotations-1.3.jar",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar",
+    "bytes": 8781,
+    "sha256": "21af30c92267bd6122c0e0b4d20cccb6641a37eaf956c6540ec471d584e64a7b",
+    "sha1": "ba035118bc8bac37d7eff77700720999acd9986d"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar.sha1",
+    "dest": "closure/com.google.j2objc__j2objc-annotations__1.3/j2objc-annotations-1.3.jar.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar.sha1",
+    "bytes": 40,
+    "sha256": "04d4c186d56707ad1d71be462a4b0cb7e6adb156453e0533f69d5a554a84b33f",
+    "sha1": "aa00ad757bbcff8aa0d8a9ad8fa2e095a6334849"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar.asc",
+    "dest": "closure/com.google.j2objc__j2objc-annotations__1.3/j2objc-annotations-1.3.jar.asc",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar.asc",
+    "bytes": 455,
+    "sha256": "08c896f77c5741e3ac58c785abd9c7242dc89376a65d68955d79d9d0cd9f838b",
+    "sha1": "27d4cc46756461a527c5823c84f0327bc06ec631"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.pom",
+    "dest": "closure/org.checkerframework__checker-qual__3.12.0/checker-qual-3.12.0.pom",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.pom",
+    "bytes": 2092,
+    "sha256": "775b7ae36e62820b3b86dc1aa39af37c0ac4b85ff48f7fe485a922a2790f46b9",
+    "sha1": "fb8dca6f40fcb30f7b89de269940bf3316fb9845"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.pom.sha1",
+    "dest": "closure/org.checkerframework__checker-qual__3.12.0/checker-qual-3.12.0.pom.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.pom.sha1",
+    "bytes": 40,
+    "sha256": "c4e74ad2196ebe924c401251294f7e02874540cceeb1be7c0122f5e3f9256440",
+    "sha1": "682c8bb83a86c1298c7e3345bca17a514823d740"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.module",
+    "dest": "closure/org.checkerframework__checker-qual__3.12.0/checker-qual-3.12.0.module",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.module",
+    "bytes": 3546,
+    "sha256": "d047949c1b81091c2c3913771fac2f32a2fa549ba3d5d548cc8c0b6dfa493777",
+    "sha1": "7f3b31c801fe87a77142f4fdd07bd4cb6f28cc9b"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.module.sha1",
+    "dest": "closure/org.checkerframework__checker-qual__3.12.0/checker-qual-3.12.0.module.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.module.sha1",
+    "bytes": 40,
+    "sha256": "d00501b27e76b4909d6a0e7755b94bde1e14422759480a7c72ea2afd4dab9ec6",
+    "sha1": "d8f8c892ab685b196b9e6bf97bc7465cb1335ba8"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.jar",
+    "dest": "closure/org.checkerframework__checker-qual__3.12.0/checker-qual-3.12.0.jar",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.jar",
+    "bytes": 208835,
+    "sha256": "ff10785ac2a357ec5de9c293cb982a2cbb605c0309ea4cc1cb9b9bc6dbe7f3cb",
+    "sha1": "d5692f0526415fcc6de94bb5bfbd3afd9dd3b3e5"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.jar.sha1",
+    "dest": "closure/org.checkerframework__checker-qual__3.12.0/checker-qual-3.12.0.jar.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.jar.sha1",
+    "bytes": 40,
+    "sha256": "b377ede321ff2df0402f9d719e2cef0d6a20519079f47c70326869e18daf17de",
+    "sha1": "fe6fa54665c48f269759aad03c9f55f75b1dcc41"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.jar.asc",
+    "dest": "closure/org.checkerframework__checker-qual__3.12.0/checker-qual-3.12.0.jar.asc",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.jar.asc",
+    "bytes": 475,
+    "sha256": "6d877f4e9397f6b906242f7832159f7477d1b0d262bcc81e45e185d6bd820a84",
+    "sha1": "1a83e7479c721c334fd0914428b8e3671869c4cb"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/intellij/deps/trove4j/1.0.20200330/trove4j-1.0.20200330.pom",
+    "dest": "closure/org.jetbrains.intellij.deps__trove4j__1.0.20200330/trove4j-1.0.20200330.pom",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/intellij/deps/trove4j/1.0.20200330/trove4j-1.0.20200330.pom",
+    "bytes": 1322,
+    "sha256": "87721cbaa65a3c97d8b1ba9d207840f164c9fe38759fc9ea10ffe26565f8d3e9",
+    "sha1": "c1f38f72d4dfc6efd773b0448a7aae08f8d5025f"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/intellij/deps/trove4j/1.0.20200330/trove4j-1.0.20200330.pom.sha1",
+    "dest": "closure/org.jetbrains.intellij.deps__trove4j__1.0.20200330/trove4j-1.0.20200330.pom.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/intellij/deps/trove4j/1.0.20200330/trove4j-1.0.20200330.pom.sha1",
+    "bytes": 40,
+    "sha256": "0c86be5006bb6890f56b2c012c666db74b7f999404a9d806b7743c038fb840e4",
+    "sha1": "0c7ba5900a5e9be76273683eb11fb97d15734d67"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/intellij/deps/trove4j/1.0.20200330/trove4j-1.0.20200330.jar",
+    "dest": "closure/org.jetbrains.intellij.deps__trove4j__1.0.20200330/trove4j-1.0.20200330.jar",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/intellij/deps/trove4j/1.0.20200330/trove4j-1.0.20200330.jar",
+    "bytes": 572985,
+    "sha256": "c5fd725bffab51846bf3c77db1383c60aaaebfe1b7fe2f00d23fe1b7df0a439d",
+    "sha1": "3afb14d5f9ceb459d724e907a21145e8ff394f02"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/intellij/deps/trove4j/1.0.20200330/trove4j-1.0.20200330.jar.sha1",
+    "dest": "closure/org.jetbrains.intellij.deps__trove4j__1.0.20200330/trove4j-1.0.20200330.jar.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/intellij/deps/trove4j/1.0.20200330/trove4j-1.0.20200330.jar.sha1",
+    "bytes": 40,
+    "sha256": "b04e24a99563eb191d30e4cfdc9e81df0ad6e59a8c55af96240786dbcddd4c7b",
+    "sha1": "f02aa44a76cf9ac7a9a31f5c2fb130bdc9c49b81"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/intellij/deps/trove4j/1.0.20200330/trove4j-1.0.20200330.jar.asc",
+    "dest": "closure/org.jetbrains.intellij.deps__trove4j__1.0.20200330/trove4j-1.0.20200330.jar.asc",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/intellij/deps/trove4j/1.0.20200330/trove4j-1.0.20200330.jar.asc",
+    "bytes": 821,
+    "sha256": "523611b249bd776caa8020ccd8a2764dd33c25bd288da77038dfa31174b42c8b",
+    "sha1": "b2914ccc1b8f32986e5a7ed2c6cc5d379bc7d6dc"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-build-tools-impl/2.1.20/kotlin-build-tools-impl-2.1.20.pom",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-build-tools-impl__2.1.20/kotlin-build-tools-impl-2.1.20.pom",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-build-tools-impl/2.1.20/kotlin-build-tools-impl-2.1.20.pom",
+    "bytes": 2400,
+    "sha256": "10fb1e35e0e8706747e8e83eae8f8b43406ba664e4201ec9dfcb9af7da6b42ba",
+    "sha1": "23b866bd2d92438d9ae6309e4460ee9a6b733c6a"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-build-tools-impl/2.1.20/kotlin-build-tools-impl-2.1.20.pom.sha1",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-build-tools-impl__2.1.20/kotlin-build-tools-impl-2.1.20.pom.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-build-tools-impl/2.1.20/kotlin-build-tools-impl-2.1.20.pom.sha1",
+    "bytes": 40,
+    "sha256": "9e7d9f123f004c90c4d55d6bc24178a90066383294b43c943b30e6fcdd933e86",
+    "sha1": "79da5cb2624bfd5bc8888099dee13316e1644fe1"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-build-tools-impl/2.1.20/kotlin-build-tools-impl-2.1.20.jar",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-build-tools-impl__2.1.20/kotlin-build-tools-impl-2.1.20.jar",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-build-tools-impl/2.1.20/kotlin-build-tools-impl-2.1.20.jar",
+    "bytes": 54292,
+    "sha256": "6e94896e321603e3bfe89fef02478e44d1d64a3d25d49d0694892ffc01c60acf",
+    "sha1": "0d9d48ea4480c0777e2d68cb7d7e5f7398ee885b"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-build-tools-impl/2.1.20/kotlin-build-tools-impl-2.1.20.jar.sha1",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-build-tools-impl__2.1.20/kotlin-build-tools-impl-2.1.20.jar.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-build-tools-impl/2.1.20/kotlin-build-tools-impl-2.1.20.jar.sha1",
+    "bytes": 40,
+    "sha256": "751b4ddb86041c5361ff0c9f7eccb2a47682cd8ace5321137c07c21f1adc50d4",
+    "sha1": "df232c0f3f3042b6f3ac4229ef5abfda60181b37"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-build-tools-impl/2.1.20/kotlin-build-tools-impl-2.1.20.jar.asc",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-build-tools-impl__2.1.20/kotlin-build-tools-impl-2.1.20.jar.asc",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-build-tools-impl/2.1.20/kotlin-build-tools-impl-2.1.20.jar.asc",
+    "bytes": 689,
+    "sha256": "940e1e262eee2e1684bf95468ba513307e4cc3e4db84451cb483fc47f48ad771",
+    "sha1": "012c49dba2e6d8fc338ac7f011673fd4aba5c339"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-compiler-embeddable/2.1.20/kotlin-compiler-embeddable-2.1.20.pom",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-compiler-embeddable__2.1.20/kotlin-compiler-embeddable-2.1.20.pom",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-compiler-embeddable/2.1.20/kotlin-compiler-embeddable-2.1.20.pom",
+    "bytes": 2666,
+    "sha256": "227404eac6d809bc0d94def89336dfdf7d9a7d538792a234d52bdbafc2ae85af",
+    "sha1": "769685e6e5e60315d8ee6bdfdd08ca178137f441"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-compiler-embeddable/2.1.20/kotlin-compiler-embeddable-2.1.20.pom.sha1",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-compiler-embeddable__2.1.20/kotlin-compiler-embeddable-2.1.20.pom.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-compiler-embeddable/2.1.20/kotlin-compiler-embeddable-2.1.20.pom.sha1",
+    "bytes": 40,
+    "sha256": "73a52c3847f5170488778ed028c78e91f7dbad2e90fc8f931b01169fdcc07040",
+    "sha1": "0427b1cd1a50af55e571f16a769c9bda404fd205"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-compiler-embeddable/2.1.20/kotlin-compiler-embeddable-2.1.20.jar",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-compiler-embeddable__2.1.20/kotlin-compiler-embeddable-2.1.20.jar",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-compiler-embeddable/2.1.20/kotlin-compiler-embeddable-2.1.20.jar",
+    "bytes": 56909275,
+    "sha256": "c54a00718c8c0e3ee858bf42771c7f401c5e3c1738861e18e9536371042fa1b3",
+    "sha1": "4ef56b3316798316bfac7a0ae443391c9e900ea1"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-compiler-embeddable/2.1.20/kotlin-compiler-embeddable-2.1.20.jar.sha1",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-compiler-embeddable__2.1.20/kotlin-compiler-embeddable-2.1.20.jar.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-compiler-embeddable/2.1.20/kotlin-compiler-embeddable-2.1.20.jar.sha1",
+    "bytes": 40,
+    "sha256": "9ea8578f3f1574969992310ba2d6058db41742b548ef230f6ed80abcf8ae6ddd",
+    "sha1": "9be742b915f5e9396daf4ed2d759fe292aaaf1b5"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-compiler-embeddable/2.1.20/kotlin-compiler-embeddable-2.1.20.jar.asc",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-compiler-embeddable__2.1.20/kotlin-compiler-embeddable-2.1.20.jar.asc",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-compiler-embeddable/2.1.20/kotlin-compiler-embeddable-2.1.20.jar.asc",
+    "bytes": 689,
+    "sha256": "e10d54ae157fa0727e0ed3eb935131b3ecd7824668fc0889729d551f99c7a68c",
+    "sha1": "f2c7fac64b29703bd4aab3f5b4e946fef60a3e3d"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-daemon-embeddable/2.1.20/kotlin-daemon-embeddable-2.1.20.pom",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-daemon-embeddable__2.1.20/kotlin-daemon-embeddable-2.1.20.pom",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-daemon-embeddable/2.1.20/kotlin-daemon-embeddable-2.1.20.pom",
+    "bytes": 1194,
+    "sha256": "b1d38c0afd6e1d15c48c1c5d156ce60578f433136bec523f4eb199f7af3f8229",
+    "sha1": "55684799e7d704138a821e469feadb6a128a1d4d"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-daemon-embeddable/2.1.20/kotlin-daemon-embeddable-2.1.20.pom.sha1",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-daemon-embeddable__2.1.20/kotlin-daemon-embeddable-2.1.20.pom.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-daemon-embeddable/2.1.20/kotlin-daemon-embeddable-2.1.20.pom.sha1",
+    "bytes": 40,
+    "sha256": "b83a6c519025c8e2666c8ac11e76a79982964303b4db1cebd1d78bb03e76f82a",
+    "sha1": "6c2dd70651da5ebbce9410d2ac9227c949cbbc6f"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-daemon-embeddable/2.1.20/kotlin-daemon-embeddable-2.1.20.jar",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-daemon-embeddable__2.1.20/kotlin-daemon-embeddable-2.1.20.jar",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-daemon-embeddable/2.1.20/kotlin-daemon-embeddable-2.1.20.jar",
+    "bytes": 345429,
+    "sha256": "d9e83df1d847a201ba3c016a786ced091be9503997d09f6a9cf1796ee489f374",
+    "sha1": "95670fce77befd02a70a0bc3abe8ee4533521334"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-daemon-embeddable/2.1.20/kotlin-daemon-embeddable-2.1.20.jar.sha1",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-daemon-embeddable__2.1.20/kotlin-daemon-embeddable-2.1.20.jar.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-daemon-embeddable/2.1.20/kotlin-daemon-embeddable-2.1.20.jar.sha1",
+    "bytes": 40,
+    "sha256": "0f9950a2b86c52cddb7bb386a049cc346753ebb40cba79320a6919da1a6e7e50",
+    "sha1": "c8bbe93220b56847f37bb47c699b6d7354fba408"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-daemon-embeddable/2.1.20/kotlin-daemon-embeddable-2.1.20.jar.asc",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-daemon-embeddable__2.1.20/kotlin-daemon-embeddable-2.1.20.jar.asc",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-daemon-embeddable/2.1.20/kotlin-daemon-embeddable-2.1.20.jar.asc",
+    "bytes": 689,
+    "sha256": "8f0c9889e686e7b9cb295ef36ca73f2165cd77cdaa95e5d4ad97c68d2a04a097",
+    "sha1": "abe8959765b854e60a75b5cf20686b95f4aee98a"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-gradle-plugins-bom/2.1.20/kotlin-gradle-plugins-bom-2.1.20.pom",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-gradle-plugins-bom__2.1.20/kotlin-gradle-plugins-bom-2.1.20.pom",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-gradle-plugins-bom/2.1.20/kotlin-gradle-plugins-bom-2.1.20.pom",
+    "bytes": 4452,
+    "sha256": "639ca6c7653e1a9da95df2a3bae26ccb701c03afd58c797ab6bf6f255f64c301",
+    "sha1": "437f5cb60be389de008dae50ad94d7a4aa2de383"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-gradle-plugins-bom/2.1.20/kotlin-gradle-plugins-bom-2.1.20.pom.sha1",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-gradle-plugins-bom__2.1.20/kotlin-gradle-plugins-bom-2.1.20.pom.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-gradle-plugins-bom/2.1.20/kotlin-gradle-plugins-bom-2.1.20.pom.sha1",
+    "bytes": 40,
+    "sha256": "3b9c0b56f9d680cf746a813e7a53fc602b8bc61ecd1737c3f65193c549a2cc12",
+    "sha1": "e6f59e274a73306ccedb33928a784f8ceebc9b0c"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-gradle-plugins-bom/2.1.20/kotlin-gradle-plugins-bom-2.1.20.module",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-gradle-plugins-bom__2.1.20/kotlin-gradle-plugins-bom-2.1.20.module",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-gradle-plugins-bom/2.1.20/kotlin-gradle-plugins-bom-2.1.20.module",
+    "bytes": 6349,
+    "sha256": "205e1169c628bec05f1d59e44d32091528ae9fd53a7e33ec543bcefdb1288de6",
+    "sha1": "f9fe3d8e3eb8b302b09eeb355005dc5816bdf28f"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-gradle-plugins-bom/2.1.20/kotlin-gradle-plugins-bom-2.1.20.module.sha1",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-gradle-plugins-bom__2.1.20/kotlin-gradle-plugins-bom-2.1.20.module.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-gradle-plugins-bom/2.1.20/kotlin-gradle-plugins-bom-2.1.20.module.sha1",
+    "bytes": 40,
+    "sha256": "a897073a00904239551d344d0d9ddbfca1aefd56f71d57b789d0910ec8f32985",
+    "sha1": "b0adb4597397fb0d152e74bb31de9de426cde5c0"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-reflect/1.6.10/kotlin-reflect-1.6.10.pom",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-reflect__1.6.10/kotlin-reflect-1.6.10.pom",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-reflect/1.6.10/kotlin-reflect-1.6.10.pom",
+    "bytes": 1375,
+    "sha256": "57905524274a00ae028aaccc27283f6bc5925a934a046c1cc5d06c8ee4d6d5a9",
+    "sha1": "535560dfd5b3dba98f57b12f3e921c7a83d0aafe"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-reflect/1.6.10/kotlin-reflect-1.6.10.pom.sha1",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-reflect__1.6.10/kotlin-reflect-1.6.10.pom.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-reflect/1.6.10/kotlin-reflect-1.6.10.pom.sha1",
+    "bytes": 40,
+    "sha256": "777aa2139e5d932132dcfc0973fa5123df036e561841c19555f754485b751fe5",
+    "sha1": "7785736a288dd534f2873928662c1eef11ee59ad"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-reflect/1.6.10/kotlin-reflect-1.6.10.jar",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-reflect__1.6.10/kotlin-reflect-1.6.10.jar",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-reflect/1.6.10/kotlin-reflect-1.6.10.jar",
+    "bytes": 3038560,
+    "sha256": "3277ac102ae17aad10a55abec75ff5696c8d109790396434b496e75087854203",
+    "sha1": "1cbe9c92c12a94eea200d23c2bbaedaf3daf5132"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-reflect/1.6.10/kotlin-reflect-1.6.10.jar.sha1",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-reflect__1.6.10/kotlin-reflect-1.6.10.jar.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-reflect/1.6.10/kotlin-reflect-1.6.10.jar.sha1",
+    "bytes": 40,
+    "sha256": "2eca37005a504dc898d7f7332336a71e6bb12babd88c301a518262bf99df375c",
+    "sha1": "86ae3d09245ef3bc90b6341a5c9cc99a5b0053f9"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-reflect/1.6.10/kotlin-reflect-1.6.10.jar.asc",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-reflect__1.6.10/kotlin-reflect-1.6.10.jar.asc",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-reflect/1.6.10/kotlin-reflect-1.6.10.jar.asc",
+    "bytes": 679,
+    "sha256": "e494e961cc11410fa5b7069c58d2cf8fa122af2a386c16e9e850cc266f4f0702",
+    "sha1": "fb04afcc3fb029db5b84313d8fef5817797998b2"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-script-runtime/2.1.20/kotlin-script-runtime-2.1.20.pom",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-script-runtime__2.1.20/kotlin-script-runtime-2.1.20.pom",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-script-runtime/2.1.20/kotlin-script-runtime-2.1.20.pom",
+    "bytes": 1155,
+    "sha256": "0f83b5a90156c61a6ff109557b2d988e2710ee3fbe9f4a4257a6ea0d8748c3d6",
+    "sha1": "1583220e16f67548c33fc63a7e5951aa471c1c5d"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-script-runtime/2.1.20/kotlin-script-runtime-2.1.20.pom.sha1",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-script-runtime__2.1.20/kotlin-script-runtime-2.1.20.pom.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-script-runtime/2.1.20/kotlin-script-runtime-2.1.20.pom.sha1",
+    "bytes": 40,
+    "sha256": "813039534069b7f43e5bc1b8869e1f0d5679c31b5633e06354dee8de773e79ee",
+    "sha1": "dc0a0bebcd4572d8140d21df8f1ba2f4b8a1aa34"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-script-runtime/2.1.20/kotlin-script-runtime-2.1.20.jar",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-script-runtime__2.1.20/kotlin-script-runtime-2.1.20.jar",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-script-runtime/2.1.20/kotlin-script-runtime-2.1.20.jar",
+    "bytes": 43365,
+    "sha256": "ae4397fbb3aa2a1ada09290e753bba99a4114548977c3115526b9958f4cb1a04",
+    "sha1": "f7c623d7f7bdb01f5ccd6b437bc0a937fcd7c57e"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-script-runtime/2.1.20/kotlin-script-runtime-2.1.20.jar.sha1",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-script-runtime__2.1.20/kotlin-script-runtime-2.1.20.jar.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-script-runtime/2.1.20/kotlin-script-runtime-2.1.20.jar.sha1",
+    "bytes": 40,
+    "sha256": "ea26fe9afc4633911556a811cd33bc8ac562b6588393277d8aeab6b41c9b7174",
+    "sha1": "bb0de8ea9f59d655b42e154816fe3daf32a8f1c4"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-script-runtime/2.1.20/kotlin-script-runtime-2.1.20.jar.asc",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-script-runtime__2.1.20/kotlin-script-runtime-2.1.20.jar.asc",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-script-runtime/2.1.20/kotlin-script-runtime-2.1.20.jar.asc",
+    "bytes": 689,
+    "sha256": "237687428ec35fad705830c9195f9f6de24c356226609ac09b1c0c32b4af7ead",
+    "sha1": "e5bf9803170e2d34b73827f0d53fd84cbf3c1963"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-common/2.1.20/kotlin-scripting-common-2.1.20.pom",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-scripting-common__2.1.20/kotlin-scripting-common-2.1.20.pom",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-common/2.1.20/kotlin-scripting-common-2.1.20.pom",
+    "bytes": 1383,
+    "sha256": "1f77709045dd905eb7505a94280d37ec757f08709cfe9f3a74aba73bbf99f79b",
+    "sha1": "b7968c3be07fab38b8f5808d677321d72a1ba9a6"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-common/2.1.20/kotlin-scripting-common-2.1.20.pom.sha1",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-scripting-common__2.1.20/kotlin-scripting-common-2.1.20.pom.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-common/2.1.20/kotlin-scripting-common-2.1.20.pom.sha1",
+    "bytes": 40,
+    "sha256": "074ee698602e630af972e6a723ba46a2f62e65f0d555c20cbce8befac193c15d",
+    "sha1": "08e57406d053b6eee05f94c54c659840525aaf6e"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-common/2.1.20/kotlin-scripting-common-2.1.20.jar",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-scripting-common__2.1.20/kotlin-scripting-common-2.1.20.jar",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-common/2.1.20/kotlin-scripting-common-2.1.20.jar",
+    "bytes": 198395,
+    "sha256": "5fdbf6ae72237ce335d603eb12c49b09bc9c1a33c0c01f1d62e77ff33663cefb",
+    "sha1": "29a91fb9489edffc21d296b565d9bb62476971b7"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-common/2.1.20/kotlin-scripting-common-2.1.20.jar.sha1",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-scripting-common__2.1.20/kotlin-scripting-common-2.1.20.jar.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-common/2.1.20/kotlin-scripting-common-2.1.20.jar.sha1",
+    "bytes": 40,
+    "sha256": "f51171dbcc792e3f6a4043334f4644720c4c8e8f2e97614a5cdb01e0e4f7ce95",
+    "sha1": "a384ef1cccf0709a0677137819f82476c27a2348"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-common/2.1.20/kotlin-scripting-common-2.1.20.jar.asc",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-scripting-common__2.1.20/kotlin-scripting-common-2.1.20.jar.asc",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-common/2.1.20/kotlin-scripting-common-2.1.20.jar.asc",
+    "bytes": 689,
+    "sha256": "75086e44077db36b6a38a5b788008297fd97dc7686bcd5d5277e08685ac54f98",
+    "sha1": "0cbceb590cf8c7988791dc24938cd3a2bf2a1f6d"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-compiler-embeddable/2.1.20/kotlin-scripting-compiler-embeddable-2.1.20.pom",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-scripting-compiler-embeddable__2.1.20/kotlin-scripting-compiler-embeddable-2.1.20.pom",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-compiler-embeddable/2.1.20/kotlin-scripting-compiler-embeddable-2.1.20.pom",
+    "bytes": 1661,
+    "sha256": "0fff7ff1d3bfa9cce3efbb4db38989c268a51eb67f81efd0311b8a64618b85a9",
+    "sha1": "c832c3fa21e971bab23a8e94ec591bc1dc443dc8"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-compiler-embeddable/2.1.20/kotlin-scripting-compiler-embeddable-2.1.20.pom.sha1",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-scripting-compiler-embeddable__2.1.20/kotlin-scripting-compiler-embeddable-2.1.20.pom.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-compiler-embeddable/2.1.20/kotlin-scripting-compiler-embeddable-2.1.20.pom.sha1",
+    "bytes": 40,
+    "sha256": "09e75150a6e67e646ef58ef378292d6e1aca78e1ad19ae157cb3ec8ebc770f0f",
+    "sha1": "a91a8f4ac0e69d2036822de04c4a6a84917c9631"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-compiler-embeddable/2.1.20/kotlin-scripting-compiler-embeddable-2.1.20.jar",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-scripting-compiler-embeddable__2.1.20/kotlin-scripting-compiler-embeddable-2.1.20.jar",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-compiler-embeddable/2.1.20/kotlin-scripting-compiler-embeddable-2.1.20.jar",
+    "bytes": 571310,
+    "sha256": "3d4f772b238414650017e97462256b7c4d5edfa1013cbf5477573eb1ac2e2884",
+    "sha1": "efd094224781affbc9aa8c60c5cae926517e028f"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-compiler-embeddable/2.1.20/kotlin-scripting-compiler-embeddable-2.1.20.jar.sha1",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-scripting-compiler-embeddable__2.1.20/kotlin-scripting-compiler-embeddable-2.1.20.jar.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-compiler-embeddable/2.1.20/kotlin-scripting-compiler-embeddable-2.1.20.jar.sha1",
+    "bytes": 40,
+    "sha256": "900ab77062316cb00872f03e546faf0235dbd15c23f077fe6d42dc10697d4f9a",
+    "sha1": "1479eceb0e10f0f1cb8a86a5240207429e6c90c0"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-compiler-embeddable/2.1.20/kotlin-scripting-compiler-embeddable-2.1.20.jar.asc",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-scripting-compiler-embeddable__2.1.20/kotlin-scripting-compiler-embeddable-2.1.20.jar.asc",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-compiler-embeddable/2.1.20/kotlin-scripting-compiler-embeddable-2.1.20.jar.asc",
+    "bytes": 689,
+    "sha256": "cd58000cd292201eb6a117e20bfa3f737b874ab0f85acbac054dfde8ac060c0a",
+    "sha1": "baccf382faeef97d311766f2bef48ea88326bf19"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-compiler-impl-embeddable/2.1.20/kotlin-scripting-compiler-impl-embeddable-2.1.20.pom",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-scripting-compiler-impl-embeddable__2.1.20/kotlin-scripting-compiler-impl-embeddable-2.1.20.pom",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-compiler-impl-embeddable/2.1.20/kotlin-scripting-compiler-impl-embeddable-2.1.20.pom",
+    "bytes": 1859,
+    "sha256": "b639ae20d87a815e304ddd20a0e4c4937e13b5fc7a4267b5e15c0e5902298665",
+    "sha1": "7aadfebc276ba014aca1d205bf72a3886af80924"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-compiler-impl-embeddable/2.1.20/kotlin-scripting-compiler-impl-embeddable-2.1.20.pom.sha1",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-scripting-compiler-impl-embeddable__2.1.20/kotlin-scripting-compiler-impl-embeddable-2.1.20.pom.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-compiler-impl-embeddable/2.1.20/kotlin-scripting-compiler-impl-embeddable-2.1.20.pom.sha1",
+    "bytes": 40,
+    "sha256": "39ded8f573cded988e1b3f9dd2e97519e07a7524f12b95404d0a3716f64dcfb5",
+    "sha1": "0c3b9c9add7723b1492c6536936b34487e937351"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-compiler-impl-embeddable/2.1.20/kotlin-scripting-compiler-impl-embeddable-2.1.20.jar",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-scripting-compiler-impl-embeddable__2.1.20/kotlin-scripting-compiler-impl-embeddable-2.1.20.jar",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-compiler-impl-embeddable/2.1.20/kotlin-scripting-compiler-impl-embeddable-2.1.20.jar",
+    "bytes": 229523,
+    "sha256": "f665d70b1a0837ff3a0ef7bec4fc5d9fed67ea75e4697de158eb51f1ea501c3f",
+    "sha1": "026fd748997fdde79281d4cd4e5dff73a9276067"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-compiler-impl-embeddable/2.1.20/kotlin-scripting-compiler-impl-embeddable-2.1.20.jar.sha1",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-scripting-compiler-impl-embeddable__2.1.20/kotlin-scripting-compiler-impl-embeddable-2.1.20.jar.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-compiler-impl-embeddable/2.1.20/kotlin-scripting-compiler-impl-embeddable-2.1.20.jar.sha1",
+    "bytes": 40,
+    "sha256": "6cf99ce72b461efed1eb3853b6733567958a4f7ba07d68e9b888f60853c3ce4d",
+    "sha1": "2344132623f1917c122a6a5fc05255ea2b47b1f1"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-compiler-impl-embeddable/2.1.20/kotlin-scripting-compiler-impl-embeddable-2.1.20.jar.asc",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-scripting-compiler-impl-embeddable__2.1.20/kotlin-scripting-compiler-impl-embeddable-2.1.20.jar.asc",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-compiler-impl-embeddable/2.1.20/kotlin-scripting-compiler-impl-embeddable-2.1.20.jar.asc",
+    "bytes": 689,
+    "sha256": "7f67479f578b181496d54eb40f895d562def212d1a69ba441bfb90ca6985f700",
+    "sha1": "742576da0675264fe3a8c78d09a52745aff08455"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-jvm/2.1.20/kotlin-scripting-jvm-2.1.20.pom",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-scripting-jvm__2.1.20/kotlin-scripting-jvm-2.1.20.pom",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-jvm/2.1.20/kotlin-scripting-jvm-2.1.20.pom",
+    "bytes": 1766,
+    "sha256": "3c4453391137ec455c74be496f71d9a498696d2549be64f59a60647ceee2553d",
+    "sha1": "f822a7314f6c061d76a5e12fcd869e252bb36022"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-jvm/2.1.20/kotlin-scripting-jvm-2.1.20.pom.sha1",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-scripting-jvm__2.1.20/kotlin-scripting-jvm-2.1.20.pom.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-jvm/2.1.20/kotlin-scripting-jvm-2.1.20.pom.sha1",
+    "bytes": 40,
+    "sha256": "a2732d92468ef14508c18c0309016f5a8f5410bf2eb5286324d62a929e0f9e8f",
+    "sha1": "0c409006d48c81d5a64babe9887500ff3d4a4e4c"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-jvm/2.1.20/kotlin-scripting-jvm-2.1.20.jar",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-scripting-jvm__2.1.20/kotlin-scripting-jvm-2.1.20.jar",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-jvm/2.1.20/kotlin-scripting-jvm-2.1.20.jar",
+    "bytes": 149683,
+    "sha256": "69f457acab98364c0eb578c497e0c3ca930b8cfb82be774049da04cde38087f7",
+    "sha1": "963b49de86cb5ee7cddf8724187d1658ac85e4ef"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-jvm/2.1.20/kotlin-scripting-jvm-2.1.20.jar.sha1",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-scripting-jvm__2.1.20/kotlin-scripting-jvm-2.1.20.jar.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-jvm/2.1.20/kotlin-scripting-jvm-2.1.20.jar.sha1",
+    "bytes": 40,
+    "sha256": "1f412f8c1a5584f3887fcf7f966dad04f55b3ad5d24aa067d1d28c475061601d",
+    "sha1": "8e30485bc94e3a0fa4fab9bcf8eff88b45d8bb67"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-jvm/2.1.20/kotlin-scripting-jvm-2.1.20.jar.asc",
+    "dest": "closure/org.jetbrains.kotlin__kotlin-scripting-jvm__2.1.20/kotlin-scripting-jvm-2.1.20.jar.asc",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-jvm/2.1.20/kotlin-scripting-jvm-2.1.20.jar.asc",
+    "bytes": 689,
+    "sha256": "3a0eba7e2d61f8dd451d788957cff3f8809c31fa2b7e91c2d3b026e89381af1e",
+    "sha1": "83c6fd96fc69f5ba3eef6f55474d591a53f5af9d"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-bom/1.9.0/kotlinx-coroutines-bom-1.9.0.pom",
+    "dest": "closure/org.jetbrains.kotlinx__kotlinx-coroutines-bom__1.9.0/kotlinx-coroutines-bom-1.9.0.pom",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-bom/1.9.0/kotlinx-coroutines-bom-1.9.0.pom",
+    "bytes": 4291,
+    "sha256": "bea5511e9001f2c593ab5080df131b219ab5e2085cc5979ce583eacd4946fd78",
+    "sha1": "11a86a1aa2fb0ecb72e865e4e0b421be56eb30fb"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-bom/1.9.0/kotlinx-coroutines-bom-1.9.0.pom.sha1",
+    "dest": "closure/org.jetbrains.kotlinx__kotlinx-coroutines-bom__1.9.0/kotlinx-coroutines-bom-1.9.0.pom.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-bom/1.9.0/kotlinx-coroutines-bom-1.9.0.pom.sha1",
+    "bytes": 40,
+    "sha256": "0401c6386419fa819304f5316636babb636ab88a3175247b47f619a666cd70f5",
+    "sha1": "709aeaa8e1b806ffb05b3445ba443ace0c26825c"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.8.0/kotlinx-coroutines-core-jvm-1.8.0.pom",
+    "dest": "closure/org.jetbrains.kotlinx__kotlinx-coroutines-core-jvm__1.8.0/kotlinx-coroutines-core-jvm-1.8.0.pom",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.8.0/kotlinx-coroutines-core-jvm-1.8.0.pom",
+    "bytes": 2196,
+    "sha256": "a5633abd53467ceb91622d81f2e982080877145e0b76e1b75788715434885d0b",
+    "sha1": "e780ad230da743bcd753190ac043e58e3187c591"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.8.0/kotlinx-coroutines-core-jvm-1.8.0.pom.sha1",
+    "dest": "closure/org.jetbrains.kotlinx__kotlinx-coroutines-core-jvm__1.8.0/kotlinx-coroutines-core-jvm-1.8.0.pom.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.8.0/kotlinx-coroutines-core-jvm-1.8.0.pom.sha1",
+    "bytes": 40,
+    "sha256": "391bf002dfd616dc59b209cf85b0478bb5ca2568ca3bb017bbe3239699e2cb01",
+    "sha1": "6c28bbe94e28d61405c32d48c74dba8a0adb23eb"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.8.0/kotlinx-coroutines-core-jvm-1.8.0.module",
+    "dest": "closure/org.jetbrains.kotlinx__kotlinx-coroutines-core-jvm__1.8.0/kotlinx-coroutines-core-jvm-1.8.0.module",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.8.0/kotlinx-coroutines-core-jvm-1.8.0.module",
+    "bytes": 4278,
+    "sha256": "ff6a22da40040938751db0ae21177e76517dbf126a76796f5426727bf76c1228",
+    "sha1": "514090b64cfb8bf6bf3bd9a3a3d2baa721bdb421"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.8.0/kotlinx-coroutines-core-jvm-1.8.0.module.sha1",
+    "dest": "closure/org.jetbrains.kotlinx__kotlinx-coroutines-core-jvm__1.8.0/kotlinx-coroutines-core-jvm-1.8.0.module.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.8.0/kotlinx-coroutines-core-jvm-1.8.0.module.sha1",
+    "bytes": 40,
+    "sha256": "2cf314a6dc7b2b2b989603810655231598a33be2366720f63bcdbfcd8d8aff83",
+    "sha1": "5406c5a52042b468035ab75a8be43625cb734523"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.8.0/kotlinx-coroutines-core-jvm-1.8.0.jar",
+    "dest": "closure/org.jetbrains.kotlinx__kotlinx-coroutines-core-jvm__1.8.0/kotlinx-coroutines-core-jvm-1.8.0.jar",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.8.0/kotlinx-coroutines-core-jvm-1.8.0.jar",
+    "bytes": 1548360,
+    "sha256": "9860906a1937490bf5f3b06d2f0e10ef451e65b95b269f22daf68a3d1f5065c5",
+    "sha1": "ac1dc37a30a93150b704022f8d895ee1bd3a36b3"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.8.0/kotlinx-coroutines-core-jvm-1.8.0.jar.sha1",
+    "dest": "closure/org.jetbrains.kotlinx__kotlinx-coroutines-core-jvm__1.8.0/kotlinx-coroutines-core-jvm-1.8.0.jar.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.8.0/kotlinx-coroutines-core-jvm-1.8.0.jar.sha1",
+    "bytes": 40,
+    "sha256": "467c7d0544ef2538c05ca323bcbda1376204fab2535d8b6604366688bb2938a5",
+    "sha1": "b9ff23338a95e8bff21987c97e683774287b0e03"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.8.0/kotlinx-coroutines-core-jvm-1.8.0.jar.asc",
+    "dest": "closure/org.jetbrains.kotlinx__kotlinx-coroutines-core-jvm__1.8.0/kotlinx-coroutines-core-jvm-1.8.0.jar.asc",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.8.0/kotlinx-coroutines-core-jvm-1.8.0.jar.asc",
+    "bytes": 650,
+    "sha256": "17236211c9b3b465d52053ad2ed8d801b895bee482d7704b4f847ccfd4d64e3b",
+    "sha1": "1a1a0b98faf16637c234e84da282533bacebea8a"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core/1.9.0/kotlinx-coroutines-core-1.9.0.pom",
+    "dest": "closure/org.jetbrains.kotlinx__kotlinx-coroutines-core__1.9.0/kotlinx-coroutines-core-1.9.0.pom",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core/1.9.0/kotlinx-coroutines-core-1.9.0.pom",
+    "bytes": 2057,
+    "sha256": "770f2793d05e2b027b9c799938ec1d2d4ef141ce5819c780c32c3995cadb0a47",
+    "sha1": "d3fdd34e883e3a68fb4c10f33ab3abc4d66bdb28"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core/1.9.0/kotlinx-coroutines-core-1.9.0.pom.sha1",
+    "dest": "closure/org.jetbrains.kotlinx__kotlinx-coroutines-core__1.9.0/kotlinx-coroutines-core-1.9.0.pom.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core/1.9.0/kotlinx-coroutines-core-1.9.0.pom.sha1",
+    "bytes": 40,
+    "sha256": "51915881092094931d2e8a89a7b1a1c1b9106f1eb640588f03c9384f3f636b3f",
+    "sha1": "36e5c1d602d38bc839affc1668f783841fee90b4"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core/1.9.0/kotlinx-coroutines-core-1.9.0.module",
+    "dest": "closure/org.jetbrains.kotlinx__kotlinx-coroutines-core__1.9.0/kotlinx-coroutines-core-1.9.0.module",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core/1.9.0/kotlinx-coroutines-core-1.9.0.module",
+    "bytes": 45570,
+    "sha256": "ad534034a953b4e12cbeeb874c66adf8b1ca14df15fe0d2e6547aa34e86dfeca",
+    "sha1": "3bdff39bfd164fa139252fdcf98c5a5122f7aa9d"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core/1.9.0/kotlinx-coroutines-core-1.9.0.module.sha1",
+    "dest": "closure/org.jetbrains.kotlinx__kotlinx-coroutines-core__1.9.0/kotlinx-coroutines-core-1.9.0.module.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core/1.9.0/kotlinx-coroutines-core-1.9.0.module.sha1",
+    "bytes": 40,
+    "sha256": "6c62eb6110f89a27f766535c65c2afa7254f770a6e068b614f86056ebc4b37cd",
+    "sha1": "02bd96871482e5f8a3835ea341685ffd92e75d9d"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/code/gson/gson-parent/2.8.9/gson-parent-2.8.9.pom",
+    "dest": "parents/gson-parent-2.8.9.pom",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/com/google/code/gson/gson-parent/2.8.9/gson-parent-2.8.9.pom",
+    "bytes": 4676,
+    "sha256": "b16e026e63427c1972ad0fc68703ec379b1576e411ba49c32fa9a31ab0bbcffb",
+    "sha1": "0c3fdad2fa3239f928ad9c77a9f9c9379f6bde7a"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/code/gson/gson-parent/2.8.9/gson-parent-2.8.9.pom.sha1",
+    "dest": "parents/gson-parent-2.8.9.pom.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/com/google/code/gson/gson-parent/2.8.9/gson-parent-2.8.9.pom.sha1",
+    "bytes": 40,
+    "sha256": "9ae2c95a81b68091b7530483c2aa58f94346024152a967a4d297e416c8520097",
+    "sha1": "5f7605e21fd7d95b6184121a06d7e0fc88212928"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_parent/2.7.1/error_prone_parent-2.7.1.pom",
+    "dest": "parents/error_prone_parent-2.7.1.pom",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_parent/2.7.1/error_prone_parent-2.7.1.pom",
+    "bytes": 6977,
+    "sha256": "0a6e242e28104e8093405ae37969660a438b71c4c1b73fc4ff716db89da88de6",
+    "sha1": "cca3ba79de44febe5a196510393e1011bd554e0b"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_parent/2.7.1/error_prone_parent-2.7.1.pom.sha1",
+    "dest": "parents/error_prone_parent-2.7.1.pom.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_parent/2.7.1/error_prone_parent-2.7.1.pom.sha1",
+    "bytes": 40,
+    "sha256": "24eab68cdea3e89f615cc297555b50a126c061c5437413837fd1e940ba8a77a9",
+    "sha1": "0b7a158f035ec73acc2b35acca82ad16d6d9fbb7"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/26.0-android/guava-parent-26.0-android.pom",
+    "dest": "parents/guava-parent-26.0-android.pom",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/26.0-android/guava-parent-26.0-android.pom",
+    "bytes": 10180,
+    "sha256": "f8698ab46ca996ce889c1afc8ca4f25eb8ac6b034dc898d4583742360016cc04",
+    "sha1": "a2c0df489614352b7e8e503e274bd1dee5c42a64"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/26.0-android/guava-parent-26.0-android.pom.sha1",
+    "dest": "parents/guava-parent-26.0-android.pom.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/26.0-android/guava-parent-26.0-android.pom.sha1",
+    "bytes": 40,
+    "sha256": "e51761f2bde591e7e4020fa4266a97673026596900291447215b00de813e5ddd",
+    "sha1": "2ba6e3a15dd5b6dbedb890ea5d8d8b832583b531"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/31.0.1-jre/guava-parent-31.0.1-jre.pom",
+    "dest": "parents/guava-parent-31.0.1-jre.pom",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/31.0.1-jre/guava-parent-31.0.1-jre.pom",
+    "bytes": 13829,
+    "sha256": "b3b6b6aa7099c11817acee85b322fd91f7ee32aea69fe083ee36c8735ec06788",
+    "sha1": "eb78b5264bd92cca5655396c44420eef3ad3ec0f"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/31.0.1-jre/guava-parent-31.0.1-jre.pom.sha1",
+    "dest": "parents/guava-parent-31.0.1-jre.pom.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/31.0.1-jre/guava-parent-31.0.1-jre.pom.sha1",
+    "bytes": 40,
+    "sha256": "bd6879293188c4e1dd39f522f967cfe79825c35bc0aa316368037ed97518a850",
+    "sha1": "f6c51fe7f44ee0fa3894f0d6ca4f1749f8a35fc7"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/7/oss-parent-7.pom",
+    "dest": "parents/oss-parent-7.pom",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/7/oss-parent-7.pom",
+    "bytes": 4824,
+    "sha256": "b51f8867c92b6a722499557fc3a1fdea77bdf9ef574722fe90ce436a29559454",
+    "sha1": "46b8a785b60a2767095b8611613b58577e96d4c9"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/7/oss-parent-7.pom.sha1",
+    "dest": "parents/oss-parent-7.pom.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/7/oss-parent-7.pom.sha1",
+    "bytes": 40,
+    "sha256": "ab45116ef6d76bbe28b2c7fb1c2431c50e6036ee89a073fd772a15cad19a5898",
+    "sha1": "1c56c1f4b4364a842ab04b7117f3320563c4a275"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/9/oss-parent-9.pom",
+    "dest": "parents/oss-parent-9.pom",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/9/oss-parent-9.pom",
+    "bytes": 6569,
+    "sha256": "fb40265f982548212ff82e362e59732b2187ec6f0d80182885c14ef1f982827a",
+    "sha1": "e5cdc4d23b86d79c436f16fed20853284e868f65"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/9/oss-parent-9.pom.sha1",
+    "dest": "parents/oss-parent-9.pom.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/9/oss-parent-9.pom.sha1",
+    "bytes": 40,
+    "sha256": "8a199b9e7e3f00539c139079c0b1a55bcbace4d984927be1b8fa36d10bf70106",
+    "sha1": "bcd3b8d7b81f4ba24e4cc28eed621b88aa17b8ac"
+  },
+  {
+    "url": "https://api.github.com/repos/JetBrains/kotlin/git/ref/tags/v2.1.20",
+    "dest": "upstream-license/tag-v2.1.20.json",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://api.github.com/repos/JetBrains/kotlin/git/ref/tags/v2.1.20",
+    "bytes": 382,
+    "sha256": "3a986e22beb3cc645391266c62497d71331f93627e42fe203145a87b1860cc76",
+    "sha1": "1fc5d5d4ccefd46df23d8d43b50ffd54a7cf98f1"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/JetBrains/kotlin/v2.1.20/license/README.md",
+    "dest": "upstream-license/README.md",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://raw.githubusercontent.com/JetBrains/kotlin/v2.1.20/license/README.md",
+    "bytes": 17091,
+    "sha256": "7b9ed2fce6cb756174326571ef57e641e7b22c439c87ee7e2ab85e9be9751d95",
+    "sha1": "3e95af3729a7117e03e5b3a5a1e15eabadf8b954"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/JetBrains/kotlin/v2.1.20/license/LICENSE.txt",
+    "dest": "upstream-license/LICENSE.txt",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://raw.githubusercontent.com/JetBrains/kotlin/v2.1.20/license/LICENSE.txt",
+    "bytes": 11358,
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "sha1": "2b8b815229aa8a61e483fb4ba0588b8b6c491890"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/JetBrains/kotlin/v2.1.20/gradle/libs.versions.toml",
+    "dest": "upstream-license/libs.versions.toml",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://raw.githubusercontent.com/JetBrains/kotlin/v2.1.20/gradle/libs.versions.toml",
+    "bytes": 9368,
+    "sha256": "66e6f9d4bdfd070d5740608571c344e17ee13ded384431c1a84815204a422afc",
+    "sha1": "389045c7e72d12a2416cf346e6b3813391db852f"
+  }
+]

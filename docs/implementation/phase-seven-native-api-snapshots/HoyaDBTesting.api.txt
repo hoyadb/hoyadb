@@ -1,0 +1,36 @@
+Enum FakeOutcome
+  EnumElement applied
+  EnumElement corrected
+  EnumElement rejected
+Enum FakeTransportError
+  EnumElement invalidEnvelope
+  EnumElement missingHandler
+  EnumElement droppedAcknowledgement
+  Func __derived_enum_equals(_:_:)
+  Func hash(into:)
+  Var hashValue
+Class FakeTransport
+  TypeAlias Handler
+  TypeAlias Delay
+  TypeAlias Drop
+  Var pushes
+  Constructor init(handlers:entityHandlers:delay:dropAcknowledgement:reverseReplies:)
+  Func push(_:)
+  Var unownedExecutor
+Class ManualClock
+  Constructor init(_:)
+  Func now()
+  Func set(_:)
+  Func advance(by:)
+Class ManualUptime
+  Constructor init(_:)
+  Func now()
+  Func set(_:)
+  Func advance(by:)
+Class ManualTimer
+  Constructor init()
+  Var pendingDelays
+  Func schedule(_:_:)
+  Func fireNext()
+Enum MemoryTesting
+  Func open(schema:namespace:store:migrations:idGenerator:options:monotonicClock:timerScheduler:)

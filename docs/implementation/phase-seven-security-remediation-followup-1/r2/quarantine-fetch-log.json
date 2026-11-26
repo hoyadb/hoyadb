@@ -1,0 +1,2543 @@
+[
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk18on/1.85/bcprov-jdk18on-1.85.pom",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk18on/1.85/bcprov-jdk18on-1.85.pom",
+  "exit_code": 0,
+  "bytes": 1160,
+  "sha256": "a48e978d6b24c183c4832f5c49d71c1f84156b99c6fa9a410aafb373a254be7c",
+  "sha1": "7ddd52c2ac2e86568e71d41a30aac4e7d5dddfe7"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcpkix-jdk18on/1.85/bcpkix-jdk18on-1.85.pom",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcpkix-jdk18on/1.85/bcpkix-jdk18on-1.85.pom",
+  "exit_code": 0,
+  "bytes": 1522,
+  "sha256": "9b052b0cb85cb7d8bb0956afcc74f31c814f1c67e03498e1ca74f8fe8611d957",
+  "sha1": "15bf7b3be631f335b89b3dca52456e76376cf451"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcutil-jdk18on/1.85/bcutil-jdk18on-1.85.pom",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcutil-jdk18on/1.85/bcutil-jdk18on-1.85.pom",
+  "exit_code": 0,
+  "bytes": 1344,
+  "sha256": "9f1c79a12a7c03d78860e05750dcc44e855e20205c7af7cffbf29a69448d85ea",
+  "sha1": "14a6fd491b4a2d538c23076a4a83879f7afc8088"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.pom",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.pom",
+  "exit_code": 0,
+  "bytes": 4600,
+  "sha256": "55795e1018b8ae647b937967cf810a99b08582c2374e7873c128734c8c914bf3",
+  "sha1": "172940c5c8e5198f95111b14aa4de1cf99528073"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.19.0/commons-codec-1.19.0.pom",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.19.0/commons-codec-1.19.0.pom",
+  "exit_code": 0,
+  "bytes": 18008,
+  "sha256": "e0f3269fa23de0c83130c5659f5f9514cc5422c0bcdf45f2eae004a78b9fca34",
+  "sha1": "1558aa689bc8fbb7f0214e59e891843e22ec5bf1"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/commons-io/commons-io/2.20.0/commons-io-2.20.0.pom",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/commons-io/commons-io/2.20.0/commons-io-2.20.0.pom",
+  "exit_code": 0,
+  "bytes": 20477,
+  "sha256": "bdbdf81072c190ee9a8b181a5c58f5bd917a750fb13a256debbf53f5dbd33a2a",
+  "sha1": "5d26f9d6031e7a0fc1a05f8de8e725688905a3f1"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.pom",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.pom",
+  "exit_code": 0,
+  "bytes": 32038,
+  "sha256": "aa254b373b6f6d46bc9dca86331b072a8ab86eb25ea9921fd439618392e98a16",
+  "sha1": "03e931ac2bbab520654e06ac5ca7088098886bb3"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.pom",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.pom",
+  "exit_code": 0,
+  "bytes": 2743,
+  "sha256": "fb046a9c229437928bb11c2d27c8b5d773eb8a25e60cbd253d985210dedc2684",
+  "sha1": "749f6995b1d6591a417ca4fd19cdbddabae16fd1"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.7.36/slf4j-parent-1.7.36.pom",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.7.36/slf4j-parent-1.7.36.pom",
+  "exit_code": 0,
+  "bytes": 14093,
+  "sha256": "bb388d37fbcdd3cde64c3cede21838693218dc451f04040c5df360a78ed7e812",
+  "sha1": "5ee2b2ff107aa21d6e6c8b1d38ab28d02b5bf62e"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http/4.1.139.Final/netty-codec-http-4.1.139.Final.pom.sha1",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http/4.1.139.Final/netty-codec-http-4.1.139.Final.pom.sha1",
+  "exit_code": 0,
+  "bytes": 40,
+  "sha256": "01d4cebad2f3374e023fabac74693332515611f7b1aca7098d7fd79e7c848443",
+  "sha1": "a876cb2c206cde79b5f2593d3a43d496203f0ecb"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http/4.1.139.Final/netty-codec-http-4.1.139.Final.pom.sha256",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http/4.1.139.Final/netty-codec-http-4.1.139.Final.pom.sha256",
+  "exit_code": 0,
+  "bytes": 64,
+  "sha256": "ebf67409c218a926d6775b9307cc0fd4dfe93db9e966c7eaebdf828327296731",
+  "sha1": "278ea761c2292c82b2887c9806918acd75235c92"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http/4.1.139.Final/netty-codec-http-4.1.139.Final.pom.sha512",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http/4.1.139.Final/netty-codec-http-4.1.139.Final.pom.sha512",
+  "exit_code": 0,
+  "bytes": 128,
+  "sha256": "84d21c5be52aa9dc4f869454bc87ed7bd7ddd904e1c2931b36c111d1e8e98689",
+  "sha1": "1cd556d2cf2aa5a1a5e39046daf44e0d2fcd655e"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http/4.1.139.Final/netty-codec-http-4.1.139.Final.pom.md5",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http/4.1.139.Final/netty-codec-http-4.1.139.Final.pom.md5",
+  "exit_code": 0,
+  "bytes": 32,
+  "sha256": "acd0d1d563f237d3438789fce84e557d3446d61b1cc6c8df7d80234f449a5274",
+  "sha1": "6f552a4646b0c6e869e5dc4badf9c5eae0a6bfa9"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http/4.1.139.Final/netty-codec-http-4.1.139.Final.pom.asc",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http/4.1.139.Final/netty-codec-http-4.1.139.Final.pom.asc",
+  "exit_code": 0,
+  "bytes": 836,
+  "sha256": "08e7913ab70efe5dfbe5b5f34e4fcbacea3a17e7ad1b37f35bbc8b622865fdd9",
+  "sha1": "4e8c6b81cfefcedb0f4931c359fa7572da2dcbd0"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http/4.1.139.Final/netty-codec-http-4.1.139.Final.module",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http/4.1.139.Final/netty-codec-http-4.1.139.Final.module",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http/4.1.139.Final/netty-codec-http-4.1.139.Final.jar",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http/4.1.139.Final/netty-codec-http-4.1.139.Final.jar",
+  "exit_code": 0,
+  "bytes": 696776,
+  "sha256": "627cfdac2cd5dbd8a33af85977fb81fa6b46f0c00389ab4c8677a415f0f85480",
+  "sha1": "f52d30aeadc0af8c0d1cad9970e5a9c5df62bdd1"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http/4.1.139.Final/netty-codec-http-4.1.139.Final.jar.sha1",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http/4.1.139.Final/netty-codec-http-4.1.139.Final.jar.sha1",
+  "exit_code": 0,
+  "bytes": 40,
+  "sha256": "619dbb7a3f9c4ee8a1675878bdf748bb8ace2f306407a1af445c7e290b858134",
+  "sha1": "077f6c82acdf309489ac34f4edbe3f0dbc4cccc9"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http/4.1.139.Final/netty-codec-http-4.1.139.Final.jar.sha256",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http/4.1.139.Final/netty-codec-http-4.1.139.Final.jar.sha256",
+  "exit_code": 0,
+  "bytes": 64,
+  "sha256": "6ed66f4caca7746737f628d22945ef6aef0b1fae14481e5218611ddbc88cbfc7",
+  "sha1": "3a1ea65aea62aac4bff29ebaa774d80e2962a756"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http/4.1.139.Final/netty-codec-http-4.1.139.Final.jar.sha512",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http/4.1.139.Final/netty-codec-http-4.1.139.Final.jar.sha512",
+  "exit_code": 0,
+  "bytes": 128,
+  "sha256": "dd3d1c5b06c9671c6e709b0688b6433016fb4f7558c4d3cfa2067e7734924309",
+  "sha1": "f678c55cfa28ec754274c695c24495fc69820b88"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http/4.1.139.Final/netty-codec-http-4.1.139.Final.jar.md5",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http/4.1.139.Final/netty-codec-http-4.1.139.Final.jar.md5",
+  "exit_code": 0,
+  "bytes": 32,
+  "sha256": "a854d4610c19c2ade5a028d86749373b0e6f83f29a2c97bf404f93431fe0ff09",
+  "sha1": "27404d6ba94b82e88988cc067311f5188b8a4622"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http/4.1.139.Final/netty-codec-http-4.1.139.Final.jar.asc",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http/4.1.139.Final/netty-codec-http-4.1.139.Final.jar.asc",
+  "exit_code": 0,
+  "bytes": 836,
+  "sha256": "59ca4939a7b898ff66df540d9f4e702565cfb1b8a51094c7be00b741126a229f",
+  "sha1": "a4b363cc0035813174606fee3c83d280e02c5985"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http/4.1.139.Final/netty-codec-http-4.1.139.Final.module",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http/4.1.139.Final/netty-codec-http-4.1.139.Final.module",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http2/4.1.139.Final/netty-codec-http2-4.1.139.Final.pom.sha1",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http2/4.1.139.Final/netty-codec-http2-4.1.139.Final.pom.sha1",
+  "exit_code": 0,
+  "bytes": 40,
+  "sha256": "fe9909a04c74c36571ddb4637f576beee34e9f633684d9d05221bbfded4d4da5",
+  "sha1": "6ef39fbe1ddb2bd0610179de8d9ee3c5ef9d6e57"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http2/4.1.139.Final/netty-codec-http2-4.1.139.Final.pom.sha256",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http2/4.1.139.Final/netty-codec-http2-4.1.139.Final.pom.sha256",
+  "exit_code": 0,
+  "bytes": 64,
+  "sha256": "9db41ca61a8fceccde1ab61b41a1a7b17ead85d02c59ca621a2c0da08a2bc08f",
+  "sha1": "48eb983bf148d6bcb75ef3cba1f2d8e7ff536cc0"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http2/4.1.139.Final/netty-codec-http2-4.1.139.Final.pom.sha512",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http2/4.1.139.Final/netty-codec-http2-4.1.139.Final.pom.sha512",
+  "exit_code": 0,
+  "bytes": 128,
+  "sha256": "05d86f25f3f791de82cd92b7ea24d5a64c11d4059155263beff5fdf592808d38",
+  "sha1": "cb69bfcd4ed199f2f16da139d4e4b41ec517c1ea"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http2/4.1.139.Final/netty-codec-http2-4.1.139.Final.pom.md5",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http2/4.1.139.Final/netty-codec-http2-4.1.139.Final.pom.md5",
+  "exit_code": 0,
+  "bytes": 32,
+  "sha256": "a38e2f980869c4234a7028d85c37fafd94ce29c7f8143e176b463903b56f682e",
+  "sha1": "2a75b5026d241b1c6fe0cc7b1e2f5c9d3e999865"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http2/4.1.139.Final/netty-codec-http2-4.1.139.Final.pom.asc",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http2/4.1.139.Final/netty-codec-http2-4.1.139.Final.pom.asc",
+  "exit_code": 0,
+  "bytes": 836,
+  "sha256": "af8008bbb248cb53e7f18d6ad99bfde40c1f8b4a879d4ffc0daa473d452a8f37",
+  "sha1": "0a19e6ebd3f9825f8aaaa49b82cd8447d53d0fd2"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http2/4.1.139.Final/netty-codec-http2-4.1.139.Final.module",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http2/4.1.139.Final/netty-codec-http2-4.1.139.Final.module",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http2/4.1.139.Final/netty-codec-http2-4.1.139.Final.jar",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http2/4.1.139.Final/netty-codec-http2-4.1.139.Final.jar",
+  "exit_code": 0,
+  "bytes": 514136,
+  "sha256": "4cb8bc95386112f3a9da935272781d577d9e70ca4c56cf0eef603a45e9526e02",
+  "sha1": "7b86d21a5578c431d2ccf898f22b444a38a4c0b2"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http2/4.1.139.Final/netty-codec-http2-4.1.139.Final.jar.sha1",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http2/4.1.139.Final/netty-codec-http2-4.1.139.Final.jar.sha1",
+  "exit_code": 0,
+  "bytes": 40,
+  "sha256": "561a0088cec61bab6f4682ddb084ffc69d4ea9cbd9a0a1037b954158fccbbb40",
+  "sha1": "1bcb30e6dd19efe8d5dad27803c23d46c6da6a57"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http2/4.1.139.Final/netty-codec-http2-4.1.139.Final.jar.sha256",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http2/4.1.139.Final/netty-codec-http2-4.1.139.Final.jar.sha256",
+  "exit_code": 0,
+  "bytes": 64,
+  "sha256": "07ebafb87e75fd5b9d9eb1a8e0cecfbef1be0f7436dccae7b76bf218c76a086d",
+  "sha1": "d438e2f9ecf3f0c7e7e3efeeae9600e059c6d957"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http2/4.1.139.Final/netty-codec-http2-4.1.139.Final.jar.sha512",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http2/4.1.139.Final/netty-codec-http2-4.1.139.Final.jar.sha512",
+  "exit_code": 0,
+  "bytes": 128,
+  "sha256": "f6e82f48492291562e7e38ac1336adc9eb0c59c844beb9d25becfd1b034c59e2",
+  "sha1": "15ba014945464fcdac1699ffff64ea9412a99124"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http2/4.1.139.Final/netty-codec-http2-4.1.139.Final.jar.md5",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http2/4.1.139.Final/netty-codec-http2-4.1.139.Final.jar.md5",
+  "exit_code": 0,
+  "bytes": 32,
+  "sha256": "097b7743a6650a12b3f6cd03a212e2cc82c1744c2d9ea957c4a78dd86780c7c8",
+  "sha1": "098c9f1b89d813f14f4a2138d840df8058561131"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http2/4.1.139.Final/netty-codec-http2-4.1.139.Final.jar.asc",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http2/4.1.139.Final/netty-codec-http2-4.1.139.Final.jar.asc",
+  "exit_code": 0,
+  "bytes": 836,
+  "sha256": "79f470b0df224d0c5e46bcf49152259408d484ad2035493accc34b2685708592",
+  "sha1": "71178f9f46e2607736d42f072d46e9a58b459255"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http2/4.1.139.Final/netty-codec-http2-4.1.139.Final.module",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-http2/4.1.139.Final/netty-codec-http2-4.1.139.Final.module",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler/4.1.139.Final/netty-handler-4.1.139.Final.pom.sha1",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler/4.1.139.Final/netty-handler-4.1.139.Final.pom.sha1",
+  "exit_code": 0,
+  "bytes": 40,
+  "sha256": "e9e67e28731a50eaa29b06bd89654da340963220eda0da2bac8c4c1e529bbd07",
+  "sha1": "85447ff851682b9ff936af358f68f60b7d3019a0"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler/4.1.139.Final/netty-handler-4.1.139.Final.pom.sha256",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler/4.1.139.Final/netty-handler-4.1.139.Final.pom.sha256",
+  "exit_code": 0,
+  "bytes": 64,
+  "sha256": "c335d40e3e327c6df733d54a227bcc3464c27f07e385751bca5f85f3e45f8a7c",
+  "sha1": "b6ea4f802313fd71423962e62e35f9f6f4c86343"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler/4.1.139.Final/netty-handler-4.1.139.Final.pom.sha512",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler/4.1.139.Final/netty-handler-4.1.139.Final.pom.sha512",
+  "exit_code": 0,
+  "bytes": 128,
+  "sha256": "d78ef948c47b25a58efa5a2fc563938a6213827422b387dae8560e739df7d2a5",
+  "sha1": "efd17c70ec8003074848481c43cdf6357d7b5461"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler/4.1.139.Final/netty-handler-4.1.139.Final.pom.md5",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler/4.1.139.Final/netty-handler-4.1.139.Final.pom.md5",
+  "exit_code": 0,
+  "bytes": 32,
+  "sha256": "0eb7e93616d6a91b3d8b1024893d353dc185d12df1cce5a289059223b830a184",
+  "sha1": "8c6697399dc4060d7ea4fae8ce8f6699b865792a"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler/4.1.139.Final/netty-handler-4.1.139.Final.pom.asc",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler/4.1.139.Final/netty-handler-4.1.139.Final.pom.asc",
+  "exit_code": 0,
+  "bytes": 836,
+  "sha256": "75547a95b978473849873985ee2c24387f374550dcd2cb26e3daca8a6074e9fa",
+  "sha1": "e14c5e36fbf7c2a7561792d72176832408680583"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler/4.1.139.Final/netty-handler-4.1.139.Final.module",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler/4.1.139.Final/netty-handler-4.1.139.Final.module",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler/4.1.139.Final/netty-handler-4.1.139.Final.jar",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler/4.1.139.Final/netty-handler-4.1.139.Final.jar",
+  "exit_code": 0,
+  "bytes": 590894,
+  "sha256": "ff85f00781b956d618b20f33da076c839a5e43e0084108b07bab0c19737168ec",
+  "sha1": "436b4a15bb2fe4608996a08b6d69b22f075286a4"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler/4.1.139.Final/netty-handler-4.1.139.Final.jar.sha1",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler/4.1.139.Final/netty-handler-4.1.139.Final.jar.sha1",
+  "exit_code": 0,
+  "bytes": 40,
+  "sha256": "e914a11d12fdf2de706e3692dcbb8c2ba7068650fa424c9a178ad5a1b4cf3fac",
+  "sha1": "f983ae35bc9f074a70fa5afc7d7040f326218348"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler/4.1.139.Final/netty-handler-4.1.139.Final.jar.sha256",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler/4.1.139.Final/netty-handler-4.1.139.Final.jar.sha256",
+  "exit_code": 0,
+  "bytes": 64,
+  "sha256": "59d4e7ab5c0cf919f24ee05de34f50fdbe554ca7af52faf5f084990369ca0dbe",
+  "sha1": "678e12f4e85def31da5fd2eeea38d9bf61623bf6"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler/4.1.139.Final/netty-handler-4.1.139.Final.jar.sha512",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler/4.1.139.Final/netty-handler-4.1.139.Final.jar.sha512",
+  "exit_code": 0,
+  "bytes": 128,
+  "sha256": "be0bdf87e914334e3608e8f3c1e675bc1cacef67942312ac4f74c8a1660fb4a1",
+  "sha1": "a91a4593eaa62b7d1cac87f4f76948f36802d6c6"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler/4.1.139.Final/netty-handler-4.1.139.Final.jar.md5",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler/4.1.139.Final/netty-handler-4.1.139.Final.jar.md5",
+  "exit_code": 0,
+  "bytes": 32,
+  "sha256": "cbe5b2cc7c1555beee4c4b44e07c6731a984fe3787f29cb33f55535248e7203f",
+  "sha1": "e017d846724724c653b9405c0e77dc518fdbf9a5"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler/4.1.139.Final/netty-handler-4.1.139.Final.jar.asc",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler/4.1.139.Final/netty-handler-4.1.139.Final.jar.asc",
+  "exit_code": 0,
+  "bytes": 836,
+  "sha256": "f57ad8cbddcd48deae156311605e6c89fa26abaf15703a7db43aacffc500106c",
+  "sha1": "d07e65180e9e57a965e9a8c39e65374898acf68f"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler/4.1.139.Final/netty-handler-4.1.139.Final.module",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler/4.1.139.Final/netty-handler-4.1.139.Final.module",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec/4.1.139.Final/netty-codec-4.1.139.Final.pom.sha1",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec/4.1.139.Final/netty-codec-4.1.139.Final.pom.sha1",
+  "exit_code": 0,
+  "bytes": 40,
+  "sha256": "500e20fc81edf16cd79ff25c695b3f8d2c14c81c813baae12f54865870656f1a",
+  "sha1": "2be3dc7c898704dfc6b499182226b9a2acbef753"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec/4.1.139.Final/netty-codec-4.1.139.Final.pom.sha256",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec/4.1.139.Final/netty-codec-4.1.139.Final.pom.sha256",
+  "exit_code": 0,
+  "bytes": 64,
+  "sha256": "af0021f448c02fcf919a7195fef9107b48d4f848035140baafeaedff8e93d33b",
+  "sha1": "7c36e54c6108dd18eeb9fccacb8f95e8150b0e6a"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec/4.1.139.Final/netty-codec-4.1.139.Final.pom.sha512",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec/4.1.139.Final/netty-codec-4.1.139.Final.pom.sha512",
+  "exit_code": 0,
+  "bytes": 128,
+  "sha256": "83bc781e4e5bdf4715156c4a2484082b3925b0a92ca33db268e279fe980bbfd2",
+  "sha1": "5361d1aa2ea8413e5b5e9717332e44b1f729b516"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec/4.1.139.Final/netty-codec-4.1.139.Final.pom.md5",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec/4.1.139.Final/netty-codec-4.1.139.Final.pom.md5",
+  "exit_code": 0,
+  "bytes": 32,
+  "sha256": "45794416a66f9de366fc63a06ab7a6d2afddaf9996d4a659b3dd6877242d3df1",
+  "sha1": "45e404d942cf409c0866ae438d6b1ddbd5075958"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec/4.1.139.Final/netty-codec-4.1.139.Final.pom.asc",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec/4.1.139.Final/netty-codec-4.1.139.Final.pom.asc",
+  "exit_code": 0,
+  "bytes": 836,
+  "sha256": "c4902c1e2fe56e9593a42fe6549aa22654714840c75c70c5f1677ee1ad1fd5b4",
+  "sha1": "d1e81ed319c05d5647071a79448afc154b8bc8fb"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec/4.1.139.Final/netty-codec-4.1.139.Final.module",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec/4.1.139.Final/netty-codec-4.1.139.Final.module",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec/4.1.139.Final/netty-codec-4.1.139.Final.jar",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec/4.1.139.Final/netty-codec-4.1.139.Final.jar",
+  "exit_code": 0,
+  "bytes": 363020,
+  "sha256": "ad43f07219dfb757a87b9c2b4765002be478c5401971379954e3d182f285fe6b",
+  "sha1": "96d0fb427e53097d91934c15fdf97785f917706d"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec/4.1.139.Final/netty-codec-4.1.139.Final.jar.sha1",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec/4.1.139.Final/netty-codec-4.1.139.Final.jar.sha1",
+  "exit_code": 0,
+  "bytes": 40,
+  "sha256": "3e2b2a8c64cd1f899731eaa2126f2db54cb8adfea3c4e778e191461392c3911b",
+  "sha1": "7d4cdc86e9bc68768baeb62df8d3b0fde737e94c"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec/4.1.139.Final/netty-codec-4.1.139.Final.jar.sha256",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec/4.1.139.Final/netty-codec-4.1.139.Final.jar.sha256",
+  "exit_code": 0,
+  "bytes": 64,
+  "sha256": "fe7d779829564daf836ae0fe4f518a2ba817ecc8d1ca063765dd7e4ec626616e",
+  "sha1": "3643b5f57a634f95edca8bb647adf46d5feca0c3"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec/4.1.139.Final/netty-codec-4.1.139.Final.jar.sha512",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec/4.1.139.Final/netty-codec-4.1.139.Final.jar.sha512",
+  "exit_code": 0,
+  "bytes": 128,
+  "sha256": "fcc12c36649feb8d8c291f3b11562718e53a4cf8295efe8f584c28eb28d1fd36",
+  "sha1": "dafa03ebb7dc5f78e3185c234e708515464cfed5"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec/4.1.139.Final/netty-codec-4.1.139.Final.jar.md5",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec/4.1.139.Final/netty-codec-4.1.139.Final.jar.md5",
+  "exit_code": 0,
+  "bytes": 32,
+  "sha256": "051e1c84568a4c3f242569db236fc290082526bedbea1af728ed7cb78bb9c3b6",
+  "sha1": "41d359df322d967ceeb64ee9b6581ed08ff29860"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec/4.1.139.Final/netty-codec-4.1.139.Final.jar.asc",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec/4.1.139.Final/netty-codec-4.1.139.Final.jar.asc",
+  "exit_code": 0,
+  "bytes": 836,
+  "sha256": "fc7c8e7a73010ef62d784d911fc41c63386f2273a52ebaa79bb9003ca0ed931d",
+  "sha1": "4466a32df6685597598bc6b2698b30f166a1ad2d"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec/4.1.139.Final/netty-codec-4.1.139.Final.module",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec/4.1.139.Final/netty-codec-4.1.139.Final.module",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-common/4.1.139.Final/netty-common-4.1.139.Final.pom.sha1",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-common/4.1.139.Final/netty-common-4.1.139.Final.pom.sha1",
+  "exit_code": 0,
+  "bytes": 40,
+  "sha256": "c6310ff539731a5e0f86c682591c3e65e63f7b7a1e7208d6da9a3f663390f010",
+  "sha1": "7a163f68e2f6ce80032875d8f31ac83951ad2215"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-common/4.1.139.Final/netty-common-4.1.139.Final.pom.sha256",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-common/4.1.139.Final/netty-common-4.1.139.Final.pom.sha256",
+  "exit_code": 0,
+  "bytes": 64,
+  "sha256": "7c11318a4a4cbc9a8c74dee98f8434c0b7b2b1d428b2500549df54eef29b62fa",
+  "sha1": "1ef66cc708c014ac6d4a778737046bf516f287c1"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-common/4.1.139.Final/netty-common-4.1.139.Final.pom.sha512",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-common/4.1.139.Final/netty-common-4.1.139.Final.pom.sha512",
+  "exit_code": 0,
+  "bytes": 128,
+  "sha256": "c0896e4d237a06e6950b8f8f5ce74047db3519b425aa41f56668cbd16662434f",
+  "sha1": "eef2ce35a36e23b0ff9897ff4db734e5b8fba6fe"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-common/4.1.139.Final/netty-common-4.1.139.Final.pom.md5",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-common/4.1.139.Final/netty-common-4.1.139.Final.pom.md5",
+  "exit_code": 0,
+  "bytes": 32,
+  "sha256": "b5c62fb3933285270a43f4fdeebae839d1c96b3b2ac3e89e23f52b5ab0181201",
+  "sha1": "12374ee617d45e2124d5e554e43c8ee5e3632ff0"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-common/4.1.139.Final/netty-common-4.1.139.Final.pom.asc",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-common/4.1.139.Final/netty-common-4.1.139.Final.pom.asc",
+  "exit_code": 0,
+  "bytes": 836,
+  "sha256": "1b2559e4e83001a4e857d6ea00a8a5a50d3da17559841068fe9f63fd9386cf6e",
+  "sha1": "4a6b631a1b57508c66ba7a3af909dfe6d8450afc"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-common/4.1.139.Final/netty-common-4.1.139.Final.module",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-common/4.1.139.Final/netty-common-4.1.139.Final.module",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-common/4.1.139.Final/netty-common-4.1.139.Final.jar",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-common/4.1.139.Final/netty-common-4.1.139.Final.jar",
+  "exit_code": 0,
+  "bytes": 740560,
+  "sha256": "50372d86e27b4b1cf0810d75eb534795966a199049a1e85a0c41bbd2bb97f519",
+  "sha1": "c3d17ade6f80714ca28078706cbb33c9e8096cf8"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-common/4.1.139.Final/netty-common-4.1.139.Final.jar.sha1",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-common/4.1.139.Final/netty-common-4.1.139.Final.jar.sha1",
+  "exit_code": 0,
+  "bytes": 40,
+  "sha256": "24c3b5b7234ee79a6a715a71e177a86865a2ba24e4a7396a35083e773b0a2f2f",
+  "sha1": "66f9f5e6e255fa060c4bf2804d675a3414d46d38"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-common/4.1.139.Final/netty-common-4.1.139.Final.jar.sha256",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-common/4.1.139.Final/netty-common-4.1.139.Final.jar.sha256",
+  "exit_code": 0,
+  "bytes": 64,
+  "sha256": "ce2d20555144888dfeef17bb8f047b0aedb9763b929dd830332d9c70dafd544a",
+  "sha1": "4aa9800029c5747885ea6e17ce41b5c3cc8b7245"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-common/4.1.139.Final/netty-common-4.1.139.Final.jar.sha512",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-common/4.1.139.Final/netty-common-4.1.139.Final.jar.sha512",
+  "exit_code": 0,
+  "bytes": 128,
+  "sha256": "0acf7058f2c592b370141e3341ae93f61b458609ef2359ed4ccde985a3653c7d",
+  "sha1": "aaf55d87da9b03ce94612c8ada5bb4f95eff0deb"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-common/4.1.139.Final/netty-common-4.1.139.Final.jar.md5",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-common/4.1.139.Final/netty-common-4.1.139.Final.jar.md5",
+  "exit_code": 0,
+  "bytes": 32,
+  "sha256": "7db129541c18ca37a13019da9c4cf00380bd179e1f220eff299b693318f95b32",
+  "sha1": "fb1066d95d264a14fa3974d7cbacdfee55d65a9e"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-common/4.1.139.Final/netty-common-4.1.139.Final.jar.asc",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-common/4.1.139.Final/netty-common-4.1.139.Final.jar.asc",
+  "exit_code": 0,
+  "bytes": 836,
+  "sha256": "4e9cb4261473edff3a19557bbe11a6e8f54ad0e299e33f1fdf570400f17f8461",
+  "sha1": "33333bb74546031031c9fa53df6bbcdf07bd8bf7"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-common/4.1.139.Final/netty-common-4.1.139.Final.module",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-common/4.1.139.Final/netty-common-4.1.139.Final.module",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler-proxy/4.1.139.Final/netty-handler-proxy-4.1.139.Final.pom.sha1",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler-proxy/4.1.139.Final/netty-handler-proxy-4.1.139.Final.pom.sha1",
+  "exit_code": 0,
+  "bytes": 40,
+  "sha256": "1ef8e896f021db4714fab1c4cfab8ae5f6a6604b3ad62454df1d159027475959",
+  "sha1": "b11c0b5be6f6c93403c974d0d020101363931fcd"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler-proxy/4.1.139.Final/netty-handler-proxy-4.1.139.Final.pom.sha256",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler-proxy/4.1.139.Final/netty-handler-proxy-4.1.139.Final.pom.sha256",
+  "exit_code": 0,
+  "bytes": 64,
+  "sha256": "b1f073208216cbc4fd6445da7ca987ae92d373b6b960950bf4a1af0766f92c7c",
+  "sha1": "a820147d360c3fcc33782eb14fc6e248f87bc40d"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler-proxy/4.1.139.Final/netty-handler-proxy-4.1.139.Final.pom.sha512",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler-proxy/4.1.139.Final/netty-handler-proxy-4.1.139.Final.pom.sha512",
+  "exit_code": 0,
+  "bytes": 128,
+  "sha256": "6444014aa7095ee9177366424dbf673c225f5e7a8a263073b2361f6616ee4b58",
+  "sha1": "d315d92afc27ce20ebed4bb3c865a2556c43c764"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler-proxy/4.1.139.Final/netty-handler-proxy-4.1.139.Final.pom.md5",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler-proxy/4.1.139.Final/netty-handler-proxy-4.1.139.Final.pom.md5",
+  "exit_code": 0,
+  "bytes": 32,
+  "sha256": "a5fb4534f4db6a304e070a40bed464e1855f22cb956e7691d2d9e38660f3270f",
+  "sha1": "158edd2383ebcf55363253c26dfa1f462a6f8467"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler-proxy/4.1.139.Final/netty-handler-proxy-4.1.139.Final.pom.asc",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler-proxy/4.1.139.Final/netty-handler-proxy-4.1.139.Final.pom.asc",
+  "exit_code": 0,
+  "bytes": 836,
+  "sha256": "2c18ba7278b79c85aa7a5a31c6f56a9eac9781e8425e68c66f654f7dc41a2f8d",
+  "sha1": "b96d54e2f8a9762d50f3acc9da82acddee0c45b3"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler-proxy/4.1.139.Final/netty-handler-proxy-4.1.139.Final.module",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler-proxy/4.1.139.Final/netty-handler-proxy-4.1.139.Final.module",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler-proxy/4.1.139.Final/netty-handler-proxy-4.1.139.Final.jar",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler-proxy/4.1.139.Final/netty-handler-proxy-4.1.139.Final.jar",
+  "exit_code": 0,
+  "bytes": 25962,
+  "sha256": "9c92c2407b6fd3c120ab5efb900475a1fe40ce099703d2500c8679d3c75a90cb",
+  "sha1": "4abccc0bd2e4c9a9b63777d362ffd29256b15689"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler-proxy/4.1.139.Final/netty-handler-proxy-4.1.139.Final.jar.sha1",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler-proxy/4.1.139.Final/netty-handler-proxy-4.1.139.Final.jar.sha1",
+  "exit_code": 0,
+  "bytes": 40,
+  "sha256": "4ddb45c5dc1e317c73de1aa997463df9405f4a147773f279451b160e487d23d7",
+  "sha1": "e26cf28bcbc5ae42de4834cffc9bb490e95bedfe"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler-proxy/4.1.139.Final/netty-handler-proxy-4.1.139.Final.jar.sha256",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler-proxy/4.1.139.Final/netty-handler-proxy-4.1.139.Final.jar.sha256",
+  "exit_code": 0,
+  "bytes": 64,
+  "sha256": "c197b015c9d036f1cdd8c3ba6af9b7654c96ed83217a88039a255b081d33dae6",
+  "sha1": "4c5b3cc8367b68caf7cf383a3e42c56e94328bb2"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler-proxy/4.1.139.Final/netty-handler-proxy-4.1.139.Final.jar.sha512",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler-proxy/4.1.139.Final/netty-handler-proxy-4.1.139.Final.jar.sha512",
+  "exit_code": 0,
+  "bytes": 128,
+  "sha256": "ace44efc12756656f00bb083d432ea0b3482fd89289c0c3f14cad0ff7a549b98",
+  "sha1": "94c08d7faf011f10fe4e34f748566417141fc5c2"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler-proxy/4.1.139.Final/netty-handler-proxy-4.1.139.Final.jar.md5",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler-proxy/4.1.139.Final/netty-handler-proxy-4.1.139.Final.jar.md5",
+  "exit_code": 0,
+  "bytes": 32,
+  "sha256": "7f2c702c5ce8425d0900c77d04975ba39ea94ae4547378c2d4271695de0b4aea",
+  "sha1": "c8d8cf57b87541589cf40ea4ba5415b9e1c669eb"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler-proxy/4.1.139.Final/netty-handler-proxy-4.1.139.Final.jar.asc",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler-proxy/4.1.139.Final/netty-handler-proxy-4.1.139.Final.jar.asc",
+  "exit_code": 0,
+  "bytes": 836,
+  "sha256": "95b4bd7ddcba01cee7936661295bd4881d7a5096fc963fdd60600d6376486af6",
+  "sha1": "8da463676e7b23646bd5c9314d9091450e4b0c0a"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler-proxy/4.1.139.Final/netty-handler-proxy-4.1.139.Final.module",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-handler-proxy/4.1.139.Final/netty-handler-proxy-4.1.139.Final.module",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-buffer/4.1.139.Final/netty-buffer-4.1.139.Final.pom.sha1",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-buffer/4.1.139.Final/netty-buffer-4.1.139.Final.pom.sha1",
+  "exit_code": 0,
+  "bytes": 40,
+  "sha256": "1b31420ae028029aea1d6251b0b19eecad139e73b86366def527b50dcca1eb25",
+  "sha1": "bdaecf713891abe238079f7ed69f7a40ad2a6c1d"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-buffer/4.1.139.Final/netty-buffer-4.1.139.Final.pom.sha256",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-buffer/4.1.139.Final/netty-buffer-4.1.139.Final.pom.sha256",
+  "exit_code": 0,
+  "bytes": 64,
+  "sha256": "04e77ea34be8206de85a6aa333e3b43e723479df45fb13e64ffd33793466d86a",
+  "sha1": "4ab33aef78e4efbf059dd6e2e319df7154041eb3"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-buffer/4.1.139.Final/netty-buffer-4.1.139.Final.pom.sha512",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-buffer/4.1.139.Final/netty-buffer-4.1.139.Final.pom.sha512",
+  "exit_code": 0,
+  "bytes": 128,
+  "sha256": "ceafa2c8834c6478bbe158bd9ce1476e08288acec14f6f5267a55da8ee3c495a",
+  "sha1": "57e56d050a92a5891756c5e0394765ccb917493b"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-buffer/4.1.139.Final/netty-buffer-4.1.139.Final.pom.md5",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-buffer/4.1.139.Final/netty-buffer-4.1.139.Final.pom.md5",
+  "exit_code": 0,
+  "bytes": 32,
+  "sha256": "fbf9723e512f2560620331cdab093db3808569b5dd462e78883dc45ef6353b91",
+  "sha1": "53c8c7d2edf404932d122cd2f460c5bafd968af3"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-buffer/4.1.139.Final/netty-buffer-4.1.139.Final.pom.asc",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-buffer/4.1.139.Final/netty-buffer-4.1.139.Final.pom.asc",
+  "exit_code": 0,
+  "bytes": 836,
+  "sha256": "0e6fdf9b612e2d5583547dc53cc49dea4cf81da80832998f0c59d28cc87fd5a4",
+  "sha1": "379ac50847b8d1668664ae690f9ba7e7a8308c0d"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-buffer/4.1.139.Final/netty-buffer-4.1.139.Final.module",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-buffer/4.1.139.Final/netty-buffer-4.1.139.Final.module",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-buffer/4.1.139.Final/netty-buffer-4.1.139.Final.jar",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-buffer/4.1.139.Final/netty-buffer-4.1.139.Final.jar",
+  "exit_code": 0,
+  "bytes": 365480,
+  "sha256": "48d805b74e56dc5f92b1f288858185abc86db16d293e8da183542df6243427f2",
+  "sha1": "9bf302a4c01d89f42e633f55eb9ffd0bb6a0b92e"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-buffer/4.1.139.Final/netty-buffer-4.1.139.Final.jar.sha1",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-buffer/4.1.139.Final/netty-buffer-4.1.139.Final.jar.sha1",
+  "exit_code": 0,
+  "bytes": 40,
+  "sha256": "ba5c7b24dbcb491a317700fcab617ff709d5a41fe5123f6391d5ab8814da6d84",
+  "sha1": "0f67c65b1ab13a1079e3ab47eb9d6ef59d45e65f"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-buffer/4.1.139.Final/netty-buffer-4.1.139.Final.jar.sha256",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-buffer/4.1.139.Final/netty-buffer-4.1.139.Final.jar.sha256",
+  "exit_code": 0,
+  "bytes": 64,
+  "sha256": "0c527ebea16de5d65852dc5b3558063603212a088a6ed88baf09766c6b775380",
+  "sha1": "49726059b726dbe5da1f25f94e9720ca500f8351"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-buffer/4.1.139.Final/netty-buffer-4.1.139.Final.jar.sha512",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-buffer/4.1.139.Final/netty-buffer-4.1.139.Final.jar.sha512",
+  "exit_code": 0,
+  "bytes": 128,
+  "sha256": "a7f903a2a722c91ca1ec3f4d1e0f5ac31e8366bdefef3b5a9bfb69305851622c",
+  "sha1": "63849e3b2c6894d17606ed7d5d5b06002d8661e3"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-buffer/4.1.139.Final/netty-buffer-4.1.139.Final.jar.md5",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-buffer/4.1.139.Final/netty-buffer-4.1.139.Final.jar.md5",
+  "exit_code": 0,
+  "bytes": 32,
+  "sha256": "be0bf9b4dedbf13c1fc24675e40340cb955cef3cd4681ee749ab309e438dc135",
+  "sha1": "719bb8cdb07bed094473a8d6993a640185a16b80"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-buffer/4.1.139.Final/netty-buffer-4.1.139.Final.jar.asc",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-buffer/4.1.139.Final/netty-buffer-4.1.139.Final.jar.asc",
+  "exit_code": 0,
+  "bytes": 836,
+  "sha256": "6abb63d72502f1dc48df4dbea131f21b2286dcf2c5376702a6bfa95ac19773f4",
+  "sha1": "520b4a985f53730e651692df55aa096b192a5c25"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-buffer/4.1.139.Final/netty-buffer-4.1.139.Final.module",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-buffer/4.1.139.Final/netty-buffer-4.1.139.Final.module",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport/4.1.139.Final/netty-transport-4.1.139.Final.pom.sha1",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport/4.1.139.Final/netty-transport-4.1.139.Final.pom.sha1",
+  "exit_code": 0,
+  "bytes": 40,
+  "sha256": "e86eec4992757eabd246374f44e317be52f020662b2ec54f994a45fe0a531c08",
+  "sha1": "af581f8607ea6554191bd2551ab0b1e14430e9a1"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport/4.1.139.Final/netty-transport-4.1.139.Final.pom.sha256",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport/4.1.139.Final/netty-transport-4.1.139.Final.pom.sha256",
+  "exit_code": 0,
+  "bytes": 64,
+  "sha256": "909ec4dfac1fd4b0b753ea62d76add156b962a0cd30a39b3c218307713935853",
+  "sha1": "464fe01551fb87f2e5121118ad62bef90015c290"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport/4.1.139.Final/netty-transport-4.1.139.Final.pom.sha512",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport/4.1.139.Final/netty-transport-4.1.139.Final.pom.sha512",
+  "exit_code": 0,
+  "bytes": 128,
+  "sha256": "e74a4cb408df09e3db00bbacc6e7fb6772ae97bf9051cbd5cf37a7947a1fe9e2",
+  "sha1": "49fd90bf84c9dde23cf7c05d9089c9b0c686f65d"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport/4.1.139.Final/netty-transport-4.1.139.Final.pom.md5",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport/4.1.139.Final/netty-transport-4.1.139.Final.pom.md5",
+  "exit_code": 0,
+  "bytes": 32,
+  "sha256": "1b574cbb9674d896feb4e2039d44214faf495dbd7d8fad6b17ca1ca006de7371",
+  "sha1": "5d02cdccb9d68a80313831e05e700250d3394e92"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport/4.1.139.Final/netty-transport-4.1.139.Final.pom.asc",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport/4.1.139.Final/netty-transport-4.1.139.Final.pom.asc",
+  "exit_code": 0,
+  "bytes": 836,
+  "sha256": "aefadce34a087edfcfe8646f777793fad2ebd391b8664adf1672e0a41a5ccea4",
+  "sha1": "d555fdb744e4e94a69146dd05e69897dee2e6c61"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport/4.1.139.Final/netty-transport-4.1.139.Final.module",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport/4.1.139.Final/netty-transport-4.1.139.Final.module",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport/4.1.139.Final/netty-transport-4.1.139.Final.jar",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport/4.1.139.Final/netty-transport-4.1.139.Final.jar",
+  "exit_code": 0,
+  "bytes": 524190,
+  "sha256": "be7bff8b6274e7fae12bbad3c565777539e9b069517e0b3acc06d9ac2cd6ec05",
+  "sha1": "2cf7121cec6ec0b43d406adceec132cfcec6159a"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport/4.1.139.Final/netty-transport-4.1.139.Final.jar.sha1",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport/4.1.139.Final/netty-transport-4.1.139.Final.jar.sha1",
+  "exit_code": 0,
+  "bytes": 40,
+  "sha256": "feb9a1d10d26e5c95060ef4979e0cbea6f555467d2073de73f8d3893339dbe54",
+  "sha1": "5a3cc8c2d1b0433eff23e52b034d41489a9d8c65"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport/4.1.139.Final/netty-transport-4.1.139.Final.jar.sha256",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport/4.1.139.Final/netty-transport-4.1.139.Final.jar.sha256",
+  "exit_code": 0,
+  "bytes": 64,
+  "sha256": "b373c228edafe93333c06136057be4c26778c64f48b0f0fe77305a068a6f11ef",
+  "sha1": "506ce03b7d4f8138457976ef956c7eb8f55cc2ad"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport/4.1.139.Final/netty-transport-4.1.139.Final.jar.sha512",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport/4.1.139.Final/netty-transport-4.1.139.Final.jar.sha512",
+  "exit_code": 0,
+  "bytes": 128,
+  "sha256": "555c9d6d5fba862ee45c6e47f025d7bd1e68ca253db72870cc06f65980995cee",
+  "sha1": "35674a54e1b7c2aed650f3bd25bf35c7132b6471"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport/4.1.139.Final/netty-transport-4.1.139.Final.jar.md5",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport/4.1.139.Final/netty-transport-4.1.139.Final.jar.md5",
+  "exit_code": 0,
+  "bytes": 32,
+  "sha256": "a118fed17616cdb3a6835a0ed17736776811faa1d9c6e9c0fb932334149d09ed",
+  "sha1": "80d2e4dfe177e54422423b85622bba7e08b1e4f0"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport/4.1.139.Final/netty-transport-4.1.139.Final.jar.asc",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport/4.1.139.Final/netty-transport-4.1.139.Final.jar.asc",
+  "exit_code": 0,
+  "bytes": 836,
+  "sha256": "540b21a9852e7b1ff8a0ec78e9efe00de9a0f27dfe1382444e88974e2912c6c9",
+  "sha1": "e3cc7fe268543de594c8ff04da99342bac37c799"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport/4.1.139.Final/netty-transport-4.1.139.Final.module",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport/4.1.139.Final/netty-transport-4.1.139.Final.module",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-socks/4.1.139.Final/netty-codec-socks-4.1.139.Final.pom.sha1",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-socks/4.1.139.Final/netty-codec-socks-4.1.139.Final.pom.sha1",
+  "exit_code": 0,
+  "bytes": 40,
+  "sha256": "ad68b4bc9de458ce59693608d2fa7a881e71752eafbbe27ea10c6db415ab82e8",
+  "sha1": "b41669c6a08ab020854011ce2443cba01eb3f147"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-socks/4.1.139.Final/netty-codec-socks-4.1.139.Final.pom.sha256",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-socks/4.1.139.Final/netty-codec-socks-4.1.139.Final.pom.sha256",
+  "exit_code": 0,
+  "bytes": 64,
+  "sha256": "2dbe2336a96a0611807d60a5ab44e554639b5fd866d849b14e814eb24d323ace",
+  "sha1": "651a54243b73caea980751917a411605862ec12a"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-socks/4.1.139.Final/netty-codec-socks-4.1.139.Final.pom.sha512",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-socks/4.1.139.Final/netty-codec-socks-4.1.139.Final.pom.sha512",
+  "exit_code": 0,
+  "bytes": 128,
+  "sha256": "e2555d1348dd5a9ba15baf2fb7424f1238c83b4e6f6c57689d2e6aeaf5c74c25",
+  "sha1": "e170d8a286d8e5225a1dbf42cdd417c28591eacf"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-socks/4.1.139.Final/netty-codec-socks-4.1.139.Final.pom.md5",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-socks/4.1.139.Final/netty-codec-socks-4.1.139.Final.pom.md5",
+  "exit_code": 0,
+  "bytes": 32,
+  "sha256": "18e6e5914b906277c87f45f25dd37e473224f710ad9a4bb267f42251e6d74996",
+  "sha1": "aca0880ceb96b98d108ddebbb2bdfc8123b9f8d5"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-socks/4.1.139.Final/netty-codec-socks-4.1.139.Final.pom.asc",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-socks/4.1.139.Final/netty-codec-socks-4.1.139.Final.pom.asc",
+  "exit_code": 0,
+  "bytes": 836,
+  "sha256": "7f62f9688f40fd9f9b0697bd0808ff69442fc6d26719cdad88fa2534d26dd759",
+  "sha1": "e48b6fcd4b3173bcb30ebaba4d878458ac1d8be6"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-socks/4.1.139.Final/netty-codec-socks-4.1.139.Final.module",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-socks/4.1.139.Final/netty-codec-socks-4.1.139.Final.module",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-socks/4.1.139.Final/netty-codec-socks-4.1.139.Final.jar",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-socks/4.1.139.Final/netty-codec-socks-4.1.139.Final.jar",
+  "exit_code": 0,
+  "bytes": 121927,
+  "sha256": "94d6800d5f717b40db5d0bf42a77b448d472cd9033735e69e7b18311bd902f23",
+  "sha1": "64edb19cc6a513c972a6a4d245c1c487fe703e40"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-socks/4.1.139.Final/netty-codec-socks-4.1.139.Final.jar.sha1",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-socks/4.1.139.Final/netty-codec-socks-4.1.139.Final.jar.sha1",
+  "exit_code": 0,
+  "bytes": 40,
+  "sha256": "23242eedda8225b52e200c406a83b2c10ff44707dd5d2930bf4eb7ed2bc950c2",
+  "sha1": "69685b8945e11888120a71379d4c7b2144c78025"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-socks/4.1.139.Final/netty-codec-socks-4.1.139.Final.jar.sha256",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-socks/4.1.139.Final/netty-codec-socks-4.1.139.Final.jar.sha256",
+  "exit_code": 0,
+  "bytes": 64,
+  "sha256": "027292a5e4bc69888b9795563f525c920077967ad036583b2970b9645ddd4160",
+  "sha1": "0165a2737dc0f3889b3920bd85743e654946927b"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-socks/4.1.139.Final/netty-codec-socks-4.1.139.Final.jar.sha512",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-socks/4.1.139.Final/netty-codec-socks-4.1.139.Final.jar.sha512",
+  "exit_code": 0,
+  "bytes": 128,
+  "sha256": "8d11787bdbc891bae04083881517d021ca98296fce916bc2130cf1171f4de32b",
+  "sha1": "b9782df87baadb3e88925217c386695c0ca84fda"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-socks/4.1.139.Final/netty-codec-socks-4.1.139.Final.jar.md5",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-socks/4.1.139.Final/netty-codec-socks-4.1.139.Final.jar.md5",
+  "exit_code": 0,
+  "bytes": 32,
+  "sha256": "b060b0fa5f183398471667c3e672939ca96e573b768ee8486ecd8d1d17a3af90",
+  "sha1": "38d24d880d7fcaad4ae4feb114e5e1a30ebdbf13"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-socks/4.1.139.Final/netty-codec-socks-4.1.139.Final.jar.asc",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-socks/4.1.139.Final/netty-codec-socks-4.1.139.Final.jar.asc",
+  "exit_code": 0,
+  "bytes": 836,
+  "sha256": "73d318df443e11c74ea7704520be52f90a871b5766bc8b09878a32ecdf432360",
+  "sha1": "4025a9b579cadb6f31d5c064eb5b8b87adb927f0"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-socks/4.1.139.Final/netty-codec-socks-4.1.139.Final.module",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-codec-socks/4.1.139.Final/netty-codec-socks-4.1.139.Final.module",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-resolver/4.1.139.Final/netty-resolver-4.1.139.Final.pom.sha1",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-resolver/4.1.139.Final/netty-resolver-4.1.139.Final.pom.sha1",
+  "exit_code": 0,
+  "bytes": 40,
+  "sha256": "820628a7bb5be17557add3592711b686eddbd03b2daed13a7068266d9af325d2",
+  "sha1": "1d188130058038fb6c7b0100151119652cf6c051"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-resolver/4.1.139.Final/netty-resolver-4.1.139.Final.pom.sha256",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-resolver/4.1.139.Final/netty-resolver-4.1.139.Final.pom.sha256",
+  "exit_code": 0,
+  "bytes": 64,
+  "sha256": "b62831342712b72de65930d8450ba4e13c82d39885db7bd911c8ac2f4050486d",
+  "sha1": "6ab799ce6675a54c3c27dfaff5182b506b30c7cb"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-resolver/4.1.139.Final/netty-resolver-4.1.139.Final.pom.sha512",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-resolver/4.1.139.Final/netty-resolver-4.1.139.Final.pom.sha512",
+  "exit_code": 0,
+  "bytes": 128,
+  "sha256": "e23573fbde55731fcdb5ff7e98af45f6e8a2e7fd9f8f2611e16bf8b090641d66",
+  "sha1": "59f8e03e87d0deb32a79f4ff9dd0d21353f79b47"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-resolver/4.1.139.Final/netty-resolver-4.1.139.Final.pom.md5",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-resolver/4.1.139.Final/netty-resolver-4.1.139.Final.pom.md5",
+  "exit_code": 0,
+  "bytes": 32,
+  "sha256": "d78a6fc20a575d63b6532925658d78f2fd4b7e257153334201672adc38061a5f",
+  "sha1": "dcacd8d96faa791d15ac26e1adaf722116bc40c5"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-resolver/4.1.139.Final/netty-resolver-4.1.139.Final.pom.asc",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-resolver/4.1.139.Final/netty-resolver-4.1.139.Final.pom.asc",
+  "exit_code": 0,
+  "bytes": 836,
+  "sha256": "6577e73e593c942c71da6511f0230990ca26ed4a5d5e2debd341bf2cecb30f7f",
+  "sha1": "66a96a2f5ae237b47adced0e49fefc2150fd17ea"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-resolver/4.1.139.Final/netty-resolver-4.1.139.Final.module",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-resolver/4.1.139.Final/netty-resolver-4.1.139.Final.module",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-resolver/4.1.139.Final/netty-resolver-4.1.139.Final.jar",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-resolver/4.1.139.Final/netty-resolver-4.1.139.Final.jar",
+  "exit_code": 0,
+  "bytes": 37907,
+  "sha256": "562a5388c88325b7d6ed05e8168736871ce0e64ab01e0ce52ea7710760b9b457",
+  "sha1": "b3ad473303b5ccb9d0f22ef31c0306b229620c54"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-resolver/4.1.139.Final/netty-resolver-4.1.139.Final.jar.sha1",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-resolver/4.1.139.Final/netty-resolver-4.1.139.Final.jar.sha1",
+  "exit_code": 0,
+  "bytes": 40,
+  "sha256": "73821aa5fad527c3c89a249ca70ef0d2064482ecdc21f208b310fc0f971dbd39",
+  "sha1": "5ded38b78af068473de45edec14dbd13cc91f838"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-resolver/4.1.139.Final/netty-resolver-4.1.139.Final.jar.sha256",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-resolver/4.1.139.Final/netty-resolver-4.1.139.Final.jar.sha256",
+  "exit_code": 0,
+  "bytes": 64,
+  "sha256": "80af92d812077b9bbcbdab144b3a2067cf46df5799cc61e7f002aac7c4cca794",
+  "sha1": "5a5960ab27fdd7ac2babe156bc545ca953642cc6"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-resolver/4.1.139.Final/netty-resolver-4.1.139.Final.jar.sha512",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-resolver/4.1.139.Final/netty-resolver-4.1.139.Final.jar.sha512",
+  "exit_code": 0,
+  "bytes": 128,
+  "sha256": "bbcc6694810d8124fa3ef2c4a1c7307a3137c433237f93d9758e1202b0a6b536",
+  "sha1": "7ed35e303c82c8d2c1a025cb9f03948d971968c0"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-resolver/4.1.139.Final/netty-resolver-4.1.139.Final.jar.md5",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-resolver/4.1.139.Final/netty-resolver-4.1.139.Final.jar.md5",
+  "exit_code": 0,
+  "bytes": 32,
+  "sha256": "add399c2e2450573bec960e9eebb40e7ca9587a6a7f14e08039246c6167f9d94",
+  "sha1": "67d30c4ddab4cd51c36ac2f3b71852209569a112"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-resolver/4.1.139.Final/netty-resolver-4.1.139.Final.jar.asc",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-resolver/4.1.139.Final/netty-resolver-4.1.139.Final.jar.asc",
+  "exit_code": 0,
+  "bytes": 836,
+  "sha256": "e357b9d5ea0f8ceafba2f242f7484b9b2c6ea1d3f056b9c94ee53c5e0e98a5a6",
+  "sha1": "2e046057a89e05c8d0b3a6f108d07c0fc884b22a"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-resolver/4.1.139.Final/netty-resolver-4.1.139.Final.module",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-resolver/4.1.139.Final/netty-resolver-4.1.139.Final.module",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport-native-unix-common/4.1.139.Final/netty-transport-native-unix-common-4.1.139.Final.pom.sha1",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport-native-unix-common/4.1.139.Final/netty-transport-native-unix-common-4.1.139.Final.pom.sha1",
+  "exit_code": 0,
+  "bytes": 40,
+  "sha256": "0a728ae25180618f85f497a932e5f931b4c4f1f1c7d91dcd810683e613e05042",
+  "sha1": "d926a32f57dcd72263f80a625ac66cddbb724153"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport-native-unix-common/4.1.139.Final/netty-transport-native-unix-common-4.1.139.Final.pom.sha256",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport-native-unix-common/4.1.139.Final/netty-transport-native-unix-common-4.1.139.Final.pom.sha256",
+  "exit_code": 0,
+  "bytes": 64,
+  "sha256": "2489690a8d05595f03c5d5b60dd30d55956c634f5e309a239b8103f7870ffd41",
+  "sha1": "f74049f547b1e46aef94ba93397912f8b35f780c"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport-native-unix-common/4.1.139.Final/netty-transport-native-unix-common-4.1.139.Final.pom.sha512",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport-native-unix-common/4.1.139.Final/netty-transport-native-unix-common-4.1.139.Final.pom.sha512",
+  "exit_code": 0,
+  "bytes": 128,
+  "sha256": "6ec9ceab65d4efab2d1a0d03f10f63cc3df3a305f4da5b152196ce24af4b8963",
+  "sha1": "6c99fa311ae20274f8e289238028dc593950499a"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport-native-unix-common/4.1.139.Final/netty-transport-native-unix-common-4.1.139.Final.pom.md5",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport-native-unix-common/4.1.139.Final/netty-transport-native-unix-common-4.1.139.Final.pom.md5",
+  "exit_code": 0,
+  "bytes": 32,
+  "sha256": "e9a27470fa23a452609b69cde4acdcd23ff258173fd19528c9a5c9ddb8b1d574",
+  "sha1": "9d533491a0301de46550ee20b6a877dfb530fa2b"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport-native-unix-common/4.1.139.Final/netty-transport-native-unix-common-4.1.139.Final.pom.asc",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport-native-unix-common/4.1.139.Final/netty-transport-native-unix-common-4.1.139.Final.pom.asc",
+  "exit_code": 0,
+  "bytes": 836,
+  "sha256": "af0ec78e0394ac20342faa32939ca74079e2b3d14bf2598ca39e0448390ba1fe",
+  "sha1": "d5e4e2fc412d03c16c2a8c8b9bb44bb38f63adb2"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport-native-unix-common/4.1.139.Final/netty-transport-native-unix-common-4.1.139.Final.module",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport-native-unix-common/4.1.139.Final/netty-transport-native-unix-common-4.1.139.Final.module",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport-native-unix-common/4.1.139.Final/netty-transport-native-unix-common-4.1.139.Final.jar",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport-native-unix-common/4.1.139.Final/netty-transport-native-unix-common-4.1.139.Final.jar",
+  "exit_code": 0,
+  "bytes": 44326,
+  "sha256": "8e660ac8a485fc8d8b47d87d04ea33d19902dc6fc5a113e9353b762188b3f333",
+  "sha1": "58a873837fe16ab713a628530f2ef605f9a5b2e6"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport-native-unix-common/4.1.139.Final/netty-transport-native-unix-common-4.1.139.Final.jar.sha1",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport-native-unix-common/4.1.139.Final/netty-transport-native-unix-common-4.1.139.Final.jar.sha1",
+  "exit_code": 0,
+  "bytes": 40,
+  "sha256": "07a7c137a8040ddd65fe0f04b3161a5a2c1fd9eeba4d750a32a9c114164b1700",
+  "sha1": "8c4e7ba0415af1aa33835b137723bef85139df0f"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport-native-unix-common/4.1.139.Final/netty-transport-native-unix-common-4.1.139.Final.jar.sha256",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport-native-unix-common/4.1.139.Final/netty-transport-native-unix-common-4.1.139.Final.jar.sha256",
+  "exit_code": 0,
+  "bytes": 64,
+  "sha256": "d4b675afb9e3dc04696d15b88359a0fe04bc19df0678a094c7bbf9b56c6dec0c",
+  "sha1": "d6c9883cb6530e4efbd73acb18505601981cd69b"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport-native-unix-common/4.1.139.Final/netty-transport-native-unix-common-4.1.139.Final.jar.sha512",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport-native-unix-common/4.1.139.Final/netty-transport-native-unix-common-4.1.139.Final.jar.sha512",
+  "exit_code": 0,
+  "bytes": 128,
+  "sha256": "f9423d1db18ede263bd6c1e66e9dc82764f5dbfdb0b751d6ad7a848e4e99c2d3",
+  "sha1": "cb85d584757bcd36dc4f2899e36742089947476d"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport-native-unix-common/4.1.139.Final/netty-transport-native-unix-common-4.1.139.Final.jar.md5",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport-native-unix-common/4.1.139.Final/netty-transport-native-unix-common-4.1.139.Final.jar.md5",
+  "exit_code": 0,
+  "bytes": 32,
+  "sha256": "f8a68e02d0353338a63a2719d037fa28975da52d50a8dd9fb0045dea31437567",
+  "sha1": "e7166f4ab7c8d859e30412d1ba2d30b341399465"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport-native-unix-common/4.1.139.Final/netty-transport-native-unix-common-4.1.139.Final.jar.asc",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport-native-unix-common/4.1.139.Final/netty-transport-native-unix-common-4.1.139.Final.jar.asc",
+  "exit_code": 0,
+  "bytes": 836,
+  "sha256": "7c07043ebf866c252e424f5a0673fe3faef0dc3a9355f1f3116cd0a0f8ee4ec2",
+  "sha1": "941a8e0d4ddade80868218ad5c42b917d3e46451"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport-native-unix-common/4.1.139.Final/netty-transport-native-unix-common-4.1.139.Final.module",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-transport-native-unix-common/4.1.139.Final/netty-transport-native-unix-common-4.1.139.Final.module",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.28.0/commons-compress-1.28.0.pom.sha1",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.28.0/commons-compress-1.28.0.pom.sha1",
+  "exit_code": 0,
+  "bytes": 40,
+  "sha256": "6c967ea67f156d35fa53f85b7e4e877c67696050b831a4c1b41874a927b6ab1b",
+  "sha1": "a4fd4910bf01cfae2658826f27ef6b78a167331e"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.28.0/commons-compress-1.28.0.pom.sha256",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.28.0/commons-compress-1.28.0.pom.sha256",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.28.0/commons-compress-1.28.0.pom.sha512",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.28.0/commons-compress-1.28.0.pom.sha512",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.28.0/commons-compress-1.28.0.pom.md5",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.28.0/commons-compress-1.28.0.pom.md5",
+  "exit_code": 0,
+  "bytes": 32,
+  "sha256": "e575a41a92f9a6c2bf5abc38008f0572951e38a021933696274e8b8069f2bf92",
+  "sha1": "b3d7a506ce88a2435cdb1007e1251d5d660aea70"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.28.0/commons-compress-1.28.0.pom.asc",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.28.0/commons-compress-1.28.0.pom.asc",
+  "exit_code": 0,
+  "bytes": 488,
+  "sha256": "44b37736d26f1e2c60d4d01b2136f9bc3965b264a9055515c7fba90bb5c7d7ab",
+  "sha1": "0bb8135374392a983cb46cbdb2dddb53ce90c5a4"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.28.0/commons-compress-1.28.0.module",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.28.0/commons-compress-1.28.0.module",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.28.0/commons-compress-1.28.0.jar",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.28.0/commons-compress-1.28.0.jar",
+  "exit_code": 0,
+  "bytes": 1117221,
+  "sha256": "e1522945218456f3649a39bc4afd70ce4bd466221519dba7d378f2141a4642ca",
+  "sha1": "e482f2c7a88dac3c497e96aa420b6a769f59c8d7"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.28.0/commons-compress-1.28.0.jar.sha1",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.28.0/commons-compress-1.28.0.jar.sha1",
+  "exit_code": 0,
+  "bytes": 40,
+  "sha256": "6b63a6b7f69ef9aaa4ff65e781a1548f58fdb17632fa662a72396406d64ecd48",
+  "sha1": "06d669514f5da4f15af80339c49d2e1073a831ae"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.28.0/commons-compress-1.28.0.jar.sha256",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.28.0/commons-compress-1.28.0.jar.sha256",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.28.0/commons-compress-1.28.0.jar.sha512",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.28.0/commons-compress-1.28.0.jar.sha512",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.28.0/commons-compress-1.28.0.jar.md5",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.28.0/commons-compress-1.28.0.jar.md5",
+  "exit_code": 0,
+  "bytes": 32,
+  "sha256": "fa93bbb1ade53df08e2caecec01bda25b393fb3e5070589d97ae82402905ed4e",
+  "sha1": "cad01f455e8c93b8981fc5b83bacb85405d64565"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.28.0/commons-compress-1.28.0.jar.asc",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.28.0/commons-compress-1.28.0.jar.asc",
+  "exit_code": 0,
+  "bytes": 488,
+  "sha256": "148c81e18ea9192b8772ae291674106be68577dcea33b365e7de3efbdfc0e508",
+  "sha1": "4bb56a652cbc8260967100cc6adf0acc9a8bc0f3"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.28.0/commons-compress-1.28.0.module",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.28.0/commons-compress-1.28.0.module",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bitbucket/b_c/jose4j/0.9.6/jose4j-0.9.6.pom.sha1",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bitbucket/b_c/jose4j/0.9.6/jose4j-0.9.6.pom.sha1",
+  "exit_code": 0,
+  "bytes": 40,
+  "sha256": "f77d1948dd661ded35eb3da863b9ef2b0fa34e1cfd570943f6f5afd317f06edd",
+  "sha1": "92fdec6c5f3a14d12cddfad6a8dafa3d07fd3b5c"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bitbucket/b_c/jose4j/0.9.6/jose4j-0.9.6.pom.sha256",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bitbucket/b_c/jose4j/0.9.6/jose4j-0.9.6.pom.sha256",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bitbucket/b_c/jose4j/0.9.6/jose4j-0.9.6.pom.sha512",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bitbucket/b_c/jose4j/0.9.6/jose4j-0.9.6.pom.sha512",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bitbucket/b_c/jose4j/0.9.6/jose4j-0.9.6.pom.md5",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bitbucket/b_c/jose4j/0.9.6/jose4j-0.9.6.pom.md5",
+  "exit_code": 0,
+  "bytes": 32,
+  "sha256": "d88c2b97d5291ee2a93a7fd85e2de53eb81be66d16321d7163d9851801c7c106",
+  "sha1": "b658b9aa5810df3e852aa7757f1503174a770229"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bitbucket/b_c/jose4j/0.9.6/jose4j-0.9.6.pom.asc",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bitbucket/b_c/jose4j/0.9.6/jose4j-0.9.6.pom.asc",
+  "exit_code": 0,
+  "bytes": 529,
+  "sha256": "8459b38b255fe9bc32f4f7239473d66741d6c1555190567105df9230c9c0e515",
+  "sha1": "79534b61e8b4770cf4fd5366eec5ab9e4f1ee88d"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bitbucket/b_c/jose4j/0.9.6/jose4j-0.9.6.module",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bitbucket/b_c/jose4j/0.9.6/jose4j-0.9.6.module",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bitbucket/b_c/jose4j/0.9.6/jose4j-0.9.6.jar",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bitbucket/b_c/jose4j/0.9.6/jose4j-0.9.6.jar",
+  "exit_code": 0,
+  "bytes": 299502,
+  "sha256": "7314af50cde9c99e8eaf43eee617a23edcc6bb43036221064355094999d837ef",
+  "sha1": "357a3836bb5da16f314f3a1e954518e5468cd915"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bitbucket/b_c/jose4j/0.9.6/jose4j-0.9.6.jar.sha1",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bitbucket/b_c/jose4j/0.9.6/jose4j-0.9.6.jar.sha1",
+  "exit_code": 0,
+  "bytes": 40,
+  "sha256": "aa616bec6b91f15c49e2623708dbd057c0f9e7f574ead5d611b7f284eb9c956c",
+  "sha1": "e679988d61c384ba7971abf0443b4bec7c6325cc"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bitbucket/b_c/jose4j/0.9.6/jose4j-0.9.6.jar.sha256",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bitbucket/b_c/jose4j/0.9.6/jose4j-0.9.6.jar.sha256",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bitbucket/b_c/jose4j/0.9.6/jose4j-0.9.6.jar.sha512",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bitbucket/b_c/jose4j/0.9.6/jose4j-0.9.6.jar.sha512",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bitbucket/b_c/jose4j/0.9.6/jose4j-0.9.6.jar.md5",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bitbucket/b_c/jose4j/0.9.6/jose4j-0.9.6.jar.md5",
+  "exit_code": 0,
+  "bytes": 32,
+  "sha256": "4db27f888bbc921c38f5ec8ab8120a51191f216824c4988fff7a79416e9aa9d5",
+  "sha1": "bf284773ac8ae2df5051c06fa9ad50eb762aba9f"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bitbucket/b_c/jose4j/0.9.6/jose4j-0.9.6.jar.asc",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bitbucket/b_c/jose4j/0.9.6/jose4j-0.9.6.jar.asc",
+  "exit_code": 0,
+  "bytes": 529,
+  "sha256": "f26b00f12058c86514ac0873b2536bb9ba14949213ff4a1a11bd53773606d1a6",
+  "sha1": "41852582f2f6d6ffb860a20eef52be8d981210d6"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bitbucket/b_c/jose4j/0.9.6/jose4j-0.9.6.module",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bitbucket/b_c/jose4j/0.9.6/jose4j-0.9.6.module",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk18on/1.85/bcprov-jdk18on-1.85.pom.sha1",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk18on/1.85/bcprov-jdk18on-1.85.pom.sha1",
+  "exit_code": 0,
+  "bytes": 41,
+  "sha256": "caed13c472fa165c175a57cb0e456defb07899128587440bffdbfec0b4829d0a",
+  "sha1": "474d43bd675ef402f38158c689bd1fbf6ed34e60"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk18on/1.85/bcprov-jdk18on-1.85.pom.sha256",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk18on/1.85/bcprov-jdk18on-1.85.pom.sha256",
+  "exit_code": 0,
+  "bytes": 65,
+  "sha256": "2ba050ee84231cae980ca737871919df554b1b6b1ce15e7a9b4eb5b1a62df1e9",
+  "sha1": "6c7a4e9f4399c7123bfad6542498341ecceda762"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk18on/1.85/bcprov-jdk18on-1.85.pom.sha512",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk18on/1.85/bcprov-jdk18on-1.85.pom.sha512",
+  "exit_code": 0,
+  "bytes": 129,
+  "sha256": "312f5d3353d249a890ec039cd047b277ee0bea54f6e9ba6b8c809dfb0b20db48",
+  "sha1": "e4b2a9c556ad55bcd077fad605f18bacc6aef7b1"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk18on/1.85/bcprov-jdk18on-1.85.pom.md5",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk18on/1.85/bcprov-jdk18on-1.85.pom.md5",
+  "exit_code": 0,
+  "bytes": 33,
+  "sha256": "6cfbc75bd1d08fc93434cca052a52c7831b7e6103333360c6cc02794894632a9",
+  "sha1": "7dcbca10263f619c9597e97b0ce23e8a65a5eeb3"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk18on/1.85/bcprov-jdk18on-1.85.pom.asc",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk18on/1.85/bcprov-jdk18on-1.85.pom.asc",
+  "exit_code": 0,
+  "bytes": 659,
+  "sha256": "cba296c4432f6801b255ff93c5b06a4df82223e8f3aabfe395bc8da601326e35",
+  "sha1": "a07b71c399234c6889706bb00da17cce97179cb7"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk18on/1.85/bcprov-jdk18on-1.85.module",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk18on/1.85/bcprov-jdk18on-1.85.module",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk18on/1.85/bcprov-jdk18on-1.85.jar",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk18on/1.85/bcprov-jdk18on-1.85.jar",
+  "exit_code": 0,
+  "bytes": 10321819,
+  "sha256": "20af26bf6060bb8005cc2389916812c1e0e998dc48d2ced7131b89461b54cff7",
+  "sha1": "2320b854dffe134687f7266bb22021b779e576d3"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk18on/1.85/bcprov-jdk18on-1.85.jar.sha1",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk18on/1.85/bcprov-jdk18on-1.85.jar.sha1",
+  "exit_code": 0,
+  "bytes": 41,
+  "sha256": "c3dd1539f35779753f9ba239068872c6dc3591d5dcd2666fe752eeb7b79568a9",
+  "sha1": "189188ab96fd7d3827e2ff2c27217d900d1adab9"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk18on/1.85/bcprov-jdk18on-1.85.jar.sha256",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk18on/1.85/bcprov-jdk18on-1.85.jar.sha256",
+  "exit_code": 0,
+  "bytes": 65,
+  "sha256": "08cd2358cf9177be6c522a4aadb6427945c5731bece9ece72a6c907790cf2418",
+  "sha1": "e280fe6f2ca42e5bee14b106d0c8e0a1c8f889d0"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk18on/1.85/bcprov-jdk18on-1.85.jar.sha512",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk18on/1.85/bcprov-jdk18on-1.85.jar.sha512",
+  "exit_code": 0,
+  "bytes": 129,
+  "sha256": "653f02d890d6642f78d71cbb2da4d436524db12a63936508247dd0fbf6753aa1",
+  "sha1": "45e574d9e0f7d7d1763b129b7a06f033f4214ffc"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk18on/1.85/bcprov-jdk18on-1.85.jar.md5",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk18on/1.85/bcprov-jdk18on-1.85.jar.md5",
+  "exit_code": 0,
+  "bytes": 33,
+  "sha256": "f3a744cbd9b1ac7d3e1d4d922451bdca7ac070e61ee5cd2a0caa6e291fec6288",
+  "sha1": "d5dd5542819d9970c6eff2c9e29ad184b128dc1a"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk18on/1.85/bcprov-jdk18on-1.85.jar.asc",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk18on/1.85/bcprov-jdk18on-1.85.jar.asc",
+  "exit_code": 0,
+  "bytes": 659,
+  "sha256": "4061e1994e47fa8e7fc3f95eba8ea25f93b69b0e657b2a132a44529949c46ad2",
+  "sha1": "756aa1ea959d3f3e1c8c9c9c60fb12c396b06651"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk18on/1.85/bcprov-jdk18on-1.85.module",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk18on/1.85/bcprov-jdk18on-1.85.module",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcpkix-jdk18on/1.85/bcpkix-jdk18on-1.85.pom.sha1",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcpkix-jdk18on/1.85/bcpkix-jdk18on-1.85.pom.sha1",
+  "exit_code": 0,
+  "bytes": 41,
+  "sha256": "d2c3423cbc5b2da8ab178f1606b3f5af9cb587920c86edea6728a55ec94c4ecc",
+  "sha1": "28d7eb51f185fd0db809576c02c046c8190bcdeb"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcpkix-jdk18on/1.85/bcpkix-jdk18on-1.85.pom.sha256",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcpkix-jdk18on/1.85/bcpkix-jdk18on-1.85.pom.sha256",
+  "exit_code": 0,
+  "bytes": 65,
+  "sha256": "1be3a12b9a6830113c49c688757412606520c18034c82da0fa8bea888d2bae3a",
+  "sha1": "19abf3335f59800479a6bd9818738d0ba9efe069"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcpkix-jdk18on/1.85/bcpkix-jdk18on-1.85.pom.sha512",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcpkix-jdk18on/1.85/bcpkix-jdk18on-1.85.pom.sha512",
+  "exit_code": 0,
+  "bytes": 129,
+  "sha256": "e9e222270816f5be1b69202fe201660a335b43f972935e39fc150ec7ad09ee24",
+  "sha1": "910848673ce1ffbff8e71c1bceef36d78cee8860"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcpkix-jdk18on/1.85/bcpkix-jdk18on-1.85.pom.md5",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcpkix-jdk18on/1.85/bcpkix-jdk18on-1.85.pom.md5",
+  "exit_code": 0,
+  "bytes": 33,
+  "sha256": "8280c4d561fc7cb807a3aabaa7b88f5beb08a071fa919d99f1e4348258f8fd88",
+  "sha1": "fb9ccfa1db020d53d08d986e39d7d9e0ce89e381"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcpkix-jdk18on/1.85/bcpkix-jdk18on-1.85.pom.asc",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcpkix-jdk18on/1.85/bcpkix-jdk18on-1.85.pom.asc",
+  "exit_code": 0,
+  "bytes": 659,
+  "sha256": "4eb80d5a398cc603f7d53c20424bb40a53de8e74384633db1e4b25a1bb0fd172",
+  "sha1": "13cfc429c0ccc41210b8895b74e90cc3e6affaf3"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcpkix-jdk18on/1.85/bcpkix-jdk18on-1.85.module",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcpkix-jdk18on/1.85/bcpkix-jdk18on-1.85.module",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcpkix-jdk18on/1.85/bcpkix-jdk18on-1.85.jar",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcpkix-jdk18on/1.85/bcpkix-jdk18on-1.85.jar",
+  "exit_code": 0,
+  "bytes": 1315409,
+  "sha256": "c9f82b2d4e99c4bbdfccf684e52cc06ea06a0b567bfd0d08f9c5a3f417055996",
+  "sha1": "b33d047adc6801a1cfc8ffe1634b23b306a670c1"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcpkix-jdk18on/1.85/bcpkix-jdk18on-1.85.jar.sha1",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcpkix-jdk18on/1.85/bcpkix-jdk18on-1.85.jar.sha1",
+  "exit_code": 0,
+  "bytes": 41,
+  "sha256": "ab4be0f9c4e1ce47e9a1e091fb8cf160029016ac63da6e2530a47740f6778c99",
+  "sha1": "46b2ccbefe7b03ab99f8e93d886e3dc33064b03d"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcpkix-jdk18on/1.85/bcpkix-jdk18on-1.85.jar.sha256",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcpkix-jdk18on/1.85/bcpkix-jdk18on-1.85.jar.sha256",
+  "exit_code": 0,
+  "bytes": 65,
+  "sha256": "5378726c5f572b3431cf83ed89ea1752e419c0c705392424e3ef6108a483824a",
+  "sha1": "b0adffc54848ef068efcde753cd9753dc0fc94eb"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcpkix-jdk18on/1.85/bcpkix-jdk18on-1.85.jar.sha512",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcpkix-jdk18on/1.85/bcpkix-jdk18on-1.85.jar.sha512",
+  "exit_code": 0,
+  "bytes": 129,
+  "sha256": "878d6feaa54ac05f46678e7bd33d476db2aed7c40a12f5e5b027caa7b5e47998",
+  "sha1": "3952294009d4cbc1cba28cc3c76fb4c835258506"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcpkix-jdk18on/1.85/bcpkix-jdk18on-1.85.jar.md5",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcpkix-jdk18on/1.85/bcpkix-jdk18on-1.85.jar.md5",
+  "exit_code": 0,
+  "bytes": 33,
+  "sha256": "fd521bc89b41dd5e87e38fadd2c4972d92cae480b6c077e29fafa1f6d48ec1c5",
+  "sha1": "87d4513444a01602ed39b58bfd2072e1f5b25043"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcpkix-jdk18on/1.85/bcpkix-jdk18on-1.85.jar.asc",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcpkix-jdk18on/1.85/bcpkix-jdk18on-1.85.jar.asc",
+  "exit_code": 0,
+  "bytes": 659,
+  "sha256": "ac1fddb65ffc6193397363a565d92731a89b53b6f730f8d963ad3dc320040b41",
+  "sha1": "13b9396eecbc9363a82bde54f186207e400e0d1c"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcpkix-jdk18on/1.85/bcpkix-jdk18on-1.85.module",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcpkix-jdk18on/1.85/bcpkix-jdk18on-1.85.module",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcutil-jdk18on/1.85/bcutil-jdk18on-1.85.pom.sha1",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcutil-jdk18on/1.85/bcutil-jdk18on-1.85.pom.sha1",
+  "exit_code": 0,
+  "bytes": 41,
+  "sha256": "89bb7d42cef73acc0e10f4dd382fb135b606b4c634c1906d79e609f61f21d48f",
+  "sha1": "632a2062ffc4056179b3b2f463c2ac57f1c0cc81"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcutil-jdk18on/1.85/bcutil-jdk18on-1.85.pom.sha256",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcutil-jdk18on/1.85/bcutil-jdk18on-1.85.pom.sha256",
+  "exit_code": 0,
+  "bytes": 65,
+  "sha256": "890a19696e528a4c2af8ad4156e45a56884e0395c5a9694d4d04d85ccdfa2fec",
+  "sha1": "a0b9bcbf5825e76423e9b3b567367d0c6ece8c30"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcutil-jdk18on/1.85/bcutil-jdk18on-1.85.pom.sha512",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcutil-jdk18on/1.85/bcutil-jdk18on-1.85.pom.sha512",
+  "exit_code": 0,
+  "bytes": 129,
+  "sha256": "500127b1e75a1136c3d3583690527b570a781e64724024533799f54c25e40b10",
+  "sha1": "67cd42c8d2243eefe4243556082f92ea42d7d9f1"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcutil-jdk18on/1.85/bcutil-jdk18on-1.85.pom.md5",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcutil-jdk18on/1.85/bcutil-jdk18on-1.85.pom.md5",
+  "exit_code": 0,
+  "bytes": 33,
+  "sha256": "bf2e674f4a025948e10cb4218fd3570e0b42ffd6d0d8ee9029674f083774cadb",
+  "sha1": "63e11b177e126115a7344ee623efbb064f3693f9"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcutil-jdk18on/1.85/bcutil-jdk18on-1.85.pom.asc",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcutil-jdk18on/1.85/bcutil-jdk18on-1.85.pom.asc",
+  "exit_code": 0,
+  "bytes": 659,
+  "sha256": "2ebdf2f2db1b44a74acab47b70e81f09d6d5ce4843dc00ca9da00e4f73687672",
+  "sha1": "828eb2e5fbf133137f7e3eefeeef996028521527"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcutil-jdk18on/1.85/bcutil-jdk18on-1.85.module",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcutil-jdk18on/1.85/bcutil-jdk18on-1.85.module",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcutil-jdk18on/1.85/bcutil-jdk18on-1.85.jar",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcutil-jdk18on/1.85/bcutil-jdk18on-1.85.jar",
+  "exit_code": 0,
+  "bytes": 718812,
+  "sha256": "590f55ed5d68529239898a4a5c4f730b6e37f45d1cfa3fbe51f8485abe32c42d",
+  "sha1": "c41082d6f61628919b675970563f5615e4427c9f"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcutil-jdk18on/1.85/bcutil-jdk18on-1.85.jar.sha1",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcutil-jdk18on/1.85/bcutil-jdk18on-1.85.jar.sha1",
+  "exit_code": 0,
+  "bytes": 41,
+  "sha256": "4e46cddd1f27429091f6c72c4da03ce1009d5b8275fc0dc6aa3c537ba58690bc",
+  "sha1": "0a32d185b313bd5a1f4c1f56cb8f8a5c992237c8"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcutil-jdk18on/1.85/bcutil-jdk18on-1.85.jar.sha256",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcutil-jdk18on/1.85/bcutil-jdk18on-1.85.jar.sha256",
+  "exit_code": 0,
+  "bytes": 65,
+  "sha256": "11aa34c3aa91f99dd69b61e19e7c67717e9c0c63a244eff21dfdba08c6ba001c",
+  "sha1": "b6f338785cb67aafc6729daf82aaf372c58ef059"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcutil-jdk18on/1.85/bcutil-jdk18on-1.85.jar.sha512",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcutil-jdk18on/1.85/bcutil-jdk18on-1.85.jar.sha512",
+  "exit_code": 0,
+  "bytes": 129,
+  "sha256": "fe5a3822b2f25d90ae4af3739a3bf2fb73368aa78aabf5250678aaa5ba24ae44",
+  "sha1": "0581fda8fbf96873282d011262b5f623ba00dd04"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcutil-jdk18on/1.85/bcutil-jdk18on-1.85.jar.md5",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcutil-jdk18on/1.85/bcutil-jdk18on-1.85.jar.md5",
+  "exit_code": 0,
+  "bytes": 33,
+  "sha256": "32ca7bcbd0c90adde896c328b4ded47d0b9ed7d4d236042d079301fd98ed6bc9",
+  "sha1": "c35d3e64b2d6315532930e3ed84537e21c5a8f8e"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcutil-jdk18on/1.85/bcutil-jdk18on-1.85.jar.asc",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcutil-jdk18on/1.85/bcutil-jdk18on-1.85.jar.asc",
+  "exit_code": 0,
+  "bytes": 659,
+  "sha256": "b81b169bd4a450f68bf7aafe98ab6f4ab9e34bc634aae3c187b3557b45941996",
+  "sha1": "c5d4210da1cf00711a9372fba8d708edbe6ebaf4"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcutil-jdk18on/1.85/bcutil-jdk18on-1.85.module",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcutil-jdk18on/1.85/bcutil-jdk18on-1.85.module",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.pom.sha1",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.pom.sha1",
+  "exit_code": 0,
+  "bytes": 40,
+  "sha256": "7634695b6b479c56bb7d6594d4dbb89914020c2a7c80121dca53cf70889d83c6",
+  "sha1": "ee90406a4372bc6e50e561041b49b4bc7523d386"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.pom.sha256",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.pom.sha256",
+  "exit_code": 0,
+  "bytes": 64,
+  "sha256": "c71ae5b9f87876611e0000475d246df9fda2544cc0a96fa398dbf718289a6a96",
+  "sha1": "7c1eb98ba4ff9a80956de5e5b06c8484e1814dc5"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.pom.sha512",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.pom.sha512",
+  "exit_code": 0,
+  "bytes": 128,
+  "sha256": "ad74ee795038f41690f6d94c0997268f2ebe896e3f03856381fd66b6741e1089",
+  "sha1": "c5512428d4a55bc79480fa45146552cbb64475b7"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.pom.md5",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.pom.md5",
+  "exit_code": 0,
+  "bytes": 32,
+  "sha256": "da60d98c1d58acc39466fe90d0ec611e44da0a7688481f8d9c62aa25feb7a705",
+  "sha1": "e11d920d73807ba548a868d52ca60a6658b57b9d"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.pom.asc",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.pom.asc",
+  "exit_code": 0,
+  "bytes": 529,
+  "sha256": "31d4d50d41f71347cd93d5dbb6e7a68dffff9996a8c32ce665b9f68ee78c265b",
+  "sha1": "4e8097b52c4cfeff6b9ebf2cf8944a095c574cbb"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.module",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.module",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.jar",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.jar",
+  "exit_code": 0,
+  "bytes": 327806,
+  "sha256": "0b20f45e3a0fd8f0d12cdc5316b06776e902b1365db00118876f9175c60f302c",
+  "sha1": "dc15dff8f701b227ee523eeb7a17f77c10eafe2f"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.jar.sha1",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.jar.sha1",
+  "exit_code": 0,
+  "bytes": 40,
+  "sha256": "d12ea8ffc0ccb1b75532085b1ca3a716a1f4d611f9b1425a481e900a2141a658",
+  "sha1": "b9415f25cdceda8b01d6f38c0349f7b8bdf4f08c"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.jar.sha256",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.jar.sha256",
+  "exit_code": 0,
+  "bytes": 64,
+  "sha256": "8744efe343fabf9d22b07894beb4222c4a4f17ce559d5bafbceb8e5ce12bda38",
+  "sha1": "99eda8d8d750e5b6efa6fb6e48350cf41a8887ad"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.jar.sha512",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.jar.sha512",
+  "exit_code": 0,
+  "bytes": 128,
+  "sha256": "c5c1cc504bb071508703b42be1b29654092305e9cf38b3d6addfeead9b164c62",
+  "sha1": "660512cee777f8c2c7f795058e28155c613f1a49"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.jar.md5",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.jar.md5",
+  "exit_code": 0,
+  "bytes": 32,
+  "sha256": "990bddd2ad957cb3b9b3a99bda65da694c30fc19c3c836f770e796fb6770c071",
+  "sha1": "f4eac281773deb278507227f3aa976917d1b6a80"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.jar.asc",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.jar.asc",
+  "exit_code": 0,
+  "bytes": 529,
+  "sha256": "8f5e447cbaf12d1e0b93d6270ddbdb494fe7d8b80b5fb08e22c266aa2f03f95e",
+  "sha1": "42e1d9839d5d3596c7f7c4d4eea4d85c6e58070e"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.module",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.module",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.19.0/commons-codec-1.19.0.pom.sha1",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.19.0/commons-codec-1.19.0.pom.sha1",
+  "exit_code": 0,
+  "bytes": 40,
+  "sha256": "0f99c476da0ee8b675792e00b876d67dbe50dd25a4ccba18223926e27b7a4081",
+  "sha1": "594d84de5121fe080668de5a9c66b438933308bb"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.19.0/commons-codec-1.19.0.pom.sha256",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.19.0/commons-codec-1.19.0.pom.sha256",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.19.0/commons-codec-1.19.0.pom.sha512",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.19.0/commons-codec-1.19.0.pom.sha512",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.19.0/commons-codec-1.19.0.pom.md5",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.19.0/commons-codec-1.19.0.pom.md5",
+  "exit_code": 0,
+  "bytes": 32,
+  "sha256": "477d79f2139806077a75a4fc748329811181b9dd91b90e9801622ea3c48fc4ff",
+  "sha1": "392ebefcaa5d8349ea4cd20aeddcbedab74bc574"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.19.0/commons-codec-1.19.0.pom.asc",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.19.0/commons-codec-1.19.0.pom.asc",
+  "exit_code": 0,
+  "bytes": 488,
+  "sha256": "d5e8a5f802f0dbf1c9653d162513f3658eb0c84e386c2eebc4cc172fb32b82b1",
+  "sha1": "a762eed57568bdcf9639e88bb87b248cda0bde62"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.19.0/commons-codec-1.19.0.module",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.19.0/commons-codec-1.19.0.module",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.19.0/commons-codec-1.19.0.jar",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.19.0/commons-codec-1.19.0.jar",
+  "exit_code": 0,
+  "bytes": 374716,
+  "sha256": "5c3881e4f556855e9c532927ee0c9dfde94cc66760d5805c031a59887070af5f",
+  "sha1": "8c0dbe3ae883fceda9b50a6c76e745e548073388"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.19.0/commons-codec-1.19.0.jar.sha1",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.19.0/commons-codec-1.19.0.jar.sha1",
+  "exit_code": 0,
+  "bytes": 40,
+  "sha256": "2743ba46f92c3a973ad429fe0a7afb0c4742f74fc95129f29ea9e4e3751121c8",
+  "sha1": "c091eea218de8190a7986bf29e5a6a0421531536"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.19.0/commons-codec-1.19.0.jar.sha256",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.19.0/commons-codec-1.19.0.jar.sha256",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.19.0/commons-codec-1.19.0.jar.sha512",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.19.0/commons-codec-1.19.0.jar.sha512",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.19.0/commons-codec-1.19.0.jar.md5",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.19.0/commons-codec-1.19.0.jar.md5",
+  "exit_code": 0,
+  "bytes": 32,
+  "sha256": "26c56d48c2d0c9fb69f6b494a19102ea661d47248f81382a5ce287cbfd51f902",
+  "sha1": "53c8ab50d24a066d835da178beea75d9ab3c689b"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.19.0/commons-codec-1.19.0.jar.asc",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.19.0/commons-codec-1.19.0.jar.asc",
+  "exit_code": 0,
+  "bytes": 488,
+  "sha256": "93bb1e384aaeb2dc8a420d40a3bf4ec96261818c129e0cd006b7f7c3f1f26746",
+  "sha1": "5b2b90a93d0a1def849c9d682396305a2eaf494b"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.19.0/commons-codec-1.19.0.module",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.19.0/commons-codec-1.19.0.module",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/commons-io/commons-io/2.20.0/commons-io-2.20.0.pom.sha1",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/commons-io/commons-io/2.20.0/commons-io-2.20.0.pom.sha1",
+  "exit_code": 0,
+  "bytes": 40,
+  "sha256": "c2f9bfcbcadcc75e99d93353ea3a5ed438cf7697717610b50247a786ed9b400b",
+  "sha1": "885d27698523660af8727a2fca77c46c26fe0304"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/commons-io/commons-io/2.20.0/commons-io-2.20.0.pom.sha256",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/commons-io/commons-io/2.20.0/commons-io-2.20.0.pom.sha256",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/commons-io/commons-io/2.20.0/commons-io-2.20.0.pom.sha512",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/commons-io/commons-io/2.20.0/commons-io-2.20.0.pom.sha512",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/commons-io/commons-io/2.20.0/commons-io-2.20.0.pom.md5",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/commons-io/commons-io/2.20.0/commons-io-2.20.0.pom.md5",
+  "exit_code": 0,
+  "bytes": 32,
+  "sha256": "abe58beb5bffaf30ff5be504374ce52fa48d8a796aeca64814eb4df076f41a53",
+  "sha1": "db371d71d57d2f649d7ea9ef97c71ca4dbdf899e"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/commons-io/commons-io/2.20.0/commons-io-2.20.0.pom.asc",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/commons-io/commons-io/2.20.0/commons-io-2.20.0.pom.asc",
+  "exit_code": 0,
+  "bytes": 488,
+  "sha256": "1919b3470cd05522ff34ac1b13261f23112863d7ed31da12fab1ee3afe85e703",
+  "sha1": "96f4ede4c13e0a68527121dad2587048a2966861"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/commons-io/commons-io/2.20.0/commons-io-2.20.0.module",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/commons-io/commons-io/2.20.0/commons-io-2.20.0.module",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/commons-io/commons-io/2.20.0/commons-io-2.20.0.jar",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/commons-io/commons-io/2.20.0/commons-io-2.20.0.jar",
+  "exit_code": 0,
+  "bytes": 563971,
+  "sha256": "df90bba0fe3cb586b7f164e78fe8f8f4da3f2dd5c27fa645f888100ccc25dd72",
+  "sha1": "36f3474daec2849c149e877614e7f979b2082cd2"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/commons-io/commons-io/2.20.0/commons-io-2.20.0.jar.sha1",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/commons-io/commons-io/2.20.0/commons-io-2.20.0.jar.sha1",
+  "exit_code": 0,
+  "bytes": 40,
+  "sha256": "a5fa3f6a29b7de92d227d7e3736cd89f9c0e20a90ffbf988421cb0ff44e65124",
+  "sha1": "03fde4480f088b79f8f5560dc061ee976590f500"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/commons-io/commons-io/2.20.0/commons-io-2.20.0.jar.sha256",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/commons-io/commons-io/2.20.0/commons-io-2.20.0.jar.sha256",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/commons-io/commons-io/2.20.0/commons-io-2.20.0.jar.sha512",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/commons-io/commons-io/2.20.0/commons-io-2.20.0.jar.sha512",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/commons-io/commons-io/2.20.0/commons-io-2.20.0.jar.md5",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/commons-io/commons-io/2.20.0/commons-io-2.20.0.jar.md5",
+  "exit_code": 0,
+  "bytes": 32,
+  "sha256": "6d85de732d1b95fef4afca8c2f53b04bbe6be4f352c16f7427901b11a4ce2368",
+  "sha1": "79da1f8d306b7d64b6d12843894ea7737b3093e6"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/commons-io/commons-io/2.20.0/commons-io-2.20.0.jar.asc",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/commons-io/commons-io/2.20.0/commons-io-2.20.0.jar.asc",
+  "exit_code": 0,
+  "bytes": 488,
+  "sha256": "1fdd85b2b81ae30c89736f33e73c2b511ce0959737c9bae0200cdc4d9320b345",
+  "sha1": "cb4e25bf7357417676518adffdf5f184718b0ae7"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/commons-io/commons-io/2.20.0/commons-io-2.20.0.module",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/commons-io/commons-io/2.20.0/commons-io-2.20.0.module",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.pom.sha1",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.pom.sha1",
+  "exit_code": 0,
+  "bytes": 40,
+  "sha256": "e7fdbf8698777b5b68bad7e22634136701c6f530ce2305eb6c159f3f2b672b5b",
+  "sha1": "76bec0a26a40804b346fd73f0ee981afe52edf2b"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.pom.sha256",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.pom.sha256",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.pom.sha512",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.pom.sha512",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.pom.md5",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.pom.md5",
+  "exit_code": 0,
+  "bytes": 32,
+  "sha256": "d47e28977aea64369a1822b5ad5e98b7302477b6f7ff6855c106bfd26ae95817",
+  "sha1": "3c4051096ddbb47e95689d10100a641626ac5f71"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.pom.asc",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.pom.asc",
+  "exit_code": 0,
+  "bytes": 488,
+  "sha256": "9a1c8a94a2ed8cc2c86d653c53b479adc31ea91b539b70d460bd384798098fa9",
+  "sha1": "6fb97c93d4b9290da44a35072ba85cd29a00938b"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.module",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.module",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.jar",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.jar",
+  "exit_code": 0,
+  "bytes": 702952,
+  "sha256": "4eeeae8d20c078abb64b015ec158add383ac581571cddc45c68f0c9ae0230720",
+  "sha1": "fb14946f0e39748a6571de0635acbe44e7885491"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.jar.sha1",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.jar.sha1",
+  "exit_code": 0,
+  "bytes": 40,
+  "sha256": "785f81d85b0151034792de1a038c7177fef9bfac8e72d9b599c7f6b23f1dd65f",
+  "sha1": "47413b0cee191c826151a49c27f190f7c5a54577"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.jar.sha256",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.jar.sha256",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.jar.sha512",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.jar.sha512",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.jar.md5",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.jar.md5",
+  "exit_code": 0,
+  "bytes": 32,
+  "sha256": "2f04c6cbcfa91ba989d56cf9ccfa8709081918f3568a0efe6ea49e548415a6ee",
+  "sha1": "7279f7198eff2379c4d74d65a87bca24ac3ab93b"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.jar.asc",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.jar.asc",
+  "exit_code": 0,
+  "bytes": 488,
+  "sha256": "6ae695bbbb9c2101aba87d2bea0ed5d36017d10f3838e89860fa52e66c89bbae",
+  "sha1": "00ac90d99bc927ad10b845ca7498e2cb8bc832a5"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.module",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.module",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.pom.sha1",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.pom.sha1",
+  "exit_code": 0,
+  "bytes": 40,
+  "sha256": "8be628f267e3a642fd545bec617ea99c391fe3d6600f2c8783faa5b75e0815f1",
+  "sha1": "74d8167b41be04fa3dd4030c310c060c68b71a7c"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.pom.sha256",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.pom.sha256",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.pom.sha512",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.pom.sha512",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.pom.md5",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.pom.md5",
+  "exit_code": 0,
+  "bytes": 32,
+  "sha256": "c28e899c47370e644c0be7aa1666bc6ef19d8d49a43dcea24b69c271e8cfa21b",
+  "sha1": "24754b41d8549d52447923ca0fc5eec18b8e90ee"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.pom.asc",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.pom.asc",
+  "exit_code": 0,
+  "bytes": 455,
+  "sha256": "6cc08d231150267cab6755766fae321083d20c77309708a8fbbb5d750701bbf4",
+  "sha1": "c0c528501fc930498169b1cab520b87e19c50321"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.module",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.module",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar",
+  "exit_code": 0,
+  "bytes": 41125,
+  "sha256": "d3ef575e3e4979678dc01bf1dcce51021493b4d11fb7f1be8ad982877c16a1c0",
+  "sha1": "6c62681a2f655b49963a5983b8b0950a6120ae14"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar.sha1",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar.sha1",
+  "exit_code": 0,
+  "bytes": 40,
+  "sha256": "accd97159a37f3e15a6f96409648ab739a834e683c4967518e4dd41ea39434da",
+  "sha1": "2b35aca84af9d816ba879910f9389b95f1cae3df"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar.sha256",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar.sha256",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar.sha512",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar.sha512",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar.md5",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar.md5",
+  "exit_code": 0,
+  "bytes": 32,
+  "sha256": "17272d40214009a4228488aca98888384e64b309f20d8088664de5544acc37b5",
+  "sha1": "70e1b2be88c1882940b299643b787e9130cea04f"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar.asc",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar.asc",
+  "exit_code": 0,
+  "bytes": 455,
+  "sha256": "7f60e6c3dec52d947b6cf8750b8d14c5b8ccf6b66ff79ab583d62010f7e2696d",
+  "sha1": "f35953d25c0765d7648c0ace34b5f276fcc2ac11"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.module",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.module",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-parent/4.1.139.Final/netty-parent-4.1.139.Final.pom.sha1",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-parent/4.1.139.Final/netty-parent-4.1.139.Final.pom.sha1",
+  "exit_code": 0,
+  "bytes": 40,
+  "sha256": "57e22c25d8286cc091728414bc11d74dec565e8b54c152ed7aed684497694c77",
+  "sha1": "59bda14dfa425a4f33abc2470121245f5a28556f"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-parent/4.1.139.Final/netty-parent-4.1.139.Final.pom.sha256",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-parent/4.1.139.Final/netty-parent-4.1.139.Final.pom.sha256",
+  "exit_code": 0,
+  "bytes": 64,
+  "sha256": "f069261d4f4f57bb4161965822285e8e66411d2499c4f808ea3425b91e2909f7",
+  "sha1": "a664fa596403933c4468780bd44670c8e27e5a5d"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-parent/4.1.139.Final/netty-parent-4.1.139.Final.pom.sha512",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-parent/4.1.139.Final/netty-parent-4.1.139.Final.pom.sha512",
+  "exit_code": 0,
+  "bytes": 128,
+  "sha256": "207a104440b755ea11aef3bcd3d2ac4ebd0c3b634615c886ae6557ae0621a109",
+  "sha1": "4f8f17700ae093aab9184620981f8469e50e233e"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-parent/4.1.139.Final/netty-parent-4.1.139.Final.pom.md5",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-parent/4.1.139.Final/netty-parent-4.1.139.Final.pom.md5",
+  "exit_code": 0,
+  "bytes": 32,
+  "sha256": "a0e94bdd25bf42ff0b574e496704589e167b40c66103bde9ba26535b0ef43161",
+  "sha1": "7b8cf516093c439dc2b4afe2cafa62c258268370"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/io/netty/netty-parent/4.1.139.Final/netty-parent-4.1.139.Final.pom.asc",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/io/netty/netty-parent/4.1.139.Final/netty-parent-4.1.139.Final.pom.asc",
+  "exit_code": 0,
+  "bytes": 836,
+  "sha256": "f16ea1e65fb36acf8e43201c6f7011bbf10300a564daf7e099822255661e5444",
+  "sha1": "bf72cc0f1cfd8dc5614f6979e5d353efa9351550"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/85/commons-parent-85.pom.sha1",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/85/commons-parent-85.pom.sha1",
+  "exit_code": 0,
+  "bytes": 40,
+  "sha256": "1c5cfa37056e31ed4c15cc19ca0e3b0198db98111eaa4493823282b14454b6c8",
+  "sha1": "14f30ed9ebd1b383bc70e2ae33a0216b8adf65f7"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/85/commons-parent-85.pom.sha256",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/85/commons-parent-85.pom.sha256",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/85/commons-parent-85.pom.sha512",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/85/commons-parent-85.pom.sha512",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/85/commons-parent-85.pom.md5",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/85/commons-parent-85.pom.md5",
+  "exit_code": 0,
+  "bytes": 32,
+  "sha256": "3e356ffd028310105a4803a1012eefd89791fcab1f9ceac98cc4850304ab9eef",
+  "sha1": "1d79f89bc6d5c940bb60c3778269952a52f5371b"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/85/commons-parent-85.pom.asc",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/85/commons-parent-85.pom.asc",
+  "exit_code": 0,
+  "bytes": 488,
+  "sha256": "bd37214b95e99149fb16f94c12c849203b696b2251fc7ae6f49794bada4f8eed",
+  "sha1": "49a2f58d630dbb12948801922e8b31d7c5258e85"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/apache/apache/35/apache-35.pom.sha1",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/apache/apache/35/apache-35.pom.sha1",
+  "exit_code": 0,
+  "bytes": 40,
+  "sha256": "ac0b7f63a0fc8f8033b505cecca656db59be8b20d1c7076b72167fadced2e52a",
+  "sha1": "86d8d54405678d438861c964ff13cae2b452503d"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/apache/apache/35/apache-35.pom.sha256",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/apache/apache/35/apache-35.pom.sha256",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/apache/apache/35/apache-35.pom.sha512",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/apache/apache/35/apache-35.pom.sha512",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/apache/apache/35/apache-35.pom.md5",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/apache/apache/35/apache-35.pom.md5",
+  "exit_code": 0,
+  "bytes": 32,
+  "sha256": "a34908d84ef8e0fe34bb588da1aa3ed168ef6654b0010fd983b111c6aa03222d",
+  "sha1": "623b6eb479e95bc73ae78e7b0153a243db6548f5"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/apache/apache/35/apache-35.pom.asc",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/apache/apache/35/apache-35.pom.asc",
+  "exit_code": 0,
+  "bytes": 866,
+  "sha256": "e6d1a588c97eb66e80adbd4df33ec441826ca10fd1f0d841c2f0489b1d8d6fb1",
+  "sha1": "95e048905eff9c44b42499fd122555fd5a9c2f73"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.7.36/slf4j-parent-1.7.36.pom.sha1",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.7.36/slf4j-parent-1.7.36.pom.sha1",
+  "exit_code": 0,
+  "bytes": 40,
+  "sha256": "bcd9e1574545b9771dfaf587af9b76184e43b54c4c299744e3978ee3d385fd4a",
+  "sha1": "ab1610c98baa3092abbbc10c368f2f5b4d0f1839"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.7.36/slf4j-parent-1.7.36.pom.sha256",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.7.36/slf4j-parent-1.7.36.pom.sha256",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.7.36/slf4j-parent-1.7.36.pom.sha512",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.7.36/slf4j-parent-1.7.36.pom.sha512",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.7.36/slf4j-parent-1.7.36.pom.md5",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.7.36/slf4j-parent-1.7.36.pom.md5",
+  "exit_code": 0,
+  "bytes": 32,
+  "sha256": "5c47df6489151628387edd5daad75dff55e000c4ae97d23808a0cd67091e5558",
+  "sha1": "7710c394efdac5998bfcf5cb790a509db005056f"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.7.36/slf4j-parent-1.7.36.pom.asc",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.7.36/slf4j-parent-1.7.36.pom.asc",
+  "exit_code": 0,
+  "bytes": 455,
+  "sha256": "c0fb5adfbb618e4669b6597c4bd24483f5a127758221d86f7ba2a6e6fc244004",
+  "sha1": "98fceb0d8820f7f28f23c86f4728f3904ef474ef"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/9/oss-parent-9.pom.sha1",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/9/oss-parent-9.pom.sha1",
+  "exit_code": 0,
+  "bytes": 40,
+  "sha256": "8a199b9e7e3f00539c139079c0b1a55bcbace4d984927be1b8fa36d10bf70106",
+  "sha1": "bcd3b8d7b81f4ba24e4cc28eed621b88aa17b8ac"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/9/oss-parent-9.pom.sha256",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/9/oss-parent-9.pom.sha256",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/9/oss-parent-9.pom.sha512",
+  "http_code": "404",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/9/oss-parent-9.pom.sha512",
+  "exit_code": 0
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/9/oss-parent-9.pom.md5",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/9/oss-parent-9.pom.md5",
+  "exit_code": 0,
+  "bytes": 32,
+  "sha256": "b55f848a5942042c9572a3d4c9b7cbf85478e90dae572e53dfbecc5bfc222633",
+  "sha1": "f6f18de7ac82be3914e2f27ade163cb6521816d9"
+ },
+ {
+  "url": "https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/9/oss-parent-9.pom.asc",
+  "http_code": "200",
+  "effective_url": "https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/9/oss-parent-9.pom.asc",
+  "exit_code": 0,
+  "bytes": 189,
+  "sha256": "051df1e6528b6fa193a6070002700f09b81d310abe0ce65de5534654a954c99d",
+  "sha1": "c0cc792081ee1dd553c66f74b707759e561143f5"
+ }
+]

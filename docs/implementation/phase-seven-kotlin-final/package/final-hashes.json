@@ -1,0 +1,63 @@
+{
+  "production": {
+    "classes_sha256": "a40ab5307ae209e8629aad3d6a1dfdff10fb12012522b8d10004f8c898f75646",
+    "manifest_sha256": "646d959737f20b207541d23fd1650358abe85edfbef501b3b0fca645000fe3af"
+  },
+  "full_tests": {
+    "dex_sha256": "e43b00ec0bad8a684be077d5d65ee274c7961c25bd44f46816e4ec145f9e0d20",
+    "classes_sha256": "9b85414f1c4274833b1f13b53b79f7567cc6e7a4e6582882dc1a9d796c778ead",
+    "manifest_sha256": "1cb40434ecc6a3bbe2c55fce1281ef4019ccd2984c82c88da6de1d220b2a73bb"
+  },
+  "split_tests": {
+    "dex_sha256": "b18e2c185c4bc7c868685aac32976e318c751bf88552ef62f2092a3f661b5e0f",
+    "runtime_dex_sha256": "6403125c1456a5d4ce2ff79d3d8d52d27458ac281126865f426dd73b454a36bf",
+    "manifest_sha256": "a094d7b67591a91c52c8e0452660592d1c10df0b876725c0640aeee9683a5216"
+  },
+  "consumer": {
+    "apk_sha256": "85d2083701f41e14116ef19bc1f23cbbf9a3fc1e198a873fcba3772687712b25",
+    "aar_sha256": "f2e8a16fcc1692d8484d8cc819a85aa27a9d2ce754b30321cd89ec1f689e0bc7",
+    "app_id": "dev.hoyadb.consumer.pac27769a949f4844",
+    "runtime_manifest_sha256": "3ec69b5a77bba081c87c571b9e1c91cbff3d8ef279d99de3dec93acbd8f63343",
+    "pids": {
+      "full": 8155,
+      "seed": 8406,
+      "restart": 8450
+    }
+  },
+  "kotlin_sources": {
+    "bindings/android/src/main/java/dev/hoyadb/NativeBridge.java": "01ef6f9baaffa25ae976768c72aef947dae7fa350557aa3837964af5a53b95e7",
+    "bindings/android/src/main/kotlin/dev/hoyadb/Commands.kt": "012e540e51d331f4c7b1776000930f7b866c91b19a1610d5ab08fe69d6c1a65b",
+    "bindings/android/src/main/kotlin/dev/hoyadb/Database.kt": "63b32ce611bf2dbc0328dc186c00761a44b6bbf6ae2f7005293176ac70e86d6b",
+    "bindings/android/src/main/kotlin/dev/hoyadb/Entities.kt": "ba534da201735869f0a1c74780804ed6f9fe2f1e12bbc75abaa10da9bbd4b9e4",
+    "bindings/android/src/main/kotlin/dev/hoyadb/ExplicitDrain.kt": "cfcc46a9a4e8a307a1c0db5658bd98874bd1ead678b01172037abf606cf7b6be",
+    "bindings/android/src/main/kotlin/dev/hoyadb/HoyaNativeTransport.kt": "d231e562095a1e0d9cdc79d35b8d6d720612fa1945eed34d20db0b05204e7697",
+    "bindings/android/src/main/kotlin/dev/hoyadb/Lifetime.kt": "8438f7f9d0794406c0fd5b2d4b04dffab709c2297701d066b81be60ace804b9f",
+    "bindings/android/src/main/kotlin/dev/hoyadb/Models.kt": "e31613f9d5b3d8e3e91fc0c128ed85a9a63348e5562d3cc9e6cd9404f6720e49",
+    "bindings/android/src/main/kotlin/dev/hoyadb/Observations.kt": "23876340a728e287964a8331ae8fb13544fcd4e8b9ae2fa4fa783520ce8f0b0f",
+    "bindings/android/src/main/kotlin/dev/hoyadb/Queue.kt": "fcf64767b8214a8fa8db69389729a03bb5ce4011e95964e6c4b0c88fdb9d6f33",
+    "bindings/android/src/main/kotlin/dev/hoyadb/Runtime.kt": "02891aebeb1562898dc2b9694acac4eea18a8c93fc4746e2caeb09e2c104950d",
+    "bindings/android/src/main/kotlin/dev/hoyadb/Sync.kt": "83a4f629435e44e6c09b397643fa498bc8814a71eee83d6017b9f8c14750f041",
+    "bindings/android/src/main/kotlin/dev/hoyadb/SyncModels.kt": "d4bc42fe7fa9a90877333fa049a8dc01303b2f806a23b9249460dfbdc85aa99d",
+    "bindings/android/src/main/kotlin/dev/hoyadb/Values.kt": "d293ad959f24200bd03fa833afc8cbc708ddf3bc3a658c87c79303749e0ae831",
+    "bindings/android/src/main/kotlin/dev/hoyadb/testing/FakeTransport.kt": "8ddae00074600805c595bc95f92ac4c7395dbae4a6e61463f9d819c64e9fdf67",
+    "bindings/android/src/main/kotlin/dev/hoyadb/testing/Testing.kt": "e2d5aae5a67939d664958ee9e3ecf17f21b016d51617704891be5995e9b7c500",
+    "bindings/android/src/test/kotlin/dev/hoyadb/CommandTests.kt": "6141d8282460bc463777b212f683b29f924d580f44b01de5554a12f53ad15a54",
+    "bindings/android/src/test/kotlin/dev/hoyadb/DrainGenerationTests.kt": "d25ef7edcdf6512665b58b49b50550ed9c464cbfaa62781fee089877dc249a4e",
+    "bindings/android/src/test/kotlin/dev/hoyadb/EntityTests.kt": "c8b73d1bf1ae48c068779a64f616490cfa952faf7174545b440df146b5c00c9a",
+    "bindings/android/src/test/kotlin/dev/hoyadb/ExplicitDrainTests.kt": "1947e5df9bae2bcf2933de8474920b7e6700d7acb45e882c43c3d1fb1b886d5b",
+    "bindings/android/src/test/kotlin/dev/hoyadb/LifetimeTests.kt": "5c31a9b3f1ba2ec33d0ac1294e898c2b030a7d60e60910d9c8e2d48346aaafc1",
+    "bindings/android/src/test/kotlin/dev/hoyadb/ModelTests.kt": "bac6408e534c2e71684326e0be15bd9138949af065365497af58af9603ed6109",
+    "bindings/android/src/test/kotlin/dev/hoyadb/ObservationTests.kt": "a4cc119d649354819d657b61c26c99df80a778cd0de1ad4baf7f324d70b51036",
+    "bindings/android/src/test/kotlin/dev/hoyadb/ObserverRetirementTests.kt": "2c2bd86b3692b5cd800f405d7865f1d2a5e706c3414936464ecfe5949c779140",
+    "bindings/android/src/test/kotlin/dev/hoyadb/OwnerTests.kt": "43e7f24561954895f4ff34708a59a082c89e82e221eca1964061c769870f1ba5",
+    "bindings/android/src/test/kotlin/dev/hoyadb/ProtectedOpenTests.kt": "e254be567da81358b729416c5e654fd61fbedc544c1b8f09ade14a0190d4098f",
+    "bindings/android/src/test/kotlin/dev/hoyadb/QueueTests.kt": "3a6a6ff03a0f00d719493098dfc7719bd5d7b53698ba31b4ed0606bb47cc3fef",
+    "bindings/android/src/test/kotlin/dev/hoyadb/ReleaseFailureTests.kt": "bb453cc812e61748ff0235369078d805185ef108f3b47173796f71170dc784a1",
+    "bindings/android/src/test/kotlin/dev/hoyadb/SdkTests.kt": "9028bd7ff6fb8cc9535559c841bca1212a45197cb5d231f52ddf1fde689314e3",
+    "bindings/android/src/test/kotlin/dev/hoyadb/SyncDriverTests.kt": "755f857328043c033874acdecc48bbc63e569ce79b9d86ddd03fdc18d24e5018",
+    "bindings/android/src/test/kotlin/dev/hoyadb/SyncModelTests.kt": "aa34150cf26a4e5a50513ff3eb580d4aae40818b96d3f805855b1ed4809a207a",
+    "bindings/android/src/test/kotlin/dev/hoyadb/TestingHelpersTests.kt": "99509bed02f043134f47827b31e8e0dd076330f3a1b4108188900f5ef86d5737",
+    "bindings/android/src/test/kotlin/dev/hoyadb/TimerFailureTests.kt": "57abb9f284e43a3b57511b90ab4cd7a30aeb16ec8e7d2948836f501202824879",
+    "bindings/android/src/test/kotlin/dev/hoyadb/TransportTests.kt": "7766cc6fba77e8be0b003cb0861da6fa6c08fe911d6be5ce2db35ac2e60f7549"
+  }
+}

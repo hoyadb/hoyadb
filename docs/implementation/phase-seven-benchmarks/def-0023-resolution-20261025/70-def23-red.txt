@@ -1,0 +1,65 @@
+test_DEF0023_retiring_waiter_never_clears_a_newer_waiter_registration (test_browser_server.BrowserControllerTests.test_DEF0023_retiring_waiter_never_clears_a_newer_waiter_registration) ... FAIL
+test_DEF0023_waiter_retires_even_when_start_and_completion_both_win_and_cannot_claim_a_later_permit (test_browser_server.BrowserControllerTests.test_DEF0023_waiter_retires_even_when_start_and_completion_both_win_and_cannot_claim_a_later_permit) ... FAIL
+test_DEF0023_waiter_retires_when_a_direct_start_wins_the_lock_for_each_start_route (test_browser_server.BrowserControllerTests.test_DEF0023_waiter_retires_when_a_direct_start_wins_the_lock_for_each_start_route) ... 
+  test_DEF0023_waiter_retires_when_a_direct_start_wins_the_lock_for_each_start_route (test_browser_server.BrowserControllerTests.test_DEF0023_waiter_retires_when_a_direct_start_wins_the_lock_for_each_start_route) (route='warm') ... FAIL
+  test_DEF0023_waiter_retires_when_a_direct_start_wins_the_lock_for_each_start_route (test_browser_server.BrowserControllerTests.test_DEF0023_waiter_retires_when_a_direct_start_wins_the_lock_for_each_start_route) (route='cold') ... FAIL
+  test_DEF0023_waiter_retires_when_a_direct_start_wins_the_lock_for_each_start_route (test_browser_server.BrowserControllerTests.test_DEF0023_waiter_retires_when_a_direct_start_wins_the_lock_for_each_start_route) (route='resources') ... FAIL
+
+======================================================================
+FAIL: test_DEF0023_retiring_waiter_never_clears_a_newer_waiter_registration (test_browser_server.BrowserControllerTests.test_DEF0023_retiring_waiter_never_clears_a_newer_waiter_registration)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/test_browser_server.py", line 698, in test_DEF0023_retiring_waiter_never_clears_a_newer_waiter_registration
+    self.assertEqual(outcome, {"error": "next permit requested during an active worker"})
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {} != {'error': 'next permit requested during an active worker'}
+- {}
++ {'error': 'next permit requested during an active worker'}
+
+======================================================================
+FAIL: test_DEF0023_waiter_retires_even_when_start_and_completion_both_win_and_cannot_claim_a_later_permit (test_browser_server.BrowserControllerTests.test_DEF0023_waiter_retires_even_when_start_and_completion_both_win_and_cannot_claim_a_later_permit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/test_browser_server.py", line 685, in test_DEF0023_waiter_retires_even_when_start_and_completion_both_win_and_cannot_claim_a_later_permit
+    self.assertEqual(outcome, {"error": "next permit requested during an active worker"})
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'value': {'status': 'permit', 'coordinates[84 chars]2'}}} != {'error': 'next permit requested during an active worker'}
++ {'error': 'next permit requested during an active worker'}
+- {'value': {'coordinates': {'cohort': 0,
+-                            'engine': 'memory',
+-                            'kind': 'warm',
+-                            'run': 2,
+-                            'worker_id': 'worker:2'},
+-            'status': 'permit'}}
+
+======================================================================
+FAIL: test_DEF0023_waiter_retires_when_a_direct_start_wins_the_lock_for_each_start_route (test_browser_server.BrowserControllerTests.test_DEF0023_waiter_retires_when_a_direct_start_wins_the_lock_for_each_start_route) (route='warm')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/test_browser_server.py", line 668, in test_DEF0023_waiter_retires_when_a_direct_start_wins_the_lock_for_each_start_route
+    self.assertFalse(thread.is_alive())
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_DEF0023_waiter_retires_when_a_direct_start_wins_the_lock_for_each_start_route (test_browser_server.BrowserControllerTests.test_DEF0023_waiter_retires_when_a_direct_start_wins_the_lock_for_each_start_route) (route='cold')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/test_browser_server.py", line 668, in test_DEF0023_waiter_retires_when_a_direct_start_wins_the_lock_for_each_start_route
+    self.assertFalse(thread.is_alive())
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_DEF0023_waiter_retires_when_a_direct_start_wins_the_lock_for_each_start_route (test_browser_server.BrowserControllerTests.test_DEF0023_waiter_retires_when_a_direct_start_wins_the_lock_for_each_start_route) (route='resources')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/test_browser_server.py", line 668, in test_DEF0023_waiter_retires_when_a_direct_start_wins_the_lock_for_each_start_route
+    self.assertFalse(thread.is_alive())
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 3 tests in 8.083s
+
+FAILED (failures=5)

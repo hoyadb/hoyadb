@@ -1,0 +1,58 @@
+{
+ "source": "apple-oss-distributions/dyld tag dyld-1378 include/mach-o/dyld_cache_format.h",
+ "source_sha256": "dd6f7d9ffc5cb318988c16dbecf958d04b0c65cd9ee1892a838e374f76fd182c",
+ "host_dyld_source_version": "1387.0.0.0.0 (LC_SOURCE_VERSION of /usr/lib/dyld; dyld-1387 not published, 1378 is the newest published tag)",
+ "method": "natural-alignment layout computed from the struct declarations; bitfield group counted as one uint32",
+ "dyld_cache_header_sizeof": 552,
+ "host_mappingOffset": 552,
+ "reader_offsets_checked": {
+  "magic": 0,
+  "mappingOffset": 16,
+  "codeSignatureOffset": 40,
+  "codeSignatureSize": 48,
+  "uuid": 88,
+  "cacheType": 104,
+  "imagesTextOffset": 136,
+  "imagesTextCount": 144,
+  "platform": 216,
+  "formatVersion": 220,
+  "sharedRegionStart": 224,
+  "sharedRegionSize": 232,
+  "maxSlide": 240,
+  "osVersion": 364,
+  "subCacheArrayOffset": 392,
+  "subCacheArrayCount": 396,
+  "symbolFileUUID": 400,
+  "imagesOffset": 448,
+  "imagesCount": 452
+ },
+ "mismatches": {},
+ "fields_at_or_beyond_host_header_end": [],
+ "dyld_cache_image_text_info": [
+  {
+   "uuid": 0,
+   "loadAddress": 16,
+   "textSegmentSize": 24,
+   "pathOffset": 28
+  },
+  32
+ ],
+ "dyld_cache_image_info": [
+  {
+   "address": 0,
+   "modTime": 8,
+   "inode": 16,
+   "pathFileOffset": 24,
+   "pad": 28
+  },
+  32
+ ],
+ "dyld_subcache_entry": [
+  {
+   "uuid": 0,
+   "cacheVMOffset": 16,
+   "fileSuffix": 24
+  },
+  56
+ ]
+}

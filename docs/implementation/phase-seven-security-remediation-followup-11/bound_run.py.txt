@@ -1,0 +1,50 @@
+#!/usr/bin/env python3
+"""Run named security test suites (normal + -O) and bind the run to exact source/test/interpreter hashes.
+
+Usage: bound_run.py <new-out-dir> <suite> [<suite> ...]   (suites are bindings/react-native/tools/security/<suite>.py)
+"""
+import datetime
+import hashlib
+import json
+from pathlib import Path
+import platform
+import re
+import subprocess
+import sys
+
+ROOT = Path(__file__).resolve().parents[3]
+SEC = ROOT / 'bindings/react-native/tools/security'
+OUT = Path(sys.argv[1])
+SUITES = sys.argv[2:]
+OUT.mkdir(parents=True, exist_ok=False)
+
+
+def sources():
+    return {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(SEC.iterdir()) if p.is_file()}
+
+
+before = sources()
+interpreter = Path(sys.executable).resolve()
+runs = []
+for mode, flags in (('normal', ['-I', '-B']), ('optimized', ['-I', '-O', '-B'])):
+    for suite in SUITES:
+        command = [str(interpreter), *flags, str(SEC / (suite + '.py'))]
+        started = datetime.datetime.now(datetime.timezone.utc).isoformat()
+        p = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, timeout=300)
+        (OUT / f'{mode}-{suite}.txt').write_bytes(p.stdout)
+        text = p.stdout.decode('utf-8', 'replace')
+        ran = re.search(r'Ran (\d+) tests', text)
+        failed = re.search(r'FAILED \(([^)]*)\)', text)
+        runs.append({'mode': mode, 'suite': suite, 'command': command, 'started_utc': started, 'exit': p.returncode,
+                     'tests': int(ran.group(1)) if ran else None, 'ok': p.returncode == 0 and '\nOK' in text,
+                     'failed_summary': failed.group(1) if failed else None,
+                     'log': f'{mode}-{suite}.txt', 'log_sha256': hashlib.sha256(p.stdout).hexdigest()})
+after = sources()
+identity = {'python': platform.python_version(), 'interpreter': str(interpreter),
+            'interpreter_sha256': hashlib.sha256(interpreter.read_bytes()).hexdigest(), 'platform': platform.platform(),
+            'sources_before': before, 'sources_after': after, 'sources_unchanged': before == after, 'runs': runs,
+            'all_ok': all(r['ok'] for r in runs)}
+(OUT / 'run-identity.json').write_text(json.dumps(identity, indent=1) + '\n')
+for r in runs:
+    print(r['mode'], r['suite'], r['tests'], 'OK' if r['ok'] else 'FAILED(%s)' % r['failed_summary'])
+print('sources unchanged', identity['sources_unchanged'])

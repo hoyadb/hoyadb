@@ -1,0 +1,556 @@
+FFFFFFF.FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+======================================================================
+FAIL: test_blank_continuation_line_ends_the_logical_line (__main__.ReaderProperties.test_blank_continuation_line_ends_the_logical_line)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 76, in test_blank_continuation_line_ends_the_logical_line
+    self.assertEqual(load_reader('key=left\\\n \t\f\nnext=right'),
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                     {'key': 'left', 'next': 'right'})
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {} != {'key': 'left', 'next': 'right'}
+- {}
++ {'key': 'left', 'next': 'right'}
+
+======================================================================
+FAIL: test_comment_marker_on_continuation_line_is_value_data (__main__.ReaderProperties.test_comment_marker_on_continuation_line_is_value_data)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 80, in test_comment_marker_on_continuation_line_is_value_data
+    self.assertEqual(load_reader('key=left\\\n  #right'), {'key': 'left#right'})
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {} != {'key': 'left#right'}
+- {}
++ {'key': 'left#right'}
+
+======================================================================
+FAIL: test_comment_unicode_is_not_decoded (__main__.ReaderProperties.test_comment_unicode_is_not_decoded)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 107, in test_comment_unicode_is_not_decoded
+    self.assertEqual(load_reader('# \\u00zz\n! \\u\nkey=ok'), {'key': 'ok'})
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {} != {'key': 'ok'}
+- {}
++ {'key': 'ok'}
+
+======================================================================
+FAIL: test_comments_do_not_continue_to_the_next_natural_line (__main__.ReaderProperties.test_comments_do_not_continue_to_the_next_natural_line)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 20, in test_comments_do_not_continue_to_the_next_natural_line
+    self.assertEqual(load_reader('# ignored\\\nkey=value\n! ignored\\\nnext=ok'),
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                     {'key': 'value', 'next': 'ok'})
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {} != {'key': 'value', 'next': 'ok'}
+- {}
++ {'key': 'value', 'next': 'ok'}
+
+======================================================================
+FAIL: test_continuation_joins_key_and_value_for_all_line_endings (__main__.ReaderProperties.test_continuation_joins_key_and_value_for_all_line_endings) (ending="'\\n'")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 63, in test_continuation_joins_key_and_value_for_all_line_endings
+    self.assertEqual(load_reader(text), {'kotlin.incremental': 'true'})
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {} != {'kotlin.incremental': 'true'}
+- {}
++ {'kotlin.incremental': 'true'}
+
+======================================================================
+FAIL: test_continuation_joins_key_and_value_for_all_line_endings (__main__.ReaderProperties.test_continuation_joins_key_and_value_for_all_line_endings) (ending="'\\r'")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 63, in test_continuation_joins_key_and_value_for_all_line_endings
+    self.assertEqual(load_reader(text), {'kotlin.incremental': 'true'})
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {} != {'kotlin.incremental': 'true'}
+- {}
++ {'kotlin.incremental': 'true'}
+
+======================================================================
+FAIL: test_continuation_joins_key_and_value_for_all_line_endings (__main__.ReaderProperties.test_continuation_joins_key_and_value_for_all_line_endings) (ending="'\\r\\n'")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 63, in test_continuation_joins_key_and_value_for_all_line_endings
+    self.assertEqual(load_reader(text), {'kotlin.incremental': 'true'})
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {} != {'kotlin.incremental': 'true'}
+- {}
++ {'kotlin.incremental': 'true'}
+
+======================================================================
+FAIL: test_empty_values_and_empty_keys_are_supported (__main__.ReaderProperties.test_empty_values_and_empty_keys_are_supported)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 45, in test_empty_values_and_empty_keys_are_supported
+    self.assertEqual(load_reader('alone\nempty=\nblank: \t\n=value'),
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                     {'alone': '', 'empty': '', 'blank': '', '': 'value'})
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {} != {'alone': '', 'empty': '', 'blank': '', '': 'value'}
+- {}
++ {'': 'value', 'alone': '', 'blank': '', 'empty': ''}
+
+======================================================================
+FAIL: test_escape_decoding_does_not_rescan_generated_characters (__main__.ReaderProperties.test_escape_decoding_does_not_rescan_generated_characters)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 93, in test_escape_decoding_does_not_rescan_generated_characters
+    self.assertEqual(load_reader(r'key=\u005cu0041\u003a\u000a'),
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                     {'key': '\\u0041:\n'})
+                     ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {} != {'key': '\\u0041:\n'}
+- {}
++ {'key': '\\u0041:\n'}
+
+======================================================================
+FAIL: test_escaped_comment_markers_and_inline_markers_are_data (__main__.ReaderProperties.test_escaped_comment_markers_and_inline_markers_are_data)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 56, in test_escaped_comment_markers_and_inline_markers_are_data
+    self.assertEqual(load_reader('\\#key=one\n\\!key=two\nx=a#b!c'),
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                     {'#key': 'one', '!key': 'two', 'x': 'a#b!c'})
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {} != {'#key': 'one', '!key': 'two', 'x': 'a#b!c'}
+- {}
++ {'!key': 'two', '#key': 'one', 'x': 'a#b!c'}
+
+======================================================================
+FAIL: test_escaped_controls_and_backslashes_are_decoded (__main__.ReaderProperties.test_escaped_controls_and_backslashes_are_decoded)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 83, in test_escaped_controls_and_backslashes_are_decoded
+    self.assertEqual(load_reader(r'key=\t\n\r\f\\'), {'key': '\t\n\r\f\\'})
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {} != {'key': '\t\n\r\x0c\\'}
+- {}
++ {'key': '\t\n\r\x0c\\'}
+
+======================================================================
+FAIL: test_escaped_separators_and_whitespace_belong_to_key (__main__.ReaderProperties.test_escaped_separators_and_whitespace_belong_to_key)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 52, in test_escaped_separators_and_whitespace_belong_to_key
+    self.assertEqual(load_reader(r'a\ b\:c\=d' + '\\\t' + '=value'),
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                     {'a b:c=d\t': 'value'})
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {} != {'a b:c=d\t': 'value'}
+- {}
++ {'a b:c=d\t': 'value'}
+
+======================================================================
+FAIL: test_last_decoded_duplicate_key_wins (__main__.ReaderProperties.test_last_decoded_duplicate_key_wins)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 110, in test_last_decoded_duplicate_key_wins
+    self.assertEqual(load_reader('key=first\n\\u006bey=second\nkey:last'), {'key': 'last'})
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {} != {'key': 'last'}
+- {}
++ {'key': 'last'}
+
+======================================================================
+FAIL: test_malformed_unicode_escapes_fail_explicitly_in_keys_and_values (__main__.ReaderProperties.test_malformed_unicode_escapes_fail_explicitly_in_keys_and_values) (text='\\u=value')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 103, in test_malformed_unicode_escapes_fail_explicitly_in_keys_and_values
+    with self.assertRaises(MalformedProperties):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+AssertionError: MalformedProperties not raised
+
+======================================================================
+FAIL: test_malformed_unicode_escapes_fail_explicitly_in_keys_and_values (__main__.ReaderProperties.test_malformed_unicode_escapes_fail_explicitly_in_keys_and_values) (text='key=\\u')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 103, in test_malformed_unicode_escapes_fail_explicitly_in_keys_and_values
+    with self.assertRaises(MalformedProperties):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+AssertionError: MalformedProperties not raised
+
+======================================================================
+FAIL: test_malformed_unicode_escapes_fail_explicitly_in_keys_and_values (__main__.ReaderProperties.test_malformed_unicode_escapes_fail_explicitly_in_keys_and_values) (text='\\u1=value')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 103, in test_malformed_unicode_escapes_fail_explicitly_in_keys_and_values
+    with self.assertRaises(MalformedProperties):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+AssertionError: MalformedProperties not raised
+
+======================================================================
+FAIL: test_malformed_unicode_escapes_fail_explicitly_in_keys_and_values (__main__.ReaderProperties.test_malformed_unicode_escapes_fail_explicitly_in_keys_and_values) (text='key=\\u1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 103, in test_malformed_unicode_escapes_fail_explicitly_in_keys_and_values
+    with self.assertRaises(MalformedProperties):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+AssertionError: MalformedProperties not raised
+
+======================================================================
+FAIL: test_malformed_unicode_escapes_fail_explicitly_in_keys_and_values (__main__.ReaderProperties.test_malformed_unicode_escapes_fail_explicitly_in_keys_and_values) (text='\\u12=value')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 103, in test_malformed_unicode_escapes_fail_explicitly_in_keys_and_values
+    with self.assertRaises(MalformedProperties):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+AssertionError: MalformedProperties not raised
+
+======================================================================
+FAIL: test_malformed_unicode_escapes_fail_explicitly_in_keys_and_values (__main__.ReaderProperties.test_malformed_unicode_escapes_fail_explicitly_in_keys_and_values) (text='key=\\u12')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 103, in test_malformed_unicode_escapes_fail_explicitly_in_keys_and_values
+    with self.assertRaises(MalformedProperties):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+AssertionError: MalformedProperties not raised
+
+======================================================================
+FAIL: test_malformed_unicode_escapes_fail_explicitly_in_keys_and_values (__main__.ReaderProperties.test_malformed_unicode_escapes_fail_explicitly_in_keys_and_values) (text='\\u123=value')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 103, in test_malformed_unicode_escapes_fail_explicitly_in_keys_and_values
+    with self.assertRaises(MalformedProperties):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+AssertionError: MalformedProperties not raised
+
+======================================================================
+FAIL: test_malformed_unicode_escapes_fail_explicitly_in_keys_and_values (__main__.ReaderProperties.test_malformed_unicode_escapes_fail_explicitly_in_keys_and_values) (text='key=\\u123')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 103, in test_malformed_unicode_escapes_fail_explicitly_in_keys_and_values
+    with self.assertRaises(MalformedProperties):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+AssertionError: MalformedProperties not raised
+
+======================================================================
+FAIL: test_malformed_unicode_escapes_fail_explicitly_in_keys_and_values (__main__.ReaderProperties.test_malformed_unicode_escapes_fail_explicitly_in_keys_and_values) (text='\\u12xz=value')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 103, in test_malformed_unicode_escapes_fail_explicitly_in_keys_and_values
+    with self.assertRaises(MalformedProperties):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+AssertionError: MalformedProperties not raised
+
+======================================================================
+FAIL: test_malformed_unicode_escapes_fail_explicitly_in_keys_and_values (__main__.ReaderProperties.test_malformed_unicode_escapes_fail_explicitly_in_keys_and_values) (text='key=\\u12xz')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 103, in test_malformed_unicode_escapes_fail_explicitly_in_keys_and_values
+    with self.assertRaises(MalformedProperties):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+AssertionError: MalformedProperties not raised
+
+======================================================================
+FAIL: test_malformed_unicode_escapes_fail_explicitly_in_keys_and_values (__main__.ReaderProperties.test_malformed_unicode_escapes_fail_explicitly_in_keys_and_values) (text='\\uu0041=value')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 103, in test_malformed_unicode_escapes_fail_explicitly_in_keys_and_values
+    with self.assertRaises(MalformedProperties):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+AssertionError: MalformedProperties not raised
+
+======================================================================
+FAIL: test_malformed_unicode_escapes_fail_explicitly_in_keys_and_values (__main__.ReaderProperties.test_malformed_unicode_escapes_fail_explicitly_in_keys_and_values) (text='key=\\uu0041')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 103, in test_malformed_unicode_escapes_fail_explicitly_in_keys_and_values
+    with self.assertRaises(MalformedProperties):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+AssertionError: MalformedProperties not raised
+
+======================================================================
+FAIL: test_malformed_unicode_escapes_fail_explicitly_in_keys_and_values (__main__.ReaderProperties.test_malformed_unicode_escapes_fail_explicitly_in_keys_and_values) (text='\\u１２３４=value')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 103, in test_malformed_unicode_escapes_fail_explicitly_in_keys_and_values
+    with self.assertRaises(MalformedProperties):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+AssertionError: MalformedProperties not raised
+
+======================================================================
+FAIL: test_malformed_unicode_escapes_fail_explicitly_in_keys_and_values (__main__.ReaderProperties.test_malformed_unicode_escapes_fail_explicitly_in_keys_and_values) (text='key=\\u１２３４')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 103, in test_malformed_unicode_escapes_fail_explicitly_in_keys_and_values
+    with self.assertRaises(MalformedProperties):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+AssertionError: MalformedProperties not raised
+
+======================================================================
+FAIL: test_natural_lines_use_lf_cr_and_crlf (__main__.ReaderProperties.test_natural_lines_use_lf_cr_and_crlf)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 24, in test_natural_lines_use_lf_cr_and_crlf
+    self.assertEqual(load_reader('one=1\rtwo=2\r\nthree=3\nfour=4'),
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                     {'one': '1', 'two': '2', 'three': '3', 'four': '4'})
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {} != {'one': '1', 'two': '2', 'three': '3', 'four': '4'}
+- {}
++ {'four': '4', 'one': '1', 'three': '3', 'two': '2'}
+
+======================================================================
+FAIL: test_non_line_unicode_separators_and_form_feed_remain_in_values (__main__.ReaderProperties.test_non_line_unicode_separators_and_form_feed_remain_in_values)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 32, in test_non_line_unicode_separators_and_form_feed_remain_in_values
+    self.assertEqual(load_reader('key=a\vb\fc\u0085d\u2028e\u2029f'),
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                     {'key': 'a\vb\fc\u0085d\u2028e\u2029f'})
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {} != {'key': 'a\x0bb\x0cc\x85d\u2028e\u2029f'}
+- {}
++ {'key': 'a\x0bb\x0cc\x85d\u2028e\u2029f'}
+
+======================================================================
+FAIL: test_non_special_escapes_drop_backslash_without_octal_or_backspace (__main__.ReaderProperties.test_non_special_escapes_drop_backslash_without_octal_or_backspace)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 86, in test_non_special_escapes_drop_backslash_without_octal_or_backspace
+    self.assertEqual(load_reader(r'''key=\b\z\123\'\"'''), {'key': '''bz123'"'''})
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {} != {'key': 'bz123\'"'}
+- {}
++ {'key': 'bz123\'"'}
+
+======================================================================
+FAIL: test_only_one_optional_separator_is_consumed (__main__.ReaderProperties.test_only_one_optional_separator_is_consumed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 41, in test_only_one_optional_separator_is_consumed
+    self.assertEqual(load_reader('key = :value\nother::x\nthird==y'),
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                     {'key': ':value', 'other': ':x', 'third': '=y'})
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {} != {'key': ':value', 'other': ':x', 'third': '=y'}
+- {}
++ {'key': ':value', 'other': ':x', 'third': '=y'}
+
+======================================================================
+FAIL: test_only_space_tab_and_form_feed_are_leading_whitespace (__main__.ReaderProperties.test_only_space_tab_and_form_feed_are_leading_whitespace)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 28, in test_only_space_tab_and_form_feed_are_leading_whitespace
+    self.assertEqual(load_reader(' \t\fkey=value\n\u00a0other=x\n\vthird=y'),
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                     {'key': 'value', '\u00a0other': 'x', '\vthird': 'y'})
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {} != {'key': 'value', '\xa0other': 'x', '\x0bthird': 'y'}
+- {}
++ {'\x0bthird': 'y', 'key': 'value', '\xa0other': 'x'}
+
+======================================================================
+FAIL: test_original_security_fixture_patterns_expose_escaped_settings (__main__.ReaderProperties.test_original_security_fixture_patterns_expose_escaped_settings)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 118, in test_original_security_fixture_patterns_expose_escaped_settings
+    self.assertEqual(load_reader(text), {
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+        'systemProp.idea.use.native.compression': 'true',
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        'org.gradle.jvmargs': '-Xmx1g -Didea.use.native.compression=true',
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    })
+    ^^
+AssertionError: {} != {'systemProp.idea.use.native.compression':[70 chars]rue'}
+- {}
++ {'org.gradle.jvmargs': '-Xmx1g -Didea.use.native.compression=true',
++  'systemProp.idea.use.native.compression': 'true'}
+
+======================================================================
+FAIL: test_reader_preserves_literal_unicode_and_nul (__main__.ReaderProperties.test_reader_preserves_literal_unicode_and_nul)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 113, in test_reader_preserves_literal_unicode_and_nul
+    self.assertEqual(load_reader('clé=飛行🚀\x00'), {'clé': '飛行🚀\x00'})
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {} != {'clé': '飛行🚀\x00'}
+- {}
++ {'clé': '飛行🚀\x00'}
+
+======================================================================
+FAIL: test_trailing_and_embedded_value_whitespace_is_preserved (__main__.ReaderProperties.test_trailing_and_embedded_value_whitespace_is_preserved)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 49, in test_trailing_and_embedded_value_whitespace_is_preserved
+    self.assertEqual(load_reader('key = a b\t\f '), {'key': 'a b\t\f '})
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {} != {'key': 'a b\t\x0c '}
+- {}
++ {'key': 'a b\t\x0c '}
+
+======================================================================
+FAIL: test_trailing_backslash_parity_controls_continuation (__main__.ReaderProperties.test_trailing_backslash_parity_controls_continuation) (backslashes=1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 73, in test_trailing_backslash_parity_controls_continuation
+    self.assertEqual(load_reader(text), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {} != {'key': 'leftnext=right'}
+- {}
++ {'key': 'leftnext=right'}
+
+======================================================================
+FAIL: test_trailing_backslash_parity_controls_continuation (__main__.ReaderProperties.test_trailing_backslash_parity_controls_continuation) (backslashes=2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 73, in test_trailing_backslash_parity_controls_continuation
+    self.assertEqual(load_reader(text), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {} != {'key': 'left\\', 'next': 'right'}
+- {}
++ {'key': 'left\\', 'next': 'right'}
+
+======================================================================
+FAIL: test_trailing_backslash_parity_controls_continuation (__main__.ReaderProperties.test_trailing_backslash_parity_controls_continuation) (backslashes=3)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 73, in test_trailing_backslash_parity_controls_continuation
+    self.assertEqual(load_reader(text), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {} != {'key': 'left\\next=right'}
+- {}
++ {'key': 'left\\next=right'}
+
+======================================================================
+FAIL: test_trailing_backslash_parity_controls_continuation (__main__.ReaderProperties.test_trailing_backslash_parity_controls_continuation) (backslashes=4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 73, in test_trailing_backslash_parity_controls_continuation
+    self.assertEqual(load_reader(text), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {} != {'key': 'left\\\\', 'next': 'right'}
+- {}
++ {'key': 'left\\\\', 'next': 'right'}
+
+======================================================================
+FAIL: test_trailing_backslash_parity_controls_continuation (__main__.ReaderProperties.test_trailing_backslash_parity_controls_continuation) (backslashes=5)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 73, in test_trailing_backslash_parity_controls_continuation
+    self.assertEqual(load_reader(text), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {} != {'key': 'left\\\\next=right'}
+- {}
++ {'key': 'left\\\\next=right'}
+
+======================================================================
+FAIL: test_trailing_backslash_parity_controls_continuation (__main__.ReaderProperties.test_trailing_backslash_parity_controls_continuation) (backslashes=6)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 73, in test_trailing_backslash_parity_controls_continuation
+    self.assertEqual(load_reader(text), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {} != {'key': 'left\\\\\\', 'next': 'right'}
+- {}
++ {'key': 'left\\\\\\', 'next': 'right'}
+
+======================================================================
+FAIL: test_unicode_escaped_separator_does_not_split_key (__main__.ReaderProperties.test_unicode_escaped_separator_does_not_split_key)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 97, in test_unicode_escaped_separator_does_not_split_key
+    self.assertEqual(load_reader(r'a\u003db\u003ac=value'), {'a=b:c': 'value'})
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {} != {'a=b:c': 'value'}
+- {}
++ {'a=b:c': 'value'}
+
+======================================================================
+FAIL: test_unicode_escapes_decode_keys_values_and_exactly_four_digits (__main__.ReaderProperties.test_unicode_escapes_decode_keys_values_and_exactly_four_digits)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 89, in test_unicode_escapes_decode_keys_values_and_exactly_four_digits
+    self.assertEqual(load_reader(r'\u006bey=\u0074rue\u00e9\uABcD\u00410'),
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                     {'key': 'trueé\uabcdA0'})
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {} != {'key': 'trueéꯍA0'}
+- {}
++ {'key': 'trueéꯍA0'}
+
+======================================================================
+FAIL: test_whitespace_equal_and_colon_separate_key_and_value (__main__.ReaderProperties.test_whitespace_equal_and_colon_separate_key_and_value) (separator="'='")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 38, in test_whitespace_equal_and_colon_separate_key_and_value
+    self.assertEqual(load_reader('key' + separator + 'value'), {'key': 'value'})
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {} != {'key': 'value'}
+- {}
++ {'key': 'value'}
+
+======================================================================
+FAIL: test_whitespace_equal_and_colon_separate_key_and_value (__main__.ReaderProperties.test_whitespace_equal_and_colon_separate_key_and_value) (separator="':'")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 38, in test_whitespace_equal_and_colon_separate_key_and_value
+    self.assertEqual(load_reader('key' + separator + 'value'), {'key': 'value'})
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {} != {'key': 'value'}
+- {}
++ {'key': 'value'}
+
+======================================================================
+FAIL: test_whitespace_equal_and_colon_separate_key_and_value (__main__.ReaderProperties.test_whitespace_equal_and_colon_separate_key_and_value) (separator="' '")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 38, in test_whitespace_equal_and_colon_separate_key_and_value
+    self.assertEqual(load_reader('key' + separator + 'value'), {'key': 'value'})
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {} != {'key': 'value'}
+- {}
++ {'key': 'value'}
+
+======================================================================
+FAIL: test_whitespace_equal_and_colon_separate_key_and_value (__main__.ReaderProperties.test_whitespace_equal_and_colon_separate_key_and_value) (separator="'\\t'")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 38, in test_whitespace_equal_and_colon_separate_key_and_value
+    self.assertEqual(load_reader('key' + separator + 'value'), {'key': 'value'})
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {} != {'key': 'value'}
+- {}
++ {'key': 'value'}
+
+======================================================================
+FAIL: test_whitespace_equal_and_colon_separate_key_and_value (__main__.ReaderProperties.test_whitespace_equal_and_colon_separate_key_and_value) (separator="'\\x0c'")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 38, in test_whitespace_equal_and_colon_separate_key_and_value
+    self.assertEqual(load_reader('key' + separator + 'value'), {'key': 'value'})
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {} != {'key': 'value'}
+- {}
++ {'key': 'value'}
+
+======================================================================
+FAIL: test_whitespace_equal_and_colon_separate_key_and_value (__main__.ReaderProperties.test_whitespace_equal_and_colon_separate_key_and_value) (separator="' \\t: \\x0c'")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 38, in test_whitespace_equal_and_colon_separate_key_and_value
+    self.assertEqual(load_reader('key' + separator + 'value'), {'key': 'value'})
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {} != {'key': 'value'}
+- {}
++ {'key': 'value'}
+
+======================================================================
+FAIL: test_whitespace_equal_and_colon_separate_key_and_value (__main__.ReaderProperties.test_whitespace_equal_and_colon_separate_key_and_value) (separator="'\\x0c= \\t'")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/bindings/react-native/tools/security/test_java_properties.py", line 38, in test_whitespace_equal_and_colon_separate_key_and_value
+    self.assertEqual(load_reader('key' + separator + 'value'), {'key': 'value'})
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {} != {'key': 'value'}
+- {}
++ {'key': 'value'}
+
+----------------------------------------------------------------------
+Ran 25 tests in 0.041s
+
+FAILED (failures=50)

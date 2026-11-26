@@ -1,0 +1,296 @@
+[
+  {
+    "id": "@hoyadb/react-native@0.1.0",
+    "name": "@hoyadb/react-native",
+    "version": "0.1.0",
+    "size": 35633179,
+    "unpackedSize": 116136256,
+    "shasum": "a2d35e539464f24e0172388a5af787c70f3df7db",
+    "integrity": "sha512-+iTXRc4Rn5Yg+HAeG4NJKFmkBDdqccCyOz8495UfWEjXvL4w4pWqlQZTyx8eQL6e4KGWQXl93QsrSIDkUGR20w==",
+    "filename": "hoyadb-react-native-0.1.0.tgz",
+    "files": [
+      {
+        "path": "Artifacts/HoyaNative.xcframework/Info.plist",
+        "size": 1693,
+        "mode": 420
+      },
+      {
+        "path": "Artifacts/HoyaNative.xcframework/ios-arm64_x86_64-simulator/Headers/hoyadb.h",
+        "size": 2171,
+        "mode": 420
+      },
+      {
+        "path": "Artifacts/HoyaNative.xcframework/ios-arm64_x86_64-simulator/Headers/HoyaNative/module.modulemap",
+        "size": 60,
+        "mode": 420
+      },
+      {
+        "path": "Artifacts/HoyaNative.xcframework/ios-arm64_x86_64-simulator/libhoyadb_native.a",
+        "size": 56854480,
+        "mode": 420
+      },
+      {
+        "path": "Artifacts/HoyaNative.xcframework/ios-arm64/Headers/hoyadb.h",
+        "size": 2171,
+        "mode": 420
+      },
+      {
+        "path": "Artifacts/HoyaNative.xcframework/ios-arm64/Headers/HoyaNative/module.modulemap",
+        "size": 60,
+        "mode": 420
+      },
+      {
+        "path": "Artifacts/HoyaNative.xcframework/ios-arm64/libhoyadb_native.a",
+        "size": 28398384,
+        "mode": 420
+      },
+      {
+        "path": "Artifacts/HoyaNative.xcframework/macos-x86_64/Headers/hoyadb.h",
+        "size": 2171,
+        "mode": 420
+      },
+      {
+        "path": "Artifacts/HoyaNative.xcframework/macos-x86_64/Headers/HoyaNative/module.modulemap",
+        "size": 60,
+        "mode": 420
+      },
+      {
+        "path": "Artifacts/HoyaNative.xcframework/macos-x86_64/libhoyadb_native.a",
+        "size": 29143544,
+        "mode": 420
+      },
+      {
+        "path": "Artifacts/HoyaNative.xcframework/native-build-parent.json",
+        "size": 12311,
+        "mode": 420
+      },
+      {
+        "path": "Artifacts/HoyaNative.xcframework/NOTICE.md",
+        "size": 4042,
+        "mode": 420
+      },
+      {
+        "path": "Artifacts/HoyaNative.xcframework/packaging.json",
+        "size": 5036,
+        "mode": 420
+      },
+      {
+        "path": "Artifacts/HoyaNative.xcframework/third-party/index.json",
+        "size": 49664,
+        "mode": 420
+      },
+      {
+        "path": "Artifacts/HoyaNative.xcframework/third-party/native/sqlcipher-4.19.0/LICENSE-sqlcipher",
+        "size": 1463,
+        "mode": 420
+      },
+      {
+        "path": "Artifacts/HoyaNative.xcframework/third-party/native/sqlite-3.53.4/LICENSE-sqlite",
+        "size": 1485,
+        "mode": 420
+      },
+      {
+        "path": "Artifacts/HoyaNative.xcframework/third-party/rust/bitflags-2.13.2/LICENSE-APACHE",
+        "size": 10847,
+        "mode": 420
+      },
+      {
+        "path": "Artifacts/HoyaNative.xcframework/third-party/rust/bitflags-2.13.2/LICENSE-MIT",
+        "size": 1071,
+        "mode": 420
+      },
+      {
+        "path": "Artifacts/HoyaNative.xcframework/third-party/rust/cc-1.10.0/LICENSE-APACHE",
+        "size": 10847,
+        "mode": 420
+      },
+      {
+        "path": "Artifacts/HoyaNative.xcframework/third-party/rust/cc-1.10.0/LICENSE-MIT",
+        "size": 1057,
+        "mode": 420
+      },
+      {
+        "path": "Artifacts/HoyaNative.xcframework/third-party/rust/fallible-iterator-0.3.0/LICENSE-APACHE",
+        "size": 11358,
+        "mode": 420
+      },
+      {
+        "path": "Artifacts/HoyaNative.xcframework/third-party/rust/fallible-iterator-0.3.0/LICENSE-MIT",
+        "size": 1078,
+        "mode": 420
+      },
+      {
+        "path": "Artifacts/HoyaNative.xcframework/third-party/rust/fallible-streaming-iterator-0.1.9/LICENSE-APACHE",
+        "size": 11358,
+        "mode": 420
+      },
+      {
+        "path": "Artifacts/HoyaNative.xcframework/third-party/rust/fallible-streaming-iterator-0.1.9/LICENSE-MIT",
+        "size": 1086,
+        "mode": 420
+      },
+      {
+        "path": "Artifacts/HoyaNative.xcframework/third-party/rust/find-msvc-tools-0.1.15/LICENSE-APACHE",
+        "size": 10847,
+        "mode": 420
+      },
+      {
+        "path": "Artifacts/HoyaNative.xcframework/third-party/rust/find-msvc-tools-0.1.15/LICENSE-MIT",
+        "size": 1057,
+        "mode": 420
+      },
+      {
+        "path": "Artifacts/HoyaNative.xcframework/third-party/rust/libsqlite3-sys-0.38.1/LICENSE",
+        "size": 1067,
+        "mode": 420
+      },
+      {
+        "path": "Artifacts/HoyaNative.xcframework/third-party/rust/pkg-config-0.3.34/LICENSE-APACHE",
+        "size": 10847,
+        "mode": 420
+      },
+      {
+        "path": "Artifacts/HoyaNative.xcframework/third-party/rust/pkg-config-0.3.34/LICENSE-MIT",
+        "size": 1057,
+        "mode": 420
+      },
+      {
+        "path": "Artifacts/HoyaNative.xcframework/third-party/rust/rusqlite-0.40.1/LICENSE",
+        "size": 1067,
+        "mode": 420
+      },
+      {
+        "path": "Artifacts/HoyaNative.xcframework/third-party/rust/shlex-2.0.1/LICENSE-APACHE",
+        "size": 566,
+        "mode": 420
+      },
+      {
+        "path": "Artifacts/HoyaNative.xcframework/third-party/rust/shlex-2.0.1/LICENSE-MIT",
+        "size": 1092,
+        "mode": 420
+      },
+      {
+        "path": "Artifacts/HoyaNative.xcframework/third-party/rust/smallvec-1.16.4/LICENSE-APACHE",
+        "size": 10847,
+        "mode": 420
+      },
+      {
+        "path": "Artifacts/HoyaNative.xcframework/third-party/rust/smallvec-1.16.4/LICENSE-MIT",
+        "size": 1072,
+        "mode": 420
+      },
+      {
+        "path": "Artifacts/HoyaNative.xcframework/third-party/rust/sqlcipher-src-419.0.6+sqlcipher-4.19.0-sqlite-3.53.4-libtomcrypt-1.18.2/LICENSE",
+        "size": 1073,
+        "mode": 420
+      },
+      {
+        "path": "Artifacts/HoyaNative.xcframework/third-party/rust/vcpkg-0.2.15/LICENSE-APACHE",
+        "size": 11050,
+        "mode": 420
+      },
+      {
+        "path": "Artifacts/HoyaNative.xcframework/third-party/rust/vcpkg-0.2.15/LICENSE-MIT",
+        "size": 1082,
+        "mode": 420
+      },
+      {
+        "path": "Artifacts/HoyaNative.xcframework/third-party/rust/zeroize-1.9.1/LICENSE-APACHE",
+        "size": 11358,
+        "mode": 420
+      },
+      {
+        "path": "Artifacts/HoyaNative.xcframework/third-party/rust/zeroize-1.9.1/LICENSE-MIT",
+        "size": 1082,
+        "mode": 420
+      },
+      {
+        "path": "Artifacts/HoyaNative.xcframework/third-party/toolchain/rust-1.98.1/COPYRIGHT-library.html",
+        "size": 1512520,
+        "mode": 420
+      },
+      {
+        "path": "HoyaDBReactNative.podspec",
+        "size": 772,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 3350,
+        "mode": 420
+      },
+      {
+        "path": "android/build.gradle",
+        "size": 370,
+        "mode": 420
+      },
+      {
+        "path": "android/src/main/AndroidManifest.xml",
+        "size": 72,
+        "mode": 420
+      },
+      {
+        "path": "android/src/main/java/dev/hoyadb/HoyaDBModule.java",
+        "size": 7966,
+        "mode": 420
+      },
+      {
+        "path": "android/src/main/java/dev/hoyadb/HoyaDBPackage.java",
+        "size": 801,
+        "mode": 420
+      },
+      {
+        "path": "index.d.ts",
+        "size": 934,
+        "mode": 420
+      },
+      {
+        "path": "ios/HoyaDBModule.h",
+        "size": 105,
+        "mode": 420
+      },
+      {
+        "path": "ios/HoyaDBModule.mm",
+        "size": 5018,
+        "mode": 420
+      },
+      {
+        "path": "ios/HoyaNativeHost.h",
+        "size": 432,
+        "mode": 420
+      },
+      {
+        "path": "ios/HoyaNativeHost.mm",
+        "size": 7147,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 802,
+        "mode": 420
+      },
+      {
+        "path": "react-native.config.cjs",
+        "size": 171,
+        "mode": 420
+      },
+      {
+        "path": "src/channel.js",
+        "size": 1364,
+        "mode": 420
+      },
+      {
+        "path": "src/index.js",
+        "size": 1225,
+        "mode": 420
+      },
+      {
+        "path": "src/NativeHoyaDB.ts",
+        "size": 546,
+        "mode": 420
+      }
+    ],
+    "entryCount": 56,
+    "bundled": []
+  }
+]

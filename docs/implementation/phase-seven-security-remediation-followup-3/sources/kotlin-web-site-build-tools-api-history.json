@@ -1,0 +1,412 @@
+[
+  {
+    "sha": "25c1f1ac448be3f0a2e0424b1176f19403548b82",
+    "node_id": "C_kwDOANuvGNoAKDI1YzFmMWFjNDQ4YmUzZjBhMmUwNDI0YjExNzZmMTk0MDM1NDhiODI",
+    "commit": {
+      "author": {
+        "name": "Andrey Polyakov",
+        "email": "koshachy@gmail.com",
+        "date": "2026-08-25T09:52:31Z"
+      },
+      "committer": {
+        "name": "Danil Pavlov",
+        "email": "danil.pavlov@jetbrains.com",
+        "date": "2026-09-04T13:45:21Z"
+      },
+      "message": "feat: add BTA stability levels (#5758)\n\n* feature: add BTA stability levels\n\n* chore: add label\n\n* fix: apply the review\n\n* fix: apply TWr review",
+      "tree": {
+        "sha": "8fa37e96cd7686196fd1cdef57dcbb61696ebb6a",
+        "url": "https://api.github.com/repos/JetBrains/kotlin-web-site/git/trees/8fa37e96cd7686196fd1cdef57dcbb61696ebb6a"
+      },
+      "url": "https://api.github.com/repos/JetBrains/kotlin-web-site/git/commits/25c1f1ac448be3f0a2e0424b1176f19403548b82",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/JetBrains/kotlin-web-site/commits/25c1f1ac448be3f0a2e0424b1176f19403548b82",
+    "html_url": "https://github.com/JetBrains/kotlin-web-site/commit/25c1f1ac448be3f0a2e0424b1176f19403548b82",
+    "comments_url": "https://api.github.com/repos/JetBrains/kotlin-web-site/commits/25c1f1ac448be3f0a2e0424b1176f19403548b82/comments",
+    "author": {
+      "login": "koshachy",
+      "id": 5330224,
+      "node_id": "MDQ6VXNlcjUzMzAyMjQ=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5330224?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/koshachy",
+      "html_url": "https://github.com/koshachy",
+      "followers_url": "https://api.github.com/users/koshachy/followers",
+      "following_url": "https://api.github.com/users/koshachy/following{/other_user}",
+      "gists_url": "https://api.github.com/users/koshachy/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/koshachy/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/koshachy/subscriptions",
+      "organizations_url": "https://api.github.com/users/koshachy/orgs",
+      "repos_url": "https://api.github.com/users/koshachy/repos",
+      "events_url": "https://api.github.com/users/koshachy/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/koshachy/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "danil-pavlov",
+      "id": 88453164,
+      "node_id": "MDQ6VXNlcjg4NDUzMTY0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/88453164?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/danil-pavlov",
+      "html_url": "https://github.com/danil-pavlov",
+      "followers_url": "https://api.github.com/users/danil-pavlov/followers",
+      "following_url": "https://api.github.com/users/danil-pavlov/following{/other_user}",
+      "gists_url": "https://api.github.com/users/danil-pavlov/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/danil-pavlov/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/danil-pavlov/subscriptions",
+      "organizations_url": "https://api.github.com/users/danil-pavlov/orgs",
+      "repos_url": "https://api.github.com/users/danil-pavlov/repos",
+      "events_url": "https://api.github.com/users/danil-pavlov/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/danil-pavlov/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "910a34a2052a1472b5adf3c409356a89db1b2db6",
+        "url": "https://api.github.com/repos/JetBrains/kotlin-web-site/commits/910a34a2052a1472b5adf3c409356a89db1b2db6",
+        "html_url": "https://github.com/JetBrains/kotlin-web-site/commit/910a34a2052a1472b5adf3c409356a89db1b2db6"
+      }
+    ]
+  },
+  {
+    "sha": "e7440a5641c04c358946ea49ee1ed6976d36e132",
+    "node_id": "C_kwDOANuvGNoAKGU3NDQwYTU2NDFjMDRjMzU4OTQ2ZWE0OWVlMWVkNjk3NmQzNmUxMzI",
+    "commit": {
+      "author": {
+        "name": "Danil Pavlov",
+        "email": "danil.pavlov@jetbrains.com",
+        "date": "2026-04-16T15:12:10Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2026-04-16T15:12:10Z"
+      },
+      "message": "feat: new configure project page for Maven (#5455)",
+      "tree": {
+        "sha": "ca818d1ac322057ea90705882c3d008747ce0238",
+        "url": "https://api.github.com/repos/JetBrains/kotlin-web-site/git/trees/ca818d1ac322057ea90705882c3d008747ce0238"
+      },
+      "url": "https://api.github.com/repos/JetBrains/kotlin-web-site/git/commits/e7440a5641c04c358946ea49ee1ed6976d36e132",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJp4PxKCRC1aQ7uu5UhlAAAF9cQAJ9kvWisM+TYEX5HfdcSWN1M\nkUp1MtDol+CmIhBbIF69WxIRIwMr9zIU4yKqH4fEKuR1eLWRlKcapYpjuZwYQMpF\nJbpndozTBPGsDsG0IBPFKramYN0VvIvfoMaOfvW2trkSLk1MFJxpFizeCIf07DOL\n2XsedtnXV2oeo0tkfsRnAD3fGxnwAEyEGyhmbYSdLLjEdLPKnaopupF26SqyZRqF\niD4g+KI2GoffQ9mFaeyxtvHhRfqe5IkMwOQ8yxiOFobGeilzqI+PaGXv8wKk/NMQ\nGitR7UenMwXuQcCadVHKGeBUJVo0TZWCrlvRENQdw/qZ9LwrhlDCz8al1KHXNfLQ\nR1AefW/WV/qQxWk6uxW4eFpow4F7rrCWHmDIy01aLL2ZwG5M+t5LSqMgKweMb+aM\n1S+ilBd6CaeSNiGLR/cOYJejnFRIFWU5AdsApXUWIIa4oQObN0mG+x8uHAbtVvrK\nSJjvNeDof71jx4OL6aD0JJHqFxfktwEg/VNUHC1HJZcDAnd321FDTU+m4KpX9y+r\nUz0yk2tpwIMhJnBHKxdqb6sd7i6RN+ldnqNlUmDpnBvzhGvJKLuWdoSEFz+iDEWw\nBBe10V4sq3xytcNLtFtqIpXMzogfcVJS7AdjC1UKmuczcw7cCUiTeZD2wLLMlZdV\nLA+/VkZMyQclg0vV1Yvn\n=Cgc0\n-----END PGP SIGNATURE-----\n",
+        "payload": "tree ca818d1ac322057ea90705882c3d008747ce0238\nparent cea4c25197983822ef6e9b89986d1ff8e256ebce\nauthor Danil Pavlov <danil.pavlov@jetbrains.com> 1776352330 +0200\ncommitter GitHub <noreply@github.com> 1776352330 +0200\n\nfeat: new configure project page for Maven (#5455)",
+        "verified_at": "2026-04-16T15:12:11Z"
+      }
+    },
+    "url": "https://api.github.com/repos/JetBrains/kotlin-web-site/commits/e7440a5641c04c358946ea49ee1ed6976d36e132",
+    "html_url": "https://github.com/JetBrains/kotlin-web-site/commit/e7440a5641c04c358946ea49ee1ed6976d36e132",
+    "comments_url": "https://api.github.com/repos/JetBrains/kotlin-web-site/commits/e7440a5641c04c358946ea49ee1ed6976d36e132/comments",
+    "author": {
+      "login": "danil-pavlov",
+      "id": 88453164,
+      "node_id": "MDQ6VXNlcjg4NDUzMTY0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/88453164?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/danil-pavlov",
+      "html_url": "https://github.com/danil-pavlov",
+      "followers_url": "https://api.github.com/users/danil-pavlov/followers",
+      "following_url": "https://api.github.com/users/danil-pavlov/following{/other_user}",
+      "gists_url": "https://api.github.com/users/danil-pavlov/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/danil-pavlov/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/danil-pavlov/subscriptions",
+      "organizations_url": "https://api.github.com/users/danil-pavlov/orgs",
+      "repos_url": "https://api.github.com/users/danil-pavlov/repos",
+      "events_url": "https://api.github.com/users/danil-pavlov/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/danil-pavlov/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "cea4c25197983822ef6e9b89986d1ff8e256ebce",
+        "url": "https://api.github.com/repos/JetBrains/kotlin-web-site/commits/cea4c25197983822ef6e9b89986d1ff8e256ebce",
+        "html_url": "https://github.com/JetBrains/kotlin-web-site/commit/cea4c25197983822ef6e9b89986d1ff8e256ebce"
+      }
+    ]
+  },
+  {
+    "sha": "a2d455401ee62c705fa41d368dff7a528981bf5f",
+    "node_id": "C_kwDOANuvGNoAKGEyZDQ1NTQwMWVlNjJjNzA1ZmE0MWQzNjhkZmY3YTUyODk4MWJmNWY",
+    "commit": {
+      "author": {
+        "name": "Dániel Csorba",
+        "email": "150924204+daniCsorbaJB@users.noreply.github.com",
+        "date": "2026-03-16T10:05:40Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2026-03-16T10:05:40Z"
+      },
+      "message": "feat: 2.3.20 documentation and release update (#5433)\n\n* update: introducing new vert.x nullability annotation and mutability annotations (#5392)\n\n* Compatibility guide: deprecate `kotlin.publishJvmEnvironmentAttribute` property (#5396)\n\n* chore: update BCV task names and explain check task\n\n* chore: promote Lombok to Alpha again\n\n* chore: Gradle versions for 2.3.20\n\n* update: add name-based destructuring to in preview for 2.3.20 (#5415)\n\n* update: Apple x86_64 target deprecation (#5384)\n\n* chore: update compat guide for 2.3.20\n\n* update: default objc block parameter names reverted (#5419)\n\n* feat: support for @nativeInvoke annotation (#5418)\n\n* Add a page for compiler execution strategy (#5410)\n\n* feat: dedicated page for compiler exec strategy\n\n* Remove the out-of-process strategy mentions\n\nAlso, don't mention in-process as a slower one anymore\n\n* new folder and Alexander review\n\n* add compatibility guide link\n\n* Danil review\n\n---------\n\nCo-authored-by: Sarah Haggarty <sarahhaggarty@users.noreply.github.com>\nCo-authored-by: Alexander.Likhachev <Alexander.Likhachev@jetbrains.com>\n\n* feat: new DSL for disabling native cache (#5417)\n\n* feat: add release details and whats new for 2.3.20 release (#5424)\n\n* feat: add whats new for 2.3.20 release\n\n* add web summary\n\n* add labels and shorten TOC depth\n\n* fix maven and stdlib headers\n\n* restructure\n\n* add Maven and standard library intros\n\n* update: implementing comments and adding additional release info\n\n* update: small additional comments\n\n* update: adding information for java nullability annotations to compiler reference\n\n* update: implementing last round of comments\n\n* last touch ups\n\n---------\n\nCo-authored-by: Sarah Haggarty <sarahhaggarty@users.noreply.github.com>\n\n* feat: new compiler options in 2.3.20 (#5430)\n\n* feat: Maven smart defaults (#5416)\n\n* fix: link anchors for compiler execution strategy\n\n* chore: last finishing touches\n\n---------\n\nCo-authored-by: ElviraMustafina <57905309+ElviraMustafina@users.noreply.github.com>\nCo-authored-by: Sarah Haggarty <sarahhaggarty@users.noreply.github.com>\nCo-authored-by: Danil Pavlov <danil.pavlov@jetbrains.com>\nCo-authored-by: Sarah Haggarty <81160244+sarahhaggarty@users.noreply.github.com>\nCo-authored-by: Alexander.Likhachev <Alexander.Likhachev@jetbrains.com>",
+      "tree": {
+        "sha": "971a9afbde9df903ad52e188ed43669ed276c555",
+        "url": "https://api.github.com/repos/JetBrains/kotlin-web-site/git/trees/971a9afbde9df903ad52e188ed43669ed276c555"
+      },
+      "url": "https://api.github.com/repos/JetBrains/kotlin-web-site/git/commits/a2d455401ee62c705fa41d368dff7a528981bf5f",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJpt9X0CRC1aQ7uu5UhlAAACckQAIEQl7K1DwTLV0/pA4D0nXaZ\ny484JT3/R74M85DdLm3aRt6gNgP3dIetjaeMzHHNfJ//dGoZM3D4K1G+jO37wzS6\nAlnY+XpkaDxdhDjCnOdLTMwgEiHLysBlUKE0rPkEs5nZnLp/Ui8ArlKioOoWAExR\nkZfBB4rV4V7SAKU48iuXK3tKtpJqPObuc/S3wq6AxkoBLnedLJxpstU1Xe3JFjOk\n+QxxbxA4A7qllt3YAhfqvig8Skea/egbzMlkJ4pEKW3uuHbDjUbLFNc23FlR/CO3\nUtvBeEhpTUIsgnnTHKfZzxLWWzkrgngP78jlERWe3FZZClUYnyNrUltfDi0LuwwC\nNqDO7z1lrmjxzok5o1uxYSD8WZ7y80QnzI8oWV4gxLIs2Jp61aYS+0mTxNM+YsTY\nKeBJP7lXSvZe1C2JZd+jtZ7S9k7Hfs8dXXlAcXRKJq/SCowI6E6GBjMHcmktDvju\nLp5vEEGHU6arP2ZHso4prcrrzYgfIk7j2RUz6QetwmnwZo9Bas76SYwwlZ9oF2UO\nkq/1JUom/2yFYd/ZIN3wVPEEg4UFDX54C/BRKohn0CORvIfbs8jzZpj7/dA9TMi2\n8wNNUiNCH55y8W/AyG/EOBPG7+JlULd0ZnsqS7uD9UEtbdoM4WtxmG1dPsxEafKg\nhmqQrdpKyi3vJ40vctKW\n=UYtn\n-----END PGP SIGNATURE-----\n",
+        "payload": "tree 971a9afbde9df903ad52e188ed43669ed276c555\nparent 852a847ac55c9e1c0fd97e62d9ef059e101b3c68\nauthor Dániel Csorba <150924204+daniCsorbaJB@users.noreply.github.com> 1773655540 +0100\ncommitter GitHub <noreply@github.com> 1773655540 +0100\n\nfeat: 2.3.20 documentation and release update (#5433)\n\n* update: introducing new vert.x nullability annotation and mutability annotations (#5392)\n\n* Compatibility guide: deprecate `kotlin.publishJvmEnvironmentAttribute` property (#5396)\n\n* chore: update BCV task names and explain check task\n\n* chore: promote Lombok to Alpha again\n\n* chore: Gradle versions for 2.3.20\n\n* update: add name-based destructuring to in preview for 2.3.20 (#5415)\n\n* update: Apple x86_64 target deprecation (#5384)\n\n* chore: update compat guide for 2.3.20\n\n* update: default objc block parameter names reverted (#5419)\n\n* feat: support for @nativeInvoke annotation (#5418)\n\n* Add a page for compiler execution strategy (#5410)\n\n* feat: dedicated page for compiler exec strategy\n\n* Remove the out-of-process strategy mentions\n\nAlso, don't mention in-process as a slower one anymore\n\n* new folder and Alexander review\n\n* add compatibility guide link\n\n* Danil review\n\n---------\n\nCo-authored-by: Sarah Haggarty <sarahhaggarty@users.noreply.github.com>\nCo-authored-by: Alexander.Likhachev <Alexander.Likhachev@jetbrains.com>\n\n* feat: new DSL for disabling native cache (#5417)\n\n* feat: add release details and whats new for 2.3.20 release (#5424)\n\n* feat: add whats new for 2.3.20 release\n\n* add web summary\n\n* add labels and shorten TOC depth\n\n* fix maven and stdlib headers\n\n* restructure\n\n* add Maven and standard library intros\n\n* update: implementing comments and adding additional release info\n\n* update: small additional comments\n\n* update: adding information for java nullability annotations to compiler reference\n\n* update: implementing last round of comments\n\n* last touch ups\n\n---------\n\nCo-authored-by: Sarah Haggarty <sarahhaggarty@users.noreply.github.com>\n\n* feat: new compiler options in 2.3.20 (#5430)\n\n* feat: Maven smart defaults (#5416)\n\n* fix: link anchors for compiler execution strategy\n\n* chore: last finishing touches\n\n---------\n\nCo-authored-by: ElviraMustafina <57905309+ElviraMustafina@users.noreply.github.com>\nCo-authored-by: Sarah Haggarty <sarahhaggarty@users.noreply.github.com>\nCo-authored-by: Danil Pavlov <danil.pavlov@jetbrains.com>\nCo-authored-by: Sarah Haggarty <81160244+sarahhaggarty@users.noreply.github.com>\nCo-authored-by: Alexander.Likhachev <Alexander.Likhachev@jetbrains.com>",
+        "verified_at": "2026-03-16T10:05:41Z"
+      }
+    },
+    "url": "https://api.github.com/repos/JetBrains/kotlin-web-site/commits/a2d455401ee62c705fa41d368dff7a528981bf5f",
+    "html_url": "https://github.com/JetBrains/kotlin-web-site/commit/a2d455401ee62c705fa41d368dff7a528981bf5f",
+    "comments_url": "https://api.github.com/repos/JetBrains/kotlin-web-site/commits/a2d455401ee62c705fa41d368dff7a528981bf5f/comments",
+    "author": {
+      "login": "daniCsorbaJB",
+      "id": 150924204,
+      "node_id": "U_kgDOCP7rrA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/150924204?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/daniCsorbaJB",
+      "html_url": "https://github.com/daniCsorbaJB",
+      "followers_url": "https://api.github.com/users/daniCsorbaJB/followers",
+      "following_url": "https://api.github.com/users/daniCsorbaJB/following{/other_user}",
+      "gists_url": "https://api.github.com/users/daniCsorbaJB/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/daniCsorbaJB/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/daniCsorbaJB/subscriptions",
+      "organizations_url": "https://api.github.com/users/daniCsorbaJB/orgs",
+      "repos_url": "https://api.github.com/users/daniCsorbaJB/repos",
+      "events_url": "https://api.github.com/users/daniCsorbaJB/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/daniCsorbaJB/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "852a847ac55c9e1c0fd97e62d9ef059e101b3c68",
+        "url": "https://api.github.com/repos/JetBrains/kotlin-web-site/commits/852a847ac55c9e1c0fd97e62d9ef059e101b3c68",
+        "html_url": "https://github.com/JetBrains/kotlin-web-site/commit/852a847ac55c9e1c0fd97e62d9ef059e101b3c68"
+      }
+    ]
+  },
+  {
+    "sha": "c1ea05beb323d50694f58d0b70f2c0a8c4d17d63",
+    "node_id": "C_kwDOANuvGNoAKGMxZWEwNWJlYjMyM2Q1MDY5NGY1OGQwYjcwZjJjMGE4YzRkMTdkNjM",
+    "commit": {
+      "author": {
+        "name": "Danil Pavlov",
+        "email": "danil.pavlov@jetbrains.com",
+        "date": "2025-12-19T14:43:40Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2025-12-19T14:43:40Z"
+      },
+      "message": "feat: new Maven section (#5232)",
+      "tree": {
+        "sha": "6dc197ec37ed940cca7aa5a2c49b3f4d547a83ff",
+        "url": "https://api.github.com/repos/JetBrains/kotlin-web-site/git/trees/6dc197ec37ed940cca7aa5a2c49b3f4d547a83ff"
+      },
+      "url": "https://api.github.com/repos/JetBrains/kotlin-web-site/git/commits/c1ea05beb323d50694f58d0b70f2c0a8c4d17d63",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJpRWScCRC1aQ7uu5UhlAAA3LUQADlbKZrICrD/7iSyaJ48QX3S\njyQai+aZfVIu8w70yCVNpVqiR8lm+E4xTy+WdZ/sCmUC2CKSWWs7d7zYMPGOei3X\n1Fv0HSxY/exCqPjoAC2J29FCAoq52avLbHJwRBl/aP96fXaVcdinvDfGdQ7MgjLk\nv/h4p4lAm3UHC7NRbLioi5R58df2pby9l68EH+3Y9Q2FoALNSV5GbhDl0M6iGGA2\nlzksvsgfSiiZh6leKwmKrX7D/3vssHHrKou1rlXMhEY8aiZL+jSRgFQyCyC/Rwa7\nXciY+jDzOw1mq2pvU/5vgKkFmO73+1nkUoLX/sXx7LKO0HIk/5YbRozQtrcjmAtX\n7CyD6CgDAm7ystF/58/TjZkRnUrvS8MAFLBguzQqHrEBu99//jqyR/1y1NCwUl7M\nvJKTCUNzWS1v1lldoWTKPF4ktuC1p1bqkxPnONl6URxfgc/xi1ujKTa0oq5N3cXt\nRnKFTrx4ZUgO3rsGZ1q2Wc3c+g4gYa6U2l2K3k+sVgtSlE570cL4xa/ndDK9A4GH\nxgdJOF/3eUz/uj6J3ujhn1zvlH+HB01HOH6LWnqoTiRM167fYcANkUN5aOMh+dnw\nNZJk3ZY2kipJq/HftDLYdKWBsc2n/unP5DEMNX3pY+OvRyFC0mI1QxOiuONO0o7L\nXu/GDhoOpxANQwLlGRHS\n=iZEX\n-----END PGP SIGNATURE-----\n",
+        "payload": "tree 6dc197ec37ed940cca7aa5a2c49b3f4d547a83ff\nparent 04b9eb2d74f67b58cd6dd43bf8c8a424ab478ce2\nauthor Danil Pavlov <danil.pavlov@jetbrains.com> 1766155420 +0100\ncommitter GitHub <noreply@github.com> 1766155420 +0100\n\nfeat: new Maven section (#5232)\n\n",
+        "verified_at": "2025-12-19T14:43:41Z"
+      }
+    },
+    "url": "https://api.github.com/repos/JetBrains/kotlin-web-site/commits/c1ea05beb323d50694f58d0b70f2c0a8c4d17d63",
+    "html_url": "https://github.com/JetBrains/kotlin-web-site/commit/c1ea05beb323d50694f58d0b70f2c0a8c4d17d63",
+    "comments_url": "https://api.github.com/repos/JetBrains/kotlin-web-site/commits/c1ea05beb323d50694f58d0b70f2c0a8c4d17d63/comments",
+    "author": {
+      "login": "danil-pavlov",
+      "id": 88453164,
+      "node_id": "MDQ6VXNlcjg4NDUzMTY0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/88453164?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/danil-pavlov",
+      "html_url": "https://github.com/danil-pavlov",
+      "followers_url": "https://api.github.com/users/danil-pavlov/followers",
+      "following_url": "https://api.github.com/users/danil-pavlov/following{/other_user}",
+      "gists_url": "https://api.github.com/users/danil-pavlov/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/danil-pavlov/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/danil-pavlov/subscriptions",
+      "organizations_url": "https://api.github.com/users/danil-pavlov/orgs",
+      "repos_url": "https://api.github.com/users/danil-pavlov/repos",
+      "events_url": "https://api.github.com/users/danil-pavlov/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/danil-pavlov/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "04b9eb2d74f67b58cd6dd43bf8c8a424ab478ce2",
+        "url": "https://api.github.com/repos/JetBrains/kotlin-web-site/commits/04b9eb2d74f67b58cd6dd43bf8c8a424ab478ce2",
+        "html_url": "https://github.com/JetBrains/kotlin-web-site/commit/04b9eb2d74f67b58cd6dd43bf8c8a424ab478ce2"
+      }
+    ]
+  },
+  {
+    "sha": "f123a16fb23f621904e75b67ef52f20cf656d0ab",
+    "node_id": "C_kwDOANuvGNoAKGYxMjNhMTZmYjIzZjYyMTkwNGU3NWI2N2VmNTJmMjBjZjY1NmQwYWI",
+    "commit": {
+      "author": {
+        "name": "Sarah Haggarty",
+        "email": "81160244+sarahhaggarty@users.noreply.github.com",
+        "date": "2025-09-10T09:46:49Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2025-09-10T09:46:49Z"
+      },
+      "message": "Kotlin 2.2.20 release (#5069)\n\n* update: remove kapt k2 Gradle property\n\n* update: add top-level dependencies block\n\n* update: add compiler execution strategies for maven\n\n* update: intel-based apple target support (#5008)\n\n* feat: v.list and gradle version updates for 2.2.20 release\n\n* Update kotlin-language-features-and-proposals.md\n\n* feat: Updating Kotlin/JS docs for Kotlin 2.2.20 release (#5051)\n\n* Updating Kotlin/JS docs for Kotlin 2.2.20 release\n\n* chore: removed repetitive sentence\n\n* SME review\n\n* chore: fix sentence\n\n* Sarah review\n\n* chore: add compiler option to reference\n\n* Sarah review\n\n* feat: add information about receiver-context parameter ambiguity (#5054)\n\n* feat: add information about receiver-context parameter ambiguity\n\n* renaming function\n\n* rewriting context paremeter shadowing based on Alejandro's comments\n\n* implementing Alejandra's comments\n\n* fix shell prompts in native-debugging (#5063)\n\nCo-authored-by: Aleksei.Glushko <aleksei.glushko@jetbrains.com>\n\n* update: add info about compiler options common schema\n\n* feat: support for swift export (#5009)\n\n* feat: new object summaries (#5060)\n\n* feat: new page about kotlin daemon\n\n* feat: block parameter names (#5024)\n\n* feat: kdoc export by default (#5027)\n\n* update: web targets diagram\n\n* chore: add Kotlin daemon links\n\n* feat: Kotlin/Wasm going beta doc updates (#5049)\n\n* Kotlin/Wasm going beta doc updates\n\n* chore: fix anchors\n\n* chore: fix bullets format\n\n* Zalim review\n\n* Zalim review round 2\n\n* Replace screenshots\n\n* chore: remove anchor\n\n* Aleksey review\n\n* update: replace wizard screenshot\n\n* chore: clarification in note\n\n* feat: add what's new for 2.2.20\n\n* chore: update Kotlin/Wasm component stability to Beta\n\n---------\n\nCo-authored-by: Sarah Haggarty <sarahhaggarty@users.noreply.github.com>\nCo-authored-by: Danil Pavlov <danil.pavlov@jetbrains.com>\nCo-authored-by: Daniel Csorba <daniel.csorba@jetbrains.com>\nCo-authored-by: Mikhail Zarechenskiy <mikhail.zarechenskiy@jetbrains.com>\nCo-authored-by: alejandrapedroza <39709865+AlejandraPedroza@users.noreply.github.com>\nCo-authored-by: Dániel Csorba <150924204+daniCsorbaJB@users.noreply.github.com>\nCo-authored-by: Aleksei.Glushko <aleksei.glushko@jetbrains.com>",
+      "tree": {
+        "sha": "23715118f1f5a2ecb1744f4bb6c413a30456bb5e",
+        "url": "https://api.github.com/repos/JetBrains/kotlin-web-site/git/trees/23715118f1f5a2ecb1744f4bb6c413a30456bb5e"
+      },
+      "url": "https://api.github.com/repos/JetBrains/kotlin-web-site/git/commits/f123a16fb23f621904e75b67ef52f20cf656d0ab",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJowUkJCRC1aQ7uu5UhlAAAErwQAI+XBLu5Slr+YmL/2hRcUmM7\nw7KQFniIsbNtSfpN3/MipsPkwQaY/Dj7adaFJTg/WM32TcoXfIh2Ov+4iHC2oo1e\nePhfYISU65IAxvAP+qx+xKeJnACkqvYG/6gMymAYsZLFgSu81a1miuirzv1i+rCE\n1GAhIpiM/zaDxBu7TDx8ixx/4z9TOkhO205XoyBtU40N53sAV2CXN0l6y06u8tyi\niOl1RNLNIYVqaAqWrfnkHE3w4BiwdVRNIqVL3/i9QtIM71zJ+xZWInoXMLTBBNyl\nd4VAvE61WwDI4NFkIJeoEddS5BoNpmyJhijvjmP63rbwaN2QbBl7k0dXoU2FB1sA\nGkDmJI41+JNRKWWtFXLmCZLQHyhnnZhQwoBQ6cfXntmBBF30pCsKAXBOMUfN9rI4\nsG0orTExMWcj6ebu3ZQshofkyFkob+uR1XvqDIHUee3mlP0Edu4BrmwfPLZbgwT3\nuiH2wOWNNsBVb4f5JvrP1QBVR29MLmuxZAaenFo/YvV5Wr82O1F6WBjVll1i9MGs\nEmjguKd6c/nbeIvmAGMiHAxiEXU583m+i9wiwou6M5DKkO8qAZjrz0Pms0gsh2Dx\nNmbvEAIYlM/Sxq5ZUloPoXwJzKGHpw9V+zBQDnn6NiYFjFWMbt6cQnzSy70hh6Vp\nirYavE0qqZBdUq8SY3/O\n=dl4W\n-----END PGP SIGNATURE-----\n",
+        "payload": "tree 23715118f1f5a2ecb1744f4bb6c413a30456bb5e\nparent c4132627caec8e7f534bed490877a77f94225999\nauthor Sarah Haggarty <81160244+sarahhaggarty@users.noreply.github.com> 1757497609 +0200\ncommitter GitHub <noreply@github.com> 1757497609 +0200\n\nKotlin 2.2.20 release (#5069)\n\n* update: remove kapt k2 Gradle property\n\n* update: add top-level dependencies block\n\n* update: add compiler execution strategies for maven\n\n* update: intel-based apple target support (#5008)\n\n* feat: v.list and gradle version updates for 2.2.20 release\n\n* Update kotlin-language-features-and-proposals.md\n\n* feat: Updating Kotlin/JS docs for Kotlin 2.2.20 release (#5051)\n\n* Updating Kotlin/JS docs for Kotlin 2.2.20 release\n\n* chore: removed repetitive sentence\n\n* SME review\n\n* chore: fix sentence\n\n* Sarah review\n\n* chore: add compiler option to reference\n\n* Sarah review\n\n* feat: add information about receiver-context parameter ambiguity (#5054)\n\n* feat: add information about receiver-context parameter ambiguity\n\n* renaming function\n\n* rewriting context paremeter shadowing based on Alejandro's comments\n\n* implementing Alejandra's comments\n\n* fix shell prompts in native-debugging (#5063)\n\nCo-authored-by: Aleksei.Glushko <aleksei.glushko@jetbrains.com>\n\n* update: add info about compiler options common schema\n\n* feat: support for swift export (#5009)\n\n* feat: new object summaries (#5060)\n\n* feat: new page about kotlin daemon\n\n* feat: block parameter names (#5024)\n\n* feat: kdoc export by default (#5027)\n\n* update: web targets diagram\n\n* chore: add Kotlin daemon links\n\n* feat: Kotlin/Wasm going beta doc updates (#5049)\n\n* Kotlin/Wasm going beta doc updates\n\n* chore: fix anchors\n\n* chore: fix bullets format\n\n* Zalim review\n\n* Zalim review round 2\n\n* Replace screenshots\n\n* chore: remove anchor\n\n* Aleksey review\n\n* update: replace wizard screenshot\n\n* chore: clarification in note\n\n* feat: add what's new for 2.2.20\n\n* chore: update Kotlin/Wasm component stability to Beta\n\n---------\n\nCo-authored-by: Sarah Haggarty <sarahhaggarty@users.noreply.github.com>\nCo-authored-by: Danil Pavlov <danil.pavlov@jetbrains.com>\nCo-authored-by: Daniel Csorba <daniel.csorba@jetbrains.com>\nCo-authored-by: Mikhail Zarechenskiy <mikhail.zarechenskiy@jetbrains.com>\nCo-authored-by: alejandrapedroza <39709865+AlejandraPedroza@users.noreply.github.com>\nCo-authored-by: Dániel Csorba <150924204+daniCsorbaJB@users.noreply.github.com>\nCo-authored-by: Aleksei.Glushko <aleksei.glushko@jetbrains.com>",
+        "verified_at": "2025-09-10T09:46:49Z"
+      }
+    },
+    "url": "https://api.github.com/repos/JetBrains/kotlin-web-site/commits/f123a16fb23f621904e75b67ef52f20cf656d0ab",
+    "html_url": "https://github.com/JetBrains/kotlin-web-site/commit/f123a16fb23f621904e75b67ef52f20cf656d0ab",
+    "comments_url": "https://api.github.com/repos/JetBrains/kotlin-web-site/commits/f123a16fb23f621904e75b67ef52f20cf656d0ab/comments",
+    "author": {
+      "login": "sarahhaggarty",
+      "id": 81160244,
+      "node_id": "MDQ6VXNlcjgxMTYwMjQ0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/81160244?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/sarahhaggarty",
+      "html_url": "https://github.com/sarahhaggarty",
+      "followers_url": "https://api.github.com/users/sarahhaggarty/followers",
+      "following_url": "https://api.github.com/users/sarahhaggarty/following{/other_user}",
+      "gists_url": "https://api.github.com/users/sarahhaggarty/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/sarahhaggarty/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/sarahhaggarty/subscriptions",
+      "organizations_url": "https://api.github.com/users/sarahhaggarty/orgs",
+      "repos_url": "https://api.github.com/users/sarahhaggarty/repos",
+      "events_url": "https://api.github.com/users/sarahhaggarty/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/sarahhaggarty/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "c4132627caec8e7f534bed490877a77f94225999",
+        "url": "https://api.github.com/repos/JetBrains/kotlin-web-site/commits/c4132627caec8e7f534bed490877a77f94225999",
+        "html_url": "https://github.com/JetBrains/kotlin-web-site/commit/c4132627caec8e7f534bed490877a77f94225999"
+      }
+    ]
+  }
+]

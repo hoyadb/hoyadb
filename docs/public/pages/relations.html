@@ -1,0 +1,18 @@
+<p class="callout">Using JavaScript? Follow the <a href="getting-started.html">complete application tutorial</a> and <a href="javascript.html">binding guide</a>. The core concepts and Rust examples below describe the same engine; tagged host DTOs are an advanced surface.</p>
+<h2>To-one and has-many</h2><p>The example creates an author and a note, navigates in both directions and filters by the author's name. The to-one declaration creates the typed <code>author_id</code> foreign key. A has-many relation points back at that same field.</p>
+<p>The examples use <code>run</code>, <code>schema</code>, <code>fields</code> and <code>owner</code> from the <a href="testing.html#support">example support module</a>. <code>run</code> drives this memory fixture; applications with suspending adapters use their async executor. The examples use <code>unwrap()</code> to stop on unexpected failures; an application should handle the <a href="errors.html">typed errors</a>.</p>
+<p><a href="source:examples/src/bin/relations.rs">Read the complete runnable example</a>, including setup and assertions. The verification link beneath each snippet records its execution.</p>
+<h3>Declare the note's author</h3><p>Start from the example notes schema. The to-one relation supplies the typed <code>author_id</code> reference field.</p>
+{{example:relations:to-one}}
+<h3>Declare the inverse collection</h3><p>The authors table exposes its notes through the same foreign key. A relation describes navigation; references are not automatic existence checks.</p>
+{{example:relations:has-many}}
+<h3>Store the reference</h3><p>Insert the author first, then put its ID into the note's reference field.</p>
+{{example:relations:insert}}
+<h3>Navigate in either direction</h3><p>The first result contains the note; the second contains its author. Both are checked by the complete example.</p>
+{{example:relations:navigate}}
+<h3>Filter through a to-one relation</h3><p>Use the declared relation name in the path. This query selects the note whose author is Ada.</p>
+{{example:relations:filter}}
+
+<h2>Many-to-many</h2><p><code>ManyToMany</code> names a through table and its source/target to-one relation names. Model link payload as columns on that through table. <code>link</code> returns an existing identical membership or inserts one; conflicting existing payload is rejected. <code>unlink</code> removes matching memberships. A command scope offers scoped versions so relationship changes can join the optimistic transaction.</p>
+<p>References are typed IDs, not automatic existence checks. Deleting a source does not establish a cascade policy. Use explicit command logic when business rules require consistent removals. For configured entity tables use the entity-aware wrappers exposed by your SDK.</p>
+<p>Reference: <a href="api/hoyadb_core/model/enum.RelationDefinition.html">RelationDefinition</a> and <a href="api/hoyadb_core/model/struct.Database.html#method.link">Database::link</a>.</p>

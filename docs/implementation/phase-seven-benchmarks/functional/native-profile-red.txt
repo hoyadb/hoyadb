@@ -1,0 +1,22 @@
+   Compiling hoyadb-benchmark v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/native)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.44s
+     Running tests/process.rs (benchmarks/native/target/debug/deps/process-b29ee2263e711476)
+
+running 1 test
+test p01_debug_worker_refuses_performance_evidence ... FAILED
+
+failures:
+
+---- p01_debug_worker_refuses_performance_evidence stdout ----
+
+thread 'p01_debug_worker_refuses_performance_evidence' (82056708) panicked at tests/process.rs:6:9:
+assertion failed: !output.status.success()
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    p01_debug_worker_refuses_performance_evidence
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.47s
+
+error: test failed, to rerun pass `--test process`

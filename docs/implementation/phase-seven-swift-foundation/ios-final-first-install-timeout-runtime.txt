@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-native/run-ios-consumer-final.py", line 20, in <module>
+    call(['xcrun','simctl','install',udid,str(bundle)])
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-native/run-ios-consumer-final.py", line 13, in call
+    result=subprocess.run(argv,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True,timeout=180 if "install" in argv else 90,**kwargs)
+  File "/usr/local/Cellar/python@3.14/3.14.8/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 557, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.14/3.14.8/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 1221, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.14/3.14.8/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 2154, in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.14/3.14.8/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 1268, in _check_timeout
+    raise TimeoutExpired(
+    ...<2 lines>...
+            stderr=b''.join(stderr_seq) if stderr_seq else None)
+subprocess.TimeoutExpired: Command '['xcrun', 'simctl', 'install', 'CC525A65-D03E-4F9D-8936-DD16BBFD9664', 'target/phase-seven-native/GeneralConsumer.app']' timed out after 180 seconds

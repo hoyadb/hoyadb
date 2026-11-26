@@ -1,0 +1,722 @@
+{
+  "method": "existing GPG; task-owned short public-only home; keys by exact issuer fingerprint; identity trust UNKNOWN; FALLBACK for signatures without an issuer-fingerprint subpacket: key lookup by the 64-bit issuer key ID, confirmed by the VALIDSIG full fingerprint",
+  "gpg": {
+    "path": "/usr/local/bin/gpg",
+    "realpath": "/usr/local/Cellar/gnupg/2.5.21/bin/gpg",
+    "sha256": "76fb076671a8cd55bdc8d5f10e64ca3159c41005d8e352c866b5b6cb3e953e19",
+    "version": "gpg (GnuPG) 2.5.21"
+  },
+  "owned_home": "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xdmhebog",
+  "results": [
+    {
+      "coordinate": "com.google.code.gson:gson:2.8.9",
+      "jar": "gson-2.8.9.jar",
+      "jar_sha256": "d3999291855de495c94c743761b8ab5176cfeabe281a5ab0d8e8d45326fd703e",
+      "asc_sha256": "007939b3abd5cb5dc6262998e5581e4c8a093ab8a0537c883fc66f402abb1290",
+      "asc_url": "https://repo.maven.apache.org/maven2/com/google/code/gson/gson/2.8.9/gson-2.8.9.jar.asc",
+      "packets": {
+        "command": [
+          "/usr/local/bin/gpg",
+          "--homedir",
+          "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xdmhebog",
+          "--no-options",
+          "--no-autostart",
+          "--batch",
+          "--no-auto-key-retrieve",
+          "--list-packets",
+          "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/compiler-review/closure/com.google.code.gson__gson__2.8.9/gson-2.8.9.jar.asc"
+        ],
+        "exit_code": 0,
+        "stdout": "# off=0 ctb=89 tag=2 hlen=3 plen=284\n:signature packet: algo 1, keyid B0F3710FA64900E7\n\tversion 4, created 1635537600, md5len 0, sigclass 0x00\n\tdigest algo 10, begin of digest 9a 70\n\thashed subpkt 2 len 4 (sig created 2021-10-29)\n\tsubpkt 16 len 8 (issuer key ID B0F3710FA64900E7)\n\tdata: [2047 bits]\n",
+        "stderr": "gpg: keybox '/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xdmhebog/pubring.kbx' created\n"
+      },
+      "issuer_fingerprint": null,
+      "issuer_keyid": "B0F3710FA64900E7",
+      "key_requests": [
+        {
+          "requested_url": "https://keys.openpgp.org/vks/v1/by-keyid/B0F3710FA64900E7",
+          "effective_url": "https://keys.openpgp.org/vks/v1/by-keyid/B0F3710FA64900E7",
+          "exit_code": 0,
+          "stderr": "",
+          "path": "keys/B0F3710FA64900E7-keys.openpgp.org.asc",
+          "bytes": 1301,
+          "sha256": "729efc8475a57933090b4bb95d0b675c187f633fb5e6050ea997579db6e3c8cf",
+          "import": {
+            "command": [
+              "/usr/local/bin/gpg",
+              "--homedir",
+              "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xdmhebog",
+              "--no-options",
+              "--no-autostart",
+              "--batch",
+              "--no-auto-key-retrieve",
+              "--import-options",
+              "import-minimal",
+              "--import",
+              "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/compiler-review/attestation-followup/keys/B0F3710FA64900E7-keys.openpgp.org.asc"
+            ],
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "gpg: key B0F3710FA64900E7: no user ID\ngpg: Total number processed: 1\n"
+          },
+          "imported_key_listing": {
+            "command": [
+              "/usr/local/bin/gpg",
+              "--homedir",
+              "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xdmhebog",
+              "--no-options",
+              "--no-autostart",
+              "--batch",
+              "--no-auto-key-retrieve",
+              "--with-colons",
+              "--fingerprint",
+              "B0F3710FA64900E7"
+            ],
+            "exit_code": 2,
+            "stdout": "tru::1:1792961981:0:3:1:5\n",
+            "stderr": "gpg: /var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xdmhebog/trustdb.gpg: trustdb created\ngpg: error reading key: No public key\n"
+          },
+          "imported_has_uid": false
+        },
+        {
+          "requested_url": "https://keyserver.ubuntu.com/pks/lookup?op=get&options=mr&search=0xB0F3710FA64900E7",
+          "effective_url": "https://keyserver.ubuntu.com/pks/lookup?op=get&options=mr&search=0xB0F3710FA64900E7",
+          "exit_code": 0,
+          "stderr": "",
+          "path": "keys/B0F3710FA64900E7-keyserver.ubuntu.com.asc",
+          "bytes": 1728,
+          "sha256": "abdff93da4cc637ff344e2a7b7edbc84b53ff26c7c8148ef89a93c3d5cf47a6c",
+          "import": {
+            "command": [
+              "/usr/local/bin/gpg",
+              "--homedir",
+              "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xdmhebog",
+              "--no-options",
+              "--no-autostart",
+              "--batch",
+              "--no-auto-key-retrieve",
+              "--import-options",
+              "import-minimal",
+              "--import",
+              "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/compiler-review/attestation-followup/keys/B0F3710FA64900E7-keyserver.ubuntu.com.asc"
+            ],
+            "exit_code": 0,
+            "stdout": "",
+            "stderr": "gpg: key B0F3710FA64900E7: public key \"\\\\xc3\\\\x61monn McManus <eamonn@mcmanus.net>\" imported\ngpg: no gpg-agent running in this session\ngpg: Total number processed: 1\ngpg:               imported: 1\n"
+          },
+          "imported_key_listing": {
+            "command": [
+              "/usr/local/bin/gpg",
+              "--homedir",
+              "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xdmhebog",
+              "--no-options",
+              "--no-autostart",
+              "--batch",
+              "--no-auto-key-retrieve",
+              "--with-colons",
+              "--fingerprint",
+              "B0F3710FA64900E7"
+            ],
+            "exit_code": 0,
+            "stdout": "tru::1:1792961981:0:3:1:5\npub:-:2048:1:B0F3710FA64900E7:1465600498:::-:::scESC::::::23::0:\nfpr:::::::::C7BE5BCC9FEC15518CFDA882B0F3710FA64900E7:\nuid:-::::1465600498::633581B2A3E198AC555381525D98BFCC0D5B96C0::\ufffdamonn McManus <eamonn@mcmanus.net>::::::::::0:\nsub:-:2048:1:7892707E9657EBD4:1465600498::::::e::::::23:\nfpr:::::::::279DCFBE6B5FFB4C32EB5F817892707E9657EBD4:\n",
+            "stderr": ""
+          },
+          "imported_has_uid": true
+        }
+      ],
+      "verify": {
+        "command": [
+          "/usr/local/bin/gpg",
+          "--homedir",
+          "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xdmhebog",
+          "--no-options",
+          "--no-autostart",
+          "--batch",
+          "--no-auto-key-retrieve",
+          "--status-fd",
+          "1",
+          "--verify",
+          "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/compiler-review/closure/com.google.code.gson__gson__2.8.9/gson-2.8.9.jar.asc",
+          "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/compiler-review/closure/com.google.code.gson__gson__2.8.9/gson-2.8.9.jar"
+        ],
+        "exit_code": 0,
+        "stdout": "[GNUPG:] NEWSIG\n[GNUPG:] KEY_CONSIDERED C7BE5BCC9FEC15518CFDA882B0F3710FA64900E7 0\n[GNUPG:] SIG_ID QaVdGUWden6m8MYsXEuS7HshUZU 2021-10-29 1635537600\n[GNUPG:] GOODSIG B0F3710FA64900E7 \ufffdamonn McManus <eamonn@mcmanus.net>\n[GNUPG:] VALIDSIG C7BE5BCC9FEC15518CFDA882B0F3710FA64900E7 2021-10-29 1635537600 0 4 0 1 10 00 C7BE5BCC9FEC15518CFDA882B0F3710FA64900E7\n[GNUPG:] TRUST_UNDEFINED 0 pgp\n",
+        "stderr": "gpg: Signature made Fri Oct 29 22:00:00 2021 CEST\ngpg:                using RSA key B0F3710FA64900E7\ngpg: Good signature from \"\\\\xc3\\\\x61monn McManus <eamonn@mcmanus.net>\" [unknown]\ngpg: WARNING: This key is not certified with a trusted signature!\ngpg:          There is no indication that the signature belongs to the owner.\n      C7BE5BCC9FEC15518CFDA882B0F3710FA64900E7\n"
+      },
+      "goodsig": true,
+      "validsig_fingerprint": "C7BE5BCC9FEC15518CFDA882B0F3710FA64900E7",
+      "primary_key_fingerprint": "C7BE5BCC9FEC15518CFDA882B0F3710FA64900E7",
+      "expired_or_revoked": [],
+      "uid": "\ufffdamonn McManus <eamonn@mcmanus.net>",
+      "identity_trust": "UNKNOWN: key fetched from a public keyserver; no independently trusted publisher key"
+    },
+    {
+      "coordinate": "com.google.j2objc:j2objc-annotations:1.3",
+      "jar": "j2objc-annotations-1.3.jar",
+      "jar_sha256": "21af30c92267bd6122c0e0b4d20cccb6641a37eaf956c6540ec471d584e64a7b",
+      "asc_sha256": "08c896f77c5741e3ac58c785abd9c7242dc89376a65d68955d79d9d0cd9f838b",
+      "asc_url": "https://repo.maven.apache.org/maven2/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar.asc",
+      "packets": {
+        "command": [
+          "/usr/local/bin/gpg",
+          "--homedir",
+          "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xdmhebog",
+          "--no-options",
+          "--no-autostart",
+          "--batch",
+          "--no-auto-key-retrieve",
+          "--list-packets",
+          "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/compiler-review/closure/com.google.j2objc__j2objc-annotations__1.3/j2objc-annotations-1.3.jar.asc"
+        ],
+        "exit_code": 0,
+        "stdout": "# off=0 ctb=89 tag=2 hlen=3 plen=284\n:signature packet: algo 1, keyid 29579F18FA8FD93B\n\tversion 4, created 1484780993, md5len 0, sigclass 0x00\n\tdigest algo 2, begin of digest fe 22\n\thashed subpkt 2 len 4 (sig created 2017-01-18)\n\tsubpkt 16 len 8 (issuer key ID 29579F18FA8FD93B)\n\tdata: [2046 bits]\n",
+        "stderr": ""
+      },
+      "issuer_fingerprint": null,
+      "issuer_keyid": "29579F18FA8FD93B",
+      "key_requests": [
+        {
+          "requested_url": "https://keys.openpgp.org/vks/v1/by-keyid/29579F18FA8FD93B",
+          "effective_url": "https://keys.openpgp.org/vks/v1/by-keyid/29579F18FA8FD93B",
+          "exit_code": 0,
+          "stderr": "",
+          "path": "keys/29579F18FA8FD93B-keys.openpgp.org.asc",
+          "bytes": 1301,
+          "sha256": "d3b49f7952e4dcbdaa88317d04a94af7abaaf7af66f4c1120be97684ddb688cb",
+          "import": {
+            "command": [
+              "/usr/local/bin/gpg",
+              "--homedir",
+              "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xdmhebog",
+              "--no-options",
+              "--no-autostart",
+              "--batch",
+              "--no-auto-key-retrieve",
+              "--import-options",
+              "import-minimal",
+              "--import",
+              "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/compiler-review/attestation-followup/keys/29579F18FA8FD93B-keys.openpgp.org.asc"
+            ],
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "gpg: key 29579F18FA8FD93B: no user ID\ngpg: Total number processed: 1\n"
+          },
+          "imported_key_listing": {
+            "command": [
+              "/usr/local/bin/gpg",
+              "--homedir",
+              "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xdmhebog",
+              "--no-options",
+              "--no-autostart",
+              "--batch",
+              "--no-auto-key-retrieve",
+              "--with-colons",
+              "--fingerprint",
+              "29579F18FA8FD93B"
+            ],
+            "exit_code": 2,
+            "stdout": "tru::1:1792961981:0:3:1:5\n",
+            "stderr": "gpg: error reading key: No public key\n"
+          },
+          "imported_has_uid": false
+        },
+        {
+          "requested_url": "https://keyserver.ubuntu.com/pks/lookup?op=get&options=mr&search=0x29579F18FA8FD93B",
+          "effective_url": "https://keyserver.ubuntu.com/pks/lookup?op=get&options=mr&search=0x29579F18FA8FD93B",
+          "exit_code": 0,
+          "stderr": "",
+          "path": "keys/29579F18FA8FD93B-keyserver.ubuntu.com.asc",
+          "bytes": 1724,
+          "sha256": "bf07fb41fc6e2f7495f775d7b2a9139941a24a108580157b9e6be52c28cc62c7",
+          "import": {
+            "command": [
+              "/usr/local/bin/gpg",
+              "--homedir",
+              "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xdmhebog",
+              "--no-options",
+              "--no-autostart",
+              "--batch",
+              "--no-auto-key-retrieve",
+              "--import-options",
+              "import-minimal",
+              "--import",
+              "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/compiler-review/attestation-followup/keys/29579F18FA8FD93B-keyserver.ubuntu.com.asc"
+            ],
+            "exit_code": 0,
+            "stdout": "",
+            "stderr": "gpg: key 29579F18FA8FD93B: public key \"Tom Ball <tball724@gmail.com>\" imported\ngpg: no gpg-agent running in this session\ngpg: Total number processed: 1\ngpg:               imported: 1\n"
+          },
+          "imported_key_listing": {
+            "command": [
+              "/usr/local/bin/gpg",
+              "--homedir",
+              "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xdmhebog",
+              "--no-options",
+              "--no-autostart",
+              "--batch",
+              "--no-auto-key-retrieve",
+              "--with-colons",
+              "--fingerprint",
+              "29579F18FA8FD93B"
+            ],
+            "exit_code": 0,
+            "stdout": "tru::1:1792961981:0:3:1:5\npub:-:2048:1:29579F18FA8FD93B:1443203264:::-:::scESC::::::23::0:\nfpr:::::::::B801E2F8EF035068EC1139CC29579F18FA8FD93B:\nuid:-::::1443203264::6374D92D835458CEB551DD27E44B33E575ABA0CA::Tom Ball <tball724@gmail.com>::::::::::0:\nsub:-:2048:1:9DF7F2349731D55B:1443203264::::::e::::::23:\nfpr:::::::::FE96FFB89D65DBD136B926CD9DF7F2349731D55B:\n",
+            "stderr": ""
+          },
+          "imported_has_uid": true
+        }
+      ],
+      "verify": {
+        "command": [
+          "/usr/local/bin/gpg",
+          "--homedir",
+          "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xdmhebog",
+          "--no-options",
+          "--no-autostart",
+          "--batch",
+          "--no-auto-key-retrieve",
+          "--status-fd",
+          "1",
+          "--verify",
+          "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/compiler-review/closure/com.google.j2objc__j2objc-annotations__1.3/j2objc-annotations-1.3.jar.asc",
+          "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/compiler-review/closure/com.google.j2objc__j2objc-annotations__1.3/j2objc-annotations-1.3.jar"
+        ],
+        "exit_code": 0,
+        "stdout": "[GNUPG:] NEWSIG\n[GNUPG:] KEY_CONSIDERED B801E2F8EF035068EC1139CC29579F18FA8FD93B 0\n[GNUPG:] SIG_ID aO/6tQE22mmM9PHJkr1rCDCDBIA 2017-01-18 1484780993\n[GNUPG:] GOODSIG 29579F18FA8FD93B Tom Ball <tball724@gmail.com>\n[GNUPG:] VALIDSIG B801E2F8EF035068EC1139CC29579F18FA8FD93B 2017-01-18 1484780993 0 4 0 1 2 00 B801E2F8EF035068EC1139CC29579F18FA8FD93B\n[GNUPG:] TRUST_UNDEFINED 0 pgp\n",
+        "stderr": "gpg: Signature made Thu Jan 19 00:09:53 2017 CET\ngpg:                using RSA key 29579F18FA8FD93B\ngpg: Good signature from \"Tom Ball <tball724@gmail.com>\" [unknown]\ngpg: WARNING: This key is not certified with a trusted signature!\ngpg:          There is no indication that the signature belongs to the owner.\n      B801E2F8EF035068EC1139CC29579F18FA8FD93B\n"
+      },
+      "goodsig": true,
+      "validsig_fingerprint": "B801E2F8EF035068EC1139CC29579F18FA8FD93B",
+      "primary_key_fingerprint": "B801E2F8EF035068EC1139CC29579F18FA8FD93B",
+      "expired_or_revoked": [],
+      "uid": "Tom Ball <tball724@gmail.com>",
+      "identity_trust": "UNKNOWN: key fetched from a public keyserver; no independently trusted publisher key"
+    },
+    {
+      "coordinate": "org.checkerframework:checker-qual:3.12.0",
+      "jar": "checker-qual-3.12.0.jar",
+      "jar_sha256": "ff10785ac2a357ec5de9c293cb982a2cbb605c0309ea4cc1cb9b9bc6dbe7f3cb",
+      "asc_sha256": "6d877f4e9397f6b906242f7832159f7477d1b0d262bcc81e45e185d6bd820a84",
+      "asc_url": "https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.jar.asc",
+      "packets": {
+        "command": [
+          "/usr/local/bin/gpg",
+          "--homedir",
+          "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xdmhebog",
+          "--no-options",
+          "--no-autostart",
+          "--batch",
+          "--no-auto-key-retrieve",
+          "--list-packets",
+          "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/compiler-review/closure/org.checkerframework__checker-qual__3.12.0/checker-qual-3.12.0.jar.asc"
+        ],
+        "exit_code": 0,
+        "stdout": "# off=0 ctb=89 tag=2 hlen=3 plen=284\n:signature packet: algo 1, keyid B16698A4ADF4D638\n\tversion 4, created 1617302884, md5len 0, sigclass 0x00\n\tdigest algo 2, begin of digest bf 0c\n\thashed subpkt 2 len 4 (sig created 2021-04-01)\n\tsubpkt 16 len 8 (issuer key ID B16698A4ADF4D638)\n\tdata: [2047 bits]\n",
+        "stderr": ""
+      },
+      "issuer_fingerprint": null,
+      "issuer_keyid": "B16698A4ADF4D638",
+      "key_requests": [
+        {
+          "requested_url": "https://keys.openpgp.org/vks/v1/by-keyid/B16698A4ADF4D638",
+          "effective_url": "https://keys.openpgp.org/vks/v1/by-keyid/B16698A4ADF4D638",
+          "exit_code": 0,
+          "stderr": "",
+          "path": "keys/B16698A4ADF4D638-keys.openpgp.org.asc",
+          "bytes": 1301,
+          "sha256": "5f999b663b3c9a6a6861a8b6c5e347504513050199052a4beeadc4c2b4589c96",
+          "import": {
+            "command": [
+              "/usr/local/bin/gpg",
+              "--homedir",
+              "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xdmhebog",
+              "--no-options",
+              "--no-autostart",
+              "--batch",
+              "--no-auto-key-retrieve",
+              "--import-options",
+              "import-minimal",
+              "--import",
+              "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/compiler-review/attestation-followup/keys/B16698A4ADF4D638-keys.openpgp.org.asc"
+            ],
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "gpg: key B16698A4ADF4D638: no user ID\ngpg: Total number processed: 1\n"
+          },
+          "imported_key_listing": {
+            "command": [
+              "/usr/local/bin/gpg",
+              "--homedir",
+              "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xdmhebog",
+              "--no-options",
+              "--no-autostart",
+              "--batch",
+              "--no-auto-key-retrieve",
+              "--with-colons",
+              "--fingerprint",
+              "B16698A4ADF4D638"
+            ],
+            "exit_code": 2,
+            "stdout": "tru::1:1792961981:0:3:1:5\n",
+            "stderr": "gpg: error reading key: No public key\n"
+          },
+          "imported_has_uid": false
+        },
+        {
+          "requested_url": "https://keyserver.ubuntu.com/pks/lookup?op=get&options=mr&search=0xB16698A4ADF4D638",
+          "effective_url": "https://keyserver.ubuntu.com/pks/lookup?op=get&options=mr&search=0xB16698A4ADF4D638",
+          "exit_code": 0,
+          "stderr": "",
+          "path": "keys/B16698A4ADF4D638-keyserver.ubuntu.com.asc",
+          "bytes": 1789,
+          "sha256": "00d72f99c99506b2a1a205230608d120afbcbfdadbe5bc65624d795b3b8fd61e",
+          "import": {
+            "command": [
+              "/usr/local/bin/gpg",
+              "--homedir",
+              "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xdmhebog",
+              "--no-options",
+              "--no-autostart",
+              "--batch",
+              "--no-auto-key-retrieve",
+              "--import-options",
+              "import-minimal",
+              "--import",
+              "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/compiler-review/attestation-followup/keys/B16698A4ADF4D638-keyserver.ubuntu.com.asc"
+            ],
+            "exit_code": 0,
+            "stdout": "",
+            "stderr": "gpg: key B16698A4ADF4D638: public key \"Checker Framework (Official Release) <checker-framework-dev@googlegroups.com>\" imported\ngpg: no gpg-agent running in this session\ngpg: Total number processed: 1\ngpg:               imported: 1\n"
+          },
+          "imported_key_listing": {
+            "command": [
+              "/usr/local/bin/gpg",
+              "--homedir",
+              "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xdmhebog",
+              "--no-options",
+              "--no-autostart",
+              "--batch",
+              "--no-auto-key-retrieve",
+              "--with-colons",
+              "--fingerprint",
+              "B16698A4ADF4D638"
+            ],
+            "exit_code": 0,
+            "stdout": "tru::1:1792961981:0:3:1:5\npub:-:2048:1:B16698A4ADF4D638:1396031440:::-:::scESC::::::23::0:\nfpr:::::::::19BEAB2D799C020F17C69126B16698A4ADF4D638:\nuid:-::::1396031440::F9F63DC01A47BF119AAD109C0114893906AF4175::Checker Framework (Official Release) <checker-framework-dev@googlegroups.com>::::::::::0:\nsub:-:2048:1:32784D4F004B405B:1396031440::::::e::::::23:\nfpr:::::::::FA41A555AE6E100DCC140CF332784D4F004B405B:\n",
+            "stderr": ""
+          },
+          "imported_has_uid": true
+        }
+      ],
+      "verify": {
+        "command": [
+          "/usr/local/bin/gpg",
+          "--homedir",
+          "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xdmhebog",
+          "--no-options",
+          "--no-autostart",
+          "--batch",
+          "--no-auto-key-retrieve",
+          "--status-fd",
+          "1",
+          "--verify",
+          "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/compiler-review/closure/org.checkerframework__checker-qual__3.12.0/checker-qual-3.12.0.jar.asc",
+          "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/compiler-review/closure/org.checkerframework__checker-qual__3.12.0/checker-qual-3.12.0.jar"
+        ],
+        "exit_code": 0,
+        "stdout": "[GNUPG:] NEWSIG\n[GNUPG:] KEY_CONSIDERED 19BEAB2D799C020F17C69126B16698A4ADF4D638 0\n[GNUPG:] SIG_ID OkqlplxEp6LtFy/0DLabH6s431o 2021-04-01 1617302884\n[GNUPG:] GOODSIG B16698A4ADF4D638 Checker Framework (Official Release) <checker-framework-dev@googlegroups.com>\n[GNUPG:] VALIDSIG 19BEAB2D799C020F17C69126B16698A4ADF4D638 2021-04-01 1617302884 0 4 0 1 2 00 19BEAB2D799C020F17C69126B16698A4ADF4D638\n[GNUPG:] TRUST_UNDEFINED 0 pgp\n",
+        "stderr": "gpg: Signature made Thu Apr  1 20:48:04 2021 CEST\ngpg:                using RSA key B16698A4ADF4D638\ngpg: Good signature from \"Checker Framework (Official Release) <checker-framework-dev@googlegroups.com>\" [unknown]\ngpg: WARNING: This key is not certified with a trusted signature!\ngpg:          There is no indication that the signature belongs to the owner.\n      19BEAB2D799C020F17C69126B16698A4ADF4D638\n"
+      },
+      "goodsig": true,
+      "validsig_fingerprint": "19BEAB2D799C020F17C69126B16698A4ADF4D638",
+      "primary_key_fingerprint": "19BEAB2D799C020F17C69126B16698A4ADF4D638",
+      "expired_or_revoked": [],
+      "uid": "Checker Framework (Official Release) <checker-framework-dev@googlegroups.com>",
+      "identity_trust": "UNKNOWN: key fetched from a public keyserver; no independently trusted publisher key"
+    },
+    {
+      "coordinate": "org.jetbrains.intellij.deps:trove4j:1.0.20200330",
+      "jar": "trove4j-1.0.20200330.jar",
+      "jar_sha256": "c5fd725bffab51846bf3c77db1383c60aaaebfe1b7fe2f00d23fe1b7df0a439d",
+      "asc_sha256": "523611b249bd776caa8020ccd8a2764dd33c25bd288da77038dfa31174b42c8b",
+      "asc_url": "https://repo.maven.apache.org/maven2/org/jetbrains/intellij/deps/trove4j/1.0.20200330/trove4j-1.0.20200330.jar.asc",
+      "packets": {
+        "command": [
+          "/usr/local/bin/gpg",
+          "--homedir",
+          "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xdmhebog",
+          "--no-options",
+          "--no-autostart",
+          "--batch",
+          "--no-auto-key-retrieve",
+          "--list-packets",
+          "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/compiler-review/closure/org.jetbrains.intellij.deps__trove4j__1.0.20200330/trove4j-1.0.20200330.jar.asc"
+        ],
+        "exit_code": 0,
+        "stdout": "# off=0 ctb=89 tag=2 hlen=3 plen=540\n:signature packet: algo 1, keyid 379CE192D401AB61\n\tversion 4, created 1585737973, md5len 0, sigclass 0x00\n\tdigest algo 8, begin of digest 4f cd\n\thashed subpkt 2 len 4 (sig created 2020-04-01)\n\tsubpkt 16 len 8 (issuer key ID 379CE192D401AB61)\n\tdata: [4095 bits]\n",
+        "stderr": ""
+      },
+      "issuer_fingerprint": null,
+      "issuer_keyid": "379CE192D401AB61",
+      "key_requests": [
+        {
+          "requested_url": "https://keys.openpgp.org/vks/v1/by-keyid/379CE192D401AB61",
+          "effective_url": "https://keys.openpgp.org/vks/v1/by-keyid/379CE192D401AB61",
+          "exit_code": 0,
+          "stderr": "",
+          "path": "keys/379CE192D401AB61-keys.openpgp.org.asc",
+          "bytes": 2341,
+          "sha256": "ca167d406ec8014a883a6dd9385514950e088845e2c91fbc76766f2f3bcc1d45",
+          "import": {
+            "command": [
+              "/usr/local/bin/gpg",
+              "--homedir",
+              "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xdmhebog",
+              "--no-options",
+              "--no-autostart",
+              "--batch",
+              "--no-auto-key-retrieve",
+              "--import-options",
+              "import-minimal",
+              "--import",
+              "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/compiler-review/attestation-followup/keys/379CE192D401AB61-keys.openpgp.org.asc"
+            ],
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "gpg: key 379CE192D401AB61: no user ID\ngpg: Total number processed: 1\n"
+          },
+          "imported_key_listing": {
+            "command": [
+              "/usr/local/bin/gpg",
+              "--homedir",
+              "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xdmhebog",
+              "--no-options",
+              "--no-autostart",
+              "--batch",
+              "--no-auto-key-retrieve",
+              "--with-colons",
+              "--fingerprint",
+              "379CE192D401AB61"
+            ],
+            "exit_code": 2,
+            "stdout": "tru::1:1792961981:0:3:1:5\n",
+            "stderr": "gpg: error reading key: No public key\n"
+          },
+          "imported_has_uid": false
+        },
+        {
+          "requested_url": "https://keyserver.ubuntu.com/pks/lookup?op=get&options=mr&search=0x379CE192D401AB61",
+          "effective_url": "https://keyserver.ubuntu.com/pks/lookup?op=get&options=mr&search=0x379CE192D401AB61",
+          "exit_code": 0,
+          "stderr": "",
+          "path": "keys/379CE192D401AB61-keyserver.ubuntu.com.asc",
+          "bytes": 3889,
+          "sha256": "dad9d73f9580cdb65e1bf8c5f4cb5d14876d8ccd74b9ab1f9dfb979c5fe2631e",
+          "import": {
+            "command": [
+              "/usr/local/bin/gpg",
+              "--homedir",
+              "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xdmhebog",
+              "--no-options",
+              "--no-autostart",
+              "--batch",
+              "--no-auto-key-retrieve",
+              "--import-options",
+              "import-minimal",
+              "--import",
+              "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/compiler-review/attestation-followup/keys/379CE192D401AB61-keyserver.ubuntu.com.asc"
+            ],
+            "exit_code": 0,
+            "stdout": "",
+            "stderr": "gpg: key 379CE192D401AB61: public key \"Bintray (by JFrog) <bintray@bintray.com>\" imported\ngpg: no gpg-agent running in this session\ngpg: Total number processed: 1\ngpg:               imported: 1\ngpg: no ultimately trusted keys found\n"
+          },
+          "imported_key_listing": {
+            "command": [
+              "/usr/local/bin/gpg",
+              "--homedir",
+              "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xdmhebog",
+              "--no-options",
+              "--no-autostart",
+              "--batch",
+              "--no-auto-key-retrieve",
+              "--with-colons",
+              "--fingerprint",
+              "379CE192D401AB61"
+            ],
+            "exit_code": 0,
+            "stdout": "tru::1:1792961983:0:3:1:5\npub:-:4096:1:379CE192D401AB61:1424158866:::-:::scESC::::::23::0:\nfpr:::::::::8756C4F765C9AC3CB6B85D62379CE192D401AB61:\nuid:-::::1424158866::A850304EED82AE89A136271F1AB74003483DED8B::Bintray (by JFrog) <bintray@bintray.com>::::::::::0:\nsub:-:4096:1:0CFE993CDBE1D0A2:1424158866::::::e::::::23:\nfpr:::::::::C68310B2A875D9444337FEE00CFE993CDBE1D0A2:\n",
+            "stderr": ""
+          },
+          "imported_has_uid": true
+        }
+      ],
+      "verify": {
+        "command": [
+          "/usr/local/bin/gpg",
+          "--homedir",
+          "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xdmhebog",
+          "--no-options",
+          "--no-autostart",
+          "--batch",
+          "--no-auto-key-retrieve",
+          "--status-fd",
+          "1",
+          "--verify",
+          "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/compiler-review/closure/org.jetbrains.intellij.deps__trove4j__1.0.20200330/trove4j-1.0.20200330.jar.asc",
+          "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/compiler-review/closure/org.jetbrains.intellij.deps__trove4j__1.0.20200330/trove4j-1.0.20200330.jar"
+        ],
+        "exit_code": 0,
+        "stdout": "[GNUPG:] NEWSIG\n[GNUPG:] KEY_CONSIDERED 8756C4F765C9AC3CB6B85D62379CE192D401AB61 0\n[GNUPG:] SIG_ID t/0U6SXnbu6hOFYLszGE9kLX4vE 2020-04-01 1585737973\n[GNUPG:] GOODSIG 379CE192D401AB61 Bintray (by JFrog) <bintray@bintray.com>\n[GNUPG:] VALIDSIG 8756C4F765C9AC3CB6B85D62379CE192D401AB61 2020-04-01 1585737973 0 4 0 1 8 00 8756C4F765C9AC3CB6B85D62379CE192D401AB61\n[GNUPG:] TRUST_UNDEFINED 0 pgp\n",
+        "stderr": "gpg: Signature made Wed Apr  1 12:46:13 2020 CEST\ngpg:                using RSA key 379CE192D401AB61\ngpg: Good signature from \"Bintray (by JFrog) <bintray@bintray.com>\" [unknown]\ngpg: WARNING: This key is not certified with a trusted signature!\ngpg:          There is no indication that the signature belongs to the owner.\n      8756C4F765C9AC3CB6B85D62379CE192D401AB61\n"
+      },
+      "goodsig": true,
+      "validsig_fingerprint": "8756C4F765C9AC3CB6B85D62379CE192D401AB61",
+      "primary_key_fingerprint": "8756C4F765C9AC3CB6B85D62379CE192D401AB61",
+      "expired_or_revoked": [],
+      "uid": "Bintray (by JFrog) <bintray@bintray.com>",
+      "identity_trust": "UNKNOWN: key fetched from a public keyserver; no independently trusted publisher key"
+    },
+    {
+      "coordinate": "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.8.0",
+      "jar": "kotlinx-coroutines-core-jvm-1.8.0.jar",
+      "jar_sha256": "9860906a1937490bf5f3b06d2f0e10ef451e65b95b269f22daf68a3d1f5065c5",
+      "asc_sha256": "17236211c9b3b465d52053ad2ed8d801b895bee482d7704b4f847ccfd4d64e3b",
+      "asc_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.8.0/kotlinx-coroutines-core-jvm-1.8.0.jar.asc",
+      "packets": {
+        "command": [
+          "/usr/local/bin/gpg",
+          "--homedir",
+          "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xdmhebog",
+          "--no-options",
+          "--no-autostart",
+          "--batch",
+          "--no-auto-key-retrieve",
+          "--list-packets",
+          "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/compiler-review/closure/org.jetbrains.kotlinx__kotlinx-coroutines-core-jvm__1.8.0/kotlinx-coroutines-core-jvm-1.8.0.jar.asc"
+        ],
+        "exit_code": 0,
+        "stdout": "# off=0 ctb=89 tag=2 hlen=3 plen=412\n:signature packet: algo 1, keyid 3D5839A2262CBBFB\n\tversion 4, created 1708007324, md5len 0, sigclass 0x00\n\tdigest algo 10, begin of digest 0b cd\n\thashed subpkt 2 len 4 (sig created 2024-02-15)\n\tsubpkt 16 len 8 (issuer key ID 3D5839A2262CBBFB)\n\tdata: [3072 bits]\n",
+        "stderr": ""
+      },
+      "issuer_fingerprint": null,
+      "issuer_keyid": "3D5839A2262CBBFB",
+      "key_requests": [
+        {
+          "requested_url": "https://keys.openpgp.org/vks/v1/by-keyid/3D5839A2262CBBFB",
+          "effective_url": "https://keys.openpgp.org/vks/v1/by-keyid/3D5839A2262CBBFB",
+          "exit_code": 0,
+          "stderr": "",
+          "path": "keys/3D5839A2262CBBFB-keys.openpgp.org.asc",
+          "bytes": 9536,
+          "sha256": "3688ed45fe6838fcfae660b55bc65071981e20988cc09e25cfba7a5c0d361638",
+          "import": {
+            "command": [
+              "/usr/local/bin/gpg",
+              "--homedir",
+              "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xdmhebog",
+              "--no-options",
+              "--no-autostart",
+              "--batch",
+              "--no-auto-key-retrieve",
+              "--import-options",
+              "import-minimal",
+              "--import",
+              "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/compiler-review/attestation-followup/keys/3D5839A2262CBBFB-keys.openpgp.org.asc"
+            ],
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "gpg: key E3822B59020A349D: no user ID\ngpg: Total number processed: 1\n"
+          },
+          "imported_key_listing": {
+            "command": [
+              "/usr/local/bin/gpg",
+              "--homedir",
+              "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xdmhebog",
+              "--no-options",
+              "--no-autostart",
+              "--batch",
+              "--no-auto-key-retrieve",
+              "--with-colons",
+              "--fingerprint",
+              "3D5839A2262CBBFB"
+            ],
+            "exit_code": 2,
+            "stdout": "tru::1:1792961983:0:3:1:5\n",
+            "stderr": "gpg: error reading key: No public key\n"
+          },
+          "imported_has_uid": false
+        },
+        {
+          "requested_url": "https://keyserver.ubuntu.com/pks/lookup?op=get&options=mr&search=0x3D5839A2262CBBFB",
+          "effective_url": "https://keyserver.ubuntu.com/pks/lookup?op=get&options=mr&search=0x3D5839A2262CBBFB",
+          "exit_code": 0,
+          "stderr": "",
+          "path": "keys/3D5839A2262CBBFB-keyserver.ubuntu.com.asc",
+          "bytes": 14553,
+          "sha256": "3bb5d5537b7969635f2e8eb5ca918c34cdcf4382d5ab06bda7bdeecb8ed13690",
+          "import": {
+            "command": [
+              "/usr/local/bin/gpg",
+              "--homedir",
+              "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xdmhebog",
+              "--no-options",
+              "--no-autostart",
+              "--batch",
+              "--no-auto-key-retrieve",
+              "--import-options",
+              "import-minimal",
+              "--import",
+              "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/compiler-review/attestation-followup/keys/3D5839A2262CBBFB-keyserver.ubuntu.com.asc"
+            ],
+            "exit_code": 0,
+            "stdout": "",
+            "stderr": "gpg: key E3822B59020A349D: public key \"Kotlin Libraries Release <kt-libraries@jetbrains.com>\" imported\ngpg: no gpg-agent running in this session\ngpg: Total number processed: 1\ngpg:               imported: 1\n"
+          },
+          "imported_key_listing": {
+            "command": [
+              "/usr/local/bin/gpg",
+              "--homedir",
+              "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xdmhebog",
+              "--no-options",
+              "--no-autostart",
+              "--batch",
+              "--no-auto-key-retrieve",
+              "--with-colons",
+              "--fingerprint",
+              "3D5839A2262CBBFB"
+            ],
+            "exit_code": 0,
+            "stdout": "tru::1:1792961983:0:3:1:5\npub:-:3072:1:E3822B59020A349D:1607557107:1853616478::-:::cESCA::::::23::0:\nfpr:::::::::BC900CD2FC9A9D906ECBA48BE3822B59020A349D:\nuid:-::::1790544478::0E7DC77686B55144F392A507579DED5C242AD520::Kotlin Libraries Release <kt-libraries@jetbrains.com>::::::::::0:\nsub:-:3072:1:9351716690874F25:1607557481:1853616514:::::a::::::23:\nfpr:::::::::1F78CD5EDD6E2BAD1134BFC59351716690874F25:\nsub:-:3072:1:3D5839A2262CBBFB:1607557269:1853616514:::::s::::::23:\nfpr:::::::::E7DC75FC24FB3C8DFE8086AD3D5839A2262CBBFB:\nsub:-:3072:1:60EB70DDAAC2EC21:1607557226:1853616514:::::e::::::23:\nfpr:::::::::96882CEA45E961EEEF8A8A3460EB70DDAAC2EC21:\n",
+            "stderr": ""
+          },
+          "imported_has_uid": true
+        }
+      ],
+      "verify": {
+        "command": [
+          "/usr/local/bin/gpg",
+          "--homedir",
+          "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xdmhebog",
+          "--no-options",
+          "--no-autostart",
+          "--batch",
+          "--no-auto-key-retrieve",
+          "--status-fd",
+          "1",
+          "--verify",
+          "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/compiler-review/closure/org.jetbrains.kotlinx__kotlinx-coroutines-core-jvm__1.8.0/kotlinx-coroutines-core-jvm-1.8.0.jar.asc",
+          "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/compiler-review/closure/org.jetbrains.kotlinx__kotlinx-coroutines-core-jvm__1.8.0/kotlinx-coroutines-core-jvm-1.8.0.jar"
+        ],
+        "exit_code": 0,
+        "stdout": "[GNUPG:] NEWSIG\n[GNUPG:] KEY_CONSIDERED BC900CD2FC9A9D906ECBA48BE3822B59020A349D 0\n[GNUPG:] SIG_ID oae8xgivB0MtKxZ/bssSYXq2ge8 2024-02-15 1708007324\n[GNUPG:] GOODSIG 3D5839A2262CBBFB Kotlin Libraries Release <kt-libraries@jetbrains.com>\n[GNUPG:] VALIDSIG E7DC75FC24FB3C8DFE8086AD3D5839A2262CBBFB 2024-02-15 1708007324 0 4 0 1 10 00 BC900CD2FC9A9D906ECBA48BE3822B59020A349D\n[GNUPG:] KEY_CONSIDERED BC900CD2FC9A9D906ECBA48BE3822B59020A349D 0\n[GNUPG:] TRUST_UNDEFINED 0 pgp\n",
+        "stderr": "gpg: Signature made Thu Feb 15 15:28:44 2024 CET\ngpg:                using RSA key 3D5839A2262CBBFB\ngpg: Good signature from \"Kotlin Libraries Release <kt-libraries@jetbrains.com>\" [unknown]\ngpg: WARNING: This key is not certified with a trusted signature!\ngpg:          There is no indication that the signature belongs to the owner.\n      BC900CD2FC9A9D906ECBA48BE3822B59020A349D\n      E7DC75FC24FB3C8DFE8086AD3D5839A2262CBBFB\n"
+      },
+      "goodsig": true,
+      "validsig_fingerprint": "E7DC75FC24FB3C8DFE8086AD3D5839A2262CBBFB",
+      "primary_key_fingerprint": "BC900CD2FC9A9D906ECBA48BE3822B59020A349D",
+      "expired_or_revoked": [],
+      "uid": "Kotlin Libraries Release <kt-libraries@jetbrains.com>",
+      "identity_trust": "UNKNOWN: key fetched from a public keyserver; no independently trusted publisher key"
+    }
+  ]
+}

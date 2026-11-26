@@ -1,0 +1,21 @@
+{
+  "44-green-before-format.txt": "031c9e67f481e4d00cd92805711dc8d2118cf4db784c4d93101a71d3de3a6c42",
+  "44-green.txt": "04e4bb5e4a87e3da0a189fec2d3de354c5b37bf476fdb1e5dbe4e8cd09526c96",
+  "README.md": "b30aa0fb809c2f8c30e3e27cdab782de08a3c4ccdcb5a313523effd437aae813",
+  "consumer-missing-root-failure.txt": "9916c997b34e2d596e0417b80140c87add4c9bf8be14d8402eab31cce2e68c55",
+  "formatter-write.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "helpers-unblocked-fake-red.txt": "0c628e2d7f627cc59f6038133b1117ec9517743feb1fef76a0be9fff5feab701",
+  "initial-red.txt": "148de30522e8b00d1611933bea74f9539378a12969642df3c1bf6cb3b2c5cfc0",
+  "inputs.json": "e31d2c363a9e692ad73b2db9f33febbbd2a98256c89acd3a6124d2bab0c8efd7",
+  "native-build-at-run.json": "0642a7f9623531431a22844f4aa73a8c2625a85ae96f71ab89aabc62bec2bf8a",
+  "native-source-drift.json": "fa81dec97741df8bd8f8105e8ba9e8a03153e266e0b38258187496a06103d9a0",
+  "outside-consumer-build-command.json": "914231f4f32864d861d74e296a59d2fd702ef39bde744580ad1dd6c5fc9674d0",
+  "outside-consumer-build.txt": "0ed06900c49cc2e98310343d58c4b0c8d9a6c2778b513de806057d93a790aea5",
+  "outside-consumer-results.json": "d435cad88f5456ca3a35fd36e7f9547980c0b1a2bba7e70dc7ab4cc4dcc14527",
+  "public-consumer-build.txt": "9b4a6a876e13ad30de8a79cb7e03881d90d94657e944e97e0ee2be19681d9cb4",
+  "source-sha256.json": "6cc234aa9fd351add2da5bc9d3492d1c79b8772c7715d7b459c5acefadd87792",
+  "stopped-driver-red.txt": "d48418f3b860f55d31d784d9d2d415e97168d853195d0aa5833a6807d89d7c37",
+  "strict-format-green.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "swift-public-walkthrough-owned-run.json": "e7182ecc340ca85b2165e05825363c00ae0e39c2a6a46d18fb0ea65e4faf0f51",
+  "verification.json": "b5811d6ddf5ea14e7a9c43d42efaff05c5d4af2b63a65827cf35d96c84c0a31d"
+}

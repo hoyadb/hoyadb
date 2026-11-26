@@ -1,0 +1,12 @@
+{
+  "recorded_utc": "2026-10-24T16:22:49.718299+00:00",
+  "owned_server_pid": 34005,
+  "verified_command": "/usr/local/Cellar/python@3.14/3.14.8/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python spikes/common/command_http.py --port 8775",
+  "verified_stdout": "target/phase-six-client-lifecycle/http-server.txt",
+  "signal": "SIGTERM",
+  "task_tabs_closed": 4,
+  "runtime_namespaces_cleaned": true,
+  "note": "All four actual runtime reports assert cleaned=true before tab closure. No unrelated browser tab or OPFS namespace was removed.",
+  "server_exit_code": 143,
+  "port_8775_listener_after_stop": false
+}

@@ -1,0 +1,24 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.jetbrains.kotlin.android'
+apply plugin: 'com.facebook.react'
+
+react { autolinkLibrariesWithApp() }
+android {
+  namespace 'dev.hoyadb.consumer'
+  compileSdk rootProject.ext.compileSdkVersion
+  buildToolsVersion rootProject.ext.buildToolsVersion
+  ndkVersion rootProject.ext.ndkVersion
+  defaultConfig {
+    applicationId 'dev.hoyadb.phase7.rn.consumer'
+    minSdk rootProject.ext.minSdkVersion
+    targetSdk rootProject.ext.targetSdkVersion
+    versionCode 1
+    versionName '0.1.0'
+  }
+}
+dependencies {
+  implementation 'com.facebook.react:react-android:0.86.3'
+  implementation 'com.facebook.react:hermes-android:250829098.0.17'
+  implementation 'dev.hoyadb:hoyadb-android:0.1.0'
+  constraints { implementation('com.squareup.okio:okio:3.4.0') { version { strictly('3.4.0') } } }
+}

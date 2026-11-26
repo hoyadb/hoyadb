@@ -1,0 +1,120 @@
+{
+  "error_prone_annotations-2.27.0": {
+    "error_prone_annotations-2.27.0.jar": {
+      "bytes": 19370,
+      "sha256": "24c923372c58e35d0b9f16a028929bb9aedc77521867c274f2bd0735df5ba1f5",
+      "sha512": "479f3c5e25a7ccd90adf70a9b1a71bae18205681ce966618b2ba28aea1b10c087b10ca7172e7b34384901b5e8d2dd009f1cdcbcd2a01be55082d276245de0a35",
+      "sha1": "91b2c29d8a6148b5e2e4930f070d4840e2e48e34",
+      "sha1_sidecar_match": true,
+      "strong_sidecars_published": [],
+      "asc_present": true,
+      "gradle_independent_retrieval_match": null,
+      "entries": 47,
+      "license_files": []
+    },
+    "error_prone_annotations-2.27.0.pom": {
+      "bytes": 4252,
+      "sha256": "4ca5a35d61235e16549ac346d1e34551cdf0fe27e84aa57e03cbeb255ea4e5da",
+      "sha512": "874edb27edf4ad32332f591bb594908afbd5fe01f420b91eb392e9577c4d0648fa7aedbb927a9349eefd483ee41688e0079c64ffada6187ce3627203b842c6d8",
+      "sha1": "85103026aa50b0e4efafee8f486e3ecd9ebfde31",
+      "sha1_sidecar_match": true,
+      "strong_sidecars_published": [],
+      "asc_present": true,
+      "gradle_independent_retrieval_match": true,
+      "licenses": [
+        "Apache 2.0"
+      ],
+      "parent": "com.google.errorprone:error_prone_parent:2.27.0",
+      "dependencies": [
+        "junit:junit:${junit.version}:test"
+      ],
+      "packaging": "jar"
+    }
+  },
+  "java-diff-utils-parent-4.15": {
+    "java-diff-utils-parent-4.15.pom": {
+      "bytes": 10170,
+      "sha256": "09e7d44a7cfa19bc6b23cad14ec0a41f32ae0b597f0e26ace91916fdc2bb5c82",
+      "sha512": "845fee7db7c5bb66d9d94a1fd24c6b1a758dddb4f970c5564b8a9ca0fa61bf5087752afa95ce3aa10d7187a7586709c499e1d3a4ecdc746c9333e7d7c82c94c0",
+      "sha1": "410e4876451d9773cf86f9283cb5a8aebc5399cf",
+      "sha1_sidecar_match": true,
+      "strong_sidecars_published": [],
+      "asc_present": true,
+      "gradle_independent_retrieval_match": true,
+      "licenses": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "parent": null,
+      "dependencies": [],
+      "packaging": "pom"
+    }
+  },
+  "junit-bom-5.10.2:module_dependencies": [],
+  "junit-bom-5.10.2": {
+    "junit-bom-5.10.2.module": {
+      "bytes": 6995,
+      "sha256": "de23b114b3e4119a8fe6eb17bed5a3852816698bace67071579d6d927ebb080a",
+      "sha512": "957b48ab80279e57b6ec085df9fe779242a63989496fdb3126dcfd145e063759e0638ffdaf29c961d6cbe594fb4132afb9f507234eb7ccb6985c6821ffb0f33b",
+      "sha1": "ce536748a853ae6ac09e7815fce0678a96cff778",
+      "sha1_sidecar_match": true,
+      "strong_sidecars_published": [
+        "sha256",
+        "sha512"
+      ],
+      "asc_present": true,
+      "gradle_independent_retrieval_match": null
+    }
+  },
+  "kotlin-stdlib-2.2.21:module_dependencies": [
+    "org.jetbrains:annotations:{'requires': '13.0'}"
+  ],
+  "kotlin-stdlib-2.2.21": {
+    "kotlin-stdlib-2.2.21.jar": {
+      "bytes": 1761445,
+      "sha256": "6558a3d233da56a20934b32159f9db5f86ed5816ef098f78a2c223dc6abb79dd",
+      "sha512": "cb7f62e2eb4c13f7a9873876f19d9dcb69c33d5e963c7cd87178f3789d65f29d2b6cf697573c04758428d2da6e26f2fdd3f0af46dedd8d04ad81d331e95859d7",
+      "sha1": "fa374a986e128314c3db00a20aae55f72a258511",
+      "sha1_sidecar_match": true,
+      "strong_sidecars_published": [],
+      "asc_present": true,
+      "gradle_independent_retrieval_match": null,
+      "entries": 1037,
+      "license_files": [],
+      "gradle_distribution_copy": {
+        "path": "/Users/boristacyniak/.gradle/wrapper/dists/gradle-9.3.1-bin/23ovyewtku6u96viwx3xl3oks/gradle-9.3.1/lib/kotlin-stdlib-2.2.21.jar",
+        "sha256": "6558a3d233da56a20934b32159f9db5f86ed5816ef098f78a2c223dc6abb79dd",
+        "byte_identical_to_maven": true
+      },
+      "publisher_module_sha256_match": true,
+      "publisher_module_sha512_match": true
+    },
+    "kotlin-stdlib-2.2.21.module": {
+      "bytes": 12430,
+      "sha256": "bfbc657ddd3a8e37e4c8ad417968d5eb0b0b171c9fce48f962c2ad32ee434c21",
+      "sha512": "4c44e2226dc8baf91685545d49db558de088241c87ac54d0f4a83af9b641d7d8c1f3ece654e41f3953690b81274e75fd57baffc51f74cd6da4787219ecfeaa99",
+      "sha1": "ffb4a034fc99314511f61aa1268cdb9d795a14d7",
+      "sha1_sidecar_match": true,
+      "strong_sidecars_published": [],
+      "asc_present": false,
+      "gradle_independent_retrieval_match": true
+    },
+    "kotlin-stdlib-2.2.21.pom": {
+      "bytes": 2301,
+      "sha256": "cf31f923196c63aedecd0a57c24269bd3702a4e47c0bf0bd64b5ada5de522272",
+      "sha512": "713bba2f5a0e0c320ae5e8446ede182212151f283f66355333c5f427829a655a22d8f3139b86094aed23f1cf5aecfab36a02da780785ad42a31236eef191fae0",
+      "sha1": "2b7be7d3161001cb0956cde06bbe4dfb3359978c",
+      "sha1_sidecar_match": true,
+      "strong_sidecars_published": [],
+      "asc_present": true,
+      "gradle_independent_retrieval_match": true,
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "parent": null,
+      "dependencies": [
+        "org.jetbrains:annotations:13.0:compile"
+      ],
+      "packaging": "jar"
+    }
+  }
+}

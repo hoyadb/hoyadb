@@ -1,0 +1,1082 @@
+
+=== target/phase-six-security/workspace-pre-encryption.txt ===
+   Compiling hoyadb-core v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-core)
+   Compiling hoyadb-storage-sqlite v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-storage-sqlite)
+   Compiling hoyadb-storage-memory v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-storage-memory)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 22.75s
+     Running unittests src/lib.rs (target/debug/deps/hoyadb_core-b8564e49484c8abc)
+
+running 80 tests
+test command::execution::tests::c03_c04_stale_forged_owner_drop_and_global_identity ... ok
+test command::execution::tests::c02_fifo_owners_cancellation_and_idle_reservation ... ok
+test command::entity::tests::removed_clocks_prevent_older_updates_and_all_declared_tables_allow_inbound_metadata ... ok
+test command::entity::tests::removal_is_distinct_from_null_and_keeps_its_clock ... ok
+test command::entity::tests::exact_metadata_header_and_descriptor_roundtrip_and_validation ... ok
+test command::entity::tests::deletion_precedence_and_missing_row_completeness ... ok
+test command::entity::tests::hooks_are_schema_checked_and_cannot_modify_unrelated_or_tied_fields ... ok
+test command::execution::tests::c03_preparation_retains_permit_through_commit_boundary ... ok
+test command::json::tests::c05_canonical_values_sort_keys_and_preserve_unicode_and_controls ... ok
+test command::execution::tests::c04_revoked_scope_rejects_reads_writes_and_preparation ... ok
+test command::entity::tests::newer_fields_merge_and_equal_time_requires_authority ... ok
+test command::execution::tests::c03_dropped_initialization_future_releases_admission ... ok
+test command::execution::tests::c03_failed_snapshot_releases_admission_without_changing_source ... ok
+test command::json::tests::c05_rejects_invalid_grammar_unicode_duplicates_and_nonfinite_tokens ... ok
+test command::owner::tests::c05_argument_kinds_optional_values_and_utc_limits ... ok
+test command::json::tests::c05_depth_is_bounded_for_input_and_caller_constructed_trees ... ok
+test command::json::tests::c05_exact_integers_and_all_finite_float_extremes_roundtrip ... ok
+test command::execution::tests::c03_abort_and_initialized_drop_preserve_generator_custody ... ok
+test command::execution::tests::c01_staged_relations_ordered_log_and_exact_counter_stay_private ... ok
+test command::owner::tests::c06_net_removed_creation_keeps_undo_and_counter_without_mapping_owner ... ok
+test command::queue::tests::c12_push_orders_freezes_and_blocks_only_unresolved_entries ... ok
+test command::queue::tests::c15_c19_tombstones_ignore_late_results_and_retired_dependency_history_is_closed ... ok
+test command::queue::tests::c19_status_is_payload_free_and_retention_cannot_evict_live_work ... ok
+test command::queue::tests::c09_c12_receipt_stops_retry_and_outcomes_are_correlated_idempotently ... ok
+test command::queue::tests::c16_deadlines_backoff_jitter_and_restart_keep_exact_frozen_bytes ... ok
+test command::reconcile::tests::c10_c13_mapping_rewrites_only_identities_and_releases_all_parents_atomically ... ok
+test command::pull::tests::e04_adapter_validates_live_entity_payload_against_schema ... ok
+test command::reconcile::tests::c11_collision_invalid_fields_and_independent_overlap_change_nothing ... ok
+test command::pull::tests::e11_pull_tickets_capture_opaque_checkpoint_and_are_owner_bound ... ok
+test command::reconcile::tests::c13_same_final_id_in_other_table_does_not_retarget_dangling_reference ... ok
+test command::reconcile::tests::c14_unrolled_cancelled_record_does_not_require_prior_outcome_processing ... ok
+test command::reconcile::tests::c14_inverse_reverses_ordered_transitive_multi_parent_closure_and_is_idempotent ... ok
+test command::reconcile::tests::c19_inverse_trims_resolved_history_before_exact_ledger_validation ... ok
+test command::pull::tests::e12_empty_pages_commit_checkpoint_progress_and_consumption_atomically ... ok
+test command::reconcile::tests::e06_entity_origin_untyped_corrections_reject_without_mutation ... ok
+test command::pull::tests::e13_progress_is_redacted_and_readiness_is_sticky_snapshot ... ok
+test command::reconcile::tests::c13_processed_plans_are_exact_noops_and_rejection_never_auto_rolls_back ... ok
+test command::reconcile::tests::e06_inverse_restores_and_guards_comparison_metadata ... ok
+test command::pull::tests::e14_stale_pull_retires_original_ticket_and_busy_retains_it ... ok
+test command::reconcile::tests::c15_cancel_conflict_persists_stop_without_partial_inverse_then_can_recover ... ok
+test command::reconcile::tests::e06_typed_correction_uses_exact_backend_clocks_and_preserves_partial_state ... ok
+test command::pull::tests::e15_overflow_preserves_data_progress_and_subscriptions ... ok
+test command::reconcile::tests::e06_typed_delete_stamps_exact_authority_and_requires_entity_opt_in ... ok
+test command::records::tests::c11_dependencies_validate_ownership_paths_mappings_and_cycles ... ok
+test command::reconcile::tests::e06_typed_correction_clears_only_optimistic_tombstones_and_guards_metadata ... ok
+test command::records::tests::c11_exact_shapes_versions_envelopes_and_redacted_errors ... ok
+test command::records::tests::c11_public_undo_rejects_every_reserved_field ... ok
+test command::records::tests::c11_unsent_cancellation_cannot_claim_remote_rejection ... ok
+test command::records::tests::c17_authoritative_ids_do_not_retain_old_schema_mapping_history ... ok
+test command::records::tests::c11_mapping_requires_reconciled_authoritative_success ... ok
+test command::records::tests::c17_live_recovery_capacity_history_and_counter_invariants ... ok
+test command::reconcile::tests::e06_typed_self_mapping_correction_and_invalid_later_write_are_atomic ... ok
+test command::records::tests::entity_codec_adds_exact_packets_and_rejects_orphans_gaps_and_wrong_formats ... ok
+test command::pull::tests::e17_reset_preserves_identity_and_invalidates_pending_subscriptions ... ok
+test command::records::tests::entity_codec_rejects_duplicate_metadata_identity_bad_extensions_and_unknown_keys ... ok
+test command::records::tests::entity_opt_in_preserves_old_base_packets_and_frozen_command_bytes ... ok
+test model::schema::tests::d01_implicit_keys_and_bookkeeping_compile_without_changing_declaration ... ok
+test command::records::tests::c06_exact_record_states_and_typed_images_roundtrip ... ok
+test model::schema::tests::d02_invalid_versions_names_and_reference_mappings_reject ... ok
+test command::records::tests::entity_envelope_has_no_command_key_and_stable_identity_survives_history_eviction ... ok
+test model::schema::tests::tc0027_shared_reference_aliases_must_agree_on_target ... ok
+test storage::model::tests::d13_metadata_shape_is_exact_and_never_defaults_on_corruption ... ok
+test storage::model::tests::d14_plan_and_inventory_require_matching_definition_and_row_versions ... ok
+test storage::typed::tests::finite_float_preserves_all_finite_values_and_canonicalizes_zero ... ok
+test storage::typed::tests::query_and_row_validation_use_exact_types_and_coordinates ... ok
+test storage::sync::entity_transition_tests::e17_reset_requires_a_loaded_entity_ledger ... ok
+test storage::typed::tests::supplied_schema_and_paths_validate_without_engine_access ... ok
+test model::schema::tests::d13_canonical_codec_roundtrips_all_relation_operands_and_exact_names ... ok
+test command::security::tests::s12_diagnostics_counts_dependency_closure_without_payload_projection ... ok
+test command::security::tests::s12_owned_debug_omits_contents_but_explicit_serialization_retains_them ... ok
+test command::sync::retention_tests::c19_forget_preserves_producer_needed_by_live_undo ... ok
+test command::entity::tests::timestamp_shape_types_and_oversize_candidates_reject_without_touching_inputs ... ok
+test command::pull::tests::e15_page_codec_is_exact_lossless_and_bounded ... ok
+test command::owner::tests::c05_cached_mapping_expansion_remains_bounded_before_scope_admission ... ok
+test command::records::tests::c06_send_size_is_preflighted_without_changing_blocked_records ... ok
+test command::json::tests::c05_byte_limit_checks_input_output_and_escape_expansion ... ok
+test command::json::tests::c05_node_limit_counts_containers_and_values_but_not_keys ... ok
+test command::records::tests::c06_records_have_individual_not_aggregate_json_limits ... ok
+test command::records::tests::entity_packets_are_individually_bounded_and_metadata_undo_is_preflighted ... ok
+test command::queue::tests::c06_largest_preflight_accepted_record_can_send_retry_and_acknowledge ... ok
+
+test result: ok. 80 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 6.11s
+
+     Running unittests src/lib.rs (target/debug/deps/hoyadb_storage_memory-bc7319ce50f8182d)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/command_owner_cases.rs (target/debug/deps/command_owner_cases-b1a7be967abe151b)
+
+running 1 test
+test c01_c06_c08_public_owner_contract ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.42s
+
+     Running tests/command_sync_cases.rs (target/debug/deps/command_sync_cases-00661023006e6537)
+
+running 1 test
+test c09_c12_c16_c19_dispatch_delivery has been running for over 60 seconds
+test c09_c12_c16_c19_dispatch_delivery ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 182.79s
+
+     Running tests/contract.rs (target/debug/deps/contract-170cd76e4e62827f)
+
+running 68 tests
+test conformance::m06_missing_read_and_replacement ... ok
+test conformance::m05_unknown_table_rejects_every_operation ... ok
+test conformance::m01_typed_roundtrip ... ok
+test conformance::m02_reads_are_owned_snapshots ... ok
+test conformance::m09_creating_existing_table_preserves_rows ... ok
+test conformance::m08_removal_reports_existing_and_missing_rows ... ok
+test conformance::m07_replacement_replaces_all_fields ... ok
+test conformance::m03_tables_and_instances_are_isolated ... ok
+test conformance::m04_duplicate_insert_preserves_existing_row ... ok
+test conformance::t02_batch_observes_prior_mutations_in_order ... ok
+test conformance::t04_missing_replacement_restores_removed_row ... ok
+test conformance::t03_duplicate_rolls_back_all_tables_and_later_mutations ... ok
+test conformance::t06_first_typed_error_is_preserved ... ok
+test conformance::t07_empty_and_missing_removal_batches_preserve_rows ... ok
+test conformance::t01_mixed_cross_table_batch_commits ... ok
+test conformance::t05_unknown_table_rolls_back_for_each_mutation_kind ... ok
+test model_conformance::d02_invalid_declarations_and_reserved_inputs_leave_state_unchanged ... ok
+test model_conformance::d01_declared_schema_typed_records_and_bookkeeping ... ok
+test projection_conformance::r11_bound_names_and_required_cells ... ok
+test model_conformance::d05_lazy_to_one_has_many_and_engine_owned_fetch ... ok
+test model_conformance::d08_initialization_and_compatible_legacy_adoption ... ok
+test projection_conformance::r11_direct_relations_missing_targets_and_cells ... ok
+test model_conformance::d13_definition_codec_and_bound_unicode_names_roundtrip ... ok
+test projection_conformance::r11_validation_before_zero_limit_and_unrequested_rows_stay_unchecked ... ok
+test projection_conformance::r11_filter_order_limit_and_nulls ... ok
+test projection_conformance::r11_all_values_owned_and_only_requested_cells ... ok
+test model_conformance::d03_generated_ids_public_mutations_and_counter_rollback ... ok
+test model_conformance::d07_identical_reopen_and_schema_drift ... ok
+test model_conformance::d11_missing_complete_chain_resets_without_running_prefix ... ok
+test reactive_conformance::r03_net_batches_rollback_and_commit_snapshots ... ok
+test reactive_conformance::r04_own_columns_missing_null_and_registration_validation ... ok
+test reactive_conformance::r06_normalized_equivalent_queries_share_across_modes ... ok
+test model_conformance::tc0028_unselected_migration_descriptors_validate_nested_names ... ok
+test reactive_conformance::r02_cancel_close_and_cross_owner_handles ... ok
+test model_conformance::d06_many_to_many_managed_links_and_both_directions ... ok
+test model_conformance::d09_complete_authored_chain_applies_all_primitives ... ok
+test reactive_conformance::r01_owned_initial_and_membership_only ... ok
+test reactive_conformance::r07_ordered_limit_refill_ties_and_reorder_suppression ... ok
+test schema_conformance::s01_initialize_catalog_and_owned_scan ... ok
+test model_conformance::d04_public_operators_all_kinds_order_and_limit ... ok
+test schema_conformance::s03_stale_expected_state_rejects_before_operations ... ok
+test schema_conformance::s02_failed_prefix_preserves_all_state ... ok
+test reactive_conformance::review_q02_explicit_retry_errors_are_observable ... ok
+test schema_conformance::s04_unknown_bookkeeping_and_corrupt_metadata_never_become_absent ... ok
+test reactive_conformance::r12_noop_link_unlink_and_reopen ... ok
+test schema_conformance::s05_checkpoints_and_final_candidate_validate_before_commit ... ok
+test model_conformance::d12_downgrade_unknown_queue_and_future_metadata_reject ... ok
+test typed_conformance::p02_schema_and_row_validation ... ok
+test typed_conformance::p04_optional_null_comparison_and_order ... ok
+test typed_conformance::p01_all_primitives_roundtrip ... ok
+test typed_conformance::p06_direct_to_one_missing_and_cycles ... ok
+test reactive_conformance::r05_count_throttle_deadline_return_and_backwards_clock ... ok
+test typed_conformance::p08_committed_changes_order_owned_noops ... ok
+test typed_conformance::p07_invalid_queries_before_execution ... ok
+test reactive_conformance::review_q03_row_failure_keeps_count_live ... ok
+test typed_conformance::p03_every_operator_every_primitive ... ok
+test typed_conformance::p09_rollback_and_invalid_returned_rows ... ok
+test typed_conformance::p05_filter_order_limit_ties ... ok
+test reactive_conformance::r09_all_relation_navigations_track_source_target_and_pivots ... ok
+test typed_conformance::p10_all_write_paths_keep_queries_coherent ... ok
+test model_conformance::d14_public_boundary_partitions_preserve_managed_state ... ok
+test reactive_conformance::r08_to_one_dependencies_dangling_and_unrelated_writes ... ok
+test reactive_conformance::r10_postcommit_faults_registration_and_explicit_recovery ... ok
+test model_conformance::d10_failed_migration_and_endpoint_return_original_owned_engine ... ok
+test projection_conformance::review_q01_oversized_operands_preserve_all_types ... ok
+test reactive_conformance::r15_count_work_scales_with_affected_ids_and_shared_observers ... ok
+test reactive_conformance::review_q01_large_result_sets_and_navigation ... ok
+test reactive_conformance::review_q01_owner_temp_window_intersection ... ok
+
+test result: ok. 68 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.99s
+
+     Running tests/entity_cases.rs (target/debug/deps/entity_cases-44447cc95e2b1625)
+
+running 5 tests
+test e01_e05_managed_links_and_mapped_rows ... ok
+test e02_e04_e06_entity_admission_inverse ... ok
+test e07_e10_two_clients_and_custom_resolution ... ok
+test e19_explicit_empty_reconfiguration ... ok
+test e01_e03_e05_automatic_entity_contract ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.10s
+
+     Running tests/index_cost.rs (target/debug/deps/index_cost-142e8e268752673b)
+
+running 1 test
+test p12_selective_lookup_survives_growth_update_raw_writes_and_rollback ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.07s
+
+     Running tests/pull_cases.rs (target/debug/deps/pull_cases-353b115ad5f23901)
+
+running 8 tests
+test e17_reset_total_inventory ... ok
+test e13_progress_transition_guard ... ok
+test e19_lifecycle_comparison_guard ... ok
+test e11_e19_atomic_pull_reset ... ok
+test e19_reconfigure_actual_inventory ... ok
+test e16_e18_reset_modes_and_fifo_guard ... ok
+test e14_live_recovery_pull_protection ... ok
+test e06_typed_correction_clocks ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.23s
+
+     Running tests/reactive_smoke.rs (target/debug/deps/reactive_smoke-7d59f8b20021c193)
+
+running 1 test
+test public_query_observation_tracks_only_committed_membership ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/sync_cases.rs (target/debug/deps/sync_cases-8e1bdc638ef5aacd)
+
+running 8 tests
+test c07_ordinary_failure_is_atomic ... ok
+test c17_future_reserved_packet_rejected ... ok
+test c06_atomic_initialization_and_order ... ok
+test c11_live_created_table_validation ... ok
+test c11_public_undo_model_validation ... ok
+test c17_live_lifecycle_guard ... ok
+test c11_identity_and_frozen_guards ... ok
+test c11_complete_cas_and_guards ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+     Running unittests src/lib.rs (target/debug/deps/hoyadb_storage_sqlite-5efc1fcf2972a937)
+
+running 1 test
+test sync::tests::c07_real_commit_fault_preserves_absence_and_reopen_identity ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+     Running unittests src/bin/entity_restart_fixture.rs (target/debug/deps/entity_restart_fixture-a44e4131489d1be3)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/restart_fixture.rs (target/debug/deps/restart_fixture-ab1c5e7142c78675)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/command_owner_cases.rs (target/debug/deps/command_owner_cases-51709f56da2f8bc5)
+
+running 1 test
+test c01_c06_c08_public_owner_contract ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.52s
+
+     Running tests/command_sync_cases.rs (target/debug/deps/command_sync_cases-bfc45366eab83c0d)
+
+running 1 test
+test c09_c12_c16_c19_dispatch_delivery has been running for over 60 seconds
+test c09_c12_c16_c19_dispatch_delivery ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 209.05s
+
+     Running tests/contract.rs (target/debug/deps/contract-f97fcb7aae5661b6)
+
+running 68 tests
+test conformance::m09_creating_existing_table_preserves_rows ... ok
+test conformance::t02_batch_observes_prior_mutations_in_order ... ok
+test conformance::m02_reads_are_owned_snapshots ... ok
+test conformance::m06_missing_read_and_replacement ... ok
+test conformance::m05_unknown_table_rejects_every_operation ... ok
+test conformance::m04_duplicate_insert_preserves_existing_row ... ok
+test conformance::t07_empty_and_missing_removal_batches_preserve_rows ... ok
+test conformance::m01_typed_roundtrip ... ok
+test conformance::t06_first_typed_error_is_preserved ... ok
+test conformance::t04_missing_replacement_restores_removed_row ... ok
+test conformance::m08_removal_reports_existing_and_missing_rows ... ok
+test conformance::m07_replacement_replaces_all_fields ... ok
+test conformance::t05_unknown_table_rolls_back_for_each_mutation_kind ... ok
+test conformance::t03_duplicate_rolls_back_all_tables_and_later_mutations ... ok
+test conformance::t01_mixed_cross_table_batch_commits ... ok
+test model_conformance::d01_declared_schema_typed_records_and_bookkeeping ... ok
+test conformance::m03_tables_and_instances_are_isolated ... ok
+test model_conformance::d07_identical_reopen_and_schema_drift ... ok
+test model_conformance::d13_definition_codec_and_bound_unicode_names_roundtrip ... ok
+test model_conformance::d03_generated_ids_public_mutations_and_counter_rollback ... ok
+test projection_conformance::r11_bound_names_and_required_cells ... ok
+test model_conformance::d05_lazy_to_one_has_many_and_engine_owned_fetch ... ok
+test model_conformance::d08_initialization_and_compatible_legacy_adoption ... ok
+test model_conformance::d11_missing_complete_chain_resets_without_running_prefix ... ok
+test model_conformance::d09_complete_authored_chain_applies_all_primitives ... ok
+test model_conformance::d06_many_to_many_managed_links_and_both_directions ... ok
+test projection_conformance::r11_validation_before_zero_limit_and_unrequested_rows_stay_unchecked ... ok
+test projection_conformance::r11_direct_relations_missing_targets_and_cells ... ok
+test projection_conformance::r11_filter_order_limit_and_nulls ... ok
+test model_conformance::d02_invalid_declarations_and_reserved_inputs_leave_state_unchanged ... ok
+test model_conformance::tc0028_unselected_migration_descriptors_validate_nested_names ... ok
+test reactive_conformance::r02_cancel_close_and_cross_owner_handles ... ok
+test reactive_conformance::r03_net_batches_rollback_and_commit_snapshots ... ok
+test reactive_conformance::r06_normalized_equivalent_queries_share_across_modes ... ok
+test reactive_conformance::r04_own_columns_missing_null_and_registration_validation ... ok
+test reactive_conformance::r01_owned_initial_and_membership_only ... ok
+test reactive_conformance::r07_ordered_limit_refill_ties_and_reorder_suppression ... ok
+test reactive_conformance::r05_count_throttle_deadline_return_and_backwards_clock ... ok
+test reactive_conformance::review_q02_explicit_retry_errors_are_observable ... ok
+test reactive_conformance::r12_noop_link_unlink_and_reopen ... ok
+test schema_conformance::s01_initialize_catalog_and_owned_scan ... ok
+test reactive_conformance::r09_all_relation_navigations_track_source_target_and_pivots ... ok
+test reactive_conformance::review_q03_row_failure_keeps_count_live ... ok
+test model_conformance::d12_downgrade_unknown_queue_and_future_metadata_reject ... ok
+test schema_conformance::s02_failed_prefix_preserves_all_state ... ok
+test schema_conformance::s03_stale_expected_state_rejects_before_operations ... ok
+test schema_conformance::s05_checkpoints_and_final_candidate_validate_before_commit ... ok
+test model_conformance::d10_failed_migration_and_endpoint_return_original_owned_engine ... ok
+test typed_conformance::p02_schema_and_row_validation ... ok
+test projection_conformance::r11_all_values_owned_and_only_requested_cells ... ok
+test typed_conformance::p04_optional_null_comparison_and_order ... ok
+test schema_conformance::s04_unknown_bookkeeping_and_corrupt_metadata_never_become_absent ... ok
+test reactive_conformance::r08_to_one_dependencies_dangling_and_unrelated_writes ... ok
+test model_conformance::d14_public_boundary_partitions_preserve_managed_state ... ok
+test typed_conformance::p06_direct_to_one_missing_and_cycles ... ok
+test typed_conformance::p08_committed_changes_order_owned_noops ... ok
+test typed_conformance::p07_invalid_queries_before_execution ... ok
+test typed_conformance::p10_all_write_paths_keep_queries_coherent ... ok
+test reactive_conformance::r10_postcommit_faults_registration_and_explicit_recovery ... ok
+test typed_conformance::p09_rollback_and_invalid_returned_rows ... ok
+test typed_conformance::p01_all_primitives_roundtrip ... ok
+test model_conformance::d04_public_operators_all_kinds_order_and_limit ... ok
+test typed_conformance::p03_every_operator_every_primitive ... ok
+test typed_conformance::p05_filter_order_limit_ties ... ok
+test reactive_conformance::r15_count_work_scales_with_affected_ids_and_shared_observers ... ok
+test projection_conformance::review_q01_oversized_operands_preserve_all_types ... ok
+test reactive_conformance::review_q01_owner_temp_window_intersection ... ok
+test reactive_conformance::review_q01_large_result_sets_and_navigation ... ok
+
+test result: ok. 68 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 3.89s
+
+     Running tests/entity_cases.rs (target/debug/deps/entity_cases-0b26ac4aa4aee623)
+
+running 5 tests
+test e01_e05_managed_links_and_mapped_rows ... ok
+test e02_e04_e06_entity_admission_inverse ... ok
+test e01_e03_e05_automatic_entity_contract ... ok
+test e07_e10_two_clients_and_custom_resolution ... ok
+test e19_explicit_empty_reconfiguration ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.55s
+
+     Running tests/entity_process.rs (target/debug/deps/entity_process-5c1a25499e9faeaf)
+
+running 1 test
+test e04_e07_e13_e17_independent_entity_pull_and_reset_processes ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.75s
+
+     Running tests/model_cases.rs (target/debug/deps/model_cases-3df9d197c52aab1c)
+
+running 5 tests
+test d15_actual_commit_failure_preserves_counter_and_retry_identity ... ok
+test d15_orphan_physical_bookkeeping_is_never_adopted_or_reset ... ok
+test d15_public_insert_counter_and_row_share_one_commit ... ok
+test d15_initialization_and_legacy_adoption_roll_back_after_metadata_abort ... ok
+test d15_migration_and_missing_chain_reset_abort_preserve_reopened_state ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.07s
+
+     Running tests/process.rs (target/debug/deps/process-b93ed92bbbe0eac0)
+
+running 4 tests
+test p11_new_typed_values_survive_process_restart ... ok
+test q02_failed_batch_remains_rolled_back_after_restart ... ok
+test q01_committed_rows_survive_process_restart ... ok
+test d16_managed_schema_migration_relations_and_ids_survive_process_restart ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.54s
+
+     Running tests/projection_cases.rs (target/debug/deps/projection_cases-3e0e75e638ad834d)
+
+running 1 test
+test r11_unrequested_corrupt_payload_is_not_materialized ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running tests/pull_cases.rs (target/debug/deps/pull_cases-cd759fd60ad11526)
+
+running 9 tests
+test e17_reset_total_inventory ... ok
+test e13_progress_transition_guard ... ok
+test e19_lifecycle_comparison_guard ... ok
+test e19_reconfigure_actual_inventory ... ok
+test e12_e18_real_commit_failure_and_reopen_preserve_page_and_reset ... ok
+test e16_e18_reset_modes_and_fifo_guard ... ok
+test e11_e19_atomic_pull_reset ... ok
+test e06_typed_correction_clocks ... ok
+test e14_live_recovery_pull_protection ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.40s
+
+     Running tests/reactive_fault.rs (target/debug/deps/reactive_fault-f48925580ce16c20)
+
+running 2 tests
+test q04_real_postcommit_row_decode_failure_keeps_projected_count_live ... ok
+test q04_real_postcommit_projection_decode_failure_retries_and_retains_count_deadline ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+     Running tests/security_cases.rs (target/debug/deps/security_cases-2637b843a4f167ed)
+
+running 2 tests
+test s01_default_missing_key_never_creates_a_file ... ok
+test s01_missing_key_preserves_existing_bytes_and_never_resolves_the_path ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/sqlite_cases.rs (target/debug/deps/sqlite_cases-c87d17399accc50b)
+
+running 6 tests
+test q05_lock_failure_recovers_without_publication ... ok
+test q07_trigger_failure_rolls_back_single_mutations_and_batch ... ok
+test q03_bound_names_and_empty_rows ... ok
+test q08_owned_connection_moves_and_operations_are_eager_ready_send ... ok
+test q04_open_rejects_paths_and_unowned_formats_without_mutation ... ok
+test q06_corrupt_fields_never_return_partial_rows ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.09s
+
+     Running tests/sync_cases.rs (target/debug/deps/sync_cases-109a70499b8818d2)
+
+running 8 tests
+test c07_ordinary_failure_is_atomic ... ok
+test c17_future_reserved_packet_rejected ... ok
+test c11_live_created_table_validation ... ok
+test c11_public_undo_model_validation ... ok
+test c06_atomic_initialization_and_order ... ok
+test c17_live_lifecycle_guard ... ok
+test c11_identity_and_frozen_guards ... ok
+test c11_complete_cas_and_guards ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.07s
+
+     Running tests/typed_cases.rs (target/debug/deps/typed_cases-42c28597979bc429)
+
+running 6 tests
+test p11_typed_sql_write_and_commit_failures_preserve_snapshots_and_indexes ... ok
+test p11_new_tags_roundtrip_and_reopen_preserve_v1_tables_and_old_rows ... ok
+test p11_float_integer_affinity_is_checked_without_saturating_casts ... ok
+test p11_strict_new_tag_decoding_never_coerces_payloads ... ok
+test p12_actual_numeric_and_text_lookup_plans_and_recorded_costs ... ok
+test review_large_operands_preserve_disk_inventory_and_reopen ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.07s
+
+   Doc-tests hoyadb_core
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests hoyadb_storage_memory
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests hoyadb_storage_sqlite
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+=== target/phase-six-security/clippy-workspace.txt ===
+    Checking hoyadb-storage-sqlite v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-storage-sqlite)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 4.65s
+
+=== target/phase-six-security/clippy-native.txt ===
+    Checking hoyadb-core v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-core)
+    Checking hoyadb-storage-sqlite v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-storage-sqlite)
+    Checking hoyadb-storage-memory v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-storage-memory)
+    Checking hoyadb-native-spike v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/spikes/cross-platform/native)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 3.91s
+
+=== target/phase-six-security/cross-platform-host.txt ===
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.00s
+     Running unittests src/lib.rs (spikes/cross-platform/target/debug/deps/hoyadb_cross_platform_spike-b81852fc8fb2a1c6)
+
+running 1 test
+test tests::exhausted_tokens_do_not_wrap_or_create_subscriptions_or_scopes ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/scopes.rs (spikes/cross-platform/target/debug/deps/scopes-9c76028a679af6cf)
+
+running 5 tests
+test initial_matching_and_irrelevant_events ... ok
+test drain_is_a_snapshot_and_does_not_consume_future_events ... ok
+test abort_discards_rows_and_releases_serialization_slot ... ok
+test unsubscribe_removes_pending_and_later_events ... ok
+test staged_reads_hide_writes_until_one_atomic_finish_event ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/store.rs (spikes/cross-platform/target/debug/deps/store-9d1ed8f5c9f91f4c)
+
+running 5 tests
+test s03_empty_store_returns_no_rows ... ok
+test s01_insert_preserves_typed_fields ... ok
+test s02_equality_filters_membership ... ok
+test s04_absent_value_returns_no_rows ... ok
+test s05_independent_stores_do_not_share_rows ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests hoyadb_cross_platform_spike
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+=== target/phase-six-security/s01-preservation-green.txt ===
+   Compiling hoyadb-core v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-core)
+   Compiling hoyadb-storage-sqlite v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-storage-sqlite)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 3.36s
+     Running tests/security_cases.rs (target/debug/deps/security_cases-2637b843a4f167ed)
+
+running 2 tests
+test s01_default_missing_key_never_creates_a_file ... ok
+test s01_missing_key_preserves_existing_bytes_and_never_resolves_the_path ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+=== target/phase-six-security/diagnostics-rpc-green.txt ===
+   Compiling hoyadb-core v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-core)
+   Compiling hoyadb-storage-memory v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-storage-memory)
+   Compiling hoyadb-storage-sqlite v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-storage-sqlite)
+   Compiling hoyadb-native-spike v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/spikes/cross-platform/native)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 12.03s
+     Running unittests src/lib.rs (spikes/cross-platform/native/target/debug/deps/hoyadb_native_spike-c2087483c4f2264f)
+
+running 1 test
+test command::fixture::tests::s12_diagnostics_rpc_has_only_bounded_allowlisted_state ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 22 filtered out; finished in 0.02s
+
+     Running tests/persistence.rs (spikes/cross-platform/native/target/debug/deps/persistence-57dd1511a13c8c6d)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 5 filtered out; finished in 0.00s
+
+
+=== target/phase-six-opus-resolution/core.txt ===
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.02s
+     Running unittests src/lib.rs (target/debug/deps/hoyadb_core-b8564e49484c8abc)
+
+running 80 tests
+test command::execution::tests::c03_c04_stale_forged_owner_drop_and_global_identity ... ok
+test command::execution::tests::c02_fifo_owners_cancellation_and_idle_reservation ... ok
+test command::entity::tests::removed_clocks_prevent_older_updates_and_all_declared_tables_allow_inbound_metadata ... ok
+test command::entity::tests::deletion_precedence_and_missing_row_completeness ... ok
+test command::entity::tests::exact_metadata_header_and_descriptor_roundtrip_and_validation ... ok
+test command::entity::tests::newer_fields_merge_and_equal_time_requires_authority ... ok
+test command::json::tests::c05_canonical_values_sort_keys_and_preserve_unicode_and_controls ... ok
+test command::execution::tests::c03_dropped_initialization_future_releases_admission ... ok
+test command::entity::tests::removal_is_distinct_from_null_and_keeps_its_clock ... ok
+test command::execution::tests::c03_failed_snapshot_releases_admission_without_changing_source ... ok
+test command::entity::tests::hooks_are_schema_checked_and_cannot_modify_unrelated_or_tied_fields ... ok
+test command::execution::tests::c03_preparation_retains_permit_through_commit_boundary ... ok
+test command::execution::tests::c04_revoked_scope_rejects_reads_writes_and_preparation ... ok
+test command::json::tests::c05_rejects_invalid_grammar_unicode_duplicates_and_nonfinite_tokens ... ok
+test command::json::tests::c05_depth_is_bounded_for_input_and_caller_constructed_trees ... ok
+test command::json::tests::c05_exact_integers_and_all_finite_float_extremes_roundtrip ... ok
+test command::owner::tests::c05_argument_kinds_optional_values_and_utc_limits ... ok
+test command::execution::tests::c03_abort_and_initialized_drop_preserve_generator_custody ... ok
+test command::execution::tests::c01_staged_relations_ordered_log_and_exact_counter_stay_private ... ok
+test command::owner::tests::c06_net_removed_creation_keeps_undo_and_counter_without_mapping_owner ... ok
+test command::queue::tests::c12_push_orders_freezes_and_blocks_only_unresolved_entries ... ok
+test command::queue::tests::c15_c19_tombstones_ignore_late_results_and_retired_dependency_history_is_closed ... ok
+test command::queue::tests::c19_status_is_payload_free_and_retention_cannot_evict_live_work ... ok
+test command::queue::tests::c16_deadlines_backoff_jitter_and_restart_keep_exact_frozen_bytes ... ok
+test command::queue::tests::c09_c12_receipt_stops_retry_and_outcomes_are_correlated_idempotently ... ok
+test command::pull::tests::e04_adapter_validates_live_entity_payload_against_schema ... ok
+test command::reconcile::tests::c11_collision_invalid_fields_and_independent_overlap_change_nothing ... ok
+test command::pull::tests::e11_pull_tickets_capture_opaque_checkpoint_and_are_owner_bound ... ok
+test command::reconcile::tests::c10_c13_mapping_rewrites_only_identities_and_releases_all_parents_atomically ... ok
+test command::reconcile::tests::c14_unrolled_cancelled_record_does_not_require_prior_outcome_processing ... ok
+test command::reconcile::tests::c13_same_final_id_in_other_table_does_not_retarget_dangling_reference ... ok
+test command::reconcile::tests::c14_inverse_reverses_ordered_transitive_multi_parent_closure_and_is_idempotent ... ok
+test command::pull::tests::e12_empty_pages_commit_checkpoint_progress_and_consumption_atomically ... ok
+test command::pull::tests::e13_progress_is_redacted_and_readiness_is_sticky_snapshot ... ok
+test command::reconcile::tests::c19_inverse_trims_resolved_history_before_exact_ledger_validation ... ok
+test command::reconcile::tests::e06_entity_origin_untyped_corrections_reject_without_mutation ... ok
+test command::reconcile::tests::e06_inverse_restores_and_guards_comparison_metadata ... ok
+test command::pull::tests::e14_stale_pull_retires_original_ticket_and_busy_retains_it ... ok
+test command::reconcile::tests::c13_processed_plans_are_exact_noops_and_rejection_never_auto_rolls_back ... ok
+test command::pull::tests::e15_overflow_preserves_data_progress_and_subscriptions ... ok
+test command::reconcile::tests::e06_typed_correction_uses_exact_backend_clocks_and_preserves_partial_state ... ok
+test command::reconcile::tests::c15_cancel_conflict_persists_stop_without_partial_inverse_then_can_recover ... ok
+test command::reconcile::tests::e06_typed_delete_stamps_exact_authority_and_requires_entity_opt_in ... ok
+test command::records::tests::c11_public_undo_rejects_every_reserved_field ... ok
+test command::records::tests::c11_exact_shapes_versions_envelopes_and_redacted_errors ... ok
+test command::reconcile::tests::e06_typed_correction_clears_only_optimistic_tombstones_and_guards_metadata ... ok
+test command::records::tests::c11_mapping_requires_reconciled_authoritative_success ... ok
+test command::records::tests::c11_unsent_cancellation_cannot_claim_remote_rejection ... ok
+test command::records::tests::c17_authoritative_ids_do_not_retain_old_schema_mapping_history ... ok
+test command::records::tests::c11_dependencies_validate_ownership_paths_mappings_and_cycles ... ok
+test command::pull::tests::e17_reset_preserves_identity_and_invalidates_pending_subscriptions ... ok
+test command::records::tests::c17_live_recovery_capacity_history_and_counter_invariants ... ok
+test command::reconcile::tests::e06_typed_self_mapping_correction_and_invalid_later_write_are_atomic ... ok
+test command::records::tests::entity_codec_adds_exact_packets_and_rejects_orphans_gaps_and_wrong_formats ... ok
+test command::records::tests::entity_opt_in_preserves_old_base_packets_and_frozen_command_bytes ... ok
+test model::schema::tests::d01_implicit_keys_and_bookkeeping_compile_without_changing_declaration ... ok
+test command::records::tests::entity_codec_rejects_duplicate_metadata_identity_bad_extensions_and_unknown_keys ... ok
+test model::schema::tests::d02_invalid_versions_names_and_reference_mappings_reject ... ok
+test model::schema::tests::tc0027_shared_reference_aliases_must_agree_on_target ... ok
+test model::schema::tests::d13_canonical_codec_roundtrips_all_relation_operands_and_exact_names ... ok
+test command::records::tests::entity_envelope_has_no_command_key_and_stable_identity_survives_history_eviction ... ok
+test storage::model::tests::d13_metadata_shape_is_exact_and_never_defaults_on_corruption ... ok
+test storage::sync::entity_transition_tests::e17_reset_requires_a_loaded_entity_ledger ... ok
+test storage::typed::tests::finite_float_preserves_all_finite_values_and_canonicalizes_zero ... ok
+test storage::model::tests::d14_plan_and_inventory_require_matching_definition_and_row_versions ... ok
+test storage::typed::tests::query_and_row_validation_use_exact_types_and_coordinates ... ok
+test storage::typed::tests::supplied_schema_and_paths_validate_without_engine_access ... ok
+test command::records::tests::c06_exact_record_states_and_typed_images_roundtrip ... ok
+test command::security::tests::s12_diagnostics_counts_dependency_closure_without_payload_projection ... ok
+test command::security::tests::s12_owned_debug_omits_contents_but_explicit_serialization_retains_them ... ok
+test command::sync::retention_tests::c19_forget_preserves_producer_needed_by_live_undo ... ok
+test command::entity::tests::timestamp_shape_types_and_oversize_candidates_reject_without_touching_inputs ... ok
+test command::pull::tests::e15_page_codec_is_exact_lossless_and_bounded ... ok
+test command::owner::tests::c05_cached_mapping_expansion_remains_bounded_before_scope_admission ... ok
+test command::records::tests::c06_send_size_is_preflighted_without_changing_blocked_records ... ok
+test command::json::tests::c05_byte_limit_checks_input_output_and_escape_expansion ... ok
+test command::json::tests::c05_node_limit_counts_containers_and_values_but_not_keys ... ok
+test command::records::tests::c06_records_have_individual_not_aggregate_json_limits ... ok
+test command::records::tests::entity_packets_are_individually_bounded_and_metadata_undo_is_preflighted ... ok
+test command::queue::tests::c06_largest_preflight_accepted_record_can_send_retry_and_acknowledge ... ok
+
+test result: ok. 80 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 4.95s
+
+
+=== target/phase-six-opus-resolution/clippy.txt ===
+    Checking hoyadb-core v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-core)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 1.41s
+
+=== target/phase-six-browser/wasm-build.txt ===
+   Compiling hoyadb-core v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-core)
+   Compiling sqlite-wasm-rs v0.5.1
+   Compiling rusqlite v0.40.2
+   Compiling sqlite-wasm-vfs v0.1.1
+   Compiling hoyadb-storage-sqlite v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-storage-sqlite)
+   Compiling hoyadb-storage-browser-spike v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/spikes/storage-browser)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 19.20s
+
+=== target/phase-six-browser/wasm-clippy.txt ===
+    Blocking waiting for file lock on build directory
+    Checking hoyadb-core v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-core)
+    Checking hoyadb-storage-sqlite v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-storage-sqlite)
+    Checking hoyadb-storage-browser-spike v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/spikes/storage-browser)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 13.78s
+
+=== target/phase-six-native/root-red.txt ===
+PASS S08 default real Foundation hint
+PASS S08 explicit backup opt-in
+PASS S08 input rejection before filesystem changes
+FAIL S08 protected constructor binds the pre-established root: unauthorized root backup attributes changed before RPC rejection
+PASS S08 platform policy failure is explicit
+PASS S08 closed replacement revalidates policy
+native backup: 5 passed, 1 failed
+FAIL owned diagnostics retained at /private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-phase-four-97081-98b5f96d46ec4d1490ef7c802a26978c
+
+process_exit=1
+
+=== target/phase-six-native/root-green.txt ===
+PASS S08 default real Foundation hint
+PASS S08 explicit backup opt-in
+PASS S08 input rejection before filesystem changes
+PASS S08 protected constructor binds the pre-established root
+PASS S08 platform policy failure is explicit
+PASS S08 closed replacement revalidates policy
+native backup: 6 passed, 0 failed
+
+process_exit=0
+
+=== target/phase-six-native/root-legacy-green.txt ===
+H01 one bounded handler-to-drain sample ns=13779132
+PASS H01 explicit unprotected constructor
+PASS H02 explicit unprotected constructor
+PASS H03 explicit unprotected constructor
+PASS H04 explicit unprotected constructor
+
+process_exit=0
+
+=== target/phase-six-browser/client-open-green.txt ===
+TAP version 13
+# Subtest: S01 protected open rejects missing or malformed key before any RPC
+ok 1 - S01 protected open rejects missing or malformed key before any RPC
+  ---
+  duration_ms: 2.477551
+  type: 'test'
+  ...
+# Subtest: S10 supplied raw key produces exactly one secure open without client retention
+ok 2 - S10 supplied raw key produces exactly one secure open without client retention
+  ---
+  duration_ms: 4.337787
+  type: 'test'
+  ...
+# Subtest: S10 secure RPC failure never retries as an unprotected open
+ok 3 - S10 secure RPC failure never retries as an unprotected open
+  ---
+  duration_ms: 0.889383
+  type: 'test'
+  ...
+# Subtest: S11 handler context rejects strict and non-strict nested mutation through awaits
+ok 4 - S11 handler context rejects strict and non-strict nested mutation through awaits
+  ---
+  duration_ms: 5.276047
+  type: 'test'
+  ...
+# Subtest: E01 entity calls capture trusted context atomically with each mutation
+ok 5 - E01 entity calls capture trusted context atomically with each mutation
+  ---
+  duration_ms: 5.134988
+  type: 'test'
+  ...
+# Subtest: E13 pull keeps opaque UTF-8 body across bounded chunks and one production apply
+ok 6 - E13 pull keeps opaque UTF-8 body across bounded chunks and one production apply
+  ---
+  duration_ms: 13.06472
+  type: 'test'
+  ...
+# Subtest: E18 reset changes foreign generation and callbacks only after successful core reset
+ok 7 - E18 reset changes foreign generation and callbacks only after successful core reset
+  ---
+  duration_ms: 0.808317
+  type: 'test'
+  ...
+# Subtest: E18 late transport completion cannot clear a replacement generation sync pump
+ok 8 - E18 late transport completion cannot clear a replacement generation sync pump
+  ---
+  duration_ms: 26.666435
+  type: 'test'
+  ...
+# Subtest: E18 close and reopen can start a new pump while the old transport remains suspended
+ok 9 - E18 close and reopen can start a new pump while the old transport remains suspended
+  ---
+  duration_ms: 22.410714
+  type: 'test'
+  ...
+# Subtest: H01 host invokes its awaited handler and returns the owned result
+ok 10 - H01 host invokes its awaited handler and returns the owned result
+  ---
+  duration_ms: 1.207465
+  type: 'test'
+  ...
+# Subtest: H03 unsafe integer Number coercion rejects before transport
+ok 11 - H03 unsafe integer Number coercion rejects before transport
+  ---
+  duration_ms: 0.344514
+  type: 'test'
+  ...
+# Subtest: H01 two owners execute FIFO and active cancellation releases a never-settling handler
+ok 12 - H01 two owners execute FIFO and active cancellation releases a never-settling handler
+  ---
+  duration_ms: 2.139681
+  type: 'test'
+  ...
+# Subtest: H02 cancellation while finish reply is delayed preserves committed success
+ok 13 - H02 cancellation while finish reply is delayed preserves committed success
+  ---
+  duration_ms: 1.276219
+  type: 'test'
+  ...
+# Subtest: H01 pending begin waits for a release signal without polling or calling handler
+ok 14 - H01 pending begin waits for a release signal without polling or calling handler
+  ---
+  duration_ms: 11.7905
+  type: 'test'
+  ...
+# Subtest: H06 owned HTTP response and application plan survive active-handler Busy without repeating work
+ok 15 - H06 owned HTTP response and application plan survive active-handler Busy without repeating work
+  ---
+  duration_ms: 28.595483
+  type: 'test'
+  ...
+# Subtest: H06 a finish wake during an awaited mapper is replayed when the old batch has no deadline
+ok 16 - H06 a finish wake during an awaited mapper is replayed when the old batch has no deadline
+  ---
+  duration_ms: 8.891783
+  type: 'test'
+  ...
+# Subtest: H04 bounded event pages retain one drain guard and callback liveness
+ok 17 - H04 bounded event pages retain one drain guard and callback liveness
+  ---
+  duration_ms: 0.67712
+  type: 'test'
+  ...
+# Subtest: H06 each bounded prepare prefix is a separate nonempty HTTP array
+ok 18 - H06 each bounded prepare prefix is a separate nonempty HTTP array
+  ---
+  duration_ms: 2.669938
+  type: 'test'
+  ...
+1..18
+# tests 18
+# suites 0
+# pass 18
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 234.652787
+
+=== target/phase-six-browser/worker-secure-owner-green.txt ===
+TAP version 13
+# (node:3630) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: S13 worker fallback never serializes raw foreign errors or fixture context
+ok 1 - S13 worker fallback never serializes raw foreign errors or fixture context
+  ---
+  duration_ms: 5.917942
+  type: 'test'
+  ...
+# Subtest: S10 worker preserves only allowlisted typed kinds and strips every extra field
+ok 2 - S10 worker preserves only allowlisted typed kinds and strips every extra field
+  ---
+  duration_ms: 16.563354
+  type: 'test'
+  ...
+# Subtest: S13 foreign kind strings cannot turn arbitrary data into a public error kind
+ok 3 - S13 foreign kind strings cannot turn arbitrary data into a public error kind
+  ---
+  duration_ms: 1.751753
+  type: 'test'
+  ...
+# Subtest: S10 successful secure RPC owner blocks shutdown until its explicit close
+ok 4 - S10 successful secure RPC owner blocks shutdown until its explicit close
+  ---
+  duration_ms: 2.087995
+  type: 'test'
+  ...
+# Subtest: S10 failed secure RPC open never registers an owner or blocks shutdown
+ok 5 - S10 failed secure RPC open never registers an owner or blocks shutdown
+  ---
+  duration_ms: 1.638408
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 128.431929
+
+=== target/phase-six-browser/node-checkpoint-resolution.txt ===
+TAP version 13
+# Subtest: S01 protected open rejects missing or malformed key before any RPC
+ok 1 - S01 protected open rejects missing or malformed key before any RPC
+  ---
+  duration_ms: 2.357872
+  type: 'test'
+  ...
+# Subtest: S10 supplied raw key produces exactly one secure open without client retention
+ok 2 - S10 supplied raw key produces exactly one secure open without client retention
+  ---
+  duration_ms: 3.773469
+  type: 'test'
+  ...
+# Subtest: S10 secure RPC failure never retries as an unprotected open
+ok 3 - S10 secure RPC failure never retries as an unprotected open
+  ---
+  duration_ms: 0.796443
+  type: 'test'
+  ...
+# Subtest: S11 handler context rejects strict and non-strict nested mutation through awaits
+ok 4 - S11 handler context rejects strict and non-strict nested mutation through awaits
+  ---
+  duration_ms: 5.024685
+  type: 'test'
+  ...
+# Subtest: E01 entity calls capture trusted context atomically with each mutation
+ok 5 - E01 entity calls capture trusted context atomically with each mutation
+  ---
+  duration_ms: 4.997841
+  type: 'test'
+  ...
+# Subtest: E13 pull keeps opaque UTF-8 body across bounded chunks and one production apply
+ok 6 - E13 pull keeps opaque UTF-8 body across bounded chunks and one production apply
+  ---
+  duration_ms: 13.314152
+  type: 'test'
+  ...
+# Subtest: E18 reset changes foreign generation and callbacks only after successful core reset
+ok 7 - E18 reset changes foreign generation and callbacks only after successful core reset
+  ---
+  duration_ms: 0.879274
+  type: 'test'
+  ...
+# Subtest: E18 late transport completion cannot clear a replacement generation sync pump
+ok 8 - E18 late transport completion cannot clear a replacement generation sync pump
+  ---
+  duration_ms: 26.404026
+  type: 'test'
+  ...
+# Subtest: E18 close and reopen can start a new pump while the old transport remains suspended
+ok 9 - E18 close and reopen can start a new pump while the old transport remains suspended
+  ---
+  duration_ms: 20.863353
+  type: 'test'
+  ...
+# Subtest: H01 host invokes its awaited handler and returns the owned result
+ok 10 - H01 host invokes its awaited handler and returns the owned result
+  ---
+  duration_ms: 1.336517
+  type: 'test'
+  ...
+# Subtest: H03 unsafe integer Number coercion rejects before transport
+ok 11 - H03 unsafe integer Number coercion rejects before transport
+  ---
+  duration_ms: 0.357778
+  type: 'test'
+  ...
+# Subtest: H01 two owners execute FIFO and active cancellation releases a never-settling handler
+ok 12 - H01 two owners execute FIFO and active cancellation releases a never-settling handler
+  ---
+  duration_ms: 2.289463
+  type: 'test'
+  ...
+# Subtest: H02 cancellation while finish reply is delayed preserves committed success
+ok 13 - H02 cancellation while finish reply is delayed preserves committed success
+  ---
+  duration_ms: 1.211895
+  type: 'test'
+  ...
+# Subtest: H01 pending begin waits for a release signal without polling or calling handler
+ok 14 - H01 pending begin waits for a release signal without polling or calling handler
+  ---
+  duration_ms: 11.586687
+  type: 'test'
+  ...
+# Subtest: H06 owned HTTP response and application plan survive active-handler Busy without repeating work
+ok 15 - H06 owned HTTP response and application plan survive active-handler Busy without repeating work
+  ---
+  duration_ms: 28.974145
+  type: 'test'
+  ...
+# Subtest: H06 a finish wake during an awaited mapper is replayed when the old batch has no deadline
+ok 16 - H06 a finish wake during an awaited mapper is replayed when the old batch has no deadline
+  ---
+  duration_ms: 11.454302
+  type: 'test'
+  ...
+# Subtest: H04 bounded event pages retain one drain guard and callback liveness
+ok 17 - H04 bounded event pages retain one drain guard and callback liveness
+  ---
+  duration_ms: 1.287403
+  type: 'test'
+  ...
+# Subtest: H06 each bounded prepare prefix is a separate nonempty HTTP array
+ok 18 - H06 each bounded prepare prefix is a separate nonempty HTTP array
+  ---
+  duration_ms: 3.071173
+  type: 'test'
+  ...
+# (node:12057) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: S13 command-page.js describes sanitized RPC failure using local operation and static kind
+ok 19 - S13 command-page.js describes sanitized RPC failure using local operation and static kind
+  ---
+  duration_ms: 10.298136
+  type: 'test'
+  ...
+# Subtest: S13 command-page.js never copies a raw browser worker-event message
+ok 20 - S13 command-page.js never copies a raw browser worker-event message
+  ---
+  duration_ms: 3.011421
+  type: 'test'
+  ...
+# Subtest: S13 entity-page.js describes sanitized RPC failure using local operation and static kind
+ok 21 - S13 entity-page.js describes sanitized RPC failure using local operation and static kind
+  ---
+  duration_ms: 3.446142
+  type: 'test'
+  ...
+# Subtest: S13 entity-page.js never copies a raw browser worker-event message
+ok 22 - S13 entity-page.js never copies a raw browser worker-event message
+  ---
+  duration_ms: 2.806346
+  type: 'test'
+  ...
+# Subtest: S13 reactive-page.js describes sanitized RPC failure using local operation and static kind
+ok 23 - S13 reactive-page.js describes sanitized RPC failure using local operation and static kind
+  ---
+  duration_ms: 3.950213
+  type: 'test'
+  ...
+# Subtest: S13 reactive-page.js never copies a raw browser worker-event message
+ok 24 - S13 reactive-page.js never copies a raw browser worker-event message
+  ---
+  duration_ms: 2.241647
+  type: 'test'
+  ...
+# Subtest: S13 reactive checks/reactive_conformance preserves a sanitized failure's kind and harness-local case
+ok 25 - S13 reactive checks/reactive_conformance preserves a sanitized failure's kind and harness-local case
+  ---
+  duration_ms: 1.033709
+  type: 'test'
+  ...
+# Subtest: S13 Q01/review_large_sets preserves a sanitized failure's kind and harness-local case
+ok 26 - S13 Q01/review_large_sets preserves a sanitized failure's kind and harness-local case
+  ---
+  duration_ms: 0.190357
+  type: 'test'
+  ...
+# Subtest: S13 Q01 large observations/navigation/reverse dependencies preserves a sanitized failure's kind and harness-local case
+ok 27 - S13 Q01 large observations/navigation/reverse dependencies preserves a sanitized failure's kind and harness-local case
+  ---
+  duration_ms: 1.546895
+  type: 'test'
+  ...
+# (node:12058) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: S13 worker fallback never serializes raw foreign errors or fixture context
+ok 28 - S13 worker fallback never serializes raw foreign errors or fixture context
+  ---
+  duration_ms: 5.454763
+  type: 'test'
+  ...
+# Subtest: S10 worker preserves only allowlisted typed kinds and strips every extra field
+ok 29 - S10 worker preserves only allowlisted typed kinds and strips every extra field
+  ---
+  duration_ms: 17.606125
+  type: 'test'
+  ...
+# Subtest: S13 foreign kind strings cannot turn arbitrary data into a public error kind
+ok 30 - S13 foreign kind strings cannot turn arbitrary data into a public error kind
+  ---
+  duration_ms: 1.752554
+  type: 'test'
+  ...
+# Subtest: S10 successful secure RPC owner blocks shutdown until its explicit close
+ok 31 - S10 successful secure RPC owner blocks shutdown until its explicit close
+  ---
+  duration_ms: 2.103442
+  type: 'test'
+  ...
+# Subtest: S10 failed secure RPC open never registers an owner or blocks shutdown
+ok 32 - S10 failed secure RPC open never registers an owner or blocks shutdown
+  ---
+  duration_ms: 1.672687
+  type: 'test'
+  ...
+1..32
+# tests 32
+# suites 0
+# pass 32
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 236.634437
+
+=== target/phase-six-browser/harness-wasm-build.txt ===
+   Compiling hoyadb-core v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-core)
+   Compiling hoyadb-storage-sqlite v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-storage-sqlite)
+   Compiling hoyadb-storage-browser-spike v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/spikes/storage-browser)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 4.10s

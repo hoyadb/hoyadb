@@ -1,0 +1,208 @@
+E............F.FFF..FFFFF.FF.F....
+======================================================================
+ERROR: test_p05_p08_complete_local_coordinate_and_honest_certificate (__main__.FinalCertificate.test_p05_p08_complete_local_coordinate_and_honest_certificate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 85, in test_p05_p08_complete_local_coordinate_and_honest_certificate
+    self.package()
+    ~~~~~~~~~~~~^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 82, in package
+    PACKAGE.main()
+    ~~~~~~~~~~~~^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/package-aar.py", line 298, in main
+    return final(args, files, slices, manifest)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/package-aar.py", line 239, in final
+    notices = notice_files()
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/package-aar.py", line 128, in notice_files
+    require(package.get('role') in ROLES, 'unclassified notice package')
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/package-aar.py", line 54, in require
+    if not value: raise SystemExit(reason)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+SystemExit: unclassified notice package
+
+======================================================================
+FAIL: test_p04_corrupted_toolchain_notice (__main__.FinalGuards.test_p04_corrupted_toolchain_notice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 271, in test_p04_corrupted_toolchain_notice
+    self.rejects('notice file digest mismatch')
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 132, in rejects
+    self.assertEqual(str(failure.exception), reason)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'unclassified notice package' != 'notice file digest mismatch'
+- unclassified notice package
++ notice file digest mismatch
+
+
+======================================================================
+FAIL: test_p04_kotlin_pom_changed (__main__.FinalGuards.test_p04_kotlin_pom_changed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 242, in test_p04_kotlin_pom_changed
+    self.rejects('Kotlin runtime notice provenance mismatch')
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 132, in rejects
+    self.assertEqual(str(failure.exception), reason)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'unclassified notice package' != 'Kotlin runtime notice provenance mismatch'
+- unclassified notice package
++ Kotlin runtime notice provenance mismatch
+
+
+======================================================================
+FAIL: test_p04_kotlin_runtime_not_approved_jar (__main__.FinalGuards.test_p04_kotlin_runtime_not_approved_jar)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 248, in test_p04_kotlin_runtime_not_approved_jar
+    self.rejects('Kotlin runtime notice provenance mismatch')
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 132, in rejects
+    self.assertEqual(str(failure.exception), reason)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'unclassified notice package' != 'Kotlin runtime notice provenance mismatch'
+- unclassified notice package
++ Kotlin runtime notice provenance mismatch
+
+
+======================================================================
+FAIL: test_p04_lock_tuple_changed (__main__.FinalGuards.test_p04_lock_tuple_changed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 237, in test_p04_lock_tuple_changed
+    self.rejects('notice tuple differs from Cargo.lock')
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 132, in rejects
+    self.assertEqual(str(failure.exception), reason)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'unclassified notice package' != 'notice tuple differs from Cargo.lock'
+- unclassified notice package
++ notice tuple differs from Cargo.lock
+
+
+======================================================================
+FAIL: test_p04_missing_toolchain_notice (__main__.FinalGuards.test_p04_missing_toolchain_notice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 267, in test_p04_missing_toolchain_notice
+    self.rejects('notice file missing')
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 132, in rejects
+    self.assertEqual(str(failure.exception), reason)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'unclassified notice package' != 'notice file missing'
+- unclassified notice package
++ notice file missing
+
+
+======================================================================
+FAIL: test_p04_toolchain_link_input_changed (__main__.FinalGuards.test_p04_toolchain_link_input_changed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 283, in test_p04_toolchain_link_input_changed
+    self.rejects('toolchain link input changed')
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 132, in rejects
+    self.assertEqual(str(failure.exception), reason)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'unclassified notice package' != 'toolchain link input changed'
+- unclassified notice package
++ toolchain link input changed
+
+
+======================================================================
+FAIL: test_p04_toolchain_notice_not_shipped_text (__main__.FinalGuards.test_p04_toolchain_notice_not_shipped_text)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 279, in test_p04_toolchain_notice_not_shipped_text
+    self.rejects('notice text differs from verified source')
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 132, in rejects
+    self.assertEqual(str(failure.exception), reason)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'unclassified notice package' != 'notice text differs from verified source'
+- unclassified notice package
++ notice text differs from verified source
+
+
+======================================================================
+FAIL: test_p04_unclassified_active_package (__main__.FinalGuards.test_p04_unclassified_active_package)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 226, in test_p04_unclassified_active_package
+    self.rejects('notice set differs from active native set')
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 132, in rejects
+    self.assertEqual(str(failure.exception), reason)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'unclassified notice package' != 'notice set differs from active native set'
+- unclassified notice package
++ notice set differs from active native set
+
+
+======================================================================
+FAIL: test_p04_unindexed_notice_file (__main__.FinalGuards.test_p04_unindexed_notice_file)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 252, in test_p04_unindexed_notice_file
+    self.rejects('unindexed notice file')
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 132, in rejects
+    self.assertEqual(str(failure.exception), reason)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'unclassified notice package' != 'unindexed notice file'
+- unclassified notice package
++ unindexed notice file
+
+
+======================================================================
+FAIL: test_p04_wrong_license_text_with_consistent_index (__main__.FinalGuards.test_p04_wrong_license_text_with_consistent_index)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 210, in test_p04_wrong_license_text_with_consistent_index
+    self.rejects('notice text differs from verified source')
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 132, in rejects
+    self.assertEqual(str(failure.exception), reason)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'unclassified notice package' != 'notice text differs from verified source'
+- unclassified notice package
++ notice text differs from verified source
+
+
+======================================================================
+FAIL: test_p04_wrong_provider_text_with_consistent_index (__main__.FinalGuards.test_p04_wrong_provider_text_with_consistent_index)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 219, in test_p04_wrong_provider_text_with_consistent_index
+    self.rejects('notice text differs from verified source')
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 132, in rejects
+    self.assertEqual(str(failure.exception), reason)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'unclassified notice package' != 'notice text differs from verified source'
+- unclassified notice package
++ notice text differs from verified source
+
+
+======================================================================
+FAIL: test_p06_source_drift_during_packaging_is_reverified (__main__.FinalGuards.test_p06_source_drift_during_packaging_is_reverified)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 310, in test_p06_source_drift_during_packaging_is_reverified
+    self.rejects('source closure mismatch')
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 132, in rejects
+    self.assertEqual(str(failure.exception), reason)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'unclassified notice package' != 'source closure mismatch'
+- unclassified notice package
++ source closure mismatch
+
+
+----------------------------------------------------------------------
+Ran 34 tests in 12.232s
+
+FAILED (failures=12, errors=1)
+exit=1

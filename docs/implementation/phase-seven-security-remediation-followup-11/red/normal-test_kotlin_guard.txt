@@ -1,0 +1,107 @@
+......................FFFFFF......
+======================================================================
+FAIL: test_malformed_native_entries_reject_without_raising_or_echo (__main__.ObservedJvms.test_malformed_native_entries_reject_without_raising_or_echo) (entry='None')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py", line 235, in test_malformed_native_entries_reject_without_raising_or_echo
+    result = G.check_observed_jvms([self.jvm(native_libraries_loaded=[entry])], ['kotlin-compiler'],
+                                   native_inventory={'jansi-mac-x86_64': 'b' * 64})
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/kotlin_guard.py", line 232, in check_observed_jvms
+    name, digest = lib.get('name'), lib.get('sha256')
+                   ^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py", line 238, in test_malformed_native_entries_reject_without_raising_or_echo
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised AttributeError instead of rejecting
+
+======================================================================
+FAIL: test_malformed_native_entries_reject_without_raising_or_echo (__main__.ObservedJvms.test_malformed_native_entries_reject_without_raising_or_echo) (entry="['malformed-value-sentinel-91c4']")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py", line 235, in test_malformed_native_entries_reject_without_raising_or_echo
+    result = G.check_observed_jvms([self.jvm(native_libraries_loaded=[entry])], ['kotlin-compiler'],
+                                   native_inventory={'jansi-mac-x86_64': 'b' * 64})
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/kotlin_guard.py", line 232, in check_observed_jvms
+    name, digest = lib.get('name'), lib.get('sha256')
+                   ^^^^^^^
+AttributeError: 'list' object has no attribute 'get'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py", line 238, in test_malformed_native_entries_reject_without_raising_or_echo
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised AttributeError instead of rejecting
+
+======================================================================
+FAIL: test_malformed_native_entries_reject_without_raising_or_echo (__main__.ObservedJvms.test_malformed_native_entries_reject_without_raising_or_echo) (entry="{'name': ['malformed-value-sentinel-91c4'], 'sha256': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py", line 235, in test_malformed_native_entries_reject_without_raising_or_echo
+    result = G.check_observed_jvms([self.jvm(native_libraries_loaded=[entry])], ['kotlin-compiler'],
+                                   native_inventory={'jansi-mac-x86_64': 'b' * 64})
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/kotlin_guard.py", line 235, in check_observed_jvms
+    bins = [inventory.get(name) == digest, baseline.get(name) == digest]
+            ~~~~~~~~~~~~~^^^^^^
+TypeError: cannot use 'list' as a dict key (unhashable type: 'list')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py", line 238, in test_malformed_native_entries_reject_without_raising_or_echo
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised TypeError instead of rejecting
+
+======================================================================
+FAIL: test_malformed_native_entries_reject_without_raising_or_echo (__main__.ObservedJvms.test_malformed_native_entries_reject_without_raising_or_echo) (entry="{'name': {'malformed-value-sentinel-91c4': 1}, 'sha256': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py", line 235, in test_malformed_native_entries_reject_without_raising_or_echo
+    result = G.check_observed_jvms([self.jvm(native_libraries_loaded=[entry])], ['kotlin-compiler'],
+                                   native_inventory={'jansi-mac-x86_64': 'b' * 64})
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/kotlin_guard.py", line 235, in check_observed_jvms
+    bins = [inventory.get(name) == digest, baseline.get(name) == digest]
+            ~~~~~~~~~~~~~^^^^^^
+TypeError: cannot use 'dict' as a dict key (unhashable type: 'dict')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py", line 238, in test_malformed_native_entries_reject_without_raising_or_echo
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised TypeError instead of rejecting
+
+======================================================================
+FAIL: test_malformed_native_entries_reject_without_raising_or_echo (__main__.ObservedJvms.test_malformed_native_entries_reject_without_raising_or_echo) (entry="{'sha256': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py", line 240, in test_malformed_native_entries_reject_without_raising_or_echo
+    self.assertIn(('kotlin-compiler', 'incomplete capture: native library ' + identity),
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                  [(v.source, v.setting) for v in result.violations])
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library outside reviewed inventory and trusted baseline: None')]
+
+======================================================================
+FAIL: test_malformed_native_entries_reject_without_raising_or_echo (__main__.ObservedJvms.test_malformed_native_entries_reject_without_raising_or_echo) (entry="{'name': ''}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py", line 240, in test_malformed_native_entries_reject_without_raising_or_echo
+    self.assertIn(('kotlin-compiler', 'incomplete capture: native library ' + identity),
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                  [(v.source, v.setting) for v in result.violations])
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library with missing digest outside reviewed system cache: ')]
+
+----------------------------------------------------------------------
+Ran 29 tests in 0.076s
+
+FAILED (failures=6)

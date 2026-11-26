@@ -1,0 +1,99 @@
+<nav class="platform-picker" aria-label="Choose your platform">
+  <p>Choose your platform:</p>
+  <ul>
+    <li><strong>JavaScript</strong> (browser and Node), shown on this page</li>
+    <li><a href="typescript-getting-started.html">TypeScript</a></li>
+    <li><a href="rust-getting-started.html">Rust</a></li>
+    <li><a href="swift-getting-started.html">Swift</a></li>
+    <li><a href="kotlin-getting-started.html">Android (Kotlin)</a></li>
+    <li><a href="react-native-getting-started.html">React Native</a></li>
+    <li><a href="c-getting-started.html">C / native ABI</a></li>
+  </ul>
+</nav>
+
+<h2 id="what-you-build">What you will build</h2>
+<p>A small Todo app that works offline. Tasks come from your server, you read and watch them locally, you
+complete one with a <em>command</em>, and the change syncs back to the server. Every snippet below is a piece of
+one complete file that the documentation build runs in Node and in a browser. You can read the
+<a href="source:examples/application.mjs">whole file</a> afterwards.</p>
+<p>The packages are local and unpublished. Build them as described in <a href="installation.html">installation</a>,
+then import <code>@hoyadb/client</code>. The same import works in Node and in the browser, and loads the database
+engine for you.</p>
+
+<h2 id="schema">1. Describe your data</h2>
+<p>A schema lists your tables and the type of each column. Here a task has a title, a done flag, and two optional
+fields filled in when it is completed.</p>
+{{example:application:schema}}
+
+<h2 id="backend">2. Connect your server</h2>
+<p>HoyaDB never makes network requests itself. You give it a <em>transport</em>: an object whose <code>push</code>
+sends local changes to your server and whose <code>pull</code> fetches server changes. This tutorial uses the test
+backend from <code>@hoyadb/testing</code>, which plays the server in the same process. It already has two tasks, and
+it knows how to answer the <code>complete-task-v1</code> and <code>add-task-v1</code> commands defined below.</p>
+{{example:application:backend}}
+
+<h2 id="open">3. Open the database</h2>
+<p>Open one database when your app starts and share it. <code>engine: 'memory'</code> keeps data in memory, which
+is ideal for trying things out. <code>context</code> describes who is using the app, and is attached to every
+command. <code>entities</code> lists tables that sync field by field with the server. <code>reconcile</code>
+confirms each command the server accepted; step 9 explains it. The first <code>sync()</code> pulls the server's
+tasks.</p>
+<p>The server must authenticate the user itself; <code>context</code> is supplied by the app and is not proof of identity.</p>
+{{example:application:open}}
+
+<h2 id="query">4. Read data</h2>
+<p>Queries run locally, so they work offline. Rows come back as plain objects: <code>task.title</code>,
+<code>task.done</code>.</p>
+{{example:application:query}}
+
+<h2 id="observe">5. Watch data</h2>
+<p><code>observe</code> calls your function with the current rows, then again whenever they change. Use it to keep
+your UI up to date. It returns a function that stops watching.</p>
+{{example:application:observe}}
+
+<h2 id="command">6. Define a command</h2>
+<p>A command is a named, versioned action such as "complete a task". You write its handler once for the app. It
+runs immediately on the device, so the user sees the result at once, and your server runs its own version of the
+same command later and has the final say.</p>
+<p>The handler receives three things:</p>
+<ul>
+  <li><code>db</code>: a view of the database for this command only. Its writes become visible to everyone else
+  together when the handler returns.</li>
+  <li><code>args</code>: the arguments you pass to <code>execute</code>.</li>
+  <li><code>ctx</code>: who is acting (<code>ctx.identity</code>) and when (<code>ctx.now()</code>).</li>
+</ul>
+{{example:application:command-definition}}
+
+<h2 id="execute">7. Run it</h2>
+<p>Bind the definition to your database once, then call <code>execute</code>. You get back what the handler
+returned. If the handler throws, nothing is saved.</p>
+{{example:application:execute}}
+
+<h2 id="sync">8. Sync with the server</h2>
+<p><code>sync()</code> sends the queued command to the server and records the server's answer. Use
+<code>db.startSync()</code> instead to keep syncing in the background with automatic retries.</p>
+{{example:application:sync}}
+
+<h2 id="create">9. Create a task</h2>
+<p>A command can also create rows. The new task appears at once with a temporary <code>local:</code> ID, so your UI
+can show it offline.</p>
+{{example:application:create-command}}
+<p>When the server accepts the command, it assigns the task's real ID and returns it in its result. Your
+<code>reconcile</code> callback, from step 3, receives the local IDs the command created in <code>created</code>.
+It maps them to the server's IDs, and HoyaDB then renames the row everywhere.</p>
+{{example:application:create-execute}}
+
+<h2 id="close">10. Clean up</h2>
+<p>Stop watchers you no longer need. Calling the function that <code>observe</code> returned stops that watcher.</p>
+{{example:application:cleanup}}
+<p>Close the database when your app shuts down. The full file closes it in a <code>finally</code> block, so it is also
+closed if a step fails.</p>
+{{example:application:close}}
+
+<h2 id="next">Next steps</h2>
+<ul>
+  <li><a href="javascript.html">JavaScript guide</a>: every option, value type and lifecycle rule.</li>
+  <li><a href="reconciliation.html">Reconciliation</a>: commands that create rows, and server corrections.</li>
+  <li><a href="javascript.html#persistence">Encrypted browser storage</a> instead of memory.</li>
+  <li><a href="platforms.html">Other platforms</a>.</li>
+</ul>

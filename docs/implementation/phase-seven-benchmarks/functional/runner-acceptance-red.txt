@@ -1,0 +1,16 @@
+E...................
+======================================================================
+ERROR: test_acceptance_requires_frozen_artifact_source_and_real_proof (test_runner.RunnerTests.test_acceptance_requires_frozen_artifact_source_and_real_proof)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/test_runner.py", line 168, in test_acceptance_requires_frozen_artifact_source_and_real_proof
+    self.assertEqual(checked_report(raw,identity,source,source),raw["report"])
+                     ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/run.py", line 230, in checked_report
+    raise RunnerError("acceptance validation pending")
+run.RunnerError: acceptance validation pending
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.305s
+
+FAILED (errors=1)

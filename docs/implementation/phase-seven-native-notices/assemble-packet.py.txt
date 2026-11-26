@@ -1,0 +1,111 @@
+"""Assemble docs/implementation/phase-seven-native-notices/ from the DEF-0030 evidence (byte copies).
+
+Files failing `git diff --no-index --check` become lossless wrappers {format, original_path, original_bytes,
+original_sha256, utf8}. Raw paths are kept. Run once into a fresh packet directory; README.md is
+written separately, then `index` regenerates files-sha256.json.
+Usage: assemble-packet.py copy | index
+"""
+import hashlib
+import json
+from pathlib import Path
+import subprocess
+import sys
+
+repo = Path(__file__).resolve().parents[3]
+d = repo / 'target/phase-seven-rn/def-0030'
+out = repo / 'docs/implementation/phase-seven-native-notices'
+sha = lambda data: hashlib.sha256(data).hexdigest()
+
+COPIES = {
+    # TDD chronology (AN01-AN04 cut-44, then AN05).
+    **{f'tdd/{step}/{name}': d / 'tdd' / step / name
+       for step in ['red-1', 'red-2', 'green-1', 'red-3-check-artifacts', 'red-3b-check-artifacts', 'green-2',
+                    'red-4-relative-path', 'green-3', 'an05-red-1', 'an05-red-2', 'an05-red-3-seam-only', 'an05-green-1',
+                    'an05-green-2', 'an05-red-4-commit-pin', 'an05-green-3', 'an05-real-dry-run']
+       for name in sorted(p.name for p in (d / 'tdd' / step).iterdir())},
+    'tdd/AN05-LABELS.md': d / 'tdd/AN05-LABELS.md',
+    # Frozen reviewed cuts.
+    **{f'cut-44/{p.name}': p for p in sorted((d / 'cut-44').iterdir())},
+    **{f'cut-50/{p.name}': p for p in sorted((d / 'cut-50').iterdir())},
+    # Corpus derivation.
+    'corpus/make-corpus.py.txt': d / 'make-corpus.py',
+    'corpus/inputs.sha256': d / 'corpus/inputs.sha256',
+    'corpus/make-corpus-run.txt': d / 'corpus/make-corpus-run.txt',
+    'corpus/make-corpus-summary.json': d / 'corpus/make-corpus-summary.json',
+    **{f'corpus/{a}/{n}': d / 'corpus' / a / n for a in ['attempt-1', 'attempt-2', 'attempt-3']
+       for n in ['inputs.sha256', 'make-corpus-run.txt']},
+    'corpus/superseded-wording/inputs.sha256': d / 'corpus/superseded-wording/inputs.sha256',
+    'corpus/superseded-wording/make-corpus-run.txt': d / 'corpus/superseded-wording/make-corpus-run.txt',
+    'corpus/superseded-wording/NOTICE.md.txt': d / 'corpus/superseded-wording/third-party/NOTICE.md',
+    # Real artifact RED and GREEN.
+    **{f'real-artifact/red/{p.name}': p for p in sorted((d / 'red-real-artifact').iterdir())},
+    **{f'real-artifact/green/{p.name}': p for p in sorted((d / 'green-real-artifact').iterdir())},
+    # RN packing.
+    'rn-pack/rn-artifacts-before.sha256': d / 'rn-pack/rn-artifacts-before.sha256',
+    'rn-pack/rn-tracked-sources.sha256': d / 'rn-pack/rn-tracked-sources.sha256',
+    **{f'rn-pack/attempt-1-relative-path/{p.name}': p for p in sorted((d / 'rn-pack/attempt-1-relative-path').iterdir())},
+    **{f'rn-pack/attempt-2-INVALID-external-gradle-state/{p.name}': p
+       for p in sorted((d / 'rn-pack/attempt-2-INVALID-external-gradle-state').iterdir()) if p.is_file()},
+    **{f'rn-pack/final-1/{p.name}': p for p in sorted((d / 'rn-pack/final-1').iterdir()) if p.is_file()},
+    # Independent b7 review and root verification.
+    'review/FINDINGS.md': repo / 'target/phase-seven-remediation-delta-review/def0030/FINDINGS.md',
+    'review/macho_syms.py.txt': repo / 'target/phase-seven-remediation-delta-review/def0030/macho_syms.py',
+    'review/closure.py.txt': repo / 'target/phase-seven-remediation-delta-review/def0030/closure.py',
+    'review/syms.json': repo / 'target/phase-seven-remediation-delta-review/def0030/syms.json',
+    **{f'root-verification/{p.name}': p for p in sorted((d / 'root-verification').iterdir())},
+    'assemble-packet.py.txt': Path(__file__),
+}
+
+
+def whitespace_clean(path):
+    result = subprocess.run(['git', 'diff', '--no-index', '--check', '/dev/null', str(path)], stdout=subprocess.PIPE,
+                            stderr=subprocess.PIPE)
+    return result.stdout == b'' and result.stderr == b''
+
+
+def copy():
+    if out.exists():
+        raise SystemExit('packet directory must not exist yet')
+    wrapped = []
+    for relative, source in sorted(COPIES.items()):
+        data = source.read_bytes()
+        target = out / relative
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_bytes(data)
+        if not whitespace_clean(target):
+            target.unlink()
+            wrapper = {'format': 1, 'original_path': relative, 'original_bytes': len(data), 'original_sha256': sha(data),
+                       'utf8': data.decode('utf-8')}
+            Path(str(target) + '.json').write_text(json.dumps(wrapper, indent=2, ensure_ascii=False) + '\n')
+            wrapped.append(relative)
+    (out / 'presentation.json').write_text(json.dumps({
+        'format': 1, 'note': 'Every packet file is a byte copy of its source; listed files are lossless JSON wrappers.',
+        'sources': {k: str(v.relative_to(repo)) if repo in v.parents else str(v) for k, v in sorted(COPIES.items())},
+        'source_sha256': {k: sha(v.read_bytes()) for k, v in sorted(COPIES.items())},
+        'wrapped': wrapped}, indent=2) + '\n')
+    print('copied', len(COPIES), 'wrapped', len(wrapped))
+
+
+def index():
+    files = sorted(p for p in out.rglob('*') if p.is_file() and p.name != 'files-sha256.json')
+    committed = ['bindings/native/tools/apple_notices.py', 'bindings/native/tools/test_apple_notices.py',
+                 'bindings/react-native/tools/pack.py', 'bindings/react-native/android/.npmignore',
+                 'bindings/swift/build-artifacts.py', 'bindings/swift/check_artifacts.py', 'bindings/native/Cargo.lock']
+    committed += sorted(str(p.relative_to(repo)) for p in (repo / 'bindings/native/third-party').rglob('*') if p.is_file())
+    record = {
+        'format': 1,
+        'evidence_files': [[str(p.relative_to(out)), sha(p.read_bytes())] for p in files],
+        'permanent_source_at_ab68ce6': [[p, sha((repo / p).read_bytes())] for p in committed],
+        'artifacts_untracked': [[str(p.relative_to(repo)), sha(p.read_bytes())] for p in
+                                [repo / 'bindings/swift/Artifacts/native-build.json',
+                                 repo / 'bindings/swift/Artifacts/HoyaNative.xcframework/packaging.json',
+                                 d / 'rn-pack/final-1/packed/hoyadb-react-native-0.1.0.tgz',
+                                 d / 'rn-pack/attempt-2-INVALID-external-gradle-state/packed/hoyadb-react-native-0.1.0.tgz']],
+        'controller_untracked_target': [[str(p.relative_to(repo)), sha(p.read_bytes())] for p in
+                                        [d / 'make-corpus.py', Path(__file__)]],
+    }
+    (out / 'files-sha256.json').write_text(json.dumps(record, indent=2) + '\n')
+    print('indexed', len(files))
+
+
+{'copy': copy, 'index': index}[sys.argv[1]]()

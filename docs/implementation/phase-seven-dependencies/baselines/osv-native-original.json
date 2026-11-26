@@ -1,0 +1,1150 @@
+{
+  "queried_utc": "2026-10-24T16:37:30.684633+00:00",
+  "service": "https://api.osv.dev/v1/querybatch",
+  "status": "Advisory registry metadata, not reachability assessment or security certification",
+  "results": [
+    {
+      "coordinate": "androidx.activity:activity:1.7.0",
+      "result": {}
+    },
+    {
+      "coordinate": "androidx.annotation:annotation:1.9.1",
+      "result": {}
+    },
+    {
+      "coordinate": "androidx.annotation:annotation-experimental:1.4.0",
+      "result": {}
+    },
+    {
+      "coordinate": "androidx.annotation:annotation-jvm:1.9.1",
+      "result": {}
+    },
+    {
+      "coordinate": "androidx.appcompat:appcompat:1.7.0",
+      "result": {}
+    },
+    {
+      "coordinate": "androidx.appcompat:appcompat-resources:1.7.0",
+      "result": {}
+    },
+    {
+      "coordinate": "androidx.arch.core:core-common:2.2.0",
+      "result": {}
+    },
+    {
+      "coordinate": "androidx.arch.core:core-runtime:2.2.0",
+      "result": {}
+    },
+    {
+      "coordinate": "androidx.autofill:autofill:1.3.0",
+      "result": {}
+    },
+    {
+      "coordinate": "androidx.collection:collection:1.4.2",
+      "result": {}
+    },
+    {
+      "coordinate": "androidx.collection:collection-jvm:1.4.2",
+      "result": {}
+    },
+    {
+      "coordinate": "androidx.concurrent:concurrent-futures:1.1.0",
+      "result": {}
+    },
+    {
+      "coordinate": "androidx.core:core:1.13.1",
+      "result": {}
+    },
+    {
+      "coordinate": "androidx.core:core-ktx:1.13.1",
+      "result": {}
+    },
+    {
+      "coordinate": "androidx.cursoradapter:cursoradapter:1.0.0",
+      "result": {}
+    },
+    {
+      "coordinate": "androidx.customview:customview:1.0.0",
+      "result": {}
+    },
+    {
+      "coordinate": "androidx.databinding:databinding-common:8.12.0",
+      "result": {}
+    },
+    {
+      "coordinate": "androidx.databinding:databinding-compiler-common:8.12.0",
+      "result": {}
+    },
+    {
+      "coordinate": "androidx.drawerlayout:drawerlayout:1.0.0",
+      "result": {}
+    },
+    {
+      "coordinate": "androidx.emoji2:emoji2:1.3.0",
+      "result": {}
+    },
+    {
+      "coordinate": "androidx.emoji2:emoji2-views-helper:1.3.0",
+      "result": {}
+    },
+    {
+      "coordinate": "androidx.fragment:fragment:1.5.4",
+      "result": {}
+    },
+    {
+      "coordinate": "androidx.interpolator:interpolator:1.0.0",
+      "result": {}
+    },
+    {
+      "coordinate": "androidx.lifecycle:lifecycle-common:2.6.2",
+      "result": {}
+    },
+    {
+      "coordinate": "androidx.lifecycle:lifecycle-livedata:2.6.2",
+      "result": {}
+    },
+    {
+      "coordinate": "androidx.lifecycle:lifecycle-livedata-core:2.6.2",
+      "result": {}
+    },
+    {
+      "coordinate": "androidx.lifecycle:lifecycle-process:2.6.2",
+      "result": {}
+    },
+    {
+      "coordinate": "androidx.lifecycle:lifecycle-runtime:2.6.2",
+      "result": {}
+    },
+    {
+      "coordinate": "androidx.lifecycle:lifecycle-viewmodel:2.6.2",
+      "result": {}
+    },
+    {
+      "coordinate": "androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2",
+      "result": {}
+    },
+    {
+      "coordinate": "androidx.loader:loader:1.0.0",
+      "result": {}
+    },
+    {
+      "coordinate": "androidx.profileinstaller:profileinstaller:1.3.1",
+      "result": {}
+    },
+    {
+      "coordinate": "androidx.resourceinspection:resourceinspection-annotation:1.0.1",
+      "result": {}
+    },
+    {
+      "coordinate": "androidx.savedstate:savedstate:1.2.1",
+      "result": {}
+    },
+    {
+      "coordinate": "androidx.startup:startup-runtime:1.1.1",
+      "result": {}
+    },
+    {
+      "coordinate": "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0",
+      "result": {}
+    },
+    {
+      "coordinate": "androidx.tracing:tracing:1.1.0",
+      "result": {}
+    },
+    {
+      "coordinate": "androidx.vectordrawable:vectordrawable:1.1.0",
+      "result": {}
+    },
+    {
+      "coordinate": "androidx.vectordrawable:vectordrawable-animated:1.1.0",
+      "result": {}
+    },
+    {
+      "coordinate": "androidx.versionedparcelable:versionedparcelable:1.1.1",
+      "result": {}
+    },
+    {
+      "coordinate": "androidx.viewpager:viewpager:1.0.0",
+      "result": {}
+    },
+    {
+      "coordinate": "androidx.window:window:1.5.1",
+      "result": {}
+    },
+    {
+      "coordinate": "androidx.window:window-core:1.5.1",
+      "result": {}
+    },
+    {
+      "coordinate": "androidx.window:window-core-android:1.5.1",
+      "result": {}
+    },
+    {
+      "coordinate": "com.android:signflinger:8.12.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.android:zipflinger:8.12.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.android.databinding:baseLibrary:8.12.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.android.tools:annotations:31.12.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.android.tools:common:31.12.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.android.tools:dvlib:31.12.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.android.tools:repository:31.12.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.android.tools:sdk-common:31.12.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.android.tools:sdklib:31.12.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.android.tools.analytics-library:crash:31.12.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.android.tools.analytics-library:protos:31.12.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.android.tools.analytics-library:shared:31.12.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.android.tools.analytics-library:tracker:31.12.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.android.tools.build:aapt2-proto:8.12.0-13700139",
+      "result": {}
+    },
+    {
+      "coordinate": "com.android.tools.build:aaptcompiler:8.12.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.android.tools.build:apksig:8.12.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.android.tools.build:apkzlib:8.12.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.android.tools.build:builder:8.12.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.android.tools.build:builder-model:8.12.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.android.tools.build:builder-test-api:8.12.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.android.tools.build:bundletool:1.18.1",
+      "result": {}
+    },
+    {
+      "coordinate": "com.android.tools.build:gradle:8.12.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.android.tools.build:gradle-api:8.12.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.android.tools.build:gradle-settings-api:8.12.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.android.tools.build:manifest-merger:31.12.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.android.tools.build:transform-api:2.0.0-deprecated-use-gradle-api",
+      "result": {}
+    },
+    {
+      "coordinate": "com.android.tools.build.jetifier:jetifier-core:1.0.0-beta10",
+      "result": {}
+    },
+    {
+      "coordinate": "com.android.tools.build.jetifier:jetifier-processor:1.0.0-beta10",
+      "result": {}
+    },
+    {
+      "coordinate": "com.android.tools.ddms:ddmlib:31.12.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.android.tools.layoutlib:layoutlib-api:31.12.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.android.tools.lint:lint-model:31.12.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.android.tools.lint:lint-typedef-remover:31.12.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.android.tools.utp:android-device-provider-ddmlib-proto:31.12.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.android.tools.utp:android-device-provider-gradle-proto:31.12.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.android.tools.utp:android-device-provider-profile-proto:31.12.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.android.tools.utp:android-test-plugin-host-additional-test-output-proto:31.12.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.android.tools.utp:android-test-plugin-host-apk-installer-proto:31.12.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.android.tools.utp:android-test-plugin-host-coverage-proto:31.12.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.android.tools.utp:android-test-plugin-host-emulator-control-proto:31.12.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.android.tools.utp:android-test-plugin-host-logcat-proto:31.12.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.android.tools.utp:android-test-plugin-result-listener-gradle-proto:31.12.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.facebook.fbjni:fbjni:0.7.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.facebook.fresco:drawee:3.6.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.facebook.fresco:fbcore:3.6.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.facebook.fresco:fresco:3.6.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.facebook.fresco:imagepipeline:3.6.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.facebook.fresco:imagepipeline-base:3.6.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.facebook.fresco:imagepipeline-native:3.6.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.facebook.fresco:imagepipeline-okhttp3:3.6.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.facebook.fresco:memory-type-ashmem:3.6.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.facebook.fresco:memory-type-java:3.6.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.facebook.fresco:memory-type-native:3.6.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.facebook.fresco:middleware:3.6.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.facebook.fresco:nativeimagefilters:3.6.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.facebook.fresco:nativeimagetranscoder:3.6.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.facebook.fresco:soloader:3.6.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.facebook.fresco:ui-common:3.6.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.facebook.fresco:ui-core:3.6.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.facebook.fresco:urimod:3.6.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.facebook.fresco:vito-source:3.6.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.facebook.hermes:hermes-android:250829098.0.17",
+      "result": {}
+    },
+    {
+      "coordinate": "com.facebook.infer.annotation:infer-annotation:0.18.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.facebook.react:react-android:0.86.3",
+      "result": {}
+    },
+    {
+      "coordinate": "com.facebook.soloader:annotation:0.12.1",
+      "result": {}
+    },
+    {
+      "coordinate": "com.facebook.soloader:nativeloader:0.12.1",
+      "result": {}
+    },
+    {
+      "coordinate": "com.facebook.soloader:soloader:0.12.1",
+      "result": {}
+    },
+    {
+      "coordinate": "com.facebook.yoga:proguard-annotations:1.19.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.google.android:annotations:4.1.1.4",
+      "result": {}
+    },
+    {
+      "coordinate": "com.google.api.grpc:proto-google-common-protos:2.48.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.google.auto.value:auto-value-annotations:1.6.2",
+      "result": {}
+    },
+    {
+      "coordinate": "com.google.code.findbugs:jsr305:3.0.2",
+      "result": {}
+    },
+    {
+      "coordinate": "com.google.code.gson:gson:2.11.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.google.crypto.tink:tink:1.7.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.google.dagger:dagger:2.28.3",
+      "result": {}
+    },
+    {
+      "coordinate": "com.google.errorprone:error_prone_annotations:2.30.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.google.flatbuffers:flatbuffers-java:1.12.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.google.guava:failureaccess:1.0.2",
+      "result": {}
+    },
+    {
+      "coordinate": "com.google.guava:guava:33.3.1-jre",
+      "result": {}
+    },
+    {
+      "coordinate": "com.google.guava:listenablefuture:1.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava",
+      "result": {}
+    },
+    {
+      "coordinate": "com.google.j2objc:j2objc-annotations:3.0.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.google.jimfs:jimfs:1.1",
+      "result": {}
+    },
+    {
+      "coordinate": "com.google.protobuf:protobuf-java:3.25.5",
+      "result": {}
+    },
+    {
+      "coordinate": "com.google.protobuf:protobuf-java-util:3.25.5",
+      "result": {}
+    },
+    {
+      "coordinate": "com.google.testing.platform:core-proto:0.0.9-alpha03",
+      "result": {}
+    },
+    {
+      "coordinate": "com.googlecode.juniversalchardet:juniversalchardet:1.0.3",
+      "result": {}
+    },
+    {
+      "coordinate": "com.parse.bolts:bolts-tasks:1.4.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.squareup:javapoet:1.13.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.squareup:javawriter:2.5.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.squareup.okhttp3:okhttp:4.9.2",
+      "result": {}
+    },
+    {
+      "coordinate": "com.squareup.okhttp3:okhttp-urlconnection:4.9.2",
+      "result": {}
+    },
+    {
+      "coordinate": "com.squareup.okio:okio:2.9.0",
+      "result": {
+        "vulns": [
+          {
+            "id": "GHSA-w33c-445m-f8w7",
+            "modified": "2026-09-10T03:49:54.860062Z"
+          }
+        ]
+      }
+    },
+    {
+      "coordinate": "com.sun.activation:javax.activation:1.2.0",
+      "result": {}
+    },
+    {
+      "coordinate": "com.sun.istack:istack-commons-runtime:3.0.8",
+      "result": {}
+    },
+    {
+      "coordinate": "com.sun.xml.fastinfoset:FastInfoset:1.2.16",
+      "result": {}
+    },
+    {
+      "coordinate": "commons-codec:commons-codec:1.11",
+      "result": {}
+    },
+    {
+      "coordinate": "commons-io:commons-io:2.16.1",
+      "result": {}
+    },
+    {
+      "coordinate": "commons-logging:commons-logging:1.2",
+      "result": {}
+    },
+    {
+      "coordinate": "io.grpc:grpc-api:1.69.1",
+      "result": {}
+    },
+    {
+      "coordinate": "io.grpc:grpc-context:1.69.1",
+      "result": {}
+    },
+    {
+      "coordinate": "io.grpc:grpc-core:1.69.1",
+      "result": {}
+    },
+    {
+      "coordinate": "io.grpc:grpc-inprocess:1.69.1",
+      "result": {}
+    },
+    {
+      "coordinate": "io.grpc:grpc-netty:1.69.1",
+      "result": {}
+    },
+    {
+      "coordinate": "io.grpc:grpc-protobuf:1.69.1",
+      "result": {}
+    },
+    {
+      "coordinate": "io.grpc:grpc-protobuf-lite:1.69.1",
+      "result": {}
+    },
+    {
+      "coordinate": "io.grpc:grpc-stub:1.69.1",
+      "result": {}
+    },
+    {
+      "coordinate": "io.grpc:grpc-util:1.69.1",
+      "result": {}
+    },
+    {
+      "coordinate": "io.netty:netty-buffer:4.1.110.Final",
+      "result": {}
+    },
+    {
+      "coordinate": "io.netty:netty-codec:4.1.110.Final",
+      "result": {
+        "vulns": [
+          {
+            "id": "GHSA-3p8m-j85q-pgmj",
+            "modified": "2026-09-10T03:50:27.942019Z"
+          },
+          {
+            "id": "GHSA-558v-64gr-wgg4",
+            "modified": "2026-09-10T03:50:12.358146Z"
+          },
+          {
+            "id": "GHSA-mj4r-2hfc-f8p6",
+            "modified": "2026-09-10T03:51:06.526589Z"
+          }
+        ]
+      }
+    },
+    {
+      "coordinate": "io.netty:netty-codec-http:4.1.110.Final",
+      "result": {
+        "vulns": [
+          {
+            "id": "GHSA-38f8-5428-x5cv",
+            "modified": "2026-09-10T03:51:04.415985Z"
+          },
+          {
+            "id": "GHSA-4mp9-239f-g9hg",
+            "modified": "2026-09-10T03:51:10.413004Z"
+          },
+          {
+            "id": "GHSA-57rv-r2g8-2cj3",
+            "modified": "2026-09-10T03:51:04.645242Z"
+          },
+          {
+            "id": "GHSA-6cqp-g7gg-8hr5",
+            "modified": "2026-09-10T03:51:10.615779Z"
+          },
+          {
+            "id": "GHSA-6jqx-86gh-f27w",
+            "modified": "2026-09-10T03:51:10.812069Z"
+          },
+          {
+            "id": "GHSA-84h7-rjj3-6jx4",
+            "modified": "2026-09-10T03:50:31.724062Z"
+          },
+          {
+            "id": "GHSA-8c42-7qj2-3j46",
+            "modified": "2026-09-10T03:51:13.389261Z"
+          },
+          {
+            "id": "GHSA-f6hv-jmp6-3vwv",
+            "modified": "2026-09-10T03:51:05.447415Z"
+          },
+          {
+            "id": "GHSA-fghv-69vj-qj49",
+            "modified": "2026-09-10T03:50:28.333050Z"
+          },
+          {
+            "id": "GHSA-gcjf-9mgh-3p7g",
+            "modified": "2026-09-10T03:50:52.172506Z"
+          },
+          {
+            "id": "GHSA-hvcg-qmg6-jm4c",
+            "modified": "2026-09-10T03:50:50.025404Z"
+          },
+          {
+            "id": "GHSA-jppx-w49h-x2qq",
+            "modified": "2026-09-10T03:50:12.368445Z"
+          },
+          {
+            "id": "GHSA-m4cv-j2px-7723",
+            "modified": "2026-09-10T03:51:06.379210Z"
+          },
+          {
+            "id": "GHSA-mvh2-crg5-v77c",
+            "modified": "2026-09-10T03:50:52.830435Z"
+          },
+          {
+            "id": "GHSA-pwqr-wmgm-9rr8",
+            "modified": "2026-09-10T03:50:40.493461Z"
+          },
+          {
+            "id": "GHSA-q4f6-jm68-57ww",
+            "modified": "2026-09-10T03:50:52.883743Z"
+          },
+          {
+            "id": "GHSA-v8h7-rr48-vmmv",
+            "modified": "2026-09-10T03:50:47.637727Z"
+          },
+          {
+            "id": "GHSA-xxqh-mfjm-7mv9",
+            "modified": "2026-09-10T03:51:07.381332Z"
+          }
+        ]
+      }
+    },
+    {
+      "coordinate": "io.netty:netty-codec-http2:4.1.110.Final",
+      "result": {
+        "vulns": [
+          {
+            "id": "GHSA-563q-j3cm-6jxm",
+            "modified": "2026-09-10T03:50:48.396944Z"
+          },
+          {
+            "id": "GHSA-5x3r-wrvg-rp6q",
+            "modified": "2026-09-10T03:50:48.488084Z"
+          },
+          {
+            "id": "GHSA-93wv-jw9v-4972",
+            "modified": "2026-09-10T03:51:11.318239Z"
+          },
+          {
+            "id": "GHSA-c2gf-v879-257j",
+            "modified": "2026-10-06T19:45:03.555042Z"
+          },
+          {
+            "id": "GHSA-c69g-56f8-xwqj",
+            "modified": "2026-09-10T03:51:11.564389Z"
+          },
+          {
+            "id": "GHSA-f6hv-jmp6-3vwv",
+            "modified": "2026-09-10T03:51:05.447415Z"
+          },
+          {
+            "id": "GHSA-prj3-ccx8-p6x4",
+            "modified": "2026-09-10T03:50:27.396257Z"
+          },
+          {
+            "id": "GHSA-w9fj-cfpg-grvv",
+            "modified": "2026-09-10T03:50:41.535305Z"
+          }
+        ]
+      }
+    },
+    {
+      "coordinate": "io.netty:netty-codec-socks:4.1.110.Final",
+      "result": {}
+    },
+    {
+      "coordinate": "io.netty:netty-common:4.1.110.Final",
+      "result": {
+        "vulns": [
+          {
+            "id": "GHSA-389x-839f-4rhx",
+            "modified": "2026-09-10T03:50:22.454183Z"
+          },
+          {
+            "id": "GHSA-xq3w-v528-46rv",
+            "modified": "2026-09-10T03:50:56.073045Z"
+          }
+        ]
+      }
+    },
+    {
+      "coordinate": "io.netty:netty-handler:4.1.110.Final",
+      "result": {
+        "vulns": [
+          {
+            "id": "GHSA-3qp7-7mw8-wx86",
+            "modified": "2026-09-10T03:50:55.436123Z"
+          },
+          {
+            "id": "GHSA-4g8c-wm8x-jfhw",
+            "modified": "2026-09-10T03:50:22.400091Z"
+          },
+          {
+            "id": "GHSA-c4c3-7fpv-j4q5",
+            "modified": "2026-09-08T18:27:48.571082Z"
+          },
+          {
+            "id": "GHSA-c653-97m9-rcg9",
+            "modified": "2026-09-10T03:51:08.552933Z"
+          },
+          {
+            "id": "GHSA-fccg-mwvh-qqg4",
+            "modified": "2026-09-08T18:27:48.113951Z"
+          },
+          {
+            "id": "GHSA-x4gw-5cx5-pgmh",
+            "modified": "2026-09-10T03:50:12.401611Z"
+          }
+        ]
+      }
+    },
+    {
+      "coordinate": "io.netty:netty-handler-proxy:4.1.110.Final",
+      "result": {
+        "vulns": [
+          {
+            "id": "GHSA-45q3-82m4-75jr",
+            "modified": "2026-09-10T03:51:04.662453Z"
+          }
+        ]
+      }
+    },
+    {
+      "coordinate": "io.netty:netty-resolver:4.1.110.Final",
+      "result": {}
+    },
+    {
+      "coordinate": "io.netty:netty-transport:4.1.110.Final",
+      "result": {}
+    },
+    {
+      "coordinate": "io.netty:netty-transport-native-unix-common:4.1.110.Final",
+      "result": {}
+    },
+    {
+      "coordinate": "io.perfmark:perfmark-api:0.27.0",
+      "result": {}
+    },
+    {
+      "coordinate": "jakarta.activation:jakarta.activation-api:1.2.1",
+      "result": {}
+    },
+    {
+      "coordinate": "jakarta.xml.bind:jakarta.xml.bind-api:2.3.2",
+      "result": {}
+    },
+    {
+      "coordinate": "javax.annotation:javax.annotation-api:1.3.2",
+      "result": {}
+    },
+    {
+      "coordinate": "javax.inject:javax.inject:1",
+      "result": {}
+    },
+    {
+      "coordinate": "net.java.dev.jna:jna:5.6.0",
+      "result": {}
+    },
+    {
+      "coordinate": "net.java.dev.jna:jna-platform:5.6.0",
+      "result": {}
+    },
+    {
+      "coordinate": "net.sf.jopt-simple:jopt-simple:4.9",
+      "result": {}
+    },
+    {
+      "coordinate": "net.sf.kxml:kxml2:2.3.0",
+      "result": {}
+    },
+    {
+      "coordinate": "org.apache.commons:commons-compress:1.21",
+      "result": {
+        "vulns": [
+          {
+            "id": "GHSA-4265-ccf5-phj5",
+            "modified": "2026-09-10T03:50:05.280645Z"
+          },
+          {
+            "id": "GHSA-4g9r-vxhx-9pgx",
+            "modified": "2026-09-10T03:50:05.286961Z"
+          }
+        ]
+      }
+    },
+    {
+      "coordinate": "org.apache.httpcomponents:httpclient:4.5.14",
+      "result": {}
+    },
+    {
+      "coordinate": "org.apache.httpcomponents:httpcore:4.4.16",
+      "result": {}
+    },
+    {
+      "coordinate": "org.apache.httpcomponents:httpmime:4.5.6",
+      "result": {}
+    },
+    {
+      "coordinate": "org.bitbucket.b_c:jose4j:0.9.5",
+      "result": {
+        "vulns": [
+          {
+            "id": "GHSA-3677-xxcr-wjqv",
+            "modified": "2026-09-10T03:50:31.318789Z"
+          }
+        ]
+      }
+    },
+    {
+      "coordinate": "org.bouncycastle:bcpkix-jdk18on:1.79",
+      "result": {
+        "vulns": [
+          {
+            "id": "GHSA-wg6q-6289-32hp",
+            "modified": "2026-09-10T03:50:45.075900Z"
+          }
+        ]
+      }
+    },
+    {
+      "coordinate": "org.bouncycastle:bcprov-jdk18on:1.79",
+      "result": {
+        "vulns": [
+          {
+            "id": "GHSA-574f-3g2m-x479",
+            "modified": "2026-09-24T15:30:06.452617Z"
+          },
+          {
+            "id": "GHSA-9pwp-9qqc-pr26",
+            "modified": "2026-09-18T17:45:06.105254Z"
+          },
+          {
+            "id": "GHSA-c3fc-8qff-9hwx",
+            "modified": "2026-09-10T03:51:01.534612Z"
+          },
+          {
+            "id": "GHSA-qp49-qgx5-5m26",
+            "modified": "2026-09-18T17:45:06.096277Z"
+          }
+        ]
+      }
+    },
+    {
+      "coordinate": "org.bouncycastle:bcutil-jdk18on:1.79",
+      "result": {}
+    },
+    {
+      "coordinate": "org.checkerframework:checker-qual:3.43.0",
+      "result": {}
+    },
+    {
+      "coordinate": "org.codehaus.mojo:animal-sniffer-annotations:1.24",
+      "result": {}
+    },
+    {
+      "coordinate": "org.glassfish.jaxb:jaxb-runtime:2.3.2",
+      "result": {}
+    },
+    {
+      "coordinate": "org.glassfish.jaxb:txw2:2.3.2",
+      "result": {}
+    },
+    {
+      "coordinate": "org.jdom:jdom2:2.0.6",
+      "result": {
+        "vulns": [
+          {
+            "id": "GHSA-2363-cqg2-863c",
+            "modified": "2025-09-16T15:52:31.388959Z"
+          }
+        ]
+      }
+    },
+    {
+      "coordinate": "org.jetbrains:annotations:23.0.0",
+      "result": {}
+    },
+    {
+      "coordinate": "org.jetbrains.kotlin:fus-statistics-gradle-plugin:2.1.20",
+      "result": {}
+    },
+    {
+      "coordinate": "org.jetbrains.kotlin:kotlin-annotations-jvm:1.3.72",
+      "result": {}
+    },
+    {
+      "coordinate": "org.jetbrains.kotlin:kotlin-build-statistics:2.1.20",
+      "result": {}
+    },
+    {
+      "coordinate": "org.jetbrains.kotlin:kotlin-build-tools-api:2.1.20",
+      "result": {}
+    },
+    {
+      "coordinate": "org.jetbrains.kotlin:kotlin-compiler-runner:2.1.20",
+      "result": {}
+    },
+    {
+      "coordinate": "org.jetbrains.kotlin:kotlin-daemon-client:2.1.20",
+      "result": {}
+    },
+    {
+      "coordinate": "org.jetbrains.kotlin:kotlin-gradle-plugin:2.1.20",
+      "result": {
+        "vulns": [
+          {
+            "id": "GHSA-r937-wjx7-w2jp",
+            "modified": "2026-08-12T19:40:59.256901Z"
+          }
+        ]
+      }
+    },
+    {
+      "coordinate": "org.jetbrains.kotlin:kotlin-gradle-plugin-annotations:2.1.20",
+      "result": {}
+    },
+    {
+      "coordinate": "org.jetbrains.kotlin:kotlin-gradle-plugin-api:2.1.20",
+      "result": {}
+    },
+    {
+      "coordinate": "org.jetbrains.kotlin:kotlin-gradle-plugin-idea:2.1.20",
+      "result": {}
+    },
+    {
+      "coordinate": "org.jetbrains.kotlin:kotlin-gradle-plugin-idea-proto:2.1.20",
+      "result": {}
+    },
+    {
+      "coordinate": "org.jetbrains.kotlin:kotlin-gradle-plugin-model:2.1.20",
+      "result": {}
+    },
+    {
+      "coordinate": "org.jetbrains.kotlin:kotlin-gradle-plugins-bom:2.1.20",
+      "result": {}
+    },
+    {
+      "coordinate": "org.jetbrains.kotlin:kotlin-klib-commonizer-api:2.1.20",
+      "result": {}
+    },
+    {
+      "coordinate": "org.jetbrains.kotlin:kotlin-native-utils:2.1.20",
+      "result": {}
+    },
+    {
+      "coordinate": "org.jetbrains.kotlin:kotlin-reflect:2.1.20",
+      "result": {}
+    },
+    {
+      "coordinate": "org.jetbrains.kotlin:kotlin-stdlib:2.1.20",
+      "result": {}
+    },
+    {
+      "coordinate": "org.jetbrains.kotlin:kotlin-stdlib-common:2.1.20",
+      "result": {}
+    },
+    {
+      "coordinate": "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.0",
+      "result": {}
+    },
+    {
+      "coordinate": "org.jetbrains.kotlin:kotlin-stdlib-jdk7:2.1.20",
+      "result": {}
+    },
+    {
+      "coordinate": "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0",
+      "result": {}
+    },
+    {
+      "coordinate": "org.jetbrains.kotlin:kotlin-stdlib-jdk8:2.1.20",
+      "result": {}
+    },
+    {
+      "coordinate": "org.jetbrains.kotlin:kotlin-tooling-core:2.1.20",
+      "result": {}
+    },
+    {
+      "coordinate": "org.jetbrains.kotlin:kotlin-util-io:2.1.20",
+      "result": {}
+    },
+    {
+      "coordinate": "org.jetbrains.kotlin:kotlin-util-klib:2.1.20",
+      "result": {}
+    },
+    {
+      "coordinate": "org.jetbrains.kotlin:kotlin-util-klib-metadata:2.1.20",
+      "result": {}
+    },
+    {
+      "coordinate": "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1",
+      "result": {}
+    },
+    {
+      "coordinate": "org.jetbrains.kotlinx:kotlinx-coroutines-bom:1.8.1",
+      "result": {}
+    },
+    {
+      "coordinate": "org.jetbrains.kotlinx:kotlinx-coroutines-bom:1.9.0",
+      "result": {}
+    },
+    {
+      "coordinate": "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.1",
+      "result": {}
+    },
+    {
+      "coordinate": "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0",
+      "result": {}
+    },
+    {
+      "coordinate": "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.8.1",
+      "result": {}
+    },
+    {
+      "coordinate": "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.9.0",
+      "result": {}
+    },
+    {
+      "coordinate": "org.jspecify:jspecify:1.0.0",
+      "result": {}
+    },
+    {
+      "coordinate": "org.jvnet.staxex:stax-ex:1.8.1",
+      "result": {}
+    },
+    {
+      "coordinate": "org.ow2.asm:asm:9.7.1",
+      "result": {}
+    },
+    {
+      "coordinate": "org.ow2.asm:asm-analysis:9.7.1",
+      "result": {}
+    },
+    {
+      "coordinate": "org.ow2.asm:asm-commons:9.7.1",
+      "result": {}
+    },
+    {
+      "coordinate": "org.ow2.asm:asm-tree:9.7.1",
+      "result": {}
+    },
+    {
+      "coordinate": "org.ow2.asm:asm-util:9.7.1",
+      "result": {}
+    },
+    {
+      "coordinate": "org.slf4j:slf4j-api:1.7.30",
+      "result": {}
+    },
+    {
+      "coordinate": "org.tensorflow:tensorflow-lite-metadata:0.2.0",
+      "result": {}
+    }
+  ]
+}

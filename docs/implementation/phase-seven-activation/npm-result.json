@@ -1,0 +1,42 @@
+{
+  "phase": "scripts-disabled-exact-install",
+  "command": [
+    "npm",
+    "ci",
+    "--ignore-scripts",
+    "--no-audit",
+    "--no-fund",
+    "--cache",
+    "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-activation/npm-cache",
+    "--userconfig",
+    "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-activation/config/user.npmrc",
+    "--globalconfig",
+    "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-activation/config/global.npmrc"
+  ],
+  "cwd": "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-activation/npm",
+  "lock_before_sha256": "c05cb6a927e86bd25a1a076df5e7d911745bad9773f21dca5e9149b153df8b2b",
+  "manifest_before_sha256": "b14eaef462c945b37504afff9a976caf67699cce0602f69e733cdd9004b5b5a9",
+  "node": "v22.18.0",
+  "npm": "11.17.0",
+  "exit_code": 0,
+  "lock_unchanged": true,
+  "installed_locations": 477,
+  "selected_version_resolved_integrity_match": true,
+  "offline_repeat_command": [
+    "npm",
+    "ci",
+    "--ignore-scripts",
+    "--no-audit",
+    "--no-fund",
+    "--cache",
+    "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-activation/npm-cache",
+    "--userconfig",
+    "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-activation/config/user.npmrc",
+    "--globalconfig",
+    "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-activation/config/global.npmrc",
+    "--offline"
+  ],
+  "offline_repeat_exit_code": 0,
+  "lock_after_sha256": "c05cb6a927e86bd25a1a076df5e7d911745bad9773f21dca5e9149b153df8b2b",
+  "manifest_after_sha256": "b14eaef462c945b37504afff9a976caf67699cce0602f69e733cdd9004b5b5a9"
+}

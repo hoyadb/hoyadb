@@ -1,0 +1,5 @@
+jars scanned 203
+kotlin-gradle-plugin-2.1.20-gradle85.jar ['org/jetbrains/kotlin/kapt3/', 'org/jetbrains/kotlin/kapt3/diagnostic/', '... 2']
+kotlin-compiler-embeddable-2.1.20.jar ['org/jetbrains/kotlin/kapt3/', 'org/jetbrains/kotlin/kapt3/diagnostic/', 'org/jetbrains/kotlin/kapt3/diagnostic/KaptError$Kind.class', 'org/jetbrains/kotlin/kapt3/diagnostic/KaptError.class', '... 4']
+kotlin-compiler-embeddable-2.1.20.jar ['org/jetbrains/kotlin/kapt3/', 'org/jetbrains/kotlin/kapt3/diagnostic/', 'org/jetbrains/kotlin/kapt3/diagnostic/KaptError$Kind.class', 'org/jetbrains/kotlin/kapt3/diagnostic/KaptError.class', '... 4']
+JavaClassCacheManager present: False

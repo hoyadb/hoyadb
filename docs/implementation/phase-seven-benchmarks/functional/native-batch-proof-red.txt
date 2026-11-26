@@ -1,0 +1,22 @@
+   Compiling hoyadb-benchmark v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/native)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.04s
+     Running unittests src/lib.rs (benchmarks/native/target/debug/deps/hoyadb_benchmark-0e7a7c369aeaba1a)
+
+running 1 test
+test tests::p01_wrong_batch_change_ids_or_before_after_never_count_as_correct ... FAILED
+
+failures:
+
+---- tests::p01_wrong_batch_change_ids_or_before_after_never_count_as_correct stdout ----
+
+thread 'tests::p01_wrong_batch_change_ids_or_before_after_never_count_as_correct' (82148046) panicked at src/lib.rs:408:9:
+assertion failed: verify_batch_result("batch-remove", 100, 0, &wrong).is_err()
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    tests::p01_wrong_batch_change_ids_or_before_after_never_count_as_correct
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 5 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `--lib`

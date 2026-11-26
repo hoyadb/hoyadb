@@ -1,0 +1,83 @@
+"""Inert verification of the quarantined review closure. Reads bytes/XML/JSON only; executes nothing."""
+from pathlib import Path
+import hashlib, json, re, zipfile
+import xml.etree.ElementTree as ET
+here = Path(__file__).resolve().parents[1]
+cache = here / 'gradle-home/caches/modules-2/files-2.1'
+H = lambda data, a='sha256': hashlib.new(a, data).hexdigest()
+ns = {'m': 'http://maven.apache.org/POM/4.0.0'}
+report = {'components': {}, 'parent_poms': []}
+for comp_dir in sorted((here / 'closure').iterdir()):
+    g, a, v = comp_dir.name.split('__')
+    entry = {'coordinate': f'{g}:{a}:{v}', 'files': {}}
+    module = None
+    for f in sorted(comp_dir.iterdir()):
+        if f.suffix in ('.sha1', '.asc'):
+            continue
+        data = f.read_bytes()
+        rec = {'bytes': len(data), 'sha256': H(data), 'sha512': H(data, 'sha512'), 'sha1': H(data, 'sha1')}
+        side = f.with_name(f.name + '.sha1')
+        rec['sha1_sidecar_match'] = side.exists() and side.read_text().split()[0].strip().lower() == rec['sha1']
+        rec['asc_present'] = f.with_name(f.name + '.asc').exists()
+        cached = list((cache / g / a / v).glob(f'*/{f.name}'))
+        rec['gradle_independent_retrieval_match'] = bool(cached) and all(p.parent.name.lstrip('0') == rec['sha1'].lstrip('0') and p.read_bytes() == data for p in cached) if cached else None
+        if f.suffix == '.module':
+            module = json.loads(data)
+        if f.suffix == '.pom':
+            text = data.decode('utf-8')
+            assert '<!ENTITY' not in text
+            root = ET.fromstring(data)
+            rec['packaging'] = (root.findtext('m:packaging', namespaces=ns) or 'jar').strip()
+            rec['licenses'] = [(l.findtext('m:name', namespaces=ns) or '').strip() for l in root.findall('m:licenses/m:license', ns)]
+            par = root.find('m:parent', ns)
+            if par is not None:
+                rec['parent'] = ':'.join((par.findtext('m:' + k, namespaces=ns) or '').strip() for k in ['groupId', 'artifactId', 'version'])
+            rec['has_repositories'] = root.find('m:repositories', ns) is not None
+            rec['gradle_metadata_marker'] = 'published-with-gradle-metadata' in text
+        if f.suffix == '.jar':
+            with zipfile.ZipFile(f) as z:
+                names = z.namelist()
+                rec['entries'] = len(names)
+                rec['license_files'] = sorted(n for n in names if re.search(r'(^|/)(LICENSE|NOTICE|COPYING)[^/]*$', n, re.I))
+                rec['embedded_maven_pom_properties'] = sorted(n for n in names if n.endswith('pom.properties'))
+                tops = {}
+                for n in names:
+                    if n.endswith('.class'):
+                        parts = n.split('/')
+                        key = '/'.join(parts[:3]) if len(parts) > 3 else '/'.join(parts[:-1])
+                        tops[key] = tops.get(key, 0) + 1
+                rec['class_package_prefixes'] = dict(sorted(tops.items(), key=lambda x: -x[1])[:25])
+                rec['manifest'] = z.read('META-INF/MANIFEST.MF').decode('utf-8', 'replace')[:1500] if 'META-INF/MANIFEST.MF' in names else None
+        entry['files'][f.name] = rec
+    if module:
+        declared = {}
+        for var in module.get('variants', []):
+            for mf in var.get('files', []):
+                declared[mf['name']] = {k: mf.get(k) for k in ('sha256', 'sha512', 'sha1', 'size')}
+        for name, rec in entry['files'].items():
+            if name in declared:
+                rec['publisher_module_sha256_match'] = declared[name]['sha256'] == rec['sha256']
+                rec['publisher_module_sha512_match'] = declared[name]['sha512'] == rec['sha512']
+    report['components'][entry['coordinate']] = entry
+# Parent POMs Gradle needed during resolution (metadata-only), from its independent cache.
+closure_parents = {r.get('parent') for e in report['components'].values() for r in e['files'].values() if r.get('parent')}
+seen = set()
+while closure_parents - seen:
+    p = sorted(closure_parents - seen)[0]; seen.add(p)
+    g, a, v = p.split(':')
+    hits = list((cache / g / a / v).glob(f'*/{a}-{v}.pom'))
+    rec = {'coordinate': p, 'in_gradle_cache': bool(hits)}
+    if hits:
+        data = hits[0].read_bytes(); rec.update(sha256=H(data), sha1=H(data, 'sha1'), sha1_dir_match=hits[0].parent.name.lstrip('0') == H(data, 'sha1').lstrip('0'))
+        par = ET.fromstring(data).find('m:parent', ns)
+        if par is not None:
+            nxt = ':'.join((par.findtext('m:' + k, namespaces=ns) or '').strip() for k in ['groupId', 'artifactId', 'version']); rec['parent'] = nxt; closure_parents.add(nxt)
+    report['parent_poms'].append(rec)
+(here / 'verification.json').write_text(json.dumps(report, indent=2) + '\n')
+bad = [(c, n, k) for c, e in report['components'].items() for n, r in e['files'].items() for k in ('sha1_sidecar_match', 'gradle_independent_retrieval_match', 'publisher_module_sha256_match', 'publisher_module_sha512_match') if r.get(k) is False]
+print('components', len(report['components']), 'mismatches', bad)
+for c, e in report['components'].items():
+    jar = next((r for n, r in e['files'].items() if n.endswith('.jar')), None)
+    pom = next(r for n, r in e['files'].items() if n.endswith('.pom'))
+    print(c, '| jar', jar and jar['bytes'], jar and jar['sha256'][:12], '| module-match', jar and jar.get('publisher_module_sha256_match'), '| licenses', pom['licenses'], '| parent', pom.get('parent'), '| embedded poms', jar and len(jar['embedded_maven_pom_properties']))
+print('parents', [(p['coordinate'], p['in_gradle_cache'], p.get('sha1_dir_match')) for p in report['parent_poms']])

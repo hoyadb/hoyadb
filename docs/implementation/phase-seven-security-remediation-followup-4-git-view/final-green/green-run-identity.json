@@ -1,0 +1,172 @@
+{
+ "python": "3.14.8",
+ "implementation": "CPython",
+ "interpreter": "/usr/local/Cellar/python@3.14/3.14.8/Frameworks/Python.framework/Versions/3.14/bin/python3.14",
+ "interpreter_sha256": "5f923e627e0bc2c9ad28334bfd32429e8b5b41b0a996e64ed46258220ebca184",
+ "platform": "macOS-26.7.1-x86_64-i386-64bit-Mach-O",
+ "sources_before": {
+  "README.md": "fbfdf9eced3bb171009a8074ae31cc5cb1adc6779f0261f431bcf488b28db973",
+  "classfile.py": "d6cddefb56da9ba602a4b85c5e885f47ef03d90a983fb4eb09e18e98f218f6cd",
+  "embedded_scan.py": "20299d9e0518c489effe4e4e6d5c22f485be015cc7a1a56f5adac0e845ad9833",
+  "fixtures.py": "98435b6272b53931ef9261d8dd4d813679a40f5aaeabca067ab35a041c719ed2",
+  "init_script_guard.py": "a03132fa672aa67b56672de7f7b8aec0f4814974fc2485277fee5ad61ef7135a",
+  "kotlin_guard.py": "78beb2736fcb7cfa8297989bf6543c9c89af20dce3ecfd4f18e9f3b21d643572",
+  "r1-compile-alignment.init.gradle": "74aa545a6c82cbdc434e71328653979715659818603a6c0d60627245e8d1f9a0",
+  "symbol_guard.py": "56668e924bca2606d5eb2f5dc8983cf7e1c2a22998ba38679d86e23feb26c0a9",
+  "test_embedded_scan.py": "e017988682145333f92540b8cf9c41e66601ecf0050e8565c58d90fcef53e114",
+  "test_init_script_guard.py": "d172782de62399add70feed1df9c2a5e23aafc38bce5bb6453d40c48011a925a",
+  "test_kotlin_guard.py": "c7b0c0f5f26c2e141e4be52a402b3ccc33fd8a204e164cfe676c73f58f2bbf69",
+  "test_symbol_guard.py": "6993bb6abb3bd5cc9176c048e96db9f0391f76e3b05edd603b655cd7f6019f9c"
+ },
+ "sources_after": {
+  "README.md": "fbfdf9eced3bb171009a8074ae31cc5cb1adc6779f0261f431bcf488b28db973",
+  "classfile.py": "d6cddefb56da9ba602a4b85c5e885f47ef03d90a983fb4eb09e18e98f218f6cd",
+  "embedded_scan.py": "20299d9e0518c489effe4e4e6d5c22f485be015cc7a1a56f5adac0e845ad9833",
+  "fixtures.py": "98435b6272b53931ef9261d8dd4d813679a40f5aaeabca067ab35a041c719ed2",
+  "init_script_guard.py": "a03132fa672aa67b56672de7f7b8aec0f4814974fc2485277fee5ad61ef7135a",
+  "kotlin_guard.py": "78beb2736fcb7cfa8297989bf6543c9c89af20dce3ecfd4f18e9f3b21d643572",
+  "r1-compile-alignment.init.gradle": "74aa545a6c82cbdc434e71328653979715659818603a6c0d60627245e8d1f9a0",
+  "symbol_guard.py": "56668e924bca2606d5eb2f5dc8983cf7e1c2a22998ba38679d86e23feb26c0a9",
+  "test_embedded_scan.py": "e017988682145333f92540b8cf9c41e66601ecf0050e8565c58d90fcef53e114",
+  "test_init_script_guard.py": "d172782de62399add70feed1df9c2a5e23aafc38bce5bb6453d40c48011a925a",
+  "test_kotlin_guard.py": "c7b0c0f5f26c2e141e4be52a402b3ccc33fd8a204e164cfe676c73f58f2bbf69",
+  "test_symbol_guard.py": "6993bb6abb3bd5cc9176c048e96db9f0391f76e3b05edd603b655cd7f6019f9c"
+ },
+ "sources_unchanged": true,
+ "runs": [
+  {
+   "mode": "normal",
+   "suite": "test_kotlin_guard",
+   "command": [
+    "/usr/local/Cellar/python@3.14/3.14.8/Frameworks/Python.framework/Versions/3.14/bin/python3.14",
+    "-I",
+    "-B",
+    "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py"
+   ],
+   "started_utc": "2026-10-25T22:51:13.552656+00:00",
+   "exit": 0,
+   "tests": 26,
+   "ok": true,
+   "log": "normal-test_kotlin_guard.txt",
+   "log_sha256": "6303238d7b6da07dd7b2b6b92a0ef329f7af49a9957de1f5e3b1c328001c0bfe"
+  },
+  {
+   "mode": "normal",
+   "suite": "test_symbol_guard",
+   "command": [
+    "/usr/local/Cellar/python@3.14/3.14.8/Frameworks/Python.framework/Versions/3.14/bin/python3.14",
+    "-I",
+    "-B",
+    "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_symbol_guard.py"
+   ],
+   "started_utc": "2026-10-25T22:51:14.545794+00:00",
+   "exit": 0,
+   "tests": 9,
+   "ok": true,
+   "log": "normal-test_symbol_guard.txt",
+   "log_sha256": "c1b0f817a01ac2377a757e6b3fe238628cbafdeefc9d213086439ae136729f20"
+  },
+  {
+   "mode": "normal",
+   "suite": "test_embedded_scan",
+   "command": [
+    "/usr/local/Cellar/python@3.14/3.14.8/Frameworks/Python.framework/Versions/3.14/bin/python3.14",
+    "-I",
+    "-B",
+    "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_embedded_scan.py"
+   ],
+   "started_utc": "2026-10-25T22:51:15.306887+00:00",
+   "exit": 0,
+   "tests": 11,
+   "ok": true,
+   "log": "normal-test_embedded_scan.txt",
+   "log_sha256": "91c28a11c890e53b0016f6f71b1e1db89614ed5d34e370466ff7a632173fef94"
+  },
+  {
+   "mode": "normal",
+   "suite": "test_init_script_guard",
+   "command": [
+    "/usr/local/Cellar/python@3.14/3.14.8/Frameworks/Python.framework/Versions/3.14/bin/python3.14",
+    "-I",
+    "-B",
+    "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_init_script_guard.py"
+   ],
+   "started_utc": "2026-10-25T22:51:16.039454+00:00",
+   "exit": 0,
+   "tests": 9,
+   "ok": true,
+   "log": "normal-test_init_script_guard.txt",
+   "log_sha256": "932e74cd596972fb7a1d88a56d3af72341fe1a5db8680033ac69ca172c0785d4"
+  },
+  {
+   "mode": "optimized",
+   "suite": "test_kotlin_guard",
+   "command": [
+    "/usr/local/Cellar/python@3.14/3.14.8/Frameworks/Python.framework/Versions/3.14/bin/python3.14",
+    "-I",
+    "-O",
+    "-B",
+    "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py"
+   ],
+   "started_utc": "2026-10-25T22:51:16.874612+00:00",
+   "exit": 0,
+   "tests": 26,
+   "ok": true,
+   "log": "optimized-test_kotlin_guard.txt",
+   "log_sha256": "883c73637e1ff35af3177fd685f20f50b884a71011e6d6664276266937179fcf"
+  },
+  {
+   "mode": "optimized",
+   "suite": "test_symbol_guard",
+   "command": [
+    "/usr/local/Cellar/python@3.14/3.14.8/Frameworks/Python.framework/Versions/3.14/bin/python3.14",
+    "-I",
+    "-O",
+    "-B",
+    "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_symbol_guard.py"
+   ],
+   "started_utc": "2026-10-25T22:51:17.473445+00:00",
+   "exit": 0,
+   "tests": 9,
+   "ok": true,
+   "log": "optimized-test_symbol_guard.txt",
+   "log_sha256": "928285daf72a168741c8513fc6f91e89c14c54da811544b876c026122cd4972d"
+  },
+  {
+   "mode": "optimized",
+   "suite": "test_embedded_scan",
+   "command": [
+    "/usr/local/Cellar/python@3.14/3.14.8/Frameworks/Python.framework/Versions/3.14/bin/python3.14",
+    "-I",
+    "-O",
+    "-B",
+    "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_embedded_scan.py"
+   ],
+   "started_utc": "2026-10-25T22:51:18.057983+00:00",
+   "exit": 0,
+   "tests": 11,
+   "ok": true,
+   "log": "optimized-test_embedded_scan.txt",
+   "log_sha256": "54f610c313de11463b4d7fbd3da65df4f4196919a88adc4045ab596362f6cd45"
+  },
+  {
+   "mode": "optimized",
+   "suite": "test_init_script_guard",
+   "command": [
+    "/usr/local/Cellar/python@3.14/3.14.8/Frameworks/Python.framework/Versions/3.14/bin/python3.14",
+    "-I",
+    "-O",
+    "-B",
+    "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_init_script_guard.py"
+   ],
+   "started_utc": "2026-10-25T22:51:18.938330+00:00",
+   "exit": 0,
+   "tests": 9,
+   "ok": true,
+   "log": "optimized-test_init_script_guard.txt",
+   "log_sha256": "2e3c5bed1c22364c2763ba6d8777179dda12cec52f2518e5eea0efc320296b8a"
+  }
+ ],
+ "all_ok": true,
+ "total_tests_per_mode": 55
+}

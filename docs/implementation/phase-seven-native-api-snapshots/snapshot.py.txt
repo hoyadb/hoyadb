@@ -1,0 +1,59 @@
+"""Inert public-surface snapshots for the native/Swift/RN lane. Reads built artifacts and sources only."""
+from pathlib import Path
+import hashlib, json, re, subprocess, sys
+root = Path(__file__).resolve().parents[3]
+here = Path(__file__).resolve().parent
+nm_ndk = sys.argv[1]
+digest = lambda p: hashlib.sha256(Path(p).read_bytes()).hexdigest()
+
+def walk(node, depth, out):
+    if node.get('kind') in ('Import',) or node.get('declKind') == 'Import':
+        return
+    if depth >= 0:
+        out.append('  ' * depth + f"{node.get('declKind', node.get('kind'))} {node.get('printedName', '')}")
+    if node.get('kind') in ('Root', 'TypeDecl', 'Function', 'Var', 'Constructor', 'Subscript', 'Accessor', 'TypeAlias') or depth < 0:
+        for child in node.get('children', []):
+            if child.get('kind', '').startswith('Type') and child.get('kind') not in ('TypeDecl', 'TypeAlias'):
+                continue
+            walk(child, depth + 1, out)
+
+swift = {}
+for module in ['HoyaDB', 'HoyaDBTesting']:
+    data = json.loads((here / f'{module}.api.json').read_text())
+    lines = []
+    walk(data['ABIRoot'], -1, lines)
+    (here / f'{module}.api.txt').write_text('\n'.join(lines) + '\n')
+    swift[module] = {'dump_sha256': digest(here / f'{module}.api.json'), 'summary_lines': len(lines),
+                     'summary_sha256': digest(here / f'{module}.api.txt')}
+
+framework = root / 'bindings/swift/Artifacts/HoyaNative.xcframework'
+apple = {}
+for lib in sorted(framework.glob('*/libhoyadb_native.a')):
+    out = subprocess.run(['nm', '-gU', '-A', str(lib)], stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, text=True).stdout
+    apple[lib.parent.name] = sorted({line.split()[-1] for line in out.splitlines() if re.search(r' T _hoya_v1_', line)})
+jni = {}
+for so in sorted((root / 'target/phase-seven-native/jni-current').glob('*/libhoyadb_jni.so')):
+    out = subprocess.run([nm_ndk, '-D', '--defined-only', str(so)], stdout=subprocess.PIPE, text=True).stdout
+    jni[so.parent.name] = {'sha256': digest(so), 'exports': sorted(line.split()[-1] for line in out.splitlines() if ' T ' in line)}
+
+rn = root / 'bindings/react-native'
+source = (rn / 'src/index.js').read_text()
+spec = (rn / 'src/NativeHoyaDB.ts').read_text()
+snapshot = {
+    'c_header': {'path': 'bindings/native/include/hoyadb.h', 'sha256': digest(root / 'bindings/native/include/hoyadb.h'),
+                 'declared_functions': sorted(set(re.findall(r'\b(hoya_v1_\w+)\s*\(', (root / 'bindings/native/include/hoyadb.h').read_text()))),
+                 'module_map': {'path': 'bindings/native/include/HoyaNative/module.modulemap', 'sha256': digest(root / 'bindings/native/include/HoyaNative/module.modulemap')}},
+    'apple_static_exports': apple,
+    'android_jni': jni,
+    'swift': swift,
+    'react_native': {
+        'declarations': {'path': 'bindings/react-native/index.d.ts', 'sha256': digest(rn / 'index.d.ts')},
+        'runtime_exports': sorted(set(re.findall(r'export (?:async )?function (\w+)', source)) |
+                                  {n.strip().split(' as ')[-1] for group in re.findall(r'export \{([^}]*)\} from', source) for n in group.split(',')}),
+        'turbo_module_spec': {'path': 'bindings/react-native/src/NativeHoyaDB.ts', 'sha256': digest(rn / 'src/NativeHoyaDB.ts'),
+                              'members': re.findall(r'^\s+(?:readonly\s+)?(\w+)\s*[(:]', spec, re.M)},
+        'package_json_sha256': digest(rn / 'package.json'), 'podspec_sha256': digest(rn / 'HoyaDBReactNative.podspec'),
+        'react_native_config_sha256': digest(rn / 'react-native.config.cjs')},
+}
+(here / 'snapshot.json').write_text(json.dumps(snapshot, indent=2) + '\n')
+print(json.dumps({k: v for k, v in snapshot.items() if k != 'swift'}, indent=1)[:4000]); print(swift)

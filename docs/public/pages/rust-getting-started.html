@@ -1,0 +1,45 @@
+<p class="callout">For named business handlers and commands that perform several writes, follow the <a href="commands.html">Rust Todo command walkthrough</a>: create a task, then complete it and add an activity entry atomically. It separates argument declarations, invocation values, handler code and the returned receipt.</p>
+<h2>Run the complete Todo flow</h2>
+<p>From the checkout, run <code>cargo run --manifest-path examples/Cargo.toml --bin rust_todo --offline --locked</code>. This example uses the real memory adapter and <code>CommandDatabase</code>, which owns local data, observations and durable command work. The local crates are unpublished.</p>
+<p>The examples import a small <a href="testing.html#support">support module</a> for types, field construction and a ready-future runner. That runner works with this memory adapter; use ordinary <code>.await</code> on your application's executor for adapters that suspend.</p>
+<h2>1. Define the schema</h2>
+<p>The Todo table has a required title and done flag. <code>column</code> is an example helper that creates a required column.</p>
+{{example:rust_todo:schema}}
+<h2>2. Open one owner</h2>
+<p>Share the owner according to your host's task model. The namespace identifies this store's queued commands; use a unique value for a new store and retain it across reopens. Memory storage disappears on drop. Use <a href="persistence.html">protected SQLite</a> for durable storage and manage keys in the application.</p>
+{{example:rust_todo:open}}
+<h2>3. Observe</h2>
+<p>Rust supplies notifications for the host to deliver. Register a query, then drain notifications on the host clock. This is explicit, unlike a binding that schedules callbacks for you.</p>
+{{example:rust_todo:observe}}
+<h2>4. Define and run a local command</h2>
+<p>The definition names the backend action and its argument types. After admission through <code>begin</code>, run the local handler through <code>scope_*</code> operations. <code>finish</code> atomically commits the optimistic row and durable queue record. If a real handler fails, call <code>abort</code> rather than leaving an active request. App-supplied context is not server authentication.</p>
+{{example:rust_todo:definition}}
+<p>Capture a request and its arguments. If admission returns false, retain and retry the request before using the scope; this isolated fixture is admitted immediately.</p>
+{{example:rust_todo:begin}}
+<p>Run the local writes through that request, then finish. The complete example checks that the new task has a local ID and one command is pending.</p>
+{{example:rust_todo:handler}}
+<h2>5. Query the committed data</h2>
+<p>The row is immediately available offline, with a temporary <code>local:</code> ID. The registered observer receives the committed change.</p>
+{{example:rust_todo:query}}
+<h2>6. Supply a server transport and reconcile</h2>
+<p>The stand-in below marks the command applied. A production host sends the core's prepared envelope to a server that authenticates, deduplicates and runs its own handler, then feeds its reply back through the wire codec. Rust does not install a network client or a background scheduler for you.</p>
+{{example:rust_todo:prepare}}
+<p>The prepared batch contains the queued envelope. In this test the backend reply is represented directly by an Applied outcome.</p>
+{{example:rust_todo:backend}}
+<p>The application maps every command-created ID to its authoritative ID. Reconciliation then renames the row and its references atomically. See <a href="reconciliation.html">recovery</a> for corrections and conflicts.</p>
+{{example:rust_todo:sync}}
+<h2>7. Dispose and close</h2>
+<p>Release the observer when it is no longer needed, then close the owner.</p>
+{{example:rust_todo:cleanup}}
+<h2>Local data without command sync</h2><p>The <a href="source:examples/src/bin/quickstart.rs">complete local CRUD example</a> uses a plain Database instead. These next steps are a separate program from the Todo flow above.</p>
+<p>Open memory storage with the shared example schema.</p>
+{{example:quickstart:open}}
+<p>Insert a note. The returned row contains its ID and owned fields.</p>
+{{example:quickstart:insert}}
+<p>Fetch the local rows; the executable example checks that the note is present.</p>
+{{example:quickstart:fetch}}
+<p>A replacement supplies the complete fields. Here the original fields are copied before changing done; use an entity patch for partial updates on a command owner.</p>
+{{example:quickstart:update}}
+<p>Remove the row by ID. The example verifies that removal succeeded and the table is empty afterwards.</p>
+{{example:quickstart:remove}}
+<p>Continue with <a href="rust-reference.html">generated Rust reference</a>, <a href="entities.html">entity patches</a>, and <a href="observations.html">reactive queries</a>.</p>

@@ -1,0 +1,41 @@
+Finished `test` profile [unoptimized + debuginfo] target(s) in 0.05s
+     Running tests/boundary.rs (bindings/native/target/debug/deps/boundary-86dd142a8fcd0c59)
+
+running 3 tests
+test g03_empty_valid_span_has_one_static_protocol_reply_and_open_is_separate ... FAILED
+test g01_valid_memory_spans_open_two_caller_schemas_and_copy_one_reply ... FAILED
+test g10_invalid_spans_lengths_utf8_and_callback_reject_before_dereference ... FAILED
+
+failures:
+
+---- g03_empty_valid_span_has_one_static_protocol_reply_and_open_is_separate stdout ----
+
+thread 'g03_empty_valid_span_has_one_static_protocol_reply_and_open_is_separate' (81743616) panicked at tests/boundary.rs:36:5:
+assertion `left == right` failed
+  left: 2
+ right: 0
+
+---- g01_valid_memory_spans_open_two_caller_schemas_and_copy_one_reply stdout ----
+
+thread 'g01_valid_memory_spans_open_two_caller_schemas_and_copy_one_reply' (81743615) panicked at tests/boundary.rs:57:9:
+assertion `left == right` failed
+  left: 2
+ right: 0
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- g10_invalid_spans_lengths_utf8_and_callback_reject_before_dereference stdout ----
+
+thread 'g10_invalid_spans_lengths_utf8_and_callback_reject_before_dereference' (81743617) panicked at tests/boundary.rs:79:9:
+assertion `left == right` failed
+  left: 2
+ right: 1
+
+
+failures:
+    g01_valid_memory_spans_open_two_caller_schemas_and_copy_one_reply
+    g03_empty_valid_span_has_one_static_protocol_reply_and_open_is_separate
+    g10_invalid_spans_lengths_utf8_and_callback_reject_before_dereference
+
+test result: FAILED. 0 passed; 3 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `--test boundary`

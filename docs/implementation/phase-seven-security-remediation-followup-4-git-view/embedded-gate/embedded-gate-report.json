@@ -1,0 +1,452 @@
+{
+ "components": [
+  {
+   "confidence": "byte_bound_pom_properties",
+   "container": "kotlin-gradle-plugin-2.1.20-gradle85.jar",
+   "coordinate": "com.github.gundy:semver4j:0.16.4",
+   "evidence": "META-INF/maven/com.github.gundy/semver4j/pom.properties",
+   "ga": "com.github.gundy:semver4j",
+   "namespaces": [
+    "org/jetbrains/kotlin/com/github/gundy/"
+   ],
+   "version": "0.16.4"
+  },
+  {
+   "confidence": "byte_bound_pom_properties",
+   "container": "kotlin-gradle-plugin-2.1.20-gradle85.jar",
+   "coordinate": "com.google.code.gson:gson:2.11.0",
+   "evidence": "META-INF/maven/com.google.code.gson/gson/pom.properties",
+   "ga": "com.google.code.gson:gson",
+   "namespaces": [
+    "org/jetbrains/kotlin/com/google/gson/"
+   ],
+   "version": "2.11.0"
+  },
+  {
+   "confidence": "byte_bound_pom_properties",
+   "container": "kotlin-gradle-plugin-2.1.20-gradle85.jar",
+   "coordinate": "com.google.guava:failureaccess:1.0.2",
+   "evidence": "META-INF/maven/com.google.guava/failureaccess/pom.properties",
+   "ga": "com.google.guava:failureaccess",
+   "namespaces": [],
+   "version": "1.0.2"
+  },
+  {
+   "confidence": "byte_bound_pom_properties",
+   "container": "kotlin-gradle-plugin-2.1.20-gradle85.jar",
+   "coordinate": "com.google.guava:guava:33.3.1-jre",
+   "evidence": "META-INF/maven/com.google.guava/guava/pom.properties",
+   "ga": "com.google.guava:guava",
+   "namespaces": [
+    "org/jetbrains/kotlin/com/google/common/",
+    "org/jetbrains/kotlin/com/google/thirdparty/"
+   ],
+   "version": "33.3.1-jre"
+  },
+  {
+   "confidence": "byte_bound_pom_properties",
+   "container": "kotlin-gradle-plugin-2.1.20-gradle85.jar",
+   "coordinate": "commons-codec:commons-codec:1.17.1",
+   "evidence": "META-INF/maven/commons-codec/commons-codec/pom.properties",
+   "ga": "commons-codec:commons-codec",
+   "namespaces": [
+    "org/jetbrains/kotlin/org/apache/commons/codec/"
+   ],
+   "version": "1.17.1"
+  },
+  {
+   "confidence": "byte_bound_pom_properties",
+   "container": "kotlin-gradle-plugin-2.1.20-gradle85.jar",
+   "coordinate": "commons-io:commons-io:2.18.0",
+   "evidence": "META-INF/maven/commons-io/commons-io/pom.properties",
+   "ga": "commons-io:commons-io",
+   "namespaces": [
+    "org/jetbrains/kotlin/org/apache/commons/io/"
+   ],
+   "version": "2.18.0"
+  },
+  {
+   "confidence": "byte_bound_pom_properties",
+   "container": "kotlin-gradle-plugin-2.1.20-gradle85.jar",
+   "coordinate": "org.antlr:antlr4-runtime:4.5.2-1",
+   "evidence": "META-INF/maven/org.antlr/antlr4-runtime/pom.properties",
+   "ga": "org.antlr:antlr4-runtime",
+   "namespaces": [],
+   "version": "4.5.2-1"
+  },
+  {
+   "confidence": "byte_bound_pom_properties",
+   "container": "kotlin-gradle-plugin-2.1.20-gradle85.jar",
+   "coordinate": "org.apache.commons:commons-compress:1.27.1",
+   "evidence": "META-INF/maven/org.apache.commons/commons-compress/pom.properties",
+   "ga": "org.apache.commons:commons-compress",
+   "namespaces": [
+    "org/jetbrains/kotlin/org/apache/commons/compress/"
+   ],
+   "version": "1.27.1"
+  },
+  {
+   "confidence": "byte_bound_pom_properties",
+   "container": "kotlin-gradle-plugin-2.1.20-gradle85.jar",
+   "coordinate": "org.apache.commons:commons-lang3:3.16.0",
+   "evidence": "META-INF/maven/org.apache.commons/commons-lang3/pom.properties",
+   "ga": "org.apache.commons:commons-lang3",
+   "namespaces": [
+    "org/jetbrains/kotlin/org/apache/commons/lang3/"
+   ],
+   "version": "3.16.0"
+  },
+  {
+   "confidence": "byte_bound_pom_properties",
+   "container": "kotlin-gradle-plugin-2.1.20-gradle85.jar",
+   "coordinate": "org.jetbrains.intellij.deps.fastutil:intellij-deps-fastutil:8.5.4-9",
+   "evidence": "META-INF/maven/org.jetbrains.intellij.deps.fastutil/intellij-deps-fastutil/pom.properties",
+   "ga": "org.jetbrains.intellij.deps.fastutil:intellij-deps-fastutil",
+   "namespaces": [
+    "org/jetbrains/kotlin/it/unimi/dsi/"
+   ],
+   "version": "8.5.4-9"
+  },
+  {
+   "classes": 1831,
+   "confidence": "source_declared",
+   "container": "kotlin-gradle-plugin-2.1.20-gradle85.jar",
+   "coordinate": "com.jetbrains.intellij.platform:intellij-core:233.13135.128",
+   "evidence": "Kotlin v2.1.20 gradle/versions.properties / libs.versions.toml (source-declared, not byte-verified)",
+   "ga": "com.jetbrains.intellij.platform:intellij-core",
+   "namespaces": [
+    "org/jetbrains/kotlin/com/intellij/"
+   ],
+   "version": "233.13135.128"
+  },
+  {
+   "classes": 2,
+   "confidence": "source_declared",
+   "container": "kotlin-gradle-plugin-2.1.20-gradle85.jar",
+   "coordinate": "org.jetbrains.intellij.deps:log4j:1.2.17.2",
+   "evidence": "Kotlin v2.1.20 gradle/versions.properties / libs.versions.toml (source-declared, not byte-verified)",
+   "ga": "org.jetbrains.intellij.deps:log4j",
+   "namespaces": [
+    "org/jetbrains/kotlin/org/apache/log4j/"
+   ],
+   "version": "1.2.17.2"
+  },
+  {
+   "classes": 9,
+   "confidence": "relocated_namespace_unversioned",
+   "container": "kotlin-gradle-plugin-2.1.20-gradle85.jar",
+   "coordinate": "intellij-fork:jdom (version not declared):?",
+   "evidence": "org/jetbrains/kotlin/org/jdom/",
+   "ga": "intellij-fork:jdom (version not declared)",
+   "namespaces": [
+    "org/jetbrains/kotlin/org/jdom/"
+   ],
+   "version": null
+  },
+  {
+   "classes": 143,
+   "confidence": "source_declared",
+   "container": "kotlin-gradle-plugin-2.1.20-gradle85.jar",
+   "coordinate": "org.jetbrains.intellij.deps:asm-all:9.6.1",
+   "evidence": "Kotlin v2.1.20 gradle/versions.properties / libs.versions.toml (source-declared, not byte-verified)",
+   "ga": "org.jetbrains.intellij.deps:asm-all",
+   "namespaces": [
+    "org/jetbrains/org/objectweb/asm/"
+   ],
+   "version": "9.6.1"
+  },
+  {
+   "classes": 117,
+   "confidence": "source_declared",
+   "container": "kotlin-compiler-embeddable-2.1.20.jar",
+   "coordinate": "io.vavr:vavr:0.10.4",
+   "evidence": "Kotlin v2.1.20 gradle/versions.properties / libs.versions.toml (source-declared, not byte-verified)",
+   "ga": "io.vavr:vavr",
+   "namespaces": [
+    "io/vavr/"
+   ],
+   "version": "0.10.4"
+  },
+  {
+   "classes": 51,
+   "confidence": "source_declared",
+   "container": "kotlin-compiler-embeddable-2.1.20.jar",
+   "coordinate": "com.fasterxml:aalto-xml:1.3.0",
+   "evidence": "Kotlin v2.1.20 gradle/versions.properties / libs.versions.toml (source-declared, not byte-verified)",
+   "ga": "com.fasterxml:aalto-xml",
+   "namespaces": [
+    "org/jetbrains/kotlin/com/fasterxml/aalto/"
+   ],
+   "version": "1.3.0"
+  },
+  {
+   "classes": 806,
+   "confidence": "source_declared",
+   "container": "kotlin-compiler-embeddable-2.1.20.jar",
+   "coordinate": "com.google.guava:guava:33.3.1-jre",
+   "evidence": "Kotlin v2.1.20 gradle/versions.properties / libs.versions.toml (source-declared, not byte-verified)",
+   "ga": "com.google.guava:guava",
+   "namespaces": [
+    "org/jetbrains/kotlin/com/google/common/"
+   ],
+   "version": "33.3.1-jre"
+  },
+  {
+   "classes": 25,
+   "confidence": "relocated_namespace_unversioned",
+   "container": "kotlin-compiler-embeddable-2.1.20.jar",
+   "coordinate": "gwt-derived-sources (no coordinate):?",
+   "evidence": "org/jetbrains/kotlin/com/google/gwt/",
+   "ga": "gwt-derived-sources (no coordinate)",
+   "namespaces": [
+    "org/jetbrains/kotlin/com/google/gwt/"
+   ],
+   "version": null
+  },
+  {
+   "classes": 3741,
+   "confidence": "source_declared",
+   "container": "kotlin-compiler-embeddable-2.1.20.jar",
+   "coordinate": "com.jetbrains.intellij.platform:intellij-core:233.13135.128",
+   "evidence": "Kotlin v2.1.20 gradle/versions.properties / libs.versions.toml (source-declared, not byte-verified)",
+   "ga": "com.jetbrains.intellij.platform:intellij-core",
+   "namespaces": [
+    "org/jetbrains/kotlin/com/intellij/"
+   ],
+   "version": "233.13135.128"
+  },
+  {
+   "classes": 1308,
+   "confidence": "source_declared",
+   "container": "kotlin-compiler-embeddable-2.1.20.jar",
+   "coordinate": "org.jetbrains.intellij.deps.fastutil:intellij-deps-fastutil:8.5.4-9",
+   "evidence": "Kotlin v2.1.20 gradle/versions.properties / libs.versions.toml (source-declared, not byte-verified)",
+   "ga": "org.jetbrains.intellij.deps.fastutil:intellij-deps-fastutil",
+   "namespaces": [
+    "org/jetbrains/kotlin/it/unimi/dsi/"
+   ],
+   "version": "8.5.4-9"
+  },
+  {
+   "classes": 6,
+   "confidence": "source_declared",
+   "container": "kotlin-compiler-embeddable-2.1.20.jar",
+   "coordinate": "javax.inject:javax.inject:1",
+   "evidence": "Kotlin v2.1.20 gradle/versions.properties / libs.versions.toml (source-declared, not byte-verified)",
+   "ga": "javax.inject:javax.inject",
+   "namespaces": [
+    "org/jetbrains/kotlin/javax/inject/"
+   ],
+   "version": "1"
+  },
+  {
+   "classes": 119,
+   "confidence": "source_declared",
+   "container": "kotlin-compiler-embeddable-2.1.20.jar",
+   "coordinate": "org.jetbrains.kotlinx:kotlinx-collections-immutable-jvm:0.3.7",
+   "evidence": "Kotlin v2.1.20 gradle/versions.properties / libs.versions.toml (source-declared, not byte-verified)",
+   "ga": "org.jetbrains.kotlinx:kotlinx-collections-immutable-jvm",
+   "namespaces": [
+    "org/jetbrains/kotlin/kotlinx/collections/immutable/"
+   ],
+   "version": "0.3.7"
+  },
+  {
+   "classes": 57,
+   "confidence": "source_declared",
+   "container": "kotlin-compiler-embeddable-2.1.20.jar",
+   "coordinate": "org.lz4:lz4-java:1.7.1",
+   "evidence": "Kotlin v2.1.20 gradle/versions.properties / libs.versions.toml (source-declared, not byte-verified)",
+   "ga": "org.lz4:lz4-java",
+   "namespaces": [
+    "org/jetbrains/kotlin/net/jpountz/"
+   ],
+   "version": "1.7.1"
+  },
+  {
+   "classes": 20,
+   "confidence": "source_declared",
+   "container": "kotlin-compiler-embeddable-2.1.20.jar",
+   "coordinate": "one.util:streamex:0.7.2",
+   "evidence": "Kotlin v2.1.20 gradle/versions.properties / libs.versions.toml (source-declared, not byte-verified)",
+   "ga": "one.util:streamex",
+   "namespaces": [
+    "org/jetbrains/kotlin/one/util/streamex/"
+   ],
+   "version": "0.7.2"
+  },
+  {
+   "classes": 2,
+   "confidence": "source_declared",
+   "container": "kotlin-compiler-embeddable-2.1.20.jar",
+   "coordinate": "org.jetbrains.intellij.deps:log4j:1.2.17.2",
+   "evidence": "Kotlin v2.1.20 gradle/versions.properties / libs.versions.toml (source-declared, not byte-verified)",
+   "ga": "org.jetbrains.intellij.deps:log4j",
+   "namespaces": [
+    "org/jetbrains/kotlin/org/apache/log4j/"
+   ],
+   "version": "1.2.17.2"
+  },
+  {
+   "classes": 18,
+   "confidence": "source_declared",
+   "container": "kotlin-compiler-embeddable-2.1.20.jar",
+   "coordinate": "org.codehaus.woodstox:stax2-api:4.2.1",
+   "evidence": "Kotlin v2.1.20 gradle/versions.properties / libs.versions.toml (source-declared, not byte-verified)",
+   "ga": "org.codehaus.woodstox:stax2-api",
+   "namespaces": [
+    "org/jetbrains/kotlin/org/codehaus/stax2/"
+   ],
+   "version": "4.2.1"
+  },
+  {
+   "classes": 47,
+   "confidence": "source_declared",
+   "container": "kotlin-compiler-embeddable-2.1.20.jar",
+   "coordinate": "org.fusesource.jansi:jansi:2.4.0",
+   "evidence": "Kotlin v2.1.20 gradle/versions.properties / libs.versions.toml (source-declared, not byte-verified)",
+   "ga": "org.fusesource.jansi:jansi",
+   "namespaces": [
+    "org/jetbrains/kotlin/org/fusesource/jansi/"
+   ],
+   "version": "2.4.0"
+  },
+  {
+   "classes": 42,
+   "confidence": "relocated_namespace_unversioned",
+   "container": "kotlin-compiler-embeddable-2.1.20.jar",
+   "coordinate": "intellij-fork:jdom (version not declared):?",
+   "evidence": "org/jetbrains/kotlin/org/jdom/",
+   "ga": "intellij-fork:jdom (version not declared)",
+   "namespaces": [
+    "org/jetbrains/kotlin/org/jdom/"
+   ],
+   "version": null
+  },
+  {
+   "classes": 147,
+   "confidence": "source_declared",
+   "container": "kotlin-compiler-embeddable-2.1.20.jar",
+   "coordinate": "org.jline:jline:3.24.1",
+   "evidence": "Kotlin v2.1.20 gradle/versions.properties / libs.versions.toml (source-declared, not byte-verified)",
+   "ga": "org.jline:jline",
+   "namespaces": [
+    "org/jetbrains/kotlin/org/jline/"
+   ],
+   "version": "3.24.1"
+  },
+  {
+   "classes": 3,
+   "confidence": "relocated_namespace_unversioned",
+   "container": "kotlin-compiler-embeddable-2.1.20.jar",
+   "coordinate": "intellij-fork:picocontainer (version not declared):?",
+   "evidence": "org/jetbrains/kotlin/org/picocontainer/",
+   "ga": "intellij-fork:picocontainer (version not declared)",
+   "namespaces": [
+    "org/jetbrains/kotlin/org/picocontainer/"
+   ],
+   "version": null
+  },
+  {
+   "classes": 276,
+   "confidence": "source_declared",
+   "container": "kotlin-compiler-embeddable-2.1.20.jar",
+   "coordinate": "org.jetbrains.kotlin:protobuf-relocated:2.6.1-1",
+   "evidence": "Kotlin v2.1.20 gradle/versions.properties / libs.versions.toml (source-declared, not byte-verified)",
+   "ga": "org.jetbrains.kotlin:protobuf-relocated",
+   "namespaces": [
+    "org/jetbrains/kotlin/protobuf/"
+   ],
+   "version": "2.6.1-1"
+  },
+  {
+   "classes": 114,
+   "confidence": "source_declared",
+   "container": "kotlin-compiler-embeddable-2.1.20.jar",
+   "coordinate": "org.jetbrains.intellij.deps:asm-all:9.6.1",
+   "evidence": "Kotlin v2.1.20 gradle/versions.properties / libs.versions.toml (source-declared, not byte-verified)",
+   "ga": "org.jetbrains.intellij.deps:asm-all",
+   "namespaces": [
+    "org/jetbrains/org/objectweb/asm/"
+   ],
+   "version": "9.6.1"
+  }
+ ],
+ "findings": [
+  {
+   "advisory": "GHSA-cmp6-m4wj-q63q",
+   "confidence": "source_declared",
+   "container": "kotlin-compiler-embeddable-2.1.20.jar",
+   "coordinate": "org.lz4:lz4-java:1.7.1",
+   "evidence": "docs/implementation/phase-seven-security-remediation-followup-1/lz4/lz4-entrypoints.txt (reachable via IC storage; R3/SR-21 pending)"
+  },
+  {
+   "advisory": "GHSA-mcr4-qmvw-px4g",
+   "confidence": "source_declared",
+   "container": "kotlin-compiler-embeddable-2.1.20.jar",
+   "coordinate": "org.lz4:lz4-java:1.7.1",
+   "evidence": "not on default fastestJavaInstance path (javap); depends on idea.use.native.compression which SR-20 rejects; observation pending"
+  },
+  {
+   "advisory": "GHSA-vqf4-7m7x-wgfc",
+   "confidence": "source_declared",
+   "container": "kotlin-compiler-embeddable-2.1.20.jar",
+   "coordinate": "org.lz4:lz4-java:1.7.1",
+   "evidence": "docs/implementation/phase-seven-security-remediation-followup-1/lz4/lz4-entrypoints.txt (reachable via IC storage; R3/SR-21 pending)"
+  },
+  {
+   "advisory": "GHSA-xx22-p4ch-683r",
+   "confidence": "source_declared",
+   "container": "kotlin-compiler-embeddable-2.1.20.jar",
+   "coordinate": "org.lz4:lz4-java:1.7.1",
+   "evidence": "not on default fastestJavaInstance path (javap); depends on idea.use.native.compression which SR-20 rejects; observation pending"
+  },
+  {
+   "advisory": "GHSA-735f-pc8j-v9w8",
+   "confidence": "source_declared",
+   "container": "kotlin-compiler-embeddable-2.1.20.jar",
+   "coordinate": "org.jetbrains.kotlin:protobuf-relocated:2.6.1-1",
+   "evidence": "docs/implementation/phase-seven-security-remediation-followup-1/protobuf/ (unpatched 2.6.1-1; fix only in Kotlin>=2.3.0, incompatible with RN0.86 apiVersion1.8)"
+  },
+  {
+   "advisory": "GHSA-h4h5-3hr4-j3g2",
+   "confidence": "source_declared",
+   "container": "kotlin-compiler-embeddable-2.1.20.jar",
+   "coordinate": "org.jetbrains.kotlin:protobuf-relocated:2.6.1-1",
+   "evidence": "followup-3 sources/cve-2022-3171-precondition.json (no Kotlin fix)"
+  }
+ ],
+ "rejections": [
+  {
+   "component": "com.jetbrains.intellij.platform:intellij-core:233.13135.128",
+   "container": "kotlin-gradle-plugin-2.1.20-gradle85.jar",
+   "reason": "advisory scan unavailable"
+  },
+  {
+   "component": "intellij-fork:jdom (version not declared):?",
+   "container": "kotlin-gradle-plugin-2.1.20-gradle85.jar",
+   "reason": "unknown version"
+  },
+  {
+   "component": "gwt-derived-sources (no coordinate):?",
+   "container": "kotlin-compiler-embeddable-2.1.20.jar",
+   "reason": "unknown version"
+  },
+  {
+   "component": "com.jetbrains.intellij.platform:intellij-core:233.13135.128",
+   "container": "kotlin-compiler-embeddable-2.1.20.jar",
+   "reason": "advisory scan unavailable"
+  },
+  {
+   "component": "intellij-fork:jdom (version not declared):?",
+   "container": "kotlin-compiler-embeddable-2.1.20.jar",
+   "reason": "unknown version"
+  },
+  {
+   "component": "intellij-fork:picocontainer (version not declared):?",
+   "container": "kotlin-compiler-embeddable-2.1.20.jar",
+   "reason": "unknown version"
+  }
+ ],
+ "status": "rejected"
+}

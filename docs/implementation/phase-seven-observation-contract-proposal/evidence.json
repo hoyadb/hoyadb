@@ -1,0 +1,49 @@
+{
+  "status": "proposal only; no operator approval, formal requirement change or execution authorization",
+  "inputs_sha256": {
+    "docs/design/spec/SPEC-0034-restricted-build-security-remediation.md": "71807f4ffee50bf430893849f0ad7a3c9025321b911fee7431385f8c1822fc8e",
+    "docs/design/tests/cases/TC-0038-restricted-build-security.md": "486daf3c2204b72601749b5dd4b0fdf57e7640498514937f88fa773f5626d077",
+    "docs/implementation/phase-seven-jdk-capture-probe/files-sha256.json": "e93687b3863a89b31262e3fa00ba213fd9205735681a0335b2072a341a75f39f",
+    "docs/implementation/phase-seven-jdk-capture-probe-review.json": "6792639affe174648672acb0647d7a39c1d48886a3a5a8cd8ab116c1990da381",
+    "docs/implementation/phase-seven-jdk-capture-probe-run-b-check.json": "3bd475e6ad912b897b150513d50ff5b2e34400f980814f35d2786cce4c82e3e9",
+    "target/phase-seven-security-remediation/jdk-facility-study/STUDY.md": "106172e763cd532670f2e114dda7ec5412df4319768e33ee4078eea30ec7ba85",
+    "target/phase-seven-rn/android/effective-properties-feasibility.md": "dc390cfda4a05d445dc4ce41382b85b43b10a8e48f093ed3cdccfa495e90c785",
+    "target/phase-seven-rn/android/effective-properties-kgp-bytecode.md": "a495510b8632ad273832597765b57c7f2c38879d93e407eea988e57ae931ff76"
+  },
+  "committee": {
+    "sol": {
+      "agent_id": "900b73eb-5916-448e-8e9c-8bcbddc303e4",
+      "model": "gpt-6.1-sol",
+      "convergence_message": "a24c9cd9-6814-48fd-9af2-b53144cdc684",
+      "confirmation_message": "a44698db-5c36-4dd2-b543-90738a323795"
+    },
+    "opus": {
+      "agent_id": "a178018b-00c5-4725-827b-05c074ee0c5d",
+      "model": "claude-opus-5-5",
+      "convergence_message": "fb2353bb-036e-4692-a652-7609a79bfa0a",
+      "confirmation_message": "00a1c4e8-3381-4f50-bdbd-fe410fb6aa05"
+    }
+  },
+  "process_note": "Opus initially wrote a local plan file despite the no-edits instruction and requested ExitPlanMode. Root denied implementation; later chat analysis superseded the plan. No repository edit by the committee is claimed.",
+  "approvals_separate": [
+    "565c2bc exact dependency delta",
+    "Open protobuf advisory disposition",
+    "Concrete native baseline review",
+    "Each bounded execution/control scope"
+  ],
+  "final_phase_seven_rounds_counted": 0,
+  "focused_review": {
+    "agent_id": "e6f3b33e-7787-43bb-904f-646b096c9154",
+    "model": "claude-opus-5-5",
+    "message_id": "1f7bedd9-d18c-4a0a-b367-0f78d3bbfc2f",
+    "verdict": "PASS to present after two textual corrections",
+    "reviewed_index_sha256": "8e69c502a7f03f1d434777fa8b15ac1f72821dabad8da51e235982dc3eb4e7a1",
+    "corrections_applied": [
+      "Named -Xlog:library with successful Java-initiated non-builtin post-start coverage and bootstrap/snapshot exclusions in the native row and OC06",
+      "D1 changed assurance and D2 native-residual acceptance are separate; absent or declined D2 keeps SR-22 open; OC11 records both"
+    ],
+    "reviewed_draft_local": "target/phase-seven-security-remediation/observation-contract-proposal-before-review-corrections",
+    "operator_D1": "PENDING",
+    "operator_D2": "PENDING"
+  }
+}

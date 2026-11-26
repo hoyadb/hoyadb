@@ -1,0 +1,26 @@
+{
+ "logs/90-def29-red.txt": {
+  "derived_sha256": "f8388bcd24e02d2d2ca2f554abd3cf98a3b78898c609aeec4c616f999af5a17d",
+  "original": "target/phase-seven-browser-bench/opus/90-def29-red.txt",
+  "original_sha256": "1b10b41cf306a11afe4a461504d22878758ab3d76149bab6f1990720126d6ce5",
+  "transformation": "replace repository root with <repo>, OS temporary paths with <temp>, other home paths with <home-path>; no other change"
+ },
+ "logs/91b-def29-green.txt": {
+  "derived_sha256": "3f975b30acdc73524874f85e526f22e258e0b0b690fe82f30d29bc3fdf2133c1",
+  "original": "target/phase-seven-browser-bench/opus/91b-def29-green.txt",
+  "original_sha256": "3f975b30acdc73524874f85e526f22e258e0b0b690fe82f30d29bc3fdf2133c1",
+  "transformation": "replace repository root with <repo>, OS temporary paths with <temp>, other home paths with <home-path>; no other change"
+ },
+ "logs/92-def29-python-O.txt": {
+  "derived_sha256": "82d8486338e29cae5b6ade62540b00b61a6be7c4fa0d275a5beb13e375712cf2",
+  "original": "target/phase-seven-browser-bench/opus/92-def29-python-O.txt",
+  "original_sha256": "82d8486338e29cae5b6ade62540b00b61a6be7c4fa0d275a5beb13e375712cf2",
+  "transformation": "replace repository root with <repo>, OS temporary paths with <temp>, other home paths with <home-path>; no other change"
+ },
+ "logs/92-def29-python.txt": {
+  "derived_sha256": "08ccdacff482c5f91396dfa85191d8ee02a1ea243acd7929f49976da8d942066",
+  "original": "target/phase-seven-browser-bench/opus/92-def29-python.txt",
+  "original_sha256": "08ccdacff482c5f91396dfa85191d8ee02a1ea243acd7929f49976da8d942066",
+  "transformation": "replace repository root with <repo>, OS temporary paths with <temp>, other home paths with <home-path>; no other change"
+ }
+}

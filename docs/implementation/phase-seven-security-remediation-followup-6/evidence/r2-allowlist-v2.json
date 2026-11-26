@@ -1,0 +1,352 @@
+{
+ "status": "PROPOSED, NOT APPROVED, NOT ACTIVATED",
+ "rule": "exact entries only; no glob; quarantine-v2 bytes; sidecars/.asc are evidence, not repository inputs",
+ "excluded_historical": [
+  "quarantine/org.bouncycastle/bcprov-jdk18on/1.85.2/bcprov-jdk18on-1.85.2.pom (invalid initial candidate)"
+ ],
+ "entries": [
+  {
+   "path": "io/netty/netty-codec-http/4.1.139.Final/netty-codec-http-4.1.139.Final.jar",
+   "quarantine_path": "quarantine-v2/io.netty/netty-codec-http/4.1.139.Final/netty-codec-http-4.1.139.Final.jar",
+   "sha256": "627cfdac2cd5dbd8a33af85977fb81fa6b46f0c00389ab4c8677a415f0f85480",
+   "bytes": 696776,
+   "role": "binary"
+  },
+  {
+   "path": "io/netty/netty-codec-http/4.1.139.Final/netty-codec-http-4.1.139.Final.pom",
+   "quarantine_path": "quarantine-v2/io.netty/netty-codec-http/4.1.139.Final/netty-codec-http-4.1.139.Final.pom",
+   "sha256": "ef3288bcc98a8b50067cd6611bbf07d43d5f7179c7d62a987846024a6ee9f78d",
+   "bytes": 4972,
+   "role": "metadata"
+  },
+  {
+   "path": "io/netty/netty-codec-http2/4.1.139.Final/netty-codec-http2-4.1.139.Final.jar",
+   "quarantine_path": "quarantine-v2/io.netty/netty-codec-http2/4.1.139.Final/netty-codec-http2-4.1.139.Final.jar",
+   "sha256": "4cb8bc95386112f3a9da935272781d577d9e70ca4c56cf0eef603a45e9526e02",
+   "bytes": 514136,
+   "role": "binary"
+  },
+  {
+   "path": "io/netty/netty-codec-http2/4.1.139.Final/netty-codec-http2-4.1.139.Final.pom",
+   "quarantine_path": "quarantine-v2/io.netty/netty-codec-http2/4.1.139.Final/netty-codec-http2-4.1.139.Final.pom",
+   "sha256": "97bfaccbf4b3f66f2d6aa951aecdb16e68a58706a4464f8c5985221d1723484a",
+   "bytes": 6537,
+   "role": "metadata"
+  },
+  {
+   "path": "io/netty/netty-handler/4.1.139.Final/netty-handler-4.1.139.Final.jar",
+   "quarantine_path": "quarantine-v2/io.netty/netty-handler/4.1.139.Final/netty-handler-4.1.139.Final.jar",
+   "sha256": "ff85f00781b956d618b20f33da076c839a5e43e0084108b07bab0c19737168ec",
+   "bytes": 590894,
+   "role": "binary"
+  },
+  {
+   "path": "io/netty/netty-handler/4.1.139.Final/netty-handler-4.1.139.Final.pom",
+   "quarantine_path": "quarantine-v2/io.netty/netty-handler/4.1.139.Final/netty-handler-4.1.139.Final.pom",
+   "sha256": "b61395943557c8a334f6adee9fea912721a87a1133ea9d15db0316a9964f7f41",
+   "bytes": 5400,
+   "role": "metadata"
+  },
+  {
+   "path": "io/netty/netty-codec/4.1.139.Final/netty-codec-4.1.139.Final.jar",
+   "quarantine_path": "quarantine-v2/io.netty/netty-codec/4.1.139.Final/netty-codec-4.1.139.Final.jar",
+   "sha256": "ad43f07219dfb757a87b9c2b4765002be478c5401971379954e3d182f285fe6b",
+   "bytes": 363020,
+   "role": "binary"
+  },
+  {
+   "path": "io/netty/netty-codec/4.1.139.Final/netty-codec-4.1.139.Final.pom",
+   "quarantine_path": "quarantine-v2/io.netty/netty-codec/4.1.139.Final/netty-codec-4.1.139.Final.pom",
+   "sha256": "bd646763d5c83161969abe3dbd7e7bc1d506bead1430e415ac53e6f78de438b5",
+   "bytes": 6081,
+   "role": "metadata"
+  },
+  {
+   "path": "io/netty/netty-common/4.1.139.Final/netty-common-4.1.139.Final.jar",
+   "quarantine_path": "quarantine-v2/io.netty/netty-common/4.1.139.Final/netty-common-4.1.139.Final.jar",
+   "sha256": "50372d86e27b4b1cf0810d75eb534795966a199049a1e85a0c41bbd2bb97f519",
+   "bytes": 740560,
+   "role": "binary"
+  },
+  {
+   "path": "io/netty/netty-common/4.1.139.Final/netty-common-4.1.139.Final.pom",
+   "quarantine_path": "quarantine-v2/io.netty/netty-common/4.1.139.Final/netty-common-4.1.139.Final.pom",
+   "sha256": "b6508420e327d76208cc6320d8dd5e3257554448e9d0c134c5498ad95b0fbd2e",
+   "bytes": 10340,
+   "role": "metadata"
+  },
+  {
+   "path": "io/netty/netty-handler-proxy/4.1.139.Final/netty-handler-proxy-4.1.139.Final.jar",
+   "quarantine_path": "quarantine-v2/io.netty/netty-handler-proxy/4.1.139.Final/netty-handler-proxy-4.1.139.Final.jar",
+   "sha256": "9c92c2407b6fd3c120ab5efb900475a1fe40ce099703d2500c8679d3c75a90cb",
+   "bytes": 25962,
+   "role": "binary"
+  },
+  {
+   "path": "io/netty/netty-handler-proxy/4.1.139.Final/netty-handler-proxy-4.1.139.Final.pom",
+   "quarantine_path": "quarantine-v2/io.netty/netty-handler-proxy/4.1.139.Final/netty-handler-proxy-4.1.139.Final.pom",
+   "sha256": "1d558273be1be5f1f6a02788aeb0ecb3fb2c532755af698affebe3ec153a55b6",
+   "bytes": 4158,
+   "role": "metadata"
+  },
+  {
+   "path": "io/netty/netty-buffer/4.1.139.Final/netty-buffer-4.1.139.Final.jar",
+   "quarantine_path": "quarantine-v2/io.netty/netty-buffer/4.1.139.Final/netty-buffer-4.1.139.Final.jar",
+   "sha256": "48d805b74e56dc5f92b1f288858185abc86db16d293e8da183542df6243427f2",
+   "bytes": 365480,
+   "role": "binary"
+  },
+  {
+   "path": "io/netty/netty-buffer/4.1.139.Final/netty-buffer-4.1.139.Final.pom",
+   "quarantine_path": "quarantine-v2/io.netty/netty-buffer/4.1.139.Final/netty-buffer-4.1.139.Final.pom",
+   "sha256": "9843c73634e372af72f56f864fe99afeaccf5f02f0f878655208149cdb6b84d5",
+   "bytes": 2188,
+   "role": "metadata"
+  },
+  {
+   "path": "io/netty/netty-transport/4.1.139.Final/netty-transport-4.1.139.Final.jar",
+   "quarantine_path": "quarantine-v2/io.netty/netty-transport/4.1.139.Final/netty-transport-4.1.139.Final.jar",
+   "sha256": "be7bff8b6274e7fae12bbad3c565777539e9b069517e0b3acc06d9ac2cd6ec05",
+   "bytes": 524190,
+   "role": "binary"
+  },
+  {
+   "path": "io/netty/netty-transport/4.1.139.Final/netty-transport-4.1.139.Final.pom",
+   "quarantine_path": "quarantine-v2/io.netty/netty-transport/4.1.139.Final/netty-transport-4.1.139.Final.pom",
+   "sha256": "a9177be274d8e14f38310b303410e7dff0c8ccd647b7c6bee685510a9de5cc24",
+   "bytes": 2919,
+   "role": "metadata"
+  },
+  {
+   "path": "io/netty/netty-codec-socks/4.1.139.Final/netty-codec-socks-4.1.139.Final.jar",
+   "quarantine_path": "quarantine-v2/io.netty/netty-codec-socks/4.1.139.Final/netty-codec-socks-4.1.139.Final.jar",
+   "sha256": "94d6800d5f717b40db5d0bf42a77b448d472cd9033735e69e7b18311bd902f23",
+   "bytes": 121927,
+   "role": "binary"
+  },
+  {
+   "path": "io/netty/netty-codec-socks/4.1.139.Final/netty-codec-socks-4.1.139.Final.pom",
+   "quarantine_path": "quarantine-v2/io.netty/netty-codec-socks/4.1.139.Final/netty-codec-socks-4.1.139.Final.pom",
+   "sha256": "58a8b9fd2f1f5fe159756df77a1b3fe9b568d52c027df519110fd033b936f166",
+   "bytes": 3145,
+   "role": "metadata"
+  },
+  {
+   "path": "io/netty/netty-resolver/4.1.139.Final/netty-resolver-4.1.139.Final.jar",
+   "quarantine_path": "quarantine-v2/io.netty/netty-resolver/4.1.139.Final/netty-resolver-4.1.139.Final.jar",
+   "sha256": "562a5388c88325b7d6ed05e8168736871ce0e64ab01e0ce52ea7710760b9b457",
+   "bytes": 37907,
+   "role": "binary"
+  },
+  {
+   "path": "io/netty/netty-resolver/4.1.139.Final/netty-resolver-4.1.139.Final.pom",
+   "quarantine_path": "quarantine-v2/io.netty/netty-resolver/4.1.139.Final/netty-resolver-4.1.139.Final.pom",
+   "sha256": "ca0d8a0f3be0067f1ac690818bd997670bae0baf6d6aa3001b197ff40f059e5a",
+   "bytes": 2195,
+   "role": "metadata"
+  },
+  {
+   "path": "io/netty/netty-transport-native-unix-common/4.1.139.Final/netty-transport-native-unix-common-4.1.139.Final.jar",
+   "quarantine_path": "quarantine-v2/io.netty/netty-transport-native-unix-common/4.1.139.Final/netty-transport-native-unix-common-4.1.139.Final.jar",
+   "sha256": "8e660ac8a485fc8d8b47d87d04ea33d19902dc6fc5a113e9353b762188b3f333",
+   "bytes": 44326,
+   "role": "binary"
+  },
+  {
+   "path": "io/netty/netty-transport-native-unix-common/4.1.139.Final/netty-transport-native-unix-common-4.1.139.Final.pom",
+   "quarantine_path": "quarantine-v2/io.netty/netty-transport-native-unix-common/4.1.139.Final/netty-transport-native-unix-common-4.1.139.Final.pom",
+   "sha256": "53e828cd58fe3f2e4df00d00cf75cc2bb05a9cdf2fb58b7fc30f62d13e650d5f",
+   "bytes": 33704,
+   "role": "metadata"
+  },
+  {
+   "path": "org/apache/commons/commons-compress/1.28.0/commons-compress-1.28.0.jar",
+   "quarantine_path": "quarantine-v2/org.apache.commons/commons-compress/1.28.0/commons-compress-1.28.0.jar",
+   "sha256": "e1522945218456f3649a39bc4afd70ce4bd466221519dba7d378f2141a4642ca",
+   "bytes": 1117221,
+   "role": "binary"
+  },
+  {
+   "path": "org/apache/commons/commons-compress/1.28.0/commons-compress-1.28.0.pom",
+   "quarantine_path": "quarantine-v2/org.apache.commons/commons-compress/1.28.0/commons-compress-1.28.0.pom",
+   "sha256": "033f4c78d632da88d0eb8ead974fc14a264392cebf12ab6c68d6cea7adf0c64a",
+   "bytes": 25308,
+   "role": "metadata"
+  },
+  {
+   "path": "org/bitbucket/b_c/jose4j/0.9.6/jose4j-0.9.6.jar",
+   "quarantine_path": "quarantine-v2/org.bitbucket.b_c/jose4j/0.9.6/jose4j-0.9.6.jar",
+   "sha256": "7314af50cde9c99e8eaf43eee617a23edcc6bb43036221064355094999d837ef",
+   "bytes": 299502,
+   "role": "binary"
+  },
+  {
+   "path": "org/bitbucket/b_c/jose4j/0.9.6/jose4j-0.9.6.pom",
+   "quarantine_path": "quarantine-v2/org.bitbucket.b_c/jose4j/0.9.6/jose4j-0.9.6.pom",
+   "sha256": "3fb7fa713e89d42784bdf4d192ece217400040bda7e933886a9f45ce8b9b557e",
+   "bytes": 8856,
+   "role": "metadata"
+  },
+  {
+   "path": "org/bouncycastle/bcprov-jdk18on/1.85/bcprov-jdk18on-1.85.jar",
+   "quarantine_path": "quarantine-v2/org.bouncycastle/bcprov-jdk18on/1.85/bcprov-jdk18on-1.85.jar",
+   "sha256": "20af26bf6060bb8005cc2389916812c1e0e998dc48d2ced7131b89461b54cff7",
+   "bytes": 10321819,
+   "role": "binary"
+  },
+  {
+   "path": "org/bouncycastle/bcprov-jdk18on/1.85/bcprov-jdk18on-1.85.pom",
+   "quarantine_path": "quarantine-v2/org.bouncycastle/bcprov-jdk18on/1.85/bcprov-jdk18on-1.85.pom",
+   "sha256": "a48e978d6b24c183c4832f5c49d71c1f84156b99c6fa9a410aafb373a254be7c",
+   "bytes": 1160,
+   "role": "metadata"
+  },
+  {
+   "path": "org/bouncycastle/bcpkix-jdk18on/1.85/bcpkix-jdk18on-1.85.jar",
+   "quarantine_path": "quarantine-v2/org.bouncycastle/bcpkix-jdk18on/1.85/bcpkix-jdk18on-1.85.jar",
+   "sha256": "c9f82b2d4e99c4bbdfccf684e52cc06ea06a0b567bfd0d08f9c5a3f417055996",
+   "bytes": 1315409,
+   "role": "binary"
+  },
+  {
+   "path": "org/bouncycastle/bcpkix-jdk18on/1.85/bcpkix-jdk18on-1.85.pom",
+   "quarantine_path": "quarantine-v2/org.bouncycastle/bcpkix-jdk18on/1.85/bcpkix-jdk18on-1.85.pom",
+   "sha256": "9b052b0cb85cb7d8bb0956afcc74f31c814f1c67e03498e1ca74f8fe8611d957",
+   "bytes": 1522,
+   "role": "metadata"
+  },
+  {
+   "path": "org/bouncycastle/bcutil-jdk18on/1.85/bcutil-jdk18on-1.85.jar",
+   "quarantine_path": "quarantine-v2/org.bouncycastle/bcutil-jdk18on/1.85/bcutil-jdk18on-1.85.jar",
+   "sha256": "590f55ed5d68529239898a4a5c4f730b6e37f45d1cfa3fbe51f8485abe32c42d",
+   "bytes": 718812,
+   "role": "binary"
+  },
+  {
+   "path": "org/bouncycastle/bcutil-jdk18on/1.85/bcutil-jdk18on-1.85.pom",
+   "quarantine_path": "quarantine-v2/org.bouncycastle/bcutil-jdk18on/1.85/bcutil-jdk18on-1.85.pom",
+   "sha256": "9f1c79a12a7c03d78860e05750dcc44e855e20205c7af7cffbf29a69448d85ea",
+   "bytes": 1344,
+   "role": "metadata"
+  },
+  {
+   "path": "org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.jar",
+   "quarantine_path": "quarantine-v2/org.jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.jar",
+   "sha256": "0b20f45e3a0fd8f0d12cdc5316b06776e902b1365db00118876f9175c60f302c",
+   "bytes": 327806,
+   "role": "binary"
+  },
+  {
+   "path": "org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.pom",
+   "quarantine_path": "quarantine-v2/org.jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.pom",
+   "sha256": "55795e1018b8ae647b937967cf810a99b08582c2374e7873c128734c8c914bf3",
+   "bytes": 4600,
+   "role": "metadata"
+  },
+  {
+   "path": "commons-codec/commons-codec/1.19.0/commons-codec-1.19.0.jar",
+   "quarantine_path": "quarantine-v2/commons-codec/commons-codec/1.19.0/commons-codec-1.19.0.jar",
+   "sha256": "5c3881e4f556855e9c532927ee0c9dfde94cc66760d5805c031a59887070af5f",
+   "bytes": 374716,
+   "role": "binary"
+  },
+  {
+   "path": "commons-codec/commons-codec/1.19.0/commons-codec-1.19.0.pom",
+   "quarantine_path": "quarantine-v2/commons-codec/commons-codec/1.19.0/commons-codec-1.19.0.pom",
+   "sha256": "e0f3269fa23de0c83130c5659f5f9514cc5422c0bcdf45f2eae004a78b9fca34",
+   "bytes": 18008,
+   "role": "metadata"
+  },
+  {
+   "path": "commons-io/commons-io/2.20.0/commons-io-2.20.0.jar",
+   "quarantine_path": "quarantine-v2/commons-io/commons-io/2.20.0/commons-io-2.20.0.jar",
+   "sha256": "df90bba0fe3cb586b7f164e78fe8f8f4da3f2dd5c27fa645f888100ccc25dd72",
+   "bytes": 563971,
+   "role": "binary"
+  },
+  {
+   "path": "commons-io/commons-io/2.20.0/commons-io-2.20.0.pom",
+   "quarantine_path": "quarantine-v2/commons-io/commons-io/2.20.0/commons-io-2.20.0.pom",
+   "sha256": "bdbdf81072c190ee9a8b181a5c58f5bd917a750fb13a256debbf53f5dbd33a2a",
+   "bytes": 20477,
+   "role": "metadata"
+  },
+  {
+   "path": "org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.jar",
+   "quarantine_path": "quarantine-v2/org.apache.commons/commons-lang3/3.18.0/commons-lang3-3.18.0.jar",
+   "sha256": "4eeeae8d20c078abb64b015ec158add383ac581571cddc45c68f0c9ae0230720",
+   "bytes": 702952,
+   "role": "binary"
+  },
+  {
+   "path": "org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.pom",
+   "quarantine_path": "quarantine-v2/org.apache.commons/commons-lang3/3.18.0/commons-lang3-3.18.0.pom",
+   "sha256": "aa254b373b6f6d46bc9dca86331b072a8ab86eb25ea9921fd439618392e98a16",
+   "bytes": 32038,
+   "role": "metadata"
+  },
+  {
+   "path": "org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar",
+   "quarantine_path": "quarantine-v2/org.slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar",
+   "sha256": "d3ef575e3e4979678dc01bf1dcce51021493b4d11fb7f1be8ad982877c16a1c0",
+   "bytes": 41125,
+   "role": "binary"
+  },
+  {
+   "path": "org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.pom",
+   "quarantine_path": "quarantine-v2/org.slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.pom",
+   "sha256": "fb046a9c229437928bb11c2d27c8b5d773eb8a25e60cbd253d985210dedc2684",
+   "bytes": 2743,
+   "role": "metadata"
+  },
+  {
+   "path": "io/netty/netty-parent/4.1.139.Final/netty-parent-4.1.139.Final.pom",
+   "quarantine_path": "quarantine-v2/io.netty/netty-parent/4.1.139.Final/netty-parent-4.1.139.Final.pom",
+   "sha256": "317741e835ed1a1abdba936f40f21795d2d404112a3d1616a507b37219949477",
+   "bytes": 108887,
+   "role": "metadata (parent)"
+  },
+  {
+   "path": "org/apache/commons/commons-parent/85/commons-parent-85.pom",
+   "quarantine_path": "quarantine-v2/org.apache.commons/commons-parent/85/commons-parent-85.pom",
+   "sha256": "d189ff2c0027e96bb65d31e6f227ed2af966169b36af1e973dd5ba08926dc7b5",
+   "bytes": 78337,
+   "role": "metadata (parent)"
+  },
+  {
+   "path": "org/apache/apache/35/apache-35.pom",
+   "quarantine_path": "quarantine-v2/org.apache/apache/35/apache-35.pom",
+   "sha256": "ea297dcd114136e8b8e8b630230d52a76c2fc69f6c5db25d672b1857000728b8",
+   "bytes": 24249,
+   "role": "metadata (parent)"
+  },
+  {
+   "path": "org/slf4j/slf4j-parent/1.7.36/slf4j-parent-1.7.36.pom",
+   "quarantine_path": "quarantine-v2/org.slf4j/slf4j-parent/1.7.36/slf4j-parent-1.7.36.pom",
+   "sha256": "bb388d37fbcdd3cde64c3cede21838693218dc451f04040c5df360a78ed7e812",
+   "bytes": 14093,
+   "role": "metadata (parent)"
+  },
+  {
+   "path": "org/sonatype/oss/oss-parent/9/oss-parent-9.pom",
+   "quarantine_path": "quarantine-v2/org.sonatype.oss/oss-parent/9/oss-parent-9.pom",
+   "sha256": "fb40265f982548212ff82e362e59732b2187ec6f0d80182885c14ef1f982827a",
+   "bytes": 6569,
+   "role": "metadata (parent)"
+  },
+  {
+   "path": "org/junit/junit-bom/5.13.1/junit-bom-5.13.1.pom",
+   "quarantine_path": "quarantine-v2/org.junit/junit-bom/5.13.1/junit-bom-5.13.1.pom",
+   "sha256": "fa68451ea830572ed43ffe51d75b6a05f7a5e665a602a51f49d6be02063a65f3",
+   "bytes": 5649,
+   "role": "metadata (import BOM)"
+  },
+  {
+   "path": "org/junit/junit-bom/5.13.1/junit-bom-5.13.1.module",
+   "quarantine_path": "quarantine-v2/org.junit/junit-bom/5.13.1/junit-bom-5.13.1.module",
+   "sha256": "33c07ab9724790a6e5859ba07d69117ac530439724545a81c4179e3272c75de8",
+   "bytes": 6994,
+   "role": "metadata (import BOM)"
+  }
+ ]
+}

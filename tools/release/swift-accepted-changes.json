@@ -1,0 +1,13 @@
+{
+  "HoyaDB": [
+    {
+      "diagnostic": "API breakage: enumelement HoyaError.subscriptionTerminated has been added as a new enum case",
+      "review": "SPEC-0036, Public API additions, explicitly approves the source break for exhaustive Swift switches; API-0011 requires this exact terminal failure. Reviewed under SPEC-0047 / DEF-0056. This does not approve removing the historical Database initializer. Historical API dumps remain unchanged."
+    },
+    {
+      "diagnostic": "API breakage: enumelement QueueEntry.State.discarded has been added as a new enum case",
+      "review": "SPEC-0040, Need and approved decision and Stored truth and approved compatibility, explicitly authorizes the new Discarded state and requires all SDK enums/status decoders to change; API-0011 lists the discarded status. The fresh 2026-10-31 comparison retained every historical declaration and isolated this exact new enum case after the original initializer was restored. Reviewed under SPEC-0047 / DEF-0056; no historical dump was rebased."
+    }
+  ],
+  "HoyaDBTesting": []
+}

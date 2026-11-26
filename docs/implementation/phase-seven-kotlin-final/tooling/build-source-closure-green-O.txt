@@ -1,0 +1,11 @@
+test_case8_source_added_during_compile_is_drift (__main__.SourceClosure.test_case8_source_added_during_compile_is_drift) ... ok
+test_case8_source_removed_during_compile_is_drift (__main__.SourceClosure.test_case8_source_removed_during_compile_is_drift) ... ok
+test_case8_tool_script_added_during_compile_is_drift (__main__.SourceClosure.test_case8_tool_script_added_during_compile_is_drift) ... ok
+test_unchanged_synthetic_sources_record_complete_closure (__main__.SourceClosure.test_unchanged_synthetic_sources_record_complete_closure) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.099s
+
+OK
+manual build complete: /private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-build-guard-h58_w_yb/target/build
+exit=0

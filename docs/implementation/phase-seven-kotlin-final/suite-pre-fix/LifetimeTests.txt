@@ -1,0 +1,4 @@
+PASS K15_scoped_owner_closes_after_success_and_preserves_return_value
+PASS K15_scoped_owner_closes_after_application_failure
+
+exit=0

@@ -1,0 +1,70 @@
+{
+  "all_staged_bytes_equal_worktree": true,
+  "limitations": [
+    "No native rebuild, runtime, Gradle or final package acceptance",
+    "Prior invalid tarball preserved; final repack pending source commit",
+    "Finalizer not atomic; trusted reviewed corpus derivation; malformed index may reject via traceback; architectures field not independently validated"
+  ],
+  "review": "Claude Opus5.5 e6 immutable-commit correction PASS; focused, zero final rounds",
+  "sources": {
+    "bindings/native/third-party/NOTICE.md": "5178e861fbf3c226c42222c4bce70a440fa309fd266105b3eb9c97fffcbf23ba",
+    "bindings/native/third-party/index.json": "65a591b52a3a632526c1b1f930980cc8a7f2bd561af020b7e6e8fb19eb72bde6",
+    "bindings/native/third-party/native/sqlcipher-4.19.0/LICENSE-sqlcipher": "2a2826f6acf46fa650730cf42cbb22a642be33a7ef119c9c4f4bf6daf3bef48e",
+    "bindings/native/third-party/native/sqlite-3.53.4/LICENSE-sqlite": "85806d613cfda5901f848b3b5b4b04396c8c64e89c97c0af3706c42b0c44bb47",
+    "bindings/native/third-party/rust/bitflags-2.13.2/LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+    "bindings/native/third-party/rust/bitflags-2.13.2/LICENSE-MIT": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb",
+    "bindings/native/third-party/rust/cc-1.10.0/LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+    "bindings/native/third-party/rust/cc-1.10.0/LICENSE-MIT": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+    "bindings/native/third-party/rust/fallible-iterator-0.3.0/LICENSE-APACHE": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08",
+    "bindings/native/third-party/rust/fallible-iterator-0.3.0/LICENSE-MIT": "0816e154b159ba255c563f7c8c7df5bbb8cc5fc96f5ab8cf9f4743b4f41fe7eb",
+    "bindings/native/third-party/rust/fallible-streaming-iterator-0.1.9/LICENSE-APACHE": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08",
+    "bindings/native/third-party/rust/fallible-streaming-iterator-0.1.9/LICENSE-MIT": "8dcec5569a9be5b0e086c80faed6f1aefa670af0ec29cecc2f714303096887e0",
+    "bindings/native/third-party/rust/find-msvc-tools-0.1.15/LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+    "bindings/native/third-party/rust/find-msvc-tools-0.1.15/LICENSE-MIT": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+    "bindings/native/third-party/rust/libsqlite3-sys-0.38.1/LICENSE": "c10c1f27337546471e5f7e4e97fdd398b35b9d4e126115dcd22de8d8e65abf6f",
+    "bindings/native/third-party/rust/pkg-config-0.3.34/LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+    "bindings/native/third-party/rust/pkg-config-0.3.34/LICENSE-MIT": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+    "bindings/native/third-party/rust/rusqlite-0.40.1/LICENSE": "c10c1f27337546471e5f7e4e97fdd398b35b9d4e126115dcd22de8d8e65abf6f",
+    "bindings/native/third-party/rust/shlex-2.0.1/LICENSE-APACHE": "553fffcd9b1cb158bc3e9edc35da85ca5c3b3d7d2e61c883ebcfa8a65814b583",
+    "bindings/native/third-party/rust/shlex-2.0.1/LICENSE-MIT": "4455bf75a91154108304cb283e0fea9948c14f13e20d60887cf2552449dea3b1",
+    "bindings/native/third-party/rust/smallvec-1.16.4/LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+    "bindings/native/third-party/rust/smallvec-1.16.4/LICENSE-MIT": "0b28172679e0009b655da42797c03fd163a3379d5cfa67ba1f1655e974a2a1a9",
+    "bindings/native/third-party/rust/sqlcipher-src-419.0.6+sqlcipher-4.19.0-sqlite-3.53.4-libtomcrypt-1.18.2/LICENSE": "413f82e0f4f8191a8624a7b7b2c9809466f7f3d930ad52a74ad29f2dd907881d",
+    "bindings/native/third-party/rust/vcpkg-0.2.15/LICENSE-APACHE": "60c93a31f490375aadf64098b75f10715010379541021e00261045d7800611d3",
+    "bindings/native/third-party/rust/vcpkg-0.2.15/LICENSE-MIT": "016d20f335060a70e79d9fcf8dfaa6201114d65d592211f4bdfb8ae9ca2bc1dc",
+    "bindings/native/third-party/rust/zeroize-1.9.1/LICENSE-APACHE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "bindings/native/third-party/rust/zeroize-1.9.1/LICENSE-MIT": "8c7516d4b27b1e495be5e38b612298b63de48d05f49cdac94f70f3cd70f8864b",
+    "bindings/native/third-party/toolchain/rust-1.98.1/COPYRIGHT-library.html": "68129500b616d5838629e68f55ff3aed5e096dacf60ce9eb41bbe599a563afa6",
+    "bindings/native/tools/apple_notices.py": "2982643861739b6b624fe1f175c0d1d418927e0cbd4612b187292de210687d46",
+    "bindings/native/tools/test_apple_notices.py": "1de38635d818df2c5bc3b1a8f3efa55fd3a01cda545eef870b0639fd6d48a6b0",
+    "bindings/react-native/android/.npmignore": "8c14e5ce2a4b785f38e12036540e8838090de3a962d6e91132c34bf1f129d2a2",
+    "bindings/react-native/tools/pack.py": "78441367be4878afc87337327cb65b66c91e2ed2b930a23e5a0a19f90d2e16bf",
+    "bindings/swift/build-artifacts.py": "ce1b89fa81b52b5997083bcc31fd41dedb750bb5b2a088eccb46b5ccb2bce171",
+    "bindings/swift/check_artifacts.py": "581c1fdee1f15a53bbf15217a04f8db76c4db11943c1b51abce8429b4b3369cc"
+  },
+  "staged_files": 34,
+  "tests": {
+    "normal-53.txt": {
+      "result": "53 tests OK",
+      "sha256": "97cb6112c30c671a540a1b2c448b2117841bbb2680a7b49a20eb6c99f4b89590"
+    },
+    "optimized-53.txt": {
+      "result": "53 tests OK",
+      "sha256": "77791a90b819a6da19b00897a525c7f77d7366fecdddd3c029c3f35075ca6df1"
+    }
+  },
+  "whitespace_classification": {
+    "findings": 1084,
+    "first_party_source_findings": 0,
+    "paths": [
+      "bindings/native/third-party/rust/fallible-iterator-0.3.0/LICENSE-APACHE",
+      "bindings/native/third-party/rust/fallible-streaming-iterator-0.1.9/LICENSE-APACHE",
+      "bindings/native/third-party/rust/vcpkg-0.2.15/LICENSE-APACHE",
+      "bindings/native/third-party/rust/vcpkg-0.2.15/LICENSE-MIT",
+      "bindings/native/third-party/toolchain/rust-1.98.1/COPYRIGHT-library.html"
+    ],
+    "reason": "Exact upstream license/toolchain capture bytes, protected by existing -text rule; preserved rather than normalized"
+  },
+  "whitespace_exit": 2,
+  "whitespace_findings_sha256": "b77a5e1fd96428c3a59b093b7b19e06d5788f51cbbaa098c09a0cdd6c00697f6"
+}

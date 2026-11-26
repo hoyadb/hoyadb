@@ -1,0 +1,34 @@
+{
+ "derived_from_cut": "phase-seven-security-remediation-followup-2",
+ "original_index_sha256": "fc60b72548959e3047e793b072fc7166005fe41ec85e04d853d97556ab96e724",
+ "original_index_preserved_locally_at": "target/phase-seven-security-remediation/frozen-cuts/phase-seven-security-remediation-followup-2/files-sha256.json",
+ "omitted": [
+  {
+   "original_path": "jdk17-Properties-load0-excerpt.java.txt",
+   "original_sha256": "effb56151842a247182dd9d9de0fac58b0d3389382a1fc80830eb47d038f97a0",
+   "original_bytes": 1806,
+   "reason": "verbatim excerpt of GPL-2.0-only (+Classpath Exception) JDK source",
+   "official_source_location": "https://github.com/openjdk/jdk17u/blob/jdk-17.0.1%2B12/src/java.base/share/classes/java/util/Properties.java",
+   "local_pinned_source": "/Users/boristacyniak/.sdkman/candidates/java/17.0.1-tem/lib/src.zip!java.base/java/util/Properties.java (src.zip sha256 ca83182867c87850\u2026)",
+   "raw_preserved_locally_at": "target/phase-seven-security-remediation/frozen-cuts/phase-seven-security-remediation-followup-2/jdk17-Properties-load0-excerpt.java.txt"
+  },
+  {
+   "original_path": "jdk17-Properties-loadConvert-excerpt.java.txt",
+   "original_sha256": "3f3078e64fec083f1cce436c2acfadbcd98cbe4414c4a9f0c7047f61744028e4",
+   "original_bytes": 2215,
+   "reason": "verbatim excerpt of GPL-2.0-only (+Classpath Exception) JDK source",
+   "official_source_location": "https://github.com/openjdk/jdk17u/blob/jdk-17.0.1%2B12/src/java.base/share/classes/java/util/Properties.java",
+   "local_pinned_source": "/Users/boristacyniak/.sdkman/candidates/java/17.0.1-tem/lib/src.zip!java.base/java/util/Properties.java (src.zip sha256 ca83182867c87850\u2026)",
+   "raw_preserved_locally_at": "target/phase-seven-security-remediation/frozen-cuts/phase-seven-security-remediation-followup-2/jdk17-Properties-loadConvert-excerpt.java.txt"
+  },
+  {
+   "original_path": "kotlin_guard.diff",
+   "original_sha256": "7688f2a9eacc0f79784f09c3b67ced922b1b14e60b9e0a3f77dc3d43587797f9",
+   "original_bytes": 8433,
+   "reason": "diff body contains the superseded Python translation of that JDK source",
+   "official_source_location": "https://github.com/openjdk/jdk17u/blob/jdk-17.0.1%2B12/src/java.base/share/classes/java/util/Properties.java",
+   "local_pinned_source": "/Users/boristacyniak/.sdkman/candidates/java/17.0.1-tem/legal/java.base/ASSEMBLY_EXCEPTION",
+   "raw_preserved_locally_at": "target/phase-seven-security-remediation/frozen-cuts/phase-seven-security-remediation-followup-2/kotlin_guard.diff"
+  }
+ ]
+}

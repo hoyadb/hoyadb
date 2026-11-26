@@ -1,0 +1,170 @@
+{
+  "contract": "API-0008 / TC-0032 H01-H06",
+  "status": "passed",
+  "verified_at_utc": "2026-10-23T21:20:20.351893+00:00",
+  "git_head_when_verified": "d6198201af235cd972df80731c4f4b875ba0342d",
+  "scope": "Experimental native Swift host over production CommandDatabase<SqliteStorage>; unpublished and uncommitted at verification.",
+  "runtime": {
+    "os": "26.7.1",
+    "os_build": "25G241",
+    "architecture": "x86_64",
+    "swift": "Apple Swift version 6.3.2 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)\nTarget: x86_64-apple-macosx26.0",
+    "rust": "rustc 1.98.1 (48a229cea 2026-09-01)",
+    "swift_deployment_target": "x86_64-apple-macosx26.5"
+  },
+  "checks": {
+    "swift_scenarios_passed": 6,
+    "swift_scenarios_failed": 0,
+    "swift_total_elapsed_seconds": 182.71,
+    "swift_aggregate_watchdog_seconds": 900,
+    "urlsession_request_and_resource_timeout_seconds": 5,
+    "native_rust_tests_passed": 20,
+    "native_rust_unit_tests": 15,
+    "native_rust_persistence_tests": 5,
+    "swift_warnings_as_errors": "passed",
+    "swift_format_strict": "passed",
+    "native_rust_fmt": "passed",
+    "native_rust_clippy_warnings_denied": "passed"
+  },
+  "timing_samples": {
+    "h01_handler_start_to_explicit_drain_ns": 323654363,
+    "h04_paged_focus_elapsed_seconds": 25.486,
+    "h06_paged_http_focus_elapsed_seconds": 80.051,
+    "h06_deferred_application_plan_focus_elapsed_seconds": 5.236,
+    "meaning": "Single debug-host observations, not performance budgets; H01 includes suspension/dispatch."
+  },
+  "http_fixture": {
+    "endpoint": "http://127.0.0.1:8774/hoyadb/commands",
+    "actual_urlsession_modes": [
+      "applied",
+      "mixed",
+      "partial",
+      "duplicate",
+      "conflict",
+      "unavailable"
+    ],
+    "large_payload_bytes_per_argument": 300000,
+    "large_batch_command_count": 4,
+    "observed_bounded_array_member_counts": [
+      3,
+      1
+    ],
+    "opaque_canonical_envelopes_never_foundation_decoded": true
+  },
+  "process_recovery": {
+    "writer_termination": "SIGKILL at named pre/post-commit barriers",
+    "independent_reader_processes": 2,
+    "power_loss_claim": false
+  },
+  "cleanup": {
+    "explicitly_recorded_owned_failed_or_diagnostic_roots_removed": 8,
+    "final_success_harness_root": "removed by its creating parent after all owners/processes closed",
+    "audit_log": "target/phase-four-swift-owned-cleanup.json",
+    "unrecorded_or_unrelated_roots": "untouched"
+  },
+  "evidence_logs": [
+    "target/phase-four-swift-green-final.txt",
+    "target/phase-four-swift-run-final.json",
+    "target/phase-four-native-rust-tests-final.txt",
+    "target/phase-four-native-clippy-final.txt",
+    "target/phase-four-native-fmt-final.txt",
+    "target/phase-four-swift-compile-final.txt",
+    "target/phase-four-swift-format-final.txt",
+    "target/phase-four-native-legacy.txt",
+    "target/phase-four-native-legacy-final.txt"
+  ],
+  "source_files_sha256": {
+    "Cargo.lock": "75c4616fe6b298c68f5b504a61786332718c20d3b9e86c1f902d914c619cd3c4",
+    "crates/hoyadb-core/src/command/owner.rs": "ed0ecf04216e2c9ef9d8a18bbe55e84f340aa75192e53feb499046df72b98eae",
+    "crates/hoyadb-core/src/command/execution.rs": "957beb51fa0527e39cb5ab202d27a27a5148d19f417aec0075a7c4e31f164a85",
+    "crates/hoyadb-core/src/command/sync.rs": "e324cf3aa84084a14f039978753fe39819de16421ea3c41bb9443ad9a4d846c8",
+    "crates/hoyadb-core/src/command/queue.rs": "136f585562c91784809a2c95d841cbf4368259f7a3e4e94a13fa841d556bd674",
+    "crates/hoyadb-core/src/command/records.rs": "4a91d1f53d308d58ad984ed5393704b181faa7eb8c44463dddcbe5b29f6518a2",
+    "crates/hoyadb-core/src/command/reconcile.rs": "1cb84f15cfd6c10160800f63a9654dbe1e9e004fc15ec12c1aaa59a90d93bac2",
+    "crates/hoyadb-core/src/command/json.rs": "aa62103f4da605a0c5fe123b9c4b47d91504fd6218cf91ee6ed1f47fe507afaa",
+    "crates/hoyadb-storage-sqlite/src/sync.rs": "e9a0b7ef3d13b31105e7349541d6aed7f6ea99bb8b9f6cd7600dfff6e223416a",
+    "spikes/common/command_fixture.rs": "f8ae1e7ac4a73fab8286661814ab34d77eb50b612981de4f058d0945ee76d0a6",
+    "spikes/common/command_budget.rs": "1ca62242d06e0228395551ef7cf3abd61316728d81ad6da06e27be51bcf4d2eb",
+    "spikes/common/command_http.py": "cd54cbfe6fb43faf8cac585eb5e6ae8fc01604531af66b5ea7a6a0c22fce40d3",
+    "spikes/cross-platform/native/Cargo.toml": "63dd73f3ee837ea203c4c7c77ff2a633cadb3eb73eb3054e70b3e0d2f928d991",
+    "spikes/cross-platform/native/Cargo.lock": "ace8ddb41edbcea9e369d403e13828e1622438903549982a761e6f622ba59455",
+    "spikes/cross-platform/native/src/lib.rs": "26dfddff367b5befcc1472aeec506418a026e70cabf91a4f12fd2d09e7a0d30e",
+    "spikes/cross-platform/native/src/command.rs": "6dc7730057469fd08ecc889482983f8d27c60c95316d4b9a199bbf56c3c4464a",
+    "spikes/cross-platform/native/include/phase4.h": "9d4a80f6ebd8838de9e78b3379d2659e07a06b97f1db09ed29c6ed35973b4177",
+    "spikes/cross-platform/native/tests/commands.swift": "c5721bd2b067fcfe85906ca395852f1de5e865ee40cb009ba5f946b6cd07129e"
+  },
+  "source_tree_digest": {
+    "algorithm": "SHA-256 of sorted relative path + NUL + file SHA-256 hex + newline",
+    "files": 40,
+    "sha256": "0b66a6caa5498398a8f43fb03637b22d516190d0016b02748b7cd2bd3566f018",
+    "file_sha256": {
+      "crates/hoyadb-core/src/command/execution.rs": "957beb51fa0527e39cb5ab202d27a27a5148d19f417aec0075a7c4e31f164a85",
+      "crates/hoyadb-core/src/command/json.rs": "aa62103f4da605a0c5fe123b9c4b47d91504fd6218cf91ee6ed1f47fe507afaa",
+      "crates/hoyadb-core/src/command/mod.rs": "341ecea80761ffb13d555872060bba92f30c86f4179a92b20856dcd2395f6c93",
+      "crates/hoyadb-core/src/command/owner.rs": "ed0ecf04216e2c9ef9d8a18bbe55e84f340aa75192e53feb499046df72b98eae",
+      "crates/hoyadb-core/src/command/queue.rs": "136f585562c91784809a2c95d841cbf4368259f7a3e4e94a13fa841d556bd674",
+      "crates/hoyadb-core/src/command/reconcile.rs": "1cb84f15cfd6c10160800f63a9654dbe1e9e004fc15ec12c1aaa59a90d93bac2",
+      "crates/hoyadb-core/src/command/records.rs": "4a91d1f53d308d58ad984ed5393704b181faa7eb8c44463dddcbe5b29f6518a2",
+      "crates/hoyadb-core/src/command/sync.rs": "e324cf3aa84084a14f039978753fe39819de16421ea3c41bb9443ad9a4d846c8",
+      "crates/hoyadb-core/src/lib.rs": "9484a9eb3fcf563086c450d1746c7c6a76f8347f26f7928240c77ccebe9433db",
+      "crates/hoyadb-core/src/model/database.rs": "ee1128ed4655b06e392cc7d18db1352ea3ab71ffcacd07c5049c6252f12ed524",
+      "crates/hoyadb-core/src/model/migration.rs": "35250723bd853722f5d70d1bcd6099b2fc4df84b10c9265776c8a465df93b77d",
+      "crates/hoyadb-core/src/model/mod.rs": "9b8132927cd06a8c92d62aa7ca74a8f74c6e1e19ed5082c46b98fd023cbbae79",
+      "crates/hoyadb-core/src/model/query.rs": "617b5d03760dfad3a67e1adad7ad68406a099b1b2137962ae62406607f9bd230",
+      "crates/hoyadb-core/src/model/reactive.rs": "ccc931f68d4b5ae060ec923db3d977149ebecea1837ef9b137d051f09c7bf3c9",
+      "crates/hoyadb-core/src/model/schema.rs": "c31dfafb30e7d345cffd6aa0adbf726734aafe4e5645aa898dd98262b9869bcf",
+      "crates/hoyadb-core/src/storage.rs": "1441858b018f263296dec4e7274d8a9fcb184b5ed0e9b6e8ae0ee0af18656cc1",
+      "crates/hoyadb-core/src/storage/model.rs": "7fc25accd4409ebb1baa7c3a692d3adc7fee251dce55c692f488eaac0f673645",
+      "crates/hoyadb-core/src/storage/observation.rs": "3e5cfe0fbdc8375f3e3b6ad6ce36c3595684e0c19e17ef11232501098da98d91",
+      "crates/hoyadb-core/src/storage/snapshot/lifecycle.rs": "b703a7b98643485838be1774eec3ea76a04c45ec63aede0cfed67f548aabeb4d",
+      "crates/hoyadb-core/src/storage/snapshot/mod.rs": "afc2f5537f23c63981aa0800f2ba9ffec52456921f9254ee56f11230ec38ea88",
+      "crates/hoyadb-core/src/storage/snapshot/projection.rs": "eb1d8754408fa282bd964f5fa1bedc030df9e8995c1f4411e9aabd135375af95",
+      "crates/hoyadb-core/src/storage/snapshot/sync.rs": "cbbeabd5ec01425f27f0e2d72ce16a0f01eb677781ce4bd4334e5b07367c8b09",
+      "crates/hoyadb-core/src/storage/snapshot/typed.rs": "c6a1977a88a8ad35857c7401528a2eb97efb184a708fcfce64e0dd367a5bff5c",
+      "crates/hoyadb-core/src/storage/sync.rs": "aa194a89e76b2ce21beaccf4a6161488c43748c27b52c74bc767728612075fe2",
+      "crates/hoyadb-core/src/storage/typed.rs": "2b4e6ee90c3433d380633d1f314e64d1f2bf580cbd6ae0ef90e778546a67fc10",
+      "crates/hoyadb-storage-memory/src/lib.rs": "0c26d6799994174b2c6543fc8cc506a8ada788ae761030b70fd8baa3517724f1",
+      "crates/hoyadb-storage-sqlite/src/bin/restart_fixture.rs": "f4fa0b8051321ea92987e0b93ed4fbe4b04fa42bbc288618c70a391c9893238b",
+      "crates/hoyadb-storage-sqlite/src/lib.rs": "75ff65088a4f62926d8f1e5f9770900209c149c49dfd5dffc2ecf44279488880",
+      "crates/hoyadb-storage-sqlite/src/lifecycle.rs": "cded206e79c27c0b77b1e8bada6959ae6a36e95718b782f8584fd60164471507",
+      "crates/hoyadb-storage-sqlite/src/projection.rs": "4e5f9627806e1342872552ec98986db4efe67d1728041ec04a85dfb5af6d8e75",
+      "crates/hoyadb-storage-sqlite/src/query.rs": "90ce1e4a1966b9719c4755c0be3ad398f885ae90bf34b9c3d6b8ef56b89c992e",
+      "crates/hoyadb-storage-sqlite/src/sync.rs": "e9a0b7ef3d13b31105e7349541d6aed7f6ea99bb8b9f6cd7600dfff6e223416a",
+      "spikes/common/command_budget.rs": "1ca62242d06e0228395551ef7cf3abd61316728d81ad6da06e27be51bcf4d2eb",
+      "spikes/common/command_fixture.rs": "f8ae1e7ac4a73fab8286661814ab34d77eb50b612981de4f058d0945ee76d0a6",
+      "spikes/common/command_http.py": "cd54cbfe6fb43faf8cac585eb5e6ae8fc01604531af66b5ea7a6a0c22fce40d3",
+      "spikes/cross-platform/native/src/command.rs": "6dc7730057469fd08ecc889482983f8d27c60c95316d4b9a199bbf56c3c4464a",
+      "spikes/cross-platform/native/src/lib.rs": "26dfddff367b5befcc1472aeec506418a026e70cabf91a4f12fd2d09e7a0d30e",
+      "spikes/cross-platform/native/src/persistence.rs": "e3b43564a73cb419b82ec1a34c5fafc9d7aa067cfdb097c66a94fdca0eb7e455",
+      "spikes/cross-platform/native/src/reactive.rs": "1fa3b86f46e9a0376d722ca5d80915d84c3bcdbbbdf3856a9bcb039e98fcf867",
+      "spikes/cross-platform/native/tests/commands.swift": "c5721bd2b067fcfe85906ca395852f1de5e865ee40cb009ba5f946b6cd07129e"
+    }
+  },
+  "artifacts_sha256": {
+    "spikes/cross-platform/native/target/debug/libhoyadb_native_spike.a": "7f1aba42ebca2c814adf8603616e1c259baffa070fa94e8ca3c080dc103d54d3",
+    "spikes/cross-platform/native/target/native-commands": "c89d7d8c6e1000cfa6e232e43fd3d20104c71c81955903c555eec189af318609"
+  },
+  "limits": [
+    "No packaged SDK/mobile/other architecture guarantee.",
+    "No concurrent same-file writers or hostile native pointer validation.",
+    "No power-loss or forced foreign task-termination guarantee.",
+    "An individually oversized event remains queued until cancellation/bounded query; no snapshot splitting."
+  ],
+  "contract_document_provenance": {
+    "path": "docs/design/contracts/API-0008-command-host-spike.md",
+    "contract_sha256_at_run": "ea1681ba129f01568e5c5ef7125e0752765739f87891a3a76e7678dd3214263b",
+    "current_document_sha256": "17ca049ff938b3e4311093d0a2b93048fab61e53bf827b2accd22f014e4f5064",
+    "post_run_documentation_commit": "1b884e0",
+    "change_classification": "Documentation-only profile clarification, approved by reviewer and browser consumer; no native contract or implementation behavior change.",
+    "compiled_sources_changed": false,
+    "native_rebuild_or_retest_required": false,
+    "note": "Historical contract document hash is preserved separately from the compiled-source digest; current-document equality with the run-time document is not claimed."
+  },
+  "legacy_swift_matrix": {
+    "producer": "Root agent",
+    "log": "target/phase-four-native-legacy-final.txt",
+    "success_marker": "PHASE4_FINAL_LEGACY_SWIFT_GREEN",
+    "library_sha256": "7f1aba42ebca2c814adf8603616e1c259baffa070fa94e8ca3c080dc103d54d3",
+    "scope": "All legacy Swift scenarios rerun against the exact same current static library; parent reported execution and this metadata update verified the recorded success marker."
+  }
+}

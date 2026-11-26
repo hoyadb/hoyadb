@@ -1,0 +1,25 @@
+{
+  "queries": [
+    {
+      "package": {
+        "name": "org.jetbrains.kotlin:kotlin-stdlib",
+        "ecosystem": "Maven"
+      },
+      "version": "2.2.21"
+    },
+    {
+      "package": {
+        "name": "com.google.errorprone:error_prone_annotations",
+        "ecosystem": "Maven"
+      },
+      "version": "2.27.0"
+    },
+    {
+      "package": {
+        "name": "io.github.java-diff-utils:java-diff-utils-parent",
+        "ecosystem": "Maven"
+      },
+      "version": "4.15"
+    }
+  ]
+}

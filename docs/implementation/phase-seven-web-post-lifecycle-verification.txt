@@ -1,0 +1,19 @@
+
+COMMAND/RESULT post-lifecycle-build.txt
+Built local client/testing artifacts from checked-in JS and prebuilt general WASM
+PASS local package trees include exact declarations, own package links and generated WASM
+
+COMMAND/RESULT post-lifecycle-syntax.txt
+PASS node --check 49 source JS/MJS files
+
+COMMAND/RESULT post-lifecycle-python.txt
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.112s
+
+OK
+
+COMMAND/RESULT post-lifecycle-hash-closure.txt
+PASS unchanged 195 source hashes and 8 ordinary/instrumented artifacts during matching runtime matrix
+
+Observed tools.exec_command exit0: node <owned-temp-root>/guide-example.mjs; exact guide block, no stdout.

@@ -1,0 +1,5 @@
+ADMIT {"engine":"memory","kind":"warm","label":"warm-memory-00-1","parameters":{"N":100,"Q":0,"observers":0,"operation":"point"},"run":1}
+ADMIT {"engine":"memory","kind":"warm","label":"warm-memory-00-2","parameters":{"N":100,"Q":0,"observers":0,"operation":"point"},"run":2}
+ADMIT {"engine":"memory","kind":"warm","label":"warm-memory-00-3","parameters":{"N":100,"Q":0,"observers":0,"operation":"point"},"run":3}
+ADMIT {"engine":"memory","kind":"warm","label":"warm-memory-00-4","parameters":{"N":100,"Q":0,"observers":0,"operation":"point"},"run":4}
+ADMIT {"engine":"memory","kind":"warm","label":"warm-memory-00-5","parameters":{"N":100,"Q":0,"observers":0,"operation":"point"},"run":5}

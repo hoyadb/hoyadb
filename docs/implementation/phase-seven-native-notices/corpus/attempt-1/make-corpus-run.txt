@@ -1,0 +1,1 @@
+CORPUS REJECTED: text equals android copy rust/libsqlite3-sys-0.38.1/LICENSE: rust/libsqlite3-sys-0.38.1/LICENSE

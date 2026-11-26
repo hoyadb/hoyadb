@@ -1,0 +1,44 @@
+Building for debugging...
+[0/4] Write sources
+[0/4] Copying libhoyadb_native.a
+[2/4] Write swift-version--58304C5D6DBC2206.txt
+[4/6] Emitting module HoyaDB
+[5/6] Compiling HoyaDB Database.swift
+[6/12] Compiling HoyaDB Relations.swift
+[7/12] Compiling HoyaDB Observations.swift
+[8/12] Compiling HoyaDB Sync.swift
+[9/12] Compiling HoyaDB Values.swift
+[10/12] Compiling HoyaDB Commands.swift
+[11/12] Compiling HoyaDB Entities.swift
+[12/26] Compiling HoyaDBTests ObservationTests.swift
+[13/26] Compiling HoyaDBTests LifetimeTests.swift
+[14/26] Compiling HoyaDBTests SyncTests.swift
+[15/26] Compiling HoyaDBTests ProtocolTests.swift
+[16/26] Compiling HoyaDBTests MigrationTests.swift
+[17/26] Compiling HoyaDBTests NativeOwnerTests.swift
+[18/26] Compiling HoyaDBTests TypedValuesTests.swift
+[19/26] Compiling HoyaDBTests NamespaceTests.swift
+[20/26] Compiling HoyaDBTests RelationTests.swift
+[21/26] Emitting module HoyaDBTests
+[22/26] Compiling HoyaDBTests AdmissionTests.swift
+[23/26] Compiling HoyaDBTests EntityTests.swift
+[24/26] Compiling HoyaDBTests CommandTests.swift
+[24/26] Write Objects.LinkFileList
+[25/26] Linking HoyaDBPackageTests
+Build complete! (20.45s)
+Test Suite 'Selected tests' started at 2026-10-24 21:45:00.734.
+Test Suite 'HoyaDBPackageTests.xctest' started at 2026-10-24 21:45:00.743.
+Test Suite 'SyncTests' started at 2026-10-24 21:45:00.743.
+Test Case '-[HoyaDBTests.SyncTests testPreparePushAutomaticallyDeliversSentOutcomeWithoutReceiptOrManualDrain]' started.
+/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/swift/Tests/HoyaDBTests/SyncTests.swift:263: error: -[HoyaDBTests.SyncTests testPreparePushAutomaticallyDeliversSentOutcomeWithoutReceiptOrManualDrain] : Asynchronous wait failed: Exceeded timeout of 2 seconds, with unfulfilled expectations: "sent without another operation".
+Test Case '-[HoyaDBTests.SyncTests testPreparePushAutomaticallyDeliversSentOutcomeWithoutReceiptOrManualDrain]' failed (3.013 seconds).
+Test Suite 'SyncTests' failed at 2026-10-24 21:45:03.758.
+	 Executed 1 test, with 1 failure (0 unexpected) in 3.013 (3.015) seconds
+Test Suite 'HoyaDBPackageTests.xctest' failed at 2026-10-24 21:45:03.758.
+	 Executed 1 test, with 1 failure (0 unexpected) in 3.013 (3.016) seconds
+Test Suite 'Selected tests' failed at 2026-10-24 21:45:03.759.
+	 Executed 1 test, with 1 failure (0 unexpected) in 3.013 (3.025) seconds
+◇ Test run started.
+↳ Testing Library Version: 1902
+↳ Target Platform: x86_64-apple-macos14.0
+✔ Test run with 0 tests in 0 suites passed after 0.001 seconds.

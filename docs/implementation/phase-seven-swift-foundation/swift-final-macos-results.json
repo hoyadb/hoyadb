@@ -1,0 +1,26 @@
+[
+  {
+    "mode": "writer",
+    "argv": [
+      "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-phase7-consumer-s2413p0r/.build/x86_64-apple-macosx/debug/GeneralConsumer"
+    ],
+    "environment": {
+      "HOYA_CONSUMER_ROOT": "/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-phase7-consumer-s2413p0r/owned-data",
+      "HOYA_CONSUMER_MODE": "writer"
+    },
+    "exit_code": 0,
+    "elapsed_s": 1.028002136037685
+  },
+  {
+    "mode": "reader",
+    "argv": [
+      "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-phase7-consumer-s2413p0r/.build/x86_64-apple-macosx/debug/GeneralConsumer"
+    ],
+    "environment": {
+      "HOYA_CONSUMER_ROOT": "/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-phase7-consumer-s2413p0r/owned-data",
+      "HOYA_CONSUMER_MODE": "reader"
+    },
+    "exit_code": 0,
+    "elapsed_s": 0.07627063698600978
+  }
+]

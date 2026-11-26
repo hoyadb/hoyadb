@@ -1,0 +1,195 @@
+{
+  "format": 1,
+  "approval_status": "PREPARATION ONLY: inert quarantine review; awaiting independent review and explicit operator approval under ADR-0035; nothing activated",
+  "scope": "Gradle 9.3.1 Kotlin DSL bootstrap of the unchanged official RN 0.86.3 includeBuild plus the consumer buildscript metadata gap; no app/SDK/core runtime pin change",
+  "additions": [
+    {
+      "coordinate": "org.jetbrains.kotlin:kotlin-stdlib:2.2.21",
+      "role": "Gradle 9.3.1 embedded-Kotlin strict constraint on Kotlin DSL buildscript classpaths; replaces approved 2.1.20 (KGP) and 2.1.10 (ktfmt) on the official included build root buildscript classpath. Byte-identical to Gradle distribution lib/kotlin-stdlib-2.2.21.jar.",
+      "kind": "binary+metadata",
+      "files": [
+        {
+          "name": "kotlin-stdlib-2.2.21.jar",
+          "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.2.21/kotlin-stdlib-2.2.21.jar",
+          "bytes": 1761445,
+          "sha256": "6558a3d233da56a20934b32159f9db5f86ed5816ef098f78a2c223dc6abb79dd",
+          "sha512": "cb7f62e2eb4c13f7a9873876f19d9dcb69c33d5e963c7cd87178f3789d65f29d2b6cf697573c04758428d2da6e26f2fdd3f0af46dedd8d04ad81d331e95859d7",
+          "sha1_sidecar_match": true,
+          "strong_sidecars_published": [],
+          "publisher_module_sha256_match": true,
+          "gradle_independent_retrieval_match": null,
+          "gradle_distribution_copy": {
+            "path": "/Users/boristacyniak/.gradle/wrapper/dists/gradle-9.3.1-bin/23ovyewtku6u96viwx3xl3oks/gradle-9.3.1/lib/kotlin-stdlib-2.2.21.jar",
+            "sha256": "6558a3d233da56a20934b32159f9db5f86ed5816ef098f78a2c223dc6abb79dd",
+            "byte_identical_to_maven": true
+          },
+          "detached_signature": {
+            "goodsig": true,
+            "validsig": "6F538074CCEBF35F28AF9B066A0975F8B1127B83",
+            "primary": "2FBA29D08D2E25EE84C132C30729A0AFF8999A87",
+            "uid": "Kotlin Release <kt-a@jetbrains.com>",
+            "expired_or_revoked": [],
+            "identity_trust": "UNKNOWN"
+          },
+          "pom_licenses": null,
+          "pom_parent": null
+        },
+        {
+          "name": "kotlin-stdlib-2.2.21.pom",
+          "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.2.21/kotlin-stdlib-2.2.21.pom",
+          "bytes": 2301,
+          "sha256": "cf31f923196c63aedecd0a57c24269bd3702a4e47c0bf0bd64b5ada5de522272",
+          "sha512": "713bba2f5a0e0c320ae5e8446ede182212151f283f66355333c5f427829a655a22d8f3139b86094aed23f1cf5aecfab36a02da780785ad42a31236eef191fae0",
+          "sha1_sidecar_match": true,
+          "strong_sidecars_published": [],
+          "publisher_module_sha256_match": null,
+          "gradle_independent_retrieval_match": true,
+          "gradle_distribution_copy": null,
+          "detached_signature": {
+            "goodsig": true,
+            "validsig": "6F538074CCEBF35F28AF9B066A0975F8B1127B83",
+            "primary": "2FBA29D08D2E25EE84C132C30729A0AFF8999A87",
+            "uid": "Kotlin Release <kt-a@jetbrains.com>",
+            "expired_or_revoked": [],
+            "identity_trust": "UNKNOWN"
+          },
+          "pom_licenses": [
+            "Apache-2.0"
+          ],
+          "pom_parent": null
+        },
+        {
+          "name": "kotlin-stdlib-2.2.21.module",
+          "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.2.21/kotlin-stdlib-2.2.21.module",
+          "bytes": 12430,
+          "sha256": "bfbc657ddd3a8e37e4c8ad417968d5eb0b0b171c9fce48f962c2ad32ee434c21",
+          "sha512": "4c44e2226dc8baf91685545d49db558de088241c87ac54d0f4a83af9b641d7d8c1f3ece654e41f3953690b81274e75fd57baffc51f74cd6da4787219ecfeaa99",
+          "sha1_sidecar_match": true,
+          "strong_sidecars_published": [],
+          "publisher_module_sha256_match": null,
+          "gradle_independent_retrieval_match": true,
+          "gradle_distribution_copy": null,
+          "detached_signature": null,
+          "pom_licenses": null,
+          "pom_parent": null
+        }
+      ]
+    },
+    {
+      "coordinate": "com.google.errorprone:error_prone_annotations:2.27.0",
+      "role": "Dependency of approved gson 2.11.0 (via approved kotlin-build-statistics) on the included build root buildscript classpath; POM and parent already in reviewed metadata.",
+      "kind": "binary+metadata",
+      "files": [
+        {
+          "name": "error_prone_annotations-2.27.0.jar",
+          "url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.27.0/error_prone_annotations-2.27.0.jar",
+          "bytes": 19370,
+          "sha256": "24c923372c58e35d0b9f16a028929bb9aedc77521867c274f2bd0735df5ba1f5",
+          "sha512": "479f3c5e25a7ccd90adf70a9b1a71bae18205681ce966618b2ba28aea1b10c087b10ca7172e7b34384901b5e8d2dd009f1cdcbcd2a01be55082d276245de0a35",
+          "sha1_sidecar_match": true,
+          "strong_sidecars_published": [],
+          "publisher_module_sha256_match": null,
+          "gradle_independent_retrieval_match": null,
+          "gradle_distribution_copy": null,
+          "detached_signature": {
+            "goodsig": true,
+            "validsig": "EE0CA873074092F806F59B65D364ABAA39A47320",
+            "primary": "EE0CA873074092F806F59B65D364ABAA39A47320",
+            "uid": "Liam Miller-Cushon (Error Prone releases) <cushon@google.com>",
+            "expired_or_revoked": [],
+            "identity_trust": "UNKNOWN"
+          },
+          "pom_licenses": null,
+          "pom_parent": null
+        }
+      ]
+    },
+    {
+      "coordinate": "io.github.java-diff-utils:java-diff-utils-parent:4.15",
+      "role": "Metadata-only parent POM of approved java-diff-utils 4.15 (ktfmt 0.22.0); absent from 8a87389 recorded responses.",
+      "kind": "metadata-only",
+      "files": [
+        {
+          "name": "java-diff-utils-parent-4.15.pom",
+          "url": "https://repo.maven.apache.org/maven2/io/github/java-diff-utils/java-diff-utils-parent/4.15/java-diff-utils-parent-4.15.pom",
+          "bytes": 10170,
+          "sha256": "09e7d44a7cfa19bc6b23cad14ec0a41f32ae0b597f0e26ace91916fdc2bb5c82",
+          "sha512": "845fee7db7c5bb66d9d94a1fd24c6b1a758dddb4f970c5564b8a9ca0fa61bf5087752afa95ce3aa10d7187a7586709c499e1d3a4ecdc746c9333e7d7c82c94c0",
+          "sha1_sidecar_match": true,
+          "strong_sidecars_published": [],
+          "publisher_module_sha256_match": null,
+          "gradle_independent_retrieval_match": true,
+          "gradle_distribution_copy": null,
+          "detached_signature": {
+            "goodsig": false,
+            "validsig": "D477D51812E692011DB11E66A6EA2E2BF22E0543",
+            "primary": "D477D51812E692011DB11E66A6EA2E2BF22E0543",
+            "uid": null,
+            "expired_or_revoked": [
+              "EXPKEYSIG",
+              "KEYEXPIRED"
+            ],
+            "identity_trust": "UNKNOWN"
+          },
+          "pom_licenses": [
+            "The Apache Software License, Version 2.0"
+          ],
+          "pom_parent": null
+        }
+      ]
+    },
+    {
+      "coordinate": "org.junit:junit-bom:5.10.2",
+      "role": "Metadata-only Gradle module of a BOM whose POM is already in reviewed metadata; fetched by Gradle for the consumer buildscript mirror.",
+      "kind": "metadata-only",
+      "files": [
+        {
+          "name": "junit-bom-5.10.2.module",
+          "url": "https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.10.2/junit-bom-5.10.2.module",
+          "bytes": 6995,
+          "sha256": "de23b114b3e4119a8fe6eb17bed5a3852816698bace67071579d6d927ebb080a",
+          "sha512": "957b48ab80279e57b6ec085df9fe779242a63989496fdb3126dcfd145e063759e0638ffdaf29c961d6cbe594fb4132afb9f507234eb7ccb6985c6821ffb0f33b",
+          "sha1_sidecar_match": true,
+          "strong_sidecars_published": [
+            "sha256",
+            "sha512"
+          ],
+          "publisher_module_sha256_match": null,
+          "gradle_independent_retrieval_match": null,
+          "gradle_distribution_copy": null,
+          "detached_signature": {
+            "goodsig": true,
+            "validsig": "FF6E2C001948C5F2F38B0CC385911F425EC61B51",
+            "primary": "FF6E2C001948C5F2F38B0CC385911F425EC61B51",
+            "uid": "Marc Philipp <mail@marcphilipp.de>",
+            "expired_or_revoked": [],
+            "identity_trust": "UNKNOWN"
+          },
+          "pom_licenses": null,
+          "pom_parent": null
+        }
+      ]
+    }
+  ],
+  "osv_exact_version": {
+    "org.jetbrains.kotlin:kotlin-stdlib:2.2.21": [],
+    "com.google.errorprone:error_prone_annotations:2.27.0": [],
+    "io.github.java-diff-utils:java-diff-utils-parent:4.15": []
+  },
+  "closure_proof": {
+    "included_build_settings_classpath": "metadata/included: 2 components, 0 new",
+    "included_build_root_buildscript_classpath": "metadata/included: 27 components, new: kotlin-stdlib 2.2.21, error_prone_annotations 2.27.0",
+    "consumer_buildscript_classpath": "metadata/consumer: 145 components, 0 new vs union; metadata gap junit-bom 5.10.2 .module"
+  },
+  "limitations": [
+    "Builtin-only mirrors reproduce Gradle script-classpath attributes and embedded-Kotlin pins from Gradle bytecode, but not plugin-applied behavior; the actual graph gate before compile remains mandatory",
+    "Publisher identity trust UNKNOWN; java-diff-utils-parent POM signature is mathematically valid but by an expired key (EXPKEYSIG)",
+    "kotlin-stdlib 2.2.21 is signed by Kotlin Release key 2FBA29D0…, different from the 6F538074… key on the 2.1.20 artifacts",
+    "Gradle distribution already contains byte-identical kotlin-stdlib-2.2.21.jar; this does not approve the selected Maven coordinate"
+  ],
+  "restrictions": [
+    "Activate only these exact bytes after explicit operator approval, batched with the security remediation delta",
+    "All ADR-0035, 8a87389 and compiler-bundle restrictions remain binding",
+    "Stop on any further unapproved component"
+  ]
+}

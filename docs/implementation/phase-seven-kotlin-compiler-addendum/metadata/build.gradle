@@ -1,0 +1,91 @@
+import groovy.json.JsonOutput
+import org.gradle.api.attributes.*
+import org.gradle.api.attributes.plugin.GradlePluginApiVersion
+
+// Metadata resolution only with Gradle builtin plugins. No Kotlin/AGP/RN plugin is applied and no
+// dependency JAR is loaded. Configurations mirror KGP 2.1.20 (gradle85 sources):
+//   KotlinPluginWrapper.addKotlinCompilerConfiguration and KotlinCompilationDependencyConfigurationsFactories.
+plugins { id 'java' }
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+// Check-only app mirror needs the Kotlin lane's certified local AAR repository (file://, no network).
+repositories { maven { url = uri('file:///Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-kotlin/opus/maven-final'); content { includeGroup 'dev.hoyadb' } } }
+
+def kgp = '2.1.20'
+// kotlinCompilerClasspath: maybeCreateResolvable, no attributes, defaultDependencies compiler-embeddable:${pluginVersion}
+configurations.create('kotlinCompilerClasspath') { canBeConsumed = false; canBeResolved = true; resolutionStrategy.activateDependencyLocking() }
+dependencies.add('kotlinCompilerClasspath', "org.jetbrains.kotlin:kotlin-compiler-embeddable:${kgp}")
+// kotlinBuildToolsApiClasspath: no attributes, kotlin-build-tools-impl with strictly(compilerVersion ?: pluginVersion)
+configurations.create('kotlinBuildToolsApiClasspath') { canBeConsumed = false; canBeResolved = true; resolutionStrategy.activateDependencyLocking() }
+dependencies.add('kotlinBuildToolsApiClasspath', 'org.jetbrains.kotlin:kotlin-build-tools-impl') { version { strictly kgp } }
+// kotlinCompilerPluginClasspath (+ per-compilation Main/Debug extendsFrom): addGradlePluginMetadataAttributes; the
+// unconditional scripting subplugin adds kotlin-scripting-compiler-embeddable:${pluginVersion}.
+configurations.create('kotlinCompilerPluginClasspathMain') {
+    canBeConsumed = false; canBeResolved = true
+    attributes {
+        attribute(Category.CATEGORY_ATTRIBUTE, objects.named(Category, Category.LIBRARY))
+        attribute(Usage.USAGE_ATTRIBUTE, objects.named(Usage, Usage.JAVA_RUNTIME))
+        attribute(LibraryElements.LIBRARY_ELEMENTS_ATTRIBUTE, objects.named(LibraryElements, LibraryElements.JAR))
+        attribute(GradlePluginApiVersion.GRADLE_PLUGIN_API_VERSION_ATTRIBUTE, objects.named(GradlePluginApiVersion, gradle.gradleVersion))
+    }
+    resolutionStrategy.activateDependencyLocking()
+}
+dependencies.add('kotlinCompilerPluginClasspathMain', "org.jetbrains.kotlin:kotlin-scripting-compiler-embeddable:${kgp}")
+
+// CHECK-ONLY mirror of the consumer app's debugCompileClasspath, using the reviewed androidDebug runtime mirror's
+// attributes with java-api usage. AGP-internal attributes/transforms are not reproduced (stated limitation).
+def kotlinPlatform = Attribute.of('org.jetbrains.kotlin.platform.type', String)
+def buildType = Attribute.of('com.android.build.api.attributes.BuildTypeAttr', String)
+class AndroidJvmCompatibility implements AttributeCompatibilityRule<String> {
+    void execute(CompatibilityCheckDetails<String> details) {
+        if (details.consumerValue == 'androidJvm' && details.producerValue == 'jvm') details.compatible()
+    }
+}
+dependencies.attributesSchema.attribute(kotlinPlatform) { compatibilityRules.add(AndroidJvmCompatibility) }
+configurations.create('appDebugCompileClasspath') {
+    canBeConsumed = false; canBeResolved = true
+    attributes {
+        attribute(Usage.USAGE_ATTRIBUTE, objects.named(Usage, Usage.JAVA_API))
+        attribute(Category.CATEGORY_ATTRIBUTE, objects.named(Category, Category.LIBRARY))
+        attribute(org.gradle.api.attributes.java.TargetJvmEnvironment.TARGET_JVM_ENVIRONMENT_ATTRIBUTE, objects.named(org.gradle.api.attributes.java.TargetJvmEnvironment, 'android'))
+        attribute(buildType, 'debug')
+        attribute(kotlinPlatform, 'androidJvm')
+    }
+    resolutionStrategy.activateDependencyLocking()
+}
+dependencies.constraints.add('appDebugCompileClasspath', 'com.squareup.okio:okio:3.4.0') { version { strictly '3.4.0' } }
+['com.facebook.react:react-android:0.86.3', 'com.facebook.hermes:hermes-android:250829098.0.17',
+ 'dev.hoyadb:hoyadb-android:0.1.0', "org.jetbrains.kotlin:kotlin-stdlib:${kgp}"].each { dependencies.add('appDebugCompileClasspath', it) }
+
+def reportFor = { Configuration cfg ->
+    def result = cfg.incoming.resolutionResult
+    def components = []; def edges = []; def failures = []
+    result.allComponents.each { c ->
+        components.add([id: c.id.displayName, reason: c.selectionReason.descriptions.collect { it.description },
+                        variants: c.variants.collect { v -> [name: v.displayName, attributes: v.attributes.keySet().collectEntries { a -> [(a.name): v.attributes.getAttribute(a).toString()] }] }])
+    }
+    result.allDependencies.each { d ->
+        if (d instanceof org.gradle.api.artifacts.result.ResolvedDependencyResult) edges.add([from: d.from.id.displayName, requested: d.requested.displayName, selected: d.selected.id.displayName, constraint: d.constraint])
+        if (d instanceof org.gradle.api.artifacts.result.UnresolvedDependencyResult) failures.add([requested: d.attempted.displayName, failure: d.failure.message, details: d.failure.cause?.message])
+    }
+    [attributes: cfg.attributes.keySet().collectEntries { a -> [(a.name): cfg.attributes.getAttribute(a).toString()] }, components: components, edges: edges, failures: failures]
+}
+
+tasks.register('captureMetadata') {
+    dependsOn ':included-build-classpaths:prepareCapture'
+    doLast {
+        def report = [gradle: gradle.gradleVersion, java: System.getProperty('java.version'),
+                      status: 'Metadata resolution only; builtin java/java-gradle-plugin; no Kotlin/AGP plugin applied; no dependency code executed',
+                      configurations: [:]]
+        ['kotlinCompilerClasspath', 'kotlinBuildToolsApiClasspath', 'kotlinCompilerPluginClasspathMain', 'appDebugCompileClasspath'].each { report.configurations[it] = reportFor(configurations[it]) }
+        def check = project(':included-build-classpaths')
+        ['compileClasspath', 'runtimeClasspath'].each { report.configurations['includedBuild:' + it] = reportFor(check.configurations[it]) }
+        file('resolution.json').text = JsonOutput.prettyPrint(JsonOutput.toJson(report)) + '\n'
+        if (report.configurations.any { name, value -> !value.failures.empty }) throw new GradleException('Metadata graph unresolved; see resolution.json')
+    }
+}

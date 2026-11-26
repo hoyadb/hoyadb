@@ -1,0 +1,2 @@
+HOYA_SWIFT_GENERAL_CONSUMER_GREEN mode=reader protected_restart=independent wrong_key=unchanged rows=lossless-i64-float queue=frozen-retry mapping=guarded
+

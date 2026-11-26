@@ -1,0 +1,46 @@
+[
+  {
+    "command": "python3 tests/tooling/sync_proof.py",
+    "status": "fulfilled",
+    "value": {
+      "chunk_id": "7635a2",
+      "wall_time_seconds": 0.00001348,
+      "exit_code": 0,
+      "original_token_count": 980,
+      "output": "{\n  \"scope\": \"source-token convention; not Rust semantic proof\",\n  \"inputs\": {\n    \"command/entity.rs\": \"f1e09c838573217eb0bc1e9910e7708f7524e41e10fa214dec3c6b9df891e089\",\n    \"command/entity_owner.rs\": \"5f8fde79ab2bfae92ddeb9dc74c1888073af8bee0b248f8584a7cc532cb115e5\",\n    \"command/execution.rs\": \"b408c3f67490e18e9ee969d5ac9ccc0253b44d73226956cb8f1d7f9cf7c70e82\",\n    \"command/json.rs\": \"64419603b3ee2d5a890a50d688ed4cd29ce0612136565672103df102c48d3e6c\",\n    \"command/ledger_txn.rs\": \"87ea05ed454e5f8ba194af438eb79fe0996c583e005f59f4d2ef501586d1d329\",\n    \"command/merge.rs\": \"bd74db90486b83d369995fea252a1301fc113ee1c4cfb6fad879324afadebabb\",\n    \"command/mod.rs\": \"877253c2c62d190eb488298237edada832b139a41dbcb0fd146e9a1f2874f1a7\",\n    \"command/overlay.rs\": \"65b36cbcdf2db74c114533373419cd894d1b9bdcf42db198f2092519ad89b847\",\n    \"command/owner.rs\": \"1cabd73405ed5ae15ce20caf3d4d0b6a7965c7dca187daee41f6f800417200b2\",\n    \"command/phase3_cases.rs\": \"633c3603fd16b8f1b6ff18a85ee0990d9430a9aee89f4c1a57279e76c35cf427\",\n    \"command/policy.rs\": \"daf53a58133f92b537d95e08b5bd21346ee2130569ca3199ddb1607f6c6ee58a\",\n    \"command/proposed.rs\": \"9099639354f6f28f0a946d8f15d61e2dbbe99bcca71aad21c65147a31c5afbc5\",\n    \"command/pull.rs\": \"56b0cba7e2fa31c4cb3d620c1bd484b6ac3c91a21a03348eb07b100e4ca63ca7\",\n    \"command/queue.rs\": \"c2efd2b9d2e4a6197b8ec69dcef40b1584363d8a635ac61a179e16e7cda727d3\",\n    \"command/reconcile/discard.rs\": \"57559fe896d922a944caa48cab197f2fb9683af5841cc9d4c908c11050b1a76e\",\n    \"command/reconcile/fallback.rs\": \"26a296158cf3b0a3fac10b7aaebac35e844be8e92487c4dfdd4c7fd8350ed67c\",\n    \"command/reconcile.rs\": \"f31e93619402fc73cd0bbe704259bd79e8157a179825c0ae2355f9c790105cd1\",\n    \"command/records.rs\": \"c817f766428cd9ff7687a38d1464a0e2ecd1f6430d295557f8f71bc55f4a89ad\",\n    \"command/security.rs\": \"8dd4e236fac63c93019ce32e3e17932915409a4262bab5966765e19deb513038\",\n    \"command/sync.rs\": \"f193e3cc2e6894b2cc131095248fc70eb6f5cd0014b423227d79392b7eceb83f\",\n    \"lib.rs\": \"9484a9eb3fcf563086c450d1746c7c6a76f8347f26f7928240c77ccebe9433db\",\n    \"model/database.rs\": \"33329a639cdada74dc7a3748d0e7187bbca7b7d927ddc3ad1af21ed66798ed0b\",\n    \"model/migration.rs\": \"db9cfabe28b4f9a511f2dc77f93e2ae2f2db4096b192277e07ed3b84bff859df\",\n    \"model/mod.rs\": \"9b8132927cd06a8c92d62aa7ca74a8f74c6e1e19ed5082c46b98fd023cbbae79\",\n    \"model/query.rs\": \"224ad496a17f2fc702ed808baa7ff2c1fbbd8f41fcf982e6b7174b32e54bd67f\",\n    \"model/reactive.rs\": \"a9f6323e69b5f74eb06d0879fc7c1d977990d3a3aa602f19268bc874e8faabda\",\n    \"model/schema.rs\": \"b9b79984a9ab98de0811722f207a245fe10c82444c2612dc10769b882d338741\",\n    \"storage/counters.rs\": \"04f36841fd9cb0f95c5cc99d461a94165794a12f93acda466157cb9c9162dde9\",\n    \"storage/model.rs\": \"48faafdadc8aa5e4cb4ef8971e34735bbfc277a0405d27f3a923e1bdf5e592c2\",\n    \"storage/observation.rs\": \"1a09c65d6fd034f888b51a9849a037272f53bc73942b991a4f3d0291dc9998cc\",\n    \"storage/snapshot/delta_tests.rs\": \"8e3395484a6066fd8c10777d5e496f3dad747641031d92f51d91b01ef6d34814\",\n    \"storage/snapshot/lifecycle.rs\": \"21cdee8560896debba4b6ef2084eceec70a635ed9c1c01facf8cec09885ec67e\",\n    \"storage/snapshot/mod.rs\": \"ddf6fc8f99ad03c3ddaa86ae1d9e1d9bf3f415d3882d27c39a46feef8e1691d9\",\n    \"storage/snapshot/projection.rs\": \"91aa2fb3d2fe2aca7d3f62c3ea7de5e78bb9ae8decd177d289ec25135134fd29\",\n    \"storage/snapshot/sync.rs\": \"1d1d6b17f0ec36311bcbde0886b50cb392c7af80ca321a866d55ecd68580c3a9\",\n    \"storage/snapshot/typed.rs\": \"0a8ed744aa90dbc75d1dae649a84a20eeaad57601cc7c0d298d0d67000d21386\",\n    \"storage/snapshot/undo.rs\": \"e00ccf7d6f7048fa81fec025cb11ab963ea9db91e741b2a66fcb6d9c63b644ac\",\n    \"storage/sync.rs\": \"3b26c32d47f308fa620763bd43783070b8d278403ccb167785b208d0a3f19e64\",\n    \"storage/typed.rs\": \"fff0af4a0483e096f9768ccdc24e23a445547098895740d747c76c2d7055b7aa\",\n    \"storage.rs\": \"5b7dc18c1d3de75e0aea273ea65675df4f0724bf7b898b3c3ffe0ca3b3175160\"\n  },\n  \"errors\": [],\n  \"passed\": true\n}\n"
+    }
+  },
+  {
+    "command": "python3 tools/release/compatibility.py sources",
+    "status": "fulfilled",
+    "value": {
+      "chunk_id": "6316e3",
+      "wall_time_seconds": 0.083102717,
+      "exit_code": 0,
+      "original_token_count": 323,
+      "output": "{\n  \"scope\": \"reviewed source drift; not runtime or semantic API certification\",\n  \"inputs\": {\n    \"crates/hoyadb-native/include/HoyaNative/module.modulemap\": \"33326b1780c8a1c82237313f2ee88578d34e816af4ecc3a4a799abfeb23af60c\",\n    \"crates/hoyadb-native/include/hoyadb.h\": \"2f61e513be42d3e7aabbd9bb06f02a98d88096551276ae89dd5b30aa28526b48\",\n    \"packages/client/application.d.ts\": \"6184c53e8dfbfb14855c8098a949e73a1fa0ab7f17516a77affcfb6f2be498b5\",\n    \"packages/client/index.d.ts\": \"98be4a24a5765d8826525ba75dab16222fe8b3c38981def01f0f0127fb7d4499\",\n    \"packages/client/node.d.ts\": \"da4f811acb86bbc667bb7dfab65eb2189ba18c4a1eb8a143b868ed68a3009d2c\",\n    \"packages/client/web.d.ts\": \"f6722f025b0118c44521f365760e0ee1fad882b0ed77ec48803ef2a4a5f37a58\",\n    \"packages/react-native/index.d.ts\": \"27bc34203e4236957f375b2d693fda30d8511d3fa636288329db44389559f152\",\n    \"packages/react-native/package.json\": \"d5dcb80697a8db699204017193237278ac6d0aaaeeefa0b84f37bf3a21985b8d\",\n    \"packages/react-native/src/NativeHoyaDB.ts\": \"ba9f3eb228f537498c0c4673c8de5fbf9b26755e60d090ddf60a5203e51d5a99\",\n    \"packages/react-native/src/index.js\": \"edfe3fe864d66cbb5e53c79bd509d6098a277de2e401f14d6fdf5f0be9bcfec6\"\n  },\n  \"manifest_sha256\": \"989e1191b929bacaaeb5e4190d75f3b28e8385a311e6df3fcea623736c906f99\"\n}\n"
+    }
+  },
+  {
+    "command": "sh tests/tooling/formatting.sh",
+    "status": "fulfilled",
+    "value": {
+      "chunk_id": "c43068",
+      "wall_time_seconds": 0.118165573,
+      "exit_code": 0,
+      "original_token_count": 0,
+      "output": ""
+    }
+  },
+  {
+    "command": "cargo fmt --all --check",
+    "status": "fulfilled",
+    "value": {
+      "chunk_id": "b81da3",
+      "wall_time_seconds": 0.000012225,
+      "exit_code": 0,
+      "original_token_count": 0,
+      "output": ""
+    }
+  }
+]

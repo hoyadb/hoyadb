@@ -1,0 +1,2926 @@
+{
+ "schema": "hoyadb.sr23-probe-outcome/1",
+ "probe_dir": "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-security-remediation/jdk-capture-probe-1",
+ "harness_sha256": "a37528cc6eeda965c648f53296d1f67dc2e66ac435d6cc43c9c0a079e22eb4ca",
+ "walker_sha256": "838541c07384fb3a7d47fae28bce1cf1882f718132d9d3e913c1bfbbb08b1f4a",
+ "analyzer_sha256": "70547b583c6fb47f7d657fded166014b07900c94140d8db94c8b8682415572b6",
+ "pins_before": {
+  "realpath(bin/java)": {
+   "sha256": "2c663a2f4677833e1305ea553aa188af1e22aca92a85f39e6189ae0708e5f8b4",
+   "match": true
+  },
+  "lib/server/libjvm.dylib": {
+   "sha256": "15213df7162b170ef0f658004f534d52e92d8f24f67e2a7ce327ea0dc78014fb",
+   "match": true
+  },
+  "bin/jfr": {
+   "sha256": "e1425ac98334fff59d6b2b8cffb3cf720e90a88016db4f1c67a9ea5225bf881b",
+   "match": true
+  },
+  "lib/modules": {
+   "sha256": "1902c850eecc989ab9d3eb28bacc4cfcc15a058e62710ab87c3b9f4314fd8b91",
+   "match": true
+  },
+  "release": {
+   "sha256": "c112e6b5ddf9739d7b125ddb75f00ddee4bfa889a1246bdee8f1f009a139ee1d",
+   "match": true
+  }
+ },
+ "pins_after": {
+  "realpath(bin/java)": {
+   "sha256": "2c663a2f4677833e1305ea553aa188af1e22aca92a85f39e6189ae0708e5f8b4",
+   "match": true
+  },
+  "lib/server/libjvm.dylib": {
+   "sha256": "15213df7162b170ef0f658004f534d52e92d8f24f67e2a7ce327ea0dc78014fb",
+   "match": true
+  },
+  "bin/jfr": {
+   "sha256": "e1425ac98334fff59d6b2b8cffb3cf720e90a88016db4f1c67a9ea5225bf881b",
+   "match": true
+  },
+  "lib/modules": {
+   "sha256": "1902c850eecc989ab9d3eb28bacc4cfcc15a058e62710ab87c3b9f4314fd8b91",
+   "match": true
+  },
+  "release": {
+   "sha256": "c112e6b5ddf9739d7b125ddb75f00ddee4bfa889a1246bdee8f1f009a139ee1d",
+   "match": true
+  }
+ },
+ "jfc": {
+  "path": "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-security-remediation/jdk-capture-probe-1/jfc/sr23-probe.jfc",
+  "sha256": "bb7466813e9ca254602267a47f85e6f7cffe70480ad5f49ce3b3db448c0ce653"
+ },
+ "help": {
+  "tag_count": 171,
+  "tags": [
+   "a",
+   "add",
+   "age",
+   "all",
+   "alloc",
+   "annotation",
+   "arguments",
+   "attach",
+   "barrier",
+   "biasedlocking",
+   "blocks",
+   "bot",
+   "breakpoint",
+   "bytecode",
+   "cds",
+   "census",
+   "class",
+   "classhisto",
+   "cleanup",
+   "codecache",
+   "combination",
+   "combinations",
+   "compaction",
+   "compilation",
+   "condy",
+   "constantpool",
+   "constraints",
+   "container",
+   "coops",
+   "cpu",
+   "cset",
+   "data",
+   "datacreation",
+   "dcmd",
+   "decoder",
+   "defaultmethods",
+   "director",
+   "dump",
+   "dynamic",
+   "ergo",
+   "event",
+   "exceptions",
+   "exit",
+   "fingerprint",
+   "free",
+   "freelist",
+   "gc",
+   "handshake",
+   "hashtables",
+   "heap",
+   "humongous",
+   "ihop",
+   "iklass",
+   "indy",
+   "init",
+   "inlining",
+   "install",
+   "instead",
+   "interpreter",
+   "itables",
+   "jfr",
+   "jit",
+   "jni",
+   "jvmci",
+   "jvmti",
+   "lambda",
+   "library",
+   "liveness",
+   "load",
+   "loader",
+   "logging",
+   "malloc",
+   "map",
+   "mark",
+   "marking",
+   "matches",
+   "membername",
+   "memops",
+   "metadata",
+   "metaspace",
+   "methodcomparator",
+   "methodhandles",
+   "mirror",
+   "mmu",
+   "module",
+   "monitorinflation",
+   "monitormismatch",
+   "nestmates",
+   "nmethod",
+   "nmt",
+   "normalize",
+   "numa",
+   "objecttagging",
+   "obsolete",
+   "of",
+   "oldobject",
+   "oom",
+   "oopmap",
+   "oops",
+   "oopstorage",
+   "os",
+   "owner",
+   "pagesize",
+   "parser",
+   "patch",
+   "path",
+   "pecifying",
+   "perf",
+   "periodic",
+   "phases",
+   "plab",
+   "placeholders",
+   "preorder",
+   "preview",
+   "promotion",
+   "protectiondomain",
+   "ptrqueue",
+   "purge",
+   "record",
+   "redefine",
+   "ref",
+   "refine",
+   "region",
+   "reloc",
+   "remset",
+   "resolve",
+   "safepoint",
+   "sampling",
+   "scavenge",
+   "sealed",
+   "setting",
+   "smr",
+   "stackbarrier",
+   "stackmap",
+   "stacktrace",
+   "stackwalk",
+   "start",
+   "startup",
+   "startuptime",
+   "state",
+   "stats",
+   "streaming",
+   "stringdedup",
+   "stringtable",
+   "subclass",
+   "survivor",
+   "suspend",
+   "sweep",
+   "symboltable",
+   "system",
+   "table",
+   "tag",
+   "task",
+   "thread",
+   "throttle",
+   "time",
+   "timer",
+   "tlab",
+   "tracking",
+   "unload",
+   "unshareable",
+   "update",
+   "valuebasedclasses",
+   "verification",
+   "verify",
+   "vmmutex",
+   "vmoperation",
+   "vmthread",
+   "vtables",
+   "vtablestubs",
+   "workgang"
+  ],
+  "stdout_sha256": "945cb44794268eef782d4999f21f0e95ff259a62e39c35d0ef189c41c3303ef7",
+  "spawned_pid": 56829,
+  "returncode": 0
+ },
+ "candidates": {
+  "jni+resolve=debug": {
+   "tags": [
+    "jni",
+    "resolve"
+   ],
+   "all_tags_in_help": true
+  },
+  "library=trace": {
+   "tags": [
+    "library"
+   ],
+   "all_tags_in_help": true
+  },
+  "library+load=trace": {
+   "tags": [
+    "library",
+    "load"
+   ],
+   "all_tags_in_help": true
+  },
+  "library+unload=trace": {
+   "tags": [
+    "library",
+    "unload"
+   ],
+   "all_tags_in_help": true
+  },
+  "os+library=trace": {
+   "tags": [
+    "os",
+    "library"
+   ],
+   "all_tags_in_help": true
+  },
+  "os+library+load=trace": {
+   "tags": [
+    "os",
+    "library",
+    "load"
+   ],
+   "all_tags_in_help": true
+  },
+  "os+library+unload=trace": {
+   "tags": [
+    "os",
+    "library",
+    "unload"
+   ],
+   "all_tags_in_help": true
+  }
+ },
+ "selected_candidates_before_version_runs": [
+  "jni+resolve=debug",
+  "library=trace",
+  "library+load=trace",
+  "library+unload=trace",
+  "os+library=trace",
+  "os+library+load=trace",
+  "os+library+unload=trace"
+ ],
+ "narrowed_retries": [
+  {
+   "mode": "A",
+   "omitted_exactly": [
+    "library+load=trace",
+    "library+unload=trace",
+    "os+library+load=trace",
+    "os+library+unload=trace",
+    "os+library=trace"
+   ]
+  },
+  {
+   "mode": "B",
+   "omitted_exactly": [
+    "library+load=trace",
+    "library+unload=trace",
+    "os+library+load=trace",
+    "os+library+unload=trace",
+    "os+library=trace"
+   ]
+  }
+ ],
+ "attempts": [
+  {
+   "name": "xlog-help",
+   "spawned_pid": 56829,
+   "returncode": 0,
+   "elapsed_s": 0.045,
+   "started_utc": "2026-10-26T00:25:30.794447+00:00",
+   "ended_utc": "2026-10-26T00:25:30.839391+00:00",
+   "stdout_sha256": "945cb44794268eef782d4999f21f0e95ff259a62e39c35d0ef189c41c3303ef7",
+   "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "env_names": [
+    "HOME",
+    "JAVA_HOME",
+    "LANG",
+    "PATH",
+    "TMPDIR"
+   ],
+   "killed_after_timeout": null,
+   "unsupported_logging": null,
+   "requested_candidates": null,
+   "probe_failure": null,
+   "argv_template": [
+    "/Users/boristacyniak/.sdkman/candidates/java/17.0.1-tem/bin/java",
+    "-XX:-UsePerfData",
+    "-Xlog:help"
+   ],
+   "inventory": {
+    "stderr.txt": {
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout.txt": {
+     "bytes": 4987,
+     "sha256": "945cb44794268eef782d4999f21f0e95ff259a62e39c35d0ef189c41c3303ef7"
+    }
+   }
+  },
+  {
+   "name": "version-A",
+   "spawned_pid": 56830,
+   "returncode": 0,
+   "elapsed_s": 0.547,
+   "started_utc": "2026-10-26T00:25:30.844814+00:00",
+   "ended_utc": "2026-10-26T00:25:31.391379+00:00",
+   "stdout_sha256": "3321009c288e2526b0b6806ebf0de5ab315bf7ef247fd38f3deb6899a5264521",
+   "stderr_sha256": "8ab7fe7d83e713317b4c9bf7c3ab910b1e2230d23ce25b22849a6d6e71555c2f",
+   "env_names": [
+    "HOME",
+    "JAVA_HOME",
+    "LANG",
+    "PATH",
+    "TMPDIR"
+   ],
+   "killed_after_timeout": null,
+   "unsupported_logging": {
+    "mapped_selections": [
+     "library+load=trace",
+     "library+unload=trace",
+     "os+library+load=trace",
+     "os+library+unload=trace",
+     "os+library=trace"
+    ],
+    "diagnostic_present": true
+   },
+   "requested_candidates": [
+    "jni+resolve=debug",
+    "library=trace",
+    "library+load=trace",
+    "library+unload=trace",
+    "os+library=trace",
+    "os+library+load=trace",
+    "os+library+unload=trace"
+   ],
+   "probe_failure": null,
+   "argv_template": [
+    "/Users/boristacyniak/.sdkman/candidates/java/17.0.1-tem/bin/java",
+    "-XX:-UsePerfData",
+    "-Djava.io.tmpdir=<probe>/run-A/tmp",
+    "-XX:FlightRecorderOptions=repository=<probe>/run-A/repo",
+    "-XX:StartFlightRecording=filename=<probe>/run-A/jfr/,dumponexit=true,settings=<probe>/jfc/sr23-probe.jfc",
+    "-Xlog:class+load=info:file=<probe>/run-A/classload-%p.log:uptime,pid,tid:filecount=0",
+    "-Xlog:jni+resolve=debug:file=<probe>/run-A/log-jni_resolve-%p.log:uptime,pid,tid:filecount=0",
+    "-Xlog:library=trace:file=<probe>/run-A/log-library-%p.log:uptime,pid,tid:filecount=0",
+    "-Xlog:library+load=trace:file=<probe>/run-A/log-library_load-%p.log:uptime,pid,tid:filecount=0",
+    "-Xlog:library+unload=trace:file=<probe>/run-A/log-library_unload-%p.log:uptime,pid,tid:filecount=0",
+    "-Xlog:os+library=trace:file=<probe>/run-A/log-os_library-%p.log:uptime,pid,tid:filecount=0",
+    "-Xlog:os+library+load=trace:file=<probe>/run-A/log-os_library_load-%p.log:uptime,pid,tid:filecount=0",
+    "-Xlog:os+library+unload=trace:file=<probe>/run-A/log-os_library_unload-%p.log:uptime,pid,tid:filecount=0",
+    "-version"
+   ],
+   "capture_options_template": [
+    "-XX:-UsePerfData",
+    "-Djava.io.tmpdir=<probe>/run-A/tmp",
+    "-XX:FlightRecorderOptions=repository=<probe>/run-A/repo",
+    "-XX:StartFlightRecording=filename=<probe>/run-A/jfr/,dumponexit=true,settings=<probe>/jfc/sr23-probe.jfc",
+    "-Xlog:class+load=info:file=<probe>/run-A/classload-%p.log:uptime,pid,tid:filecount=0",
+    "-Xlog:jni+resolve=debug:file=<probe>/run-A/log-jni_resolve-%p.log:uptime,pid,tid:filecount=0",
+    "-Xlog:library=trace:file=<probe>/run-A/log-library-%p.log:uptime,pid,tid:filecount=0",
+    "-Xlog:library+load=trace:file=<probe>/run-A/log-library_load-%p.log:uptime,pid,tid:filecount=0",
+    "-Xlog:library+unload=trace:file=<probe>/run-A/log-library_unload-%p.log:uptime,pid,tid:filecount=0",
+    "-Xlog:os+library=trace:file=<probe>/run-A/log-os_library-%p.log:uptime,pid,tid:filecount=0",
+    "-Xlog:os+library+load=trace:file=<probe>/run-A/log-os_library_load-%p.log:uptime,pid,tid:filecount=0",
+    "-Xlog:os+library+unload=trace:file=<probe>/run-A/log-os_library_unload-%p.log:uptime,pid,tid:filecount=0"
+   ],
+   "inventory": {
+    "classload-56830.log": {
+     "bytes": 109086,
+     "sha256": "bcdd83ccc760787d69b5a605bc5f138b616e310ff669ced53dbb8e925a48348b"
+    },
+    "jfr/hotspot-pid-56830-id-1-2026_10_26_01_25_31.jfr": {
+     "bytes": 204236,
+     "sha256": "f27f80b4104f72be033f15b1f26adf9f4a654e759c6ea5183ff52c3d5aa302fb"
+    },
+    "log-jni_resolve-56830.log": {
+     "bytes": 29140,
+     "sha256": "a4d9784429fb575f23f0a242f1323f50ae34ce1bf971ad024d75f2f7707a38fa"
+    },
+    "log-library-56830.log": {
+     "bytes": 12448,
+     "sha256": "d8f1b4ab04b32c8c998efe103a7835ea30475fe84d97fdaf869fb46287b31f60"
+    },
+    "log-library_load-56830.log": {
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "log-library_unload-56830.log": {
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "log-os_library-56830.log": {
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "log-os_library_load-56830.log": {
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "log-os_library_unload-56830.log": {
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stderr.txt": {
+     "bytes": 182,
+     "sha256": "8ab7fe7d83e713317b4c9bf7c3ab910b1e2230d23ce25b22849a6d6e71555c2f"
+    },
+    "stdout.txt": {
+     "bytes": 1018,
+     "sha256": "3321009c288e2526b0b6806ebf0de5ab315bf7ef247fd38f3deb6899a5264521"
+    }
+   }
+  },
+  {
+   "name": "version-A-retry1",
+   "spawned_pid": 56845,
+   "returncode": 0,
+   "elapsed_s": 0.592,
+   "started_utc": "2026-10-26T00:25:31.398017+00:00",
+   "ended_utc": "2026-10-26T00:25:31.989502+00:00",
+   "stdout_sha256": "1348c3352cd84a9bf2365a7a9902575fe05eabf670d5224955ccfd2c7989a547",
+   "stderr_sha256": "8ab7fe7d83e713317b4c9bf7c3ab910b1e2230d23ce25b22849a6d6e71555c2f",
+   "env_names": [
+    "HOME",
+    "JAVA_HOME",
+    "LANG",
+    "PATH",
+    "TMPDIR"
+   ],
+   "killed_after_timeout": null,
+   "unsupported_logging": {
+    "mapped_selections": [],
+    "diagnostic_present": false
+   },
+   "requested_candidates": [
+    "jni+resolve=debug",
+    "library=trace"
+   ],
+   "probe_failure": null,
+   "argv_template": [
+    "/Users/boristacyniak/.sdkman/candidates/java/17.0.1-tem/bin/java",
+    "-XX:-UsePerfData",
+    "-Djava.io.tmpdir=<probe>/run-A-retry1/tmp",
+    "-XX:FlightRecorderOptions=repository=<probe>/run-A-retry1/repo",
+    "-XX:StartFlightRecording=filename=<probe>/run-A-retry1/jfr/,dumponexit=true,settings=<probe>/jfc/sr23-probe.jfc",
+    "-Xlog:class+load=info:file=<probe>/run-A-retry1/classload-%p.log:uptime,pid,tid:filecount=0",
+    "-Xlog:jni+resolve=debug:file=<probe>/run-A-retry1/log-jni_resolve-%p.log:uptime,pid,tid:filecount=0",
+    "-Xlog:library=trace:file=<probe>/run-A-retry1/log-library-%p.log:uptime,pid,tid:filecount=0",
+    "-version"
+   ],
+   "capture_options_template": [
+    "-XX:-UsePerfData",
+    "-Djava.io.tmpdir=<probe>/run-A-retry1/tmp",
+    "-XX:FlightRecorderOptions=repository=<probe>/run-A-retry1/repo",
+    "-XX:StartFlightRecording=filename=<probe>/run-A-retry1/jfr/,dumponexit=true,settings=<probe>/jfc/sr23-probe.jfc",
+    "-Xlog:class+load=info:file=<probe>/run-A-retry1/classload-%p.log:uptime,pid,tid:filecount=0",
+    "-Xlog:jni+resolve=debug:file=<probe>/run-A-retry1/log-jni_resolve-%p.log:uptime,pid,tid:filecount=0",
+    "-Xlog:library=trace:file=<probe>/run-A-retry1/log-library-%p.log:uptime,pid,tid:filecount=0"
+   ],
+   "inventory": {
+    "classload-56845.log": {
+     "bytes": 108833,
+     "sha256": "4a4d6e92dc50f560fb894abcaff9f025196380491e881442c490a9f268b33278"
+    },
+    "jfr/hotspot-pid-56845-id-1-2026_10_26_01_25_31.jfr": {
+     "bytes": 202414,
+     "sha256": "aac79f12978faa7f36f979c2df66ba7386dca73de764fc2d9c29189beadd8903"
+    },
+    "log-jni_resolve-56845.log": {
+     "bytes": 29002,
+     "sha256": "5aa26c9be4e528b736a8086cc4d8ad7ecb2cf48e53ec19bfbc03ed343dac52e1"
+    },
+    "log-library-56845.log": {
+     "bytes": 12365,
+     "sha256": "2d9516ec697249fe581f173a6493e86508ae01f97df34ce402acb8e5ed5e6216"
+    },
+    "stderr.txt": {
+     "bytes": 182,
+     "sha256": "8ab7fe7d83e713317b4c9bf7c3ab910b1e2230d23ce25b22849a6d6e71555c2f"
+    },
+    "stdout.txt": {
+     "bytes": 221,
+     "sha256": "1348c3352cd84a9bf2365a7a9902575fe05eabf670d5224955ccfd2c7989a547"
+    }
+   }
+  },
+  {
+   "name": "version-B",
+   "spawned_pid": 56846,
+   "returncode": 0,
+   "elapsed_s": 0.537,
+   "started_utc": "2026-10-26T00:25:31.995188+00:00",
+   "ended_utc": "2026-10-26T00:25:32.532286+00:00",
+   "stdout_sha256": "e1671a7f98c35f4f726898012fff63391e1ebfb7f26f286cf8e66730b0219a20",
+   "stderr_sha256": "328e85e371c93f369c52a5623c9c01ac2d7f914aa2bf07c2b1f45ce01272b02b",
+   "env_names": [
+    "HOME",
+    "JAVA_HOME",
+    "JAVA_TOOL_OPTIONS",
+    "LANG",
+    "PATH",
+    "TMPDIR"
+   ],
+   "killed_after_timeout": null,
+   "unsupported_logging": {
+    "mapped_selections": [
+     "library+load=trace",
+     "library+unload=trace",
+     "os+library+load=trace",
+     "os+library+unload=trace",
+     "os+library=trace"
+    ],
+    "diagnostic_present": true
+   },
+   "requested_candidates": [
+    "jni+resolve=debug",
+    "library=trace",
+    "library+load=trace",
+    "library+unload=trace",
+    "os+library=trace",
+    "os+library+load=trace",
+    "os+library+unload=trace"
+   ],
+   "probe_failure": null,
+   "argv_template": [
+    "/Users/boristacyniak/.sdkman/candidates/java/17.0.1-tem/bin/java",
+    "-version"
+   ],
+   "capture_options_template": [
+    "-XX:-UsePerfData",
+    "-Djava.io.tmpdir=<probe>/run-B/tmp",
+    "-XX:FlightRecorderOptions=repository=<probe>/run-B/repo",
+    "-XX:StartFlightRecording=filename=<probe>/run-B/jfr/,dumponexit=true,settings=<probe>/jfc/sr23-probe.jfc",
+    "-Xlog:class+load=info:file=<probe>/run-B/classload-%p.log:uptime,pid,tid:filecount=0",
+    "-Xlog:jni+resolve=debug:file=<probe>/run-B/log-jni_resolve-%p.log:uptime,pid,tid:filecount=0",
+    "-Xlog:library=trace:file=<probe>/run-B/log-library-%p.log:uptime,pid,tid:filecount=0",
+    "-Xlog:library+load=trace:file=<probe>/run-B/log-library_load-%p.log:uptime,pid,tid:filecount=0",
+    "-Xlog:library+unload=trace:file=<probe>/run-B/log-library_unload-%p.log:uptime,pid,tid:filecount=0",
+    "-Xlog:os+library=trace:file=<probe>/run-B/log-os_library-%p.log:uptime,pid,tid:filecount=0",
+    "-Xlog:os+library+load=trace:file=<probe>/run-B/log-os_library_load-%p.log:uptime,pid,tid:filecount=0",
+    "-Xlog:os+library+unload=trace:file=<probe>/run-B/log-os_library_unload-%p.log:uptime,pid,tid:filecount=0"
+   ],
+   "inventory": {
+    "classload-56846.log": {
+     "bytes": 108833,
+     "sha256": "450a5673c2d127de41a83002666b635d15459ceef2e313c27b910b382b65b629"
+    },
+    "jfr/hotspot-pid-56846-id-1-2026_10_26_01_25_32.jfr": {
+     "bytes": 208538,
+     "sha256": "3a5c2b18a6317673a47d3d806b8c3f7336f75f5bc55297cb2bc3c1af5bc03615"
+    },
+    "log-jni_resolve-56846.log": {
+     "bytes": 29002,
+     "sha256": "59a5e17ddbfa3c26171ac90af1f72d56063c28bbb9037919890d6484d55eff47"
+    },
+    "log-library-56846.log": {
+     "bytes": 12365,
+     "sha256": "5255d06e90d5c168c978ce8757f4f8503c2cf272767b62fcf7fd527f4b19907f"
+    },
+    "log-library_load-56846.log": {
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "log-library_unload-56846.log": {
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "log-os_library-56846.log": {
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "log-os_library_load-56846.log": {
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "log-os_library_unload-56846.log": {
+     "bytes": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stderr.txt": {
+     "bytes": 2354,
+     "sha256": "328e85e371c93f369c52a5623c9c01ac2d7f914aa2bf07c2b1f45ce01272b02b"
+    },
+    "stdout.txt": {
+     "bytes": 1018,
+     "sha256": "e1671a7f98c35f4f726898012fff63391e1ebfb7f26f286cf8e66730b0219a20"
+    }
+   }
+  },
+  {
+   "name": "version-B-retry1",
+   "spawned_pid": 56868,
+   "returncode": 0,
+   "elapsed_s": 0.531,
+   "started_utc": "2026-10-26T00:25:32.539022+00:00",
+   "ended_utc": "2026-10-26T00:25:33.070482+00:00",
+   "stdout_sha256": "158312e6d3b48bdde7dac3a444b15ebcc74a8facc2e1fb0741de9e3d1435994f",
+   "stderr_sha256": "3c7c2da96ce79978fdf61efa99d2e2651bd93a9368fbcc2f696f2fab7a2d250b",
+   "env_names": [
+    "HOME",
+    "JAVA_HOME",
+    "JAVA_TOOL_OPTIONS",
+    "LANG",
+    "PATH",
+    "TMPDIR"
+   ],
+   "killed_after_timeout": null,
+   "unsupported_logging": {
+    "mapped_selections": [],
+    "diagnostic_present": false
+   },
+   "requested_candidates": [
+    "jni+resolve=debug",
+    "library=trace"
+   ],
+   "probe_failure": null,
+   "argv_template": [
+    "/Users/boristacyniak/.sdkman/candidates/java/17.0.1-tem/bin/java",
+    "-version"
+   ],
+   "capture_options_template": [
+    "-XX:-UsePerfData",
+    "-Djava.io.tmpdir=<probe>/run-B-retry1/tmp",
+    "-XX:FlightRecorderOptions=repository=<probe>/run-B-retry1/repo",
+    "-XX:StartFlightRecording=filename=<probe>/run-B-retry1/jfr/,dumponexit=true,settings=<probe>/jfc/sr23-probe.jfc",
+    "-Xlog:class+load=info:file=<probe>/run-B-retry1/classload-%p.log:uptime,pid,tid:filecount=0",
+    "-Xlog:jni+resolve=debug:file=<probe>/run-B-retry1/log-jni_resolve-%p.log:uptime,pid,tid:filecount=0",
+    "-Xlog:library=trace:file=<probe>/run-B-retry1/log-library-%p.log:uptime,pid,tid:filecount=0"
+   ],
+   "inventory": {
+    "classload-56868.log": {
+     "bytes": 108833,
+     "sha256": "e3c9dee1c5bb0c59158599b4358dbc51b2828da6103f7b93b0fda8b26bef8dab"
+    },
+    "jfr/hotspot-pid-56868-id-1-2026_10_26_01_25_32.jfr": {
+     "bytes": 204837,
+     "sha256": "2bf83125c62bcbf4fbb8ecc3219bfdb0e4b67c2f15edb8ef8c15f505dde7e15e"
+    },
+    "log-jni_resolve-56868.log": {
+     "bytes": 29002,
+     "sha256": "cf1f2d8e6ff56176861f9fbcf49f48d6c0ececec9b3e2b46ae7ef27b87985479"
+    },
+    "log-library-56868.log": {
+     "bytes": 12365,
+     "sha256": "65595994c203773214ccd4e8d9e9bfea07d4846fdff0a861127bf74c4849187b"
+    },
+    "stderr.txt": {
+     "bytes": 1415,
+     "sha256": "3c7c2da96ce79978fdf61efa99d2e2651bd93a9368fbcc2f696f2fab7a2d250b"
+    },
+    "stdout.txt": {
+     "bytes": 221,
+     "sha256": "158312e6d3b48bdde7dac3a444b15ebcc74a8facc2e1fb0741de9e3d1435994f"
+    }
+   }
+  }
+ ],
+ "decoders": [
+  {
+   "name": "decode-A-summary",
+   "spawned_pid": 56885,
+   "returncode": 0,
+   "elapsed_s": 0.529,
+   "started_utc": "2026-10-26T00:25:33.077474+00:00",
+   "ended_utc": "2026-10-26T00:25:33.606205+00:00",
+   "stdout_sha256": "bfd37f10c5baebe33a78ddd3fd5cf7740e4684f229a8d836de71e669bd6ac082",
+   "stderr_sha256": "30feecb8b0a90f7d04d4dc5be1f5a5c91a7cc352c4f3db1abb27b62ddbf8b6aa",
+   "env_names": [
+    "HOME",
+    "JAVA_HOME",
+    "JAVA_TOOL_OPTIONS",
+    "LANG",
+    "PATH",
+    "TMPDIR"
+   ],
+   "killed_after_timeout": null,
+   "unsupported_logging": null,
+   "requested_candidates": null,
+   "probe_failure": null,
+   "argv_template": [
+    "/Users/boristacyniak/.sdkman/candidates/java/17.0.1-tem/bin/jfr",
+    "summary",
+    "<probe>/run-A-retry1/jfr/hotspot-pid-56845-id-1-2026_10_26_01_25_31.jfr"
+   ],
+   "inventory": {
+    "stderr.txt": {
+     "bytes": 190,
+     "sha256": "30feecb8b0a90f7d04d4dc5be1f5a5c91a7cc352c4f3db1abb27b62ddbf8b6aa"
+    },
+    "stdout.txt": {
+     "bytes": 11364,
+     "sha256": "bfd37f10c5baebe33a78ddd3fd5cf7740e4684f229a8d836de71e669bd6ac082"
+    }
+   }
+  },
+  {
+   "name": "decode-A-print",
+   "spawned_pid": 56907,
+   "returncode": 0,
+   "elapsed_s": 0.266,
+   "started_utc": "2026-10-26T00:25:33.609421+00:00",
+   "ended_utc": "2026-10-26T00:25:33.875454+00:00",
+   "stdout_sha256": "c1007cef65837de15f1cff5370a3608650bebe9b2b7b48d87a1f3bf15eae8cf3",
+   "stderr_sha256": "377f6951a2546bdcab094e3beab49f0eca8518f9ab7b6ca8cfb8fc6ec191d5d8",
+   "env_names": [
+    "HOME",
+    "JAVA_HOME",
+    "JAVA_TOOL_OPTIONS",
+    "LANG",
+    "PATH",
+    "TMPDIR"
+   ],
+   "killed_after_timeout": null,
+   "unsupported_logging": null,
+   "requested_candidates": null,
+   "probe_failure": null,
+   "argv_template": [
+    "/Users/boristacyniak/.sdkman/candidates/java/17.0.1-tem/bin/jfr",
+    "print",
+    "--json",
+    "--events",
+    "jdk.NativeLibrary,jdk.JVMInformation,jdk.InitialSystemProperty,jdk.InitialEnvironmentVariable,jdk.Shutdown,jdk.ProcessStart",
+    "<probe>/run-A-retry1/jfr/hotspot-pid-56845-id-1-2026_10_26_01_25_31.jfr"
+   ],
+   "inventory": {
+    "stderr.txt": {
+     "bytes": 188,
+     "sha256": "377f6951a2546bdcab094e3beab49f0eca8518f9ab7b6ca8cfb8fc6ec191d5d8"
+    },
+    "stdout.txt": {
+     "bytes": 319882,
+     "sha256": "c1007cef65837de15f1cff5370a3608650bebe9b2b7b48d87a1f3bf15eae8cf3"
+    }
+   }
+  },
+  {
+   "name": "decode-B-summary",
+   "spawned_pid": 56908,
+   "returncode": 0,
+   "elapsed_s": 0.254,
+   "started_utc": "2026-10-26T00:25:33.881404+00:00",
+   "ended_utc": "2026-10-26T00:25:34.135053+00:00",
+   "stdout_sha256": "ed9b11287a9b40c16c76649e28e5875842458172077420fe68661d220a21a99d",
+   "stderr_sha256": "41895c060f309a03bcdc360ca8ef83052a2bf6c5454c0028e6a5a0dccea3515f",
+   "env_names": [
+    "HOME",
+    "JAVA_HOME",
+    "JAVA_TOOL_OPTIONS",
+    "LANG",
+    "PATH",
+    "TMPDIR"
+   ],
+   "killed_after_timeout": null,
+   "unsupported_logging": null,
+   "requested_candidates": null,
+   "probe_failure": null,
+   "argv_template": [
+    "/Users/boristacyniak/.sdkman/candidates/java/17.0.1-tem/bin/jfr",
+    "summary",
+    "<probe>/run-B-retry1/jfr/hotspot-pid-56868-id-1-2026_10_26_01_25_32.jfr"
+   ],
+   "inventory": {
+    "stderr.txt": {
+     "bytes": 190,
+     "sha256": "41895c060f309a03bcdc360ca8ef83052a2bf6c5454c0028e6a5a0dccea3515f"
+    },
+    "stdout.txt": {
+     "bytes": 11364,
+     "sha256": "ed9b11287a9b40c16c76649e28e5875842458172077420fe68661d220a21a99d"
+    }
+   }
+  },
+  {
+   "name": "decode-B-print",
+   "spawned_pid": 56910,
+   "returncode": 0,
+   "elapsed_s": 0.247,
+   "started_utc": "2026-10-26T00:25:34.138301+00:00",
+   "ended_utc": "2026-10-26T00:25:34.385361+00:00",
+   "stdout_sha256": "1c886a2662e8064716ed32d9a0eb0d4f12d3afa9c0f938d82429a8d733cf083d",
+   "stderr_sha256": "bb3b9392591e5eb32ab0ea02a0c67f4686fae5046c7362c97bda6c56cf613a99",
+   "env_names": [
+    "HOME",
+    "JAVA_HOME",
+    "JAVA_TOOL_OPTIONS",
+    "LANG",
+    "PATH",
+    "TMPDIR"
+   ],
+   "killed_after_timeout": null,
+   "unsupported_logging": null,
+   "requested_candidates": null,
+   "probe_failure": null,
+   "argv_template": [
+    "/Users/boristacyniak/.sdkman/candidates/java/17.0.1-tem/bin/jfr",
+    "print",
+    "--json",
+    "--events",
+    "jdk.NativeLibrary,jdk.JVMInformation,jdk.InitialSystemProperty,jdk.InitialEnvironmentVariable,jdk.Shutdown,jdk.ProcessStart",
+    "<probe>/run-B-retry1/jfr/hotspot-pid-56868-id-1-2026_10_26_01_25_32.jfr"
+   ],
+   "inventory": {
+    "stderr.txt": {
+     "bytes": 188,
+     "sha256": "bb3b9392591e5eb32ab0ea02a0c67f4686fae5046c7362c97bda6c56cf613a99"
+    },
+    "stdout.txt": {
+     "bytes": 322843,
+     "sha256": "1c886a2662e8064716ed32d9a0eb0d4f12d3afa9c0f938d82429a8d733cf083d"
+    }
+   }
+  }
+ ],
+ "modes": {
+  "A": {
+   "run_dir": "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-security-remediation/jdk-capture-probe-1/run-A-retry1",
+   "attempt": "version-A-retry1",
+   "spawned_pid": 56845,
+   "returncode": 0,
+   "elapsed_s": 0.592,
+   "recording": {
+    "file": "hotspot-pid-56845-id-1-2026_10_26_01_25_31.jfr",
+    "sha256": "aac79f12978faa7f36f979c2df66ba7386dca73de764fc2d9c29189beadd8903",
+    "bytes": 202414
+   },
+   "bytewalk": {
+    "file_bytes": 202414,
+    "chunks": [
+     {
+      "offset": 0,
+      "major": 2,
+      "minor": 1,
+      "size": 202414,
+      "constant_pool_offset": 202319,
+      "metadata_offset": 108468,
+      "start_nanos": 1792974331828611000,
+      "duration_nanos": 18302000,
+      "start_ticks": 942529840,
+      "ticks_per_second": 2400000000,
+      "state_byte": 0,
+      "flag_byte": 3,
+      "final": true
+     }
+    ],
+    "sizes_cover_file": true,
+    "final_chunk_last": true,
+    "problems": [],
+    "ok": true
+   },
+   "summary_header": {
+    "Version": "2.1",
+    "Chunks": "1",
+    "Start": "2026-10-26 00:25:31 (UTC)",
+    "Duration": "0 s"
+   },
+   "summary_counts": {
+    "jdk.NativeLibrary": {
+     "count": 1040,
+     "bytes": 92792
+    },
+    "jdk.InitialSystemProperty": {
+     "count": 30,
+     "bytes": 2215
+    },
+    "jdk.InitialEnvironmentVariable": {
+     "count": 12,
+     "bytes": 1035
+    },
+    "jdk.CheckPoint": {
+     "count": 7,
+     "bytes": 9542
+    },
+    "jdk.JVMInformation": {
+     "count": 2,
+     "bytes": 2864
+    },
+    "jdk.Metadata": {
+     "count": 1,
+     "bytes": 93851
+    },
+    "jdk.Shutdown": {
+     "count": 1,
+     "bytes": 47
+    },
+    "jdk.ThreadStart": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ThreadEnd": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ThreadSleep": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ThreadPark": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.JavaMonitorEnter": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.JavaMonitorWait": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.JavaMonitorInflate": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.SyncOnValueBasedClass": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.BiasedLockRevocation": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.BiasedLockSelfRevocation": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.BiasedLockClassRevocation": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ReservedStackActivation": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ClassLoad": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ClassDefine": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ClassRedefinition": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.RedefineClasses": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.RetransformClasses": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ClassUnload": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.IntFlagChanged": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.UnsignedIntFlagChanged": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.LongFlagChanged": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.UnsignedLongFlagChanged": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.DoubleFlagChanged": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.BooleanFlagChanged": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.StringFlagChanged": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.GCHeapSummary": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.MetaspaceSummary": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.MetaspaceGCThreshold": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.MetaspaceAllocationFailure": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.MetaspaceOOM": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.MetaspaceChunkFreeListSummary": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.PSHeapSummary": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.G1HeapSummary": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.GarbageCollection": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.SystemGC": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ParallelOldGarbageCollection": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.YoungGarbageCollection": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.OldGarbageCollection": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.G1GarbageCollection": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.G1MMU": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.EvacuationInformation": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.GCReferenceStatistics": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ObjectCountAfterGC": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.G1EvacuationYoungStatistics": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.G1EvacuationOldStatistics": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.G1BasicIHOP": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.G1AdaptiveIHOP": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.PromoteObjectInNewPLAB": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.PromoteObjectOutsidePLAB": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.PromotionFailed": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.EvacuationFailed": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ConcurrentModeFailure": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.GCPhasePause": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.GCPhasePauseLevel1": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.GCPhasePauseLevel2": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.GCPhasePauseLevel3": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.GCPhasePauseLevel4": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.GCPhaseConcurrent": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.GCPhaseConcurrentLevel1": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.GCPhaseParallel": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.AllocationRequiringGC": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.TenuringDistribution": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.G1HeapRegionTypeChange": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.Compilation": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.CompilerPhase": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.CompilationFailure": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.CompilerInlining": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.SweepCodeCache": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.CodeCacheFull": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.Deoptimization": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.SafepointBegin": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.SafepointStateSynchronization": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.SafepointCleanup": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.SafepointCleanupTask": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.SafepointEnd": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ExecuteVMOperation": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ObjectAllocationInNewTLAB": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ObjectAllocationOutsideTLAB": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ObjectAllocationSample": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.OldObjectSample": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.DumpReason": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.DataLoss": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.OSInformation": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.VirtualizationInformation": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.SystemProcess": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.CPUInformation": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.CPUTimeStampCounter": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.CPULoad": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ThreadCPULoad": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ThreadContextSwitchRate": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.NetworkUtilization": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.JavaThreadStatistics": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ClassLoadingStatistics": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ClassLoaderStatistics": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.SymbolTableStatistics": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.StringTableStatistics": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.PlaceholderTableStatistics": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.LoaderConstraintsTableStatistics": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ProtectionDomainCacheTableStatistics": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ThreadAllocationStatistics": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.PhysicalMemory": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ExecutionSample": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.NativeMethodSample": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ThreadDump": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ModuleRequire": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ModuleExport": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.CompilerStatistics": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.CompilerConfiguration": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.CodeCacheStatistics": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.CodeCacheConfiguration": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.CodeSweeperStatistics": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.CodeSweeperConfiguration": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.IntFlag": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.UnsignedIntFlag": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.LongFlag": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.UnsignedLongFlag": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.DoubleFlag": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.BooleanFlag": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.StringFlag": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ObjectCount": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.G1HeapRegionInformation": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.GCConfiguration": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.GCSurvivorConfiguration": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.GCTLABConfiguration": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.GCHeapConfiguration": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.YoungGenerationConfiguration": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ZAllocationStall": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ZPageAllocation": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ZRelocationSet": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ZRelocationSetGroup": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ZStatisticsCounter": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ZStatisticsSampler": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ZThreadPhase": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ZUncommit": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ZUnmap": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ShenandoahHeapRegionStateChange": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ShenandoahHeapRegionInformation": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.Flush": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.HeapDump": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.GCLocker": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.FileForce": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.FileRead": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.FileWrite": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.SocketRead": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.SocketWrite": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.JavaExceptionThrow": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ExceptionStatistics": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.JavaErrorThrow": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ActiveSetting": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ActiveRecording": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.Deserialization": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ProcessStart": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.SecurityPropertyModification": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.TLSHandshake": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.X509Certificate": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.X509Validation": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.DirectBufferStatistics": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ContainerConfiguration": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ContainerCPUUsage": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ContainerCPUThrottling": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ContainerMemoryUsage": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ContainerIOUsage": {
+     "count": 0,
+     "bytes": 0
+    }
+   },
+   "summary_nonzero_extras": {
+    "jdk.CheckPoint": 7,
+    "jdk.Metadata": 1
+   },
+   "requested_six_counts_summary": {
+    "jdk.NativeLibrary": 1040,
+    "jdk.JVMInformation": 2,
+    "jdk.InitialSystemProperty": 30,
+    "jdk.InitialEnvironmentVariable": 12,
+    "jdk.Shutdown": 1,
+    "jdk.ProcessStart": 0
+   },
+   "requested_six_counts_print": {
+    "jdk.NativeLibrary": 1040,
+    "jdk.JVMInformation": 2,
+    "jdk.InitialSystemProperty": 30,
+    "jdk.InitialEnvironmentVariable": 12,
+    "jdk.Shutdown": 1,
+    "jdk.ProcessStart": 0
+   },
+   "print_types_outside_six": [],
+   "pid_agreement": {
+    "spawned": 56845,
+    "jvminformation": [
+     56845
+    ],
+    "recording_filename": 56845,
+    "classlog_filename": [
+     56845
+    ],
+    "classlog_decorator": [
+     56845
+    ],
+    "all_equal": true
+   },
+   "jvminformation": {
+    "count": 2,
+    "jvmName": [
+     "OpenJDK 64-Bit Server VM"
+    ],
+    "jvmVersion_contains_17_0_1_12": true,
+    "javaArguments": [
+     ""
+    ],
+    "jvmArguments_sha256": [
+     "73f1036388fbff31801f2c07669809a2855af072c5edbebc991b49b48cf34de7"
+    ],
+    "jvmFlags_empty": true,
+    "begin_end_equal": true
+   },
+   "jvm_arguments_tokens_space_split": 7,
+   "capture_options_present_as_exact_space_tokens": {
+    "-XX:-UsePerfData": true,
+    "-Djava.io.tmpdir=/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-security-remediation/jdk-capture-probe-1/run-A-retry1/tmp": true,
+    "-XX:FlightRecorderOptions=repository=/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-security-remediation/jdk-capture-probe-1/run-A-retry1/repo": true,
+    "-XX:StartFlightRecording=filename=/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-security-remediation/jdk-capture-probe-1/run-A-retry1/jfr/,dumponexit=true,settings=/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-security-remediation/jdk-capture-probe-1/jfc/sr23-probe.jfc": true,
+    "-Xlog:class+load=info:file=/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-security-remediation/jdk-capture-probe-1/run-A-retry1/classload-%p.log:uptime,pid,tid:filecount=0": true,
+    "-Xlog:jni+resolve=debug:file=/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-security-remediation/jdk-capture-probe-1/run-A-retry1/log-jni_resolve-%p.log:uptime,pid,tid:filecount=0": true,
+    "-Xlog:library=trace:file=/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-security-remediation/jdk-capture-probe-1/run-A-retry1/log-library-%p.log:uptime,pid,tid:filecount=0": true
+   },
+   "environment": {
+    "recorded_names": [
+     "HOME",
+     "JAVA_HOME",
+     "LANG",
+     "PATH",
+     "TMPDIR",
+     "__CF_USER_TEXT_ENCODING"
+    ],
+    "constructed_names": [
+     "HOME",
+     "JAVA_HOME",
+     "LANG",
+     "PATH",
+     "TMPDIR"
+    ],
+    "launcher_added_names": [
+     "__CF_USER_TEXT_ENCODING"
+    ],
+    "missing_constructed_names": [],
+    "emissions_per_name": [
+     2
+    ],
+    "begin_end_equal_per_name": {
+     "HOME": true,
+     "JAVA_HOME": true,
+     "LANG": true,
+     "PATH": true,
+     "TMPDIR": true,
+     "__CF_USER_TEXT_ENCODING": true
+    },
+    "recorded_equals_constructed_for_constructed_names": {
+     "HOME": true,
+     "JAVA_HOME": true,
+     "LANG": true,
+     "PATH": true,
+     "TMPDIR": true
+    }
+   },
+   "system_properties": {
+    "names": [
+     "java.class.path",
+     "java.home",
+     "java.io.tmpdir",
+     "java.library.path",
+     "java.vm.compressedOopsMode",
+     "java.vm.info",
+     "java.vm.name",
+     "java.vm.specification.name",
+     "java.vm.specification.vendor",
+     "java.vm.specification.version",
+     "java.vm.vendor",
+     "java.vm.version",
+     "jdk.debug",
+     "sun.boot.library.path",
+     "sun.java.launcher"
+    ],
+    "emissions_per_name": [
+     2
+    ],
+    "begin_end_equal_per_name": {
+     "java.class.path": true,
+     "java.home": true,
+     "java.io.tmpdir": true,
+     "java.library.path": true,
+     "java.vm.compressedOopsMode": true,
+     "java.vm.info": true,
+     "java.vm.name": true,
+     "java.vm.specification.name": true,
+     "java.vm.specification.vendor": true,
+     "java.vm.specification.version": true,
+     "java.vm.vendor": true,
+     "java.vm.version": true,
+     "jdk.debug": true,
+     "sun.boot.library.path": true,
+     "sun.java.launcher": true
+    },
+    "java_io_tmpdir_equals_owned_tmp": true,
+    "java_home_equals_pinned": true
+   },
+   "native": {
+    "events": 1040,
+    "unique_names": 520,
+    "names_sha256": "b2e626230202435ebb08749b2b95a765b146e9cde0a0bcaa85673b70a3adad53",
+    "emissions_per_name": [
+     2
+    ],
+    "top_address_all_zero": true,
+    "base_address_all_nonzero": true,
+    "base_address_stable_begin_end": true,
+    "jdk_home_relative_names": [
+     "lib/libjava.dylib",
+     "lib/libjimage.dylib",
+     "lib/libjli.dylib",
+     "lib/libnet.dylib",
+     "lib/libnio.dylib",
+     "lib/libzip.dylib",
+     "lib/server/libjvm.dylib"
+    ],
+    "outside_jdk_absent_as_file_count": 510,
+    "outside_jdk_present_as_file_count": 3,
+    "outside_jdk_present_as_file": {
+     "/usr/lib/system/libsystem_kernel.dylib": {
+      "kind": "regular",
+      "sha256": "34a1db9713a098517185fe74b0be8889c39112955cd5462b144df9198dc5899d"
+     },
+     "/usr/lib/system/libsystem_platform.dylib": {
+      "kind": "regular",
+      "sha256": "01adff2f91ce5ec1104dfa2e892a466c98518945abfaaee70f80db39fcc12bb6"
+     },
+     "/usr/lib/system/libsystem_pthread.dylib": {
+      "kind": "regular",
+      "sha256": "15531dc841a3f7402ea342d87125c5c589c40abf00dbaef513a591e190f443e0"
+     }
+    },
+    "libSystem_B_present": true,
+    "libjvm_present": true,
+    "java_launcher_present": false
+   },
+   "shutdown": {
+    "count": 1,
+    "reasons": [
+     "No remaining non-daemon Java threads"
+    ]
+   },
+   "process_start": {
+    "count": 0
+   },
+   "classload": {
+    "lines": 1270,
+    "malformed": 0,
+    "pids": [
+     56845
+    ],
+    "newline_terminated": true,
+    "file": "classload-56845.log",
+    "java_lang_Object_loaded": true,
+    "java_lang_Shutdown_loaded": true
+   },
+   "candidate_logs": {
+    "log-jni_resolve-56845.log": {
+     "lines": 305,
+     "malformed": 0,
+     "pids": [
+      56845
+     ],
+     "newline_terminated": true,
+     "loaded_library_lines": 0,
+     "loaded_jdk_relative": [],
+     "loaded_outside_jdk": 0,
+     "unloaded_library_lines": 0,
+     "registering_lines": 193,
+     "dynamic_linking_lines": 112
+    },
+    "log-library-56845.log": {
+     "lines": 107,
+     "malformed": 0,
+     "pids": [
+      56845
+     ],
+     "newline_terminated": true,
+     "loaded_library_lines": 4,
+     "loaded_jdk_relative": [
+      "lib/libjimage.dylib",
+      "lib/libnet.dylib",
+      "lib/libnio.dylib",
+      "lib/libzip.dylib"
+     ],
+     "loaded_outside_jdk": 0,
+     "unloaded_library_lines": 0,
+     "registering_lines": 0,
+     "dynamic_linking_lines": 0
+    }
+   },
+   "inventory": {
+    "classload-56845.log": {
+     "bytes": 108833,
+     "sha256": "4a4d6e92dc50f560fb894abcaff9f025196380491e881442c490a9f268b33278"
+    },
+    "jfr/hotspot-pid-56845-id-1-2026_10_26_01_25_31.jfr": {
+     "bytes": 202414,
+     "sha256": "aac79f12978faa7f36f979c2df66ba7386dca73de764fc2d9c29189beadd8903"
+    },
+    "log-jni_resolve-56845.log": {
+     "bytes": 29002,
+     "sha256": "5aa26c9be4e528b736a8086cc4d8ad7ecb2cf48e53ec19bfbc03ed343dac52e1"
+    },
+    "log-library-56845.log": {
+     "bytes": 12365,
+     "sha256": "2d9516ec697249fe581f173a6493e86508ae01f97df34ce402acb8e5ed5e6216"
+    },
+    "stderr.txt": {
+     "bytes": 182,
+     "sha256": "8ab7fe7d83e713317b4c9bf7c3ab910b1e2230d23ce25b22849a6d6e71555c2f"
+    },
+    "stdout.txt": {
+     "bytes": 221,
+     "sha256": "1348c3352cd84a9bf2365a7a9902575fe05eabf670d5224955ccfd2c7989a547"
+    }
+   },
+   "owned_dirs_contents": {
+    "tmp": [],
+    "repo": [],
+    "work": [],
+    "home": []
+   },
+   "leftovers": {
+    "crash_logs": [],
+    "extra_recordings": [],
+    "rotated_logs": []
+   },
+   "sandbox_denial_symptoms_in_child_output": [],
+   "child_output_sha256": {
+    "stdout": "1348c3352cd84a9bf2365a7a9902575fe05eabf670d5224955ccfd2c7989a547",
+    "stderr": "8ab7fe7d83e713317b4c9bf7c3ab910b1e2230d23ce25b22849a6d6e71555c2f"
+   }
+  },
+  "B": {
+   "run_dir": "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-security-remediation/jdk-capture-probe-1/run-B-retry1",
+   "attempt": "version-B-retry1",
+   "spawned_pid": 56868,
+   "returncode": 0,
+   "elapsed_s": 0.531,
+   "recording": {
+    "file": "hotspot-pid-56868-id-1-2026_10_26_01_25_32.jfr",
+    "sha256": "2bf83125c62bcbf4fbb8ecc3219bfdb0e4b67c2f15edb8ef8c15f505dde7e15e",
+    "bytes": 204837
+   },
+   "bytewalk": {
+    "file_bytes": 204837,
+    "chunks": [
+     {
+      "offset": 0,
+      "major": 2,
+      "minor": 1,
+      "size": 204837,
+      "constant_pool_offset": 204742,
+      "metadata_offset": 110891,
+      "start_nanos": 1792974332956340000,
+      "duration_nanos": 17633000,
+      "start_ticks": 913786622,
+      "ticks_per_second": 2400000000,
+      "state_byte": 0,
+      "flag_byte": 3,
+      "final": true
+     }
+    ],
+    "sizes_cover_file": true,
+    "final_chunk_last": true,
+    "problems": [],
+    "ok": true
+   },
+   "summary_header": {
+    "Version": "2.1",
+    "Chunks": "1",
+    "Start": "2026-10-26 00:25:32 (UTC)",
+    "Duration": "0 s"
+   },
+   "summary_counts": {
+    "jdk.NativeLibrary": {
+     "count": 1040,
+     "bytes": 92792
+    },
+    "jdk.InitialSystemProperty": {
+     "count": 30,
+     "bytes": 2215
+    },
+    "jdk.InitialEnvironmentVariable": {
+     "count": 14,
+     "bytes": 3505
+    },
+    "jdk.CheckPoint": {
+     "count": 7,
+     "bytes": 9495
+    },
+    "jdk.JVMInformation": {
+     "count": 2,
+     "bytes": 2864
+    },
+    "jdk.Metadata": {
+     "count": 1,
+     "bytes": 93851
+    },
+    "jdk.Shutdown": {
+     "count": 1,
+     "bytes": 47
+    },
+    "jdk.ThreadStart": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ThreadEnd": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ThreadSleep": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ThreadPark": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.JavaMonitorEnter": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.JavaMonitorWait": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.JavaMonitorInflate": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.SyncOnValueBasedClass": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.BiasedLockRevocation": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.BiasedLockSelfRevocation": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.BiasedLockClassRevocation": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ReservedStackActivation": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ClassLoad": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ClassDefine": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ClassRedefinition": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.RedefineClasses": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.RetransformClasses": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ClassUnload": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.IntFlagChanged": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.UnsignedIntFlagChanged": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.LongFlagChanged": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.UnsignedLongFlagChanged": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.DoubleFlagChanged": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.BooleanFlagChanged": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.StringFlagChanged": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.GCHeapSummary": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.MetaspaceSummary": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.MetaspaceGCThreshold": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.MetaspaceAllocationFailure": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.MetaspaceOOM": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.MetaspaceChunkFreeListSummary": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.PSHeapSummary": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.G1HeapSummary": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.GarbageCollection": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.SystemGC": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ParallelOldGarbageCollection": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.YoungGarbageCollection": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.OldGarbageCollection": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.G1GarbageCollection": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.G1MMU": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.EvacuationInformation": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.GCReferenceStatistics": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ObjectCountAfterGC": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.G1EvacuationYoungStatistics": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.G1EvacuationOldStatistics": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.G1BasicIHOP": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.G1AdaptiveIHOP": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.PromoteObjectInNewPLAB": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.PromoteObjectOutsidePLAB": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.PromotionFailed": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.EvacuationFailed": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ConcurrentModeFailure": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.GCPhasePause": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.GCPhasePauseLevel1": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.GCPhasePauseLevel2": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.GCPhasePauseLevel3": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.GCPhasePauseLevel4": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.GCPhaseConcurrent": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.GCPhaseConcurrentLevel1": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.GCPhaseParallel": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.AllocationRequiringGC": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.TenuringDistribution": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.G1HeapRegionTypeChange": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.Compilation": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.CompilerPhase": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.CompilationFailure": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.CompilerInlining": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.SweepCodeCache": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.CodeCacheFull": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.Deoptimization": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.SafepointBegin": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.SafepointStateSynchronization": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.SafepointCleanup": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.SafepointCleanupTask": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.SafepointEnd": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ExecuteVMOperation": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ObjectAllocationInNewTLAB": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ObjectAllocationOutsideTLAB": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ObjectAllocationSample": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.OldObjectSample": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.DumpReason": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.DataLoss": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.OSInformation": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.VirtualizationInformation": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.SystemProcess": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.CPUInformation": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.CPUTimeStampCounter": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.CPULoad": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ThreadCPULoad": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ThreadContextSwitchRate": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.NetworkUtilization": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.JavaThreadStatistics": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ClassLoadingStatistics": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ClassLoaderStatistics": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.SymbolTableStatistics": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.StringTableStatistics": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.PlaceholderTableStatistics": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.LoaderConstraintsTableStatistics": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ProtectionDomainCacheTableStatistics": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ThreadAllocationStatistics": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.PhysicalMemory": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ExecutionSample": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.NativeMethodSample": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ThreadDump": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ModuleRequire": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ModuleExport": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.CompilerStatistics": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.CompilerConfiguration": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.CodeCacheStatistics": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.CodeCacheConfiguration": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.CodeSweeperStatistics": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.CodeSweeperConfiguration": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.IntFlag": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.UnsignedIntFlag": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.LongFlag": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.UnsignedLongFlag": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.DoubleFlag": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.BooleanFlag": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.StringFlag": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ObjectCount": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.G1HeapRegionInformation": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.GCConfiguration": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.GCSurvivorConfiguration": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.GCTLABConfiguration": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.GCHeapConfiguration": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.YoungGenerationConfiguration": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ZAllocationStall": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ZPageAllocation": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ZRelocationSet": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ZRelocationSetGroup": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ZStatisticsCounter": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ZStatisticsSampler": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ZThreadPhase": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ZUncommit": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ZUnmap": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ShenandoahHeapRegionStateChange": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ShenandoahHeapRegionInformation": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.Flush": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.HeapDump": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.GCLocker": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.FileForce": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.FileRead": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.FileWrite": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.SocketRead": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.SocketWrite": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.JavaExceptionThrow": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ExceptionStatistics": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.JavaErrorThrow": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ActiveSetting": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ActiveRecording": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.Deserialization": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ProcessStart": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.SecurityPropertyModification": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.TLSHandshake": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.X509Certificate": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.X509Validation": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.DirectBufferStatistics": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ContainerConfiguration": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ContainerCPUUsage": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ContainerCPUThrottling": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ContainerMemoryUsage": {
+     "count": 0,
+     "bytes": 0
+    },
+    "jdk.ContainerIOUsage": {
+     "count": 0,
+     "bytes": 0
+    }
+   },
+   "summary_nonzero_extras": {
+    "jdk.CheckPoint": 7,
+    "jdk.Metadata": 1
+   },
+   "requested_six_counts_summary": {
+    "jdk.NativeLibrary": 1040,
+    "jdk.JVMInformation": 2,
+    "jdk.InitialSystemProperty": 30,
+    "jdk.InitialEnvironmentVariable": 14,
+    "jdk.Shutdown": 1,
+    "jdk.ProcessStart": 0
+   },
+   "requested_six_counts_print": {
+    "jdk.NativeLibrary": 1040,
+    "jdk.JVMInformation": 2,
+    "jdk.InitialSystemProperty": 30,
+    "jdk.InitialEnvironmentVariable": 14,
+    "jdk.Shutdown": 1,
+    "jdk.ProcessStart": 0
+   },
+   "print_types_outside_six": [],
+   "pid_agreement": {
+    "spawned": 56868,
+    "jvminformation": [
+     56868
+    ],
+    "recording_filename": 56868,
+    "classlog_filename": [
+     56868
+    ],
+    "classlog_decorator": [
+     56868
+    ],
+    "all_equal": true
+   },
+   "jvminformation": {
+    "count": 2,
+    "jvmName": [
+     "OpenJDK 64-Bit Server VM"
+    ],
+    "jvmVersion_contains_17_0_1_12": true,
+    "javaArguments": [
+     ""
+    ],
+    "jvmArguments_sha256": [
+     "ad9527166ff603681fa6de1647b695b7fd09ae4bfcf9b5c9afc26cd8cc5ddd2a"
+    ],
+    "jvmFlags_empty": true,
+    "begin_end_equal": true
+   },
+   "jvm_arguments_tokens_space_split": 7,
+   "capture_options_present_as_exact_space_tokens": {
+    "-XX:-UsePerfData": true,
+    "-Djava.io.tmpdir=/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-security-remediation/jdk-capture-probe-1/run-B-retry1/tmp": true,
+    "-XX:FlightRecorderOptions=repository=/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-security-remediation/jdk-capture-probe-1/run-B-retry1/repo": true,
+    "-XX:StartFlightRecording=filename=/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-security-remediation/jdk-capture-probe-1/run-B-retry1/jfr/,dumponexit=true,settings=/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-security-remediation/jdk-capture-probe-1/jfc/sr23-probe.jfc": true,
+    "-Xlog:class+load=info:file=/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-security-remediation/jdk-capture-probe-1/run-B-retry1/classload-%p.log:uptime,pid,tid:filecount=0": true,
+    "-Xlog:jni+resolve=debug:file=/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-security-remediation/jdk-capture-probe-1/run-B-retry1/log-jni_resolve-%p.log:uptime,pid,tid:filecount=0": true,
+    "-Xlog:library=trace:file=/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-security-remediation/jdk-capture-probe-1/run-B-retry1/log-library-%p.log:uptime,pid,tid:filecount=0": true
+   },
+   "environment": {
+    "recorded_names": [
+     "HOME",
+     "JAVA_HOME",
+     "JAVA_TOOL_OPTIONS",
+     "LANG",
+     "PATH",
+     "TMPDIR",
+     "__CF_USER_TEXT_ENCODING"
+    ],
+    "constructed_names": [
+     "HOME",
+     "JAVA_HOME",
+     "JAVA_TOOL_OPTIONS",
+     "LANG",
+     "PATH",
+     "TMPDIR"
+    ],
+    "launcher_added_names": [
+     "__CF_USER_TEXT_ENCODING"
+    ],
+    "missing_constructed_names": [],
+    "emissions_per_name": [
+     2
+    ],
+    "begin_end_equal_per_name": {
+     "HOME": true,
+     "JAVA_HOME": true,
+     "JAVA_TOOL_OPTIONS": true,
+     "LANG": true,
+     "PATH": true,
+     "TMPDIR": true,
+     "__CF_USER_TEXT_ENCODING": true
+    },
+    "recorded_equals_constructed_for_constructed_names": {
+     "HOME": true,
+     "JAVA_HOME": true,
+     "JAVA_TOOL_OPTIONS": true,
+     "LANG": true,
+     "PATH": true,
+     "TMPDIR": true
+    }
+   },
+   "system_properties": {
+    "names": [
+     "java.class.path",
+     "java.home",
+     "java.io.tmpdir",
+     "java.library.path",
+     "java.vm.compressedOopsMode",
+     "java.vm.info",
+     "java.vm.name",
+     "java.vm.specification.name",
+     "java.vm.specification.vendor",
+     "java.vm.specification.version",
+     "java.vm.vendor",
+     "java.vm.version",
+     "jdk.debug",
+     "sun.boot.library.path",
+     "sun.java.launcher"
+    ],
+    "emissions_per_name": [
+     2
+    ],
+    "begin_end_equal_per_name": {
+     "java.class.path": true,
+     "java.home": true,
+     "java.io.tmpdir": true,
+     "java.library.path": true,
+     "java.vm.compressedOopsMode": true,
+     "java.vm.info": true,
+     "java.vm.name": true,
+     "java.vm.specification.name": true,
+     "java.vm.specification.vendor": true,
+     "java.vm.specification.version": true,
+     "java.vm.vendor": true,
+     "java.vm.version": true,
+     "jdk.debug": true,
+     "sun.boot.library.path": true,
+     "sun.java.launcher": true
+    },
+    "java_io_tmpdir_equals_owned_tmp": true,
+    "java_home_equals_pinned": true
+   },
+   "native": {
+    "events": 1040,
+    "unique_names": 520,
+    "names_sha256": "b2e626230202435ebb08749b2b95a765b146e9cde0a0bcaa85673b70a3adad53",
+    "emissions_per_name": [
+     2
+    ],
+    "top_address_all_zero": true,
+    "base_address_all_nonzero": true,
+    "base_address_stable_begin_end": true,
+    "jdk_home_relative_names": [
+     "lib/libjava.dylib",
+     "lib/libjimage.dylib",
+     "lib/libjli.dylib",
+     "lib/libnet.dylib",
+     "lib/libnio.dylib",
+     "lib/libzip.dylib",
+     "lib/server/libjvm.dylib"
+    ],
+    "outside_jdk_absent_as_file_count": 510,
+    "outside_jdk_present_as_file_count": 3,
+    "outside_jdk_present_as_file": {
+     "/usr/lib/system/libsystem_kernel.dylib": {
+      "kind": "regular",
+      "sha256": "34a1db9713a098517185fe74b0be8889c39112955cd5462b144df9198dc5899d"
+     },
+     "/usr/lib/system/libsystem_platform.dylib": {
+      "kind": "regular",
+      "sha256": "01adff2f91ce5ec1104dfa2e892a466c98518945abfaaee70f80db39fcc12bb6"
+     },
+     "/usr/lib/system/libsystem_pthread.dylib": {
+      "kind": "regular",
+      "sha256": "15531dc841a3f7402ea342d87125c5c589c40abf00dbaef513a591e190f443e0"
+     }
+    },
+    "libSystem_B_present": true,
+    "libjvm_present": true,
+    "java_launcher_present": false
+   },
+   "shutdown": {
+    "count": 1,
+    "reasons": [
+     "No remaining non-daemon Java threads"
+    ]
+   },
+   "process_start": {
+    "count": 0
+   },
+   "classload": {
+    "lines": 1270,
+    "malformed": 0,
+    "pids": [
+     56868
+    ],
+    "newline_terminated": true,
+    "file": "classload-56868.log",
+    "java_lang_Object_loaded": true,
+    "java_lang_Shutdown_loaded": true
+   },
+   "candidate_logs": {
+    "log-jni_resolve-56868.log": {
+     "lines": 305,
+     "malformed": 0,
+     "pids": [
+      56868
+     ],
+     "newline_terminated": true,
+     "loaded_library_lines": 0,
+     "loaded_jdk_relative": [],
+     "loaded_outside_jdk": 0,
+     "unloaded_library_lines": 0,
+     "registering_lines": 193,
+     "dynamic_linking_lines": 112
+    },
+    "log-library-56868.log": {
+     "lines": 107,
+     "malformed": 0,
+     "pids": [
+      56868
+     ],
+     "newline_terminated": true,
+     "loaded_library_lines": 4,
+     "loaded_jdk_relative": [
+      "lib/libjimage.dylib",
+      "lib/libnet.dylib",
+      "lib/libnio.dylib",
+      "lib/libzip.dylib"
+     ],
+     "loaded_outside_jdk": 0,
+     "unloaded_library_lines": 0,
+     "registering_lines": 0,
+     "dynamic_linking_lines": 0
+    }
+   },
+   "inventory": {
+    "classload-56868.log": {
+     "bytes": 108833,
+     "sha256": "e3c9dee1c5bb0c59158599b4358dbc51b2828da6103f7b93b0fda8b26bef8dab"
+    },
+    "jfr/hotspot-pid-56868-id-1-2026_10_26_01_25_32.jfr": {
+     "bytes": 204837,
+     "sha256": "2bf83125c62bcbf4fbb8ecc3219bfdb0e4b67c2f15edb8ef8c15f505dde7e15e"
+    },
+    "log-jni_resolve-56868.log": {
+     "bytes": 29002,
+     "sha256": "cf1f2d8e6ff56176861f9fbcf49f48d6c0ececec9b3e2b46ae7ef27b87985479"
+    },
+    "log-library-56868.log": {
+     "bytes": 12365,
+     "sha256": "65595994c203773214ccd4e8d9e9bfea07d4846fdff0a861127bf74c4849187b"
+    },
+    "stderr.txt": {
+     "bytes": 1415,
+     "sha256": "3c7c2da96ce79978fdf61efa99d2e2651bd93a9368fbcc2f696f2fab7a2d250b"
+    },
+    "stdout.txt": {
+     "bytes": 221,
+     "sha256": "158312e6d3b48bdde7dac3a444b15ebcc74a8facc2e1fb0741de9e3d1435994f"
+    }
+   },
+   "owned_dirs_contents": {
+    "tmp": [],
+    "repo": [],
+    "work": [],
+    "home": []
+   },
+   "leftovers": {
+    "crash_logs": [],
+    "extra_recordings": [],
+    "rotated_logs": []
+   },
+   "sandbox_denial_symptoms_in_child_output": [],
+   "child_output_sha256": {
+    "stdout": "158312e6d3b48bdde7dac3a444b15ebcc74a8facc2e1fb0741de9e3d1435994f",
+    "stderr": "3c7c2da96ce79978fdf61efa99d2e2651bd93a9368fbcc2f696f2fab7a2d250b"
+   }
+  }
+ },
+ "failed_attempt_bytewalk": {
+  "version-A": [
+   {
+    "file_bytes": 204236,
+    "chunks": [
+     {
+      "offset": 0,
+      "major": 2,
+      "minor": 1,
+      "size": 204236,
+      "constant_pool_offset": 204141,
+      "metadata_offset": 110290,
+      "start_nanos": 1792974331235588000,
+      "duration_nanos": 18757000,
+      "start_ticks": 846157368,
+      "ticks_per_second": 2400000000,
+      "state_byte": 0,
+      "flag_byte": 3,
+      "final": true
+     }
+    ],
+    "sizes_cover_file": true,
+    "final_chunk_last": true,
+    "problems": [],
+    "ok": true
+   }
+  ],
+  "version-B": [
+   {
+    "file_bytes": 208538,
+    "chunks": [
+     {
+      "offset": 0,
+      "major": 2,
+      "minor": 1,
+      "size": 208538,
+      "constant_pool_offset": 208443,
+      "metadata_offset": 114592,
+      "start_nanos": 1792974332387976000,
+      "duration_nanos": 16493000,
+      "start_ticks": 847706590,
+      "ticks_per_second": 2400000000,
+      "state_byte": 0,
+      "flag_byte": 3,
+      "final": true
+     }
+    ],
+    "sizes_cover_file": true,
+    "final_chunk_last": true,
+    "problems": [],
+    "ok": true
+   }
+  ]
+ },
+ "a_b": {
+  "jvmArguments_equal_after_run_path_normalization": true,
+  "native_name_sets_equal": true,
+  "environment_name_sets_equal": false,
+  "property_name_sets_equal": true
+ }
+}

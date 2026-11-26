@@ -1,0 +1,28 @@
+test_p05_p08_complete_local_coordinate_and_honest_certificate (__main__.FinalCertificate.test_p05_p08_complete_local_coordinate_and_honest_certificate) ... ERROR
+test_p01_current_so_must_match_native_evidence (__main__.NativeArtifactBinding.test_p01_current_so_must_match_native_evidence) ... ok
+test_p01_missing_native_input_must_not_certify (__main__.NativeArtifactBinding.test_p01_missing_native_input_must_not_certify) ... ok
+test_p01_native_source_must_match_evidence (__main__.NativeArtifactBinding.test_p01_native_source_must_match_evidence) ... ok
+
+======================================================================
+ERROR: test_p05_p08_complete_local_coordinate_and_honest_certificate (__main__.FinalCertificate.test_p05_p08_complete_local_coordinate_and_honest_certificate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 85, in test_p05_p08_complete_local_coordinate_and_honest_certificate
+    self.package()
+    ~~~~~~~~~~~~^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 82, in package
+    PACKAGE.main()
+    ~~~~~~~~~~~~^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/package-aar.py", line 42, in main
+    require(args.development, 'final certificate not implemented')
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/package-aar.py", line 14, in require
+    if not value: raise SystemExit(reason)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+SystemExit: final certificate not implemented
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.081s
+
+FAILED (errors=1)
+exit=1

@@ -1,0 +1,62 @@
+{
+  "format": 1,
+  "defect": "DEF-0012",
+  "prep": "33a9d97",
+  "status": "actual_memory_and_node_passed_packaged_browser_pending",
+  "sources": [
+    {
+      "path": "bindings/javascript/client/src/client.js",
+      "bytes": 27079,
+      "sha256": "41230e75f3c0724b339cab32c754648791c8df5907a62544c3246727e98819a1"
+    },
+    {
+      "path": "bindings/javascript/client/test/sync-observation.test.mjs",
+      "bytes": 1578,
+      "sha256": "3571d47b280d4bd9536b3370e710a28bb98da9a036d15e6d39bb667e206c4402"
+    },
+    {
+      "path": "bindings/javascript/consumer/conformance.mjs",
+      "bytes": 26956,
+      "sha256": "3b671fc53e91c2339719b1ab0db3b3746a4461c542dfdb41fc7d35365d492e92"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "target/phase-seven-web/managed-sync-actual-red.txt",
+      "bytes": 761,
+      "sha256": "689ec74e04dd12e74f18de6bd4c9c7797df037cb6424992993f873afb612817f"
+    },
+    {
+      "path": "target/phase-seven-web/managed-sync-actual-final-green.txt",
+      "bytes": 215,
+      "sha256": "93c4969eae30d044f3d990a2c73b3d7c681400f3978474af5d8ea57890725c80"
+    },
+    {
+      "path": "target/phase-seven-web/managed-sync-no-self-wake-prepatch-green.txt",
+      "bytes": 327,
+      "sha256": "b8fc8af3d0659cf664fdebaaac14df24a2eb79ed0b3a8703aa3232b9711da5eb"
+    },
+    {
+      "path": "target/phase-seven-web/managed-sync-node-final-green.txt",
+      "bytes": 19553,
+      "sha256": "0e06c94a716775adc6e7d4f7025b5ec28e29dcf61afce781e049cc1a27c9de8c"
+    }
+  ],
+  "checks": {
+    "actual_wasm_memory": {
+      "passed": 2,
+      "failed": 0
+    },
+    "javascript_workspace": {
+      "passed": 83,
+      "failed": 0
+    },
+    "syntax": "client.js and consumer/conformance.mjs passed"
+  },
+  "qualifications": [
+    "Initial self-wake test assumed cleared timer handle; existing implementation retains destroyed handle. Assertion corrected to required2prepares/1transport/no ongoing sync before patch; no production timer change.",
+    "Actual regressions await callbacks; no manual drain or later mutation advances delivery.",
+    "Receipt originally source-suspected; post33a9d97 actualWASM RED independently confirmed missing Acknowledged callback.",
+    "Matching protected packaged/browser matrix pending; historical02b64d1 82-test lifecycle checkpoint is unchanged."
+  ]
+}

@@ -1,0 +1,65 @@
+#!/usr/bin/env python3
+"""Fetch inert R2 artifact bytes + publisher sidecars into quarantine; verify; never load or execute."""
+import hashlib
+import json
+from pathlib import Path
+import re
+import sys
+import zipfile
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import closure as C  # reuse the logged HTTPS fetcher
+
+HERE = C.HERE
+data = json.loads((HERE / 'closure.json').read_text())
+H = lambda b, alg='sha256': hashlib.new(alg, b).hexdigest()
+report = {'components': {}, 'parents': {}}
+
+
+def sidecars(g, a, v, name, blob):
+    out = {}
+    for alg in ('sha1', 'sha256', 'sha512', 'md5'):
+        side = C.fetch(g, a, v, name + '.' + alg)
+        published = side.decode('ascii', 'replace').split()[0].strip().lower() if side else None
+        out[alg] = {'published': published, 'match': (published == H(blob, alg)) if published else None}
+    out['asc_present'] = C.fetch(g, a, v, name + '.asc') is not None
+    return out
+
+
+for coord, meta in data['components'].items():
+    g, a, v = coord.split(':')
+    files = {}
+    for name in [f'{a}-{v}.pom', f'{a}-{v}.module', f'{a}-{v}.jar']:
+        blob = C.fetch(g, a, v, name)
+        if blob is None:
+            files[name] = None
+            continue
+        rec = {'bytes': len(blob), 'sha256': H(blob), 'sha512': H(blob, 'sha512'), 'sha1': H(blob, 'sha1'), 'sidecars': sidecars(g, a, v, name, blob)}
+        if name.endswith('.jar'):
+            z = zipfile.ZipFile(Q := HERE / 'quarantine' / g / a / v / name)
+            names = z.namelist()
+            rec['entries'] = len(names)
+            rec['license_files'] = sorted(n for n in names if re.search(r'(^|/)(LICENSE|NOTICE|COPYING|LICENCE)[^/]*$', n, re.I))
+            rec['native'] = sorted(n for n in names if re.search(r'\.(so|dll|dylib|jnilib|a|exe)$', n))
+            rec['embedded_pom_properties'] = sorted(n for n in names if n.endswith('pom.properties'))
+            rec['manifest_head'] = z.read('META-INF/MANIFEST.MF').decode('utf8', 'replace')[:600] if 'META-INF/MANIFEST.MF' in names else None
+        files[name] = rec
+    module = C.fetch(g, a, v, f'{a}-{v}.module')
+    if module:
+        declared = {f['name']: f for var in json.loads(module).get('variants', []) for f in var.get('files', [])}
+        for name, rec in files.items():
+            if rec and name in declared:
+                rec['module_sha256_match'] = declared[name].get('sha256') == rec['sha256']
+                rec['module_sha512_match'] = declared[name].get('sha512') == rec['sha512']
+    report['components'][coord] = {**meta, 'files': files}
+for parent in data['parents_seen']:
+    g, a, v = parent.split(':')
+    blob = C.fetch(g, a, v, f'{a}-{v}.pom')
+    report['parents'][parent] = {'sha256': H(blob), 'bytes': len(blob), 'sidecars': sidecars(g, a, v, f'{a}-{v}.pom', blob)}
+(HERE / 'artifacts.json').write_text(json.dumps(report, indent=1) + '\n')
+C.LOG.write_text(json.dumps(C.log, indent=1) + '\n')
+bad = [(c, n, alg) for c, e in report['components'].items() for n, r in e['files'].items() if r for alg, s in r['sidecars'].items()
+       if isinstance(s, dict) and s['match'] is False]
+bad += [(c, n, k) for c, e in report['components'].items() for n, r in e['files'].items() if r for k in ('module_sha256_match', 'module_sha512_match') if r.get(k) is False]
+jars = [r for e in report['components'].values() for n, r in e['files'].items() if r and n.endswith('.jar')]
+print('components', len(report['components']), 'jars', len(jars), 'jar bytes', sum(j['bytes'] for j in jars), 'mismatches', bad)

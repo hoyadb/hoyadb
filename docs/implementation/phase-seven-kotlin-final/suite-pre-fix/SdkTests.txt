@@ -1,0 +1,8 @@
+PASS K01_i64_and_integral_float_wire_kinds
+PASS K01_owned_nested_immutable_business_snapshot
+PASS K02_unsigned_full_width_is_not_signed_Java_long
+PASS K02_strict_UTF16_UTF8_and_frame_budgets
+PASS K03_actual_preloaded_ABI_lossless_codec
+PASS K08_terminal_failure_releases_after_native_guard_without_begin_spin
+
+exit=0

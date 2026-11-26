@@ -1,0 +1,133 @@
+{
+  "scope": "Native C/JNI foundation only; Swift Kotlin RN SDK and final target gates remain separate",
+  "source_files": [
+    {
+      "path": "bindings/native/.gitignore",
+      "tested_source_sha256": "306fd52e74fca6746e12acc750f232de15e71da917756a1270d74c91f5eb7368",
+      "committed_sha256": "306fd52e74fca6746e12acc750f232de15e71da917756a1270d74c91f5eb7368",
+      "source_preserved": true
+    },
+    {
+      "path": "bindings/native/Cargo.lock",
+      "tested_source_sha256": "a96a5481be73dc5ab125b4cec4b441bedd256f7a1d834694073cba5f342cb951",
+      "committed_sha256": "a96a5481be73dc5ab125b4cec4b441bedd256f7a1d834694073cba5f342cb951",
+      "source_preserved": true
+    },
+    {
+      "path": "bindings/native/Cargo.toml",
+      "tested_source_sha256": "a772b5e0a899deba105ddb776caeac52ce6c3aff7cdc0cbacb3c672396607b12",
+      "committed_sha256": "5cbe8617c64675c6445b000750cc399cb418fec8b67ff411da4ee221f3a73798",
+      "source_preserved": true,
+      "presentation": "Excess final blank line removed in index only; tested working source unchanged"
+    },
+    {
+      "path": "bindings/native/README.md",
+      "tested_source_sha256": "7034327b95e0350ebb24938bd7ea4922424e06380ad2c0fc0317fce8d3081c46",
+      "committed_sha256": "7034327b95e0350ebb24938bd7ea4922424e06380ad2c0fc0317fce8d3081c46",
+      "source_preserved": true
+    },
+    {
+      "path": "bindings/native/android/build-jni.py",
+      "tested_source_sha256": "debc443aa6447c0e2bf02071c1de8fb0f40fef9843f7d0c6929912a07f52fa01",
+      "committed_sha256": "debc443aa6447c0e2bf02071c1de8fb0f40fef9843f7d0c6929912a07f52fa01",
+      "source_preserved": true
+    },
+    {
+      "path": "bindings/native/android/build-provider.py",
+      "tested_source_sha256": "f28badbc5c5a5d06e0045c297c78f26fcaecfdc491b7467d746726c79b81909d",
+      "committed_sha256": "f28badbc5c5a5d06e0045c297c78f26fcaecfdc491b7467d746726c79b81909d",
+      "source_preserved": true
+    },
+    {
+      "path": "bindings/native/android/exports.map",
+      "tested_source_sha256": "fe8fb95dce0d4005b7d73afd3b5b59c3ef0be2c164f8f82947ac6f2689bf1832",
+      "committed_sha256": "fe8fb95dce0d4005b7d73afd3b5b59c3ef0be2c164f8f82947ac6f2689bf1832",
+      "source_preserved": true
+    },
+    {
+      "path": "bindings/native/android/hoya_entropy.c",
+      "tested_source_sha256": "c8b6059feb75c2ac008030c2f15c714643fd5f3ee0212b9f69e6770ac3030b75",
+      "committed_sha256": "c8b6059feb75c2ac008030c2f15c714643fd5f3ee0212b9f69e6770ac3030b75",
+      "source_preserved": true
+    },
+    {
+      "path": "bindings/native/android/hoya_jni.c",
+      "tested_source_sha256": "e620c700ffbbee4ed2a3a346f637c6fb7416c13f88845525d39df6fbb8fd0265",
+      "committed_sha256": "e620c700ffbbee4ed2a3a346f637c6fb7416c13f88845525d39df6fbb8fd0265",
+      "source_preserved": true
+    },
+    {
+      "path": "bindings/native/android/ltc_config.h",
+      "tested_source_sha256": "e20d3d40f0b93cb7c2398d3afbe9ced995a6275f385ae6f91d861f6285bbf49c",
+      "committed_sha256": "e20d3d40f0b93cb7c2398d3afbe9ced995a6275f385ae6f91d861f6285bbf49c",
+      "source_preserved": true
+    },
+    {
+      "path": "bindings/native/include/hoyadb.h",
+      "tested_source_sha256": "2f61e513be42d3e7aabbd9bb06f02a98d88096551276ae89dd5b30aa28526b48",
+      "committed_sha256": "2f61e513be42d3e7aabbd9bb06f02a98d88096551276ae89dd5b30aa28526b48",
+      "source_preserved": true
+    },
+    {
+      "path": "bindings/native/include/module.modulemap",
+      "tested_source_sha256": "7cec495b8eb138c7f2b0643da652fa100b034b8b5930907de56a9de27611897d",
+      "committed_sha256": "7cec495b8eb138c7f2b0643da652fa100b034b8b5930907de56a9de27611897d",
+      "source_preserved": true
+    },
+    {
+      "path": "bindings/native/src/lib.rs",
+      "tested_source_sha256": "4cfa3f57fc11b69b09b7a2c9e5e73ce0ae1b13557f90762bba86da417fa19a47",
+      "committed_sha256": "4cfa3f57fc11b69b09b7a2c9e5e73ce0ae1b13557f90762bba86da417fa19a47",
+      "source_preserved": true
+    },
+    {
+      "path": "bindings/native/tests/boundary.rs",
+      "tested_source_sha256": "368ed066e292b4da824fa023d46ad8bba95427d25f826806f1804ef0a40b11e4",
+      "committed_sha256": "368ed066e292b4da824fa023d46ad8bba95427d25f826806f1804ef0a40b11e4",
+      "source_preserved": true
+    },
+    {
+      "path": "bindings/native/tests/entropy.c",
+      "tested_source_sha256": "c938d8faedd3d4ec8eefe0a668ddc23afe13f323c5dee5b0b2e6c2d1890f78c4",
+      "committed_sha256": "c938d8faedd3d4ec8eefe0a668ddc23afe13f323c5dee5b0b2e6c2d1890f78c4",
+      "source_preserved": true
+    },
+    {
+      "path": "bindings/native/tests/entropy_provider.c",
+      "tested_source_sha256": "e5ba28c4f3c371aceaa91ef75ab329da51fee98704b17e7a59e6f3b1f8a03437",
+      "committed_sha256": "e5ba28c4f3c371aceaa91ef75ab329da51fee98704b17e7a59e6f3b1f8a03437",
+      "source_preserved": true
+    },
+    {
+      "path": "bindings/native/tests/exports.py",
+      "tested_source_sha256": "47ea0bf7cd1b87c72a5676bdfbfc52d91b6600f9a19f78758c912a09bb6e0e60",
+      "committed_sha256": "47ea0bf7cd1b87c72a5676bdfbfc52d91b6600f9a19f78758c912a09bb6e0e60",
+      "source_preserved": true
+    },
+    {
+      "path": "bindings/native/tests/fixtures/memory-open.json",
+      "tested_source_sha256": "a78db4c5f651f9872a9a4a958b144154049e56b55bb74e501b898b8538d6b649",
+      "committed_sha256": "a78db4c5f651f9872a9a4a958b144154049e56b55bb74e501b898b8538d6b649",
+      "source_preserved": true
+    },
+    {
+      "path": "bindings/native/tests/java/dev/hoyadb/NativeBridgeTest.java",
+      "tested_source_sha256": "47f91b76054ec71d287d310ecee626d2c2bd70f9a2a1e3f23137baa04e0b3cdc",
+      "committed_sha256": "47f91b76054ec71d287d310ecee626d2c2bd70f9a2a1e3f23137baa04e0b3cdc",
+      "source_preserved": true
+    },
+    {
+      "path": "bindings/native/tests/provider.c",
+      "tested_source_sha256": "595c811dafdc766b768e38e95b9d158db985a156d14ce47ffccb5ff920642c9f",
+      "committed_sha256": "595c811dafdc766b768e38e95b9d158db985a156d14ce47ffccb5ff920642c9f",
+      "source_preserved": true
+    }
+  ],
+  "external_locked_packages": 35,
+  "outside_approved_graph": [],
+  "root_observed_tests": {
+    "unit": 3,
+    "integration": 6
+  },
+  "qualification": "Rust staged in default layout; tested working tree retains separately owned formatting policy, with only formatter punctuation differences. No user formatter work committed."
+}

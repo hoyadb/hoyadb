@@ -1,0 +1,18 @@
+{
+ "changed_sources": {
+  "benchmarks/browser_server.py": {
+   "bytes": 37842,
+   "sha256": "c8056bbc1450b007640cac3343a7f83091038c11435ade6e857f3f99f1765227"
+  },
+  "benchmarks/test_browser_server.py": {
+   "bytes": 54708,
+   "sha256": "d06fff5f86503a523df06e7d8574e7b69c3b92eebfa74f7b2bf8a902d0d48dfe"
+  }
+ },
+ "head": "e63ceb2",
+ "previous_cut": {
+  "browser_server.py": "9e077e2eef2d7aa2\u2026",
+  "closure": "0dd6d44d (DEF-0023)",
+  "test_browser_server.py": "a7dc705c01d31b59\u2026"
+ }
+}

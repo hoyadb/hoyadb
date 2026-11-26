@@ -1,0 +1,50 @@
+{
+  "error": "pack-failed: hase-seven-rn/def-0030/rn-pack/packed/hoyadb-react-native-0.1.0.tgz\nnpm error errno -2\nnpm error enoent ENOENT: no such file or directory, open '/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/target/phase-seven-rn/def-0030/rn-pack/packed/hoyadb-react-native-0.1.0.tgz'\nnpm error enoent This is related to npm not being able to find a file.\nnpm error enoent\nnpm error A complete log of this run can be found in: /Users/boristacyniak/.npm/_logs/2026-10-25T23_41_38_852Z-debug-0.log",
+  "expected_parent_sha256": "c19233a6d34e76628ae42c4870be5c6add4fa39c7f4fb9ed46678da95a532496",
+  "format": 1,
+  "pack": {
+    "argv": [
+      "npm",
+      "pack",
+      "--ignore-scripts",
+      "--json",
+      "--pack-destination",
+      "target/phase-seven-rn/def-0030/rn-pack/packed"
+    ],
+    "cwd": "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native",
+    "exit_code": 254,
+    "stderr": "npm warn config init.author.name Use `--init-author-name` instead.\nnpm warn config init.author.email Use `--init-author-email` instead.\nnpm warn config init.author.url Use `--init-author-url` instead.\nnpm warn Unknown user config \"email\". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.\nnpm error code ENOENT\nnpm error syscall open\nnpm error path /Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/target/phase-seven-rn/def-0030/rn-pack/packed/hoyadb-react-native-0.1.0.tgz\nnpm error errno -2\nnpm error enoent ENOENT: no such file or directory, open '/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/target/phase-seven-rn/def-0030/rn-pack/packed/hoyadb-react-native-0.1.0.tgz'\nnpm error enoent This is related to npm not being able to find a file.\nnpm error enoent\nnpm error A complete log of this run can be found in: /Users/boristacyniak/.npm/_logs/2026-10-25T23_41_38_852Z-debug-0.log\n",
+    "stdout": "{\n  \"error\": {\n    \"code\": \"ENOENT\",\n    \"summary\": \"ENOENT: no such file or directory, open '/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/target/phase-seven-rn/def-0030/rn-pack/packed/hoyadb-react-native-0.1.0.tgz'\",\n    \"detail\": \"This is related to npm not being able to find a file.\"\n  }\n}\n"
+  },
+  "source_framework": "bindings/swift/Artifacts/HoyaNative.xcframework",
+  "validations": [
+    {
+      "label": "source",
+      "path": "bindings/swift/Artifacts/HoyaNative.xcframework",
+      "summary": {
+        "framework": "HoyaNative.xcframework",
+        "index_sha256": "65a591b52a3a632526c1b1f930980cc8a7f2bd561af020b7e6e8fb19eb72bde6",
+        "members": 39,
+        "native_members": 10,
+        "notice_members": 28,
+        "packaging_sha256": "47e27eb8d68e55022e34ea227a9c5882b4a84fc56bede14c21e5ae3fb92947de",
+        "parent_sha256": "c19233a6d34e76628ae42c4870be5c6add4fa39c7f4fb9ed46678da95a532496",
+        "result": "framework-valid"
+      }
+    },
+    {
+      "label": "package-copy",
+      "path": "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/Artifacts/HoyaNative.xcframework",
+      "summary": {
+        "framework": "HoyaNative.xcframework",
+        "index_sha256": "65a591b52a3a632526c1b1f930980cc8a7f2bd561af020b7e6e8fb19eb72bde6",
+        "members": 39,
+        "native_members": 10,
+        "notice_members": 28,
+        "packaging_sha256": "47e27eb8d68e55022e34ea227a9c5882b4a84fc56bede14c21e5ae3fb92947de",
+        "parent_sha256": "c19233a6d34e76628ae42c4870be5c6add4fa39c7f4fb9ed46678da95a532496",
+        "result": "framework-valid"
+      }
+    }
+  ]
+}

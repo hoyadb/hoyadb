@@ -1,0 +1,19 @@
+{
+  "label": "def28-valid",
+  "mode": "verify-only",
+  "consumer": "/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-phase7-rn-consumer-v8cue5dl",
+  "profile": "(version 1)(allow default)(deny network-outbound)(allow network-outbound (remote ip \"localhost:*\"))",
+  "jdk": "/Users/boristacyniak/.sdkman/candidates/java/17.0.1-tem",
+  "gradle": "/Users/boristacyniak/.gradle/wrapper/dists/gradle-9.3.1-bin/23ovyewtku6u96viwx3xl3oks/gradle-9.3.1/bin/gradle",
+  "sdk": "/Users/boristacyniak/Library/Android/sdk",
+  "steps": [],
+  "repository_verification": {
+    "result": "verified",
+    "plan_sha256": "9ff3ff84ae0d8f675ea9b6850babb40c452f009701ea1dae8af7cddd2781abac",
+    "inventory_sha256": "71d657709f942a212f96be924a1a9349db0ea341b237d327d4372c5b79fdd661",
+    "counts": {
+      "binary": 241,
+      "metadata": 633
+    }
+  }
+}

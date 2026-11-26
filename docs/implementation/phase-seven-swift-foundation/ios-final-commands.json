@@ -1,0 +1,24 @@
+[
+  {
+    "argv": [
+      "codesign",
+      "--force",
+      "--sign",
+      "-",
+      "target/phase-seven-native/GeneralConsumer.app"
+    ],
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "argv": [
+      "xcrun",
+      "simctl",
+      "install",
+      "CC525A65-D03E-4F9D-8936-DD16BBFD9664",
+      "target/phase-seven-native/GeneralConsumer.app"
+    ],
+    "exit_code": 0,
+    "output": ""
+  }
+]

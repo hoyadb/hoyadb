@@ -1,0 +1,143 @@
+Building for debugging...
+[0/3] Write sources
+[1/3] Write swift-version--58304C5D6DBC2206.txt
+[3/5] Emitting module HoyaDB
+[4/5] Compiling HoyaDB Database.swift
+[5/11] Compiling HoyaDB Relations.swift
+[6/11] Compiling HoyaDB Entities.swift
+[7/11] Compiling HoyaDB Values.swift
+[8/11] Compiling HoyaDB Commands.swift
+[9/11] Compiling HoyaDB Observations.swift
+[10/11] Compiling HoyaDB Sync.swift
+[11/25] Compiling HoyaDBTests TypedValuesTests.swift
+[12/25] Compiling HoyaDBTests NativeOwnerTests.swift
+[13/25] Compiling HoyaDBTests ProtocolTests.swift
+[14/25] Compiling HoyaDBTests RelationTests.swift
+[15/25] Compiling HoyaDBTests SyncTests.swift
+[16/25] Compiling HoyaDBTests NamespaceTests.swift
+[17/25] Compiling HoyaDBTests MigrationTests.swift
+[18/25] Compiling HoyaDBTests EntityTests.swift
+[19/25] Compiling HoyaDBTests LifetimeTests.swift
+[20/25] Compiling HoyaDBTests CommandTests.swift
+[21/25] Emitting module HoyaDBTests
+[22/25] Compiling HoyaDBTests AdmissionTests.swift
+[23/25] Compiling HoyaDBTests ObservationTests.swift
+[23/25] Write Objects.LinkFileList
+[24/25] Linking HoyaDBPackageTests
+Build complete! (16.44s)
+Test Suite 'All tests' started at 2026-10-24 21:46:06.285.
+Test Suite 'HoyaDBPackageTests.xctest' started at 2026-10-24 21:46:06.290.
+Test Suite 'AdmissionTests' started at 2026-10-24 21:46:06.290.
+Test Case '-[HoyaDBTests.AdmissionTests testForeignReleaseBeforeSuspendedFalseBeginResumesWithoutPolling]' started.
+Test Case '-[HoyaDBTests.AdmissionTests testForeignReleaseBeforeSuspendedFalseBeginResumesWithoutPolling]' passed (0.019 seconds).
+Test Case '-[HoyaDBTests.AdmissionTests testNativeTransportPublishesTerminalFailureAfterCallAndNoReadPulse]' started.
+Test Case '-[HoyaDBTests.AdmissionTests testNativeTransportPublishesTerminalFailureAfterCallAndNoReadPulse]' passed (0.039 seconds).
+Test Suite 'AdmissionTests' passed at 2026-10-24 21:46:06.351.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.058 (0.061) seconds
+Test Suite 'CommandTests' started at 2026-10-24 21:46:06.351.
+Test Case '-[HoyaDBTests.CommandTests testCancellationAfterSubmittedFinishPreservesDurableResult]' started.
+Test Case '-[HoyaDBTests.CommandTests testCancellationAfterSubmittedFinishPreservesDurableResult]' passed (0.015 seconds).
+Test Case '-[HoyaDBTests.CommandTests testCloseInvalidatesSuspendedScopeWithoutTouchingReplacementOwner]' started.
+Test Case '-[HoyaDBTests.CommandTests testCloseInvalidatesSuspendedScopeWithoutTouchingReplacementOwner]' passed (0.009 seconds).
+Test Case '-[HoyaDBTests.CommandTests testOverLimitFinishBodyAbortsScopeAndLeavesAdmissionUsable]' started.
+Test Case '-[HoyaDBTests.CommandTests testOverLimitFinishBodyAbortsScopeAndLeavesAdmissionUsable]' passed (0.128 seconds).
+Test Case '-[HoyaDBTests.CommandTests testSuspendedHandlerReadYourWritesAndCrossOwnerFifo]' started.
+Test Case '-[HoyaDBTests.CommandTests testSuspendedHandlerReadYourWritesAndCrossOwnerFifo]' passed (0.074 seconds).
+Test Case '-[HoyaDBTests.CommandTests testTaskCancellationReleasesAdmissionWhileHandlerRemainsSuspended]' started.
+Test Case '-[HoyaDBTests.CommandTests testTaskCancellationReleasesAdmissionWhileHandlerRemainsSuspended]' passed (0.012 seconds).
+Test Suite 'CommandTests' passed at 2026-10-24 21:46:06.592.
+	 Executed 5 tests, with 0 failures (0 unexpected) in 0.238 (0.242) seconds
+Test Suite 'EntityTests' started at 2026-10-24 21:46:06.593.
+Test Case '-[HoyaDBTests.EntityTests testAsyncMergeReleasesNativeLockAndStalePageIsFetchedAgain]' started.
+Test Case '-[HoyaDBTests.EntityTests testAsyncMergeReleasesNativeLockAndStalePageIsFetchedAgain]' passed (0.018 seconds).
+Test Case '-[HoyaDBTests.EntityTests testCancellationDisposesMergeWhileNonCooperativeHookRemainsAwaiting]' started.
+Test Case '-[HoyaDBTests.EntityTests testCancellationDisposesMergeWhileNonCooperativeHookRemainsAwaiting]' passed (0.013 seconds).
+Test Case '-[HoyaDBTests.EntityTests testEntityQueuePullProgressAndResetUseRealOwner]' started.
+Test Case '-[HoyaDBTests.EntityTests testEntityQueuePullProgressAndResetUseRealOwner]' passed (0.017 seconds).
+Test Suite 'EntityTests' passed at 2026-10-24 21:46:06.642.
+	 Executed 3 tests, with 0 failures (0 unexpected) in 0.048 (0.050) seconds
+Test Suite 'LifetimeTests' started at 2026-10-24 21:46:06.642.
+Test Case '-[HoyaDBTests.LifetimeTests testDroppingOwnerDisposesActualNativeHandle]' started.
+Test Case '-[HoyaDBTests.LifetimeTests testDroppingOwnerDisposesActualNativeHandle]' passed (0.004 seconds).
+Test Suite 'LifetimeTests' passed at 2026-10-24 21:46:06.648.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.004 (0.005) seconds
+Test Suite 'MigrationTests' started at 2026-10-24 21:46:06.648.
+Test Case '-[HoyaDBTests.MigrationTests testAllAuthoredStepsReopenMemoryAndFailedUpgradePreservesOriginal]' started.
+Test Case '-[HoyaDBTests.MigrationTests testAllAuthoredStepsReopenMemoryAndFailedUpgradePreservesOriginal]' passed (0.016 seconds).
+Test Case '-[HoyaDBTests.MigrationTests testProtectedAuthoredUpgradeAndConfiguredCapacityReachCore]' started.
+Test Case '-[HoyaDBTests.MigrationTests testProtectedAuthoredUpgradeAndConfiguredCapacityReachCore]' passed (0.062 seconds).
+Test Suite 'MigrationTests' passed at 2026-10-24 21:46:06.727.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.078 (0.079) seconds
+Test Suite 'NamespaceTests' started at 2026-10-24 21:46:06.727.
+Test Case '-[HoyaDBTests.NamespaceTests testDefaultPlatformEntropyCreatesValidNamespaceAndRealMemoryOwner]' started.
+Test Case '-[HoyaDBTests.NamespaceTests testDefaultPlatformEntropyCreatesValidNamespaceAndRealMemoryOwner]' passed (0.004 seconds).
+Test Case '-[HoyaDBTests.NamespaceTests testUniformJitterRejectsIncompleteEntropyBucketAndPropagatesFailure]' started.
+Test Case '-[HoyaDBTests.NamespaceTests testUniformJitterRejectsIncompleteEntropyBucketAndPropagatesFailure]' passed (0.001 seconds).
+Test Suite 'NamespaceTests' passed at 2026-10-24 21:46:06.733.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.005 (0.007) seconds
+Test Suite 'NativeOwnerTests' started at 2026-10-24 21:46:06.733.
+Test Case '-[HoyaDBTests.NativeOwnerTests testMalformedKeyAndSymlinkRejectBeforeBackupPolicyOrFileCreation]' started.
+Test Case '-[HoyaDBTests.NativeOwnerTests testMalformedKeyAndSymlinkRejectBeforeBackupPolicyOrFileCreation]' passed (0.008 seconds).
+Test Case '-[HoyaDBTests.NativeOwnerTests testPosixNoncanonicalAliasRejectsBeforeBackupMutation]' started.
+Test Case '-[HoyaDBTests.NativeOwnerTests testPosixNoncanonicalAliasRejectsBeforeBackupMutation]' passed (0.006 seconds).
+Test Case '-[HoyaDBTests.NativeOwnerTests testProtectedFoundationReadbackCorrectKeyReopenAndWrongKeyPreservesFile]' started.
+Test Case '-[HoyaDBTests.NativeOwnerTests testProtectedFoundationReadbackCorrectKeyReopenAndWrongKeyPreservesFile]' passed (0.032 seconds).
+Test Case '-[HoyaDBTests.NativeOwnerTests testTwoUnrelatedMemorySchemasAndClosedOwner]' started.
+Test Case '-[HoyaDBTests.NativeOwnerTests testTwoUnrelatedMemorySchemasAndClosedOwner]' passed (0.007 seconds).
+Test Suite 'NativeOwnerTests' passed at 2026-10-24 21:46:06.789.
+	 Executed 4 tests, with 0 failures (0 unexpected) in 0.053 (0.056) seconds
+Test Suite 'ObservationTests' started at 2026-10-24 21:46:06.789.
+Test Case '-[HoyaDBTests.ObservationTests testInitialSnapshotRunsOnSelectedExecutorWithoutWriteOrManualDrain]' started.
+Test Case '-[HoyaDBTests.ObservationTests testInitialSnapshotRunsOnSelectedExecutorWithoutWriteOrManualDrain]' passed (0.005 seconds).
+Test Case '-[HoyaDBTests.ObservationTests testOneDeadlineTimerIsNotPostponedByLaterWrites]' started.
+Test Case '-[HoyaDBTests.ObservationTests testOneDeadlineTimerIsNotPostponedByLaterWrites]' passed (0.011 seconds).
+Test Case '-[HoyaDBTests.ObservationTests testRawDrainCannotStealManagedEventsAndExplicitManagedDrainDispatchesThem]' started.
+Test Case '-[HoyaDBTests.ObservationTests testRawDrainCannotStealManagedEventsAndExplicitManagedDrainDispatchesThem]' passed (0.010 seconds).
+Test Case '-[HoyaDBTests.ObservationTests testRetiredRegistrationCannotBlockReplacementOwnerInitialDelivery]' started.
+Test Case '-[HoyaDBTests.ObservationTests testRetiredRegistrationCannotBlockReplacementOwnerInitialDelivery]' passed (0.008 seconds).
+Test Case '-[HoyaDBTests.ObservationTests testTypedDataStatusAndProgressDeliverWithoutManualDrain]' started.
+Test Case '-[HoyaDBTests.ObservationTests testTypedDataStatusAndProgressDeliverWithoutManualDrain]' passed (0.007 seconds).
+Test Case '-[HoyaDBTests.ObservationTests testWriteDuringOwnedInitialDrainSchedulesFollowupWithoutAnotherWrite]' started.
+Test Case '-[HoyaDBTests.ObservationTests testWriteDuringOwnedInitialDrainSchedulesFollowupWithoutAnotherWrite]' passed (0.007 seconds).
+Test Suite 'ObservationTests' passed at 2026-10-24 21:46:06.840.
+	 Executed 6 tests, with 0 failures (0 unexpected) in 0.047 (0.050) seconds
+Test Suite 'ProtocolTests' started at 2026-10-24 21:46:06.840.
+Test Case '-[HoyaDBTests.ProtocolTests testEncodingRejectsNodeAndDepthOverflowBeforeFoundationTraversal]' started.
+Test Case '-[HoyaDBTests.ProtocolTests testEncodingRejectsNodeAndDepthOverflowBeforeFoundationTraversal]' passed (0.508 seconds).
+Test Case '-[HoyaDBTests.ProtocolTests testExactAdvancedProtocolUsesCallerSchemaAndLosslessCells]' started.
+Test Case '-[HoyaDBTests.ProtocolTests testExactAdvancedProtocolUsesCallerSchemaAndLosslessCells]' passed (0.005 seconds).
+Test Suite 'ProtocolTests' passed at 2026-10-24 21:46:07.355.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.513 (0.515) seconds
+Test Suite 'RelationTests' started at 2026-10-24 21:46:07.355.
+Test Case '-[HoyaDBTests.RelationTests testManagedJoinNavigationAndScopedLink]' started.
+Test Case '-[HoyaDBTests.RelationTests testManagedJoinNavigationAndScopedLink]' passed (0.016 seconds).
+Test Suite 'RelationTests' passed at 2026-10-24 21:46:07.371.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.016 (0.017) seconds
+Test Suite 'SyncTests' started at 2026-10-24 21:46:07.372.
+Test Case '-[HoyaDBTests.SyncTests testDroppingOwnerClosesNativeHandleWhileTransportRemainsAwaiting]' started.
+Test Case '-[HoyaDBTests.SyncTests testDroppingOwnerClosesNativeHandleWhileTransportRemainsAwaiting]' passed (0.012 seconds).
+Test Case '-[HoyaDBTests.SyncTests testFrozenRetryReceiptAndExplicitGuardedMapping]' started.
+Test Case '-[HoyaDBTests.SyncTests testFrozenRetryReceiptAndExplicitGuardedMapping]' passed (0.024 seconds).
+Test Case '-[HoyaDBTests.SyncTests testManagedOutcomeCarriesLosslessTerminalApplicationValue]' started.
+Test Case '-[HoyaDBTests.SyncTests testManagedOutcomeCarriesLosslessTerminalApplicationValue]' passed (0.019 seconds).
+Test Case '-[HoyaDBTests.SyncTests testManagedSyncRetainsInflightResponseAcrossAdmittedScopeAndMapsOnce]' started.
+Test Case '-[HoyaDBTests.SyncTests testManagedSyncRetainsInflightResponseAcrossAdmittedScopeAndMapsOnce]' passed (0.025 seconds).
+Test Case '-[HoyaDBTests.SyncTests testPreparePushAutomaticallyDeliversSentOutcomeWithoutReceiptOrManualDrain]' started.
+Test Case '-[HoyaDBTests.SyncTests testPreparePushAutomaticallyDeliversSentOutcomeWithoutReceiptOrManualDrain]' passed (0.010 seconds).
+Test Suite 'SyncTests' passed at 2026-10-24 21:46:07.463.
+	 Executed 5 tests, with 0 failures (0 unexpected) in 0.088 (0.091) seconds
+Test Suite 'TypedValuesTests' started at 2026-10-24 21:46:07.463.
+Test Case '-[HoyaDBTests.TypedValuesTests testInjectedGeneratorIsSampledBeforeAtomicBatchAndCommandKeepsPrefixContract]' started.
+Test Case '-[HoyaDBTests.TypedValuesTests testInjectedGeneratorIsSampledBeforeAtomicBatchAndCommandKeepsPrefixContract]' passed (0.010 seconds).
+Test Case '-[HoyaDBTests.TypedValuesTests testLosslessCellsQueryOrderingAndAtomicBatchFailure]' started.
+Test Case '-[HoyaDBTests.TypedValuesTests testLosslessCellsQueryOrderingAndAtomicBatchFailure]' passed (0.012 seconds).
+Test Suite 'TypedValuesTests' passed at 2026-10-24 21:46:07.486.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.022 (0.023) seconds
+Test Suite 'HoyaDBPackageTests.xctest' passed at 2026-10-24 21:46:07.486.
+	 Executed 35 tests, with 0 failures (0 unexpected) in 1.171 (1.197) seconds
+Test Suite 'All tests' passed at 2026-10-24 21:46:07.487.
+	 Executed 35 tests, with 0 failures (0 unexpected) in 1.171 (1.202) seconds
+◇ Test run started.
+↳ Testing Library Version: 1902
+↳ Target Platform: x86_64-apple-macos14.0
+✔ Test run with 0 tests in 0 suites passed after 0.001 seconds.

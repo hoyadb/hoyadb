@@ -1,0 +1,35 @@
+   Compiling hoyadb-benchmark v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/native)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 3.70s
+     Running unittests src/lib.rs (benchmarks/native/target/debug/deps/hoyadb_benchmark-0e7a7c369aeaba1a)
+
+running 7 tests
+test tests::p01_wrong_batch_change_ids_or_before_after_never_count_as_correct ... ok
+test tests::p01_p02_protected_engine_uses_identical_typed_operations ... ok
+test tests::p02_observations_and_boundary_are_real_decoded_callbacks ... ok
+test tests::p02_cold_empty_create_same_key_reopen_and_authored_upgrade ... ok
+test tests::p01_p02_literal_fixture_real_public_operations_and_protection ... ok
+test tests::p02_real_queue_retry_backoff_and_distinct_callback_fanout has been running for over 60 seconds
+test tests::p03_rss_cycles_are_real_owned_owners_with_full_first_and_final_proof has been running for over 60 seconds
+test tests::p02_real_queue_retry_backoff_and_distinct_callback_fanout ... ok
+test tests::p03_rss_cycles_are_real_owned_owners_with_full_first_and_final_proof ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 136.31s
+
+     Running unittests src/main.rs (benchmarks/native/target/debug/deps/hoyadb_benchmark-aaaa332a12ac9586)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/process.rs (benchmarks/native/target/debug/deps/process-b29ee2263e711476)
+
+running 1 test
+test p01_debug_worker_refuses_performance_evidence ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.73s
+
+   Doc-tests hoyadb_benchmark
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s

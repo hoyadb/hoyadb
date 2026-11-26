@@ -1,0 +1,196 @@
+{
+  "disclosure_clarifications": [
+    "Initial A and B attempts failed on five unsupported-log warnings despite exit0; only narrowed retries met the facility checks. This is not a native-load completeness PASS.",
+    "outcome.json contains reviewed paths and allowlisted JDK facts. The permitted claim is no arbitrary environment/property values, not no values.",
+    "Analyzer v1 to v2 also added run-path normalization and dual-resident file hashes. v1 reported 977 malformed class-log lines and 293 parsed lines. v2 to v3 corrected unload counting. Superseded outputs and hashes are local; v1/v2 analyzer source bodies are not preserved in this packet.",
+    "The supplied -Djava.io.tmpdir was observed in InitialSystemProperty; inclusion of arbitrary -D values and live runtime properties remains unproven.",
+    "Source reading confirms successful Java-initiated non-builtin loads pass through JVM_LoadLibrary and unload calls log by handle. VM-direct, pre-logging, dependent-image and native dlopen loads are outside library-tag coverage. No unload occurred in the probe; unload behavior is source evidence only."
+  ],
+  "dual_resident_study": {
+    "catalogue_matches": 513,
+    "dual_resident_files": [
+      {
+        "catalogue_image_uuid": "5818A89C-725F-3DFD-978E-C1FC018315D3",
+        "catalogue_unslid_load_address": 140703177154560,
+        "file_sha256": "34a1db9713a098517185fe74b0be8889c39112955cd5462b144df9198dc5899d",
+        "file_x86_64_slices": [
+          {
+            "cpu_subtype": 3,
+            "text_vmaddr": 0,
+            "uuid": "5818A89C-725F-3DFD-978E-C1FC018315D3"
+          }
+        ],
+        "inferred_slide": 156499968,
+        "observed_base_address": 140703333654528,
+        "path": "/usr/lib/system/libsystem_kernel.dylib"
+      },
+      {
+        "catalogue_image_uuid": "0C56AA69-5B51-367B-8A2C-16B95CC46A5E",
+        "catalogue_unslid_load_address": 140703177461760,
+        "file_sha256": "01adff2f91ce5ec1104dfa2e892a466c98518945abfaaee70f80db39fcc12bb6",
+        "file_x86_64_slices": [
+          {
+            "cpu_subtype": 3,
+            "text_vmaddr": 0,
+            "uuid": "0C56AA69-5B51-367B-8A2C-16B95CC46A5E"
+          }
+        ],
+        "inferred_slide": 156499968,
+        "observed_base_address": 140703333961728,
+        "path": "/usr/lib/system/libsystem_platform.dylib"
+      },
+      {
+        "catalogue_image_uuid": "169A2E57-79FB-3083-B61D-48BAE3A00692",
+        "catalogue_unslid_load_address": 140703177412608,
+        "file_sha256": "15531dc841a3f7402ea342d87125c5c589c40abf00dbaef513a591e190f443e0",
+        "file_x86_64_slices": [
+          {
+            "cpu_subtype": 3,
+            "text_vmaddr": 0,
+            "uuid": "169A2E57-79FB-3083-B61D-48BAE3A00692"
+          }
+        ],
+        "inferred_slide": 156499968,
+        "observed_base_address": 140703333912576,
+        "path": "/usr/lib/system/libsystem_pthread.dylib"
+      }
+    ],
+    "inferred_slide_counts": {
+      "0x9540000": 513
+    },
+    "method": "Pure reads of raw JFR JSON, prior cache image catalogue and universal Mach-O load commands; no JVM or native payload execution. Catalogue association is diagnostic inference, not a reviewed baseline or mapped-cache attestation."
+  },
+  "format": 1,
+  "next_step_constraints": [
+    "Keep the effective system-property requirement; startup JFR data is not a substitute.",
+    "Keep native completeness unresolved and the gate closed.",
+    "No classification-rule change or baseline enrollment without separately reviewed specification and evidence.",
+    "No os-only follow-up probe, attach invocation, sandbox exception, dependency activation, SR-32, collector code or compiler hold release is authorized by this record."
+  ],
+  "packet": "phase-seven-jdk-capture-probe/",
+  "packet_index_sha256": "e93687b3863a89b31262e3fa00ba213fd9205735681a0335b2072a341a75f39f",
+  "root_verification": {
+    "evidence_files": 7,
+    "invocations": 9,
+    "limits": [
+      "Diagnostic only; initial A/B attempts failed on unsupported-log warnings despite exit0",
+      "Native lifetime completeness, process closure, effective runtime properties and compiler strategy remain unproven",
+      "No system-cache enrollment, dependency activation or compiler hold release"
+    ],
+    "modes": {
+      "A": {
+        "all_capture_options_visible": true,
+        "chunks": [
+          {
+            "flags": 3,
+            "size": 202414,
+            "state": 0
+          }
+        ],
+        "empty_owned_directories": true,
+        "launcher_added_names": [
+          "__CF_USER_TEXT_ENCODING"
+        ],
+        "native_events": 1040,
+        "native_names": 520,
+        "pid": 56845,
+        "requested_events": {
+          "jdk.InitialEnvironmentVariable": 12,
+          "jdk.InitialSystemProperty": 30,
+          "jdk.JVMInformation": 2,
+          "jdk.NativeLibrary": 1040,
+          "jdk.Shutdown": 1
+        }
+      },
+      "B": {
+        "all_capture_options_visible": true,
+        "chunks": [
+          {
+            "flags": 3,
+            "size": 204837,
+            "state": 0
+          }
+        ],
+        "empty_owned_directories": true,
+        "launcher_added_names": [
+          "__CF_USER_TEXT_ENCODING"
+        ],
+        "native_events": 1040,
+        "native_names": 520,
+        "pid": 56868,
+        "requested_events": {
+          "jdk.InitialEnvironmentVariable": 14,
+          "jdk.InitialSystemProperty": 30,
+          "jdk.JVMInformation": 2,
+          "jdk.NativeLibrary": 1040,
+          "jdk.Shutdown": 1
+        }
+      }
+    },
+    "packet_index_sha256": "e93687b3863a89b31262e3fa00ba213fd9205735681a0335b2072a341a75f39f",
+    "pins_rechecked": 5,
+    "raw_files": 54
+  },
+  "scope": "SR-23 diagnostic evidence and inert follow-up only; no security acceptance or collector implementation",
+  "source_study": {
+    "execution": "None; source reading only",
+    "local_path": "target/phase-seven-security-remediation/jdk-facility-study/STUDY.md",
+    "sha256": "106172e763cd532670f2e114dda7ec5412df4319768e33ee4078eea30ec7ba85",
+    "verified_primary_fetches": [
+      {
+        "bytes": 151379,
+        "curl_exit": 0,
+        "effective_url": "https://raw.githubusercontent.com/openjdk/jdk17u/jdk-17.0.1%2B12/src/hotspot/share/prims/jvm.cpp",
+        "http_code": "200",
+        "sha256": "544851a3785d63c97f5ffd14020c68e9193d604fbfaaa6ffffa3977ea901446d",
+        "url": "https://raw.githubusercontent.com/openjdk/jdk17u/jdk-17.0.1%2B12/src/hotspot/share/prims/jvm.cpp",
+        "utc": "2026-10-26T00:34:50.922803+00:00"
+      },
+      {
+        "bytes": 9495,
+        "curl_exit": 0,
+        "effective_url": "https://raw.githubusercontent.com/openjdk/jdk17u/jdk-17.0.1%2B12/src/java.base/share/native/libjava/NativeLibraries.c",
+        "http_code": "200",
+        "sha256": "47def304358b37ec8397e91b0c0da8a0e8e95c0aee7871503ac43f99027d8ef0",
+        "url": "https://raw.githubusercontent.com/openjdk/jdk17u/jdk-17.0.1%2B12/src/java.base/share/native/libjava/NativeLibraries.c",
+        "utc": "2026-10-26T00:34:51.269714+00:00"
+      },
+      {
+        "bytes": 69943,
+        "curl_exit": 0,
+        "effective_url": "https://raw.githubusercontent.com/openjdk/jdk17u/jdk-17.0.1%2B12/src/hotspot/share/runtime/os.cpp",
+        "http_code": "200",
+        "sha256": "4a3f78635b1fdfbf6c74698acbdb09ca9672a23b3df7b9a2f99fe177b43c8548",
+        "url": "https://raw.githubusercontent.com/openjdk/jdk17u/jdk-17.0.1%2B12/src/hotspot/share/runtime/os.cpp",
+        "utc": "2026-10-26T00:34:51.624754+00:00"
+      },
+      {
+        "bytes": 16004,
+        "curl_exit": 0,
+        "effective_url": "https://raw.githubusercontent.com/openjdk/jdk17u/jdk-17.0.1%2B12/src/hotspot/os/bsd/attachListener_bsd.cpp",
+        "http_code": "200",
+        "sha256": "10f53c7d7d1f8b35b72cc34fdf4e782dd14dc01545317f87a788a2dc9ca67b50",
+        "url": "https://raw.githubusercontent.com/openjdk/jdk17u/jdk-17.0.1%2B12/src/hotspot/os/bsd/attachListener_bsd.cpp",
+        "utc": "2026-10-26T00:34:51.973891+00:00"
+      },
+      {
+        "bytes": 17019,
+        "curl_exit": 0,
+        "effective_url": "https://raw.githubusercontent.com/openjdk/jdk17u/jdk-17.0.1%2B12/src/hotspot/share/services/attachListener.cpp",
+        "http_code": "200",
+        "sha256": "957f2ee65d73df416429eba6850b32387d0f14bc9e6cd50f978c77c305f46206",
+        "url": "https://raw.githubusercontent.com/openjdk/jdk17u/jdk-17.0.1%2B12/src/hotspot/share/services/attachListener.cpp",
+        "utc": "2026-10-26T00:34:52.313112+00:00"
+      },
+      {
+        "bytes": 40247,
+        "curl_exit": 0,
+        "effective_url": "https://raw.githubusercontent.com/openjdk/jdk17u/jdk-17.0.1%2B12/src/hotspot/share/services/diagnosticCommand.cpp",
+        "http_code": "200",
+        "sha256": "97e8eb716df43c1592e7da3bdf18958f3a7ea0a1334f737afce6953262ca3ef4",
+        "url": "https://raw.githubusercontent.com/openjdk/jdk17u/jdk-17.0.1%2B12/src/hotspot/share/services/diagnosticCommand.cpp",
+        "utc": "2026-10-26T00:34:52.671113+00:00"
+      }
+    ]
+  }
+}

@@ -1,0 +1,116 @@
+"""Owned RN iOS consumer runtime on the task-owned simulator only, with an owned loopback report receiver.
+
+The app POSTs its JSON result to 127.0.0.1:8781/report; this receiver only records bodies (it is not a
+command transport). Modes run in order all -> writer -> reader in one install so writer/reader share the
+app container across independent processes. Every simctl call is bounded and recorded; timeouts are
+UNKNOWN outcomes. Usage: ios-run.py <build-label> <run-label>
+"""
+from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+from pathlib import Path
+import hashlib
+import json
+import os
+import queue
+import subprocess
+import sys
+import threading
+import time
+
+repo = Path(__file__).resolve().parents[2]
+stage = repo / 'target/phase-seven-rn'
+build = stage / f'ios-build-{sys.argv[1]}'
+out = stage / f'ios-run-{sys.argv[2]}'
+out.mkdir()
+udid = 'CC525A65-D03E-4F9D-8936-DD16BBFD9664'
+identifier = 'dev.hoyadb.phase7.rn.consumer'
+app = Path(json.loads((build / 'build.json').read_text())['app']['path'])
+reports = queue.Queue()
+calls = []
+started = time.monotonic()
+
+
+class Receiver(BaseHTTPRequestHandler):
+    def do_POST(self):
+        body = self.rfile.read(min(int(self.headers.get('Content-Length', '0')), 4 * 1024 * 1024))
+        ok = self.path == '/report'
+        self.send_response(204 if ok else 404)
+        self.end_headers()
+        if ok:
+            reports.put(body)
+
+    def log_message(self, *args):
+        pass
+
+
+server = ThreadingHTTPServer(('127.0.0.1', 8781), Receiver)
+threading.Thread(target=server.serve_forever, daemon=True).start()
+
+
+def save():
+    (out / 'commands.json').write_text(json.dumps(calls, indent=2) + '\n')
+
+
+def call(argv, timeout, env=None, required=True):
+    entry = {'argv': argv, 'start_s': round(time.monotonic() - started, 3), 'timeout_s': timeout}
+    calls.append(entry)
+    try:
+        p = subprocess.run(argv, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, timeout=timeout,
+                           env=dict(os.environ, **env) if env else None)
+        entry.update(exit_code=p.returncode, output=p.stdout[-20000:])
+    except subprocess.TimeoutExpired:
+        entry.update(timed_out=True, outcome='UNKNOWN')
+        raise
+    finally:
+        entry['elapsed_s'] = round(time.monotonic() - started - entry['start_s'], 3)
+        save()
+    if required and p.returncode:
+        raise RuntimeError(f'{argv} exit {p.returncode}: {p.stdout[-2000:]}')
+    return p.stdout
+
+
+def owned_state():
+    devices = json.loads(call(['xcrun', 'simctl', 'list', 'devices', '--json'], 60))
+    owned = [d for group in devices['devices'].values() for d in group if d['udid'] == udid]
+    assert len(owned) == 1 and owned[0]['name'] == 'HoyaDB-Phase7-Owned', owned
+    return owned[0]['state']
+
+
+summary = {'udid': udid, 'bundle_id': identifier, 'app': str(app),
+           'binary_sha256': hashlib.sha256((app / 'HoyaConsumer').read_bytes()).hexdigest(), 'modes': {}}
+try:
+    summary['initial_state'] = owned_state()
+    if summary['initial_state'] != 'Booted':
+        call(['xcrun', 'simctl', 'boot', udid], 180)
+    call(['xcrun', 'simctl', 'bootstatus', udid, '-b'], 300)
+    call(['xcrun', 'simctl', 'install', udid, str(app)], 300)
+    for mode in ['all', 'writer', 'reader']:
+        while not reports.empty():
+            reports.get()
+        t = time.monotonic()
+        call(['xcrun', 'simctl', 'launch', '--terminate-running-process', f'--stdout={out}/{mode}-stdout.txt',
+              f'--stderr={out}/{mode}-stderr.txt', udid, identifier], 120, env={'SIMCTL_CHILD_HOYA_RN_MODE': mode})
+        try:
+            body = reports.get(timeout=900 if mode == 'all' else 300)
+            result = json.loads(body)
+        except queue.Empty:
+            result = None
+        (out / f'{mode}-report.json').write_text(json.dumps(result, indent=2) + '\n')
+        summary['modes'][mode] = {'elapsed_s': round(time.monotonic() - t, 3), 'received': result is not None,
+                                  'failed': None if result is None else result.get('failed'),
+                                  'reports': None if result is None else len(result.get('reports', []))}
+        call(['xcrun', 'simctl', 'terminate', udid, identifier], 60, required=False)
+        save()
+    summary['result'] = 'PASS' if all(m['received'] and m['failed'] == 0 for m in summary['modes'].values()) else 'FAILED_OR_UNKNOWN'
+finally:
+    server.shutdown()
+    for argv in (['xcrun', 'simctl', 'uninstall', udid, identifier], ['xcrun', 'simctl', 'shutdown', udid]):
+        try:
+            call(argv, 120, required=False)
+        except subprocess.TimeoutExpired:
+            pass
+    try:
+        summary['final_state'] = owned_state()
+    except Exception as error:
+        summary['final_state'] = 'UNKNOWN ' + repr(error)
+    (out / 'summary.json').write_text(json.dumps(summary, indent=2) + '\n')
+    print(json.dumps(summary, indent=2), flush=True)

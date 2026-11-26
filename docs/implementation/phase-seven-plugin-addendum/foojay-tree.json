@@ -1,0 +1,446 @@
+{
+  "sha": "2a6cc60ed8d35e025e44193c895502996c8edf4e",
+  "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/trees/2a6cc60ed8d35e025e44193c895502996c8edf4e",
+  "tree": [
+    {
+      "path": ".gitattributes",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "097f9f98d9eec50af4ab357b4913aa9bf5a12b0e",
+      "size": 214,
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/blobs/097f9f98d9eec50af4ab357b4913aa9bf5a12b0e"
+    },
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "275fd61c6375afa8ced03d7b99b59bd755f3b746",
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/trees/275fd61c6375afa8ced03d7b99b59bd755f3b746"
+    },
+    {
+      "path": ".github/dependabot.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b5ef0c9587342e5a2ef8b77939a300a8efa51ec4",
+      "size": 592,
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/blobs/b5ef0c9587342e5a2ef8b77939a300a8efa51ec4"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "92254c98af0a0860386da102c1ab01742f075d87",
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/trees/92254c98af0a0860386da102c1ab01742f075d87"
+    },
+    {
+      "path": ".github/workflows/dependency-review-action.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3aa0ed87c425a0e2525fe7644f3f6810d33af71",
+      "size": 950,
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/blobs/c3aa0ed87c425a0e2525fe7644f3f6810d33af71"
+    },
+    {
+      "path": ".github/workflows/dependency-submission.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "48b892ec42618034fb01ddc61c8a8f2e42216413",
+      "size": 1005,
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/blobs/48b892ec42618034fb01ddc61c8a8f2e42216413"
+    },
+    {
+      "path": ".github/workflows/gradle.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4485e0edb9c23288962fcfe205c73ab46357f042",
+      "size": 1825,
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/blobs/4485e0edb9c23288962fcfe205c73ab46357f042"
+    },
+    {
+      "path": ".github/workflows/submit-dependency-graph.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b7c40ca03268ee69ea305fc6c6e59544f8e8e0c",
+      "size": 421,
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/blobs/7b7c40ca03268ee69ea305fc6c6e59544f8e8e0c"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ddcbabde9f11fa671a80564589a0cc3d1cbaaa66",
+      "size": 492,
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/blobs/ddcbabde9f11fa671a80564589a0cc3d1cbaaa66"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9fc507677aaea6b9c10006c365a399817ecfdf6f",
+      "size": 2744,
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/blobs/9fc507677aaea6b9c10006c365a399817ecfdf6f"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "size": 11357,
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/blobs/261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "140d47a8db3f35b9568e8d0ea58ab8d29eb3f5c6",
+      "size": 6608,
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/blobs/140d47a8db3f35b9568e8d0ea58ab8d29eb3f5c6"
+    },
+    {
+      "path": "docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7d5a9b7199da0b2301d43ef5a93c60a51288bd54",
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/trees/7d5a9b7199da0b2301d43ef5a93c60a51288bd54"
+    },
+    {
+      "path": "docs/plugin-release-process.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e1b413d822fa38e35e393fe114a68b0215e54f3c",
+      "size": 3321,
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/blobs/e1b413d822fa38e35e393fe114a68b0215e54f3c"
+    },
+    {
+      "path": "foojay-resolver",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8f375078f27aad642fbdb821827c87986398e62a",
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/trees/8f375078f27aad642fbdb821827c87986398e62a"
+    },
+    {
+      "path": "foojay-resolver/build.gradle.kts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d27195e2c8117e0da65c7c05d498ed2f4154273",
+      "size": 4645,
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/blobs/6d27195e2c8117e0da65c7c05d498ed2f4154273"
+    },
+    {
+      "path": "foojay-resolver/gradle.properties",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c866d925b0484cc69d1abe04ac7dff484bec96a",
+      "size": 19,
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/blobs/2c866d925b0484cc69d1abe04ac7dff484bec96a"
+    },
+    {
+      "path": "foojay-resolver/release-notes-1.0.0.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b4894375a2ff26ce81691808c80fe4d9bfd08fb2",
+      "size": 286,
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/blobs/b4894375a2ff26ce81691808c80fe4d9bfd08fb2"
+    },
+    {
+      "path": "foojay-resolver/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "05da578e117e3e09929dea5ea00389a2ab8a605c",
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/trees/05da578e117e3e09929dea5ea00389a2ab8a605c"
+    },
+    {
+      "path": "foojay-resolver/src/functionalTest",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d1341642779762a4ef4f8f2d8e3431589004d3c5",
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/trees/d1341642779762a4ef4f8f2d8e3431589004d3c5"
+    },
+    {
+      "path": "foojay-resolver/src/functionalTest/kotlin",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "28439cb1ba25ccdb50cca28fae172ceb1e993292",
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/trees/28439cb1ba25ccdb50cca28fae172ceb1e993292"
+    },
+    {
+      "path": "foojay-resolver/src/functionalTest/kotlin/org",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5a2607b8d38e2f1fe17393e2015f7cd57c44964b",
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/trees/5a2607b8d38e2f1fe17393e2015f7cd57c44964b"
+    },
+    {
+      "path": "foojay-resolver/src/functionalTest/kotlin/org/gradle",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d9ebcccbb44bc0e90bb7a678a5e8c731ecc4af2e",
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/trees/d9ebcccbb44bc0e90bb7a678a5e8c731ecc4af2e"
+    },
+    {
+      "path": "foojay-resolver/src/functionalTest/kotlin/org/gradle/toolchains",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6d84aa64302291a50634a4390c543f9593b4bfbc",
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/trees/6d84aa64302291a50634a4390c543f9593b4bfbc"
+    },
+    {
+      "path": "foojay-resolver/src/functionalTest/kotlin/org/gradle/toolchains/foojay",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fad75ea6db84de923b8a446a9415a67557562e7e",
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/trees/fad75ea6db84de923b8a446a9415a67557562e7e"
+    },
+    {
+      "path": "foojay-resolver/src/functionalTest/kotlin/org/gradle/toolchains/foojay/AbstractFoojayToolchainsPluginFunctionalTest.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06f957e877d8f3b47f5dfd3efa5a4b0bc5094fa4",
+      "size": 2566,
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/blobs/06f957e877d8f3b47f5dfd3efa5a4b0bc5094fa4"
+    },
+    {
+      "path": "foojay-resolver/src/functionalTest/kotlin/org/gradle/toolchains/foojay/FoojayToolchainsConventionPluginFunctionalTest.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "01170083c3f8dc55e8602aa3a3d01c5c9762970e",
+      "size": 2753,
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/blobs/01170083c3f8dc55e8602aa3a3d01c5c9762970e"
+    },
+    {
+      "path": "foojay-resolver/src/functionalTest/kotlin/org/gradle/toolchains/foojay/FoojayToolchainsPluginFunctionalTest.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "12befa83fac1dfe2946d60be1351bcc4b1ad4fbd",
+      "size": 3713,
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/blobs/12befa83fac1dfe2946d60be1351bcc4b1ad4fbd"
+    },
+    {
+      "path": "foojay-resolver/src/functionalTest/kotlin/org/gradle/toolchains/foojay/gradleVersions.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d2c2eb7e231d414788478be9b2e86fb2974534a7",
+      "size": 2963,
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/blobs/d2c2eb7e231d414788478be9b2e86fb2974534a7"
+    },
+    {
+      "path": "foojay-resolver/src/main",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2727183c2232fb3111d30e3b7b9f764b3f926cbd",
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/trees/2727183c2232fb3111d30e3b7b9f764b3f926cbd"
+    },
+    {
+      "path": "foojay-resolver/src/main/kotlin",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ed9656ed84e8f715ac60b4be2a21a1d8683faf39",
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/trees/ed9656ed84e8f715ac60b4be2a21a1d8683faf39"
+    },
+    {
+      "path": "foojay-resolver/src/main/kotlin/org",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8e293f710586fb6be1fa54da5d97e303ca015ee3",
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/trees/8e293f710586fb6be1fa54da5d97e303ca015ee3"
+    },
+    {
+      "path": "foojay-resolver/src/main/kotlin/org/gradle",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8e6bb1666136d632a5dd638226f93bf5a172913f",
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/trees/8e6bb1666136d632a5dd638226f93bf5a172913f"
+    },
+    {
+      "path": "foojay-resolver/src/main/kotlin/org/gradle/toolchains",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "78e80bb5e3ce6d9d1a4d06a2662f8e6ca119631c",
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/trees/78e80bb5e3ce6d9d1a4d06a2662f8e6ca119631c"
+    },
+    {
+      "path": "foojay-resolver/src/main/kotlin/org/gradle/toolchains/foojay",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cbd6a42f592e00942181ecb75f90dbef9f0c991e",
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/trees/cbd6a42f592e00942181ecb75f90dbef9f0c991e"
+    },
+    {
+      "path": "foojay-resolver/src/main/kotlin/org/gradle/toolchains/foojay/AbstractFoojayToolchainPlugin.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "15d2cc2a2cbee22ab5b916463070a79e16d8e3a4",
+      "size": 485,
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/blobs/15d2cc2a2cbee22ab5b916463070a79e16d8e3a4"
+    },
+    {
+      "path": "foojay-resolver/src/main/kotlin/org/gradle/toolchains/foojay/FoojayApi.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cbd26ba212a42ddee356191d5c62cff8a6300f48",
+      "size": 4402,
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/blobs/cbd26ba212a42ddee356191d5c62cff8a6300f48"
+    },
+    {
+      "path": "foojay-resolver/src/main/kotlin/org/gradle/toolchains/foojay/FoojayToolchainResolver.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "22b32a609ec221e9291dc7e3d6b7278e293dfaf4",
+      "size": 1489,
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/blobs/22b32a609ec221e9291dc7e3d6b7278e293dfaf4"
+    },
+    {
+      "path": "foojay-resolver/src/main/kotlin/org/gradle/toolchains/foojay/FoojayToolchainsConventionPlugin.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b9e988aeebfd9edd621a851ed3c9be3b10dddf29",
+      "size": 622,
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/blobs/b9e988aeebfd9edd621a851ed3c9be3b10dddf29"
+    },
+    {
+      "path": "foojay-resolver/src/main/kotlin/org/gradle/toolchains/foojay/FoojayToolchainsPlugin.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b63a7c46f1ae4954383508a711093f8833590ab3",
+      "size": 941,
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/blobs/b63a7c46f1ae4954383508a711093f8833590ab3"
+    },
+    {
+      "path": "foojay-resolver/src/main/kotlin/org/gradle/toolchains/foojay/distributions.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2912aae3ff47f625455b92a4fd1e6297d4d619c",
+      "size": 6884,
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/blobs/c2912aae3ff47f625455b92a4fd1e6297d4d619c"
+    },
+    {
+      "path": "foojay-resolver/src/main/kotlin/org/gradle/toolchains/foojay/packages.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "53a4905ae3e3ab973861e80a9162fecd29ce762c",
+      "size": 2460,
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/blobs/53a4905ae3e3ab973861e80a9162fecd29ce762c"
+    },
+    {
+      "path": "foojay-resolver/src/test",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e771308d80ca0b683396b24ad76a7f4a56feb9cd",
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/trees/e771308d80ca0b683396b24ad76a7f4a56feb9cd"
+    },
+    {
+      "path": "foojay-resolver/src/test/kotlin",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b4ce86b9f282fc010215d9e3343705d5f7573b9e",
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/trees/b4ce86b9f282fc010215d9e3343705d5f7573b9e"
+    },
+    {
+      "path": "foojay-resolver/src/test/kotlin/org",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "15ff0f2b07d8b2b819d2658a834c65cd75a09e87",
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/trees/15ff0f2b07d8b2b819d2658a834c65cd75a09e87"
+    },
+    {
+      "path": "foojay-resolver/src/test/kotlin/org/gradle",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6a93d797a68ae78fb4700245ba3622c88947d427",
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/trees/6a93d797a68ae78fb4700245ba3622c88947d427"
+    },
+    {
+      "path": "foojay-resolver/src/test/kotlin/org/gradle/toolchains",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7a3e0c17eb1c77493a8d18c70920668a7a47f646",
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/trees/7a3e0c17eb1c77493a8d18c70920668a7a47f646"
+    },
+    {
+      "path": "foojay-resolver/src/test/kotlin/org/gradle/toolchains/foojay",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "78e0f3639f54cd12578b99c938f765101a4f88c6",
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/trees/78e0f3639f54cd12578b99c938f765101a4f88c6"
+    },
+    {
+      "path": "foojay-resolver/src/test/kotlin/org/gradle/toolchains/foojay/FoojayApiTest.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5d197dbaf2c52a3f380a8cfc5623b63e7dd4d21",
+      "size": 12311,
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/blobs/c5d197dbaf2c52a3f380a8cfc5623b63e7dd4d21"
+    },
+    {
+      "path": "gradle.properties",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "581d5b712ef9613ac55908822eb87dc8e5be2cea",
+      "size": 129,
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/blobs/581d5b712ef9613ac55908822eb87dc8e5be2cea"
+    },
+    {
+      "path": "gradle",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b26a28db874995f011f921c3d19bdb0583eab658",
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/trees/b26a28db874995f011f921c3d19bdb0583eab658"
+    },
+    {
+      "path": "gradle/detekt.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "22db1d9623a0736e5933048fcf1a768cb5918f7d",
+      "size": 237,
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/blobs/22db1d9623a0736e5933048fcf1a768cb5918f7d"
+    },
+    {
+      "path": "gradle/wrapper",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "254ae55e52ee6e1072dc9736d279412f2e8a6195",
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/trees/254ae55e52ee6e1072dc9736d279412f2e8a6195"
+    },
+    {
+      "path": "gradle/wrapper/gradle-wrapper.jar",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b33c55baabb587c669f562ae36f953de2481846",
+      "size": 43764,
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/blobs/1b33c55baabb587c669f562ae36f953de2481846"
+    },
+    {
+      "path": "gradle/wrapper/gradle-wrapper.properties",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "247cf2a9f5cef9328e058dbf7595a93b6022a6c6",
+      "size": 338,
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/blobs/247cf2a9f5cef9328e058dbf7595a93b6022a6c6"
+    },
+    {
+      "path": "gradlew",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "23d15a9367071145e9c79bb4ddf879d1fbe78b5d",
+      "size": 8733,
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/blobs/23d15a9367071145e9c79bb4ddf879d1fbe78b5d"
+    },
+    {
+      "path": "gradlew.bat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db3a6ac207e507b0bc1635a9f2c18d3b174e682e",
+      "size": 2843,
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/blobs/db3a6ac207e507b0bc1635a9f2c18d3b174e682e"
+    },
+    {
+      "path": "settings.gradle.kts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1384bf2a4348131f12466a9afed71dfecdc75876",
+      "size": 369,
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/git/blobs/1384bf2a4348131f12466a9afed71dfecdc75876"
+    }
+  ],
+  "truncated": false
+}

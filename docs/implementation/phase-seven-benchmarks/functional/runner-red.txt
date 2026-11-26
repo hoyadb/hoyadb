@@ -1,0 +1,55 @@
+.EEEE.........
+======================================================================
+ERROR: test_literal_A_oracle_has_exact_kinds_fields_order_and_counts (test_runner.RunnerTests.test_literal_A_oracle_has_exact_kinds_fields_order_and_counts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/test_runner.py", line 27, in test_literal_A_oracle_has_exact_kinds_fields_order_and_counts
+    rows=list(proof_records(100))
+              ~~~~~~~~~~~~~^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/run.py", line 7, in proof_records
+    raise RunnerError("proof oracle pending")
+run.RunnerError: proof oracle pending
+
+======================================================================
+ERROR: test_lock_graph_is_exact_subset_and_path_package_addition_only (test_runner.RunnerTests.test_lock_graph_is_exact_subset_and_path_package_addition_only)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/test_runner.py", line 80, in test_lock_graph_is_exact_subset_and_path_package_addition_only
+    self.assertEqual(audit_locks(base,standalone),1)
+                     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/run.py", line 18, in audit_locks
+    raise RunnerError("lock audit pending")
+run.RunnerError: lock audit pending
+
+======================================================================
+ERROR: test_stream_hashes_exact_real_record_bytes_and_keeps_only_proof_counts (test_runner.RunnerTests.test_stream_hashes_exact_real_record_bytes_and_keeps_only_proof_counts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/test_runner.py", line 41, in test_stream_hashes_exact_real_record_bytes_and_keeps_only_proof_counts
+    rows,lines,report=transcript()
+                      ~~~~~~~~~~^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/test_runner.py", line 14, in transcript
+    rows=list(proof_records(n))
+              ~~~~~~~~~~~~~^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/run.py", line 7, in proof_records
+    raise RunnerError("proof oracle pending")
+run.RunnerError: proof oracle pending
+
+======================================================================
+ERROR: test_wrong_type_value_order_missing_extra_or_unknown_output_rejects (test_runner.RunnerTests.test_wrong_type_value_order_missing_extra_or_unknown_output_rejects)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/test_runner.py", line 52, in test_wrong_type_value_order_missing_extra_or_unknown_output_rejects
+    _,lines,_=transcript()
+              ~~~~~~~~~~^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/test_runner.py", line 14, in transcript
+    rows=list(proof_records(n))
+              ~~~~~~~~~~~~~^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/run.py", line 7, in proof_records
+    raise RunnerError("proof oracle pending")
+run.RunnerError: proof oracle pending
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.017s
+
+FAILED (errors=4)

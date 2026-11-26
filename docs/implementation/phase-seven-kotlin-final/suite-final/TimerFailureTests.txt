@@ -1,0 +1,3 @@
+PASS DEF22_custom_timer_exception_preserves_committed_Row_and_normal_replacement_deadline
+
+exit=0

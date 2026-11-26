@@ -1,0 +1,47 @@
+{
+  "archive_sha256": "83ba210612181fbd3b5ca3d746cde4577f5ca521df4256c4f0b6e5c54a5cbc75",
+  "artifacts_untracked": 4,
+  "checker": {
+    "binding": "Identical in cut-44, the reviewed source commit, the packet permanent-source manifest and current working tree. Final-1 inputs.sha256 omits this checker; historical inputs and logs remain unchanged.",
+    "path": "bindings/swift/check_artifacts.py",
+    "sha256": "581c1fdee1f15a53bbf15217a04f8db76c4db11943c1b51abce8429b4b3369cc"
+  },
+  "controller_untracked_target": 2,
+  "evidence_files": 121,
+  "exact_framework_copies": 3,
+  "five_test_logs_green": 6,
+  "format": 1,
+  "framework_members": 40,
+  "historical_archives_checked": {
+    "1ac8d113910f609cc61a3b0784ad7bfeae2b9c5002a41ff4f95ef86670c2c538": {
+      "added_notice_packaging_members": 30,
+      "changed": [
+        "package/README.md"
+      ],
+      "members": 26
+    },
+    "6a2ca07b9be24159bcd5ccf73bbf39d69136a16605ccb720e817dd94ea54a79e": {
+      "added_notice_packaging_members": 30,
+      "changed": [],
+      "members": 26
+    }
+  },
+  "index_sha256": "0336cf7a184c873c5da3b7690dd178000b43f34cd58c45b874efd492937660c0",
+  "lossless_wrappers": 8,
+  "native_members_unchanged": 10,
+  "packet": "phase-seven-native-notices/",
+  "packet_index_sha256": "0336cf7a184c873c5da3b7690dd178000b43f34cd58c45b874efd492937660c0",
+  "permanent_source_at_ab68ce6": 35,
+  "presentation_sources": 119,
+  "remaining": "RN Android, runtime security integration, dependency decisions and final Phase 7 acceptance remain separate.",
+  "review": {
+    "agent": "e6f3b33e-7787-43bb-904f-646b096c9154",
+    "final_phase_seven_rounds_counted": 0,
+    "method": "Read-only hashes and archive inspection; root independently checked both historical archives. No npm, JVM, build, runtime, network or Git mutation by reviewer.",
+    "model": "claude-opus-5-5",
+    "verdict": "PASS"
+  },
+  "scope": "DEF-0030 AN01-AN05 final packaging acceptance; no new runtime or native build claim",
+  "source_commit": "ab68ce6e5394745abba7540cac8b8ab6b181343b",
+  "source_members_bound_to_commit": 16
+}

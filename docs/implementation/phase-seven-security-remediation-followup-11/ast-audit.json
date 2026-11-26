@@ -1,0 +1,22 @@
+{
+ "native_cache.py": {
+  "sha256": "f9dc28348471583671c838104b15085f9edaa8a5de93898d1282259497a425db",
+  "assert_nodes": 0,
+  "try_nodes": 0,
+  "imports": [
+   "dataclasses",
+   "re"
+  ]
+ },
+ "kotlin_guard.py": {
+  "sha256": "050fdf51bf3f070492563d881badcb02725a2b5068b0791aeb3d9b8c57db211a",
+  "assert_nodes": 0,
+  "try_nodes": 3,
+  "imports": [
+   "dataclasses",
+   "java_properties",
+   "native_cache",
+   "shlex"
+  ]
+ }
+}

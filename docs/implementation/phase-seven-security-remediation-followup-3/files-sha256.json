@@ -1,0 +1,16 @@
+{
+ "README.md": "399f3e0037a259b5d291b8d3c2c0ea94c5b0e60da9081a14ab4571152b42e9fa",
+ "licenses/intellij-community-233.13135.103-LICENSE.txt": "f0faea91dbf608882a9811211ec58d6c90fea8211b91218532eecb15b08e8ae2",
+ "licenses/intellij-community-233.13135.103-NOTICE.txt": "83903abdebe3b3dda1a178fb3f03ac71ef31c4503b79226b66ef27f1aa9d3993",
+ "licenses/javax.inject-1-source-license-header.txt": "04cefc686b5ea6d0d40d569d2345a3a6f0a5f6baa5c39976f047fbbd7bc5cf9f",
+ "licenses/jdom-2.0.6.1-LICENSE.txt": "9d3878b0a87ad1b2bafb729e8c9085b36b17bd0d30a813030113e13f99cced2c",
+ "licenses/jline-3.24.1-LICENSE.txt": "7d9ca7d4eb3a2534869e7823b81b299321d49ceb3d169d11b995513fabd9fc7e",
+ "licenses/log4j-1.2.17-LICENSE": "e118ad8e5f2d3c71f0e7d6202d5829e7580ccd9e3609a546c692788e657afbe2",
+ "licenses/log4j-1.2.17-NOTICE": "0bb1786271220fb5cb7c12acede871f85eb8c43ea7ba9621bd0d628f5156ecee",
+ "licenses/protobuf-v2.6.1-LICENSE": "31c7505c31a1ea8557a5362cd69946dc9f5ee80fac8fa1d1b1531c08530497b0",
+ "sources/bta-kgp-sources.txt": "4feca09974eceedf963b2c0e7d4c3a1864741b1f33fa2c2c149cd72cc2cee0c0",
+ "sources/cve-2022-3171-precondition.json": "e0caafb4200b33506344dae390e9d47af63f5abd478abef222135a8d20d6ed69",
+ "sources/kotlin-web-site-build-tools-api-history.json": "7e7f5ebe90bc41d983ccc89c18e7230de38c0cfc08a19960685bf366920b39a0",
+ "sources/kotlin-web-site-build-tools-api.md": "6ae7bf3f14d2d4ba650d334625361deae6a8e18bc88b80564201a63f3b89740b",
+ "sources/language-version-bounds-by-tag.txt": "aad74859b1a46a5c2913d4cab5b5e194bbcb4cf1d64dad06c39f2be769c95b26"
+}

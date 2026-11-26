@@ -1,0 +1,27 @@
+Building for debugging...
+[0/3] Write sources
+[1/3] Write swift-version--58304C5D6DBC2206.txt
+[3/5] Compiling HoyaDBTests AdmissionTests.swift
+[4/5] Emitting module HoyaDBTests
+[4/6] Write Objects.LinkFileList
+[5/6] Linking HoyaDBPackageTests
+Build complete! (2.88s)
+Test Suite 'Selected tests' started at 2026-10-24 21:30:25.127.
+Test Suite 'HoyaDBPackageTests.xctest' started at 2026-10-24 21:30:25.129.
+Test Suite 'AdmissionTests' started at 2026-10-24 21:30:25.129.
+Test Case '-[HoyaDBTests.AdmissionTests testForeignReleaseBeforeSuspendedFalseBeginResumesWithoutPolling]' started.
+/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/swift/Tests/HoyaDBTests/AdmissionTests.swift:44: error: -[HoyaDBTests.AdmissionTests testForeignReleaseBeforeSuspendedFalseBeginResumesWithoutPolling] : Asynchronous wait failed: Exceeded timeout of 2 seconds, with unfulfilled expectations: "queued Swift command resumes after foreign bus release".
+Test Case '-[HoyaDBTests.AdmissionTests testForeignReleaseBeforeSuspendedFalseBeginResumesWithoutPolling]' failed (2.318 seconds).
+Test Case '-[HoyaDBTests.AdmissionTests testNativeTransportPublishesTerminalFailureAfterCallAndNoReadPulse]' started.
+/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/swift/Tests/HoyaDBTests/AdmissionTests.swift:57: error: -[HoyaDBTests.AdmissionTests testNativeTransportPublishesTerminalFailureAfterCallAndNoReadPulse] : Asynchronous wait failed: Exceeded timeout of 2 seconds, with unfulfilled expectations: "payload-free terminal-attempt notification".
+Test Case '-[HoyaDBTests.AdmissionTests testNativeTransportPublishesTerminalFailureAfterCallAndNoReadPulse]' failed (2.051 seconds).
+Test Suite 'AdmissionTests' failed at 2026-10-24 21:30:29.499.
+	 Executed 2 tests, with 2 failures (0 unexpected) in 4.370 (4.370) seconds
+Test Suite 'HoyaDBPackageTests.xctest' failed at 2026-10-24 21:30:29.499.
+	 Executed 2 tests, with 2 failures (0 unexpected) in 4.370 (4.370) seconds
+Test Suite 'Selected tests' failed at 2026-10-24 21:30:29.499.
+	 Executed 2 tests, with 2 failures (0 unexpected) in 4.370 (4.372) seconds
+◇ Test run started.
+↳ Testing Library Version: 1902
+↳ Target Platform: x86_64-apple-macos14.0
+✔ Test run with 0 tests in 0 suites passed after 0.001 seconds.

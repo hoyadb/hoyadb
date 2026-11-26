@@ -1,0 +1,36 @@
+{
+  "status": "APPROVED BY OPERATOR; ACTIVATION LIMITED TO REVIEWED SCOPE AND SECURITY HANDOFF",
+  "proposal_commit": "5e771f2",
+  "proposal": "phase-seven-kotlin-compiler-addendum/README.md",
+  "index_sha256": "2182049f4dd8b8623b04ff4c45dbf7e2fb5d79f171f34693e1384493e2b674e5",
+  "bundle_sha256": "364a420165b6f4301d90b23179e43f26c78de6e75b9f1059d7c97f30fc3cafcf",
+  "independent_review": "phase-seven-kotlin-compiler-final-review.json",
+  "verdict": "Ready for operator risk decision; no concrete blocker",
+  "root_verification": {
+    "indexed_files_rehashed": 123,
+    "mismatches": 0,
+    "unindexed_files_excluding_index": 0,
+    "explicit_revalidation_checks_under_python_I_O": 177,
+    "revalidation_failures": 0,
+    "post_revalidation_packet_mismatches": 0,
+    "staged_packet_and_index_blobs_byte_exact": 124,
+    "packet_whitespace_failures": 0
+  },
+  "scope": "One Kotlin JVM plugin marker, 17 exact build-process JARs and recorded metadata; reviewed JDK17.0.1-tem and pinned installed AAPT2 override. No app/SDK/core runtime pin change.",
+  "residuals": [
+    "Embedded LZ4 has three high advisories; applicability to relocated build-time copy is unverified",
+    "Original restricted-build advisory disclosures remain unchanged",
+    "Signer identity trust unknown; two signatures use SHA1; trove4j signer is repository service",
+    "Trove LGPL2.1 build-only; several embedded license texts missing; no SBOM/legal certification",
+    "Jansi native code may load during compilation; load behavior unverified",
+    "AAPT2 compatibility unverified; actual KGP/AGP/app build and runtime graph equality must pass before compilation"
+  ],
+  "gates": [
+    "Operator approval recorded; actual security remediation and matching verification still required",
+    "Correct runner JDK and verify exact approved input hashes before activation",
+    "Isolated outbound-denied offline graph; stop on any extra artifact/component; no JDK/SDK/formatter downloads, shared cache or source fallback",
+    "Compile and owned emulator execution only after coordinated handback",
+    "Accepted performance window after RN Android completion, per operator choice"
+  ],
+  "approval_record": "phase-seven-kotlin-compiler-approval.json"
+}

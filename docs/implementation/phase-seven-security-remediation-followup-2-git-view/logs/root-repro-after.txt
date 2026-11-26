@@ -1,0 +1,1 @@
+root repro ok= False [('consumer/gradle.properties', 'idea.use.native.compression')]

@@ -1,0 +1,7 @@
+{
+  "format": 1,
+  "original_path": "tdd/red-1/optimized-quoting-error-not-run.txt",
+  "original_bytes": 238,
+  "original_sha256": "634d51103de80a72427b65f2eba2f1a55247fbf7e2a3190a88f71eaf676e3702",
+  "utf8": "Unknown option: - \nusage: /usr/local/Cellar/python@3.14/3.14.8/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python [option] ... [-c cmd | -m mod | file | -] [arg] ...\nTry `python -h' for more information.\n"
+}

@@ -1,0 +1,23 @@
+.......FF.
+======================================================================
+FAIL: test_sample_level_unit_and_profile_overrides_cannot_hide_mixed_inputs (test_summary.SummaryTests.test_sample_level_unit_and_profile_overrides_cannot_hide_mixed_inputs) (key='unit')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/test_summary.py", line 65, in test_sample_level_unit_and_profile_overrides_cannot_hide_mixed_inputs
+    with self.subTest(key=key),self.assertRaises(InvalidSamples):
+                               ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+AssertionError: InvalidSamples not raised
+
+======================================================================
+FAIL: test_sample_level_unit_and_profile_overrides_cannot_hide_mixed_inputs (test_summary.SummaryTests.test_sample_level_unit_and_profile_overrides_cannot_hide_mixed_inputs) (key='profile')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/test_summary.py", line 65, in test_sample_level_unit_and_profile_overrides_cannot_hide_mixed_inputs
+    with self.subTest(key=key),self.assertRaises(InvalidSamples):
+                               ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+AssertionError: InvalidSamples not raised
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.020s
+
+FAILED (failures=2)

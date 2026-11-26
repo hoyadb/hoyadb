@@ -1,0 +1,1522 @@
+{
+  "format": 1,
+  "status": "passed",
+  "scope": "matching JavaScript SDK external wire receipt wake correction",
+  "defect": "DEF-0015",
+  "preparation_commit": "94bc84b",
+  "source_closure": {
+    "sources": [
+      {
+        "path": "Cargo.lock",
+        "bytes": 8521,
+        "sha256": "c0b3ea34c15984efef184be735421a295069ab385d721861a9dcace707ead295"
+      },
+      {
+        "path": "Cargo.toml",
+        "bytes": 472,
+        "sha256": "537cd29ab94563a71756fcde92706aef08674e8562d77c84426ca5c54b8a1838"
+      },
+      {
+        "path": "bindings/javascript/README.md",
+        "bytes": 8195,
+        "sha256": "59967ecf21171694f519e3de4e00b6dee3322720bf7b0696a6302012c7214a65"
+      },
+      {
+        "path": "bindings/javascript/benchmark/correctness.mjs",
+        "bytes": 1685,
+        "sha256": "4415b3173929503f12b935cc701c1e7a1858d8f49c7ad89e421aea85c241430c"
+      },
+      {
+        "path": "bindings/javascript/benchmark/flow.mjs",
+        "bytes": 1617,
+        "sha256": "d2f065d10e8747761617509cb36cb655fa7697bd5f41ad89e9d11f5ae82afc8a"
+      },
+      {
+        "path": "bindings/javascript/benchmark/flow.test.mjs",
+        "bytes": 2807,
+        "sha256": "f9cbc0ef34d33ff5f5b6ef0f38cf4523e0cca90fa4455531048d993ba4d70c3c"
+      },
+      {
+        "path": "bindings/javascript/benchmark/harness.mjs",
+        "bytes": 14778,
+        "sha256": "5e0272a6e8494c21d50e32a774fa88994faa0bec48f2117b71a9b6313ca5c427"
+      },
+      {
+        "path": "bindings/javascript/benchmark/harness.test.mjs",
+        "bytes": 11597,
+        "sha256": "8769248e88a6c30df6f9d49359c58d408a7a5bcfb4bb29377b24a80337778e94"
+      },
+      {
+        "path": "bindings/javascript/benchmark/protocol.mjs",
+        "bytes": 2809,
+        "sha256": "7c39b9e1b5ed9407cedceedd2725033401f1a4dd21c82788932ab7e0ca7bf8f5"
+      },
+      {
+        "path": "bindings/javascript/benchmark/protocol.test.mjs",
+        "bytes": 3080,
+        "sha256": "8c70ac2213b4567e6abafdaea1505c869af94eb0ce0f5383fe7a9453be1c90d8"
+      },
+      {
+        "path": "bindings/javascript/benchmark/run.mjs",
+        "bytes": 2472,
+        "sha256": "e2e67d19060fc1f8de0da413528e4986b6854bbbc465361d9a14b1ac175915ba"
+      },
+      {
+        "path": "bindings/javascript/benchmark/run.test.mjs",
+        "bytes": 2935,
+        "sha256": "afe5431c36be05d89147c6a8285ec6ed5a28dd73a50849c911446bef83d5ac7d"
+      },
+      {
+        "path": "bindings/javascript/client/LICENSES.md",
+        "bytes": 965,
+        "sha256": "46fb9ef3e4c0a5524a6c61618f23618baf041116b821ec5e9c0e1bd92a02424c"
+      },
+      {
+        "path": "bindings/javascript/client/index.d.ts",
+        "bytes": 11579,
+        "sha256": "0fb04bd3b8bd2dd639215e9299816c6eddd999d81a8aab749e41625390ccd151"
+      },
+      {
+        "path": "bindings/javascript/client/package.json",
+        "bytes": 629,
+        "sha256": "3db2631cd7625855a785d4692ba6db24b09ce4e2ca54e61d10f4c46f2e28f58a"
+      },
+      {
+        "path": "bindings/javascript/client/src/client.js",
+        "bytes": 27178,
+        "sha256": "e2250b4c5623ca450f8b97d3989fa756873b5f4727285a48b65a46127fd36f20"
+      },
+      {
+        "path": "bindings/javascript/client/src/errors.js",
+        "bytes": 752,
+        "sha256": "567e599075aec41ed384bb0d1b61c8bc7fcec0b3a5121b4230785360ac0c5c75"
+      },
+      {
+        "path": "bindings/javascript/client/src/index.js",
+        "bytes": 301,
+        "sha256": "eed2171c2caefae409abf0de369c52de174c71f97ea0b76d8f14f87fab5eaf26"
+      },
+      {
+        "path": "bindings/javascript/client/src/query.js",
+        "bytes": 1171,
+        "sha256": "545485e313f3b59e78ee593ba9efb78ffbdfe22b74f1faab30a7f36e7536561a"
+      },
+      {
+        "path": "bindings/javascript/client/src/runtime.js",
+        "bytes": 2226,
+        "sha256": "1501ee4c69adfc5c5623832a3898ff218a5958c6251f389cf435480e0bbee176"
+      },
+      {
+        "path": "bindings/javascript/client/src/time.js",
+        "bytes": 730,
+        "sha256": "583308cc8d00b2c0da0aa08ffe74fca6f7c2bd358b0aad5c87c22cc33ef8cb2d"
+      },
+      {
+        "path": "bindings/javascript/client/src/utf8.js",
+        "bytes": 622,
+        "sha256": "05a6b092d309ccdcf314684d3365491eaf88d22727fd1a92471acd9af41b37d4"
+      },
+      {
+        "path": "bindings/javascript/client/src/values.js",
+        "bytes": 4493,
+        "sha256": "d2954646c65f748c068cf643f313de7ad6e44e38384f3e23db6a07a3068a23a8"
+      },
+      {
+        "path": "bindings/javascript/client/src/web-entry.js",
+        "bytes": 71,
+        "sha256": "5de646093cf2b7e873d1b3d71a1c75566455eef3ad44b9a58b23725d13a83968"
+      },
+      {
+        "path": "bindings/javascript/client/src/web.js",
+        "bytes": 2734,
+        "sha256": "0d5cd7a8e4b1955622a552ce51cf50cd99f9f07bc376cf77540da0ad44590172"
+      },
+      {
+        "path": "bindings/javascript/client/src/worker-host.js",
+        "bytes": 2060,
+        "sha256": "b490883d6cbf96dc6b6393caccc317bdc627d4e7321b2db623bfd39c8c743b80"
+      },
+      {
+        "path": "bindings/javascript/client/src/worker.js",
+        "bytes": 442,
+        "sha256": "f90ff3fecc8bd2ef8d23c462e7837ed66916612eec188e4eafb3c6035953a9f0"
+      },
+      {
+        "path": "bindings/javascript/client/test/determinism.test.mjs",
+        "bytes": 4181,
+        "sha256": "aeb9bc355b7a0543d274466cb0c31cbe757b102328b00579b0205cc6858f7ab8"
+      },
+      {
+        "path": "bindings/javascript/client/test/entity-api.test.mjs",
+        "bytes": 2407,
+        "sha256": "00bf1a8925e199cd7eb07f73609073c3e0ac57864ef613beec719c7f0ccdf91f"
+      },
+      {
+        "path": "bindings/javascript/client/test/host-regressions.test.mjs",
+        "bytes": 19815,
+        "sha256": "ff715df75463f731908b20a756f124a2d70b998be884110db65c3e506bc90eaf"
+      },
+      {
+        "path": "bindings/javascript/client/test/interface.test.mjs",
+        "bytes": 8057,
+        "sha256": "3baae49f309bdb3fababfd63440fddcc602fe51f8c68818ca2995313ac38b875"
+      },
+      {
+        "path": "bindings/javascript/client/test/lifecycle.test.mjs",
+        "bytes": 6344,
+        "sha256": "43a34424dc0d09ba6991f962edcb7c3f4c9ac4f6b63cbef05f745701c3890fac"
+      },
+      {
+        "path": "bindings/javascript/client/test/managed-observation.test.mjs",
+        "bytes": 5492,
+        "sha256": "28395f25a2d627b3c44c36955c1efbaae28b85407109961796509e55886d6986"
+      },
+      {
+        "path": "bindings/javascript/client/test/merge.test.mjs",
+        "bytes": 5179,
+        "sha256": "7725784808c77aedfdf701225da2dd08ab0c5080f3dddcfcb25015f32feff216"
+      },
+      {
+        "path": "bindings/javascript/client/test/release.test.mjs",
+        "bytes": 7579,
+        "sha256": "3ef4f733303f655139d5b91a83cbcf586c96722c165a828f645ead21f52c3c09"
+      },
+      {
+        "path": "bindings/javascript/client/test/schemas.mjs",
+        "bytes": 1017,
+        "sha256": "c75f11cbcfeffcc63ab84409671ac8fb4f14998761b746d98b03a4845ba50029"
+      },
+      {
+        "path": "bindings/javascript/client/test/stale-sync.test.mjs",
+        "bytes": 6664,
+        "sha256": "41a312a664634dccc25e0336c32ced23c39abade25d2f30ded386887eac7f72e"
+      },
+      {
+        "path": "bindings/javascript/client/test/sync-observation.test.mjs",
+        "bytes": 1578,
+        "sha256": "3571d47b280d4bd9536b3370e710a28bb98da9a036d15e6d39bb667e206c4402"
+      },
+      {
+        "path": "bindings/javascript/client/test/web-channel.test.mjs",
+        "bytes": 2792,
+        "sha256": "eff2b099bdfd1982b86dece4c66db4d3c5de801c64059329b5d33dcd7ac5677d"
+      },
+      {
+        "path": "bindings/javascript/client/test/worker.test.mjs",
+        "bytes": 5492,
+        "sha256": "9006919c25383a1c802b6fc7de1b079150ef2edadf88ad63ea04f6f31780c6a9"
+      },
+      {
+        "path": "bindings/javascript/client/web.d.ts",
+        "bytes": 193,
+        "sha256": "9964f4b5a62fb0a2b7d666a3213a42d2288d93fe133d4c2dcc984427ea1f953c"
+      },
+      {
+        "path": "bindings/javascript/consumer/browser.html",
+        "bytes": 340,
+        "sha256": "dff2d812bdc26b371a2d164398594514713110d6ee168a6b85e7ffdde086c232"
+      },
+      {
+        "path": "bindings/javascript/consumer/browser.mjs",
+        "bytes": 6904,
+        "sha256": "86ee9fddf0e6427699874729a36f884c9c7c59c3ab86fa71dbdbeb9a66b56860"
+      },
+      {
+        "path": "bindings/javascript/consumer/conformance.mjs",
+        "bytes": 29518,
+        "sha256": "8480d56c4683d8276b8675b29db05abc4d439f65f96f319b8e9bdf649fb9a3a8"
+      },
+      {
+        "path": "bindings/javascript/consumer/consumer_server.py",
+        "bytes": 2373,
+        "sha256": "496df71f01efec8799783b679b34833d4136b7333578e9c1c124fe93a5baad2d"
+      },
+      {
+        "path": "bindings/javascript/consumer/consumer_server_test.py",
+        "bytes": 1479,
+        "sha256": "d11d9da5a900be111b8cf494b096cfd403033e5b30b2c69ccd8054da4b7cc9e0"
+      },
+      {
+        "path": "bindings/javascript/consumer/control-client.mjs",
+        "bytes": 1797,
+        "sha256": "53fdfcc938eb2251a8055f696f77cb31d54b59b8fbd93d01a2d25710e371321b"
+      },
+      {
+        "path": "bindings/javascript/consumer/control-worker.mjs",
+        "bytes": 1273,
+        "sha256": "806c129840a77856e70b85c68752f6086784c0e612f45c1068010188b85af5d3"
+      },
+      {
+        "path": "bindings/javascript/consumer/control.html",
+        "bytes": 188,
+        "sha256": "3c8a028f7d3d7671b95205c5cc9124d4c1e64ed696513117416f7ce416f7f636"
+      },
+      {
+        "path": "bindings/javascript/consumer/control.mjs",
+        "bytes": 6737,
+        "sha256": "ecdd30b5f0a77b92bcf4015108793ad785c76e6f2d68a4a0f1baad475ceb6410"
+      },
+      {
+        "path": "bindings/javascript/consumer/memory.mjs",
+        "bytes": 1049,
+        "sha256": "36aee82ac503e250c4096f9d175d29795bd0d2e40c0034688820e2dcf6ba5398"
+      },
+      {
+        "path": "bindings/javascript/consumer/offline-memory.mjs",
+        "bytes": 1315,
+        "sha256": "f15b26e6979f005ad0ebb1cf7c84c8633e04258dc11c326d26e577e4a95e5687"
+      },
+      {
+        "path": "bindings/javascript/consumer/types.ts",
+        "bytes": 1819,
+        "sha256": "4d985c91eefc2d0c572a37908a63e976b9da09fd3c241ed62d740f98c1488881"
+      },
+      {
+        "path": "bindings/javascript/consumer/walkthrough.mjs",
+        "bytes": 9380,
+        "sha256": "cd24ad27a5ddecbada8cf7d49cdd1f9b627e106cfaa03cff91a39174e511e319"
+      },
+      {
+        "path": "bindings/javascript/consumer/worker-retry.html",
+        "bytes": 187,
+        "sha256": "a46bc8ab50149ddb0f3b5952d6d612b6c40672e13f6aec34390b7d3a03c6bcd5"
+      },
+      {
+        "path": "bindings/javascript/consumer/worker-retry.mjs",
+        "bytes": 2225,
+        "sha256": "77120550dcd2c5f4a5cbc695eec4d1b2980b9ca48e0f832417ebd940ba651da3"
+      },
+      {
+        "path": "bindings/javascript/package-lock.json",
+        "bytes": 649,
+        "sha256": "9a54aa5a8f63239f16e3d77ce7a1c61f911c610abe6baf51baf48f0a64ed1921"
+      },
+      {
+        "path": "bindings/javascript/package.json",
+        "bytes": 184,
+        "sha256": "30e41761181d64fd1cf9fff4d50118ab5d0183dd0c9795b6969494dc4b6c127f"
+      },
+      {
+        "path": "bindings/javascript/scripts/build.mjs",
+        "bytes": 3291,
+        "sha256": "96b1561c9e4d277107511e7785492a9b205eb62054374adbc4dcf1deb02c1831"
+      },
+      {
+        "path": "bindings/javascript/scripts/check-build.mjs",
+        "bytes": 1325,
+        "sha256": "3b7466ad9514e0b3e3a223c51e610c77395cdbefe4c16d92a208a79e3e9c0828"
+      },
+      {
+        "path": "bindings/javascript/scripts/freeze.mjs",
+        "bytes": 2100,
+        "sha256": "0f861ab85ef7b213631081458fe63caf9b6e79a3be7e82756525afec20d85af8"
+      },
+      {
+        "path": "bindings/javascript/scripts/packed-consumer.mjs",
+        "bytes": 5453,
+        "sha256": "9c924dc19b5b0dfd76303b664cc1e70ffa0868f0b0838d550db449999ed264e5"
+      },
+      {
+        "path": "bindings/javascript/testing/LICENSES.md",
+        "bytes": 411,
+        "sha256": "9b4cff3a81cdcb21c8f40bdbfc634472655f4b80f58b734521e61ef256f98ff1"
+      },
+      {
+        "path": "bindings/javascript/testing/index.d.ts",
+        "bytes": 1074,
+        "sha256": "81c71c6c759cc71456ed2db5c16d2e094a4f1de4fc4b367760e420e750a50d3b"
+      },
+      {
+        "path": "bindings/javascript/testing/package.json",
+        "bytes": 403,
+        "sha256": "32b25827644a48f155574ce3dcdc4825cd9ed6fb842c5f58ae028a1905c00081"
+      },
+      {
+        "path": "bindings/javascript/testing/src/index.js",
+        "bytes": 2698,
+        "sha256": "c31795763a5971afd63c6794895c43083af03a1fe5a9221425c2c468fbe6c3ac"
+      },
+      {
+        "path": "bindings/javascript/testing/test/transport.test.mjs",
+        "bytes": 2592,
+        "sha256": "d8aeb8c69428fd9ff0b2ad98cacf9a7c5b2de4b4b8d05c46cb3b76a569166e7f"
+      },
+      {
+        "path": "bindings/javascript/third-party/bitflags-2.13.2/LICENSE-APACHE",
+        "bytes": 10847,
+        "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+      },
+      {
+        "path": "bindings/javascript/third-party/bitflags-2.13.2/LICENSE-MIT",
+        "bytes": 1071,
+        "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+      },
+      {
+        "path": "bindings/javascript/third-party/bumpalo-3.20.3/LICENSE-APACHE",
+        "bytes": 10847,
+        "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+      },
+      {
+        "path": "bindings/javascript/third-party/bumpalo-3.20.3/LICENSE-MIT",
+        "bytes": 1059,
+        "sha256": "65f94e99ddaf4f5d1782a6dae23f35d4293a9a01444a13135a6887017d353cee"
+      },
+      {
+        "path": "bindings/javascript/third-party/cc-1.10.0/LICENSE-APACHE",
+        "bytes": 10847,
+        "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+      },
+      {
+        "path": "bindings/javascript/third-party/cc-1.10.0/LICENSE-MIT",
+        "bytes": 1057,
+        "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+      },
+      {
+        "path": "bindings/javascript/third-party/cfg-if-1.0.5/LICENSE-APACHE",
+        "bytes": 10847,
+        "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+      },
+      {
+        "path": "bindings/javascript/third-party/cfg-if-1.0.5/LICENSE-MIT",
+        "bytes": 1057,
+        "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+      },
+      {
+        "path": "bindings/javascript/third-party/fallible-iterator-0.3.0/LICENSE-APACHE",
+        "bytes": 11358,
+        "sha256": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08"
+      },
+      {
+        "path": "bindings/javascript/third-party/fallible-iterator-0.3.0/LICENSE-MIT",
+        "bytes": 1078,
+        "sha256": "0816e154b159ba255c563f7c8c7df5bbb8cc5fc96f5ab8cf9f4743b4f41fe7eb"
+      },
+      {
+        "path": "bindings/javascript/third-party/fallible-streaming-iterator-0.1.9/LICENSE-APACHE",
+        "bytes": 11358,
+        "sha256": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08"
+      },
+      {
+        "path": "bindings/javascript/third-party/fallible-streaming-iterator-0.1.9/LICENSE-MIT",
+        "bytes": 1086,
+        "sha256": "8dcec5569a9be5b0e086c80faed6f1aefa670af0ec29cecc2f714303096887e0"
+      },
+      {
+        "path": "bindings/javascript/third-party/find-msvc-tools-0.1.15/LICENSE-APACHE",
+        "bytes": 10847,
+        "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+      },
+      {
+        "path": "bindings/javascript/third-party/find-msvc-tools-0.1.15/LICENSE-MIT",
+        "bytes": 1057,
+        "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+      },
+      {
+        "path": "bindings/javascript/third-party/futures-core-0.3.34/LICENSE-APACHE",
+        "bytes": 10874,
+        "sha256": "275c491d6d1160553c32fd6127061d7f9606c3ea25abfad6ca3f6ed088785427"
+      },
+      {
+        "path": "bindings/javascript/third-party/futures-core-0.3.34/LICENSE-MIT",
+        "bytes": 1094,
+        "sha256": "6652c868f35dfe5e8ef636810a4e576b9d663f3a17fb0f5613ad73583e1b88fd"
+      },
+      {
+        "path": "bindings/javascript/third-party/futures-task-0.3.34/LICENSE-APACHE",
+        "bytes": 10874,
+        "sha256": "275c491d6d1160553c32fd6127061d7f9606c3ea25abfad6ca3f6ed088785427"
+      },
+      {
+        "path": "bindings/javascript/third-party/futures-task-0.3.34/LICENSE-MIT",
+        "bytes": 1094,
+        "sha256": "6652c868f35dfe5e8ef636810a4e576b9d663f3a17fb0f5613ad73583e1b88fd"
+      },
+      {
+        "path": "bindings/javascript/third-party/futures-util-0.3.34/LICENSE-APACHE",
+        "bytes": 10874,
+        "sha256": "275c491d6d1160553c32fd6127061d7f9606c3ea25abfad6ca3f6ed088785427"
+      },
+      {
+        "path": "bindings/javascript/third-party/futures-util-0.3.34/LICENSE-MIT",
+        "bytes": 1094,
+        "sha256": "6652c868f35dfe5e8ef636810a4e576b9d663f3a17fb0f5613ad73583e1b88fd"
+      },
+      {
+        "path": "bindings/javascript/third-party/index.json",
+        "bytes": 25911,
+        "sha256": "a41372506527f8107beec256bd76c645b87bc01a1c746a9ddeecd4cbe1fb1fee"
+      },
+      {
+        "path": "bindings/javascript/third-party/js-sys-0.3.106/LICENSE-APACHE",
+        "bytes": 10847,
+        "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+      },
+      {
+        "path": "bindings/javascript/third-party/js-sys-0.3.106/LICENSE-MIT",
+        "bytes": 1057,
+        "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+      },
+      {
+        "path": "bindings/javascript/third-party/libsqlite3-sys-0.38.1/LICENSE",
+        "bytes": 1067,
+        "sha256": "c10c1f27337546471e5f7e4e97fdd398b35b9d4e126115dcd22de8d8e65abf6f"
+      },
+      {
+        "path": "bindings/javascript/third-party/once_cell-1.21.4/LICENSE-APACHE",
+        "bytes": 10847,
+        "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+      },
+      {
+        "path": "bindings/javascript/third-party/once_cell-1.21.4/LICENSE-MIT",
+        "bytes": 1023,
+        "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+      },
+      {
+        "path": "bindings/javascript/third-party/pin-project-lite-0.2.17/LICENSE-APACHE",
+        "bytes": 10174,
+        "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+      },
+      {
+        "path": "bindings/javascript/third-party/pin-project-lite-0.2.17/LICENSE-MIT",
+        "bytes": 1023,
+        "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+      },
+      {
+        "path": "bindings/javascript/third-party/pkg-config-0.3.34/LICENSE-APACHE",
+        "bytes": 10847,
+        "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+      },
+      {
+        "path": "bindings/javascript/third-party/pkg-config-0.3.34/LICENSE-MIT",
+        "bytes": 1057,
+        "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+      },
+      {
+        "path": "bindings/javascript/third-party/proc-macro2-1.0.107/LICENSE-APACHE",
+        "bytes": 9723,
+        "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+      },
+      {
+        "path": "bindings/javascript/third-party/proc-macro2-1.0.107/LICENSE-MIT",
+        "bytes": 1023,
+        "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+      },
+      {
+        "path": "bindings/javascript/third-party/quote-1.0.47/LICENSE-APACHE",
+        "bytes": 9723,
+        "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+      },
+      {
+        "path": "bindings/javascript/third-party/quote-1.0.47/LICENSE-MIT",
+        "bytes": 1023,
+        "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+      },
+      {
+        "path": "bindings/javascript/third-party/rsqlite-vfs-0.2.0/LICENSE",
+        "bytes": 1061,
+        "sha256": "e1c1975c3474cce31722836f101a40ffaf1cc784e4d2f38ce3e77b9712934e78"
+      },
+      {
+        "path": "bindings/javascript/third-party/rusqlite-0.40.1/LICENSE",
+        "bytes": 1067,
+        "sha256": "c10c1f27337546471e5f7e4e97fdd398b35b9d4e126115dcd22de8d8e65abf6f"
+      },
+      {
+        "path": "bindings/javascript/third-party/rustversion-1.0.23/LICENSE-APACHE",
+        "bytes": 9723,
+        "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+      },
+      {
+        "path": "bindings/javascript/third-party/rustversion-1.0.23/LICENSE-MIT",
+        "bytes": 1023,
+        "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+      },
+      {
+        "path": "bindings/javascript/third-party/shlex-2.0.1/LICENSE-APACHE",
+        "bytes": 566,
+        "sha256": "553fffcd9b1cb158bc3e9edc35da85ca5c3b3d7d2e61c883ebcfa8a65814b583"
+      },
+      {
+        "path": "bindings/javascript/third-party/shlex-2.0.1/LICENSE-MIT",
+        "bytes": 1092,
+        "sha256": "4455bf75a91154108304cb283e0fea9948c14f13e20d60887cf2552449dea3b1"
+      },
+      {
+        "path": "bindings/javascript/third-party/slab-0.4.12/LICENSE",
+        "bytes": 1055,
+        "sha256": "8ce0830173fdac609dfb4ea603fdc002c2f4af0dc9b1a005653f5da9cf534b18"
+      },
+      {
+        "path": "bindings/javascript/third-party/smallvec-1.16.4/LICENSE-APACHE",
+        "bytes": 10847,
+        "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+      },
+      {
+        "path": "bindings/javascript/third-party/smallvec-1.16.4/LICENSE-MIT",
+        "bytes": 1072,
+        "sha256": "0b28172679e0009b655da42797c03fd163a3379d5cfa67ba1f1655e974a2a1a9"
+      },
+      {
+        "path": "bindings/javascript/third-party/sqlcipher-src-419.0.6+sqlcipher-4.19.0-sqlite-3.53.4-libtomcrypt-1.18.2/LICENSE",
+        "bytes": 1073,
+        "sha256": "413f82e0f4f8191a8624a7b7b2c9809466f7f3d930ad52a74ad29f2dd907881d"
+      },
+      {
+        "path": "bindings/javascript/third-party/sqlite-wasm-rs-0.6.2/LICENSE",
+        "bytes": 1061,
+        "sha256": "e1c1975c3474cce31722836f101a40ffaf1cc784e4d2f38ce3e77b9712934e78"
+      },
+      {
+        "path": "bindings/javascript/third-party/sqlite-wasm-vfs-0.3.0/LICENSE",
+        "bytes": 1061,
+        "sha256": "e1c1975c3474cce31722836f101a40ffaf1cc784e4d2f38ce3e77b9712934e78"
+      },
+      {
+        "path": "bindings/javascript/third-party/syn-3.0.9/LICENSE-APACHE",
+        "bytes": 9723,
+        "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+      },
+      {
+        "path": "bindings/javascript/third-party/syn-3.0.9/LICENSE-MIT",
+        "bytes": 1023,
+        "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+      },
+      {
+        "path": "bindings/javascript/third-party/thiserror-2.0.21/LICENSE-APACHE",
+        "bytes": 9723,
+        "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+      },
+      {
+        "path": "bindings/javascript/third-party/thiserror-2.0.21/LICENSE-MIT",
+        "bytes": 1023,
+        "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+      },
+      {
+        "path": "bindings/javascript/third-party/thiserror-impl-2.0.21/LICENSE-APACHE",
+        "bytes": 9723,
+        "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+      },
+      {
+        "path": "bindings/javascript/third-party/thiserror-impl-2.0.21/LICENSE-MIT",
+        "bytes": 1023,
+        "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+      },
+      {
+        "path": "bindings/javascript/third-party/tokio-1.54.1/LICENSE",
+        "bytes": 1070,
+        "sha256": "253cd04c6714889df2d32f3f64d669179a1c95c76ac43c40882c52eb06bc3552"
+      },
+      {
+        "path": "bindings/javascript/third-party/unicode-ident-1.0.27/LICENSE-APACHE",
+        "bytes": 9723,
+        "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+      },
+      {
+        "path": "bindings/javascript/third-party/unicode-ident-1.0.27/LICENSE-MIT",
+        "bytes": 1023,
+        "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+      },
+      {
+        "path": "bindings/javascript/third-party/unicode-ident-1.0.27/LICENSE-UNICODE",
+        "bytes": 1995,
+        "sha256": "f7db81051789b729fea528a63ec4c938fdcb93d9d61d97dc8cc2e9df6d47f2a1"
+      },
+      {
+        "path": "bindings/javascript/third-party/vcpkg-0.2.15/LICENSE-APACHE",
+        "bytes": 11050,
+        "sha256": "60c93a31f490375aadf64098b75f10715010379541021e00261045d7800611d3"
+      },
+      {
+        "path": "bindings/javascript/third-party/vcpkg-0.2.15/LICENSE-MIT",
+        "bytes": 1082,
+        "sha256": "016d20f335060a70e79d9fcf8dfaa6201114d65d592211f4bdfb8ae9ca2bc1dc"
+      },
+      {
+        "path": "bindings/javascript/third-party/wasm-bindgen-0.2.129/LICENSE-APACHE",
+        "bytes": 10847,
+        "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+      },
+      {
+        "path": "bindings/javascript/third-party/wasm-bindgen-0.2.129/LICENSE-MIT",
+        "bytes": 1057,
+        "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+      },
+      {
+        "path": "bindings/javascript/third-party/wasm-bindgen-futures-0.4.79/LICENSE-APACHE",
+        "bytes": 10847,
+        "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+      },
+      {
+        "path": "bindings/javascript/third-party/wasm-bindgen-futures-0.4.79/LICENSE-MIT",
+        "bytes": 1057,
+        "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+      },
+      {
+        "path": "bindings/javascript/third-party/wasm-bindgen-macro-0.2.129/LICENSE-APACHE",
+        "bytes": 10847,
+        "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+      },
+      {
+        "path": "bindings/javascript/third-party/wasm-bindgen-macro-0.2.129/LICENSE-MIT",
+        "bytes": 1057,
+        "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+      },
+      {
+        "path": "bindings/javascript/third-party/wasm-bindgen-macro-support-0.2.129/LICENSE-APACHE",
+        "bytes": 10847,
+        "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+      },
+      {
+        "path": "bindings/javascript/third-party/wasm-bindgen-macro-support-0.2.129/LICENSE-MIT",
+        "bytes": 1057,
+        "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+      },
+      {
+        "path": "bindings/javascript/third-party/wasm-bindgen-shared-0.2.129/LICENSE-APACHE",
+        "bytes": 10847,
+        "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+      },
+      {
+        "path": "bindings/javascript/third-party/wasm-bindgen-shared-0.2.129/LICENSE-MIT",
+        "bytes": 1057,
+        "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+      },
+      {
+        "path": "bindings/javascript/third-party/web-sys-0.3.106/LICENSE-APACHE",
+        "bytes": 10847,
+        "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+      },
+      {
+        "path": "bindings/javascript/third-party/web-sys-0.3.106/LICENSE-MIT",
+        "bytes": 1057,
+        "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+      },
+      {
+        "path": "bindings/javascript/third-party/zeroize-1.9.1/LICENSE-APACHE",
+        "bytes": 11358,
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+      },
+      {
+        "path": "bindings/javascript/third-party/zeroize-1.9.1/LICENSE-MIT",
+        "bytes": 1082,
+        "sha256": "8c7516d4b27b1e495be5e38b612298b63de48d05f49cdac94f70f3cd70f8864b"
+      },
+      {
+        "path": "bindings/web/Cargo.lock",
+        "bytes": 9752,
+        "sha256": "228d794bdc40d80fbb43b424af72b0d8c6e24fe3f3c447c5a4a2e5a0785ebf89"
+      },
+      {
+        "path": "bindings/web/Cargo.toml",
+        "bytes": 644,
+        "sha256": "511f6e0b35ad20fdd4039a4c81394f05b9d1c7afb232ebd0f08ace19cbb24802"
+      },
+      {
+        "path": "bindings/web/src/lib.rs",
+        "bytes": 5058,
+        "sha256": "fc932ad83e510467daf2c2967b5171d4394bf26375feedc10a313f3c20a338ce"
+      },
+      {
+        "path": "crates/hoyadb-bindings/Cargo.toml",
+        "bytes": 367,
+        "sha256": "ae50f97fefa26f3cae89d1682b06898069ceda539c1c9648756fe718cbf2cc8b"
+      },
+      {
+        "path": "crates/hoyadb-bindings/src/budget.rs",
+        "bytes": 3698,
+        "sha256": "8efe83e4524fa929e9da3d8e5e2a65d014e72fb33b44da0c1effe8b31e8d5e15"
+      },
+      {
+        "path": "crates/hoyadb-bindings/src/codec.rs",
+        "bytes": 14961,
+        "sha256": "eef07eec01e3d3cf00b0328d93061becb1127369a293dc4c33d3669e258787a1"
+      },
+      {
+        "path": "crates/hoyadb-bindings/src/commands.rs",
+        "bytes": 15534,
+        "sha256": "d054b96d1b018747c9ef3510fe4747bba435e894a23dc2cd5ab6f759e73c215f"
+      },
+      {
+        "path": "crates/hoyadb-bindings/src/data.rs",
+        "bytes": 9360,
+        "sha256": "a828b4b8afda985e380cd50abcff3ee333854839f3449f369ecc2c118be8c372"
+      },
+      {
+        "path": "crates/hoyadb-bindings/src/engine.rs",
+        "bytes": 4070,
+        "sha256": "0ec9daf66925ede06126c3613fb2fa856c51ae82019bafde9cf2e9d2af1ff968"
+      },
+      {
+        "path": "crates/hoyadb-bindings/src/entities.rs",
+        "bytes": 21620,
+        "sha256": "c4b93592b14ffa0f1812e35a37b0358a53ac3a945a1a71577f7e449ee400d56b"
+      },
+      {
+        "path": "crates/hoyadb-bindings/src/lib.rs",
+        "bytes": 19850,
+        "sha256": "6093398fa60cc3ecb40f318b043d8e5c9d3681e655838bd1fdff06fc1bca0d14"
+      },
+      {
+        "path": "crates/hoyadb-bindings/src/observations.rs",
+        "bytes": 9217,
+        "sha256": "86c4a6cec76d3a45b72fb4970219d34d42e8cca1367ed70c4002801903df8de6"
+      },
+      {
+        "path": "crates/hoyadb-bindings/src/reconciliation.rs",
+        "bytes": 7794,
+        "sha256": "c1146c9b4c74e89f240b7dee83673a90a3aa7e7675c179cfceec229b0cb29988"
+      },
+      {
+        "path": "crates/hoyadb-core/Cargo.toml",
+        "bytes": 162,
+        "sha256": "393ac6390a59fea8503a060b8992437f49107c10a765f955be1792efefaa3930"
+      },
+      {
+        "path": "crates/hoyadb-core/src/command/entity.rs",
+        "bytes": 33845,
+        "sha256": "4cd52a8d8b1498bace74960b7c2cf9cfc8d2e5883461ffe542c44db5c8149918"
+      },
+      {
+        "path": "crates/hoyadb-core/src/command/entity_owner.rs",
+        "bytes": 26253,
+        "sha256": "bf80f821009b014f9f60a41a433fc92b7bb8141d00638425ccf57ac23dc04838"
+      },
+      {
+        "path": "crates/hoyadb-core/src/command/execution.rs",
+        "bytes": 19830,
+        "sha256": "2dbff03b78930a04bfce4a96136f6593ba3c75391ad405c142ccd3985a069590"
+      },
+      {
+        "path": "crates/hoyadb-core/src/command/json.rs",
+        "bytes": 18224,
+        "sha256": "64419603b3ee2d5a890a50d688ed4cd29ce0612136565672103df102c48d3e6c"
+      },
+      {
+        "path": "crates/hoyadb-core/src/command/merge.rs",
+        "bytes": 7595,
+        "sha256": "30b4b0793deb5a3778aa7991d4c5b6dd010fc15de3e8d05976678192a7cb2728"
+      },
+      {
+        "path": "crates/hoyadb-core/src/command/mod.rs",
+        "bytes": 1263,
+        "sha256": "13e7e273787ec911341ccc31ae672f9dc82187346aba7ef7236a785c4b714d56"
+      },
+      {
+        "path": "crates/hoyadb-core/src/command/owner.rs",
+        "bytes": 41553,
+        "sha256": "1219be28a22385cb4ac03626fded586969808282c678e6b40240925f37c88717"
+      },
+      {
+        "path": "crates/hoyadb-core/src/command/proposed.rs",
+        "bytes": 3353,
+        "sha256": "e9628729dde8c3d2f9a9dc081635995d9feee3ebcd951b1f386f6bc829f768ef"
+      },
+      {
+        "path": "crates/hoyadb-core/src/command/pull.rs",
+        "bytes": 31672,
+        "sha256": "3e00878f88e9be95ae0289c05b7191b0693eb0f3e5c7da63b54245e470ea8af5"
+      },
+      {
+        "path": "crates/hoyadb-core/src/command/queue.rs",
+        "bytes": 21939,
+        "sha256": "a0fc1c2252af878836b4b5b1681673f77ccef6ea8f0bece91274260e6a347996"
+      },
+      {
+        "path": "crates/hoyadb-core/src/command/reconcile.rs",
+        "bytes": 62081,
+        "sha256": "cd33873c6d54a42b6b507b9ca29be0cae32775bb8b7c00e4a3963c7ae848f8de"
+      },
+      {
+        "path": "crates/hoyadb-core/src/command/records.rs",
+        "bytes": 62047,
+        "sha256": "ad299835d15df77b025156239976cc1681600f951c730f554c548d02fd12dabc"
+      },
+      {
+        "path": "crates/hoyadb-core/src/command/security.rs",
+        "bytes": 18442,
+        "sha256": "8c119eb27d7a4a64ca0f49f44cd02c23322a19bef1bec360482037d1dbbe1710"
+      },
+      {
+        "path": "crates/hoyadb-core/src/command/sync.rs",
+        "bytes": 20316,
+        "sha256": "97aaa3df8c903efbef06453040149419740ae0b1a218e47956d04abada5c262f"
+      },
+      {
+        "path": "crates/hoyadb-core/src/lib.rs",
+        "bytes": 128,
+        "sha256": "9484a9eb3fcf563086c450d1746c7c6a76f8347f26f7928240c77ccebe9433db"
+      },
+      {
+        "path": "crates/hoyadb-core/src/model/database.rs",
+        "bytes": 12022,
+        "sha256": "6ac9d0df29bdd7e5c242b09cdc63eb5153bf10378fb742737eeac3481d9d1a35"
+      },
+      {
+        "path": "crates/hoyadb-core/src/model/migration.rs",
+        "bytes": 18950,
+        "sha256": "db9cfabe28b4f9a511f2dc77f93e2ae2f2db4096b192277e07ed3b84bff859df"
+      },
+      {
+        "path": "crates/hoyadb-core/src/model/mod.rs",
+        "bytes": 242,
+        "sha256": "9b8132927cd06a8c92d62aa7ca74a8f74c6e1e19ed5082c46b98fd023cbbae79"
+      },
+      {
+        "path": "crates/hoyadb-core/src/model/query.rs",
+        "bytes": 10883,
+        "sha256": "462e7329287e21ca866627173ca5e1dd09f5cbf98febf9242b443c9f4fef739d"
+      },
+      {
+        "path": "crates/hoyadb-core/src/model/reactive.rs",
+        "bytes": 28818,
+        "sha256": "b20c18ee68e45a6585fed92720ac221485869c13fad01935b7a9ca1418d87037"
+      },
+      {
+        "path": "crates/hoyadb-core/src/model/schema.rs",
+        "bytes": 24869,
+        "sha256": "b9b79984a9ab98de0811722f207a245fe10c82444c2612dc10769b882d338741"
+      },
+      {
+        "path": "crates/hoyadb-core/src/storage.rs",
+        "bytes": 2813,
+        "sha256": "e52b7582e3f997a1a6ecb5dee126e97ca98976f6e29580c60b01a2b4ad42d3a8"
+      },
+      {
+        "path": "crates/hoyadb-core/src/storage/model.rs",
+        "bytes": 10482,
+        "sha256": "4ae2c5d3b465fd3fcfad7ff8d3ad734decc6884a370d1dbaa8110ef35ae8ca30"
+      },
+      {
+        "path": "crates/hoyadb-core/src/storage/observation.rs",
+        "bytes": 588,
+        "sha256": "1a09c65d6fd034f888b51a9849a037272f53bc73942b991a4f3d0291dc9998cc"
+      },
+      {
+        "path": "crates/hoyadb-core/src/storage/snapshot/lifecycle.rs",
+        "bytes": 5482,
+        "sha256": "b0ae5e041abd56436f62785f9d2d9278ead36d9e1616aaaf41e384df8c60ee10"
+      },
+      {
+        "path": "crates/hoyadb-core/src/storage/snapshot/mod.rs",
+        "bytes": 5201,
+        "sha256": "f974c092f3779d50f2fcc69a8099d0e91cb71775282886630603f7baf12f9861"
+      },
+      {
+        "path": "crates/hoyadb-core/src/storage/snapshot/projection.rs",
+        "bytes": 2563,
+        "sha256": "91aa2fb3d2fe2aca7d3f62c3ea7de5e78bb9ae8decd177d289ec25135134fd29"
+      },
+      {
+        "path": "crates/hoyadb-core/src/storage/snapshot/sync.rs",
+        "bytes": 3019,
+        "sha256": "15f109b8a92b3aaaf6e2297afc9e007fd2828445813a7a23a3e9efe2ae0ccf94"
+      },
+      {
+        "path": "crates/hoyadb-core/src/storage/snapshot/typed.rs",
+        "bytes": 8594,
+        "sha256": "848c8af97832720530952b88ec59dacb1c83e1c451edec1ad9b99c7fde739c30"
+      },
+      {
+        "path": "crates/hoyadb-core/src/storage/sync.rs",
+        "bytes": 17491,
+        "sha256": "3538587fcd2eafb98edc2cb8cf55dd9a395434ec9562cd314ff0a94e40a898f6"
+      },
+      {
+        "path": "crates/hoyadb-core/src/storage/typed.rs",
+        "bytes": 13063,
+        "sha256": "f04b224134a1e78d1d41eeba2d83a3ecc0619dbf5a82b02f6ca0a3cf75365078"
+      },
+      {
+        "path": "crates/hoyadb-storage-memory/Cargo.toml",
+        "bytes": 230,
+        "sha256": "f894792e4a923e3823af2bc6ac0a6a4181cd7808e81e82d02a8a125450418560"
+      },
+      {
+        "path": "crates/hoyadb-storage-memory/src/lib.rs",
+        "bytes": 132,
+        "sha256": "0c26d6799994174b2c6543fc8cc506a8ada788ae761030b70fd8baa3517724f1"
+      },
+      {
+        "path": "crates/hoyadb-storage-sqlite/Cargo.toml",
+        "bytes": 933,
+        "sha256": "bde9bf1740a99cf5fd0b85cd13c60549a7c169b3e3718f68ebc82f922753d909"
+      },
+      {
+        "path": "crates/hoyadb-storage-sqlite/src/bin/entity_restart_fixture.rs",
+        "bytes": 5678,
+        "sha256": "67bec3f33795cc52d900458c47d261a2cb13cd3427c89335d5a55c7901a3a6dd"
+      },
+      {
+        "path": "crates/hoyadb-storage-sqlite/src/bin/restart_fixture.rs",
+        "bytes": 7113,
+        "sha256": "136cd650706bbaa274e21fbf67c218318f15487b281e4ee69f4b47d797191acd"
+      },
+      {
+        "path": "crates/hoyadb-storage-sqlite/src/encryption.rs",
+        "bytes": 5822,
+        "sha256": "add0aa6bcd9f08ee7831c51063ca8f007d9f75f59a39ab101399699139f17df8"
+      },
+      {
+        "path": "crates/hoyadb-storage-sqlite/src/lib.rs",
+        "bytes": 21126,
+        "sha256": "bbe8b09f3fd7413cbf78dd667bbc946b189a6024f3c67782033d36bbd3e5a0c4"
+      },
+      {
+        "path": "crates/hoyadb-storage-sqlite/src/lifecycle.rs",
+        "bytes": 7985,
+        "sha256": "d7d94dadf858b846f4ffc4b3e6a1add96ed7fbdc7d7463947c380ab3e29c711f"
+      },
+      {
+        "path": "crates/hoyadb-storage-sqlite/src/projection.rs",
+        "bytes": 5243,
+        "sha256": "0dcb0063c412177f4a515e9959d97f0959ac92f163901234cf553bb1a7148ec1"
+      },
+      {
+        "path": "crates/hoyadb-storage-sqlite/src/query.rs",
+        "bytes": 10129,
+        "sha256": "063646093bc87bad5af88920e4f355efa1f183ece8a47d5cbd2bc01ef2c596ec"
+      },
+      {
+        "path": "crates/hoyadb-storage-sqlite/src/sync.rs",
+        "bytes": 7770,
+        "sha256": "91c671600e5bceefbb5c1d306ab9af0a18d5408c39d23d3daf2107344e9208d7"
+      }
+    ],
+    "artifacts": [
+      {
+        "path": "bindings/web/pkg/hoyadb_web.js",
+        "bytes": 27050,
+        "sha256": "e8ce3818ada01488fe3daca00164f1487cadf744e928ac769ae62d5e53f87c17"
+      },
+      {
+        "path": "bindings/web/pkg/hoyadb_web_bg.wasm",
+        "bytes": 5001038,
+        "sha256": "f54f6b37b2ff8942d0b1b3d5ccbee61de690ee02a08b54b374369a598dd963b7"
+      },
+      {
+        "path": "bindings/web/pkg/hoyadb_web.d.ts",
+        "bytes": 4032,
+        "sha256": "87b4a8b90dc768d6e1fb6529f2720c0e6341d06a93084e0807cd937bc3e76e54"
+      },
+      {
+        "path": "bindings/web/pkg/hoyadb_web_bg.wasm.d.ts",
+        "bytes": 2764,
+        "sha256": "c92dbad0c9dee3a4e029f3e6626fc05559702d9a66bf71f73dad0537df68a30d"
+      },
+      {
+        "path": "bindings/web/pkg-test/hoyadb_web.js",
+        "bytes": 28587,
+        "sha256": "ccd3a224460e03d779f69692af995996b21517ab40ffd9c5df1590762a6cec81"
+      },
+      {
+        "path": "bindings/web/pkg-test/hoyadb_web_bg.wasm",
+        "bytes": 5014190,
+        "sha256": "ab47b0cf1d2f45155a0291fd5821ee436bc640a5207ebb8a4a29e42c47ef075c"
+      },
+      {
+        "path": "bindings/web/pkg-test/hoyadb_web.d.ts",
+        "bytes": 4364,
+        "sha256": "b1a7fb26b87c54893443c564a6ab7ea6601c502250b742fd4136b029c229c87f"
+      },
+      {
+        "path": "bindings/web/pkg-test/hoyadb_web_bg.wasm.d.ts",
+        "bytes": 2959,
+        "sha256": "14a09f2b74ca79fe867e4bfa5006364247b95f75b6615fad8273137bcab18e1c"
+      }
+    ],
+    "source_count": 195,
+    "artifact_count": 8,
+    "before_equals_after": true,
+    "note": "Current runtime interval hashes, not a new WASM build provenance claim. Both release WASM artifacts match the preceding verified snapshot byte-for-byte."
+  },
+  "checks": {
+    "authentic_actual_wasm_red": {
+      "log": "target/phase-seven-web/receipt-wake-actual-red.txt",
+      "reason": "external receipt did not wake local reconcile before future retry; Node assertion failed"
+    },
+    "actual_wasm_green": [
+      {
+        "name": "G19 external wire receipt wakes sleeping local reconciliation before retry deadline",
+        "ok": true
+      }
+    ],
+    "node": {
+      "passed": 84,
+      "failed": 0
+    },
+    "syntax_files": 40,
+    "syntax_scope": "client/testing source and tests, consumer fixtures and build scripts",
+    "python_consumer_tests": 3,
+    "strict_typescript": "passed from independently installed tarballs",
+    "exact_guide_first_javascript_block": {
+      "exit_code": 0,
+      "stdout_bytes": 0,
+      "command": "node <owned-temp-root>/guide-example.mjs"
+    },
+    "memory": [
+      {
+        "name": "G01/G03/G04 unrelated A schema all typed cells and three relation kinds",
+        "ok": true
+      },
+      {
+        "name": "G01 unrelated B HasMany uses the same caller-defined facade",
+        "ok": true
+      },
+      {
+        "name": "G04 admitted In operands cross4096 and32766 through the existing core planner",
+        "ok": true
+      },
+      {
+        "name": "G11 keyed batch fitting full images and latest same-ID transitions stay exact",
+        "ok": true
+      },
+      {
+        "name": "G11 byte-exact terminal prefix progresses once without losing either event",
+        "ok": true
+      },
+      {
+        "name": "G03 core codecs preserve extrema Float Unicode and reject duplicates",
+        "ok": true
+      },
+      {
+        "name": "G05 membership columns count delegate shared observation groups",
+        "ok": true
+      },
+      {
+        "name": "G05 real managed count initial delivery and unpostponed deadline need no manual drain",
+        "ok": true
+      },
+      {
+        "name": "G06/G20/TC16 awaited handler immutable context optimistic rows and queue offline",
+        "ok": true
+      },
+      {
+        "name": "G19/G21/TC16 real fake transport correlates applied rejected and dropped ACK retries",
+        "ok": true
+      },
+      {
+        "name": "G12/G13/G14 passive async hooks preserve staged sequence authority and stale refetch",
+        "ok": true
+      },
+      {
+        "name": "G17/G18 mixed command entity correlation and checkpoint progress use shared core",
+        "ok": true
+      },
+      {
+        "name": "G02/G22 retained backend authored seven-step migration and failure preservation",
+        "ok": true
+      },
+      {
+        "name": "G05 managed prepare transition delivered without another operation",
+        "ok": true
+      },
+      {
+        "name": "G05 managed receive transition delivered without another operation",
+        "ok": true
+      },
+      {
+        "name": "G19 external wire receipt wakes sleeping local reconciliation before retry deadline",
+        "ok": true
+      }
+    ],
+    "walkthrough": [
+      {
+        "id": "TC17.1",
+        "ok": true
+      },
+      {
+        "id": "TC16.1",
+        "ok": true
+      },
+      {
+        "id": "TC17.3",
+        "ok": true
+      },
+      {
+        "id": "TC17.4",
+        "ok": true
+      },
+      {
+        "id": "TC17.5",
+        "ok": true
+      },
+      {
+        "id": "TC16.2",
+        "ok": true,
+        "comparison": "exact row/relation/subscription/command assertions repeated per real adapter"
+      },
+      {
+        "id": "TC16.7",
+        "ok": true
+      },
+      {
+        "id": "TC16.8",
+        "ok": true,
+        "ordinary_id": "test-fixed-id-001",
+        "command_id": "local:test-fixed-id-001",
+        "approval": "ADR-0035"
+      },
+      {
+        "id": "TC16.3",
+        "ok": true
+      },
+      {
+        "id": "TC16.4",
+        "ok": true
+      },
+      {
+        "id": "TC16.5",
+        "ok": true
+      },
+      {
+        "id": "TC16.6",
+        "ok": true
+      },
+      {
+        "id": "TC17.6",
+        "ok": true
+      },
+      {
+        "id": "TC17.7",
+        "ok": true
+      },
+      {
+        "id": "TC17.8",
+        "ok": true,
+        "network_successes": "0"
+      },
+      {
+        "id": "TC17.2",
+        "ok": true
+      }
+    ],
+    "ordinary_protected": {
+      "done": true,
+      "reports": [
+        {
+          "name": "G01/G03/G04 unrelated A schema all typed cells and three relation kinds",
+          "ok": true
+        },
+        {
+          "name": "G01 unrelated B HasMany uses the same caller-defined facade",
+          "ok": true
+        },
+        {
+          "name": "G04 admitted In operands cross4096 and32766 through the existing core planner",
+          "ok": true
+        },
+        {
+          "name": "G11 keyed batch fitting full images and latest same-ID transitions stay exact",
+          "ok": true
+        },
+        {
+          "name": "G11 byte-exact terminal prefix progresses once without losing either event",
+          "ok": true
+        },
+        {
+          "name": "G03 core codecs preserve extrema Float Unicode and reject duplicates",
+          "ok": true
+        },
+        {
+          "name": "G05 membership columns count delegate shared observation groups",
+          "ok": true
+        },
+        {
+          "name": "G05 real managed count initial delivery and unpostponed deadline need no manual drain",
+          "ok": true
+        },
+        {
+          "name": "G06/G20/TC16 awaited handler immutable context optimistic rows and queue offline",
+          "ok": true
+        },
+        {
+          "name": "G19/G21/TC16 real fake transport correlates applied rejected and dropped ACK retries",
+          "ok": true
+        },
+        {
+          "name": "G12/G13/G14 passive async hooks preserve staged sequence authority and stale refetch",
+          "ok": true
+        },
+        {
+          "name": "G17/G18 mixed command entity correlation and checkpoint progress use shared core",
+          "ok": true
+        },
+        {
+          "name": "G05 managed prepare transition delivered without another operation",
+          "ok": true
+        },
+        {
+          "name": "G05 managed receive transition delivered without another operation",
+          "ok": true
+        },
+        {
+          "name": "G19 external wire receipt wakes sleeping local reconciliation before retry deadline",
+          "ok": true
+        },
+        {
+          "name": "G17/G21 actual HTTP mixed reversed outcomes preserve i64 Float and tuples",
+          "ok": true
+        },
+        {
+          "id": "TC17.1",
+          "ok": true
+        },
+        {
+          "id": "TC16.1",
+          "ok": true
+        },
+        {
+          "id": "TC17.3",
+          "ok": true
+        },
+        {
+          "id": "TC17.4",
+          "ok": true
+        },
+        {
+          "id": "TC17.5",
+          "ok": true
+        },
+        {
+          "id": "TC16.2",
+          "ok": true,
+          "comparison": "exact row/relation/subscription/command assertions repeated per real adapter"
+        },
+        {
+          "id": "TC16.7",
+          "ok": true
+        },
+        {
+          "id": "TC16.8",
+          "ok": true,
+          "ordinary_id": "test-fixed-id-001",
+          "command_id": "local:test-fixed-id-001",
+          "approval": "ADR-0035"
+        },
+        {
+          "id": "TC16.3",
+          "ok": true
+        },
+        {
+          "id": "TC16.4",
+          "ok": true
+        },
+        {
+          "id": "TC16.5",
+          "ok": true
+        },
+        {
+          "id": "TC16.6",
+          "ok": true
+        },
+        {
+          "id": "TC17.6",
+          "ok": true
+        },
+        {
+          "id": "TC17.7",
+          "ok": true
+        },
+        {
+          "id": "TC17.8",
+          "ok": true,
+          "network_successes": "0"
+        },
+        {
+          "id": "TC17.2",
+          "ok": true
+        },
+        {
+          "name": "G02 ordinary protected authored all-seven migration and failure preservation",
+          "ok": true
+        },
+        {
+          "name": "G16 ordinary package wrong-key rejection has no plaintext fallback",
+          "ok": true
+        },
+        {
+          "name": "G17 ordinary package actual page reload retains queue and frozen bytes",
+          "ok": true
+        },
+        {
+          "name": "G16 exact task-owned logical cleanup preserves shared pool baseline",
+          "ok": true
+        }
+      ]
+    },
+    "instrumented_security": {
+      "done": true,
+      "reports": [
+        {
+          "name": "G16 ordinary package excludes every instrumented test export",
+          "ok": true
+        },
+        {
+          "name": "G16 original strict preflight rejects duplicates ABI and unknown keys without effects",
+          "ok": true
+        },
+        {
+          "name": "G16 controls reject foreign names aliases and excessive binary transfers",
+          "ok": true
+        },
+        {
+          "name": "G16 encrypted row file has no plaintext header or domain canary",
+          "ok": true
+        },
+        {
+          "name": "G16 wrong key preserves exact bytes and correct reopen recovers values",
+          "ok": true
+        },
+        {
+          "name": "G16 controls cannot transfer or remove active files",
+          "ok": true
+        },
+        {
+          "name": "G16 tampered encrypted pages fail and restore without silent rewrite",
+          "ok": true
+        },
+        {
+          "name": "G09/G17 killed worker reopens durable queue with exact frozen retry bytes",
+          "ok": true
+        },
+        {
+          "name": "G16 task-only cleanup preserves foreign canary and pool assignment baseline",
+          "ok": true
+        }
+      ]
+    },
+    "transient_initializer_retry": {
+      "done": true,
+      "reports": [
+        {
+          "name": "G09 actual transient OPFS initialization failure permits fresh explicit open",
+          "ok": true
+        }
+      ]
+    }
+  },
+  "tarballs": [
+    {
+      "path": "target/phase-seven-web/tarballs/hoyadb-client-0.1.0.tgz",
+      "bytes": 1481367,
+      "sha256": "b1cec02df8393a7348517a8ae447340aad1f02a66e128f2a5ad491b1dd509530",
+      "qualification": "copied exact task-generated archive from existing script output one directory above checkout; original removed after preserving bytes"
+    },
+    {
+      "path": "target/phase-seven-web/tarballs/hoyadb-testing-0.1.0.tgz",
+      "bytes": 9465,
+      "sha256": "808802a4b4e0d341a3d0fbc2fce38d535d5ad3ff12e464e18b32a082a8d5d9f1",
+      "qualification": "copied exact task-generated archive from existing script output one directory above checkout; original removed after preserving bytes"
+    }
+  ],
+  "cleanup": {
+    "owned_pids": [
+      39552,
+      39806
+    ],
+    "still_alive": [],
+    "owned_temp_root": "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-sdk-consumer-Dpc1HD",
+    "temp_root_exists": false,
+    "port": 8878,
+    "port_accepting": false,
+    "owned_tabs_closed": [
+      "34ea9950-62c7-4aca-8d27-535b13030841",
+      "8cae8c6b-dd00-420b-8b4e-796913c29093",
+      "3484bb00-d359-4321-a06d-4a7beefe9781"
+    ],
+    "logical_cleanup": "ordinary/control/retry assertions passed, exact owned names removed, neighbor canary and pool baseline equality checked; numeric tuples not emitted"
+  },
+  "raw_logs": [
+    {
+      "path": "target/phase-seven-web/receipt-wake-actual-green.txt",
+      "bytes": 126,
+      "sha256": "39cac411bde10af32c712182e58b4923ad03b82f620f670f35b756b32930493c"
+    },
+    {
+      "path": "target/phase-seven-web/receipt-wake-actual-red.txt",
+      "bytes": 601,
+      "sha256": "65c81a3adb3806113fc0bc574aee0b51cba770899fea18208f99bbe29d3019ac"
+    },
+    {
+      "path": "target/phase-seven-web/receipt-wake-actual.mjs",
+      "bytes": 722,
+      "sha256": "9326ee38813e9e1ecffafd4aeba2d7758b34ea8114245b03e09268f2ffcfd437"
+    },
+    {
+      "path": "target/phase-seven-web/receipt-wake-after.json",
+      "bytes": 37401,
+      "sha256": "c393aa47c309962b1067f1d4d32167ae43a0fd0eb07ca1439139f3e8e892421f"
+    },
+    {
+      "path": "target/phase-seven-web/receipt-wake-before.json",
+      "bytes": 37401,
+      "sha256": "c393aa47c309962b1067f1d4d32167ae43a0fd0eb07ca1439139f3e8e892421f"
+    },
+    {
+      "path": "target/phase-seven-web/receipt-wake-browser-controls.json",
+      "bytes": 1087,
+      "sha256": "37a786947b28a56461e9d2fde22dbdfd37356181f4cfdf94fcdb25ca0961e659"
+    },
+    {
+      "path": "target/phase-seven-web/receipt-wake-browser-ordinary.json",
+      "bytes": 3550,
+      "sha256": "beffcc9fa743eb98f320c8c2ad58bfb2d7f4f49b9f7fcfff146b9ef1eaec3b81"
+    },
+    {
+      "path": "target/phase-seven-web/receipt-wake-browser-retry.json",
+      "bytes": 162,
+      "sha256": "1d9723b16cb29c90ff355cac3a2e5f117159f153396bb8aece9bfdb350897309"
+    },
+    {
+      "path": "target/phase-seven-web/receipt-wake-build.txt",
+      "bytes": 172,
+      "sha256": "563c9decc21667c36d0597817b49e408153d100e87ddd0f8ea8a2d5617c1db7f"
+    },
+    {
+      "path": "target/phase-seven-web/receipt-wake-cleanup.json",
+      "bytes": 573,
+      "sha256": "b4b535d84ac7c6822771508d75f1f5de7c0de309ae361bc4bf22f470e652af0e"
+    },
+    {
+      "path": "target/phase-seven-web/receipt-wake-guide.txt",
+      "bytes": 13,
+      "sha256": "9fa3b6ead7afc298499f30c5b70014c78b6686a8269611537606fa5a7c02b6a2"
+    },
+    {
+      "path": "target/phase-seven-web/receipt-wake-node-green.txt",
+      "bytes": 19292,
+      "sha256": "889cd432e22525e1886a64603079decc22256f8193cad97debbde5c1e862e51f"
+    },
+    {
+      "path": "target/phase-seven-web/receipt-wake-package.txt",
+      "bytes": 20195,
+      "sha256": "0b4b402986e239b54afa0899ea10445b73f9d3b287441fd7084d7a2627cdcf83"
+    },
+    {
+      "path": "target/phase-seven-web/receipt-wake-python.txt",
+      "bytes": 101,
+      "sha256": "33060fd73862c5e1af97335504d5b45211fce6d229657f556d8deceeadc52ce4"
+    },
+    {
+      "path": "target/phase-seven-web/receipt-wake-syntax.txt",
+      "bytes": 33,
+      "sha256": "c683927abb8f948af545d34c55a97961b0f12226fa707a227a2dcab7d86860f4"
+    },
+    {
+      "path": "target/phase-seven-web/receipt-wake-tarballs.json",
+      "bytes": 683,
+      "sha256": "e5d5f2df7f3ede4189db8a70bb948cd490e299a9f3113adda083f2832243bf11"
+    }
+  ],
+  "qualifications": [
+    "No mobile runtime or performance claim. Native warm experiment interruption is separate, and full baseline remains open.",
+    "Original6e1fbba matching runtime and83-Node reports are preserved; this adds84Node/current36ordinary protected groups.",
+    "Current runtime profile uses previously built ordinary and instrumented release WASM; no Rust changes or dependency activation were needed.",
+    "The new late external receipt mock regression preserves lifetime guarding; actual WASM/core memory and protected OPFS independently prove waking the settled real driver.",
+    "Earlier exploratory probes predated formal prep; the current permanent actual failure was run after94bc84b before implementation.",
+    "The raw parent wrapper printed the failing Node log, so wrapper exit0 is not a claim that RED passed; retained Node assertion shows the failure.",
+    "Syntax checks cover40 SDK/test/consumer/build files; benchmark files are excluded from this functional gate and remain separately unfinished.",
+    "Pool/canary equality was asserted by actual cleanup cases; no unreported numeric pool tuple is invented.",
+    "Pack script retains existing one-directory-above checkout tarball destination. Only task-generated two archives were copied byte-for-byte into repository ignoredtarget, hashed and removed from the wrong temporary destination."
+  ]
+}

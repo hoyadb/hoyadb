@@ -1,0 +1,723 @@
+{
+  "checks": 177,
+  "failures": [],
+  "results": [
+    {
+      "check": "python optimize flag (asserts disabled)",
+      "ok": true,
+      "detail": {
+        "sys.flags.optimize": 1
+      }
+    },
+    {
+      "check": "initial-cut index sha256 == a194306b",
+      "ok": true
+    },
+    {
+      "check": "presentation covers exactly the 43 indexed originals",
+      "ok": true,
+      "detail": 44
+    },
+    {
+      "check": "original reconstructible: README.md",
+      "ok": true
+    },
+    {
+      "check": "original reconstructible: advisories/GHSA-5mg8-w23w-74h3.json",
+      "ok": true
+    },
+    {
+      "check": "original reconstructible: advisories/GHSA-7g45-4rm6-3mm3.json",
+      "ok": true
+    },
+    {
+      "check": "original reconstructible: bundle.json",
+      "ok": true
+    },
+    {
+      "check": "original reconstructible: fetch-log.json",
+      "ok": true
+    },
+    {
+      "check": "original reconstructible: graph-delta.json",
+      "ok": true
+    },
+    {
+      "check": "original reconstructible: kgp-source-evidence.json",
+      "ok": true
+    },
+    {
+      "check": "original reconstructible: marker/PACKET.md",
+      "ok": true
+    },
+    {
+      "check": "original reconstructible: marker/fetch.json",
+      "ok": true
+    },
+    {
+      "check": "original reconstructible: marker/parse.json",
+      "ok": true
+    },
+    {
+      "check": "original reconstructible: metadata/build.gradle",
+      "ok": true
+    },
+    {
+      "check": "original reconstructible: metadata/gradle.properties",
+      "ok": true
+    },
+    {
+      "check": "original reconstructible: metadata/included-build-classpaths.build.gradle",
+      "ok": true
+    },
+    {
+      "check": "original reconstructible: metadata/offline/command.json",
+      "ok": true
+    },
+    {
+      "check": "original reconstructible: metadata/offline/gradle.lockfile",
+      "ok": true
+    },
+    {
+      "check": "original reconstructible: metadata/offline/included-build-classpaths__gradle.lockfile",
+      "ok": true
+    },
+    {
+      "check": "original reconstructible: metadata/offline/output.txt",
+      "ok": true
+    },
+    {
+      "check": "readable view parses equal to original: metadata/offline/resolution.json",
+      "ok": true
+    },
+    {
+      "check": "original reconstructible: metadata/offline/resolution.json",
+      "ok": true
+    },
+    {
+      "check": "original reconstructible: metadata/offline-repeat2/command.json",
+      "ok": true
+    },
+    {
+      "check": "original reconstructible: metadata/offline-repeat2/gradle.lockfile",
+      "ok": true
+    },
+    {
+      "check": "original reconstructible: metadata/offline-repeat2/included-build-classpaths__gradle.lockfile",
+      "ok": true
+    },
+    {
+      "check": "original reconstructible: metadata/offline-repeat2/output.txt",
+      "ok": true
+    },
+    {
+      "check": "readable view parses equal to original: metadata/offline-repeat2/resolution.json",
+      "ok": true
+    },
+    {
+      "check": "original reconstructible: metadata/offline-repeat2/resolution.json",
+      "ok": true
+    },
+    {
+      "check": "original reconstructible: metadata/online/command.json",
+      "ok": true
+    },
+    {
+      "check": "original reconstructible: metadata/online/gradle.lockfile",
+      "ok": true
+    },
+    {
+      "check": "original reconstructible: metadata/online/included-build-classpaths__gradle.lockfile",
+      "ok": true
+    },
+    {
+      "check": "original reconstructible: metadata/online/output.txt",
+      "ok": true
+    },
+    {
+      "check": "readable view parses equal to original: metadata/online/resolution.json",
+      "ok": true
+    },
+    {
+      "check": "original reconstructible: metadata/online/resolution.json",
+      "ok": true
+    },
+    {
+      "check": "original reconstructible: metadata/settings.gradle",
+      "ok": true
+    },
+    {
+      "check": "original reconstructible: osv-query.json",
+      "ok": true
+    },
+    {
+      "check": "original reconstructible: osv-result.json",
+      "ok": true
+    },
+    {
+      "check": "original reconstructible: osv-summary.json",
+      "ok": true
+    },
+    {
+      "check": "original reconstructible: run1-history.md",
+      "ok": true
+    },
+    {
+      "check": "original reconstructible: tools/bundle.py.txt",
+      "ok": true
+    },
+    {
+      "check": "original reconstructible: tools/fetch.py.txt",
+      "ok": true
+    },
+    {
+      "check": "original reconstructible: tools/osv.py.txt",
+      "ok": true
+    },
+    {
+      "check": "original reconstructible: tools/run-gradle.py.txt",
+      "ok": true
+    },
+    {
+      "check": "original reconstructible: tools/verify.py.txt",
+      "ok": true
+    },
+    {
+      "check": "original reconstructible: upstream/LICENSE.txt",
+      "ok": true
+    },
+    {
+      "check": "original reconstructible: upstream/README.md",
+      "ok": true
+    },
+    {
+      "check": "original reconstructible: upstream/libs.versions.toml",
+      "ok": true
+    },
+    {
+      "check": "original reconstructible: upstream/tag-v2.1.20.json",
+      "ok": true
+    },
+    {
+      "check": "original reconstructible: verification.json",
+      "ok": true
+    },
+    {
+      "check": "marker sha256 == 5ccb905a…",
+      "ok": true
+    },
+    {
+      "check": "marker sha1 sidecar",
+      "ok": true
+    },
+    {
+      "check": "marker md5 sidecar",
+      "ok": true
+    },
+    {
+      "check": "marker has no DOCTYPE/ENTITY",
+      "ok": true
+    },
+    {
+      "check": "marker packaging pom",
+      "ok": true
+    },
+    {
+      "check": "marker sole dependency is KGP 2.1.20 without scope/type/classifier/optional/exclusions",
+      "ok": true
+    },
+    {
+      "check": "marker has no parent/repositories/pluginRepositories/build/profiles/properties/dependencyManagement/modules",
+      "ok": true
+    },
+    {
+      "check": "bundle bytes/sha1 sidecar: com.google.code.gson:gson:2.8.9 gson-2.8.9.jar",
+      "ok": true
+    },
+    {
+      "check": "bundle bytes/sha1 sidecar: com.google.code.gson:gson:2.8.9 gson-2.8.9.pom",
+      "ok": true
+    },
+    {
+      "check": "bundle bytes/sha1 sidecar: com.google.errorprone:error_prone_annotations:2.7.1 error_prone_annotations-2.7.1.jar",
+      "ok": true
+    },
+    {
+      "check": "bundle bytes/sha1 sidecar: com.google.errorprone:error_prone_annotations:2.7.1 error_prone_annotations-2.7.1.pom",
+      "ok": true
+    },
+    {
+      "check": "bundle bytes/sha1 sidecar: com.google.guava:failureaccess:1.0.1 failureaccess-1.0.1.jar",
+      "ok": true
+    },
+    {
+      "check": "bundle bytes/sha1 sidecar: com.google.guava:failureaccess:1.0.1 failureaccess-1.0.1.pom",
+      "ok": true
+    },
+    {
+      "check": "bundle bytes/sha1 sidecar: com.google.guava:guava:31.0.1-jre guava-31.0.1-jre.jar",
+      "ok": true
+    },
+    {
+      "check": "bundle bytes/sha1 sidecar: com.google.guava:guava:31.0.1-jre guava-31.0.1-jre.pom",
+      "ok": true
+    },
+    {
+      "check": "bundle bytes/sha1 sidecar: com.google.j2objc:j2objc-annotations:1.3 j2objc-annotations-1.3.jar",
+      "ok": true
+    },
+    {
+      "check": "bundle bytes/sha1 sidecar: com.google.j2objc:j2objc-annotations:1.3 j2objc-annotations-1.3.pom",
+      "ok": true
+    },
+    {
+      "check": "bundle bytes/sha1 sidecar: org.checkerframework:checker-qual:3.12.0 checker-qual-3.12.0.jar",
+      "ok": true
+    },
+    {
+      "check": "bundle bytes/sha1 sidecar: org.checkerframework:checker-qual:3.12.0 checker-qual-3.12.0.module",
+      "ok": true
+    },
+    {
+      "check": "bundle bytes/sha1 sidecar: org.checkerframework:checker-qual:3.12.0 checker-qual-3.12.0.pom",
+      "ok": true
+    },
+    {
+      "check": "bundle bytes/sha1 sidecar: org.jetbrains.intellij.deps:trove4j:1.0.20200330 trove4j-1.0.20200330.jar",
+      "ok": true
+    },
+    {
+      "check": "bundle bytes/sha1 sidecar: org.jetbrains.intellij.deps:trove4j:1.0.20200330 trove4j-1.0.20200330.pom",
+      "ok": true
+    },
+    {
+      "check": "bundle bytes/sha1 sidecar: org.jetbrains.kotlin:kotlin-build-tools-impl:2.1.20 kotlin-build-tools-impl-2.1.20.jar",
+      "ok": true
+    },
+    {
+      "check": "bundle bytes/sha1 sidecar: org.jetbrains.kotlin:kotlin-build-tools-impl:2.1.20 kotlin-build-tools-impl-2.1.20.pom",
+      "ok": true
+    },
+    {
+      "check": "bundle bytes/sha1 sidecar: org.jetbrains.kotlin:kotlin-compiler-embeddable:2.1.20 kotlin-compiler-embeddable-2.1.20.jar",
+      "ok": true
+    },
+    {
+      "check": "bundle bytes/sha1 sidecar: org.jetbrains.kotlin:kotlin-compiler-embeddable:2.1.20 kotlin-compiler-embeddable-2.1.20.pom",
+      "ok": true
+    },
+    {
+      "check": "bundle bytes/sha1 sidecar: org.jetbrains.kotlin:kotlin-daemon-embeddable:2.1.20 kotlin-daemon-embeddable-2.1.20.jar",
+      "ok": true
+    },
+    {
+      "check": "bundle bytes/sha1 sidecar: org.jetbrains.kotlin:kotlin-daemon-embeddable:2.1.20 kotlin-daemon-embeddable-2.1.20.pom",
+      "ok": true
+    },
+    {
+      "check": "bundle bytes/sha1 sidecar: org.jetbrains.kotlin:kotlin-reflect:1.6.10 kotlin-reflect-1.6.10.jar",
+      "ok": true
+    },
+    {
+      "check": "bundle bytes/sha1 sidecar: org.jetbrains.kotlin:kotlin-reflect:1.6.10 kotlin-reflect-1.6.10.pom",
+      "ok": true
+    },
+    {
+      "check": "bundle bytes/sha1 sidecar: org.jetbrains.kotlin:kotlin-script-runtime:2.1.20 kotlin-script-runtime-2.1.20.jar",
+      "ok": true
+    },
+    {
+      "check": "bundle bytes/sha1 sidecar: org.jetbrains.kotlin:kotlin-script-runtime:2.1.20 kotlin-script-runtime-2.1.20.pom",
+      "ok": true
+    },
+    {
+      "check": "bundle bytes/sha1 sidecar: org.jetbrains.kotlin:kotlin-scripting-common:2.1.20 kotlin-scripting-common-2.1.20.jar",
+      "ok": true
+    },
+    {
+      "check": "bundle bytes/sha1 sidecar: org.jetbrains.kotlin:kotlin-scripting-common:2.1.20 kotlin-scripting-common-2.1.20.pom",
+      "ok": true
+    },
+    {
+      "check": "bundle bytes/sha1 sidecar: org.jetbrains.kotlin:kotlin-scripting-compiler-embeddable:2.1.20 kotlin-scripting-compiler-embeddable-2.1.20.jar",
+      "ok": true
+    },
+    {
+      "check": "bundle bytes/sha1 sidecar: org.jetbrains.kotlin:kotlin-scripting-compiler-embeddable:2.1.20 kotlin-scripting-compiler-embeddable-2.1.20.pom",
+      "ok": true
+    },
+    {
+      "check": "bundle bytes/sha1 sidecar: org.jetbrains.kotlin:kotlin-scripting-compiler-impl-embeddable:2.1.20 kotlin-scripting-compiler-impl-embeddable-2.1.20.jar",
+      "ok": true
+    },
+    {
+      "check": "bundle bytes/sha1 sidecar: org.jetbrains.kotlin:kotlin-scripting-compiler-impl-embeddable:2.1.20 kotlin-scripting-compiler-impl-embeddable-2.1.20.pom",
+      "ok": true
+    },
+    {
+      "check": "bundle bytes/sha1 sidecar: org.jetbrains.kotlin:kotlin-scripting-jvm:2.1.20 kotlin-scripting-jvm-2.1.20.jar",
+      "ok": true
+    },
+    {
+      "check": "bundle bytes/sha1 sidecar: org.jetbrains.kotlin:kotlin-scripting-jvm:2.1.20 kotlin-scripting-jvm-2.1.20.pom",
+      "ok": true
+    },
+    {
+      "check": "bundle bytes/sha1 sidecar: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.8.0 kotlinx-coroutines-core-jvm-1.8.0.jar",
+      "ok": true
+    },
+    {
+      "check": "bundle bytes/sha1 sidecar: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.8.0 kotlinx-coroutines-core-jvm-1.8.0.module",
+      "ok": true
+    },
+    {
+      "check": "bundle bytes/sha1 sidecar: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.8.0 kotlinx-coroutines-core-jvm-1.8.0.pom",
+      "ok": true
+    },
+    {
+      "check": "bundle bytes/sha1 sidecar: org.jetbrains.kotlin:kotlin-gradle-plugins-bom:2.1.20 kotlin-gradle-plugins-bom-2.1.20.module",
+      "ok": true
+    },
+    {
+      "check": "bundle bytes/sha1 sidecar: org.jetbrains.kotlin:kotlin-gradle-plugins-bom:2.1.20 kotlin-gradle-plugins-bom-2.1.20.pom",
+      "ok": true
+    },
+    {
+      "check": "bundle bytes/sha1 sidecar: org.jetbrains.kotlinx:kotlinx-coroutines-bom:1.9.0 kotlinx-coroutines-bom-1.9.0.pom",
+      "ok": true
+    },
+    {
+      "check": "bundle bytes/sha1 sidecar: org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0 kotlinx-coroutines-core-1.9.0.module",
+      "ok": true
+    },
+    {
+      "check": "bundle bytes/sha1 sidecar: org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0 kotlinx-coroutines-core-1.9.0.pom",
+      "ok": true
+    },
+    {
+      "check": "bundle file count equals verified closure files (POM+module+JAR)",
+      "ok": true,
+      "detail": {
+        "bundle": 41,
+        "verified": 41
+      }
+    },
+    {
+      "check": "published strong sidecars all match",
+      "ok": true,
+      "detail": 18
+    },
+    {
+      "check": "parent bytes == root captured: com.google.code.gson:gson-parent:2.8.9",
+      "ok": true
+    },
+    {
+      "check": "parent bytes == root captured: com.google.errorprone:error_prone_parent:2.7.1",
+      "ok": true
+    },
+    {
+      "check": "parent bytes == root captured: com.google.guava:guava-parent:26.0-android",
+      "ok": true
+    },
+    {
+      "check": "parent bytes == root captured: com.google.guava:guava-parent:31.0.1-jre",
+      "ok": true
+    },
+    {
+      "check": "parent bytes == root captured: org.sonatype.oss:oss-parent:7",
+      "ok": true
+    },
+    {
+      "check": "parent bytes == root captured: org.sonatype.oss:oss-parent:9",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/attestation/verification.json",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/attestation/verification-keyid-fallback.json",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/attestation/fallback-crash-note.md",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/attestation/verify.py.txt",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/attestation/verify_keyid.py.txt",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/embedded/byte-presence.json",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/embedded/native-libraries.json",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/embedded/osv-query.json",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/embedded/osv-result.json",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/embedded/osv-summary.json",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/embedded/upstream/versions.properties",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/embedded/upstream/prepare-compiler-embeddable.build.gradle.kts.json",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/embedded/upstream/prepare-compiler.build.gradle.kts",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/embedded/upstream/contents-license_third_party.json",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/activation-confirmation/aapt2-and-jdk.json",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/provenance/strong-sidecars.json",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/provenance/parents-match.json",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/provenance/q1-jvm-version-check.json",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/provenance/fetch-log-followup.json",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/tools-v2/fetch.py.txt",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/tools-v2/verify.py.txt",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/tools-v2/run-gradle.py.txt",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/tools-v2/osv.py.txt",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/tools-v2/bundle.py.txt",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/tools-v2/strong_sidecars.py.txt",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/tools-v2/assemble_final.py.txt",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/attestation/keys/29579F18FA8FD93B-keys.openpgp.org.asc",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/attestation/keys/29579F18FA8FD93B-keyserver.ubuntu.com.asc.json",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/attestation/keys/379CE192D401AB61-keys.openpgp.org.asc",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/attestation/keys/379CE192D401AB61-keyserver.ubuntu.com.asc.json",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/attestation/keys/3D5839A2262CBBFB-keys.openpgp.org.asc",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/attestation/keys/3D5839A2262CBBFB-keyserver.ubuntu.com.asc.json",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/attestation/keys/694621A7227D8D5289699830ABE9F3126BB741C1-keys.openpgp.org.asc",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/attestation/keys/694621A7227D8D5289699830ABE9F3126BB741C1-keyserver.ubuntu.com.asc.json",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/attestation/keys/6F538074CCEBF35F28AF9B066A0975F8B1127B83-keys.openpgp.org.asc",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/attestation/keys/B0F3710FA64900E7-keys.openpgp.org.asc",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/attestation/keys/B0F3710FA64900E7-keyserver.ubuntu.com.asc.json",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/attestation/keys/B16698A4ADF4D638-keys.openpgp.org.asc",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/attestation/keys/B16698A4ADF4D638-keyserver.ubuntu.com.asc.json",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/attestation/keys/BDB5FA4FE719D787FB3D3197F6D4A1D411E9D1AE-keys.openpgp.org.asc",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/attestation/keys/E77417AC194160A3FABD04969A259C7EE636C5ED-keys.openpgp.org.asc",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/attestation/keys/E77417AC194160A3FABD04969A259C7EE636C5ED-keyserver.ubuntu.com.asc.json",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/embedded/upstream/license-third-party/aalto_xml_licence.txt",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/embedded/upstream/license-third-party/asm_license.txt",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/embedded/upstream/license-third-party/fastutil_licence",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/embedded/upstream/license-third-party/guava_license.txt",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/embedded/upstream/license-third-party/gwt_license.txt",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/embedded/upstream/license-third-party/stax2-api.txt",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/embedded/upstream/license-third-party/trove_license.txt.json",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/embedded/upstream/license-third-party/trove_readme_license.txt.json",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/embedded/advisories/GHSA-2qrg-x229-3v8q.json",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/embedded/advisories/GHSA-343h-94h5-c4wr.json",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/embedded/advisories/GHSA-4v53-57pg-c464.json",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/embedded/advisories/GHSA-65fg-84f6-3jq3.json",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/embedded/advisories/GHSA-6cx8-rjf8-pr8g.json",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/embedded/advisories/GHSA-735f-pc8j-v9w8.json",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/embedded/advisories/GHSA-cmp6-m4wj-q63q.json",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/embedded/advisories/GHSA-f7vh-qwp3-x37m.json",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/embedded/advisories/GHSA-fp5r-v3w9-4333.json",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/embedded/advisories/GHSA-gm45-99xc-r7wv.json",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/embedded/advisories/GHSA-h4h5-3hr4-j3g2.json",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/embedded/advisories/GHSA-mcr4-qmvw-px4g.json",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/embedded/advisories/GHSA-vp98-w2p3-mv35.json",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/embedded/advisories/GHSA-vqf4-7m7x-wgfc.json",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/embedded/advisories/GHSA-w9p3-5cr8-m3jj.json",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/embedded/advisories/GHSA-wrvw-hg22-4m67.json",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/embedded/advisories/GHSA-xx22-p4ch-683r.json",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: marker/bytes/org.jetbrains.kotlin.jvm.gradle.plugin-2.1.20.pom",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: marker/bytes/org.jetbrains.kotlin.jvm.gradle.plugin-2.1.20.pom.sha1",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: marker/bytes/org.jetbrains.kotlin.jvm.gradle.plugin-2.1.20.pom.md5",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/tools-v2/bundle_v2.py.txt",
+      "ok": true
+    },
+    {
+      "check": "follow-up copy equals source: followup-1/revalidate.py.txt",
+      "ok": true
+    }
+  ]
+}

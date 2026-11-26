@@ -1,0 +1,1618 @@
+{
+ "components": {
+  "io.netty:netty-codec-http:4.1.139.Final": {
+   "packaging": "jar",
+   "parent": "io.netty:netty-parent:4.1.139.Final",
+   "pom_licenses": [
+    "Apache License, Version 2.0"
+   ],
+   "via": null,
+   "files": {
+    "netty-codec-http-4.1.139.Final.pom": {
+     "bytes": 4972,
+     "sha256": "ef3288bcc98a8b50067cd6611bbf07d43d5f7179c7d62a987846024a6ee9f78d",
+     "sha512": "ad6b5b0c73db3e16530e86196f18e891f42aed52525249e630d1255d3ccd0ac400de1b6a0c1ae503c7b4709d1d28c85b2f80866dd6739d0d2b5fa9ae6cf25cc3",
+     "sha1": "591455de031718241806cd73e7e71d76a0afb4de",
+     "sidecars": {
+      "sha1": {
+       "published": "591455de031718241806cd73e7e71d76a0afb4de",
+       "match": true
+      },
+      "sha256": {
+       "published": "ef3288bcc98a8b50067cd6611bbf07d43d5f7179c7d62a987846024a6ee9f78d",
+       "match": true
+      },
+      "sha512": {
+       "published": "ad6b5b0c73db3e16530e86196f18e891f42aed52525249e630d1255d3ccd0ac400de1b6a0c1ae503c7b4709d1d28c85b2f80866dd6739d0d2b5fa9ae6cf25cc3",
+       "match": true
+      },
+      "md5": {
+       "published": "6fc08aef69aacee98f6f2d55e581577a",
+       "match": true
+      },
+      "asc_present": true
+     }
+    },
+    "netty-codec-http-4.1.139.Final.module": null,
+    "netty-codec-http-4.1.139.Final.jar": {
+     "bytes": 696776,
+     "sha256": "627cfdac2cd5dbd8a33af85977fb81fa6b46f0c00389ab4c8677a415f0f85480",
+     "sha512": "475f649183553df6baab5bfe298147c131a5abe1bd40326e95e1fb018d513a0205718717118dc1177000fcb8720ecb27d2d6e26f5a455e89fd54fb89bdd426c7",
+     "sha1": "f52d30aeadc0af8c0d1cad9970e5a9c5df62bdd1",
+     "sidecars": {
+      "sha1": {
+       "published": "f52d30aeadc0af8c0d1cad9970e5a9c5df62bdd1",
+       "match": true
+      },
+      "sha256": {
+       "published": "627cfdac2cd5dbd8a33af85977fb81fa6b46f0c00389ab4c8677a415f0f85480",
+       "match": true
+      },
+      "sha512": {
+       "published": "475f649183553df6baab5bfe298147c131a5abe1bd40326e95e1fb018d513a0205718717118dc1177000fcb8720ecb27d2d6e26f5a455e89fd54fb89bdd426c7",
+       "match": true
+      },
+      "md5": {
+       "published": "93f2991d755e7b211dd0069ace84d749",
+       "match": true
+      },
+      "asc_present": true
+     },
+     "entries": 435,
+     "license_files": [],
+     "native": [],
+     "embedded_pom_properties": [
+      "META-INF/maven/io.netty/netty-codec-http/pom.properties"
+     ],
+     "manifest_head": "Manifest-Version: 1.0\r\nBundle-License: https://www.apache.org/licenses/LICENSE-2.0\r\nBundle-SymbolicName: io.netty.codec-http\r\nBuilt-By: root\r\nBnd-LastModified: 1791275846553\r\nSpecification-Title: Netty/Codec/HTTP\r\nImplementation-Vendor-Id: io.netty\r\nBundle-DocURL: https://netty.io/\r\nImport-Package: com.aayushatharva.brotli4j.encoder;resolution:=optiona\r\n l,com.jcraft.jzlib;resolution:=optional,io.netty.buffer;version=\"[4.1\r\n ,5)\",io.netty.channel;version=\"[4.1,5)\",io.netty.channel.embedded;ver\r\n sion=\"[4.1,5)\",io.netty.handler.codec;version=\"[4.1,5)\",io.netty.hand\r\n ler.codec.base64;version=\"["
+    }
+   }
+  },
+  "io.netty:netty-codec-http2:4.1.139.Final": {
+   "packaging": "jar",
+   "parent": "io.netty:netty-parent:4.1.139.Final",
+   "pom_licenses": [
+    "Apache License, Version 2.0"
+   ],
+   "via": null,
+   "files": {
+    "netty-codec-http2-4.1.139.Final.pom": {
+     "bytes": 6537,
+     "sha256": "97bfaccbf4b3f66f2d6aa951aecdb16e68a58706a4464f8c5985221d1723484a",
+     "sha512": "e3ba54905c1254f836518e6d4107c20ba33de0665505a26e5a9a96f41c7d24fd41cdd2c74076e2d765529c8ffb3bdf9a8fac97f7448655b2b0492764bb6d4e0e",
+     "sha1": "a1ba54d0ae729287ef3532f224cecd85750b7c64",
+     "sidecars": {
+      "sha1": {
+       "published": "a1ba54d0ae729287ef3532f224cecd85750b7c64",
+       "match": true
+      },
+      "sha256": {
+       "published": "97bfaccbf4b3f66f2d6aa951aecdb16e68a58706a4464f8c5985221d1723484a",
+       "match": true
+      },
+      "sha512": {
+       "published": "e3ba54905c1254f836518e6d4107c20ba33de0665505a26e5a9a96f41c7d24fd41cdd2c74076e2d765529c8ffb3bdf9a8fac97f7448655b2b0492764bb6d4e0e",
+       "match": true
+      },
+      "md5": {
+       "published": "b7fb8e38c6a5e74b6373c3afc43e1f64",
+       "match": true
+      },
+      "asc_present": true
+     }
+    },
+    "netty-codec-http2-4.1.139.Final.module": null,
+    "netty-codec-http2-4.1.139.Final.jar": {
+     "bytes": 514136,
+     "sha256": "4cb8bc95386112f3a9da935272781d577d9e70ca4c56cf0eef603a45e9526e02",
+     "sha512": "b1ff9d7e24397ba37b7d461ddb2ac5620509c81c2340ca263a08f4b9b33da2a3345d35fb861da786c61e5263fe3f6b85576d6db1e346c6d47803656801fb1990",
+     "sha1": "7b86d21a5578c431d2ccf898f22b444a38a4c0b2",
+     "sidecars": {
+      "sha1": {
+       "published": "7b86d21a5578c431d2ccf898f22b444a38a4c0b2",
+       "match": true
+      },
+      "sha256": {
+       "published": "4cb8bc95386112f3a9da935272781d577d9e70ca4c56cf0eef603a45e9526e02",
+       "match": true
+      },
+      "sha512": {
+       "published": "b1ff9d7e24397ba37b7d461ddb2ac5620509c81c2340ca263a08f4b9b33da2a3345d35fb861da786c61e5263fe3f6b85576d6db1e346c6d47803656801fb1990",
+       "match": true
+      },
+      "md5": {
+       "published": "0082338430d2ab5d787b86c67ab605f2",
+       "match": true
+      },
+      "asc_present": true
+     },
+     "entries": 315,
+     "license_files": [],
+     "native": [],
+     "embedded_pom_properties": [
+      "META-INF/maven/io.netty/netty-codec-http2/pom.properties"
+     ],
+     "manifest_head": "Manifest-Version: 1.0\r\nBundle-License: https://www.apache.org/licenses/LICENSE-2.0\r\nBundle-SymbolicName: io.netty.codec-http2\r\nBuilt-By: root\r\nBnd-LastModified: 1791275856550\r\nSpecification-Title: Netty/Codec/HTTP2\r\nImplementation-Vendor-Id: io.netty\r\nBundle-DocURL: https://netty.io/\r\nImport-Package: com.aayushatharva.brotli4j.encoder;resolution:=optiona\r\n l,io.netty.buffer;version=\"[4.1,5)\",io.netty.channel;version=\"[4.1,5)\r\n \",io.netty.channel.embedded;version=\"[4.1,5)\",io.netty.channel.socket\r\n ;version=\"[4.1,5)\",io.netty.handler.codec;version=\"[4.1,5)\",io.netty.\r\n handler.codec.base64;vers"
+    }
+   }
+  },
+  "io.netty:netty-handler:4.1.139.Final": {
+   "packaging": "jar",
+   "parent": "io.netty:netty-parent:4.1.139.Final",
+   "pom_licenses": [
+    "Apache License, Version 2.0"
+   ],
+   "via": null,
+   "files": {
+    "netty-handler-4.1.139.Final.pom": {
+     "bytes": 5400,
+     "sha256": "b61395943557c8a334f6adee9fea912721a87a1133ea9d15db0316a9964f7f41",
+     "sha512": "1698fa5780d32cf205d68f1af757e800a5b9f37192fac3d7f538193496b1a6e8878806651afb64ab2a63d36dd50c709609bb258ed529a3746b375e1cb6f23143",
+     "sha1": "5397b80d11817a239a2767732108f16b54a63044",
+     "sidecars": {
+      "sha1": {
+       "published": "5397b80d11817a239a2767732108f16b54a63044",
+       "match": true
+      },
+      "sha256": {
+       "published": "b61395943557c8a334f6adee9fea912721a87a1133ea9d15db0316a9964f7f41",
+       "match": true
+      },
+      "sha512": {
+       "published": "1698fa5780d32cf205d68f1af757e800a5b9f37192fac3d7f538193496b1a6e8878806651afb64ab2a63d36dd50c709609bb258ed529a3746b375e1cb6f23143",
+       "match": true
+      },
+      "md5": {
+       "published": "264c117205d24f9f1318c4e9f62d617f",
+       "match": true
+      },
+      "asc_present": true
+     }
+    },
+    "netty-handler-4.1.139.Final.module": null,
+    "netty-handler-4.1.139.Final.jar": {
+     "bytes": 590894,
+     "sha256": "ff85f00781b956d618b20f33da076c839a5e43e0084108b07bab0c19737168ec",
+     "sha512": "1e81b27389d2df851d8b73121b45ba3f38bc772e19930ca3bb76d331c9684a5a849cdb2a064284b4fccc39261586dcad47ef4951bb221f2775246ca25dcda64d",
+     "sha1": "436b4a15bb2fe4608996a08b6d69b22f075286a4",
+     "sidecars": {
+      "sha1": {
+       "published": "436b4a15bb2fe4608996a08b6d69b22f075286a4",
+       "match": true
+      },
+      "sha256": {
+       "published": "ff85f00781b956d618b20f33da076c839a5e43e0084108b07bab0c19737168ec",
+       "match": true
+      },
+      "sha512": {
+       "published": "1e81b27389d2df851d8b73121b45ba3f38bc772e19930ca3bb76d331c9684a5a849cdb2a064284b4fccc39261586dcad47ef4951bb221f2775246ca25dcda64d",
+       "match": true
+      },
+      "md5": {
+       "published": "566e66484d5eca2f62c9cda325c4ec2b",
+       "match": true
+      },
+      "asc_present": true
+     },
+     "entries": 396,
+     "license_files": [],
+     "native": [],
+     "embedded_pom_properties": [
+      "META-INF/maven/io.netty/netty-handler/pom.properties"
+     ],
+     "manifest_head": "Manifest-Version: 1.0\r\nBundle-License: https://www.apache.org/licenses/LICENSE-2.0\r\nBundle-SymbolicName: io.netty.handler\r\nBuilt-By: root\r\nBnd-LastModified: 1791275835315\r\nSpecification-Title: Netty/Handler\r\nImplementation-Vendor-Id: io.netty\r\nBundle-DocURL: https://netty.io/\r\nImport-Package: sun.security.ssl;resolution:=optional,org.eclipse.jett\r\n y.npn;version=\"[1,2)\";resolution:=optional,org.eclipse.jetty.alpn;ver\r\n sion=\"[1,2)\";resolution:=optional,io.netty.buffer;version=\"[4.1,5)\",i\r\n o.netty.channel;version=\"[4.1,5)\",io.netty.channel.socket;version=\"[4\r\n .1,5)\",io.netty.channel.unix;vers"
+    }
+   }
+  },
+  "io.netty:netty-codec:4.1.139.Final": {
+   "packaging": "jar",
+   "parent": "io.netty:netty-parent:4.1.139.Final",
+   "pom_licenses": [
+    "Apache License, Version 2.0"
+   ],
+   "via": null,
+   "files": {
+    "netty-codec-4.1.139.Final.pom": {
+     "bytes": 6081,
+     "sha256": "bd646763d5c83161969abe3dbd7e7bc1d506bead1430e415ac53e6f78de438b5",
+     "sha512": "7f6848e938b25c24d921cbe97f76fd1edb384fcd1f4650f60702ca599719573a302ee80586c165f08951db2e313990d947687f68a58b7185a30750cff39b6a7d",
+     "sha1": "474a8540cff3996c42eb2d6f280f03285dc42dc6",
+     "sidecars": {
+      "sha1": {
+       "published": "474a8540cff3996c42eb2d6f280f03285dc42dc6",
+       "match": true
+      },
+      "sha256": {
+       "published": "bd646763d5c83161969abe3dbd7e7bc1d506bead1430e415ac53e6f78de438b5",
+       "match": true
+      },
+      "sha512": {
+       "published": "7f6848e938b25c24d921cbe97f76fd1edb384fcd1f4650f60702ca599719573a302ee80586c165f08951db2e313990d947687f68a58b7185a30750cff39b6a7d",
+       "match": true
+      },
+      "md5": {
+       "published": "82086d0f927447627321cd22e2cbc9d4",
+       "match": true
+      },
+      "asc_present": true
+     }
+    },
+    "netty-codec-4.1.139.Final.module": null,
+    "netty-codec-4.1.139.Final.jar": {
+     "bytes": 363020,
+     "sha256": "ad43f07219dfb757a87b9c2b4765002be478c5401971379954e3d182f285fe6b",
+     "sha512": "1a784540a4b33d2dc0c86470534bb6b63339f92176439fab37b5ccdd8c9429bcdbd73366c824f274829e08a5dfe633bc6f565192554dc619858760d54098eb89",
+     "sha1": "96d0fb427e53097d91934c15fdf97785f917706d",
+     "sidecars": {
+      "sha1": {
+       "published": "96d0fb427e53097d91934c15fdf97785f917706d",
+       "match": true
+      },
+      "sha256": {
+       "published": "ad43f07219dfb757a87b9c2b4765002be478c5401971379954e3d182f285fe6b",
+       "match": true
+      },
+      "sha512": {
+       "published": "1a784540a4b33d2dc0c86470534bb6b63339f92176439fab37b5ccdd8c9429bcdbd73366c824f274829e08a5dfe633bc6f565192554dc619858760d54098eb89",
+       "match": true
+      },
+      "md5": {
+       "published": "535c351a2dbc0f4cd93ac9ad2af04e8b",
+       "match": true
+      },
+      "asc_present": true
+     },
+     "entries": 252,
+     "license_files": [],
+     "native": [],
+     "embedded_pom_properties": [
+      "META-INF/maven/io.netty/netty-codec/pom.properties"
+     ],
+     "manifest_head": "Manifest-Version: 1.0\r\nBundle-License: https://www.apache.org/licenses/LICENSE-2.0\r\nBundle-SymbolicName: io.netty.codec\r\nBuilt-By: root\r\nBnd-LastModified: 1791275810919\r\nSpecification-Title: Netty/Codec\r\nImplementation-Vendor-Id: io.netty\r\nBundle-DocURL: https://netty.io/\r\nImport-Package: com.aayushatharva.brotli4j;resolution:=optional,com.aa\r\n yushatharva.brotli4j.decoder;resolution:=optional,com.aayushatharva.b\r\n rotli4j.encoder;resolution:=optional,com.github.luben.zstd;version=\"[\r\n 1.5,2)\";resolution:=optional,com.github.luben.zstd.util;version=\"[1.5\r\n ,2)\";resolution:=optional,com.google."
+    }
+   }
+  },
+  "io.netty:netty-common:4.1.139.Final": {
+   "packaging": "jar",
+   "parent": "io.netty:netty-parent:4.1.139.Final",
+   "pom_licenses": [
+    "Apache License, Version 2.0"
+   ],
+   "via": null,
+   "files": {
+    "netty-common-4.1.139.Final.pom": {
+     "bytes": 10340,
+     "sha256": "b6508420e327d76208cc6320d8dd5e3257554448e9d0c134c5498ad95b0fbd2e",
+     "sha512": "4f6fc13b13f97a429be179fb937b045bd0c9f6a71e764e1d456f1339aef891783413a426d32de32c07cc6036a1c13b21efd8c47721456cc949001707a613e187",
+     "sha1": "e9f9f1de69620d6e12ecaadcb6e931b3a39dd77c",
+     "sidecars": {
+      "sha1": {
+       "published": "e9f9f1de69620d6e12ecaadcb6e931b3a39dd77c",
+       "match": true
+      },
+      "sha256": {
+       "published": "b6508420e327d76208cc6320d8dd5e3257554448e9d0c134c5498ad95b0fbd2e",
+       "match": true
+      },
+      "sha512": {
+       "published": "4f6fc13b13f97a429be179fb937b045bd0c9f6a71e764e1d456f1339aef891783413a426d32de32c07cc6036a1c13b21efd8c47721456cc949001707a613e187",
+       "match": true
+      },
+      "md5": {
+       "published": "11e877948cd1601c995a47eb418386de",
+       "match": true
+      },
+      "asc_present": true
+     }
+    },
+    "netty-common-4.1.139.Final.module": null,
+    "netty-common-4.1.139.Final.jar": {
+     "bytes": 740560,
+     "sha256": "50372d86e27b4b1cf0810d75eb534795966a199049a1e85a0c41bbd2bb97f519",
+     "sha512": "ffaff98e6c977a40081c902c87ec4b27b986d497eb0b2f1ef1c466831c1c4d1cd72b902bd6a89497f84d1eed716c96ce90abda6f982103960434e6f25140c5f7",
+     "sha1": "c3d17ade6f80714ca28078706cbb33c9e8096cf8",
+     "sidecars": {
+      "sha1": {
+       "published": "c3d17ade6f80714ca28078706cbb33c9e8096cf8",
+       "match": true
+      },
+      "sha256": {
+       "published": "50372d86e27b4b1cf0810d75eb534795966a199049a1e85a0c41bbd2bb97f519",
+       "match": true
+      },
+      "sha512": {
+       "published": "ffaff98e6c977a40081c902c87ec4b27b986d497eb0b2f1ef1c466831c1c4d1cd72b902bd6a89497f84d1eed716c96ce90abda6f982103960434e6f25140c5f7",
+       "match": true
+      },
+      "md5": {
+       "published": "e15adda8e2610cc205d0abd6603118f5",
+       "match": true
+      },
+      "asc_present": true
+     },
+     "entries": 584,
+     "license_files": [],
+     "native": [],
+     "embedded_pom_properties": [
+      "META-INF/maven/io.netty/netty-common/pom.properties",
+      "META-INF/maven/org.jctools/jctools-core/pom.properties"
+     ],
+     "manifest_head": "Manifest-Version: 1.0\r\nBundle-License: https://www.apache.org/licenses/LICENSE-2.0\r\nBundle-SymbolicName: io.netty.common\r\nBuilt-By: root\r\nBnd-LastModified: 1791275775778\r\nSpecification-Title: Netty/Common\r\nImplementation-Vendor-Id: io.netty\r\nBundle-DocURL: https://netty.io/\r\nImport-Package: sun.misc;resolution:=optional,com.oracle.svm.core.anno\r\n tate;resolution:=optional,io.netty.util,io.netty.util.concurrent,io.n\r\n etty.util.internal,io.netty.util.internal.logging,javax.security.cert\r\n ,org.apache.commons.logging;version=\"[1.2,2)\";resolution:=optional,or\r\n g.apache.log4j;version=\"[2.25,3)\";r"
+    }
+   }
+  },
+  "io.netty:netty-handler-proxy:4.1.139.Final": {
+   "packaging": "jar",
+   "parent": "io.netty:netty-parent:4.1.139.Final",
+   "pom_licenses": [
+    "Apache License, Version 2.0"
+   ],
+   "via": null,
+   "files": {
+    "netty-handler-proxy-4.1.139.Final.pom": {
+     "bytes": 4158,
+     "sha256": "1d558273be1be5f1f6a02788aeb0ecb3fb2c532755af698affebe3ec153a55b6",
+     "sha512": "a59275b9278e777a5f686d6ef321727591922ee50075271e9a970a6a5a22fc527be8ddb9bfc444d30277b31988b3ab07b30908d9a4f1391ed1238b7684047522",
+     "sha1": "86150839834c1ba2d6a899a52c2912b7d58b9d52",
+     "sidecars": {
+      "sha1": {
+       "published": "86150839834c1ba2d6a899a52c2912b7d58b9d52",
+       "match": true
+      },
+      "sha256": {
+       "published": "1d558273be1be5f1f6a02788aeb0ecb3fb2c532755af698affebe3ec153a55b6",
+       "match": true
+      },
+      "sha512": {
+       "published": "a59275b9278e777a5f686d6ef321727591922ee50075271e9a970a6a5a22fc527be8ddb9bfc444d30277b31988b3ab07b30908d9a4f1391ed1238b7684047522",
+       "match": true
+      },
+      "md5": {
+       "published": "21bf42c46d9b9694ae6e04c718bf2350",
+       "match": true
+      },
+      "asc_present": true
+     }
+    },
+    "netty-handler-proxy-4.1.139.Final.module": null,
+    "netty-handler-proxy-4.1.139.Final.jar": {
+     "bytes": 25962,
+     "sha256": "9c92c2407b6fd3c120ab5efb900475a1fe40ce099703d2500c8679d3c75a90cb",
+     "sha512": "09c5ea7e859f3afac84a1a84dfb8da56e62b5704420fca4947cc8dde4c7a1d20c0fda9dd4264fd141da4ddce3c9051360bd6ad1d62e9809a140c633a6f99b392",
+     "sha1": "4abccc0bd2e4c9a9b63777d362ffd29256b15689",
+     "sidecars": {
+      "sha1": {
+       "published": "4abccc0bd2e4c9a9b63777d362ffd29256b15689",
+       "match": true
+      },
+      "sha256": {
+       "published": "9c92c2407b6fd3c120ab5efb900475a1fe40ce099703d2500c8679d3c75a90cb",
+       "match": true
+      },
+      "sha512": {
+       "published": "09c5ea7e859f3afac84a1a84dfb8da56e62b5704420fca4947cc8dde4c7a1d20c0fda9dd4264fd141da4ddce3c9051360bd6ad1d62e9809a140c633a6f99b392",
+       "match": true
+      },
+      "md5": {
+       "published": "4434bb119458ff47ae62d1cc35294f80",
+       "match": true
+      },
+      "asc_present": true
+     },
+     "entries": 31,
+     "license_files": [],
+     "native": [],
+     "embedded_pom_properties": [
+      "META-INF/maven/io.netty/netty-handler-proxy/pom.properties"
+     ],
+     "manifest_head": "Manifest-Version: 1.0\r\nBundle-License: https://www.apache.org/licenses/LICENSE-2.0\r\nBundle-SymbolicName: io.netty.handler-proxy\r\nBuilt-By: root\r\nBnd-LastModified: 1791275893187\r\nSpecification-Title: Netty/Handler/Proxy\r\nImplementation-Vendor-Id: io.netty\r\nBundle-DocURL: https://netty.io/\r\nImport-Package: io.netty.buffer;version=\"[4.1,5)\",io.netty.channel;ver\r\n sion=\"[4.1,5)\",io.netty.handler.codec.base64;version=\"[4.1,5)\",io.net\r\n ty.handler.codec.http;version=\"[4.1,5)\",io.netty.handler.codec.socksx\r\n .v4;version=\"[4.1,5)\",io.netty.handler.codec.socksx.v5;version=\"[4.1,\r\n 5)\",io.netty.util;ver"
+    }
+   }
+  },
+  "io.netty:netty-buffer:4.1.139.Final": {
+   "packaging": "jar",
+   "parent": "io.netty:netty-parent:4.1.139.Final",
+   "pom_licenses": [
+    "Apache License, Version 2.0"
+   ],
+   "via": null,
+   "files": {
+    "netty-buffer-4.1.139.Final.pom": {
+     "bytes": 2188,
+     "sha256": "9843c73634e372af72f56f864fe99afeaccf5f02f0f878655208149cdb6b84d5",
+     "sha512": "21452e983bc93507f2d8974fa3c837a51b1a9332e5bbf5a81a95910775515f6494057621e71f6679dd6228087c45348adb20f877d8b7ffa3966d43ce70f0d348",
+     "sha1": "23ecfa264ddb707cfe1bff0831541420d128b431",
+     "sidecars": {
+      "sha1": {
+       "published": "23ecfa264ddb707cfe1bff0831541420d128b431",
+       "match": true
+      },
+      "sha256": {
+       "published": "9843c73634e372af72f56f864fe99afeaccf5f02f0f878655208149cdb6b84d5",
+       "match": true
+      },
+      "sha512": {
+       "published": "21452e983bc93507f2d8974fa3c837a51b1a9332e5bbf5a81a95910775515f6494057621e71f6679dd6228087c45348adb20f877d8b7ffa3966d43ce70f0d348",
+       "match": true
+      },
+      "md5": {
+       "published": "4be88bd0ef4f5ed7a1cc99f714143178",
+       "match": true
+      },
+      "asc_present": true
+     }
+    },
+    "netty-buffer-4.1.139.Final.module": null,
+    "netty-buffer-4.1.139.Final.jar": {
+     "bytes": 365480,
+     "sha256": "48d805b74e56dc5f92b1f288858185abc86db16d293e8da183542df6243427f2",
+     "sha512": "9c1ab4ba621a9e1b3815ab308453ad3e5a7504189c2a4a85edf50c4902d819b946171d2ff05a1c97f8fceec22cf9893206d0273398e2e9f5f2e7b83e7fd6ad8f",
+     "sha1": "9bf302a4c01d89f42e633f55eb9ffd0bb6a0b92e",
+     "sidecars": {
+      "sha1": {
+       "published": "9bf302a4c01d89f42e633f55eb9ffd0bb6a0b92e",
+       "match": true
+      },
+      "sha256": {
+       "published": "48d805b74e56dc5f92b1f288858185abc86db16d293e8da183542df6243427f2",
+       "match": true
+      },
+      "sha512": {
+       "published": "9c1ab4ba621a9e1b3815ab308453ad3e5a7504189c2a4a85edf50c4902d819b946171d2ff05a1c97f8fceec22cf9893206d0273398e2e9f5f2e7b83e7fd6ad8f",
+       "match": true
+      },
+      "md5": {
+       "published": "16f68bfe26f6ccc490698ee808adccaa",
+       "match": true
+      },
+      "asc_present": true
+     },
+     "entries": 186,
+     "license_files": [],
+     "native": [],
+     "embedded_pom_properties": [
+      "META-INF/maven/io.netty/netty-buffer/pom.properties"
+     ],
+     "manifest_head": "Manifest-Version: 1.0\r\nBundle-License: https://www.apache.org/licenses/LICENSE-2.0\r\nBundle-SymbolicName: io.netty.buffer\r\nBuilt-By: root\r\nBnd-LastModified: 1791275787910\r\nSpecification-Title: Netty/Buffer\r\nImplementation-Vendor-Id: io.netty\r\nBundle-DocURL: https://netty.io/\r\nImport-Package: io.netty.util;version=\"[4.1,5)\",io.netty.util.concurre\r\n nt;version=\"[4.1,5)\",io.netty.util.internal;version=\"[4.1,5)\",io.nett\r\n y.util.internal.logging;version=\"[4.1,5)\",sun.nio.ch;resolution:=opti\r\n onal,org.eclipse.jetty.npn;version=\"[1,2)\";resolution:=optional,org.e\r\n clipse.jetty.alpn;version=\"[1,2)\";r"
+    }
+   }
+  },
+  "io.netty:netty-transport:4.1.139.Final": {
+   "packaging": "jar",
+   "parent": "io.netty:netty-parent:4.1.139.Final",
+   "pom_licenses": [
+    "Apache License, Version 2.0"
+   ],
+   "via": null,
+   "files": {
+    "netty-transport-4.1.139.Final.pom": {
+     "bytes": 2919,
+     "sha256": "a9177be274d8e14f38310b303410e7dff0c8ccd647b7c6bee685510a9de5cc24",
+     "sha512": "faeeadb4deb93bc00d280bd52b0bbe722d0e252477b8292f5bab807a700736566314daf298d0d4928c646d1d5218f2d93c00cd4ec31d167dd7f71335f840fa23",
+     "sha1": "2b9dac815e2c62689f3a3e97b41bc728b3c26956",
+     "sidecars": {
+      "sha1": {
+       "published": "2b9dac815e2c62689f3a3e97b41bc728b3c26956",
+       "match": true
+      },
+      "sha256": {
+       "published": "a9177be274d8e14f38310b303410e7dff0c8ccd647b7c6bee685510a9de5cc24",
+       "match": true
+      },
+      "sha512": {
+       "published": "faeeadb4deb93bc00d280bd52b0bbe722d0e252477b8292f5bab807a700736566314daf298d0d4928c646d1d5218f2d93c00cd4ec31d167dd7f71335f840fa23",
+       "match": true
+      },
+      "md5": {
+       "published": "73abcece714bb66d23271bc02524e608",
+       "match": true
+      },
+      "asc_present": true
+     }
+    },
+    "netty-transport-4.1.139.Final.module": null,
+    "netty-transport-4.1.139.Final.jar": {
+     "bytes": 524190,
+     "sha256": "be7bff8b6274e7fae12bbad3c565777539e9b069517e0b3acc06d9ac2cd6ec05",
+     "sha512": "4b3960d64bee466f2895b3bdf2e6bc563ab72b2d45a1b25f9b209585d389c0747e925f0b3d8b55a8560ba1d3ba9720fb3f25a4c022f13c676c7bba2af6965557",
+     "sha1": "2cf7121cec6ec0b43d406adceec132cfcec6159a",
+     "sidecars": {
+      "sha1": {
+       "published": "2cf7121cec6ec0b43d406adceec132cfcec6159a",
+       "match": true
+      },
+      "sha256": {
+       "published": "be7bff8b6274e7fae12bbad3c565777539e9b069517e0b3acc06d9ac2cd6ec05",
+       "match": true
+      },
+      "sha512": {
+       "published": "4b3960d64bee466f2895b3bdf2e6bc563ab72b2d45a1b25f9b209585d389c0747e925f0b3d8b55a8560ba1d3ba9720fb3f25a4c022f13c676c7bba2af6965557",
+       "match": true
+      },
+      "md5": {
+       "published": "35e32b9152e5e9ceabe9301e554fbca9",
+       "match": true
+      },
+      "asc_present": true
+     },
+     "entries": 418,
+     "license_files": [],
+     "native": [],
+     "embedded_pom_properties": [
+      "META-INF/maven/io.netty/netty-transport/pom.properties"
+     ],
+     "manifest_head": "Manifest-Version: 1.0\r\nBundle-License: https://www.apache.org/licenses/LICENSE-2.0\r\nBundle-SymbolicName: io.netty.transport\r\nBuilt-By: root\r\nBnd-LastModified: 1791275802168\r\nSpecification-Title: Netty/Transport\r\nImplementation-Vendor-Id: io.netty\r\nBundle-DocURL: https://netty.io/\r\nImport-Package: io.netty.bootstrap,io.netty.buffer;version=\"[4.1,5)\",i\r\n o.netty.channel,io.netty.channel.nio,io.netty.channel.oio,io.netty.ch\r\n annel.socket,io.netty.resolver;version=\"[4.1,5)\",io.netty.util;versio\r\n n=\"[4.1,5)\",io.netty.util.concurrent;version=\"[4.1,5)\",io.netty.util.\r\n internal;version=\"[4.1,5)\",io"
+    }
+   }
+  },
+  "io.netty:netty-codec-socks:4.1.139.Final": {
+   "packaging": "jar",
+   "parent": "io.netty:netty-parent:4.1.139.Final",
+   "pom_licenses": [
+    "Apache License, Version 2.0"
+   ],
+   "via": null,
+   "files": {
+    "netty-codec-socks-4.1.139.Final.pom": {
+     "bytes": 3145,
+     "sha256": "58a8b9fd2f1f5fe159756df77a1b3fe9b568d52c027df519110fd033b936f166",
+     "sha512": "6963703e2748843604ce8c0bc79ac3af8acd606f3574ecf57d33813e1bf69a45335221d724f7ab4ce7bc5e3ea9c9c5cb0a85bb3fa556ada698d39a029d8f8788",
+     "sha1": "f74aa5b37ef488733b4409e3a86ea0ac9b698ee2",
+     "sidecars": {
+      "sha1": {
+       "published": "f74aa5b37ef488733b4409e3a86ea0ac9b698ee2",
+       "match": true
+      },
+      "sha256": {
+       "published": "58a8b9fd2f1f5fe159756df77a1b3fe9b568d52c027df519110fd033b936f166",
+       "match": true
+      },
+      "sha512": {
+       "published": "6963703e2748843604ce8c0bc79ac3af8acd606f3574ecf57d33813e1bf69a45335221d724f7ab4ce7bc5e3ea9c9c5cb0a85bb3fa556ada698d39a029d8f8788",
+       "match": true
+      },
+      "md5": {
+       "published": "527ce552e3450c6c7887c2bbd8e4ba08",
+       "match": true
+      },
+      "asc_present": true
+     }
+    },
+    "netty-codec-socks-4.1.139.Final.module": null,
+    "netty-codec-socks-4.1.139.Final.jar": {
+     "bytes": 121927,
+     "sha256": "94d6800d5f717b40db5d0bf42a77b448d472cd9033735e69e7b18311bd902f23",
+     "sha512": "845f14e3e54223fe7762abfa557dc814c1b7c1ef1f45718edadd0a74b27ae05afed93b25f5fcb0c5ab7abb7ed57d5d7b3602755e745d70f79eb58de0bbc12804",
+     "sha1": "64edb19cc6a513c972a6a4d245c1c487fe703e40",
+     "sidecars": {
+      "sha1": {
+       "published": "64edb19cc6a513c972a6a4d245c1c487fe703e40",
+       "match": true
+      },
+      "sha256": {
+       "published": "94d6800d5f717b40db5d0bf42a77b448d472cd9033735e69e7b18311bd902f23",
+       "match": true
+      },
+      "sha512": {
+       "published": "845f14e3e54223fe7762abfa557dc814c1b7c1ef1f45718edadd0a74b27ae05afed93b25f5fcb0c5ab7abb7ed57d5d7b3602755e745d70f79eb58de0bbc12804",
+       "match": true
+      },
+      "md5": {
+       "published": "bb2b5400f4f36f254e56e337be13de1b",
+       "match": true
+      },
+      "asc_present": true
+     },
+     "entries": 130,
+     "license_files": [],
+     "native": [],
+     "embedded_pom_properties": [
+      "META-INF/maven/io.netty/netty-codec-socks/pom.properties"
+     ],
+     "manifest_head": "Manifest-Version: 1.0\r\nBundle-License: https://www.apache.org/licenses/LICENSE-2.0\r\nBundle-SymbolicName: io.netty.codec-socks\r\nBuilt-By: root\r\nBnd-LastModified: 1791275881256\r\nSpecification-Title: Netty/Codec/Socks\r\nImplementation-Vendor-Id: io.netty\r\nBundle-DocURL: https://netty.io/\r\nImport-Package: io.netty.buffer;version=\"[4.1,5)\",io.netty.channel;ver\r\n sion=\"[4.1,5)\",io.netty.handler.codec;version=\"[4.1,5)\",io.netty.hand\r\n ler.codec.socksx,io.netty.handler.codec.socksx.v4,io.netty.handler.co\r\n dec.socksx.v5,io.netty.util;version=\"[4.1,5)\",io.netty.util.internal;\r\n version=\"[4.1,5)\",io.nett"
+    }
+   }
+  },
+  "io.netty:netty-resolver:4.1.139.Final": {
+   "packaging": "jar",
+   "parent": "io.netty:netty-parent:4.1.139.Final",
+   "pom_licenses": [
+    "Apache License, Version 2.0"
+   ],
+   "via": null,
+   "files": {
+    "netty-resolver-4.1.139.Final.pom": {
+     "bytes": 2195,
+     "sha256": "ca0d8a0f3be0067f1ac690818bd997670bae0baf6d6aa3001b197ff40f059e5a",
+     "sha512": "72b4a39b1c59a61bee3ad6a11548e70c7c5999822c200cc098ac3e7db152a95b88d6c7f0b9c3b7474a7d49f682542f3903fbc30b9f9a84c562c938b26bcb31ae",
+     "sha1": "7df6b5308e74f6c4b68a958bedd0244bffd10ddd",
+     "sidecars": {
+      "sha1": {
+       "published": "7df6b5308e74f6c4b68a958bedd0244bffd10ddd",
+       "match": true
+      },
+      "sha256": {
+       "published": "ca0d8a0f3be0067f1ac690818bd997670bae0baf6d6aa3001b197ff40f059e5a",
+       "match": true
+      },
+      "sha512": {
+       "published": "72b4a39b1c59a61bee3ad6a11548e70c7c5999822c200cc098ac3e7db152a95b88d6c7f0b9c3b7474a7d49f682542f3903fbc30b9f9a84c562c938b26bcb31ae",
+       "match": true
+      },
+      "md5": {
+       "published": "7638e362f1b33f9ce7f6744b04e50ee4",
+       "match": true
+      },
+      "asc_present": true
+     }
+    },
+    "netty-resolver-4.1.139.Final.module": null,
+    "netty-resolver-4.1.139.Final.jar": {
+     "bytes": 37907,
+     "sha256": "562a5388c88325b7d6ed05e8168736871ce0e64ab01e0ce52ea7710760b9b457",
+     "sha512": "627ec3fcae96f6a73cbf2072ce8f920436cbe4510d4d7ba4de98fbb7d9211099644c7a7516ff919f798ad14c1b8b4b286ebeced3ac846d5a3bb68a1480b74d25",
+     "sha1": "b3ad473303b5ccb9d0f22ef31c0306b229620c54",
+     "sidecars": {
+      "sha1": {
+       "published": "b3ad473303b5ccb9d0f22ef31c0306b229620c54",
+       "match": true
+      },
+      "sha256": {
+       "published": "562a5388c88325b7d6ed05e8168736871ce0e64ab01e0ce52ea7710760b9b457",
+       "match": true
+      },
+      "sha512": {
+       "published": "627ec3fcae96f6a73cbf2072ce8f920436cbe4510d4d7ba4de98fbb7d9211099644c7a7516ff919f798ad14c1b8b4b286ebeced3ac846d5a3bb68a1480b74d25",
+       "match": true
+      },
+      "md5": {
+       "published": "27f8e185e516d775393dcb7120dd6c6f",
+       "match": true
+      },
+      "asc_present": true
+     },
+     "entries": 41,
+     "license_files": [],
+     "native": [],
+     "embedded_pom_properties": [
+      "META-INF/maven/io.netty/netty-resolver/pom.properties"
+     ],
+     "manifest_head": "Manifest-Version: 1.0\r\nBundle-License: https://www.apache.org/licenses/LICENSE-2.0\r\nBundle-SymbolicName: io.netty.resolver\r\nBuilt-By: root\r\nBnd-LastModified: 1791275793851\r\nSpecification-Title: Netty/Resolver\r\nImplementation-Vendor-Id: io.netty\r\nBundle-DocURL: https://netty.io/\r\nImport-Package: io.netty.util;version=\"[4.1,5)\",io.netty.util.concurre\r\n nt;version=\"[4.1,5)\",io.netty.util.internal;version=\"[4.1,5)\",io.nett\r\n y.util.internal.logging;version=\"[4.1,5)\",sun.nio.ch;resolution:=opti\r\n onal,org.eclipse.jetty.npn;version=\"[1,2)\";resolution:=optional,org.e\r\n clipse.jetty.alpn;version=\"[1,2"
+    }
+   }
+  },
+  "io.netty:netty-transport-native-unix-common:4.1.139.Final": {
+   "packaging": "jar",
+   "parent": "io.netty:netty-parent:4.1.139.Final",
+   "pom_licenses": [
+    "Apache License, Version 2.0"
+   ],
+   "via": null,
+   "files": {
+    "netty-transport-native-unix-common-4.1.139.Final.pom": {
+     "bytes": 33704,
+     "sha256": "53e828cd58fe3f2e4df00d00cf75cc2bb05a9cdf2fb58b7fc30f62d13e650d5f",
+     "sha512": "fa8ef259ce510a14942bf813297f92d64a3af98d51850b4f468a3b15e33db7dffd7c139bf79556a3e04152639855c549796e6efc135c91724c398d6fff8b086b",
+     "sha1": "b51e9fce8698e374b7af3553df8af43b7bfcd13a",
+     "sidecars": {
+      "sha1": {
+       "published": "b51e9fce8698e374b7af3553df8af43b7bfcd13a",
+       "match": true
+      },
+      "sha256": {
+       "published": "53e828cd58fe3f2e4df00d00cf75cc2bb05a9cdf2fb58b7fc30f62d13e650d5f",
+       "match": true
+      },
+      "sha512": {
+       "published": "fa8ef259ce510a14942bf813297f92d64a3af98d51850b4f468a3b15e33db7dffd7c139bf79556a3e04152639855c549796e6efc135c91724c398d6fff8b086b",
+       "match": true
+      },
+      "md5": {
+       "published": "b4a13f9c0abe330ada3c864632c5fc5c",
+       "match": true
+      },
+      "asc_present": true
+     }
+    },
+    "netty-transport-native-unix-common-4.1.139.Final.module": null,
+    "netty-transport-native-unix-common-4.1.139.Final.jar": {
+     "bytes": 44326,
+     "sha256": "8e660ac8a485fc8d8b47d87d04ea33d19902dc6fc5a113e9353b762188b3f333",
+     "sha512": "1c2f97b9994d9705141cdd988d58dc15353bb8c99d14938f8e772954a4c204ba4dfc2fa80d7bf3ea83ad443547d6c5cb55d2c3ae48b1aeb588e5a5f78c88a3c4",
+     "sha1": "58a873837fe16ab713a628530f2ef605f9a5b2e6",
+     "sidecars": {
+      "sha1": {
+       "published": "58a873837fe16ab713a628530f2ef605f9a5b2e6",
+       "match": true
+      },
+      "sha256": {
+       "published": "8e660ac8a485fc8d8b47d87d04ea33d19902dc6fc5a113e9353b762188b3f333",
+       "match": true
+      },
+      "sha512": {
+       "published": "1c2f97b9994d9705141cdd988d58dc15353bb8c99d14938f8e772954a4c204ba4dfc2fa80d7bf3ea83ad443547d6c5cb55d2c3ae48b1aeb588e5a5f78c88a3c4",
+       "match": true
+      },
+      "md5": {
+       "published": "ee99561d15ea4ebdd25a8908db81c55c",
+       "match": true
+      },
+      "asc_present": true
+     },
+     "entries": 45,
+     "license_files": [],
+     "native": [],
+     "embedded_pom_properties": [
+      "META-INF/maven/io.netty/netty-transport-native-unix-common/pom.properties"
+     ],
+     "manifest_head": "Manifest-Version: 1.0\r\nBundle-License: https://www.apache.org/licenses/LICENSE-2.0\r\nBundle-SymbolicName: io.netty.transport-native-unix-common\r\nBuilt-By: root\r\nBnd-LastModified: 1791275827084\r\nSpecification-Title: Netty/Transport/Native/Unix/Common\r\nImplementation-Vendor-Id: io.netty\r\nBundle-DocURL: https://netty.io/\r\nImport-Package: io.netty.buffer;version=\"[4.1,5)\",io.netty.channel;ver\r\n sion=\"[4.1,5)\",io.netty.channel.socket;version=\"[4.1,5)\",io.netty.uti\r\n l;version=\"[4.1,5)\",io.netty.util.internal;version=\"[4.1,5)\",sun.nio.\r\n ch;resolution:=optional,org.eclipse.jetty.npn;version=\"[1,2)\";r"
+    }
+   }
+  },
+  "org.apache.commons:commons-compress:1.28.0": {
+   "packaging": "jar",
+   "parent": "org.apache.commons:commons-parent:85",
+   "pom_licenses": [
+    "Apache-2.0"
+   ],
+   "via": null,
+   "files": {
+    "commons-compress-1.28.0.pom": {
+     "bytes": 25308,
+     "sha256": "033f4c78d632da88d0eb8ead974fc14a264392cebf12ab6c68d6cea7adf0c64a",
+     "sha512": "8e146052d06e3018b7336a52fbbe979b73e2cd1d318fe9fdb37e22f5ee39e65992351ce5278dc4da34a59256f797882d16b6dee34684742a8a5bfb4f0998d82f",
+     "sha1": "976052d6526ab48697efd2d435b38fdfcc428d4a",
+     "sidecars": {
+      "sha1": {
+       "published": "976052d6526ab48697efd2d435b38fdfcc428d4a",
+       "match": true
+      },
+      "sha256": {
+       "published": null,
+       "match": null
+      },
+      "sha512": {
+       "published": null,
+       "match": null
+      },
+      "md5": {
+       "published": "fb26d6f990efb4ef4cdfb63d68c710cc",
+       "match": true
+      },
+      "asc_present": true
+     }
+    },
+    "commons-compress-1.28.0.module": null,
+    "commons-compress-1.28.0.jar": {
+     "bytes": 1117221,
+     "sha256": "e1522945218456f3649a39bc4afd70ce4bd466221519dba7d378f2141a4642ca",
+     "sha512": "f1f140f4f40ab3cf3265919db9dbb95a631a29aa784e305f291de4e68876bb711d9217d62d7937cddddd393982decdf71a608b4b3ab7f4e6375cf28af2893d7f",
+     "sha1": "e482f2c7a88dac3c497e96aa420b6a769f59c8d7",
+     "sidecars": {
+      "sha1": {
+       "published": "e482f2c7a88dac3c497e96aa420b6a769f59c8d7",
+       "match": true
+      },
+      "sha256": {
+       "published": null,
+       "match": null
+      },
+      "sha512": {
+       "published": null,
+       "match": null
+      },
+      "md5": {
+       "published": "f33efe616d561f8281ef7bf9f2576ad0",
+       "match": true
+      },
+      "asc_present": true
+     },
+     "entries": 642,
+     "license_files": [
+      "META-INF/LICENSE.txt",
+      "META-INF/NOTICE.txt"
+     ],
+     "native": [],
+     "embedded_pom_properties": [
+      "META-INF/maven/org.apache.commons/commons-compress/pom.properties"
+     ],
+     "manifest_head": "Manifest-Version: 1.0\r\nCreated-By: Apache Maven Bundle Plugin 6.0.0\r\nBuild-Jdk-Spec: 21\r\nAutomatic-Module-Name: org.apache.commons.compress\r\nExtension-Name: org.apache.commons.compress\r\nImplementation-Title: Apache Commons Compress\r\nImplementation-Vendor: The Apache Software Foundation\r\nImplementation-Vendor-Id: org.apache\r\nImplementation-Version: 1.28.0\r\nMain-Class: org.apache.commons.compress.archivers.Lister\r\nSpecification-Title: Apache Commons Compress\r\nSpecification-Vendor: The Apache Software Foundation\r\nSpecification-Version: 1.28.0\r\nX-Compile-Source-JDK: 1.8\r\nX-Compile-Target-JDK: 1.8\r"
+    }
+   }
+  },
+  "org.bitbucket.b_c:jose4j:0.9.6": {
+   "packaging": "jar",
+   "parent": null,
+   "pom_licenses": [
+    "The Apache Software License, Version 2.0"
+   ],
+   "via": null,
+   "files": {
+    "jose4j-0.9.6.pom": {
+     "bytes": 8856,
+     "sha256": "3fb7fa713e89d42784bdf4d192ece217400040bda7e933886a9f45ce8b9b557e",
+     "sha512": "7a5366102c5fa32c50fb59a2e71374d0aa1af7d3d18e842c7363218eaf983207f2c45bd6c6dd1a39d70ef02c325cdc2ec5bd4f4f66fac14e946a4d98cef2d7e3",
+     "sha1": "45355d60dac69a030c3d2be6386985f2a963da4c",
+     "sidecars": {
+      "sha1": {
+       "published": "45355d60dac69a030c3d2be6386985f2a963da4c",
+       "match": true
+      },
+      "sha256": {
+       "published": null,
+       "match": null
+      },
+      "sha512": {
+       "published": null,
+       "match": null
+      },
+      "md5": {
+       "published": "b07bd49b70274ab6a082e1504c52ee58",
+       "match": true
+      },
+      "asc_present": true
+     }
+    },
+    "jose4j-0.9.6.module": null,
+    "jose4j-0.9.6.jar": {
+     "bytes": 299502,
+     "sha256": "7314af50cde9c99e8eaf43eee617a23edcc6bb43036221064355094999d837ef",
+     "sha512": "ab5c99dfc0ab3061510941602844b9848de80c2c03526265f9dd12eaf2567a891c7fb5d000280b3aa6eaef399e5852011ee264339e37fa1169d49407158698e5",
+     "sha1": "357a3836bb5da16f314f3a1e954518e5468cd915",
+     "sidecars": {
+      "sha1": {
+       "published": "357a3836bb5da16f314f3a1e954518e5468cd915",
+       "match": true
+      },
+      "sha256": {
+       "published": null,
+       "match": null
+      },
+      "sha512": {
+       "published": null,
+       "match": null
+      },
+      "md5": {
+       "published": "f57cb91efc5beaa940029f5515a888c2",
+       "match": true
+      },
+      "asc_present": true
+     },
+     "entries": 244,
+     "license_files": [],
+     "native": [],
+     "embedded_pom_properties": [
+      "META-INF/maven/org.bitbucket.b_c/jose4j/pom.properties"
+     ],
+     "manifest_head": "Manifest-Version: 1.0\r\nArchiver-Version: Plexus Archiver\r\nCreated-By: Apache Maven Bundle Plugin\r\nBuilt-By: briancampbell\r\nBuild-Jdk: 17.0.3\r\nAutomatic-Module-Name: org.jose4j\r\nBundle-ManifestVersion: 2\r\nTool: Bnd-1.43.0\r\nBnd-LastModified: 1709750890420\r\nExport-Package: org.jose4j.jws;uses:=\"org.jose4j.jwa,org.slf4j,org.jose4\r\n j.keys,org.jose4j.lang,org.jose4j.jca,org.jose4j.jwk,org.jose4j.jwx,org\r\n .jose4j.mac,javax.crypto,org.jose4j.base64url\";version=\"0.9.6\",org.jose\r\n 4j.jwt;uses:=\"org.jose4j.jwt.consumer,org.jose4j.json,org.jose4j.lang,o\r\n rg.jose4j.base64url\";version=\"0.9.6\",org.jose4j."
+    }
+   }
+  },
+  "org.bouncycastle:bcprov-jdk18on:1.85": {
+   "packaging": "jar",
+   "parent": null,
+   "pom_licenses": [
+    "Bouncy Castle Licence"
+   ],
+   "via": null,
+   "files": {
+    "bcprov-jdk18on-1.85.pom": {
+     "bytes": 1160,
+     "sha256": "a48e978d6b24c183c4832f5c49d71c1f84156b99c6fa9a410aafb373a254be7c",
+     "sha512": "9e935704aaba4f604a11eb67f243f72777d6efe5b16c3c0972c04b6a6dc84b1beb9e76eb1a3ecc4423552f26106e2e7f36a5b5a3f92233aba00b7569f666c3b1",
+     "sha1": "7ddd52c2ac2e86568e71d41a30aac4e7d5dddfe7",
+     "sidecars": {
+      "sha1": {
+       "published": "7ddd52c2ac2e86568e71d41a30aac4e7d5dddfe7",
+       "match": true
+      },
+      "sha256": {
+       "published": "a48e978d6b24c183c4832f5c49d71c1f84156b99c6fa9a410aafb373a254be7c",
+       "match": true
+      },
+      "sha512": {
+       "published": "9e935704aaba4f604a11eb67f243f72777d6efe5b16c3c0972c04b6a6dc84b1beb9e76eb1a3ecc4423552f26106e2e7f36a5b5a3f92233aba00b7569f666c3b1",
+       "match": true
+      },
+      "md5": {
+       "published": "687ebb9ef5a6660d8a80d38e7c9ba9a2",
+       "match": true
+      },
+      "asc_present": true
+     }
+    },
+    "bcprov-jdk18on-1.85.module": null,
+    "bcprov-jdk18on-1.85.jar": {
+     "bytes": 10321819,
+     "sha256": "20af26bf6060bb8005cc2389916812c1e0e998dc48d2ced7131b89461b54cff7",
+     "sha512": "33bbcbc3ad823898bda1fec8cea270fffa4688886b1c351afd93e713f41d29afd71aae9982cbe896d510aa98fece8b9a66c132536625801fe2c1af283a76e2b5",
+     "sha1": "2320b854dffe134687f7266bb22021b779e576d3",
+     "sidecars": {
+      "sha1": {
+       "published": "2320b854dffe134687f7266bb22021b779e576d3",
+       "match": true
+      },
+      "sha256": {
+       "published": "20af26bf6060bb8005cc2389916812c1e0e998dc48d2ced7131b89461b54cff7",
+       "match": true
+      },
+      "sha512": {
+       "published": "33bbcbc3ad823898bda1fec8cea270fffa4688886b1c351afd93e713f41d29afd71aae9982cbe896d510aa98fece8b9a66c132536625801fe2c1af283a76e2b5",
+       "match": true
+      },
+      "md5": {
+       "published": "e564b4f846cd76cca8253c7c9febb44e",
+       "match": true
+      },
+      "asc_present": true
+     },
+     "entries": 7611,
+     "license_files": [
+      "META-INF/LICENSE.md",
+      "org/bouncycastle/LICENSE.class",
+      "org/bouncycastle/asn1/x509/NoticeReference.class"
+     ],
+     "native": [],
+     "embedded_pom_properties": [],
+     "manifest_head": "Manifest-Version: 1.0\r\nBundle-SymbolicName: bcprov\r\nBundle-ManifestVersion: 2\r\nBundle-RequiredExecutionEnvironment: JavaSE-1.8\r\nApplication-Library-Allowable-Codebase: *\r\nImport-Package: java.io;resolution:=optional,java.lang;resolution:=opt\r\n ional,java.lang.ref;resolution:=optional,java.lang.reflect;resolution\r\n :=optional,java.math;resolution:=optional,java.net;resolution:=option\r\n al,java.nio;resolution:=optional,java.nio.channels;resolution:=option\r\n al,java.nio.charset;resolution:=optional,java.security;resolution:=op\r\n tional,java.security.cert;resolution:=optional,java.security.interfa"
+    }
+   }
+  },
+  "org.bouncycastle:bcpkix-jdk18on:1.85": {
+   "packaging": "jar",
+   "parent": null,
+   "pom_licenses": [
+    "Bouncy Castle Licence"
+   ],
+   "via": null,
+   "files": {
+    "bcpkix-jdk18on-1.85.pom": {
+     "bytes": 1522,
+     "sha256": "9b052b0cb85cb7d8bb0956afcc74f31c814f1c67e03498e1ca74f8fe8611d957",
+     "sha512": "9f44c6bdebd36f47e9d6de4e759225de56af58b9a84dc4006640af4a93bbca6ef620ee62bf347874f0def2d687760a2998862bc0680a1fef18643caaeb432c43",
+     "sha1": "15bf7b3be631f335b89b3dca52456e76376cf451",
+     "sidecars": {
+      "sha1": {
+       "published": "15bf7b3be631f335b89b3dca52456e76376cf451",
+       "match": true
+      },
+      "sha256": {
+       "published": "9b052b0cb85cb7d8bb0956afcc74f31c814f1c67e03498e1ca74f8fe8611d957",
+       "match": true
+      },
+      "sha512": {
+       "published": "9f44c6bdebd36f47e9d6de4e759225de56af58b9a84dc4006640af4a93bbca6ef620ee62bf347874f0def2d687760a2998862bc0680a1fef18643caaeb432c43",
+       "match": true
+      },
+      "md5": {
+       "published": "cef6275389d23907431bd820c95a9f36",
+       "match": true
+      },
+      "asc_present": true
+     }
+    },
+    "bcpkix-jdk18on-1.85.module": null,
+    "bcpkix-jdk18on-1.85.jar": {
+     "bytes": 1315409,
+     "sha256": "c9f82b2d4e99c4bbdfccf684e52cc06ea06a0b567bfd0d08f9c5a3f417055996",
+     "sha512": "142ce817145f7348dc97f62872eac931280c578bc61ff4cfcff927d4247ab2bf15e858edf74f2549074c4685ebe8de1d815c42637eacdb65b344b741c2bf1415",
+     "sha1": "b33d047adc6801a1cfc8ffe1634b23b306a670c1",
+     "sidecars": {
+      "sha1": {
+       "published": "b33d047adc6801a1cfc8ffe1634b23b306a670c1",
+       "match": true
+      },
+      "sha256": {
+       "published": "c9f82b2d4e99c4bbdfccf684e52cc06ea06a0b567bfd0d08f9c5a3f417055996",
+       "match": true
+      },
+      "sha512": {
+       "published": "142ce817145f7348dc97f62872eac931280c578bc61ff4cfcff927d4247ab2bf15e858edf74f2549074c4685ebe8de1d815c42637eacdb65b344b741c2bf1415",
+       "match": true
+      },
+      "md5": {
+       "published": "8247f481c8eeef03925277ca33f72255",
+       "match": true
+      },
+      "asc_present": true
+     },
+     "entries": 1100,
+     "license_files": [
+      "META-INF/LICENSE.md"
+     ],
+     "native": [],
+     "embedded_pom_properties": [],
+     "manifest_head": "Manifest-Version: 1.0\r\nBundle-SymbolicName: bcpkix\r\nBundle-ManifestVersion: 2\r\nBundle-RequiredExecutionEnvironment: JavaSE-1.8\r\nApplication-Library-Allowable-Codebase: *\r\nImport-Package: java.io;resolution:=optional,java.lang;resolution:=opt\r\n ional,java.lang.ref;resolution:=optional,java.lang.reflect;resolution\r\n :=optional,java.math;resolution:=optional,java.net;resolution:=option\r\n al,java.nio.charset;resolution:=optional,java.security;resolution:=op\r\n tional,java.security.cert;resolution:=optional,java.security.interfac\r\n es;resolution:=optional,java.security.spec;resolution:=optional,java"
+    }
+   }
+  },
+  "org.bouncycastle:bcutil-jdk18on:1.85": {
+   "packaging": "jar",
+   "parent": null,
+   "pom_licenses": [
+    "Bouncy Castle Licence"
+   ],
+   "via": null,
+   "files": {
+    "bcutil-jdk18on-1.85.pom": {
+     "bytes": 1344,
+     "sha256": "9f1c79a12a7c03d78860e05750dcc44e855e20205c7af7cffbf29a69448d85ea",
+     "sha512": "5b5e9d908abca64c308a23d2621259cc10832d7f0b69f1e4d2717d311d17b9db2ec6de7bd46647fe77dac5c24afbd4c898bd347b4e53a1a89a83e8c01bd4ef55",
+     "sha1": "14a6fd491b4a2d538c23076a4a83879f7afc8088",
+     "sidecars": {
+      "sha1": {
+       "published": "14a6fd491b4a2d538c23076a4a83879f7afc8088",
+       "match": true
+      },
+      "sha256": {
+       "published": "9f1c79a12a7c03d78860e05750dcc44e855e20205c7af7cffbf29a69448d85ea",
+       "match": true
+      },
+      "sha512": {
+       "published": "5b5e9d908abca64c308a23d2621259cc10832d7f0b69f1e4d2717d311d17b9db2ec6de7bd46647fe77dac5c24afbd4c898bd347b4e53a1a89a83e8c01bd4ef55",
+       "match": true
+      },
+      "md5": {
+       "published": "00984293a2342fb01f9782378b0c4821",
+       "match": true
+      },
+      "asc_present": true
+     }
+    },
+    "bcutil-jdk18on-1.85.module": null,
+    "bcutil-jdk18on-1.85.jar": {
+     "bytes": 718812,
+     "sha256": "590f55ed5d68529239898a4a5c4f730b6e37f45d1cfa3fbe51f8485abe32c42d",
+     "sha512": "1cf5011448dfaed7daea587807b9513961bdfd7b41ee5ce42444254dfa3677fdba78fe5191bca4ecf2a51eb3883be59f0374affc1efae3fd1728a64fa094027d",
+     "sha1": "c41082d6f61628919b675970563f5615e4427c9f",
+     "sidecars": {
+      "sha1": {
+       "published": "c41082d6f61628919b675970563f5615e4427c9f",
+       "match": true
+      },
+      "sha256": {
+       "published": "590f55ed5d68529239898a4a5c4f730b6e37f45d1cfa3fbe51f8485abe32c42d",
+       "match": true
+      },
+      "sha512": {
+       "published": "1cf5011448dfaed7daea587807b9513961bdfd7b41ee5ce42444254dfa3677fdba78fe5191bca4ecf2a51eb3883be59f0374affc1efae3fd1728a64fa094027d",
+       "match": true
+      },
+      "md5": {
+       "published": "7c90e18e7e709e7ceb14b2682e5ddcca",
+       "match": true
+      },
+      "asc_present": true
+     },
+     "entries": 678,
+     "license_files": [
+      "META-INF/LICENSE.md"
+     ],
+     "native": [],
+     "embedded_pom_properties": [],
+     "manifest_head": "Manifest-Version: 1.0\r\nBundle-SymbolicName: bcutil\r\nBundle-ManifestVersion: 2\r\nBundle-RequiredExecutionEnvironment: JavaSE-1.8\r\nApplication-Library-Allowable-Codebase: *\r\nImport-Package: java.io;resolution:=optional,java.lang;resolution:=opt\r\n ional,java.lang.reflect;resolution:=optional,java.math;resolution:=op\r\n tional,java.security;resolution:=optional,java.text;resolution:=optio\r\n nal,java.util;resolution:=optional,org.bouncycastle.asn1;version=\"[1.\r\n 85,1.86)\",org.bouncycastle.asn1.nist;version=\"[1.85,1.86)\",org.bouncy\r\n castle.asn1.ocsp;version=\"[1.85,1.86)\",org.bouncycastle.asn1.pkcs;ve"
+    }
+   }
+  },
+  "org.jdom:jdom2:2.0.6.1": {
+   "packaging": "jar",
+   "parent": null,
+   "pom_licenses": [
+    "Similar to Apache License but with the acknowledgment clause removed"
+   ],
+   "via": null,
+   "files": {
+    "jdom2-2.0.6.1.pom": {
+     "bytes": 4600,
+     "sha256": "55795e1018b8ae647b937967cf810a99b08582c2374e7873c128734c8c914bf3",
+     "sha512": "b20863c99ff181eb407352bcfd2adfd9b23ca01e7898bd0fdfe6dd345a2a96f0a20ee0bdb61b06f1b8dd298c3e59d78e501abe2828eb8db5ddea38e314238c5f",
+     "sha1": "172940c5c8e5198f95111b14aa4de1cf99528073",
+     "sidecars": {
+      "sha1": {
+       "published": "172940c5c8e5198f95111b14aa4de1cf99528073",
+       "match": true
+      },
+      "sha256": {
+       "published": "55795e1018b8ae647b937967cf810a99b08582c2374e7873c128734c8c914bf3",
+       "match": true
+      },
+      "sha512": {
+       "published": "b20863c99ff181eb407352bcfd2adfd9b23ca01e7898bd0fdfe6dd345a2a96f0a20ee0bdb61b06f1b8dd298c3e59d78e501abe2828eb8db5ddea38e314238c5f",
+       "match": true
+      },
+      "md5": {
+       "published": "104bf7358f090bf966dc023c245f0762",
+       "match": true
+      },
+      "asc_present": true
+     }
+    },
+    "jdom2-2.0.6.1.module": null,
+    "jdom2-2.0.6.1.jar": {
+     "bytes": 327806,
+     "sha256": "0b20f45e3a0fd8f0d12cdc5316b06776e902b1365db00118876f9175c60f302c",
+     "sha512": "81642db76358fbf131dfe9c2f1d9c280fc23b6bfde6a16a2d36dacc490a1a2af4e0fb4abb5cd78005718bb1d158a42fd6834cd2bfe616ec59625df01951f2478",
+     "sha1": "dc15dff8f701b227ee523eeb7a17f77c10eafe2f",
+     "sidecars": {
+      "sha1": {
+       "published": "dc15dff8f701b227ee523eeb7a17f77c10eafe2f",
+       "match": true
+      },
+      "sha256": {
+       "published": "0b20f45e3a0fd8f0d12cdc5316b06776e902b1365db00118876f9175c60f302c",
+       "match": true
+      },
+      "sha512": {
+       "published": "81642db76358fbf131dfe9c2f1d9c280fc23b6bfde6a16a2d36dacc490a1a2af4e0fb4abb5cd78005718bb1d158a42fd6834cd2bfe616ec59625df01951f2478",
+       "match": true
+      },
+      "md5": {
+       "published": "5be72710c66f3c9ba71f8009e92597d1",
+       "match": true
+      },
+      "asc_present": true
+     },
+     "entries": 227,
+     "license_files": [
+      "META-INF/LICENSE.txt"
+     ],
+     "native": [],
+     "embedded_pom_properties": [],
+     "manifest_head": "Manifest-Version: 1.0\r\nAnt-Version: Apache Ant 1.9.16\r\nCreated-By: 1.8.0_151-b12 (Oracle Corporation)\r\nAutomatic-Module-Name: org.jdom2\r\n\r\nName: org/jdom2/\r\nSpecification-Title: JDOM Classes\r\nSpecification-Version: 2.0.0\r\nSpecification-Vendor: jdom.org\r\nImplementation-Title: org.jdom2\r\nImplementation-Version: 2.x-2021.11.08.17.25\r\nImplementation-Vendor: jdom.org\r\n\r\nName: org/jdom2/input/\r\nSpecification-Title: JDOM Input Classes\r\nSpecification-Version: 2.0.0\r\nSpecification-Vendor: jdom.org2\r\nImplementation-Title: org.jdom2.input\r\nImplementation-Version: 2.x-2021.11.08.17.25\r\nImplementation-Vend"
+    }
+   }
+  },
+  "commons-codec:commons-codec:1.19.0": {
+   "packaging": "jar",
+   "parent": "org.apache.commons:commons-parent:85",
+   "pom_licenses": [
+    "Apache-2.0"
+   ],
+   "via": "org.apache.commons:commons-compress:1.28.0",
+   "files": {
+    "commons-codec-1.19.0.pom": {
+     "bytes": 18008,
+     "sha256": "e0f3269fa23de0c83130c5659f5f9514cc5422c0bcdf45f2eae004a78b9fca34",
+     "sha512": "876e711b79565c3878ea4f0799f5209b53daa08f370e8aac286cced03ef494e2c24c89eb425d68850b5d920c98fe6f813e80c318ee4900dcc9b3271b2860f307",
+     "sha1": "1558aa689bc8fbb7f0214e59e891843e22ec5bf1",
+     "sidecars": {
+      "sha1": {
+       "published": "1558aa689bc8fbb7f0214e59e891843e22ec5bf1",
+       "match": true
+      },
+      "sha256": {
+       "published": null,
+       "match": null
+      },
+      "sha512": {
+       "published": null,
+       "match": null
+      },
+      "md5": {
+       "published": "8cb10c5b88c1ea79d78e7bbff72ae12a",
+       "match": true
+      },
+      "asc_present": true
+     }
+    },
+    "commons-codec-1.19.0.module": null,
+    "commons-codec-1.19.0.jar": {
+     "bytes": 374716,
+     "sha256": "5c3881e4f556855e9c532927ee0c9dfde94cc66760d5805c031a59887070af5f",
+     "sha512": "d98a7a1cfcc08aa9cce4f7778e3f37ecb99da7b1da01944e5fa8faf06fbf9f969f2efb0b416832f419d53085250f711c071f1dac9fa0968483c37034198367fb",
+     "sha1": "8c0dbe3ae883fceda9b50a6c76e745e548073388",
+     "sidecars": {
+      "sha1": {
+       "published": "8c0dbe3ae883fceda9b50a6c76e745e548073388",
+       "match": true
+      },
+      "sha256": {
+       "published": null,
+       "match": null
+      },
+      "sha512": {
+       "published": null,
+       "match": null
+      },
+      "md5": {
+       "published": "e46fa78c69544eb6239c4e8447e72544",
+       "match": true
+      },
+      "asc_present": true
+     },
+     "entries": 263,
+     "license_files": [
+      "META-INF/LICENSE.txt",
+      "META-INF/NOTICE.txt"
+     ],
+     "native": [],
+     "embedded_pom_properties": [
+      "META-INF/maven/commons-codec/commons-codec/pom.properties"
+     ],
+     "manifest_head": "Manifest-Version: 1.0\r\nCreated-By: Apache Maven Bundle Plugin 6.0.0\r\nBuild-Jdk-Spec: 21\r\nSpecification-Title: Apache Commons Codec\r\nSpecification-Version: 1.19\r\nSpecification-Vendor: The Apache Software Foundation\r\nImplementation-Title: Apache Commons Codec\r\nImplementation-Version: 1.19.0\r\nImplementation-Vendor: The Apache Software Foundation\r\nAutomatic-Module-Name: org.apache.commons.codec\r\nBundle-Description: The Apache Commons Codec component contains encoders\r\n  and decoders for     formats such as Base16, Base32, Base64, digest, a\r\n nd Hexadecimal. In addition to these     widely used enc"
+    }
+   }
+  },
+  "commons-io:commons-io:2.20.0": {
+   "packaging": "jar",
+   "parent": "org.apache.commons:commons-parent:85",
+   "pom_licenses": [
+    "Apache-2.0"
+   ],
+   "via": "org.apache.commons:commons-compress:1.28.0",
+   "files": {
+    "commons-io-2.20.0.pom": {
+     "bytes": 20477,
+     "sha256": "bdbdf81072c190ee9a8b181a5c58f5bd917a750fb13a256debbf53f5dbd33a2a",
+     "sha512": "db6bfb4d59e6d05d89ec5cca7ceb89c7493398c8b047046066a19db01cd9b4b32873bcce1be531fea85be4be651b836ad2cb698072b5705fd3491c0743884758",
+     "sha1": "5d26f9d6031e7a0fc1a05f8de8e725688905a3f1",
+     "sidecars": {
+      "sha1": {
+       "published": "5d26f9d6031e7a0fc1a05f8de8e725688905a3f1",
+       "match": true
+      },
+      "sha256": {
+       "published": null,
+       "match": null
+      },
+      "sha512": {
+       "published": null,
+       "match": null
+      },
+      "md5": {
+       "published": "b1bfa91ba22808467fc11ece2b564214",
+       "match": true
+      },
+      "asc_present": true
+     }
+    },
+    "commons-io-2.20.0.module": null,
+    "commons-io-2.20.0.jar": {
+     "bytes": 563971,
+     "sha256": "df90bba0fe3cb586b7f164e78fe8f8f4da3f2dd5c27fa645f888100ccc25dd72",
+     "sha512": "fea08e150473673b0608eaee3ae1cb4e73834039db80d3b758710d6baf3a5840a0878a4eb64739ae9bb21ccc7148c8520fe873616a3f6d5cdb4305deabdd015c",
+     "sha1": "36f3474daec2849c149e877614e7f979b2082cd2",
+     "sidecars": {
+      "sha1": {
+       "published": "36f3474daec2849c149e877614e7f979b2082cd2",
+       "match": true
+      },
+      "sha256": {
+       "published": null,
+       "match": null
+      },
+      "sha512": {
+       "published": null,
+       "match": null
+      },
+      "md5": {
+       "published": "94e7e6b9b5fe82388687b584d3571081",
+       "match": true
+      },
+      "asc_present": true
+     },
+     "entries": 415,
+     "license_files": [
+      "META-INF/LICENSE.txt",
+      "META-INF/NOTICE.txt"
+     ],
+     "native": [],
+     "embedded_pom_properties": [
+      "META-INF/maven/commons-io/commons-io/pom.properties"
+     ],
+     "manifest_head": "Manifest-Version: 1.0\r\nCreated-By: Apache Maven Bundle Plugin 6.0.0\r\nBuild-Jdk-Spec: 21\r\nSpecification-Title: Apache Commons IO\r\nSpecification-Version: 2.20\r\nSpecification-Vendor: The Apache Software Foundation\r\nImplementation-Title: Apache Commons IO\r\nImplementation-Version: 2.20.0\r\nImplementation-Vendor: The Apache Software Foundation\r\nAutomatic-Module-Name: org.apache.commons.io\r\nBundle-Description: The Apache Commons IO library contains utility class\r\n es, stream implementations, file filters,file comparators, endian trans\r\n formation classes, and much more.\r\nBundle-DocURL: https://commons"
+    }
+   }
+  },
+  "org.apache.commons:commons-lang3:3.18.0": {
+   "packaging": "jar",
+   "parent": "org.apache.commons:commons-parent:85",
+   "pom_licenses": [
+    "Apache-2.0"
+   ],
+   "via": "org.apache.commons:commons-compress:1.28.0",
+   "files": {
+    "commons-lang3-3.18.0.pom": {
+     "bytes": 32038,
+     "sha256": "aa254b373b6f6d46bc9dca86331b072a8ab86eb25ea9921fd439618392e98a16",
+     "sha512": "8ea9b9e8605b841f95e856918cd21913e9955e42f5c4c487ba9580252a15163ed910a0aed39720394f2a80813015af99849aa2768254531c1cf75fab22036b00",
+     "sha1": "03e931ac2bbab520654e06ac5ca7088098886bb3",
+     "sidecars": {
+      "sha1": {
+       "published": "03e931ac2bbab520654e06ac5ca7088098886bb3",
+       "match": true
+      },
+      "sha256": {
+       "published": null,
+       "match": null
+      },
+      "sha512": {
+       "published": null,
+       "match": null
+      },
+      "md5": {
+       "published": "b44fa1d7dd38f2921bce9d11c351e83a",
+       "match": true
+      },
+      "asc_present": true
+     }
+    },
+    "commons-lang3-3.18.0.module": null,
+    "commons-lang3-3.18.0.jar": {
+     "bytes": 702952,
+     "sha256": "4eeeae8d20c078abb64b015ec158add383ac581571cddc45c68f0c9ae0230720",
+     "sha512": "c2c9d497fc1be411050f4011b2407764b78aa098eb42925af8a197eabdbc25b507f09fb898805e9bed4815f35236a508ee5b096e36f363df4d407232d50fc832",
+     "sha1": "fb14946f0e39748a6571de0635acbe44e7885491",
+     "sidecars": {
+      "sha1": {
+       "published": "fb14946f0e39748a6571de0635acbe44e7885491",
+       "match": true
+      },
+      "sha256": {
+       "published": null,
+       "match": null
+      },
+      "sha512": {
+       "published": null,
+       "match": null
+      },
+      "md5": {
+       "published": "48b9886957920a4cdb602780ca345087",
+       "match": true
+      },
+      "asc_present": true
+     },
+     "entries": 444,
+     "license_files": [
+      "META-INF/LICENSE.txt",
+      "META-INF/NOTICE.txt"
+     ],
+     "native": [],
+     "embedded_pom_properties": [
+      "META-INF/maven/org.apache.commons/commons-lang3/pom.properties"
+     ],
+     "manifest_head": "Manifest-Version: 1.0\r\nCreated-By: Apache Maven Bundle Plugin 6.0.0\r\nBuild-Jdk-Spec: 21\r\nSpecification-Title: Apache Commons Lang\r\nSpecification-Version: 3.18\r\nSpecification-Vendor: The Apache Software Foundation\r\nImplementation-Title: Apache Commons Lang\r\nImplementation-Version: 3.18.0\r\nImplementation-Vendor: The Apache Software Foundation\r\nAutomatic-Module-Name: org.apache.commons.lang3\r\nBundle-Description: Apache Commons Lang, a package of Java utility class\r\n es for the  classes that are in java.lang's hierarchy, or are considere\r\n d to be so  standard as to justify existence in java.lang."
+    }
+   }
+  },
+  "org.slf4j:slf4j-api:1.7.36": {
+   "packaging": "jar",
+   "parent": "org.slf4j:slf4j-parent:1.7.36",
+   "pom_licenses": [
+    "MIT License"
+   ],
+   "via": "org.bitbucket.b_c:jose4j:0.9.6",
+   "files": {
+    "slf4j-api-1.7.36.pom": {
+     "bytes": 2743,
+     "sha256": "fb046a9c229437928bb11c2d27c8b5d773eb8a25e60cbd253d985210dedc2684",
+     "sha512": "22d22770b09854b13f601c39bdb4e8329c8a47f4399a567ab047c8ecf50e638949cda01913f01896cf6d76bb479fa4d7f8c6046274290ce8b1d014e580338768",
+     "sha1": "749f6995b1d6591a417ca4fd19cdbddabae16fd1",
+     "sidecars": {
+      "sha1": {
+       "published": "749f6995b1d6591a417ca4fd19cdbddabae16fd1",
+       "match": true
+      },
+      "sha256": {
+       "published": null,
+       "match": null
+      },
+      "sha512": {
+       "published": null,
+       "match": null
+      },
+      "md5": {
+       "published": "b83e1639096a8500bf350cfa7d25da28",
+       "match": true
+      },
+      "asc_present": true
+     }
+    },
+    "slf4j-api-1.7.36.module": null,
+    "slf4j-api-1.7.36.jar": {
+     "bytes": 41125,
+     "sha256": "d3ef575e3e4979678dc01bf1dcce51021493b4d11fb7f1be8ad982877c16a1c0",
+     "sha512": "f9b033fc019a44f98b16048da7e2b59edd4a6a527ba60e358f65ab88e0afae03a9340f1b3e8a543d49fa542290f499c5594259affa1ff3e6e7bf3b428d4c610b",
+     "sha1": "6c62681a2f655b49963a5983b8b0950a6120ae14",
+     "sidecars": {
+      "sha1": {
+       "published": "6c62681a2f655b49963a5983b8b0950a6120ae14",
+       "match": true
+      },
+      "sha256": {
+       "published": null,
+       "match": null
+      },
+      "sha512": {
+       "published": null,
+       "match": null
+      },
+      "md5": {
+       "published": "872da51f5de7f3923da4de871d57fd85",
+       "match": true
+      },
+      "asc_present": true
+     },
+     "entries": 46,
+     "license_files": [],
+     "native": [],
+     "embedded_pom_properties": [
+      "META-INF/maven/org.slf4j/slf4j-api/pom.properties"
+     ],
+     "manifest_head": "Manifest-Version: 1.0\r\nBundle-Description: The slf4j API\r\nImplementation-Title: slf4j-api\r\nAutomatic-Module-Name: org.slf4j\r\nBundle-SymbolicName: slf4j.api\r\nImplementation-Version: 1.7.36\r\nBundle-ManifestVersion: 2\r\nBundle-RequiredExecutionEnvironment: J2SE-1.5\r\nBundle-Vendor: SLF4J.ORG\r\nImport-Package: org.slf4j.impl;version=1.6.0\r\nExport-Package: org.slf4j;version=1.7.36, org.slf4j.spi;version=1.7.36\r\n , org.slf4j.helpers;version=1.7.36, org.slf4j.event;version=1.7.36\r\nBundle-Version: 1.7.36\r\nBundle-Name: slf4j-api\r\nX-Compile-Target-JDK: 1.5\r\nX-Compile-Source-JDK: 1.5\r\nBuild-Jdk-Spec: 1.8\r\nC"
+    }
+   }
+  }
+ },
+ "parents": {
+  "io.netty:netty-parent:4.1.139.Final": {
+   "sha256": "317741e835ed1a1abdba936f40f21795d2d404112a3d1616a507b37219949477",
+   "bytes": 108887,
+   "sidecars": {
+    "sha1": {
+     "published": "c1cd08a6d72a046ba146bcfb48871d757b6473b3",
+     "match": true
+    },
+    "sha256": {
+     "published": "317741e835ed1a1abdba936f40f21795d2d404112a3d1616a507b37219949477",
+     "match": true
+    },
+    "sha512": {
+     "published": "c743d21a35ac4c02a918c380454e8e06832a40fc8f6a22168d73e203f62a2493b80e9e341ed4e9235bdfc2a2661e476821963af4eb46b6b425ef8c646d8f1900",
+     "match": true
+    },
+    "md5": {
+     "published": "cb2207ed252d62e099b2fbc31544ff6d",
+     "match": true
+    },
+    "asc_present": true
+   }
+  },
+  "org.apache.commons:commons-parent:85": {
+   "sha256": "d189ff2c0027e96bb65d31e6f227ed2af966169b36af1e973dd5ba08926dc7b5",
+   "bytes": 78337,
+   "sidecars": {
+    "sha1": {
+     "published": "cc8d9a1242954f0245843e625e2a7497a2f95037",
+     "match": true
+    },
+    "sha256": {
+     "published": null,
+     "match": null
+    },
+    "sha512": {
+     "published": null,
+     "match": null
+    },
+    "md5": {
+     "published": "7fadfd39b178cc061a280d6445988d96",
+     "match": true
+    },
+    "asc_present": true
+   }
+  },
+  "org.apache:apache:35": {
+   "sha256": "ea297dcd114136e8b8e8b630230d52a76c2fc69f6c5db25d672b1857000728b8",
+   "bytes": 24249,
+   "sidecars": {
+    "sha1": {
+     "published": "0a20c027145b2ee59e77ef7dee4881d4ab0a8e07",
+     "match": true
+    },
+    "sha256": {
+     "published": null,
+     "match": null
+    },
+    "sha512": {
+     "published": null,
+     "match": null
+    },
+    "md5": {
+     "published": "706c1dd6d8a87a9c55c3a518e704340f",
+     "match": true
+    },
+    "asc_present": true
+   }
+  },
+  "org.slf4j:slf4j-parent:1.7.36": {
+   "sha256": "bb388d37fbcdd3cde64c3cede21838693218dc451f04040c5df360a78ed7e812",
+   "bytes": 14093,
+   "sidecars": {
+    "sha1": {
+     "published": "5ee2b2ff107aa21d6e6c8b1d38ab28d02b5bf62e",
+     "match": true
+    },
+    "sha256": {
+     "published": null,
+     "match": null
+    },
+    "sha512": {
+     "published": null,
+     "match": null
+    },
+    "md5": {
+     "published": "e8b65d390d53a971e263e3b829824cb6",
+     "match": true
+    },
+    "asc_present": true
+   }
+  },
+  "org.sonatype.oss:oss-parent:9": {
+   "sha256": "fb40265f982548212ff82e362e59732b2187ec6f0d80182885c14ef1f982827a",
+   "bytes": 6569,
+   "sidecars": {
+    "sha1": {
+     "published": "e5cdc4d23b86d79c436f16fed20853284e868f65",
+     "match": true
+    },
+    "sha256": {
+     "published": null,
+     "match": null
+    },
+    "sha512": {
+     "published": null,
+     "match": null
+    },
+    "md5": {
+     "published": "c2944a5a8a424e93d315ab18c994b4ee",
+     "match": true
+    },
+    "asc_present": true
+   }
+  }
+ },
+ "import_boms": {
+  "org.junit:junit-bom:5.13.1": {
+   "junit-bom-5.13.1.pom": {
+    "bytes": 5649,
+    "sha256": "fa68451ea830572ed43ffe51d75b6a05f7a5e665a602a51f49d6be02063a65f3",
+    "sha512": "e1c4acc68f7114cd501754d07e51a9345bc1106623ea9e38cd6d40b1886cea7f8f6fa227da9d71da608b6691ef1f9d75d11253567350fbb4a949770a1cb7023e",
+    "gradle_metadata_marker": true,
+    "sidecars": {
+     "sha1": {
+      "published": "4a2b7185be9155ef83499f1da0ef2f15e0f4fffd",
+      "match": true
+     },
+     "sha256": {
+      "published": "fa68451ea830572ed43ffe51d75b6a05f7a5e665a602a51f49d6be02063a65f3",
+      "match": true
+     },
+     "sha512": {
+      "published": "e1c4acc68f7114cd501754d07e51a9345bc1106623ea9e38cd6d40b1886cea7f8f6fa227da9d71da608b6691ef1f9d75d11253567350fbb4a949770a1cb7023e",
+      "match": true
+     },
+     "md5": {
+      "published": "2abd6856b7c41e318e793dfb52f4df68",
+      "match": true
+     },
+     "asc_present": true
+    }
+   },
+   "junit-bom-5.13.1.module": {
+    "bytes": 6994,
+    "sha256": "33c07ab9724790a6e5859ba07d69117ac530439724545a81c4179e3272c75de8",
+    "sha512": "b3e821345032cb9182822539189ed51eb9cdddc52c90e0806d00befaf3dbe9d704c081c1a3db03776c2b622575a5d9abe68d778852ad94707429698611bbb6a2",
+    "gradle_metadata_marker": null,
+    "sidecars": {
+     "sha1": {
+      "published": "b3c6e34138c8ee0befa60784860167bc95701ab8",
+      "match": true
+     },
+     "sha256": {
+      "published": "33c07ab9724790a6e5859ba07d69117ac530439724545a81c4179e3272c75de8",
+      "match": true
+     },
+     "sha512": {
+      "published": "b3e821345032cb9182822539189ed51eb9cdddc52c90e0806d00befaf3dbe9d704c081c1a3db03776c2b622575a5d9abe68d778852ad94707429698611bbb6a2",
+      "match": true
+     },
+     "md5": {
+      "published": "f91c40c020f29369b9cf30e74a035efc",
+      "match": true
+     },
+     "asc_present": true
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,45 @@
+{
+  "includedBuild:compileClasspath": {
+    "requested_jvm_version": "17",
+    "selected_variant_jvm_versions": {
+      "8": 6,
+      "11": 5,
+      "17": 1
+    },
+    "max_selected": 17,
+    "components_above_11": [
+      "project :included-build-classpaths"
+    ]
+  },
+  "includedBuild:runtimeClasspath": {
+    "requested_jvm_version": "17",
+    "selected_variant_jvm_versions": {
+      "7": 2,
+      "8": 9,
+      "11": 9,
+      "17": 1
+    },
+    "max_selected": 17,
+    "components_above_11": [
+      "project :included-build-classpaths"
+    ]
+  },
+  "kotlinCompilerClasspath": {
+    "requested_jvm_version": null,
+    "selected_variant_jvm_versions": {},
+    "max_selected": null,
+    "components_above_11": []
+  },
+  "kotlinBuildToolsApiClasspath": {
+    "requested_jvm_version": null,
+    "selected_variant_jvm_versions": {},
+    "max_selected": null,
+    "components_above_11": []
+  },
+  "kotlinCompilerPluginClasspathMain": {
+    "requested_jvm_version": null,
+    "selected_variant_jvm_versions": {},
+    "max_selected": null,
+    "components_above_11": []
+  }
+}

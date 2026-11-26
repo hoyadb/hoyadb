@@ -1,0 +1,956 @@
+{
+  "scope": "Notices for the local unpublished dev.hoyadb:hoyadb-android:0.1.0 AAR: exact active native Rust graph (linked, build-only and C-source roles), SQLCipher/SQLite/LibTomCrypt C provider and approved Kotlin runtime.",
+  "project_distribution_license": "MIT",
+  "lock_sha256": {
+    "Cargo.lock": "a7385544aa00356ebdc3e1fad3e95ca61722d1a85333f19bae18049cd77ac507",
+    "crates/hoyadb-native/Cargo.lock": "a96a5481be73dc5ab125b4cec4b441bedd256f7a1d834694073cba5f342cb951"
+  },
+  "not_enumerated": [],
+  "packages": [
+    {
+      "name": "bitflags",
+      "version": "2.13.2",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "3ded4057c258ba199e2d26386d3af3780957ecaee6c4ef4041c6b4b8b97c0b06",
+      "license": "MIT OR Apache-2.0",
+      "role": "linked_rust",
+      "files": [
+        {
+          "file": "rust/bitflags-2.13.2/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "origin": {
+            "kind": "js_corpus",
+            "file": "bitflags-2.13.2/LICENSE-APACHE"
+          }
+        },
+        {
+          "file": "rust/bitflags-2.13.2/LICENSE-MIT",
+          "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb",
+          "origin": {
+            "kind": "js_corpus",
+            "file": "bitflags-2.13.2/LICENSE-MIT"
+          }
+        }
+      ]
+    },
+    {
+      "name": "cc",
+      "version": "1.10.0",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "86e055fa6e3e40ad6187ba25b6855eeb635d5271f8e0f0e1e9a5826b8d75bea0",
+      "license": "MIT OR Apache-2.0",
+      "role": "build_tool",
+      "files": [
+        {
+          "file": "rust/cc-1.10.0/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "origin": {
+            "kind": "js_corpus",
+            "file": "cc-1.10.0/LICENSE-APACHE"
+          }
+        },
+        {
+          "file": "rust/cc-1.10.0/LICENSE-MIT",
+          "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+          "origin": {
+            "kind": "js_corpus",
+            "file": "cc-1.10.0/LICENSE-MIT"
+          }
+        }
+      ]
+    },
+    {
+      "name": "fallible-iterator",
+      "version": "0.3.0",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "2acce4a10f12dc2fb14a218589d4f1f62ef011b2d0cc4b3cb1bba8e94da14649",
+      "license": "MIT/Apache-2.0",
+      "role": "linked_rust",
+      "files": [
+        {
+          "file": "rust/fallible-iterator-0.3.0/LICENSE-APACHE",
+          "sha256": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08",
+          "origin": {
+            "kind": "js_corpus",
+            "file": "fallible-iterator-0.3.0/LICENSE-APACHE"
+          }
+        },
+        {
+          "file": "rust/fallible-iterator-0.3.0/LICENSE-MIT",
+          "sha256": "0816e154b159ba255c563f7c8c7df5bbb8cc5fc96f5ab8cf9f4743b4f41fe7eb",
+          "origin": {
+            "kind": "js_corpus",
+            "file": "fallible-iterator-0.3.0/LICENSE-MIT"
+          }
+        }
+      ]
+    },
+    {
+      "name": "fallible-streaming-iterator",
+      "version": "0.1.9",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "7360491ce676a36bf9bb3c56c1aa791658183a54d2744120f27285738d90465a",
+      "license": "MIT/Apache-2.0",
+      "role": "linked_rust",
+      "files": [
+        {
+          "file": "rust/fallible-streaming-iterator-0.1.9/LICENSE-APACHE",
+          "sha256": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08",
+          "origin": {
+            "kind": "js_corpus",
+            "file": "fallible-streaming-iterator-0.1.9/LICENSE-APACHE"
+          }
+        },
+        {
+          "file": "rust/fallible-streaming-iterator-0.1.9/LICENSE-MIT",
+          "sha256": "8dcec5569a9be5b0e086c80faed6f1aefa670af0ec29cecc2f714303096887e0",
+          "origin": {
+            "kind": "js_corpus",
+            "file": "fallible-streaming-iterator-0.1.9/LICENSE-MIT"
+          }
+        }
+      ]
+    },
+    {
+      "name": "find-msvc-tools",
+      "version": "0.1.15",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "1c66915cc5391097de7a2b0b972e8505aa33c0df401fd3a6811dbdb32881ba48",
+      "license": "MIT OR Apache-2.0",
+      "role": "build_tool",
+      "files": [
+        {
+          "file": "rust/find-msvc-tools-0.1.15/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "origin": {
+            "kind": "js_corpus",
+            "file": "find-msvc-tools-0.1.15/LICENSE-APACHE"
+          }
+        },
+        {
+          "file": "rust/find-msvc-tools-0.1.15/LICENSE-MIT",
+          "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+          "origin": {
+            "kind": "js_corpus",
+            "file": "find-msvc-tools-0.1.15/LICENSE-MIT"
+          }
+        }
+      ]
+    },
+    {
+      "name": "libsqlite3-sys",
+      "version": "0.38.1",
+      "source": "git+https://github.com/rusqlite/rusqlite?rev=661107f6eb5d7477c61be1221744de3ad96c53e7#661107f6eb5d7477c61be1221744de3ad96c53e7",
+      "checksum": null,
+      "license": "MIT",
+      "role": "linked_rust",
+      "files": [
+        {
+          "file": "rust/libsqlite3-sys-0.38.1/LICENSE",
+          "sha256": "c10c1f27337546471e5f7e4e97fdd398b35b9d4e126115dcd22de8d8e65abf6f",
+          "origin": {
+            "kind": "js_corpus",
+            "file": "libsqlite3-sys-0.38.1/LICENSE"
+          }
+        }
+      ]
+    },
+    {
+      "name": "pkg-config",
+      "version": "0.3.34",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "f6b464fbc74e149a392436b17d523f769e057cb6877f6a5c4618bc6f11800548",
+      "license": "MIT OR Apache-2.0",
+      "role": "build_tool",
+      "files": [
+        {
+          "file": "rust/pkg-config-0.3.34/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "origin": {
+            "kind": "js_corpus",
+            "file": "pkg-config-0.3.34/LICENSE-APACHE"
+          }
+        },
+        {
+          "file": "rust/pkg-config-0.3.34/LICENSE-MIT",
+          "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+          "origin": {
+            "kind": "js_corpus",
+            "file": "pkg-config-0.3.34/LICENSE-MIT"
+          }
+        }
+      ]
+    },
+    {
+      "name": "rusqlite",
+      "version": "0.40.1",
+      "source": "git+https://github.com/rusqlite/rusqlite?rev=661107f6eb5d7477c61be1221744de3ad96c53e7#661107f6eb5d7477c61be1221744de3ad96c53e7",
+      "checksum": null,
+      "license": "MIT",
+      "role": "linked_rust",
+      "files": [
+        {
+          "file": "rust/rusqlite-0.40.1/LICENSE",
+          "sha256": "c10c1f27337546471e5f7e4e97fdd398b35b9d4e126115dcd22de8d8e65abf6f",
+          "origin": {
+            "kind": "js_corpus",
+            "file": "rusqlite-0.40.1/LICENSE"
+          }
+        }
+      ]
+    },
+    {
+      "name": "shlex",
+      "version": "2.0.1",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "f8fadd59c855ef2080decdef8ff161eb6661b86933c9d82e5ba29dc602a55aba",
+      "license": "MIT OR Apache-2.0",
+      "role": "build_tool",
+      "files": [
+        {
+          "file": "rust/shlex-2.0.1/LICENSE-APACHE",
+          "sha256": "553fffcd9b1cb158bc3e9edc35da85ca5c3b3d7d2e61c883ebcfa8a65814b583",
+          "origin": {
+            "kind": "js_corpus",
+            "file": "shlex-2.0.1/LICENSE-APACHE"
+          }
+        },
+        {
+          "file": "rust/shlex-2.0.1/LICENSE-MIT",
+          "sha256": "4455bf75a91154108304cb283e0fea9948c14f13e20d60887cf2552449dea3b1",
+          "origin": {
+            "kind": "js_corpus",
+            "file": "shlex-2.0.1/LICENSE-MIT"
+          }
+        }
+      ]
+    },
+    {
+      "name": "smallvec",
+      "version": "1.16.4",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "d0d5d4b1981b8bbbb7aed204cae5726d683d5d6ac7e74ec54122ea28f315e7c8",
+      "license": "MIT OR Apache-2.0",
+      "role": "linked_rust",
+      "files": [
+        {
+          "file": "rust/smallvec-1.16.4/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "origin": {
+            "kind": "js_corpus",
+            "file": "smallvec-1.16.4/LICENSE-APACHE"
+          }
+        },
+        {
+          "file": "rust/smallvec-1.16.4/LICENSE-MIT",
+          "sha256": "0b28172679e0009b655da42797c03fd163a3379d5cfa67ba1f1655e974a2a1a9",
+          "origin": {
+            "kind": "js_corpus",
+            "file": "smallvec-1.16.4/LICENSE-MIT"
+          }
+        }
+      ]
+    },
+    {
+      "name": "sqlcipher-src",
+      "version": "419.0.6+sqlcipher-4.19.0-sqlite-3.53.4-libtomcrypt-1.18.2",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "ab732d48ebf2a1449e94d071b26544f99845834c75c3c210e927ace097b49aa4",
+      "license": "MIT AND BSD-3-Clause AND blessing AND WTFPL",
+      "role": "build_native_c_source",
+      "files": [
+        {
+          "file": "rust/sqlcipher-src-419.0.6+sqlcipher-4.19.0-sqlite-3.53.4-libtomcrypt-1.18.2/LICENSE",
+          "sha256": "413f82e0f4f8191a8624a7b7b2c9809466f7f3d930ad52a74ad29f2dd907881d",
+          "origin": {
+            "kind": "js_corpus",
+            "file": "sqlcipher-src-419.0.6+sqlcipher-4.19.0-sqlite-3.53.4-libtomcrypt-1.18.2/LICENSE"
+          }
+        }
+      ]
+    },
+    {
+      "name": "vcpkg",
+      "version": "0.2.15",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "accd4ea62f7bb7a82fe23066fb0957d48ef677f6eeb8215f372f52e48bb32426",
+      "license": "MIT/Apache-2.0",
+      "role": "build_tool",
+      "files": [
+        {
+          "file": "rust/vcpkg-0.2.15/LICENSE-APACHE",
+          "sha256": "60c93a31f490375aadf64098b75f10715010379541021e00261045d7800611d3",
+          "origin": {
+            "kind": "js_corpus",
+            "file": "vcpkg-0.2.15/LICENSE-APACHE"
+          }
+        },
+        {
+          "file": "rust/vcpkg-0.2.15/LICENSE-MIT",
+          "sha256": "016d20f335060a70e79d9fcf8dfaa6201114d65d592211f4bdfb8ae9ca2bc1dc",
+          "origin": {
+            "kind": "js_corpus",
+            "file": "vcpkg-0.2.15/LICENSE-MIT"
+          }
+        }
+      ]
+    },
+    {
+      "name": "zeroize",
+      "version": "1.9.1",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "e13084392c5e4bc371903e2935a5eaeed24905a7511356b883835e18a78f6879",
+      "license": "Apache-2.0 OR MIT",
+      "role": "linked_rust",
+      "files": [
+        {
+          "file": "rust/zeroize-1.9.1/LICENSE-APACHE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "origin": {
+            "kind": "js_corpus",
+            "file": "zeroize-1.9.1/LICENSE-APACHE"
+          }
+        },
+        {
+          "file": "rust/zeroize-1.9.1/LICENSE-MIT",
+          "sha256": "8c7516d4b27b1e495be5e38b612298b63de48d05f49cdac94f70f3cd70f8864b",
+          "origin": {
+            "kind": "js_corpus",
+            "file": "zeroize-1.9.1/LICENSE-MIT"
+          }
+        }
+      ]
+    },
+    {
+      "name": "SQLCipher",
+      "version": "4.19.0",
+      "license": "BSD-3-Clause",
+      "role": "linked_native_c",
+      "via": "sqlcipher-src",
+      "files": [
+        {
+          "file": "native/sqlcipher-4.19.0/LICENSE-sqlcipher",
+          "sha256": "2a2826f6acf46fa650730cf42cbb22a642be33a7ef119c9c4f4bf6daf3bef48e",
+          "origin": {
+            "kind": "crate_entry",
+            "crate": "sqlcipher-src",
+            "entry": "sqlcipher/LICENSE-sqlcipher"
+          }
+        }
+      ]
+    },
+    {
+      "name": "SQLite",
+      "version": "3.53.4",
+      "license": "blessing",
+      "role": "linked_native_c",
+      "via": "sqlcipher-src",
+      "files": [
+        {
+          "file": "native/sqlite-3.53.4/LICENSE-sqlite",
+          "sha256": "85806d613cfda5901f848b3b5b4b04396c8c64e89c97c0af3706c42b0c44bb47",
+          "origin": {
+            "kind": "crate_entry_prefix",
+            "crate": "sqlcipher-src",
+            "entry": "sqlcipher/sqlite3.h"
+          }
+        }
+      ]
+    },
+    {
+      "name": "LibTomCrypt",
+      "version": "1.18.2",
+      "license": "public domain OR WTFPL",
+      "role": "linked_native_c",
+      "via": "sqlcipher-src",
+      "files": [
+        {
+          "file": "native/libtomcrypt-1.18.2/LICENSE-libtomcrypt",
+          "sha256": "8f196cb13afd271f5e267fd29543fc454596382ad580e7592709492843996ac8",
+          "origin": {
+            "kind": "crate_entry",
+            "crate": "sqlcipher-src",
+            "entry": "sqlcipher/LICENSE-libtomcrypt"
+          }
+        }
+      ]
+    },
+    {
+      "name": "kotlin-stdlib",
+      "version": "2.1.20",
+      "coordinate": "org.jetbrains.kotlin:kotlin-stdlib:2.1.20",
+      "license": "Apache-2.0",
+      "role": "kotlin_runtime",
+      "jar_sha256": "1bcc74e8ce84e2c25eaafde10f1248349cce3062b6e36978cbeec610db1e930a",
+      "pom": "target/phase-seven-dependencies/native-source-review/kotlin-stdlib-2.1.20.pom",
+      "pom_sha256": "6750e1799ee502077dae5c3d599796f667606f60d35e95cb790448dc7912b40b",
+      "files": [
+        {
+          "file": "kotlin/kotlin-stdlib-2.1.20/LICENSE.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "origin": {
+            "kind": "upstream_url",
+            "url": "https://raw.githubusercontent.com/JetBrains/kotlin/v2.1.20/license/LICENSE.txt"
+          }
+        },
+        {
+          "file": "kotlin/kotlin-stdlib-2.1.20/NOTICE.txt",
+          "sha256": "0b09a83d3ef7795c7dec65e815866597c066c53898f2852a76599b8f5552941a",
+          "origin": {
+            "kind": "upstream_url",
+            "url": "https://raw.githubusercontent.com/JetBrains/kotlin/v2.1.20/license/NOTICE.txt"
+          }
+        },
+        {
+          "file": "kotlin/kotlin-stdlib-2.1.20/third_party/gwt_license.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "origin": {
+            "kind": "upstream_url",
+            "url": "https://raw.githubusercontent.com/JetBrains/kotlin/v2.1.20/license/third_party/gwt_license.txt"
+          }
+        },
+        {
+          "file": "kotlin/kotlin-stdlib-2.1.20/third_party/threetenbp_license.txt",
+          "sha256": "d1bc53b493a3ab387b42717ed5c4b1976a5048996f81154278100bff86d39331",
+          "origin": {
+            "kind": "upstream_url",
+            "url": "https://raw.githubusercontent.com/JetBrains/kotlin/v2.1.20/license/third_party/threetenbp_license.txt"
+          }
+        },
+        {
+          "file": "kotlin/kotlin-stdlib-2.1.20/third_party/guava_license.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "origin": {
+            "kind": "upstream_url",
+            "url": "https://raw.githubusercontent.com/JetBrains/kotlin/v2.1.20/license/third_party/guava_license.txt"
+          }
+        },
+        {
+          "file": "kotlin/kotlin-stdlib-2.1.20/third_party/boost_LICENSE.txt",
+          "sha256": "8d8291caf1cee26d23acf3eb67c9f9a2d58f1c681b16a4fbe8cbfb9e3c0b5a9b",
+          "origin": {
+            "kind": "upstream_url",
+            "url": "https://raw.githubusercontent.com/JetBrains/kotlin/v2.1.20/license/third_party/boost_LICENSE.txt"
+          }
+        }
+      ]
+    },
+    {
+      "name": "annotations",
+      "version": "13.0",
+      "coordinate": "org.jetbrains:annotations:13.0",
+      "license": "Apache-2.0",
+      "role": "kotlin_runtime",
+      "jar_sha256": "ace2a10dc8e2d5fd34925ecac03e4988b2c0f851650c94b8cef49ba1bd111478",
+      "pom": "target/phase-seven-dependencies/native-source-review/gradle-user-home/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/fa7d3d07cc80547e2d15bf4839d3267c637c642f/annotations-13.0.pom",
+      "pom_sha256": "965aeb2bedff369819bdde1bf7a0b3b89b8247dd69c88b86375d76163bb8c397",
+      "files": [
+        {
+          "file": "kotlin/annotations-13.0/LICENSE-2.0.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "origin": {
+            "kind": "upstream_url",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ]
+    },
+    {
+      "name": "rust-std",
+      "version": "1.98.1",
+      "license": "aggregate toolchain notice (see texts)",
+      "role": "toolchain_aggregate",
+      "description": "Rust 1.98.1 standard library sysroot crates linked via the staticlib",
+      "verified_link_inputs": [
+        {
+          "abi": "x86_64",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-linux-android/lib/liballoc-2b6541c412e67024.rlib",
+          "sha256": "fdb5ce15f196fca7cf667cf8a78d5d14db8c5a34294fdc71a4b45c63e3d551d1"
+        },
+        {
+          "abi": "x86_64",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-linux-android/lib/libcfg_if-e6a31e18df17e8c0.rlib",
+          "sha256": "f5e56ae215bc66bf1f1415c0ae42a13cb2b6fc31c932082470b4f26bfeae2f1f"
+        },
+        {
+          "abi": "x86_64",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-linux-android/lib/libcompiler_builtins-c11961ff1f22ca5b.rlib",
+          "sha256": "433f71a302dc877dfbcbfe21134b358159332a6adc9df5184d09d30a72703d0a"
+        },
+        {
+          "abi": "x86_64",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-linux-android/lib/libcore-031f8bcee104d276.rlib",
+          "sha256": "c3c73cb8a1c380cddd20c68a10308a0e8d01f6dd9017b689938192bcf0c650cc"
+        },
+        {
+          "abi": "x86_64",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-linux-android/lib/libgimli-ef8eb10394d1aae4.rlib",
+          "sha256": "ba3b9ce5ff9f5043c55fe744f5d7b62d9341eac10f1a71cbcd2b4733a21b5335"
+        },
+        {
+          "abi": "x86_64",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-linux-android/lib/libhashbrown-ba81ba5fff6a13c5.rlib",
+          "sha256": "c06d3e5293ed7916a6029a8b9f6480ffaf67436eb3d9db7fd894ccb388f1f2c8"
+        },
+        {
+          "abi": "x86_64",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-linux-android/lib/liblibc-e12042dd98388257.rlib",
+          "sha256": "a6ec49771c5eb316bcc6d1e0aee991f89430f177fb7c2409a92fce147c08b5c4"
+        },
+        {
+          "abi": "x86_64",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-linux-android/lib/libmemchr-4f8fe02c0e72ce54.rlib",
+          "sha256": "965e20c856597668e10ffeccad0799b4095099640f68b7341321cb3287f05c19"
+        },
+        {
+          "abi": "x86_64",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-linux-android/lib/libminiz_oxide-f0b8a7b78bbf9ebb.rlib",
+          "sha256": "e846aa018c2985df38f9b0342d4aad2226869d756fefda2cd114bf679954ea85"
+        },
+        {
+          "abi": "x86_64",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-linux-android/lib/libobject-12629fd2acbc0497.rlib",
+          "sha256": "6a409b583b23b3eb9dc4040a8c8189ed8905fcc3a7c420585880aa4339dc2a59"
+        },
+        {
+          "abi": "x86_64",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-linux-android/lib/libpanic_unwind-0d9eea3f9629aecd.rlib",
+          "sha256": "9ca51ece5f4ba26f88418bc99c4b76e4db81072afde9c843dc965e4b0788748a"
+        },
+        {
+          "abi": "x86_64",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-linux-android/lib/librustc_demangle-1f6b6e7d722b3033.rlib",
+          "sha256": "0d0f2efe25989385ac2674b4f7047f9d4c691bc280c30aaba1e099edced114f0"
+        },
+        {
+          "abi": "x86_64",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-linux-android/lib/librustc_std_workspace_alloc-a9892e8b52f8a215.rlib",
+          "sha256": "a1436ee00902603828cf06913f1051453b81c48c4d6f6cd2be7d67819382ff62"
+        },
+        {
+          "abi": "x86_64",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-linux-android/lib/librustc_std_workspace_core-ef4bac770ba3a669.rlib",
+          "sha256": "b3ae1fa9acffa0e48943a89882d765caf3bc8220a4141853958037efc2a95440"
+        },
+        {
+          "abi": "x86_64",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-linux-android/lib/libstd-7fb7d93196c61333.rlib",
+          "sha256": "042405b2e01b2b2be9442e7d17d297384bfe95dec5bfcf58ff73885b624ca3cc"
+        },
+        {
+          "abi": "x86_64",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-linux-android/lib/libstd_detect-47b12a8c8e578c50.rlib",
+          "sha256": "cb7a7f92375ac80726241eb31c2d8a30bcc901b7f4f09402af5e9df01e6d6826"
+        },
+        {
+          "abi": "x86_64",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/x86_64-linux-android/lib/libunwind-34c1f103c0f05a9c.rlib",
+          "sha256": "2415b45ecb261aa6ce265472b09e818d51ce86b486cdee3bfba345f4a3c6ca50"
+        },
+        {
+          "abi": "arm64-v8a",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-linux-android/lib/liballoc-e873bd788329a382.rlib",
+          "sha256": "60d437ebdf637848a8a043530197c77db6a3ee1de80bf14255e776af57eec091"
+        },
+        {
+          "abi": "arm64-v8a",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-linux-android/lib/libcfg_if-7940436b5bc09512.rlib",
+          "sha256": "836264bc60155c741b0e85cfde55cc5993b81cd188e85a6b7632e436acda5642"
+        },
+        {
+          "abi": "arm64-v8a",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-linux-android/lib/libcompiler_builtins-4b6ddcdc38eb70ec.rlib",
+          "sha256": "88747bc1416de3386e063b9f89f2d6252d8622fc7ba4efc02a278529f872043d"
+        },
+        {
+          "abi": "arm64-v8a",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-linux-android/lib/libcore-1bf91c199a1ce463.rlib",
+          "sha256": "f047ade5ec91aa47b4de1dad7ab1c67d208423ec88138bf2b98b2e9e9fefa3fd"
+        },
+        {
+          "abi": "arm64-v8a",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-linux-android/lib/libgimli-efcbe5df0664cf0f.rlib",
+          "sha256": "77397e72ea167dc75c0f823cbdfefb3429b3aaa7970b37bc633dfa575b8433c9"
+        },
+        {
+          "abi": "arm64-v8a",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-linux-android/lib/libhashbrown-f806186a866b8a78.rlib",
+          "sha256": "aff83201288d3babf9d1279f50914f8ff9e390c7b66b44a4ba13965d9aa4c316"
+        },
+        {
+          "abi": "arm64-v8a",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-linux-android/lib/liblibc-9362df6966735ad3.rlib",
+          "sha256": "a5ba0e72bbf59612e6704c14dc1072c0a762673750fc94243b6e0729e4e76253"
+        },
+        {
+          "abi": "arm64-v8a",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-linux-android/lib/libmemchr-f32bf962b0c2a4bc.rlib",
+          "sha256": "c825ccb0acb9ac4e360585c81e17e12d70b7b72dc1512e336a83561953ffcf42"
+        },
+        {
+          "abi": "arm64-v8a",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-linux-android/lib/libminiz_oxide-2136f8b807dbd294.rlib",
+          "sha256": "7ef152d0635ea4e94c9000e8bb8c25065c58679b343edd0ea763e561ced591ed"
+        },
+        {
+          "abi": "arm64-v8a",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-linux-android/lib/libobject-6e12209a49bb3b1a.rlib",
+          "sha256": "6bdfc28f3fed056b98c94ac1f7eff5486972e303701d0f1803cb78c294a5de80"
+        },
+        {
+          "abi": "arm64-v8a",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-linux-android/lib/libpanic_unwind-88828a024024d89b.rlib",
+          "sha256": "0b8df966d43724b8aee7d60e3e2772898c92c1d2c2199a80edfd9eb919b6d5c9"
+        },
+        {
+          "abi": "arm64-v8a",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-linux-android/lib/librustc_demangle-6c7f9e897ff52ab9.rlib",
+          "sha256": "15a8dac4eeb86d56bc9578d57c3cdc69d8e2fdf94bba52bcbb911d20673bded9"
+        },
+        {
+          "abi": "arm64-v8a",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-linux-android/lib/librustc_std_workspace_alloc-65ded7c6f6fa1bb7.rlib",
+          "sha256": "ef9c0eae79cd3fb4826792a7cc1e71f5e0f2718ff935c3b6e780ef55781cfa06"
+        },
+        {
+          "abi": "arm64-v8a",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-linux-android/lib/librustc_std_workspace_core-1c69fb9e2b8b7ea9.rlib",
+          "sha256": "3a44921eaac96aa0ec91c9607789ead72f2f29a33d63ad8501b5aac7c4555a38"
+        },
+        {
+          "abi": "arm64-v8a",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-linux-android/lib/libstd-69632c570ff376ae.rlib",
+          "sha256": "112c5c30248fb02bbd4ee1fdc73964f2bc3d81d63f7fcbbcb24c17afd0d63e2c"
+        },
+        {
+          "abi": "arm64-v8a",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-linux-android/lib/libstd_detect-1950ba6e9d9c4e17.rlib",
+          "sha256": "c7347c818cb595b12e2ef39983816574b12817f7b96ff415044ebf15044364af"
+        },
+        {
+          "abi": "arm64-v8a",
+          "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/lib/rustlib/aarch64-linux-android/lib/libunwind-f2266549852b5106.rlib",
+          "sha256": "4c93c289cfb3a89bb4e74de40d00bc2faff547236aa2eb513ebf198cdfc5ab96"
+        },
+        {
+          "abi": "armeabi-v7a",
+          "path": "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/armv7-linux-androideabi/lib/libaddr2line-254df88cfad581ac.rlib",
+          "sha256": "3c3b603721af9e3b5f3659e08d4ca58ab269e79d0dafa9cf81b1d35f2114747c"
+        },
+        {
+          "abi": "armeabi-v7a",
+          "path": "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/armv7-linux-androideabi/lib/libadler2-8a07aabe642f0b2c.rlib",
+          "sha256": "b3093eff5d20bd2dcf08d32c031595168fbe8bdd1c799dc64b812625443d50a7"
+        },
+        {
+          "abi": "armeabi-v7a",
+          "path": "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/armv7-linux-androideabi/lib/liballoc-49b20a427b28a08a.rlib",
+          "sha256": "14566f57af26ba319931295fbcc1cd7b7202e7fd22849d807a903dcb98dfbc67"
+        },
+        {
+          "abi": "armeabi-v7a",
+          "path": "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/armv7-linux-androideabi/lib/libcfg_if-7a7f10b2528ee21a.rlib",
+          "sha256": "7134c3993b18d2e7a406e488fbab43df3dff1b1d4d220951df1bbc1d7054f177"
+        },
+        {
+          "abi": "armeabi-v7a",
+          "path": "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/armv7-linux-androideabi/lib/libcompiler_builtins-a3adb725c6965616.rlib",
+          "sha256": "89484d5920fe322895919cff043b6da475cd1ce1e5b26aaeae8981bc9161cbf0"
+        },
+        {
+          "abi": "armeabi-v7a",
+          "path": "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/armv7-linux-androideabi/lib/libcore-049ab37080a21d4f.rlib",
+          "sha256": "5d9f16c47cd643acd0b9ebff43d649fc10ced82028d09f32319bfd31348bdda2"
+        },
+        {
+          "abi": "armeabi-v7a",
+          "path": "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/armv7-linux-androideabi/lib/libgimli-2387e2dfe59fc8e4.rlib",
+          "sha256": "8ede5cc4ba4b04c2b8fbbd301276831fe178259dc4babc2557bda290dc9eab35"
+        },
+        {
+          "abi": "armeabi-v7a",
+          "path": "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/armv7-linux-androideabi/lib/libhashbrown-abfb1bd6bdd8e3ef.rlib",
+          "sha256": "1dfc001dfe53bb5683da25e216b6e7e5dab1dd95d45b36d203c1f4a814fe870a"
+        },
+        {
+          "abi": "armeabi-v7a",
+          "path": "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/armv7-linux-androideabi/lib/liblibc-5725d230672dedd0.rlib",
+          "sha256": "dc4fa51950356d3e55b6bc3f01b33b79f737d4bf482d6754271d9aa3c6a99ad3"
+        },
+        {
+          "abi": "armeabi-v7a",
+          "path": "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/armv7-linux-androideabi/lib/libmemchr-c08ba55a8c3a7508.rlib",
+          "sha256": "5f57b95f246d35e024d26e0bf6dac8d7782423bbeb453b5b59b7c9d3b0e0d4d2"
+        },
+        {
+          "abi": "armeabi-v7a",
+          "path": "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/armv7-linux-androideabi/lib/libminiz_oxide-ca136753b7b0d164.rlib",
+          "sha256": "c7dfc42029beded0ed7556f1158bb7bd5fabb63ff33e56e2e494a410bb0c57b7"
+        },
+        {
+          "abi": "armeabi-v7a",
+          "path": "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/armv7-linux-androideabi/lib/libobject-7acbba3a396011cd.rlib",
+          "sha256": "b6f555b7b413fb5da08d28cf1eabfdfec711427c9c011edee6c71e489fc0ee43"
+        },
+        {
+          "abi": "armeabi-v7a",
+          "path": "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/armv7-linux-androideabi/lib/libpanic_unwind-02ae4fcdf452606e.rlib",
+          "sha256": "7e04f2dfec9364ac1c0245ba03cff5324cc6ad86a7b8ceaad7a8bc02ac6d3a21"
+        },
+        {
+          "abi": "armeabi-v7a",
+          "path": "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/armv7-linux-androideabi/lib/librustc_demangle-d36e14f6f53525f4.rlib",
+          "sha256": "d54bf1a054d95be0003521012ae4b4774a001c819bfa4c0656e4024f486965f9"
+        },
+        {
+          "abi": "armeabi-v7a",
+          "path": "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/armv7-linux-androideabi/lib/librustc_std_workspace_alloc-193f6a79816677b8.rlib",
+          "sha256": "fd84750823fd951cd92b09b9d80c666513ff00d578cd1dc60955628196cb6e98"
+        },
+        {
+          "abi": "armeabi-v7a",
+          "path": "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/armv7-linux-androideabi/lib/librustc_std_workspace_core-72c3719babb980fc.rlib",
+          "sha256": "49b64edddb98d696ecd5b4fd586ed51ffee907ce37409605b995f3258460e08a"
+        },
+        {
+          "abi": "armeabi-v7a",
+          "path": "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/armv7-linux-androideabi/lib/libstd-5f97272d60d5967a.rlib",
+          "sha256": "82d19e35d655f6824f37e0b783928b9a4d4f126506e5e5a5dac44f122854ec56"
+        },
+        {
+          "abi": "armeabi-v7a",
+          "path": "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/armv7-linux-androideabi/lib/libstd_detect-1b809a24794608f4.rlib",
+          "sha256": "e3f863d09089de5af1d503d94c10aeb87443b2ba63f8952f65dce7719b434458"
+        },
+        {
+          "abi": "armeabi-v7a",
+          "path": "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/armv7-linux-androideabi/lib/libunwind-16ab6004211e0801.rlib",
+          "sha256": "5ebc285d16e1857907a739a458d12bda0c86b0119f76d666743bda3b3f0f05ff"
+        },
+        {
+          "abi": "x86",
+          "path": "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/i686-linux-android/lib/libaddr2line-b906bb8c5e83bdcc.rlib",
+          "sha256": "498b03dba662cc8208ad87411187379e95f1e243055f6d351b78bd41256c4f1a"
+        },
+        {
+          "abi": "x86",
+          "path": "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/i686-linux-android/lib/libadler2-65a1eeb23058e8c6.rlib",
+          "sha256": "fcf43b53b938732efad4d5519c66e29bd56ff52110ccc29cdd1a7cbd8da25713"
+        },
+        {
+          "abi": "x86",
+          "path": "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/i686-linux-android/lib/liballoc-7759e7a5b15797f2.rlib",
+          "sha256": "ac3b301f3565512b9d679c1c8f6773cca00f3fa49e394c27062061eff01188a3"
+        },
+        {
+          "abi": "x86",
+          "path": "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/i686-linux-android/lib/libcfg_if-9956cd5dbbfbc58a.rlib",
+          "sha256": "60733e5b4bb47a3455c73c2c7b7142a81361f507e08c217e8d82fa149ba6bc44"
+        },
+        {
+          "abi": "x86",
+          "path": "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/i686-linux-android/lib/libcompiler_builtins-3aa7c9b06b1ecd3c.rlib",
+          "sha256": "fe940db73d0e18fcfc6f2062cf78a10a66740384a8d81f01c866f8d2a6050cdd"
+        },
+        {
+          "abi": "x86",
+          "path": "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/i686-linux-android/lib/libcore-d0098d26f3b25a87.rlib",
+          "sha256": "0226b2e690b3fa04f57e1d65a2f6d21266c6c496ef2c7165a8772e64b23c4ba9"
+        },
+        {
+          "abi": "x86",
+          "path": "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/i686-linux-android/lib/libgimli-ccd5ee9a99d98097.rlib",
+          "sha256": "488efce90866b1864bea2ff177f5886cf89832733ddabdb7ddffdda49d09cc84"
+        },
+        {
+          "abi": "x86",
+          "path": "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/i686-linux-android/lib/libhashbrown-02e4852a4394dfbc.rlib",
+          "sha256": "25ccf5b71c66a222a7de39533cb57a37e57ab34656ce592f304fcd40b6b0ce03"
+        },
+        {
+          "abi": "x86",
+          "path": "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/i686-linux-android/lib/liblibc-7d42f307cb3c32cf.rlib",
+          "sha256": "bea0a2b57bc0091629dd51d46e59a5a1f40069a323a5b94c9027e2fcc060e99e"
+        },
+        {
+          "abi": "x86",
+          "path": "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/i686-linux-android/lib/libmemchr-8c54305434493ddf.rlib",
+          "sha256": "afae5a31722d89b2738a058664e2e3df2fea35983bb59bbb2ef96ce441991d1a"
+        },
+        {
+          "abi": "x86",
+          "path": "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/i686-linux-android/lib/libminiz_oxide-b2894302a9cee717.rlib",
+          "sha256": "7edcaf82de6f2019e567e7faf0e04766365f856b424c892e3b6dbaf506da1859"
+        },
+        {
+          "abi": "x86",
+          "path": "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/i686-linux-android/lib/libobject-7d0164c7b137a556.rlib",
+          "sha256": "808efe76df838aff229065cae197196896389aa732f341fa24d553f970facdb1"
+        },
+        {
+          "abi": "x86",
+          "path": "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/i686-linux-android/lib/libpanic_unwind-9beabe8330352a43.rlib",
+          "sha256": "0c8a99302b171385acad943192782be981c685461b4beafc97f7af36bfd81c76"
+        },
+        {
+          "abi": "x86",
+          "path": "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/i686-linux-android/lib/librustc_demangle-c773b7b966d0c840.rlib",
+          "sha256": "09c929c9149d6b9805c63325ce4f209c3fab0c272caf3c07fddbe683ff83b987"
+        },
+        {
+          "abi": "x86",
+          "path": "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/i686-linux-android/lib/librustc_std_workspace_alloc-1d68e5a8496ccc11.rlib",
+          "sha256": "7cf2f88d0113137b97f2ed98335bcff4093dd83a2d2bb541d7cd864126db6160"
+        },
+        {
+          "abi": "x86",
+          "path": "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/i686-linux-android/lib/librustc_std_workspace_core-f946dd7d7a38d29a.rlib",
+          "sha256": "15235f8e4cdac5f5c68d2c623efe8b25d80530b634c882b5557c63ebdc58f1c9"
+        },
+        {
+          "abi": "x86",
+          "path": "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/i686-linux-android/lib/libstd-eb33c57d3912d549.rlib",
+          "sha256": "fe8aeafcde527e19504afc3335af8cf4a76af88d2a246fb7c9361271c81d2f8b"
+        },
+        {
+          "abi": "x86",
+          "path": "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/i686-linux-android/lib/libstd_detect-eba426f0d582ef0a.rlib",
+          "sha256": "3a1d69c422f978e660b41373a61ccb27a0c987c35485b8d848ad7902e380e241"
+        },
+        {
+          "abi": "x86",
+          "path": "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/i686-linux-android/lib/libunwind-400600c337806a2e.rlib",
+          "sha256": "cedebcdaaf77ae6136f6dac49ca0202a229df0a1645caaa5728f32e49fd90a2d"
+        }
+      ],
+      "files": [
+        {
+          "file": "toolchain/rust-1.98.1/COPYRIGHT-library.html",
+          "sha256": "68129500b616d5838629e68f55ff3aed5e096dacf60ce9eb41bbe599a563afa6",
+          "origin": {
+            "kind": "toolchain_local",
+            "path": "/Users/boristacyniak/.rustup/toolchains/1.98.1-x86_64-apple-darwin/share/doc/rust/COPYRIGHT-library.html"
+          }
+        }
+      ],
+      "qualification": "Aggregate notice; not every item it lists is linked; not a compiler SBOM or legal certification.",
+      "crates_not_named_in_aggregate_text": [
+        "compiler_builtins",
+        "miniz_oxide",
+        "panic_unwind",
+        "rustc_std_workspace_alloc",
+        "rustc_std_workspace_core",
+        "std_detect"
+      ]
+    },
+    {
+      "name": "ndk-toolchain-runtime",
+      "version": "27.1.12297006",
+      "license": "aggregate toolchain notice (see texts)",
+      "role": "toolchain_aggregate",
+      "description": "NDK r27b clang driver-added compiler-rt builtins, libunwind and bionic crt objects",
+      "verified_link_inputs": [
+        {
+          "abi": "x86_64",
+          "path": "/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-x86_64-android.a",
+          "sha256": "4e9fc1dfa3cf9f217cb14ff2c24cdc4a95c09ec801d80192c0d6688c9251c287"
+        },
+        {
+          "abi": "x86_64",
+          "path": "/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/x86_64/libunwind.a",
+          "sha256": "ef7359ad74d6dec2af2631bb4e4555cb8e616249e21aa519d691aec8aaa38123"
+        },
+        {
+          "abi": "x86_64",
+          "path": "/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/x86_64-linux-android/24/crtbegin_so.o",
+          "sha256": "31bf0bffcb90139437272ee04e558ca5d90e6148fc7fea420879927e17ca951d"
+        },
+        {
+          "abi": "x86_64",
+          "path": "/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/x86_64-linux-android/24/crtend_so.o",
+          "sha256": "793ea43b5c52399fdc7a4c7bbf04c02abaf59d2c34d0b630ece694110f6f3b2c"
+        },
+        {
+          "abi": "arm64-v8a",
+          "path": "/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/aarch64/libunwind.a",
+          "sha256": "ae858b594e7181cb08a3d457a068980c03e810178bdb3e211d11283c0ce5d531"
+        },
+        {
+          "abi": "arm64-v8a",
+          "path": "/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-aarch64-android.a",
+          "sha256": "ce4b41c28dfea5ef2dcd26898b1456fb5fa8fcbdba565e5b4dd4c322f1ba2fb4"
+        },
+        {
+          "abi": "arm64-v8a",
+          "path": "/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/24/crtbegin_so.o",
+          "sha256": "9c73ee3d5a5459c298bb0d7dcbfb84a85434709a2deb917c3abaeadf701beee0"
+        },
+        {
+          "abi": "arm64-v8a",
+          "path": "/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/24/crtend_so.o",
+          "sha256": "60ac71634f21a7b2ba70e0c60deaaeee2058f4aa06b7000dc63677771a87c3b6"
+        },
+        {
+          "abi": "armeabi-v7a",
+          "path": "/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/24/crtbegin_so.o",
+          "sha256": "40ecaafa2ca0ad78271b2e15ec073ec1c4ba67fd9d9a0e114120eacb22f5988a"
+        },
+        {
+          "abi": "armeabi-v7a",
+          "path": "/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-arm-android.a",
+          "sha256": "f0431c301f998ba4d8832f5724340fe0e590d7e1bf65328c5abe3186bb5c2b2e"
+        },
+        {
+          "abi": "armeabi-v7a",
+          "path": "/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/arm/libunwind.a",
+          "sha256": "3b23acd5e7d91b4f23e9dd831c969f047b50e14c8d6a01fc639b7631a22d243e"
+        },
+        {
+          "abi": "armeabi-v7a",
+          "path": "/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/24/crtend_so.o",
+          "sha256": "d161f2951569046a09fb534f80f7c532d583aab9228b5c9d2ccf6f8c8fd27ec3"
+        },
+        {
+          "abi": "x86",
+          "path": "/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/i686-linux-android/24/crtbegin_so.o",
+          "sha256": "0095305ed3a131945535cf2d3474b45a6db398dca28b828858e613b694a2d952"
+        },
+        {
+          "abi": "x86",
+          "path": "/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-i686-android.a",
+          "sha256": "bcdcea533e8482db019fad723703dcd017d6103b6b68bf7d4426e3ce7be20540"
+        },
+        {
+          "abi": "x86",
+          "path": "/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/i386/libunwind.a",
+          "sha256": "baea6eba5c08d514da3187c40d3fa844fbb633b703cf96968b1268f1534d2601"
+        },
+        {
+          "abi": "x86",
+          "path": "/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/i686-linux-android/24/crtend_so.o",
+          "sha256": "eea9215e016c2bf836d56aa7a580d452b2c61a7f2de84e60641de64e05ac988c"
+        }
+      ],
+      "files": [
+        {
+          "file": "toolchain/ndk-27.1.12297006/NOTICE.toolchain",
+          "sha256": "cbe3237be53c0a819f8df6aac5358fdee848eee3b6571b4e2ca20767ebd7465e",
+          "origin": {
+            "kind": "toolchain_local",
+            "path": "/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/NOTICE.toolchain"
+          }
+        },
+        {
+          "file": "toolchain/ndk-27.1.12297006/NOTICE",
+          "sha256": "4d5224d1c0b54ffa88b0dc0088191638fdbb7227835095dfb98f7f66b416a323",
+          "origin": {
+            "kind": "toolchain_local",
+            "path": "/Users/boristacyniak/Library/Android/sdk/ndk/27.1.12297006/NOTICE"
+          }
+        }
+      ],
+      "qualification": "Aggregate notice; not every item it lists is linked; not a compiler SBOM or legal certification."
+    }
+  ],
+  "project_license_sha256": "f970675f7e759c9f923042d3ddf8452438e1ac151a9478ffef39b2f1879725fa"
+}

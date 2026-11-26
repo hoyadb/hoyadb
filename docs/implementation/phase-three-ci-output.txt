@@ -1,0 +1,605 @@
+Hit:1 http://deb.debian.org/debian trixie InRelease
+Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9678 kB]
+Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [720 B]
+Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [269 kB]
+Fetched 10.0 MB in 4s (2551 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  clang-19 libclang-common-19-dev libclang-cpp19 libclang1-19 libgc1 libllvm19
+  libobjc-14-dev libobjc4 libpfm4 libz3-4 llvm-19 llvm-19-linker-tools
+  llvm-19-runtime llvm-runtime
+Suggested packages:
+  clang-19-doc wasi-libc llvm-19-doc
+Recommended packages:
+  llvm-19-dev clang-tools-19 libclang-rt-19-dev binfmt-support | systemd
+The following NEW packages will be installed:
+  clang clang-19 libclang-common-19-dev libclang-cpp19 libclang1-19 libgc1
+  libllvm19 libobjc-14-dev libobjc4 libpfm4 libz3-4 llvm llvm-19
+  llvm-19-linker-tools llvm-19-runtime llvm-runtime
+0 upgraded, 16 newly installed, 0 to remove and 31 not upgraded.
+Need to get 75.3 MB of archives.
+After this operation, 368 MB of additional disk space will be used.
+Get:1 http://deb.debian.org/debian trixie/main amd64 libz3-4 amd64 4.13.3-1 [8560 kB]
+Get:2 http://deb.debian.org/debian trixie/main amd64 libllvm19 amd64 1:19.1.7-3+b1 [26.0 MB]
+Get:3 http://deb.debian.org/debian trixie/main amd64 libclang-cpp19 amd64 1:19.1.7-3+b1 [13.2 MB]
+Get:4 http://deb.debian.org/debian trixie/main amd64 libgc1 amd64 1:8.2.8-1 [247 kB]
+Get:5 http://deb.debian.org/debian trixie/main amd64 libobjc4 amd64 14.2.0-19 [43.3 kB]
+Get:6 http://deb.debian.org/debian trixie/main amd64 libobjc-14-dev amd64 14.2.0-19 [173 kB]
+Get:7 http://deb.debian.org/debian trixie/main amd64 libclang-common-19-dev amd64 1:19.1.7-3+b1 [740 kB]
+Get:8 http://deb.debian.org/debian trixie/main amd64 llvm-19-linker-tools amd64 1:19.1.7-3+b1 [1263 kB]
+Get:9 http://deb.debian.org/debian trixie/main amd64 libclang1-19 amd64 1:19.1.7-3+b1 [7623 kB]
+Get:10 http://deb.debian.org/debian trixie/main amd64 clang-19 amd64 1:19.1.7-3+b1 [117 kB]
+Get:11 http://deb.debian.org/debian trixie/main amd64 clang amd64 1:19.0-63 [6244 B]
+Get:12 http://deb.debian.org/debian trixie/main amd64 libpfm4 amd64 4.13.0+git99-gc5587f9-1 [371 kB]
+Get:13 http://deb.debian.org/debian trixie/main amd64 llvm-19-runtime amd64 1:19.1.7-3+b1 [551 kB]
+Get:14 http://deb.debian.org/debian trixie/main amd64 llvm-runtime amd64 1:19.0-63 [5904 B]
+Get:15 http://deb.debian.org/debian trixie/main amd64 llvm-19 amd64 1:19.1.7-3+b1 [16.4 MB]
+Get:16 http://deb.debian.org/debian trixie/main amd64 llvm amd64 1:19.0-63 [8328 B]
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Fetched 75.3 MB in 11s (7143 kB/s)
+Selecting previously unselected package libz3-4:amd64.
+(Reading database ...
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 26064 files and directories currently installed.)
+Preparing to unpack .../00-libz3-4_4.13.3-1_amd64.deb ...
+Unpacking libz3-4:amd64 (4.13.3-1) ...
+Selecting previously unselected package libllvm19:amd64.
+Preparing to unpack .../01-libllvm19_1%3a19.1.7-3+b1_amd64.deb ...
+Unpacking libllvm19:amd64 (1:19.1.7-3+b1) ...
+Selecting previously unselected package libclang-cpp19.
+Preparing to unpack .../02-libclang-cpp19_1%3a19.1.7-3+b1_amd64.deb ...
+Unpacking libclang-cpp19 (1:19.1.7-3+b1) ...
+Selecting previously unselected package libgc1:amd64.
+Preparing to unpack .../03-libgc1_1%3a8.2.8-1_amd64.deb ...
+Unpacking libgc1:amd64 (1:8.2.8-1) ...
+Selecting previously unselected package libobjc4:amd64.
+Preparing to unpack .../04-libobjc4_14.2.0-19_amd64.deb ...
+Unpacking libobjc4:amd64 (14.2.0-19) ...
+Selecting previously unselected package libobjc-14-dev:amd64.
+Preparing to unpack .../05-libobjc-14-dev_14.2.0-19_amd64.deb ...
+Unpacking libobjc-14-dev:amd64 (14.2.0-19) ...
+Selecting previously unselected package libclang-common-19-dev:amd64.
+Preparing to unpack .../06-libclang-common-19-dev_1%3a19.1.7-3+b1_amd64.deb ...
+Unpacking libclang-common-19-dev:amd64 (1:19.1.7-3+b1) ...
+Selecting previously unselected package llvm-19-linker-tools.
+Preparing to unpack .../07-llvm-19-linker-tools_1%3a19.1.7-3+b1_amd64.deb ...
+Unpacking llvm-19-linker-tools (1:19.1.7-3+b1) ...
+Selecting previously unselected package libclang1-19.
+Preparing to unpack .../08-libclang1-19_1%3a19.1.7-3+b1_amd64.deb ...
+Unpacking libclang1-19 (1:19.1.7-3+b1) ...
+Selecting previously unselected package clang-19.
+Preparing to unpack .../09-clang-19_1%3a19.1.7-3+b1_amd64.deb ...
+Unpacking clang-19 (1:19.1.7-3+b1) ...
+Selecting previously unselected package clang.
+Preparing to unpack .../10-clang_1%3a19.0-63_amd64.deb ...
+Unpacking clang (1:19.0-63) ...
+Selecting previously unselected package libpfm4:amd64.
+Preparing to unpack .../11-libpfm4_4.13.0+git99-gc5587f9-1_amd64.deb ...
+Unpacking libpfm4:amd64 (4.13.0+git99-gc5587f9-1) ...
+Selecting previously unselected package llvm-19-runtime.
+Preparing to unpack .../12-llvm-19-runtime_1%3a19.1.7-3+b1_amd64.deb ...
+Unpacking llvm-19-runtime (1:19.1.7-3+b1) ...
+Selecting previously unselected package llvm-runtime:amd64.
+Preparing to unpack .../13-llvm-runtime_1%3a19.0-63_amd64.deb ...
+Unpacking llvm-runtime:amd64 (1:19.0-63) ...
+Selecting previously unselected package llvm-19.
+Preparing to unpack .../14-llvm-19_1%3a19.1.7-3+b1_amd64.deb ...
+Unpacking llvm-19 (1:19.1.7-3+b1) ...
+Selecting previously unselected package llvm.
+Preparing to unpack .../15-llvm_1%3a19.0-63_amd64.deb ...
+Unpacking llvm (1:19.0-63) ...
+Setting up libclang-common-19-dev:amd64 (1:19.1.7-3+b1) ...
+Setting up libz3-4:amd64 (4.13.3-1) ...
+Setting up libpfm4:amd64 (4.13.0+git99-gc5587f9-1) ...
+Setting up libgc1:amd64 (1:8.2.8-1) ...
+Setting up libllvm19:amd64 (1:19.1.7-3+b1) ...
+Setting up libclang1-19 (1:19.1.7-3+b1) ...
+Setting up libobjc4:amd64 (14.2.0-19) ...
+Setting up libobjc-14-dev:amd64 (14.2.0-19) ...
+Setting up llvm-19-linker-tools (1:19.1.7-3+b1) ...
+Setting up llvm-19-runtime (1:19.1.7-3+b1) ...
+Setting up libclang-cpp19 (1:19.1.7-3+b1) ...
+Setting up clang-19 (1:19.1.7-3+b1) ...
+Setting up clang (1:19.0-63) ...
+Setting up llvm-runtime:amd64 (1:19.0-63) ...
+Setting up llvm-19 (1:19.1.7-3+b1) ...
+Setting up llvm (1:19.0-63) ...
+Processing triggers for libc-bin (2.41-12+deb13u4) ...
+info: downloading 2 components
+info: downloading component rust-std
+rustc 1.98.1 (48a229cea 2026-09-01)
+Debian clang version 19.1.7 (3+b1)
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/lib/llvm-19/bin
+Debian LLVM version 19.1.7
+  Optimized build.
+    Updating crates.io index
+ Downloading crates ...
+  Downloaded proc-macro2 v1.0.107
+  Downloaded wasm-bindgen-macro v0.2.104
+  Downloaded quote v1.0.47
+  Downloaded wasm-bindgen-shared v0.2.104
+  Downloaded cfg-if v1.0.5
+  Downloaded wasm-bindgen-backend v0.2.104
+  Downloaded rustversion v1.0.23
+  Downloaded wasm-bindgen-macro-support v0.2.104
+  Downloaded fallible-streaming-iterator v0.1.9
+  Downloaded thiserror v2.0.21
+  Downloaded shlex v2.0.1
+  Downloaded foldhash v0.2.0
+  Downloaded wasm-bindgen v0.2.104
+  Downloaded unicode-ident v1.0.27
+  Downloaded once_cell v1.21.4
+  Downloaded log v0.4.34
+  Downloaded thiserror-impl v2.0.21
+  Downloaded pkg-config v0.3.34
+  Downloaded smallvec v1.16.3
+  Downloaded fallible-iterator v0.3.0
+  Downloaded find-msvc-tools v0.1.15
+  Downloaded bitflags v2.13.2
+  Downloaded js-sys v0.3.81
+  Downloaded bumpalo v3.20.3
+  Downloaded hashbrown v0.16.1
+  Downloaded cc v1.9.0
+  Downloaded rusqlite v0.40.2
+  Downloaded syn v2.0.119
+  Downloaded vcpkg v0.2.15
+  Downloaded syn v3.0.9
+  Downloaded libsqlite3-sys v0.38.2
+  Downloaded sqlite-wasm-rs v0.5.1
+    Updating crates.io index
+ Downloading crates ...
+  Downloaded wasm-bindgen-futures v0.4.54
+  Downloaded sealed v0.6.0
+  Downloaded macroific_core v3.1.0
+  Downloaded delegate-display v3.0.1
+  Downloaded macroific_attr_parse v2.0.0
+  Downloaded macroific v3.1.0
+  Downloaded macroific_macro v2.0.0
+  Downloaded macroific_core v2.0.0
+  Downloaded macroific_macro v3.1.0
+  Downloaded macroific_attr_parse v3.1.0
+  Downloaded unicode-xid v0.2.6
+  Downloaded impartial-ord v2.0.0
+  Downloaded accessory v2.1.1
+  Downloaded macroific v2.0.0
+  Downloaded fancy_constructor v2.1.1
+  Downloaded sealed v0.7.0
+  Downloaded itoa v1.0.18
+  Downloaded pin-project-lite v0.2.17
+  Downloaded indexed_db_futures_macros_internal v1.0.0
+  Downloaded rustc_version v0.4.1
+  Downloaded sqlite-wasm-vfs v0.1.1
+  Downloaded indexed_db_futures v0.6.4
+  Downloaded semver v1.0.28
+  Downloaded derive_more v2.1.1
+  Downloaded derive_more-impl v2.1.1
+  Downloaded web-sys v0.3.81
+  Downloaded tokio v1.54.1
+   Compiling hoyadb-core v0.0.0 (/source/crates/hoyadb-core)
+   Compiling shlex v2.0.1
+   Compiling find-msvc-tools v0.1.15
+   Compiling pkg-config v0.3.34
+   Compiling vcpkg v0.2.15
+   Compiling bitflags v2.13.2
+   Compiling fallible-iterator v0.3.0
+   Compiling smallvec v1.16.3
+   Compiling fallible-streaming-iterator v0.1.9
+   Compiling cc v1.9.0
+   Compiling hoyadb-storage-memory v0.0.0 (/source/crates/hoyadb-storage-memory)
+   Compiling libsqlite3-sys v0.38.2
+   Compiling rusqlite v0.40.2
+   Compiling hoyadb-storage-sqlite v0.0.0 (/source/crates/hoyadb-storage-sqlite)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 18.43s
+     Running unittests src/lib.rs (/work/target/debug/deps/hoyadb_core-65dff4319abe671c)
+
+running 9 tests
+test model::schema::tests::d01_implicit_keys_and_bookkeeping_compile_without_changing_declaration ... ok
+test model::schema::tests::d02_invalid_versions_names_and_reference_mappings_reject ... ok
+test storage::model::tests::d13_metadata_shape_is_exact_and_never_defaults_on_corruption ... ok
+test model::schema::tests::tc0027_shared_reference_aliases_must_agree_on_target ... ok
+test model::schema::tests::d13_canonical_codec_roundtrips_all_relation_operands_and_exact_names ... ok
+test storage::typed::tests::finite_float_preserves_all_finite_values_and_canonicalizes_zero ... ok
+test storage::model::tests::d14_plan_and_inventory_require_matching_definition_and_row_versions ... ok
+test storage::typed::tests::supplied_schema_and_paths_validate_without_engine_access ... ok
+test storage::typed::tests::query_and_row_validation_use_exact_types_and_coordinates ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (/work/target/debug/deps/hoyadb_storage_memory-39e38d66f0ce67cd)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/contract.rs (/work/target/debug/deps/contract-5edab19f26061dde)
+
+running 63 tests
+test conformance::m01_typed_roundtrip ... ok
+test conformance::m02_reads_are_owned_snapshots ... ok
+test conformance::m03_tables_and_instances_are_isolated ... ok
+test conformance::m04_duplicate_insert_preserves_existing_row ... ok
+test conformance::m06_missing_read_and_replacement ... ok
+test conformance::m05_unknown_table_rejects_every_operation ... ok
+test conformance::m07_replacement_replaces_all_fields ... ok
+test conformance::m08_removal_reports_existing_and_missing_rows ... ok
+test conformance::m09_creating_existing_table_preserves_rows ... ok
+test conformance::t01_mixed_cross_table_batch_commits ... ok
+test conformance::t02_batch_observes_prior_mutations_in_order ... ok
+test conformance::t03_duplicate_rolls_back_all_tables_and_later_mutations ... ok
+test conformance::t04_missing_replacement_restores_removed_row ... ok
+test conformance::t05_unknown_table_rolls_back_for_each_mutation_kind ... ok
+test conformance::t06_first_typed_error_is_preserved ... ok
+test conformance::t07_empty_and_missing_removal_batches_preserve_rows ... ok
+test model_conformance::d02_invalid_declarations_and_reserved_inputs_leave_state_unchanged ... ok
+test projection_conformance::r11_bound_names_and_required_cells ... ok
+test model_conformance::d01_declared_schema_typed_records_and_bookkeeping ... ok
+test projection_conformance::r11_direct_relations_missing_targets_and_cells ... ok
+test model_conformance::d05_lazy_to_one_has_many_and_engine_owned_fetch ... ok
+test projection_conformance::r11_all_values_owned_and_only_requested_cells ... ok
+test model_conformance::d08_initialization_and_compatible_legacy_adoption ... ok
+test model_conformance::d03_generated_ids_public_mutations_and_counter_rollback ... ok
+test model_conformance::d13_definition_codec_and_bound_unicode_names_roundtrip ... ok
+test projection_conformance::r11_filter_order_limit_and_nulls ... ok
+test model_conformance::d07_identical_reopen_and_schema_drift ... ok
+test projection_conformance::r11_validation_before_zero_limit_and_unrequested_rows_stay_unchecked ... ok
+test model_conformance::d06_many_to_many_managed_links_and_both_directions ... ok
+test model_conformance::d11_missing_complete_chain_resets_without_running_prefix ... ok
+test model_conformance::tc0028_unselected_migration_descriptors_validate_nested_names ... ok
+test reactive_conformance::r02_cancel_close_and_cross_owner_handles ... ok
+test reactive_conformance::r01_owned_initial_and_membership_only ... ok
+test model_conformance::d04_public_operators_all_kinds_order_and_limit ... ok
+test reactive_conformance::r06_normalized_equivalent_queries_share_across_modes ... ok
+test model_conformance::d12_downgrade_unknown_queue_and_future_metadata_reject ... ok
+test reactive_conformance::r03_net_batches_rollback_and_commit_snapshots ... ok
+test reactive_conformance::r04_own_columns_missing_null_and_registration_validation ... ok
+test model_conformance::d14_public_boundary_partitions_preserve_managed_state ... ok
+test reactive_conformance::r07_ordered_limit_refill_ties_and_reorder_suppression ... ok
+test schema_conformance::s01_initialize_catalog_and_owned_scan ... ok
+test schema_conformance::s03_stale_expected_state_rejects_before_operations ... ok
+test schema_conformance::s02_failed_prefix_preserves_all_state ... ok
+test schema_conformance::s04_unknown_bookkeeping_and_corrupt_metadata_never_become_absent ... ok
+test typed_conformance::p02_schema_and_row_validation ... ok
+test typed_conformance::p07_invalid_queries_before_execution ... ok
+test typed_conformance::p06_direct_to_one_missing_and_cycles ... ok
+test typed_conformance::p01_all_primitives_roundtrip ... ok
+test typed_conformance::p04_optional_null_comparison_and_order ... ok
+test typed_conformance::p05_filter_order_limit_ties ... ok
+test schema_conformance::s05_checkpoints_and_final_candidate_validate_before_commit ... ok
+test typed_conformance::p03_every_operator_every_primitive ... ok
+test reactive_conformance::r12_noop_link_unlink_and_reopen ... ok
+test reactive_conformance::r09_all_relation_navigations_track_source_target_and_pivots ... ok
+test typed_conformance::p08_committed_changes_order_owned_noops ... ok
+test typed_conformance::p10_all_write_paths_keep_queries_coherent ... ok
+test typed_conformance::p09_rollback_and_invalid_returned_rows ... ok
+test reactive_conformance::r05_count_throttle_deadline_return_and_backwards_clock ... ok
+test model_conformance::d09_complete_authored_chain_applies_all_primitives ... ok
+test reactive_conformance::r08_to_one_dependencies_dangling_and_unrelated_writes ... ok
+test reactive_conformance::r10_postcommit_faults_registration_and_explicit_recovery ... ok
+test model_conformance::d10_failed_migration_and_endpoint_return_original_owned_engine ... ok
+test reactive_conformance::r15_count_work_scales_with_affected_ids_and_shared_observers ... ok
+
+test result: ok. 63 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+
+     Running tests/index_cost.rs (/work/target/debug/deps/index_cost-dace8d0d479eddfa)
+
+running 1 test
+test p12_selective_lookup_survives_growth_update_raw_writes_and_rollback ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+
+     Running tests/reactive_smoke.rs (/work/target/debug/deps/reactive_smoke-0f191912d1676b21)
+
+running 1 test
+test public_query_observation_tracks_only_committed_membership ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (/work/target/debug/deps/hoyadb_storage_sqlite-edf0fbba448c871d)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/restart_fixture.rs (/work/target/debug/deps/restart_fixture-f25f9d9d3c987ee7)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/contract.rs (/work/target/debug/deps/contract-f5e8c729cf1a6cf1)
+
+running 63 tests
+test conformance::m06_missing_read_and_replacement ... ok
+test conformance::m05_unknown_table_rejects_every_operation ... ok
+test conformance::t02_batch_observes_prior_mutations_in_order ... ok
+test conformance::m02_reads_are_owned_snapshots ... ok
+test conformance::t06_first_typed_error_is_preserved ... ok
+test conformance::t04_missing_replacement_restores_removed_row ... ok
+test conformance::t07_empty_and_missing_removal_batches_preserve_rows ... ok
+test conformance::m09_creating_existing_table_preserves_rows ... ok
+test conformance::m04_duplicate_insert_preserves_existing_row ... ok
+test conformance::t05_unknown_table_rolls_back_for_each_mutation_kind ... ok
+test conformance::m01_typed_roundtrip ... ok
+test conformance::m07_replacement_replaces_all_fields ... ok
+test conformance::m08_removal_reports_existing_and_missing_rows ... ok
+test conformance::t03_duplicate_rolls_back_all_tables_and_later_mutations ... ok
+test model_conformance::d01_declared_schema_typed_records_and_bookkeeping ... ok
+test conformance::t01_mixed_cross_table_batch_commits ... ok
+test model_conformance::d07_identical_reopen_and_schema_drift ... ok
+test model_conformance::d13_definition_codec_and_bound_unicode_names_roundtrip ... ok
+test conformance::m03_tables_and_instances_are_isolated ... ok
+test model_conformance::d05_lazy_to_one_has_many_and_engine_owned_fetch ... ok
+test model_conformance::d09_complete_authored_chain_applies_all_primitives ... ok
+test model_conformance::d03_generated_ids_public_mutations_and_counter_rollback ... ok
+test model_conformance::d11_missing_complete_chain_resets_without_running_prefix ... ok
+test model_conformance::d08_initialization_and_compatible_legacy_adoption ... ok
+test projection_conformance::r11_validation_before_zero_limit_and_unrequested_rows_stay_unchecked ... ok
+test model_conformance::d06_many_to_many_managed_links_and_both_directions ... ok
+test projection_conformance::r11_bound_names_and_required_cells ... ok
+test model_conformance::d02_invalid_declarations_and_reserved_inputs_leave_state_unchanged ... ok
+test reactive_conformance::r02_cancel_close_and_cross_owner_handles ... ok
+test model_conformance::tc0028_unselected_migration_descriptors_validate_nested_names ... ok
+test projection_conformance::r11_filter_order_limit_and_nulls ... ok
+test reactive_conformance::r06_normalized_equivalent_queries_share_across_modes ... ok
+test projection_conformance::r11_direct_relations_missing_targets_and_cells ... ok
+test reactive_conformance::r03_net_batches_rollback_and_commit_snapshots ... ok
+test reactive_conformance::r01_owned_initial_and_membership_only ... ok
+test reactive_conformance::r04_own_columns_missing_null_and_registration_validation ... ok
+test schema_conformance::s01_initialize_catalog_and_owned_scan ... ok
+test schema_conformance::s02_failed_prefix_preserves_all_state ... ok
+test schema_conformance::s03_stale_expected_state_rejects_before_operations ... ok
+test reactive_conformance::r07_ordered_limit_refill_ties_and_reorder_suppression ... ok
+test reactive_conformance::r12_noop_link_unlink_and_reopen ... ok
+test model_conformance::d10_failed_migration_and_endpoint_return_original_owned_engine ... ok
+test schema_conformance::s05_checkpoints_and_final_candidate_validate_before_commit ... ok
+test typed_conformance::p02_schema_and_row_validation ... ok
+test typed_conformance::p04_optional_null_comparison_and_order ... ok
+test reactive_conformance::r09_all_relation_navigations_track_source_target_and_pivots ... ok
+test schema_conformance::s04_unknown_bookkeeping_and_corrupt_metadata_never_become_absent ... ok
+test typed_conformance::p06_direct_to_one_missing_and_cycles ... ok
+test reactive_conformance::r05_count_throttle_deadline_return_and_backwards_clock ... ok
+test model_conformance::d12_downgrade_unknown_queue_and_future_metadata_reject ... ok
+test model_conformance::d14_public_boundary_partitions_preserve_managed_state ... ok
+test typed_conformance::p08_committed_changes_order_owned_noops ... ok
+test typed_conformance::p07_invalid_queries_before_execution ... ok
+test reactive_conformance::r08_to_one_dependencies_dangling_and_unrelated_writes ... ok
+test typed_conformance::p10_all_write_paths_keep_queries_coherent ... ok
+test reactive_conformance::r10_postcommit_faults_registration_and_explicit_recovery ... ok
+test projection_conformance::r11_all_values_owned_and_only_requested_cells ... ok
+test typed_conformance::p09_rollback_and_invalid_returned_rows ... ok
+test typed_conformance::p03_every_operator_every_primitive ... ok
+test typed_conformance::p01_all_primitives_roundtrip ... ok
+test typed_conformance::p05_filter_order_limit_ties ... ok
+test model_conformance::d04_public_operators_all_kinds_order_and_limit ... ok
+test reactive_conformance::r15_count_work_scales_with_affected_ids_and_shared_observers ... ok
+
+test result: ok. 63 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.84s
+
+     Running tests/model_cases.rs (/work/target/debug/deps/model_cases-1ce573087193b19f)
+
+running 5 tests
+test d15_actual_commit_failure_preserves_counter_and_retry_identity ... ok
+test d15_orphan_physical_bookkeeping_is_never_adopted_or_reset ... ok
+test d15_public_insert_counter_and_row_share_one_commit ... ok
+test d15_initialization_and_legacy_adoption_roll_back_after_metadata_abort ... ok
+test d15_migration_and_missing_chain_reset_abort_preserve_reopened_state ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.11s
+
+     Running tests/process.rs (/work/target/debug/deps/process-2068c0bd06c04857)
+
+running 4 tests
+test p11_new_typed_values_survive_process_restart ... ok
+test q02_failed_batch_remains_rolled_back_after_restart ... ok
+test d16_managed_schema_migration_relations_and_ids_survive_process_restart ... ok
+test q01_committed_rows_survive_process_restart ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.06s
+
+     Running tests/projection_cases.rs (/work/target/debug/deps/projection_cases-11b8e6ab2ee53ea1)
+
+running 1 test
+test r11_unrequested_corrupt_payload_is_not_materialized ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+     Running tests/sqlite_cases.rs (/work/target/debug/deps/sqlite_cases-df9c81d203bd229b)
+
+running 6 tests
+test q05_lock_failure_recovers_without_publication ... ok
+test q07_trigger_failure_rolls_back_single_mutations_and_batch ... ok
+test q08_owned_connection_moves_and_operations_are_eager_ready_send ... ok
+test q03_bound_names_and_empty_rows ... ok
+test q04_open_rejects_paths_and_unowned_formats_without_mutation ... ok
+test q06_corrupt_fields_never_return_partial_rows ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.27s
+
+     Running tests/typed_cases.rs (/work/target/debug/deps/typed_cases-75a3ba48b3d7487d)
+
+running 5 tests
+test p11_typed_sql_write_and_commit_failures_preserve_snapshots_and_indexes ... ok
+test p11_new_tags_roundtrip_and_reopen_preserve_v1_tables_and_old_rows ... ok
+test p11_float_integer_affinity_is_checked_without_saturating_casts ... ok
+test p11_strict_new_tag_decoding_never_coerces_payloads ... ok
+test p12_actual_numeric_and_text_lookup_plans_and_recorded_costs ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.29s
+
+   Doc-tests hoyadb_core
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests hoyadb_storage_memory
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests hoyadb_storage_sqlite
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.02s
+     Running `/work/target/debug/examples/data_model`
+Phase 2 example: 1 order; schema version 2
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.02s
+     Running `/work/target/debug/examples/reactive`
+Phase 3 example: owned row snapshot, throttled count, shared cache released
+    Checking hoyadb-core v0.0.0 (/source/crates/hoyadb-core)
+    Checking smallvec v1.16.3
+    Checking fallible-iterator v0.3.0
+    Checking fallible-streaming-iterator v0.1.9
+    Checking bitflags v2.13.2
+    Checking libsqlite3-sys v0.38.2
+    Checking rusqlite v0.40.2
+    Checking hoyadb-storage-memory v0.0.0 (/source/crates/hoyadb-storage-memory)
+    Checking hoyadb-storage-sqlite v0.0.0 (/source/crates/hoyadb-storage-sqlite)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 2.05s
+   Compiling hoyadb-core v0.0.0 (/source/crates/hoyadb-core)
+   Compiling hoyadb-storage-memory v0.0.0 (/source/crates/hoyadb-storage-memory)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 2.00s
+   Compiling proc-macro2 v1.0.107
+   Compiling unicode-ident v1.0.27
+   Compiling quote v1.0.47
+   Compiling wasm-bindgen-shared v0.2.104
+   Compiling rustversion v1.0.23
+   Compiling bumpalo v3.20.3
+   Compiling log v0.4.34
+   Compiling find-msvc-tools v0.1.15
+   Compiling shlex v2.0.1
+   Compiling thiserror v2.0.21
+    Checking once_cell v1.21.4
+    Checking cfg-if v1.0.5
+    Checking foldhash v0.2.0
+    Checking smallvec v1.16.3
+    Checking fallible-iterator v0.3.0
+    Checking fallible-streaming-iterator v0.1.9
+    Checking bitflags v2.13.2
+    Checking hoyadb-core v0.0.0 (/source/crates/hoyadb-core)
+    Checking hashbrown v0.16.1
+   Compiling cc v1.9.0
+   Compiling wasm-bindgen v0.2.104
+   Compiling syn v2.0.119
+   Compiling syn v3.0.9
+   Compiling sqlite-wasm-rs v0.5.1
+   Compiling thiserror-impl v2.0.21
+   Compiling wasm-bindgen-backend v0.2.104
+   Compiling wasm-bindgen-macro-support v0.2.104
+   Compiling wasm-bindgen-macro v0.2.104
+    Checking js-sys v0.3.81
+    Checking rusqlite v0.40.2
+    Checking hoyadb-storage-sqlite v0.0.0 (/source/crates/hoyadb-storage-sqlite)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 11.98s
+   Compiling unicode-ident v1.0.27
+   Compiling cfg-if v1.0.5
+   Compiling once_cell v1.21.4
+   Compiling foldhash v0.2.0
+   Compiling smallvec v1.16.3
+   Compiling fallible-iterator v0.3.0
+   Compiling fallible-streaming-iterator v0.1.9
+   Compiling bitflags v2.13.2
+   Compiling thiserror v2.0.21
+   Compiling wasm-bindgen-shared v0.2.104
+   Compiling hashbrown v0.16.1
+   Compiling wasm-bindgen v0.2.104
+   Compiling js-sys v0.3.81
+   Compiling sqlite-wasm-rs v0.5.1
+   Compiling rusqlite v0.40.2
+   Compiling hoyadb-storage-sqlite v0.0.0 (/source/crates/hoyadb-storage-sqlite)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 6.92s
+   Compiling thiserror v2.0.21
+   Compiling unicode-xid v0.2.6
+   Compiling itoa v1.0.18
+    Checking pin-project-lite v0.2.17
+    Checking hoyadb-core v0.0.0 (/source/crates/hoyadb-core)
+   Compiling syn v2.0.119
+   Compiling syn v3.0.9
+    Checking tokio v1.54.1
+   Compiling sealed v0.7.0
+   Compiling thiserror-impl v2.0.21
+   Compiling impartial-ord v2.0.0
+   Compiling wasm-bindgen-backend v0.2.104
+   Compiling macroific_core v3.1.0
+   Compiling macroific_attr_parse v3.1.0
+   Compiling macroific_macro v3.1.0
+   Compiling wasm-bindgen-macro-support v0.2.104
+   Compiling sealed v0.6.0
+   Compiling derive_more-impl v2.1.1
+   Compiling macroific v3.1.0
+   Compiling accessory v2.1.1
+   Compiling delegate-display v3.0.1
+   Compiling fancy_constructor v2.1.1
+   Compiling macroific_core v2.0.0
+   Compiling macroific_attr_parse v2.0.0
+   Compiling macroific_macro v2.0.0
+   Compiling wasm-bindgen-macro v0.2.104
+   Compiling macroific v2.0.0
+   Compiling indexed_db_futures_macros_internal v1.0.0
+    Checking wasm-bindgen v0.2.104
+    Checking js-sys v0.3.81
+    Checking derive_more v2.1.1
+    Checking sqlite-wasm-rs v0.5.1
+    Checking web-sys v0.3.81
+    Checking wasm-bindgen-futures v0.4.54
+    Checking rusqlite v0.40.2
+    Checking hoyadb-storage-sqlite v0.0.0 (/source/crates/hoyadb-storage-sqlite)
+    Checking indexed_db_futures v0.6.4
+    Checking sqlite-wasm-vfs v0.1.1
+    Checking hoyadb-storage-browser-spike v0.0.0 (/source/spikes/storage-browser)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 19.60s
+   Compiling pin-project-lite v0.2.17
+   Compiling hoyadb-core v0.0.0 (/source/crates/hoyadb-core)
+   Compiling thiserror v2.0.21
+   Compiling derive_more v2.1.1
+   Compiling wasm-bindgen v0.2.104
+   Compiling tokio v1.54.1
+   Compiling js-sys v0.3.81
+   Compiling sqlite-wasm-rs v0.5.1
+   Compiling wasm-bindgen-futures v0.4.54
+   Compiling web-sys v0.3.81
+   Compiling rusqlite v0.40.2
+   Compiling hoyadb-storage-sqlite v0.0.0 (/source/crates/hoyadb-storage-sqlite)
+   Compiling indexed_db_futures v0.6.4
+   Compiling sqlite-wasm-vfs v0.1.1
+   Compiling hoyadb-storage-browser-spike v0.0.0 (/source/spikes/storage-browser)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 15.48s
+PHASE3_CONTAINER_GREEN

@@ -1,0 +1,9 @@
+{
+  "source_sha256_at_copy": {
+    "bindings/javascript/consumer/conformance.mjs": "8480d56c4683d8276b8675b29db05abc4d439f65f96f319b8e9bdf649fb9a3a8",
+    "bindings/javascript/consumer/walkthrough.mjs": "cd24ad27a5ddecbada8cf7d49cdd1f9b627e106cfaa03cff91a39174e511e319",
+    "bindings/javascript/client/test/schemas.mjs": "c75f11cbcfeffcc63ab84409671ac8fb4f14998761b746d98b03a4845ba50029"
+  },
+  "changes": "Public package import paths; G11 byte assertion uses string.length only after ASCII assertion (no production polyfill); caller schemas copied unchanged. Protected capability assertion selects explicit open.backupCapability (browser default unsupported; native factory host_managed), preserving encrypted/cipher checks; approved by root and JS owner during source-only prep.",
+  "conformance_refresh": "Includes shared DEF15 external receive-wire deadline wake regression; JS owner declared source frozen/GREEN before this refresh."
+}

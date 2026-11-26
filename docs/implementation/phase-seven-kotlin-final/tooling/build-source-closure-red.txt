@@ -1,0 +1,57 @@
+test_case8_source_added_during_compile_is_drift (__main__.SourceClosure.test_case8_source_added_during_compile_is_drift) ... FAIL
+test_case8_source_removed_during_compile_is_drift (__main__.SourceClosure.test_case8_source_removed_during_compile_is_drift) ... ERROR
+test_case8_tool_script_added_during_compile_is_drift (__main__.SourceClosure.test_case8_tool_script_added_during_compile_is_drift) ... FAIL
+test_unchanged_synthetic_sources_record_complete_closure (__main__.SourceClosure.test_unchanged_synthetic_sources_record_complete_closure) ... ok
+
+======================================================================
+ERROR: test_case8_source_removed_during_compile_is_drift (__main__.SourceClosure.test_case8_source_removed_during_compile_is_drift)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_build_tool.py", line 97, in test_case8_source_removed_during_compile_is_drift
+    self.build(removed.unlink)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_build_tool.py", line 72, in build
+    BUILD.main()
+    ~~~~~~~~~~^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/build.py", line 103, in main
+    after = source_hashes(provenance_paths)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/build.py", line 24, in source_hashes
+    return {str(path.relative_to(ROOT)): digest(path) for path in sorted(paths)}
+                                         ~~~~~~^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/build.py", line 20, in digest
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+                          ~~~~~~~~~~~~~~~^^
+  File "/usr/local/Cellar/python@3.14/3.14.8/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.14/3.14.8/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-build-guard-qfa7g3ig/bindings/android/src/main/kotlin/dev/hoyadb/Values.kt'
+
+======================================================================
+FAIL: test_case8_source_added_during_compile_is_drift (__main__.SourceClosure.test_case8_source_added_during_compile_is_drift)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_build_tool.py", line 82, in test_case8_source_added_during_compile_is_drift
+    with self.assertRaises(SystemExit) as failure:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: SystemExit not raised
+
+======================================================================
+FAIL: test_case8_tool_script_added_during_compile_is_drift (__main__.SourceClosure.test_case8_tool_script_added_during_compile_is_drift)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_build_tool.py", line 89, in test_case8_tool_script_added_during_compile_is_drift
+    with self.assertRaises(SystemExit) as failure:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: SystemExit not raised
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.091s
+
+FAILED (failures=2, errors=1)
+manual build complete: /private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-build-guard-2kdtadxb/target/build
+manual build complete: /private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-build-guard-v5kw8_42/target/build
+manual build complete: /private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-build-guard-ew8x_zku/target/build
+exit=1

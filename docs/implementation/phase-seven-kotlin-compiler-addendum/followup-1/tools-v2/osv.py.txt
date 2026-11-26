@@ -1,0 +1,23 @@
+"""Exact-version OSV registry query (informational; not proof of safety or unreachability)."""
+from pathlib import Path
+import json, subprocess, hashlib
+here = Path(__file__).resolve().parents[1]
+delta = json.loads((here / 'graph-delta.json').read_text())
+closure = sorted(set(delta['compiler_closure_new']) | set(delta['included_build_new']))
+embedded = ['com.google.guava:guava:33.3.1-jre', 'io.vavr:vavr:0.10.4', 'org.jetbrains.intellij.deps:asm-all:9.6.1',
+            'org.jdom:jdom2:2.0.6.1', 'com.fasterxml.woodstox:woodstox-core:7.1.0', 'com.google.guava:failureaccess:1.0.2']
+coords = closure + embedded
+query = {'queries': [{'package': {'name': c.rsplit(':', 1)[0], 'ecosystem': 'Maven'}, 'version': c.rsplit(':', 1)[1]} for c in coords]}
+(here / 'osv-query.json').write_text(json.dumps(query, indent=2) + '\n')
+p = subprocess.run(['curl', '--proto', '=https', '--tlsv1.2', '--silent', '--show-error', '--max-time', '120', '-X', 'POST',
+                    '-H', 'Content-Type: application/json', '--data-binary', '@' + str(here / 'osv-query.json'),
+                    'https://api.osv.dev/v1/querybatch'], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, timeout=180)
+if not (p.returncode == 0):
+    raise SystemExit(p.stderr)
+(here / 'osv-result.json').write_text(p.stdout)
+results = json.loads(p.stdout)['results']
+summary = {c: [v['id'] for v in r.get('vulns', [])] for c, r in zip(coords, results)}
+(here / 'osv-summary.json').write_text(json.dumps({'closure': {c: summary[c] for c in closure},
+                                                  'embedded_catalog_declared_informational': {c: summary[c] for c in embedded},
+                                                  'result_sha256': hashlib.sha256(p.stdout.encode()).hexdigest()}, indent=2) + '\n')
+for c in coords: print(('EMBEDDED ' if c in embedded else '') + c, summary[c])

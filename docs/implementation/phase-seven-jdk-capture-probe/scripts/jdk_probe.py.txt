@@ -1,0 +1,227 @@
+#!/usr/bin/env python3
+"""TC-0038 SR-23 bounded pinned-JDK capture facility probe (execution harness).
+
+Usage: jdk_probe.py <new-out-dir>
+Runs, in order, under sandbox-exec (deny outbound; deny writes outside the invocation's own directory and /dev):
+  1. pinned java -XX:-UsePerfData -Xlog:help                      (own fresh <out>/help)
+  2. java -version mode A (capture options in argv)               (fresh <out>/run-A[-retry1])
+  3. java -version mode B (same options only in JAVA_TOOL_OPTIONS) (fresh <out>/run-B[-retry1])
+  4. pinned jfr summary and jfr print --json --events <six> per recording (fresh decoder dirs)
+Every child gets an explicit minimal environment (nothing inherited), a 30 s timeout and kill/reap of only its
+own PID. Stops at the first failure except the one permitted narrowed log retry per mode. Raw output stays local.
+"""
+import datetime
+import hashlib
+import json
+import os
+from pathlib import Path
+import re
+import subprocess
+import sys
+import time
+
+JDK = Path('/Users/boristacyniak/.sdkman/candidates/java/17.0.1-tem')
+PINS = {
+    'realpath(bin/java)': (lambda: Path(os.path.realpath(JDK / 'bin/java')), '2c663a2f4677833e1305ea553aa188af1e22aca92a85f39e6189ae0708e5f8b4'),
+    'lib/server/libjvm.dylib': (lambda: JDK / 'lib/server/libjvm.dylib', '15213df7162b170ef0f658004f534d52e92d8f24f67e2a7ce327ea0dc78014fb'),
+    'bin/jfr': (lambda: JDK / 'bin/jfr', 'e1425ac98334fff59d6b2b8cffb3cf720e90a88016db4f1c67a9ea5225bf881b'),
+    'lib/modules': (lambda: JDK / 'lib/modules', '1902c850eecc989ab9d3eb28bacc4cfcc15a058e62710ab87c3b9f4314fd8b91'),
+    'release': (lambda: JDK / 'release', 'c112e6b5ddf9739d7b125ddb75f00ddee4bfa889a1246bdee8f1f009a139ee1d'),
+}
+CANDIDATES = ['jni+resolve=debug', 'library=trace', 'library+load=trace', 'library+unload=trace',
+              'os+library=trace', 'os+library+load=trace', 'os+library+unload=trace']
+SIX = ['jdk.NativeLibrary', 'jdk.JVMInformation', 'jdk.InitialSystemProperty', 'jdk.InitialEnvironmentVariable',
+       'jdk.Shutdown', 'jdk.ProcessStart']
+TIMEOUT = 30
+JFC = '''<?xml version="1.0" encoding="UTF-8"?>
+<configuration version="2.0" label="SR-23 probe" description="TC-0038 SR-23 facility probe only; not an approved collector input" provider="hoyadb">
+  <event name="jdk.NativeLibrary"><setting name="enabled">true</setting><setting name="period">everyChunk</setting></event>
+  <event name="jdk.JVMInformation"><setting name="enabled">true</setting><setting name="period">everyChunk</setting></event>
+  <event name="jdk.InitialSystemProperty"><setting name="enabled">true</setting><setting name="period">everyChunk</setting></event>
+  <event name="jdk.InitialEnvironmentVariable"><setting name="enabled">true</setting><setting name="period">everyChunk</setting></event>
+  <event name="jdk.Shutdown"><setting name="enabled">true</setting><setting name="stackTrace">false</setting></event>
+  <event name="jdk.ProcessStart"><setting name="enabled">true</setting><setting name="stackTrace">false</setting></event>
+</configuration>
+'''
+INVALID_TAG = re.compile(r"Invalid tag '([a-z0-9_]+)'")
+NO_TAG_SET = re.compile(r'No tag set matches selection(?:\(s\))?: ?([a-z0-9_+*]+)')
+
+OUT = Path(sys.argv[1])
+OUT.mkdir(parents=False, exist_ok=False)
+OUT = Path(os.path.realpath(OUT))
+LOG = {'harness': str(Path(__file__).resolve()), 'harness_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+       'out': str(OUT), 'started_utc': datetime.datetime.now(datetime.timezone.utc).isoformat(), 'steps': []}
+
+
+def sha(path):
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
+def save():
+    (OUT / 'probe-log.json').write_text(json.dumps(LOG, indent=1) + '\n')
+
+
+def pins(label):
+    result = {}
+    for name, (where, expected) in PINS.items():
+        digest = sha(where())
+        result[name] = {'sha256': digest, 'match': digest == expected}
+    LOG['pins_' + label] = result
+    save()
+    if not all(v['match'] for v in result.values()):
+        raise SystemExit('PIN MISMATCH (%s): %s' % (label, sorted(k for k, v in result.items() if not v['match'])))
+
+
+def owned(directory):
+    """Fresh owned directory for one invocation, with home/tmp beneath it."""
+    directory.mkdir(parents=False, exist_ok=False)
+    for sub in ('home', 'tmp', 'work'):
+        (directory / sub).mkdir()
+    return Path(os.path.realpath(directory))
+
+
+def env_for(directory, extra=None):
+    env = {'PATH': '%s/bin:/usr/bin:/bin' % JDK, 'JAVA_HOME': str(JDK), 'LANG': 'C',
+           'HOME': str(directory / 'home'), 'TMPDIR': str(directory / 'tmp') + '/'}
+    env.update(extra or {})
+    return env
+
+
+def profile(directory):
+    for value in (str(directory), '/dev'):
+        if '"' in value or '\\' in value:
+            raise SystemExit('unsafe path for sandbox profile')
+    return ('(version 1)(allow default)(deny network-outbound)'
+            '(deny file-write* (require-all (require-not (subpath "%s")) (require-not (subpath "%s"))))'
+            % (directory, os.path.realpath('/dev')))
+
+
+def spawn(name, directory, argv, env):
+    """One sandboxed invocation; stdout/stderr to separate files; 30 s timeout; kill/reap own PID only."""
+    command = ['/usr/bin/sandbox-exec', '-p', profile(directory)] + argv
+    entry = {'name': name, 'dir': str(directory), 'argv': argv, 'sandbox_profile': profile(directory),
+             'env_names': sorted(env), 'env': env, 'cwd': str(directory / 'work')}
+    LOG['steps'].append(entry)
+    out_path, err_path = directory / 'stdout.txt', directory / 'stderr.txt'
+    entry['started_utc'] = datetime.datetime.now(datetime.timezone.utc).isoformat()
+    started = time.monotonic()
+    with out_path.open('wb') as out, err_path.open('wb') as err:
+        process = subprocess.Popen(command, cwd=directory / 'work', env=env, stdout=out, stderr=err, close_fds=True)
+        entry['spawned_pid'] = process.pid
+        try:
+            entry['returncode'] = process.wait(timeout=TIMEOUT)
+        except subprocess.TimeoutExpired:
+            process.kill()
+            entry['returncode'] = process.wait()
+            entry['killed_after_timeout'] = True
+    entry['ended_utc'] = datetime.datetime.now(datetime.timezone.utc).isoformat()
+    entry['elapsed_s'] = round(time.monotonic() - started, 3)
+    entry['stdout_sha256'], entry['stderr_sha256'] = sha(out_path), sha(err_path)
+    entry['inventory'] = {str(p.relative_to(directory)): {'bytes': p.stat().st_size, 'sha256': sha(p)}
+                          for p in sorted(directory.rglob('*')) if p.is_file()}
+    entry['dirs'] = sorted(str(p.relative_to(directory)) for p in directory.rglob('*') if p.is_dir())
+    save()
+    return entry, out_path.read_text(errors='replace') + err_path.read_text(errors='replace')
+
+
+def unsupported(text, selections):
+    """Map unsupported-logging diagnostics to exact requested selections. Returns (mapped, unmapped_signal)."""
+    mapped, signal = set(), 'Invalid tag' in text or 'No tag set matches' in text
+    for m in INVALID_TAG.finditer(text):
+        mapped |= {s for s in selections if m.group(1) in s.split('=')[0].split('+')}
+    for m in NO_TAG_SET.finditer(text):
+        mapped |= {s for s in selections if s.split('=')[0] == m.group(1).rstrip('*')}
+    return sorted(mapped), signal
+
+
+def capture_options(run, jfc, selections):
+    options = ['-XX:-UsePerfData', '-Djava.io.tmpdir=%s/tmp' % run, '-XX:FlightRecorderOptions=repository=%s/repo' % run,
+               '-XX:StartFlightRecording=filename=%s/jfr/,dumponexit=true,settings=%s' % (run, jfc),
+               '-Xlog:class+load=info:file=%s/classload-%%p.log:uptime,pid,tid:filecount=0' % run]
+    for selection in selections:
+        stem = selection.split('=')[0].replace('+', '_')
+        options.append('-Xlog:%s:file=%s/log-%s-%%p.log:uptime,pid,tid:filecount=0' % (selection, run, stem))
+    for option in options:
+        if any(c.isspace() for c in option):
+            raise SystemExit('whitespace in capture option')
+    return options
+
+
+def version_mode(mode, jfc, selections):
+    for attempt in ('', '-retry1'):
+        run = owned(OUT / ('run-%s%s' % (mode, attempt)))
+        for sub in ('repo', 'jfr'):
+            (run / sub).mkdir()
+        options = capture_options(run, jfc, selections)
+        if mode == 'A':
+            entry, text = spawn('version-%s%s' % (mode, attempt), run, [str(JDK / 'bin/java')] + options + ['-version'], env_for(run))
+        else:
+            entry, text = spawn('version-%s%s' % (mode, attempt), run, [str(JDK / 'bin/java'), '-version'],
+                                env_for(run, {'JAVA_TOOL_OPTIONS': ' '.join(options)}))
+        entry['mode'], entry['capture_options'], entry['requested_candidates'] = mode, options, list(selections)
+        rejected, signal = unsupported(text, selections)
+        entry['unsupported_logging'] = {'mapped_selections': rejected, 'diagnostic_present': signal}
+        save()
+        failed = entry['returncode'] != 0 or entry.get('killed_after_timeout') or signal
+        if not failed:
+            return run
+        if attempt or not signal or not rejected:
+            entry['probe_failure'] = True
+            save()
+            raise SystemExit('PROBE FAILURE (diagnostic, preserved): %s' % entry['name'])
+        narrowed = [s for s in selections if s not in rejected]
+        LOG.setdefault('narrowed_retries', []).append({'mode': mode, 'omitted_exactly': rejected})
+        selections = narrowed
+        save()
+
+
+def decode(mode, run):
+    recordings = sorted((run / 'jfr').glob('*.jfr'))
+    LOG.setdefault('recordings', {})[mode] = [str(p) for p in recordings]
+    save()
+    if len(recordings) != 1:
+        raise SystemExit('PROBE FAILURE: %d recordings in %s' % (len(recordings), run))
+    for kind, args in (('summary', ['summary']), ('print', ['print', '--json', '--events', ','.join(SIX)])):
+        decoder = owned(OUT / ('decode-%s-%s' % (mode, kind)))
+        env = env_for(decoder, {'JAVA_TOOL_OPTIONS': '-XX:-UsePerfData -Djava.io.tmpdir=%s/tmp' % decoder})
+        entry, _ = spawn('decode-%s-%s' % (mode, kind), decoder, [str(JDK / 'bin/jfr')] + args + [str(recordings[0])], env)
+        if entry['returncode'] != 0 or entry.get('killed_after_timeout'):
+            entry['probe_failure'] = True
+            save()
+            raise SystemExit('PROBE FAILURE (diagnostic, preserved): %s' % entry['name'])
+
+
+pins('before')
+help_dir = owned(OUT / 'help')
+entry, text = spawn('xlog-help', help_dir, [str(JDK / 'bin/java'), '-XX:-UsePerfData', '-Xlog:help'], env_for(help_dir))
+if entry['returncode'] != 0 or entry.get('killed_after_timeout'):
+    entry['probe_failure'] = True
+    save()
+    raise SystemExit('PROBE FAILURE (diagnostic, preserved): xlog-help')
+section = re.search(r'Available log tags:\s*(.*?)(?:\n\s*\n|Described tag sets|$)', (help_dir / 'stdout.txt').read_text(), re.S)
+tags = set(re.findall(r'[a-z0-9_]+', section.group(1))) if section else set()
+LOG['help_tags'] = sorted(tags)
+LOG['candidates'] = {c: {'tags': c.split('=')[0].split('+'), 'all_tags_in_help': all(t in tags for t in c.split('=')[0].split('+'))}
+                     for c in CANDIDATES}
+selected = [c for c in CANDIDATES if LOG['candidates'][c]['all_tags_in_help']]
+LOG['selected_candidates_before_version_runs'] = selected
+save()
+if not tags:
+    raise SystemExit('PROBE FAILURE: no tag list parsed from -Xlog:help (preserved)')
+
+jfc_dir = OUT / 'jfc'
+jfc_dir.mkdir()
+(jfc_dir / 'sr23-probe.jfc').write_text(JFC)
+jfc = Path(os.path.realpath(jfc_dir / 'sr23-probe.jfc'))
+LOG['jfc'] = {'path': str(jfc), 'sha256': sha(jfc)}
+save()
+
+runs = {mode: version_mode(mode, jfc, selected) for mode in ('A', 'B')}
+LOG['final_runs'] = {m: str(r) for m, r in runs.items()}
+save()
+for mode, run in runs.items():
+    decode(mode, run)
+pins('after')
+LOG['ended_utc'] = datetime.datetime.now(datetime.timezone.utc).isoformat()
+save()
+print('SR23_PROBE_EXECUTION_COMPLETE', OUT)

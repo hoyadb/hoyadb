@@ -1,0 +1,24 @@
+[
+  {
+    "name": "G19 external wire receipt wakes sleeping local reconciliation before retry deadline",
+    "ok": false,
+    "error": "external receipt did not wake local reconcile before future retry"
+  }
+]
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+1 !== 0
+
+    at file:///Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-web/receipt-wake-actual.mjs:4:108 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 1,
+  expected: 0,
+  operator: 'strictEqual'
+}
+
+Node.js v22.18.0

@@ -1,0 +1,41 @@
+{
+  "catalogue_local_path": "target/phase-seven-security-remediation/native-baseline-study/cache-image-text-infos.json",
+  "catalogue_matches": 513,
+  "catalogue_sha256": "1205ea9c7a0b1a2999fb8a7a4ca8ad2f319adda373d87fbe31e52ebd7d329fd8",
+  "decoder_output_sha256": "1c886a2662e8064716ed32d9a0eb0d4f12d3afa9c0f938d82429a8d733cf083d",
+  "dual_resident_images": [
+    {
+      "image_uuid": "5818A89C-725F-3DFD-978E-C1FC018315D3",
+      "inferred_slide": 156499968,
+      "observed_base_address": 140703333654528,
+      "path": "/usr/lib/system/libsystem_kernel.dylib",
+      "unslid_load_address": 140703177154560
+    },
+    {
+      "image_uuid": "0C56AA69-5B51-367B-8A2C-16B95CC46A5E",
+      "inferred_slide": 156499968,
+      "observed_base_address": 140703333961728,
+      "path": "/usr/lib/system/libsystem_platform.dylib",
+      "unslid_load_address": 140703177461760
+    },
+    {
+      "image_uuid": "169A2E57-79FB-3083-B61D-48BAE3A00692",
+      "inferred_slide": 156499968,
+      "observed_base_address": 140703333912576,
+      "path": "/usr/lib/system/libsystem_pthread.dylib",
+      "unslid_load_address": 140703177412608
+    }
+  ],
+  "format": 1,
+  "inferred_slide_counts": {
+    "0x9540000": 513
+  },
+  "limits": [
+    "JFR does not attest the mapped-cache UUID",
+    "Prior catalogue association is an inference; this check does not replace pre/post full cache hashes and boot-session identity",
+    "No classifier changes, image enrollment, dependency activation or compiler hold release"
+  ],
+  "observed_names": 520,
+  "run_b_pid": 56868,
+  "scope": "Pure-read diagnostic check of run B against the prior catalogue; no baseline approval or full host rehash"
+}

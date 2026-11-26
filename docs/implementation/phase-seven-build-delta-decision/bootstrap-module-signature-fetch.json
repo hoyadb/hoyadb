@@ -1,0 +1,18 @@
+{
+  "source_log": "target/phase-seven-rn/bootstrap-review/fetch-log.json",
+  "source_log_sha256": "fbfbae04d5e573be92945f30c8d80e3f01c9f628f1b005b362a6c8e0c2815f86",
+  "source_entry_index_zero_based": 38,
+  "entry": {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.2.21/kotlin-stdlib-2.2.21.module.asc",
+    "dest": "followup-1/module-signature/kotlin-stdlib-2.2.21.module.asc",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.2.21/kotlin-stdlib-2.2.21.module.asc",
+    "bytes": 689,
+    "sha256": "2bc4d2939096f2ca57264f46efb45db6aba11390d0bcda4a814752d3df01f21b",
+    "sha1": "080093f23f1809f89e19a59d819b1e384971a9ba"
+  },
+  "durable_signature_file": "docs/implementation/phase-seven-rn-bootstrap-addendum/followup-1/module-signature/kotlin-stdlib-2.2.21.module.asc",
+  "file_sha256": "2bc4d2939096f2ca57264f46efb45db6aba11390d0bcda4a814752d3df01f21b",
+  "note": "Supplement to frozen original 38-entry fetch log; original log is not rewritten."
+}

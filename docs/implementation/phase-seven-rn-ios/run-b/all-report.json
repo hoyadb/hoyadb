@@ -1,0 +1,270 @@
+{
+  "platform": "ios",
+  "mode": "all",
+  "hermes": true,
+  "reports": [
+    {
+      "name": "actual native original-frame/key/default-root/memory/capability guards",
+      "ok": true
+    },
+    {
+      "name": "RN retained factory",
+      "ok": false,
+      "error": "duplicate active open of the selected store: missing Busy",
+      "stack": "Error: duplicate active open of the selected store: missing Busy\n    at ?anon_0_ (/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/ios-build-f/main.jsbundle.js:47693:18)\n    at next (native)\n    at asyncGeneratorStep (/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/ios-build-f/main.jsbundle.js:1168:19)\n    at _next (/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/ios-build-f/main.jsbundle.js:1182:29)\n    at tryCallOne (address at InternalBytecode.js:1:1296)\n    at anonymous (address at InternalBytecode.js:1:4984)"
+    },
+    {
+      "name": "mixed native SDK/RN",
+      "ok": false,
+      "error": "undefined is not a function",
+      "stack": "TypeError: undefined is not a function\n    at ?anon_0_ (/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/ios-build-f/main.jsbundle.js:47906:30)\n    at next (native)\n    at asyncGeneratorStep (/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/ios-build-f/main.jsbundle.js:1168:19)\n    at anonymous (/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/ios-build-f/main.jsbundle.js:1182:29)\n    at tryCallTwo (address at InternalBytecode.js:1:1329)\n    at Promise (address at InternalBytecode.js:1:1440)\n    at anonymous (/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/ios-build-f/main.jsbundle.js:1179:25)\n    at apply (native)\n    at anonymous (/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/ios-build-f/main.jsbundle.js:47910:30)\n    at anonymous (/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/ios-build-f/main.jsbundle.js:45908:33)\n    at tryCallOne (address at InternalBytecode.js:1:1296)\n    at anonymous (address at InternalBytecode.js:1:4984)"
+    },
+    {
+      "name": "G01/G03/G04 unrelated A schema all typed cells and three relation kinds",
+      "ok": true,
+      "engine": "native-memory"
+    },
+    {
+      "name": "G01 unrelated B HasMany uses the same caller-defined facade",
+      "ok": true,
+      "engine": "native-memory"
+    },
+    {
+      "name": "G04 admitted In operands cross4096 and32766 through the existing core planner",
+      "ok": true,
+      "engine": "native-memory"
+    },
+    {
+      "name": "G11 keyed batch fitting full images and latest same-ID transitions stay exact",
+      "ok": true,
+      "engine": "native-memory"
+    },
+    {
+      "name": "G11 byte-exact terminal prefix progresses once without losing either event",
+      "ok": true,
+      "engine": "native-memory"
+    },
+    {
+      "name": "G03 core codecs preserve extrema Float Unicode and reject duplicates",
+      "ok": true,
+      "engine": "native-memory"
+    },
+    {
+      "name": "G05 membership columns count delegate shared observation groups",
+      "ok": true,
+      "engine": "native-memory"
+    },
+    {
+      "name": "G05 real managed count initial delivery and unpostponed deadline need no manual drain",
+      "ok": true,
+      "engine": "native-memory"
+    },
+    {
+      "name": "G06/G20/TC16 awaited handler immutable context optimistic rows and queue offline",
+      "ok": true,
+      "engine": "native-memory"
+    },
+    {
+      "name": "G19/G21/TC16 real fake transport correlates applied rejected and dropped ACK retries",
+      "ok": true,
+      "engine": "native-memory"
+    },
+    {
+      "name": "G12/G13/G14 passive async hooks preserve staged sequence authority and stale refetch",
+      "ok": true,
+      "engine": "native-memory"
+    },
+    {
+      "name": "G17/G18 mixed command entity correlation and checkpoint progress use shared core",
+      "ok": true,
+      "engine": "native-memory"
+    },
+    {
+      "name": "G02/G22 retained backend authored seven-step migration and failure preservation",
+      "ok": true,
+      "engine": "native-memory"
+    },
+    {
+      "name": "G05 managed prepare transition delivered without another operation",
+      "ok": true,
+      "engine": "native-memory"
+    },
+    {
+      "name": "G05 managed receive transition delivered without another operation",
+      "ok": true,
+      "engine": "native-memory"
+    },
+    {
+      "name": "G19 external wire receipt wakes sleeping local reconciliation before retry deadline",
+      "ok": false,
+      "error": "future retry deadline",
+      "engine": "native-memory"
+    },
+    {
+      "name": "G01/G03/G04 unrelated A schema all typed cells and three relation kinds",
+      "ok": true,
+      "engine": "native-protected"
+    },
+    {
+      "name": "G01 unrelated B HasMany uses the same caller-defined facade",
+      "ok": true,
+      "engine": "native-protected"
+    },
+    {
+      "name": "G04 admitted In operands cross4096 and32766 through the existing core planner",
+      "ok": true,
+      "engine": "native-protected"
+    },
+    {
+      "name": "G11 keyed batch fitting full images and latest same-ID transitions stay exact",
+      "ok": true,
+      "engine": "native-protected"
+    },
+    {
+      "name": "G11 byte-exact terminal prefix progresses once without losing either event",
+      "ok": true,
+      "engine": "native-protected"
+    },
+    {
+      "name": "G03 core codecs preserve extrema Float Unicode and reject duplicates",
+      "ok": true,
+      "engine": "native-protected"
+    },
+    {
+      "name": "G05 membership columns count delegate shared observation groups",
+      "ok": true,
+      "engine": "native-protected"
+    },
+    {
+      "name": "G05 real managed count initial delivery and unpostponed deadline need no manual drain",
+      "ok": true,
+      "engine": "native-protected"
+    },
+    {
+      "name": "G06/G20/TC16 awaited handler immutable context optimistic rows and queue offline",
+      "ok": true,
+      "engine": "native-protected"
+    },
+    {
+      "name": "G19/G21/TC16 real fake transport correlates applied rejected and dropped ACK retries",
+      "ok": true,
+      "engine": "native-protected"
+    },
+    {
+      "name": "G12/G13/G14 passive async hooks preserve staged sequence authority and stale refetch",
+      "ok": true,
+      "engine": "native-protected"
+    },
+    {
+      "name": "G17/G18 mixed command entity correlation and checkpoint progress use shared core",
+      "ok": true,
+      "engine": "native-protected"
+    },
+    {
+      "name": "G02/G22 retained backend authored seven-step migration and failure preservation",
+      "ok": true,
+      "engine": "native-protected"
+    },
+    {
+      "name": "G05 managed prepare transition delivered without another operation",
+      "ok": true,
+      "engine": "native-protected"
+    },
+    {
+      "name": "G05 managed receive transition delivered without another operation",
+      "ok": true,
+      "engine": "native-protected"
+    },
+    {
+      "name": "G19 external wire receipt wakes sleeping local reconciliation before retry deadline",
+      "ok": false,
+      "error": "future retry deadline",
+      "engine": "native-protected"
+    },
+    {
+      "id": "TC17.1",
+      "ok": true,
+      "engine": "native-protected"
+    },
+    {
+      "id": "TC16.1",
+      "ok": true,
+      "engine": "native-protected"
+    },
+    {
+      "id": "TC17.3",
+      "ok": true,
+      "engine": "native-protected"
+    },
+    {
+      "id": "TC17.4",
+      "ok": true,
+      "engine": "native-protected"
+    },
+    {
+      "id": "TC17.5",
+      "ok": true,
+      "engine": "native-protected"
+    },
+    {
+      "id": "TC16.2",
+      "ok": true,
+      "comparison": "exact row/relation/subscription/command assertions repeated per real adapter",
+      "engine": "native-protected"
+    },
+    {
+      "id": "TC16.7",
+      "ok": true,
+      "engine": "native-protected"
+    },
+    {
+      "id": "TC16.8",
+      "ok": true,
+      "ordinary_id": "test-fixed-id-001",
+      "command_id": "local:test-fixed-id-001",
+      "approval": "ADR-0035",
+      "engine": "native-protected"
+    },
+    {
+      "id": "TC16.3",
+      "ok": true,
+      "engine": "native-protected"
+    },
+    {
+      "id": "TC16.4",
+      "ok": true,
+      "engine": "native-protected"
+    },
+    {
+      "id": "TC16.5",
+      "ok": true,
+      "engine": "native-protected"
+    },
+    {
+      "id": "TC16.6",
+      "ok": true,
+      "engine": "native-protected"
+    },
+    {
+      "id": "TC17.6",
+      "ok": true,
+      "engine": "native-protected"
+    },
+    {
+      "id": "TC17.7",
+      "ok": true,
+      "engine": "native-protected"
+    },
+    {
+      "id": "TC17.8",
+      "ok": true,
+      "network_successes": "0",
+      "engine": "native-protected"
+    },
+    {
+      "id": "TC17.2",
+      "ok": true
+    }
+  ],
+  "failed": 4
+}

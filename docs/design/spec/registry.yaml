@@ -1,0 +1,1263 @@
+# docs/design/spec/registry.yaml — hoyadb's single append-only source of allocated ids (TRACE-2).
+#
+# To allocate a new id: append a new entry with the next free number for that
+# prefix. Never reuse or renumber an id, even if the file is later deleted or
+# the artifact deprecated — remove the file, but leave the registry entry with
+# a comment, or add a `status: removed` sibling artifact per the lifecycle.
+#
+# Listed in allocation order (the order in which each id was first assigned),
+# no gaps. File paths are relative to the formal artifact root, docs/design/
+# (ADR-0029), not to this registry file or the repository root.
+
+- id: VIS-0001
+  title: hoyadb — an offline-first, relational, reactive embedded database
+  file: vision/VIS-0001-hoyadb.md
+
+- id: OBJ-0001
+  title: An application built on hoyadb stays fully usable with no network
+  file: objectives/OBJ-0001-offline-operability.md
+
+- id: OBJ-0002
+  title: One core implementation serves every supported platform
+  file: objectives/OBJ-0002-one-portable-core.md
+
+- id: OBJ-0003
+  title: Writes reach the backend as intent, resolved authoritatively server-side
+  file: objectives/OBJ-0003-intent-preserving-sync.md
+
+- id: OBJ-0004
+  title: Establish a performance baseline — no numeric target is set yet
+  file: objectives/OBJ-0004-performance-baseline.md
+
+- id: OBJ-0005
+  title: Applications observe query results live, without re-filtering a raw change feed
+  file: objectives/OBJ-0005-live-reactivity.md
+
+- id: OBJ-0006
+  title: hoyadb stays a library — it owns local data protection and nothing beyond it
+  file: objectives/OBJ-0006-library-not-service.md
+
+- id: ADR-0001
+  title: Platform & language — one Rust core, compiled to WASM and exposed via native bindings
+  file: decisions/ADR-0001-rust-core-wasm-native-bindings.md
+
+- id: ADR-0002
+  title: Data model — hoyadb owns its own relational schema
+  file: decisions/ADR-0002-hoyadb-owns-its-schema.md
+
+- id: ADR-0003
+  title: Storage — one narrow pluggable interface, SQLite-family engine as the default
+  file: decisions/ADR-0003-pluggable-storage-interface.md
+
+- id: ADR-0004
+  title: Reactivity — one query object, two modes, set-membership change as the default trigger
+  file: decisions/ADR-0004-reactivity-set-membership-default.md
+
+- id: ADR-0005
+  title: Sync mechanism — named commands as the primary write path, entity-diff as fallback
+  file: decisions/ADR-0005-command-first-sync.md
+
+- id: ADR-0006
+  title: Topology & scoping — one authoritative backend, server-computed membership
+  file: decisions/ADR-0006-authoritative-backend-membership-scoping.md
+
+- id: ADR-0007
+  title: Conflict resolution — per-field last-write-wins, deletes win, overridable per table
+  file: decisions/ADR-0007-per-field-lww-conflict-default.md
+
+- id: ADR-0008
+  title: Sequence the work as an implementation roadmap whose first step validates the Rust core shape
+  file: decisions/ADR-0008-implementation-roadmap-validation-spike.md
+
+- id: ADR-0009
+  title: Schema migrations — apply an authored chain, otherwise reset the local database
+  file: decisions/ADR-0009-migration-chain-or-reset.md
+
+- id: ADR-0010
+  title: Every command carries a client-generated, time-sortable idempotency key
+  file: decisions/ADR-0010-client-generated-idempotency-key.md
+
+- id: ADR-0011
+  title: Ack is durable receipt, separate from outcome, surfaced as one transport-agnostic enum
+  file: decisions/ADR-0011-ack-receipt-and-outcome-enum.md
+
+- id: ADR-0012
+  title: Corrections and rejections surface through the ordinary subscription path, with an explicit rollback
+  file: decisions/ADR-0012-correction-via-subscription-and-rollback.md
+
+- id: ADR-0013
+  title: Every envelope declares the client schema version; command names carry a version suffix
+  file: decisions/ADR-0013-schema-version-and-versioned-command-names.md
+
+- id: ADR-0014
+  title: Command determinism between client and server runs is an explicit non-goal
+  file: decisions/ADR-0014-command-determinism-is-a-non-goal.md
+
+- id: ADR-0015
+  title: On membership revocation hoyadb exposes a reset operation, it does not purge on its own
+  file: decisions/ADR-0015-membership-revocation-developer-invoked-reset.md
+
+- id: ADR-0016
+  title: Offline writes go through a durable, state-tracked, locally-persisted queue
+  file: decisions/ADR-0016-durable-offline-queue.md
+
+- id: ADR-0017
+  title: Identical-timestamp conflicts are broken server-side — first received wins
+  file: decisions/ADR-0017-server-side-tie-break.md
+
+- id: ADR-0018
+  title: Two devices under one identity are an ordinary conflict case, not a special one
+  file: decisions/ADR-0018-multi-device-is-an-ordinary-conflict.md
+
+- id: ADR-0019
+  title: Transport and auth standards are out of hoyadb's scope; at-rest encryption is engine-native
+  file: decisions/ADR-0019-security-standards-scope.md
+
+- id: ADR-0020
+  title: The developer supplies at-rest key material; hoyadb never generates, stores or manages it
+  file: decisions/ADR-0020-developer-supplied-encryption-key.md
+
+- id: ADR-0021
+  title: Command and trusted-context contents stay in local state; hoyadb sends no telemetry
+  file: decisions/ADR-0021-local-only-logging-no-telemetry.md
+
+- id: ADR-0022
+  title: Performance — establish a baseline once there is an implementation, then hold or improve it
+  file: decisions/ADR-0022-performance-baseline-then-hold.md
+
+- id: ADR-0023
+  title: hoyadb's public API follows semver; its own bookkeeping uses a reserved namespace
+  file: decisions/ADR-0023-semver-and-reserved-namespace.md
+
+- id: ADR-0024
+  title: No durability guarantees beyond the queue's; hoyadb targets a small, mobile-appropriate dataset
+  file: decisions/ADR-0024-durability-and-footprint-scope.md
+
+- id: ADR-0025
+  title: Command handlers are async and may read locally; hoyadb serializes them and commits each atomically
+  file: decisions/ADR-0025-async-serialized-handler-execution.md
+
+- id: ADR-0026
+  title: The reference transport always sends an array; each write resolves independently
+  file: decisions/ADR-0026-batching-is-the-default.md
+
+- id: ADR-0027
+  title: Query model — a deliberately minimal operator catalogue; indexing left undecided
+  file: decisions/ADR-0027-minimal-query-model.md
+
+- id: ADR-0028
+  title: Observability — per-command status, manual cancel, backoff with jitter, backend-owned key retention
+  file: decisions/ADR-0028-per-command-observability.md
+
+- id: REQ-0001
+  title: An application declares a schema of typed tables and columns
+  file: requirements/REQ-0001-declare-schema.md
+
+- id: REQ-0002
+  title: Relations are first-class schema constructs, navigable from either side
+  file: requirements/REQ-0002-first-class-relations.md
+
+- id: REQ-0003
+  title: A query filters with comparison operators combined as implicit AND
+  file: requirements/REQ-0003-query-predicates.md
+
+- id: REQ-0004
+  title: A query filters on a to-one relation's field by dot-path
+  file: requirements/REQ-0004-relation-traversal-in-predicates.md
+
+- id: REQ-0005
+  title: A query orders its results and caps their count
+  file: requirements/REQ-0005-ordering-and-limit.md
+
+- id: REQ-0006
+  title: A schema version change applies an authored migration chain, or resets the local database
+  file: requirements/REQ-0006-migration-chain-or-reset.md
+
+- id: REQ-0007
+  title: One query object supports both a one-shot read and a live subscription
+  file: requirements/REQ-0007-read-once-or-subscribe.md
+
+- id: REQ-0008
+  title: A subscription re-emits only on set-membership change by default
+  file: requirements/REQ-0008-set-membership-default-granularity.md
+
+- id: REQ-0009
+  title: Coarser and finer observation granularity are available as explicit opt-ins
+  file: requirements/REQ-0009-observation-granularity-opt-ins.md
+
+- id: REQ-0010
+  title: A command applies optimistically against the local store and is queued for an authoritative re-run
+  file: requirements/REQ-0010-command-optimistic-apply.md
+
+- id: REQ-0011
+  title: Command handlers run one at a time and commit their writes as one atomic transaction
+  file: requirements/REQ-0011-handler-execution-model.md
+
+- id: REQ-0012
+  title: A command travels as an envelope of name, arguments, keys and trusted context
+  file: requirements/REQ-0012-command-envelope.md
+
+- id: REQ-0013
+  title: Every command carries a client-generated, time-sortable idempotency key, reused on retry
+  file: requirements/REQ-0013-idempotency-key.md
+
+- id: REQ-0014
+  title: Every write envelope declares the client's schema version; command names carry a version suffix
+  file: requirements/REQ-0014-schema-version-and-command-versioning.md
+
+- id: REQ-0015
+  title: hoyadb carries an already-authenticated identity client-unforgeably and implements no authentication
+  file: requirements/REQ-0015-trusted-context-boundary.md
+
+- id: REQ-0016
+  title: A command's outcome is surfaced as one transport-agnostic status, with ack distinct from acceptance
+  file: requirements/REQ-0016-transport-agnostic-outcome.md
+
+- id: REQ-0017
+  title: Corrections and rejections reach the app through its subscriptions, with a rollback available
+  file: requirements/REQ-0017-correction-rollback.md
+
+- id: REQ-0018
+  title: Queued writes are persisted locally and tracked through explicit states across restarts
+  file: requirements/REQ-0018-offline-queue-state-machine.md
+
+- id: REQ-0019
+  title: A write referencing an unresolved local id stays queued until the backend id is known
+  file: requirements/REQ-0019-dependent-writes-and-id-swap.md
+
+- id: REQ-0020
+  title: Unacknowledged writes are retried with exponential backoff and jitter
+  file: requirements/REQ-0020-retry-with-backoff.md
+
+- id: REQ-0021
+  title: Queue state is introspectable in aggregate and per command
+  file: requirements/REQ-0021-queue-introspection.md
+
+- id: REQ-0022
+  title: A developer can explicitly cancel a queued or rejected command; hoyadb never auto-cancels
+  file: requirements/REQ-0022-explicit-command-cancel.md
+
+- id: REQ-0023
+  title: Plain table writes sync as entity-diff payloads under the same authorization bar as a command
+  file: requirements/REQ-0023-entity-diff-fallback.md
+
+- id: REQ-0024
+  title: Entity-diff conflicts resolve per field, with deletes winning and a per-table override
+  file: requirements/REQ-0024-per-field-lww.md
+
+- id: REQ-0025
+  title: The client does not break an identical-timestamp tie; the backend does, by arrival order
+  file: requirements/REQ-0025-timestamp-tie-break.md
+
+- id: REQ-0026
+  title: What a client holds is computed server-side from membership, never from UI state
+  file: requirements/REQ-0026-membership-scoped-sync.md
+
+- id: REQ-0027
+  title: hoyadb exposes an explicit local reset; it never purges revoked data on its own
+  file: requirements/REQ-0027-reset-operation.md
+
+- id: REQ-0028
+  title: hoyadb opens no network connection; it calls a developer-supplied transport
+  file: requirements/REQ-0028-no-network-calls-transport-interface.md
+
+- id: REQ-0029
+  title: Writes always push as an array, each resolved independently and correlated by key
+  file: requirements/REQ-0029-batched-independently-resolved-writes.md
+
+- id: REQ-0030
+  title: The local store is encrypted at rest using the engine's own capability and a developer-supplied key
+  file: requirements/REQ-0030-at-rest-encryption.md
+
+- id: REQ-0031
+  title: The local store is excluded from platform device and app backups by default
+  file: requirements/REQ-0031-backup-exclusion.md
+
+- id: REQ-0032
+  title: Command and trusted-context contents stay in local state; no telemetry leaves the device
+  file: requirements/REQ-0032-local-only-logging.md
+
+- id: REQ-0033
+  title: hoyadb's own tables and fields use a reserved namespace that cannot collide with an app schema
+  file: requirements/REQ-0033-reserved-namespace.md
+
+- id: REQ-0034
+  title: An in-memory engine, a fake transport, and injectable clock/id make app tests hermetic
+  file: requirements/REQ-0034-testing-support.md
+
+- id: NFR-0001
+  title: Local operation responsiveness — no numeric target is set yet
+  file: requirements/nfr/NFR-0001-local-operation-responsiveness.md
+
+- id: NFR-0002
+  title: Every documented local operation works with no network connection
+  file: requirements/nfr/NFR-0002-offline-operability.md
+
+- id: NFR-0003
+  title: A queued write survives an app kill, atomically where the engine supports transactions
+  file: requirements/nfr/NFR-0003-queued-write-durability.md
+
+- id: NFR-0004
+  title: hoyadb targets a mobile-appropriate local dataset — no numeric ceiling is set
+  file: requirements/nfr/NFR-0004-local-dataset-footprint.md
+
+- id: NFR-0005
+  title: hoyadb's public API follows semver, and a local reset is never the default on an upgrade
+  file: requirements/nfr/NFR-0005-api-compatibility.md
+
+- id: THR-0001
+  title: Trusted context forged or overwritten on the client
+  file: security/threats/THR-0001-trusted-context-forgery.md
+
+- id: THR-0002
+  title: Local store file read outside the application's own runtime
+  file: security/threats/THR-0002-local-store-read-off-device.md
+
+- id: THR-0003
+  title: A resent command is applied twice by the backend
+  file: security/threats/THR-0003-command-replay-double-apply.md
+
+- id: THR-0004
+  title: Synced data stays on a device after the client's membership is revoked
+  file: security/threats/THR-0004-data-retained-after-revocation.md
+
+- id: THR-0005
+  title: Sync traffic carried over an unencrypted or weakly authenticated transport
+  file: security/threats/THR-0005-unprotected-transport.md
+
+- id: THR-0006
+  title: Unbounded offline-queue growth exhausts local device storage
+  file: security/threats/THR-0006-unbounded-queue-growth.md
+
+- id: THR-0007
+  title: Command arguments and trusted-context values leak through logs or crash reports
+  file: security/threats/THR-0007-command-contents-leak-via-logs.md
+
+- id: THR-0008
+  title: A write cannot be reliably attributed, because hoyadb only carries identity and never verifies it
+  file: security/threats/THR-0008-write-attribution-repudiation.md
+
+- id: RISK-0001
+  title: The Rust-core-to-WASM-plus-native-bindings shape has no precedent in this project's research
+  file: risks/RISK-0001-unprecedented-core-shape.md
+
+- id: RISK-0002
+  title: Command determinism is a responsibility boundary, not a solved problem
+  file: risks/RISK-0002-command-determinism-unowned.md
+
+- id: RISK-0003
+  title: Concurrent access to one local store from two tabs or windows is unaddressed
+  file: risks/RISK-0003-concurrent-local-store-access.md
+
+- id: RISK-0004
+  title: Indexing is undecided, and both query performance and reactive diffing depend on it
+  file: risks/RISK-0004-indexing-undecided.md
+
+- id: RISK-0005
+  title: Bootstrap / initial sync for a fresh install is unspecified
+  file: risks/RISK-0005-bootstrap-initial-sync-unspecified.md
+
+- id: ARC-0001
+  title: hoyadb — system architecture
+  file: architecture/ARC-0001-system.md
+
+- id: ARC-0002
+  title: hoyadb — core/platform boundary and per-platform bindings
+  file: architecture/ARC-0002-platform-bindings.md
+
+- id: DM-0001
+  title: Application record — a row in an app-declared table
+  file: data/DM-0001-application-record.md
+
+- id: DM-0002
+  title: Command envelope — what travels for a domain-level write
+  file: data/DM-0002-command-envelope.md
+
+- id: DM-0003
+  title: Entity-diff payload — what travels for a plain create/update/delete
+  file: data/DM-0003-entity-diff-payload.md
+
+- id: DM-0004
+  title: Offline queue entry — the persisted record of a pending write
+  file: data/DM-0004-offline-queue-entry.md
+
+- id: SPEC-0001
+  title: Storage interface — the engine-agnostic persistence contract
+  file: spec/SPEC-0001-storage-interface.md
+
+- id: SPEC-0002
+  title: Default storage engine — SQLite-family behind the storage interface
+  file: spec/SPEC-0002-default-engine.md
+
+- id: SPEC-0003
+  title: Schema declaration and relations
+  file: spec/SPEC-0003-schema-and-relations.md
+
+- id: SPEC-0004
+  title: Query model — predicates, relation traversal, ordering and limit
+  file: spec/SPEC-0004-query-model.md
+
+- id: SPEC-0005
+  title: Schema migrations — chain-or-reset
+  file: spec/SPEC-0005-schema-migrations.md
+
+- id: SPEC-0006
+  title: Subscriptions — one query object, two consumption modes
+  file: spec/SPEC-0006-subscriptions.md
+
+- id: SPEC-0007
+  title: Subscription performance guards — the coarser and finer opt-ins
+  file: spec/SPEC-0007-performance-guards.md
+
+- id: SPEC-0008
+  title: Command protocol — shape, execution model, reliability and error handling
+  file: spec/SPEC-0008-command-protocol.md
+
+- id: SPEC-0009
+  title: Offline queue — durability, ordering, dependent writes and retry
+  file: spec/SPEC-0009-offline-queue.md
+
+- id: SPEC-0010
+  title: Entity-diff fallback — the plain create/update/delete write path
+  file: spec/SPEC-0010-entity-diff-fallback.md
+
+- id: SPEC-0011
+  title: Conflict resolution — per-field LWW, deletes win, per-table override
+  file: spec/SPEC-0011-conflict-resolution.md
+
+- id: SPEC-0012
+  title: Scoping and topology — membership-computed sync and the reset operation
+  file: spec/SPEC-0012-scoping-topology.md
+
+- id: SPEC-0013
+  title: Transport integration — the developer-supplied push/pull object
+  file: spec/SPEC-0013-transport-integration.md
+
+- id: SPEC-0014
+  title: Security model — what hoyadb owns, and what it requires but does not implement
+  file: spec/SPEC-0014-security-model.md
+
+- id: SPEC-0015
+  title: Queue observability — per-command status, cancel, and retry backoff
+  file: spec/SPEC-0015-queue-observability.md
+
+- id: API-0001
+  title: Reference HTTP sync transport contract
+  file: contracts/API-0001-http-sync-transport.md
+
+- id: UX-0001
+  title: Developer integration flow — schema, subscribe, mutate, handle correction
+  file: ux/flows/UX-0001-developer-integration-flow.md
+
+- id: TP-0001
+  title: hoyadb — test plan
+  file: tests/plan/TP-0001-test-plan.md
+
+- id: TC-0001
+  title: Schema declaration and first-class relations
+  file: tests/cases/TC-0001-schema-and-relations.md
+
+- id: TC-0002
+  title: Query predicates, relation traversal, ordering and limit
+  file: tests/cases/TC-0002-query-model.md
+
+- id: TC-0003
+  title: Migration chain-or-reset, and the reserved namespace
+  file: tests/cases/TC-0003-migrations-and-namespace.md
+
+- id: TC-0004
+  title: One-shot reads, live subscriptions, and observation granularity
+  file: tests/cases/TC-0004-subscriptions.md
+
+- id: TC-0005
+  title: Optimistic apply and the handler execution model
+  file: tests/cases/TC-0005-command-execution.md
+
+- id: TC-0006
+  title: Command envelope contents and versioning
+  file: tests/cases/TC-0006-command-envelope.md
+
+- id: TC-0007
+  title: Command outcomes, corrections and rollback
+  file: tests/cases/TC-0007-outcomes-and-rollback.md
+
+- id: TC-0008
+  title: Queue state machine, crash recovery, and dependent writes
+  file: tests/cases/TC-0008-queue-durability-and-dependents.md
+
+- id: TC-0009
+  title: Retry behaviour and idempotency-key reuse
+  file: tests/cases/TC-0009-retry-and-idempotency.md
+
+- id: TC-0010
+  title: Queue introspection, cancellation and the backlog threshold
+  file: tests/cases/TC-0010-queue-observability.md
+
+- id: TC-0011
+  title: Entity-diff payloads and conflict resolution
+  file: tests/cases/TC-0011-entity-diff-and-conflicts.md
+
+- id: TC-0012
+  title: The library boundary — identity carried, no network call, no telemetry
+  file: tests/cases/TC-0012-boundary-identity-and-egress.md
+
+- id: TC-0013
+  title: Membership-scoped sync and the explicit reset operation
+  file: tests/cases/TC-0013-scoping-and-reset.md
+
+- id: TC-0014
+  title: Array-always push with independent per-write resolution
+  file: tests/cases/TC-0014-batched-push.md
+
+- id: TC-0015
+  title: At-rest encryption and backup exclusion
+  file: tests/cases/TC-0015-at-rest-protection.md
+
+- id: TC-0016
+  title: In-memory engine, fake transport and deterministic injection
+  file: tests/cases/TC-0016-testing-support.md
+
+- id: TC-0017
+  title: Every documented local operation works with no network
+  file: tests/cases/TC-0017-offline-operability.md
+
+- id: ADR-0029
+  title: Group formal artifacts under docs/design and retain supporting guides and research separately
+  file: decisions/ADR-0029-documentation-artifact-root.md
+
+- id: SPEC-0016
+  title: Initialize the cross-platform validation spike
+  file: spec/SPEC-0016-initialize-validation-spike.md
+
+- id: SPEC-0017
+  title: Run the validation spike in a real browser
+  file: spec/SPEC-0017-browser-validation-spike.md
+
+- id: SPEC-0018
+  title: Validate the host spike through a native C ABI and Swift
+  file: spec/SPEC-0018-native-validation-spike.md
+
+- id: REQ-0035
+  title: The native spike validates boundary inputs and preserves ownership
+  file: requirements/REQ-0035-validated-native-spike-boundary.md
+
+- id: THR-0009
+  title: Native pointer or ownership misuse corrupts the host process
+  file: security/threats/THR-0009-native-pointer-misuse.md
+
+- id: TC-0018
+  title: Native Swift host exercises the isolated Rust spike safely
+  file: tests/cases/TC-0018-native-validation-spike.md
+
+- id: SPEC-0019
+  title: Establish the dependency-free Phase 1 storage foundation
+  file: spec/SPEC-0019-phase-one-foundation.md
+
+- id: API-0002
+  title: Initial internal Rust storage contract
+  file: contracts/API-0002-initial-rust-storage.md
+
+- id: TC-0019
+  title: Initial memory storage obeys typed asynchronous CRUD
+  file: tests/cases/TC-0019-memory-storage-foundation.md
+
+- id: SPEC-0020
+  title: Apply ordered memory mutations atomically
+  file: spec/SPEC-0020-memory-atomic-batches.md
+
+- id: TC-0020
+  title: Ordered memory batches commit completely or preserve all tables
+  file: tests/cases/TC-0020-memory-atomic-batches.md
+
+- id: SPEC-0021
+  title: Validate native SQLite persistence across process restart
+  file: spec/SPEC-0021-native-sqlite-persistence-spike.md
+
+- id: TC-0021
+  title: Native committed rows survive restart without partial failure publication
+  file: tests/cases/TC-0021-native-sqlite-persistence-spike.md
+
+- id: THR-0010
+  title: Browser coercion or stale ownership changes spike data
+  file: security/threats/THR-0010-browser-boundary-coercion.md
+
+- id: REQ-0036
+  title: The browser spike preserves integer precision and snapshot ownership
+  file: requirements/REQ-0036-validated-browser-spike-boundary.md
+
+- id: THR-0011
+  title: Invalid SQLite rows or failed commits diverge native state
+  file: security/threats/THR-0011-native-persistence-publication.md
+
+- id: REQ-0037
+  title: Native persistence publishes only validated committed state
+  file: requirements/REQ-0037-native-persistence-publication.md
+
+- id: SPEC-0022
+  title: Add native SQLite storage with shared CRUD and batch conformance
+  file: spec/SPEC-0022-sqlite-storage-foundation.md
+
+- id: TC-0022
+  title: Memory and SQLite share the storage subset and SQLite survives restart
+  file: tests/cases/TC-0022-sqlite-storage-conformance.md
+
+- id: THR-0012
+  title: SQLite storage input or operational errors corrupt typed rows
+  file: security/threats/THR-0012-sqlite-storage-input-and-atomicity.md
+
+- id: REQ-0038
+  title: Native SQLite storage preserves typed rows and rolls back ordinary failures
+  file: requirements/REQ-0038-sqlite-storage-safety.md
+
+- id: SPEC-0023
+  title: Propose a single-worker SQLite OPFS persistence experiment
+  file: spec/SPEC-0023-browser-sqlite-persistence-proposal.md
+
+- id: TC-0023
+  title: Browser SQLite worker preserves exact rows across worker and page restart
+  file: tests/cases/TC-0023-browser-sqlite-persistence.md
+
+- id: THR-0013
+  title: Browser storage coercion or initialization loses persistent SQLite state
+  file: security/threats/THR-0013-browser-sqlite-persistence-boundary.md
+
+- id: REQ-0039
+  title: Browser SQLite acknowledges only typed committed persistent state
+  file: requirements/REQ-0039-browser-sqlite-persistence-safety.md
+
+- id: RFD-0001
+  title: Choose ownership of initial storage query indexes
+  file: rfd/RFD-0001-storage-query-index-ownership.md
+
+- id: SPEC-0024
+  title: Release browser VFS handles before test namespace cleanup
+  file: spec/SPEC-0024-browser-vfs-shutdown.md
+
+- id: TC-0024
+  title: Browser VFS releases pool handles before namespace deletion
+  file: tests/cases/TC-0024-browser-vfs-shutdown.md
+
+- id: DEF-0001
+  title: Browser test cleanup races worker VFS handle release
+  file: defects/DEF-0001-browser-pool-cleanup-race.md
+
+- id: ADR-0030
+  title: Engines own physical indexes behind the portable storage query contract
+  file: decisions/ADR-0030-engine-owned-storage-indexes.md
+
+- id: SPEC-0025
+  title: Complete Phase 1 typed storage queries and committed changes
+  file: spec/SPEC-0025-typed-storage-queries.md
+
+- id: API-0003
+  title: Typed storage queries and committed row changes
+  file: contracts/API-0003-typed-storage-query-and-changes.md
+
+- id: TC-0025
+  title: Memory native and browser storage share typed query and commit semantics
+  file: tests/cases/TC-0025-typed-storage-query-conformance.md
+
+- id: REQ-0040
+  title: Typed storage rejects invalid inputs and publishes only committed changes
+  file: requirements/REQ-0040-typed-storage-publication.md
+
+- id: THR-0014
+  title: Typed queries or premature change publication misrepresent local data
+  file: security/threats/THR-0014-typed-query-and-change-publication.md
+
+- id: RFD-0002
+  title: Set Phase 2 relation and schema lifecycle policies
+  file: rfd/RFD-0002-phase-two-schema-lifecycle.md
+
+- id: ADR-0031
+  title: Explicit relations and atomic managed schema lifecycle
+  file: decisions/ADR-0031-phase-two-schema-lifecycle.md
+
+- id: SPEC-0026
+  title: Complete Phase 2 public Rust data model and atomic schema lifecycle
+  file: spec/SPEC-0026-phase-two-data-model.md
+
+- id: API-0004
+  title: Public Rust data model queries relations and schema lifecycle
+  file: contracts/API-0004-phase-two-data-model.md
+
+- id: TC-0026
+  title: Public schema relations queries and migrations conform across adapters
+  file: tests/cases/TC-0026-phase-two-conformance.md
+
+- id: REQ-0041
+  title: Schema lifecycle changes preserve a validated atomic managed state
+  file: requirements/REQ-0041-schema-lifecycle-integrity.md
+
+- id: THR-0015
+  title: Schema metadata or migration and reset failures erase or mislabel local data
+  file: security/threats/THR-0015-schema-reset-or-migration-data-loss.md
+
+- id: DEF-0002
+  title: To-one aliases sharing a key can disagree on their target
+  file: defects/DEF-0002-ambiguous-reference-alias.md
+
+- id: TC-0027
+  title: Shared foreign-key aliases must agree on target and optionality
+  file: tests/cases/TC-0027-shared-reference-alias.md
+
+- id: DEF-0003
+  title: Unselected migration descriptors omit nested name validation
+  file: defects/DEF-0003-migration-descriptor-names.md
+
+- id: TC-0028
+  title: All authored descriptors validate nested names before open
+  file: tests/cases/TC-0028-migration-descriptor-names.md
+
+- id: SPEC-0027
+  title: Phase 3 shared incremental query subscriptions
+  file: spec/SPEC-0027-reactive-query-engine.md
+
+- id: API-0005
+  title: Projected storage and owner-driven reactive query delivery
+  file: contracts/API-0005-reactive-query-subscriptions.md
+
+- id: REQ-0042
+  title: Reactive delivery preserves committed state and cancellation
+  file: requirements/REQ-0042-reactive-publication-integrity.md
+
+- id: THR-0016
+  title: Stale partial or canceled reactive notifications misrepresent data
+  file: security/threats/THR-0016-reactive-delivery-integrity.md
+
+- id: UX-0002
+  title: Rust query observation lifecycle and error handling
+  file: ux/flows/UX-0002-reactive-rust-flow.md
+
+- id: TC-0029
+  title: Incremental subscriptions conform across engines and host bridges
+  file: tests/cases/TC-0029-reactive-query-conformance.md
+
+- id: DEF-0004
+  title: Reactive errors retain stale count state and duplicate caches
+  file: defects/DEF-0004-reactive-error-state.md
+
+- id: DEF-0005
+  title: Strict projected order cells break observation query parity
+  file: defects/DEF-0005-reactive-order-projection.md
+
+- id: TC-0030
+  title: Reactive error state and normalized ordering remain consistent
+  file: tests/cases/TC-0030-reactive-review-regressions.md
+
+- id: SPEC-0028
+  title: Resolve reproduced query-size and observation failure defects
+  file: spec/SPEC-0028-reactive-review-resolution.md
+
+- id: DEF-0006
+  title: SQL In expansion rejects ordinary large result sets
+  file: defects/DEF-0006-sql-in-depth.md
+
+- id: DEF-0007
+  title: Explicit observation retry failures become silent
+  file: defects/DEF-0007-silent-refresh.md
+
+- id: DEF-0008
+  title: Row materialization failure invalidates count observers
+  file: defects/DEF-0008-shared-row-failure.md
+
+- id: TC-0031
+  title: Large query sets and isolated observable recovery
+  file: tests/cases/TC-0031-reactive-review-resolution.md
+
+- id: RFD-0003
+  title: Phase 4 command execution and durable reconciliation policies
+  file: rfd/RFD-0003-command-sync-lifecycle.md
+
+- id: SPEC-0029
+  title: Phase 4 command execution and durable sync delivery
+  file: spec/SPEC-0029-command-sync.md
+
+- id: REQ-0043
+  title: Command recovery preserves ownership committed data and retry identity
+  file: requirements/REQ-0043-command-recovery-integrity.md
+
+- id: THR-0017
+  title: Forged scopes or incomplete command recovery corrupt local and pending work
+  file: security/threats/THR-0017-command-recovery-boundary.md
+
+- id: TC-0032
+  title: Commands remain isolated durable and recoverable across hosts
+  file: tests/cases/TC-0032-command-sync-conformance.md
+
+- id: ADR-0032
+  title: Host-driven command scopes and durable guarded recovery
+  file: decisions/ADR-0032-command-sync-recovery.md
+
+- id: API-0006
+  title: Portable command values and host-driven command owner
+  file: contracts/API-0006-command-owner.md
+
+- id: API-0007
+  title: Atomic command recovery storage and exact persisted records
+  file: contracts/API-0007-command-storage.md
+
+- id: API-0008
+  title: Command host spike over one shared Rust SQLite fixture
+  file: contracts/API-0008-command-host-spike.md
+
+- id: SPEC-0030
+  title: Apply consistent Rust formatting without changing behavior
+  file: spec/SPEC-0030-rust-formatting.md
+
+- id: TC-0033
+  title: Rust formatting is consistent and preserves existing behavior
+  file: tests/cases/TC-0033-rust-formatting.md
+
+- id: RFD-0004
+  title: Phase 5 entity synchronization bootstrap and explicit reset policies
+  file: rfd/RFD-0004-entity-sync-bootstrap-reset.md
+
+- id: SPEC-0031
+  title: Phase 5 entity diffs conflict resolution resumable pull and explicit reset
+  file: spec/SPEC-0031-entity-sync.md
+
+- id: REQ-0044
+  title: Entity synchronization preserves correlation scope and atomic recovery
+  file: requirements/REQ-0044-entity-pull-reset-integrity.md
+
+- id: THR-0018
+  title: Ambiguous diffs stale pulls or reset races corrupt scoped recovery
+  file: security/threats/THR-0018-entity-pull-reset-boundary.md
+
+- id: TC-0034
+  title: Entity patches scoped bootstrap and explicit reset compose durably
+  file: tests/cases/TC-0034-entity-sync-conformance.md
+
+- id: ADR-0033
+  title: Correlated entity diffs atomic paged pull and explicit recovery reset
+  file: decisions/ADR-0033-entity-sync-recovery.md
+
+- id: API-0009
+  title: Entity queue comparison state atomic pull and generation reset
+  file: contracts/API-0009-entity-pull-reset.md
+
+- id: RFD-0005
+  title: Current engine encryption supplied keys and bounded security diagnostics
+  file: rfd/RFD-0005-engine-encryption-and-security-boundaries.md
+
+- id: REQ-0045
+  title: Protected opens fail closed and diagnostics disclose no protected contents
+  file: requirements/REQ-0045-secure-open-and-diagnostics.md
+
+- id: THR-0019
+  title: Wrong keys stale ciphers sidecars or diagnostics expose local recovery
+  file: security/threats/THR-0019-protected-storage-and-diagnostic-boundary.md
+
+- id: SPEC-0032
+  title: Phase 6 engine encryption backup capabilities and redacted boundaries
+  file: spec/SPEC-0032-security-hardening.md
+
+- id: API-0010
+  title: Supplied-key SQLite opens platform backup hints and bounded diagnostics
+  file: contracts/API-0010-secure-storage-and-diagnostics.md
+
+- id: TC-0035
+  title: Protected storage and diagnostics preserve confidentiality and recovery
+  file: tests/cases/TC-0035-security-hardening.md
+
+- id: ADR-0034
+  title: Supplied-key SQLCipher storage and bounded security diagnostics
+  file: decisions/ADR-0034-protected-engines-and-diagnostics.md
+
+# Proposal only; root must recheck actual registry before allocating.
+- id: RFD-0006
+  title: General consumer bindings reusable testing and measured performance baseline
+  file: rfd/RFD-0006-general-bindings-and-baseline.md
+- id: REQ-0046
+  title: Consumer bindings preserve general core semantics ownership and secure defaults
+  file: requirements/REQ-0046-general-platform-bindings.md
+- id: THR-0020
+  title: General bindings stale callbacks or target crypto drift expose or corrupt local recovery
+  file: security/threats/THR-0020-general-binding-ownership.md
+- id: SPEC-0033
+  title: Phase 7 general platform SDKs testing support and measured baseline
+  file: spec/SPEC-0033-general-platform-bindings.md
+- id: API-0011
+  title: General schema platform facade owned host scopes and consumer packages
+  file: contracts/API-0011-general-platform-sdk.md
+- id: TC-0036
+  title: General consumer packages preserve owned core behavior across platforms
+  file: tests/cases/TC-0036-general-platform-sdk.md
+- id: TC-0037
+  title: Measured protected consumer baseline precedes numerical regression budgets
+  file: tests/cases/TC-0037-performance-baseline.md
+- id: DEF-0009
+  title: Batch reply preflight accumulates unrelated same-table before images
+  file: defects/DEF-0009-batch-preflight-unrelated-rows.md
+- id: DEF-0010
+  title: Owned prefix terminal flag can prevent byte-exact delivery
+  file: defects/DEF-0010-prefix-terminal-boolean-budget.md
+- id: ADR-0035
+  title: General SDK bindings and explicitly approved restricted mobile builds
+  file: decisions/ADR-0035-general-sdk-and-restricted-mobile-builds.md
+- id: DEF-0011
+  title: Late sync replies can reach replacement owner transport or mapper
+  file: defects/DEF-0011-late-sync-owner-replacement.md
+
+- id: DEF-0012
+  title: Managed sync transitions can leave notifications undelivered
+  file: defects/DEF-0012-managed-sync-transition-delivery.md
+- id: DEF-0013
+  title: Throwing Android release listener can strand a completed native reply
+  file: defects/DEF-0013-android-release-listener-failure.md
+- id: DEF-0014
+  title: Inline Kotlin continuation can starve the shared native reply channel
+  file: defects/DEF-0014-kotlin-reply-continuation-starvation.md
+- id: DEF-0015
+  title: External wire receipt can leave a sleeping sync mapper pending
+  file: defects/DEF-0015-external-receipt-sync-wake.md
+- id: DEF-0016
+  title: Kotlin relation source implicitly formats its row identity
+  file: defects/DEF-0016-kotlin-source-implicit-identity.md
+- id: DEF-0017
+  title: A stopped Swift sync driver can resume into a new application callback
+  file: defects/DEF-0017-swift-stopped-sync-callback.md
+- id: DEF-0018
+  title: Swift close can hide a submitted command's committed result
+  file: defects/DEF-0018-swift-close-submitted-finish.md
+- id: DEF-0019
+  title: A retired Kotlin managed drain can select the replacement owner
+  file: defects/DEF-0019-kotlin-drain-owner-reselection.md
+- id: DEF-0020
+  title: Native reactive benchmark identity names the wrong timed endpoint
+  file: defects/DEF-0020-native-reactive-benchmark-endpoint.md
+- id: DEF-0021
+  title: A throwing Kotlin observer can retain its drain guard and core token
+  file: defects/DEF-0021-kotlin-throwing-observer-retirement.md
+- id: DEF-0022
+  title: A custom Kotlin timer failure can mask a committed mutation result
+  file: defects/DEF-0022-kotlin-timer-failure-committed-result.md
+- id: DEF-0023
+  title: A waiting browser permit request can survive a direct worker start
+  file: defects/DEF-0023-browser-permit-waiter-active-worker.md
+- id: DEF-0024
+  title: Android protected opens reject an aliased operating-system data directory
+  file: defects/DEF-0024-android-context-directory-alias.md
+- id: DEF-0025
+  title: React Native factories ignore retained stores and configured queue options
+  file: defects/DEF-0025-react-native-factory-open-options.md
+- id: DEF-0026
+  title: Portable JavaScript host declarations require an undeclared DOM AbortSignal
+  file: defects/DEF-0026-portable-host-declaration-dom-signal.md
+- id: DEF-0027
+  title: Git normalizes certified Android notice and raw evidence bytes
+  file: defects/DEF-0027-android-notice-git-byte-preservation.md
+- id: ADR-0036
+  title: Require code coverage close to 100 percent with justified gaps
+  file: decisions/ADR-0036-near-total-code-coverage.md
+- id: DEF-0028
+  title: Optimized Python skips build repository input validation and metadata collection
+  file: defects/DEF-0028-optimized-repository-input-validation.md
+- id: SPEC-0034
+  title: Remediate restricted mobile build dependencies with exact verified graphs
+  file: spec/SPEC-0034-restricted-build-security-remediation.md
+- id: TC-0038
+  title: Restricted mobile builds remediate applicable findings without runtime drift
+  file: tests/cases/TC-0038-restricted-build-security.md
+- id: DEF-0029
+  title: Browser start preflight failure consumes its permit and strands the controller
+  file: defects/DEF-0029-browser-start-plan-failure-state.md
+- id: DEF-0030
+  title: Swift and React Native Apple artifacts omit native third-party notices
+  file: defects/DEF-0030-apple-native-package-notices.md
+- id: DEF-0031
+  title: Cache record and capture field types escape structured rejection
+  file: defects/DEF-0031-cache-input-type-validation.md
+- id: DEF-0032
+  title: Repeated command edits can strand successful authoritative outcomes
+  file: defects/DEF-0032-repeated-command-reconciliation.md
+- id: DEF-0033
+  title: One oversized observation blocks other subscriptions and hides managed failures
+  file: defects/DEF-0033-oversized-observation-delivery.md
+- id: DEF-0034
+  title: Command admission and sync commits repeatedly process the whole local store
+  file: defects/DEF-0034-whole-store-command-sync-work.md
+- id: DEF-0035
+  title: A queued or hung command in one owner blocks unrelated database writes
+  file: defects/DEF-0035-global-admission-availability.md
+- id: DEF-0036
+  title: A corrected forward clock jump can indefinitely postpone persisted retries
+  file: defects/DEF-0036-clock-skew-retry-liveness.md
+- id: DEF-0037
+  title: React Native backup flags conflict across stores and platform reopen paths
+  file: defects/DEF-0037-native-backup-policy-scope.md
+- id: SPEC-0035
+  title: Recover queued retries after a corrected forward wall-clock jump
+  file: spec/SPEC-0035-bounded-retry-clock-recovery.md
+- id: TC-0039
+  title: Corrected clock samples recover retries without changing identity
+  file: tests/cases/TC-0039-retry-clock-recovery.md
+- id: RFD-0007
+  title: Purpose remediation requires explicit store isolation and recovery scaling contracts
+  file: rfd/RFD-0007-purpose-remediation-storage-isolation.md
+- id: SPEC-0036
+  title: Bounded SDK observation delivery, typed background failures and fixed native backup policy
+  file: spec/SPEC-0036-bounded-sdk-observation-backup-policy.md
+- id: TC-0040
+  title: SDK observation termination background failures and backup policy claims
+  file: tests/cases/TC-0040-sdk-observation-backup-policy.md
+- id: ADR-0037
+  title: Serialize handlers per database while independent databases progress
+  file: decisions/ADR-0037-per-database-command-serialization.md
+- id: ADR-0038
+  title: Use stable metadata identities for new entity ledgers with explicit offline conversion
+  file: decisions/ADR-0038-stable-entity-metadata-identities.md
+- id: DEF-0038
+  title: A correction can overwrite a later local edit outside the command write set
+  file: defects/DEF-0038-outside-command-correction-overwrite.md
+- id: SPEC-0038
+  title: Confirm repeated command edits safely, order same-row dispatch and rearm lost outcomes
+  file: spec/SPEC-0038-safe-command-reconciliation-recovery.md
+- id: TC-0042
+  title: Repeated command edits confirm safely, same-row dispatch is ordered and lost outcomes are rearmed
+  file: tests/cases/TC-0042-command-reconciliation-recovery.md
+- id: SPEC-0037
+  title: Exclusive store ownership, per-database admission and change-proportional command and sync work
+  file: spec/SPEC-0037-storage-isolation-and-scaling.md
+- id: TC-0041
+  title: Store ownership per-database admission and change-proportional command and sync work
+  file: tests/cases/TC-0041-storage-isolation-and-scaling.md
+- id: SPEC-0039
+  title: Guard authoritative corrections outside a command optimistic write set
+  file: spec/SPEC-0039-guarded-cross-row-corrections.md
+- id: TC-0043
+  title: Cross-row corrections require exact caller expectations
+  file: tests/cases/TC-0043-guarded-cross-row-corrections.md
+
+- id: SPEC-0040
+  title: Choose stop or discard while keeping conflict outcomes truthful
+  file: spec/SPEC-0040-simple-command-conflict-policy.md
+- id: TC-0044
+  title: Stop or discard preserves current data and truthful recovery status
+  file: tests/cases/TC-0044-simple-command-conflict-policy.md
+
+- id: DEF-0039
+  title: Equal-clock entity confirmation promotes a different pending value
+  file: defects/DEF-0039-value-unaware-entity-promotion.md
+
+- id: DEF-0040
+  title: Android SDK omits its declared per-database background error sink
+  file: defects/DEF-0040-android-background-error-sink.md
+
+- id: SPEC-0041
+  title: Executable public HTML documentation
+  file: spec/SPEC-0041-public-html-documentation.md
+
+- id: TC-0045
+  title: Public documentation builds and examples execute
+  file: tests/cases/TC-0045-public-html-documentation.md
+
+- id: UX-0003
+  title: Public library documentation reading flow
+  file: ux/flows/UX-0003-public-documentation.md
+
+- id: REQ-0047
+  title: Public developer documentation includes executable examples
+  file: requirements/REQ-0047-public-developer-documentation.md
+
+- id: API-0012
+  title: JavaScript application binding for schemas records and commands
+  file: contracts/API-0012-javascript-application-binding.md
+- id: SPEC-0042
+  title: Implement the original JavaScript application workflow and teach it directly
+  file: spec/SPEC-0042-javascript-application-binding.md
+- id: TC-0046
+  title: Original-style JavaScript application workflow uses the real core
+  file: tests/cases/TC-0046-javascript-application-binding.md
+
+- id: SPEC-0043
+  title: Language-highlighted examples and getting started for every binding
+  file: spec/SPEC-0043-language-highlighted-binding-quickstarts.md
+- id: TC-0047
+  title: Binding quickstarts preserve and color verified source by language
+  file: tests/cases/TC-0047-language-highlighted-binding-quickstarts.md
+
+- id: SPEC-0044
+  title: Measured coverage and mutation testing with honest scope
+  file: spec/SPEC-0044-test-quality-and-mutation.md
+- id: NFR-0006
+  title: Coverage and mutation evidence expose and preserve verified test quality
+  file: requirements/nfr/NFR-0006-test-quality-evidence.md
+- id: TC-0048
+  title: Coverage evidence and mutation gates expose real test gaps
+  file: tests/cases/TC-0048-test-quality-and-mutation.md
+- id: DEF-0041
+  title: Failed browser runtime bootstrap permanently poisons later attempts
+  file: defects/DEF-0041-browser-bootstrap-retry.md
+- id: DEF-0042
+  title: Encrypted conformance fixture hides native adapter capabilities
+  file: defects/DEF-0042-encrypted-fixture-capabilities.md
+- id: DEF-0043
+  title: Default browser factory retains a runtime after its worker retires
+  file: defects/DEF-0043-browser-worker-retirement-cache.md
+
+- id: REQ-0048
+  title: Contributors can build and validate hoyadb without private governance access
+  file: requirements/REQ-0048-public-contributor-checkout.md
+
+- id: SPEC-0045
+  title: Release-oriented source layout and independent public contribution checks
+  file: spec/SPEC-0045-public-repository-layout.md
+
+- id: TC-0049
+  title: Public checkout validates independently and moved packages preserve behavior
+  file: tests/cases/TC-0049-public-repository-layout.md
+
+- id: SPEC-0046
+  title: Repair confirmed SDK lifecycle and public validation defects
+  file: spec/SPEC-0046-review-remediation.md
+
+- id: TC-0050
+  title: Review fixes preserve lifecycle and validate public inputs
+  file: tests/cases/TC-0050-review-remediation.md
+
+- id: DEF-0044
+  title: Explicit application sync survives lifecycle cancellation
+  file: defects/DEF-0044-explicit-sync-cancellation.md
+
+- id: DEF-0045
+  title: Application sync repeats mapping after admission contention
+  file: defects/DEF-0045-retained-application-sync-work.md
+
+- id: DEF-0046
+  title: Failed database open retains an inaccessible owner
+  file: defects/DEF-0046-database-open-owner-cleanup.md
+
+- id: DEF-0047
+  title: Android module can publish an owner after invalidation
+  file: defects/DEF-0047-android-module-owner-retirement.md
+
+- id: DEF-0048
+  title: Swift artifact instructions omit the required trust anchor
+  file: defects/DEF-0048-swift-checker-instructions.md
+
+- id: DEF-0049
+  title: Browser guide contradicts fresh-worker recovery
+  file: defects/DEF-0049-browser-retirement-guide.md
+
+- id: DEF-0050
+  title: Clean JavaScript CI lacks required WASM assets
+  file: defects/DEF-0050-javascript-ci-wasm-input.md
+
+- id: DEF-0051
+  title: Quality evidence includes generated and excluded crate sources
+  file: defects/DEF-0051-quality-workspace-inventory.md
+
+- id: DEF-0052
+  title: Traceability validation silently accepts invalid scan inputs
+  file: defects/DEF-0052-traceability-input-errors.md
+
+- id: DEF-0053
+  title: Active roadmap instructions require a private process guide
+  file: defects/DEF-0053-public-roadmap-workflow.md
+
+- id: DEF-0054
+  title: Application pending reconciliation listing races with settlement
+  file: defects/DEF-0054-pending-reconciliation-context-race.md
+
+- id: DEF-0055
+  title: Kotlin sync regression assumes superseded app-wide native admission
+  file: defects/DEF-0055-kotlin-native-admission-regression.md
+
+- id: SPEC-0047
+  title: Complete approved engineering gaps after project remediation
+  file: spec/SPEC-0047-approved-engineering-completion.md
+- id: TC-0051
+  title: Remaining engineering work meets existing approved contracts
+  file: tests/cases/TC-0051-approved-engineering-completion.md
+- id: DEF-0056
+  title: Native Swift and React Native API snapshots lack enforcement
+  file: defects/DEF-0056-api-compatibility-enforcement.md
+- id: DEF-0057
+  title: Active SDK guidance still marks the approved custom-ID policy pending
+  file: defects/DEF-0057-stale-custom-id-approval.md
+- id: DEF-0058
+  title: Facade engine drops the validated query path
+  file: defects/DEF-0058-facade-validated-query-forwarding.md
+- id: DEF-0059
+  title: Memory rollback retains newly created empty index shells
+  file: defects/DEF-0059-memory-rollback-index-shells.md
+- id: DEF-0060
+  title: Apple build manifest omits Cargo configuration and build inputs
+  file: defects/DEF-0060-apple-build-source-inventory.md
+- id: DEF-0061
+  title: Cancelled reactive publication silently removes subscriptions
+  file: defects/DEF-0061-cancelled-publication-loses-subscriptions.md
+- id: DEF-0062
+  title: SQLite correction fault fixture assumes whole-ledger packet reinsertion
+  file: defects/DEF-0062-sqlite-correction-fault-trigger.md
+- id: DEF-0063
+  title: Ledger observation helpers leak into production compilation
+  file: defects/DEF-0063-production-ledger-observation-helpers.md
+- id: DEF-0064
+  title: Offline converter backup copy releases the store lease
+  file: defects/DEF-0064-converter-backup-drops-lease.md
+- id: DEF-0065
+  title: Pulled delete of an unseen identity blocks a pending create's mapping
+  file: defects/DEF-0065-pulled-tombstone-occupies-mapping-target.md
+- id: DEF-0066
+  title: Kotlin protected open lacks the backup-policy lock and opposite-parent check
+  file: defects/DEF-0066-kotlin-protected-open-backup-policy.md
+- id: DEF-0067
+  title: Recovery exits lost after conflicted cancel, cancelled dependents and discarded undo
+  file: defects/DEF-0067-conflicted-cancel-recovery-exits.md
+- id: DEF-0068
+  title: Scope self-relation queries, publication suspension, same-migration backfill and late begin bound
+  file: defects/DEF-0068-core-review-corrections.md
+- id: DEF-0069
+  title: Durable alias resolution ignores the reference table and the retained mode
+  file: defects/DEF-0069-durable-alias-reference-table.md
+- id: DEF-0070
+  title: JavaScript application API mishandles entity links, observer errors and oversized receipts
+  file: defects/DEF-0070-javascript-application-observer-and-entity-paths.md
+- id: DEF-0071
+  title: Swift sync deadline spin and stranded count updates in the managed SDKs
+  file: defects/DEF-0071-managed-sdk-sync-and-observation-timers.md
+- id: DEF-0072
+  title: Packaging accepts stale native or WASM artifacts and unbound notice locks
+  file: defects/DEF-0072-packaging-provenance-guards.md
+- id: DEF-0073
+  title: Default local IDs become unwritable after entity adoption
+  file: defects/DEF-0073-local-ids-unwritable-after-adoption.md
+- id: TOK-0001
+  title: hoyadb documentation design tokens
+  file: ux/tokens/TOK-0001-documentation-design-tokens.md
+- id: CMP-0001
+  title: Documentation page shell
+  file: ux/components/CMP-0001-documentation-page-shell.md
+- id: CMP-0002
+  title: Offline documentation search
+  file: ux/components/CMP-0002-documentation-search.md
+- id: CMP-0003
+  title: Verified code example
+  file: ux/components/CMP-0003-code-example.md
+- id: CMP-0004
+  title: Link card
+  file: ux/components/CMP-0004-link-card.md
+- id: CMP-0005
+  title: Callout
+  file: ux/components/CMP-0005-callout.md
+- id: SPEC-0048
+  title: Atomic entity batches with temporary reference aliases
+  file: spec/SPEC-0048-entity-batch-aliases.md
+- id: TC-0052
+  title: Aliased entity batches preserve allocation atomicity and recovery
+  file: tests/cases/TC-0052-entity-batch-aliases.md
+- id: SPEC-0049
+  title: Opt-in durable entity aliases without implicit ledger conversion
+  file: spec/SPEC-0049-durable-entity-aliases.md
+- id: TC-0053
+  title: Durable entity aliases survive history eviction and restart
+  file: tests/cases/TC-0053-durable-entity-aliases.md
+- id: SPEC-0050
+  title: GitHub verification, package delivery and documentation hosting
+  file: spec/SPEC-0050-github-delivery.md
+- id: TC-0054
+  title: GitHub delivery preserves checks and rejects unsafe releases
+  file: tests/cases/TC-0054-github-delivery.md

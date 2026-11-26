@@ -1,0 +1,16 @@
+{
+  "approved_union_size": 246,
+  "per_configuration": {
+    "includedSettingsClasspath": {
+      "components": 2,
+      "new": []
+    },
+    "includedRootBuildscriptClasspath": {
+      "components": 27,
+      "new": [
+        "com.google.errorprone:error_prone_annotations:2.27.0",
+        "org.jetbrains.kotlin:kotlin-stdlib:2.2.21"
+      ]
+    }
+  }
+}

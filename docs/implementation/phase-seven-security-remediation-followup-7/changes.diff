@@ -1,0 +1,746 @@
+--- a/bindings/react-native/tools/security/README.md
++++ b/bindings/react-native/tools/security/README.md
+@@ -15,20 +15,53 @@
+   label to the text or raw bytes of EVERY Gradle properties source the launch
+   can read: consumer root, included-build root, the isolated
+   `GRADLE_USER_HOME/gradle.properties` and the Gradle installation's
+-  `gradle.properties`. Parsing ports JDK17 `java.util.Properties.load`
+-  (logical lines, `=`/`:`/whitespace separators, `\uXXXX` and other escapes,
+-  last value wins); bytes decode as ISO-8859-1 and non-ASCII files are also
+-  checked as UTF-8; malformed escapes fail closed. This pre-launch check is
+-  required in addition to the authoritative observed-JVM check.
++  `gradle.properties`. Parsing uses `java_properties.py`, written
++  independently from the public `Properties.load(Reader)` API contract (no JDK
++  source was ported; no legal clean-room certification is claimed): logical
++  lines, `=`/`:`/whitespace separators, `\uXXXX` and other escapes, last value
++  wins. Bytes decode as ISO-8859-1 and non-ASCII files are also checked as
++  UTF-8; malformed escapes fail closed. Any `DYLD_*` environment variable
++  rejects by name (SR-22c). This pre-launch check is required in addition to
++  the authoritative observed-JVM check.
+ - `kotlin_guard.check_observed_jvms(observations, required_roles,
+-  native_inventory, native_baseline)` -> gate result for the effective
+-  compiling JVMs (SR-20/21/22 evidence input). Every observed native library
+-  must match by name and SHA256 either the reviewed embedded payload inventory
+-  (`native_loads`) or the explicitly supplied trusted JDK/platform baseline
+-  (`baseline_loads`); anything else keeps the gate open. Capture completeness
+-  is the caller's attested input and is never inferred. Empty `required_roles`
+-  is a vacuous certification and rejects; an observation without a non-empty
+-  effective `system_properties` map or an `input_arguments` list is incomplete.
++  native_inventory, native_baseline, *, system_cache=None)` -> gate result for
++  the effective compiling JVMs (SR-20/21/22 evidence input). Each observed
++  native library is classified exactly once:
++  - by name and SHA256, as a reviewed embedded payload (`native_loads`) or a
++    file-backed trusted JDK/platform baseline member (`baseline_loads`);
++  - or, without a digest, as a reviewed macOS system shared-cache image
++    (`system_cache_loads`).
++  A name matching more than one class, a digest on a reviewed cache path, or a
++  missing digest outside the cache record rejects. Unknown digest-less images
++  are listed in `discovered_images` for review and keep the gate open; a
++  capture never updates its own allowlist. Capture completeness is the
++  caller's attested input and is never inferred. Empty `required_roles` is a
++  vacuous certification and rejects. An observation without a non-empty
++  effective `system_properties` map, an `input_arguments` list or an
++  effective `environment` map is incomplete; any `DYLD_*` name in the
++  effective environment rejects.
++- `native_cache.SystemCacheEvidence(expected, pre_host, post_host)` -> the
++  `system_cache` input (SR-22a/b). `expected` is the externally reviewed
++  `hoyadb.system-shared-cache/1` record:
++  - OS build, build ID and version-plist hash; host integrity observations;
++    architecture; cache directory;
++  - cache header values and main/subcache UUIDs, plus the complete cache-file
++    SHA256 manifest (mandatory; no UUID-only fallback);
++  - the reviewed slide alignment (no default) and the capture source;
++  - an explicit image list of path, image UUID, unslid address and text size
++    (no prefix, wildcard or whole-cache enrollment), and explicit reviewed
++    aliases.
++  `pre_host` and `post_host` are records the runner reads independently
++  before and after the capture. They must equal the reviewed identity, re-read
++  every reviewed image identity from the cache, report every reviewed path as
++  absent as a file, and share the captured JVM's boot-session UUID. Within one
++  JVM, every cached image's `base_address` minus its unslid address must give
++  one common slide that is non-negative, below `max_slide` and a multiple of
++  the alignment; `top_address` must be 0. These follow the studied JDK
++  17.0.1+12 `jdk.NativeLibrary` semantics on macOS (Mach-O header address,
++  top address 0). JFR does not report the mapped cache UUID, so tying a
++  process to the rehashed host cache is an inference under the trusted host
++  boundary, not process attestation.
+ - `symbol_guard` -> absence and external-invocation evidence (SR-30).
+ - `embedded_scan.inventory(...)` / `embedded_scan.evaluate(...)` -> permanent
+   embedded/shaded component gate (SR-31). Relocation prefixes are matched
+--- a/bindings/react-native/tools/security/kotlin_guard.py
++++ b/bindings/react-native/tools/security/kotlin_guard.py
+@@ -8,6 +8,7 @@
+ import shlex
+ 
+ import java_properties  # independent implementation from the public Properties.load(Reader) API
++import native_cache
+ 
+ MalformedProperties = java_properties.MalformedProperties
+ 
+@@ -17,6 +18,7 @@
+ PROJECT_ENV_PREFIX = 'ORG_GRADLE_PROJECT_'
+ PROJECT_SYSPROP_PREFIX = 'org.gradle.project.'
+ DAEMON_NESTED = 'kotlin.daemon.jvm.options'
++LOADER_ENV_PREFIX = 'DYLD_'
+ LZ4_ENTRY_PREFIXES = (
+     'org/jetbrains/kotlin/net/jpountz/',
+     'org/jetbrains/kotlin/com/intellij/util/CompressionUtil',
+@@ -39,6 +41,8 @@
+     violations: list = field(default_factory=list)
+     native_loads: list = field(default_factory=list)
+     baseline_loads: list = field(default_factory=list)
++    system_cache_loads: list = field(default_factory=list)
++    discovered_images: list = field(default_factory=list)
+ 
+ 
+ def secure_launch_args():
+@@ -140,6 +144,9 @@
+     for name in OPTION_ENV:
+         if name in env:
+             _jvm_options('env:' + name, env[name], out)
++    for name in env:
++        if name.startswith(LOADER_ENV_PREFIX):
++            out.add(Violation('env:' + name, 'DYLD_ loader environment'))
+     for name, value in env.items():
+         if name.startswith(PROJECT_ENV_PREFIX):
+             key = name[len(PROJECT_ENV_PREFIX):]
+@@ -172,12 +179,19 @@
+ 
+ 
+ def check_observed_jvms(observations, required_roles, native_inventory=None, native_baseline=None,
+-                        pinned_strategy=PINNED['kotlin.compiler.execution.strategy']):
++                        pinned_strategy=PINNED['kotlin.compiler.execution.strategy'], *, system_cache=None):
+     """native_inventory: reviewed embedded payloads (e.g. compiler Jansi/LZ4 JNI); native_baseline: the explicitly
+-    trusted JDK/platform libraries of the pinned JDK. Every observed native library must match one by name+sha256."""
+-    out, loads, baseline_loads = set(), [], []
++    trusted file-backed JDK/platform libraries of the pinned JDK, both matched by name+sha256. system_cache: an
++    optional native_cache.SystemCacheEvidence for digest-less macOS shared-cache images. Every observed library
++    is classified exactly once; a missing digest is never an exemption outside the reviewed cache record."""
++    out, loads, baseline_loads, cache_loads, discovered = set(), [], [], [], []
+     inventory = native_inventory or {}
+     baseline = native_baseline or {}
++    cache_ready = False
++    if system_cache is not None:
++        host_errors = native_cache.check_host(system_cache)
++        out.update(Violation('system-cache', e) for e in host_errors)
++        cache_ready = not host_errors
+     roles = {o.get('role') for o in observations}
+     if not required_roles:
+         out.add(Violation('observation', 'no required compiling JVM roles (vacuous)'))
+@@ -193,6 +207,13 @@
+             out.add(Violation(role, 'incomplete capture: effective system properties missing'))
+         if not isinstance(o.get('input_arguments'), list):
+             out.add(Violation(role, 'incomplete capture: effective input arguments missing'))
++        environment = o.get('environment')
++        if not isinstance(environment, dict):
++            out.add(Violation(role, 'incomplete capture: effective environment missing'))
++            environment = {}
++        for name in environment:
++            if name.startswith(LOADER_ENV_PREFIX):
++                out.add(Violation(role, 'DYLD_ loader environment: ' + name))
+         if o.get('execution_strategy') != pinned_strategy:
+             out.add(Violation(role, 'kotlin.compiler.execution.strategy'))
+         for token in o.get('input_arguments') or []:
+@@ -206,13 +227,32 @@
+             internal = name.replace('.', '/')
+             if internal.startswith(LZ4_ENTRY_PREFIXES):
+                 out.add(Violation(role, 'vulnerable LZ4 entry point: ' + internal))
++        cached = []
+         for lib in o.get('native_libraries_loaded') or []:
+             name, digest = lib.get('name'), lib.get('sha256')
+-            if digest is not None and inventory.get(name) == digest:
+-                loads.append((role, name))
+-            elif digest is not None and baseline.get(name) == digest:
+-                baseline_loads.append((role, name))
++            cache_path = native_cache.lookup(system_cache, name) if cache_ready else None
++            if digest is not None:
++                bins = [inventory.get(name) == digest, baseline.get(name) == digest]
++                if cache_path is not None:
++                    out.add(Violation(role, 'file-backed library claims a reviewed system cache path: %s' % name))
++                elif sum(bins) > 1:
++                    out.add(Violation(role, 'ambiguous native classification: %s' % name))
++                elif bins[0]:
++                    loads.append((role, name))
++                elif bins[1]:
++                    baseline_loads.append((role, name))
++                else:
++                    out.add(Violation(role, 'native library outside reviewed inventory and trusted baseline: %s' % name))
++            elif cache_path is not None and name not in inventory and name not in baseline:
++                cached.append((cache_path, lib))
+             else:
+-                out.add(Violation(role, 'native library outside reviewed inventory and trusted baseline: %s' % name))
++                out.add(Violation(role, 'native library with missing digest outside reviewed system cache: %s' % name))
++                if system_cache is not None and 'base_address' in lib:
++                    discovered.append((role, name))
++        if cache_ready:
++            out.update(Violation(role, e) for e in native_cache.check_capture(system_cache, o, cached))
++            for path in dict.fromkeys(path for path, _ in cached):
++                cache_loads.append((role, path))
+     violations = sorted(out, key=lambda v: (v.source, v.setting))
+-    return Result(ok=not violations, violations=violations, native_loads=loads, baseline_loads=baseline_loads)
++    return Result(ok=not violations, violations=violations, native_loads=loads, baseline_loads=baseline_loads,
++                  system_cache_loads=cache_loads, discovered_images=discovered)
+--- a/bindings/react-native/tools/security/test_kotlin_guard.py
++++ b/bindings/react-native/tools/security/test_kotlin_guard.py
+@@ -76,7 +76,7 @@
+         self.rejected(secure(env={'ORG_GRADLE_PROJECT_kotlin.daemon.jvmargs': '-Didea.use.native.compression=true'}),
+                       'env:ORG_GRADLE_PROJECT_kotlin.daemon.jvmargs', 'idea.use.native.compression')
+ 
+-    # Follow-up 2 (root finding): java.util.Properties.load semantics, JDK17 Properties.java load0/loadConvert.
++    # Follow-up 2 (root finding): public java.util.Properties.load(Reader) contract semantics.
+     def test_properties_unicode_escaped_key_and_value(self):
+         self.rejected(secure(properties={'consumer/gradle.properties': 'systemProp.\\u0069dea.use.native.compression=true\n'}),
+                       'consumer/gradle.properties', 'idea.use.native.compression')
+@@ -141,6 +141,7 @@
+     def jvm(self, **override):
+         base = {'role': 'kotlin-compiler', 'pid': 42, 'java_home_sha256': 'a' * 64, 'execution_strategy': 'in-process',
+                 'input_arguments': ['-Xmx2g'], 'system_properties': {'kotlin.incremental': 'false'},
++                'environment': {'HOME_TOKEN': SECRET},  # follow-up 7 (SR-22c): effective environment is mandatory
+                 'capture': {'class_load': True, 'native_load': True},
+                 'classes_loaded': ['org/jetbrains/kotlin/cli/jvm/K2JVMCompiler'], 'native_libraries_loaded': []}
+         base.update(override)
+@@ -214,6 +215,13 @@
+         del observation['input_arguments']
+         self.assertFalse(G.check_observed_jvms([observation], ['kotlin-compiler']).ok)
+ 
++    def test_missing_effective_environment_is_incomplete(self):
++        observation = self.jvm()
++        del observation['environment']
++        result = G.check_observed_jvms([observation], ['kotlin-compiler'])
++        self.assertFalse(result.ok)
++        self.assertIn('incomplete capture: effective environment missing', [v.setting for v in result.violations])
++
+     def test_strategy_mismatch_rejects(self):
+         result = G.check_observed_jvms([self.jvm(execution_strategy='daemon')], ['kotlin-compiler'])
+         self.assertFalse(result.ok)
+--- /dev/null
++++ b/bindings/react-native/tools/security/native_cache.py
+@@ -0,0 +1,204 @@
++"""SPEC-0034 / TC-0038 SR-22a/b: reviewed macOS system shared-cache identities for observed native loads.
++
++Pure functions over three externally supplied records: the reviewed expected host/cache record and two host
++records read independently before and after the capture (OS identity, complete cache-file SHA256 manifest,
++cache header values, image identities re-read from the cache and per-path file status). Nothing here reads
++the host, the cache or a process.
++
++Source semantics (studied, pinned by `capture_source`): JDK 17.0.1+12 `jdk.NativeLibrary` reports per dyld
++image the image path, the Mach-O header address as `baseAddress` and `topAddress` 0 on macOS; dyld places every
++cached image at its unslid `__TEXT` address plus one shared-region slide that xnu draws below `maxSlide` and
++aligns to the architecture's slide page (4 KiB for the studied x86_64h cache). JFR does not report which cache
++a process mapped: association with the rehashed host cache is an inference under the trusted host boundary,
++not process attestation.
++"""
++from dataclasses import dataclass
++import re
++
++SCHEMA = 'hoyadb.system-shared-cache/1'
++HOST_IDENTITY_KEYS = ('os', 'host_integrity', 'arch', 'cache_dir', 'cache', 'cache_files')
++OS_KEYS = ('product_version', 'product_build_version', 'build_id', 'product_version_extra', 'system_version_plist_sha256')
++INTEGRITY_KEYS = ('sip_enabled', 'authenticated_root', 'system_volume_sealed')
++CACHE_INT_KEYS = ('cache_type', 'platform', 'os_version_field', 'shared_region_start', 'shared_region_size', 'max_slide', 'images_count')
++CAPTURE_KEYS = ('jdk', 'event', 'base_address', 'top_address')
++IMAGE_KEYS = ('install_path', 'image_uuid', 'unslid_load_address', 'text_size')
++IDENTITY_KEYS = IMAGE_KEYS[1:]
++RECORD_KEYS = ('schema', *HOST_IDENTITY_KEYS, 'slide_alignment', 'capture_source', 'images', 'aliases')
++HOST_KEYS = (*HOST_IDENTITY_KEYS, 'boot_session_uuid', 'image_path_status', 'cache_image_identities')
++SHA256 = re.compile(r'[0-9a-f]{64}')
++GLOB = set('*?[]{}')
++STUDIED_ADDRESS_SEMANTICS = ('mach_header', 'zero')  # jdk-17.0.1+12 os_bsd.cpp get_loaded_modules_info (__APPLE__)
++
++
++@dataclass(frozen=True)
++class SystemCacheEvidence:
++    expected: dict
++    pre_host: dict
++    post_host: dict
++
++
++def _int(value):
++    return isinstance(value, int) and not isinstance(value, bool)
++
++
++def _path(value):
++    return (isinstance(value, str) and value.startswith('/') and not value.endswith('/')
++            and '//' not in value and not GLOB.intersection(value) and '/../' not in value + '/')
++
++
++def _same(a, b):
++    """Type-strict equality (1 != True != 1.0) over the JSON-shaped records."""
++    if type(a) is not type(b):
++        return False
++    if isinstance(a, dict):
++        return a.keys() == b.keys() and all(_same(a[k], b[k]) for k in a)
++    if isinstance(a, list):
++        return len(a) == len(b) and all(_same(x, y) for x, y in zip(a, b))
++    return a == b
++
++
++def _exact_keys(value, keys):
++    return isinstance(value, dict) and set(value) == set(keys)
++
++
++def _record_errors(record):
++    """Structural validation of the reviewed record; returns setting strings (no values)."""
++    if not isinstance(record, dict):
++        return ['record fields']
++    if set(record) != set(RECORD_KEYS):
++        return ['record fields: missing %s; unexpected %s' % (sorted(set(RECORD_KEYS) - set(record)), sorted(set(record) - set(RECORD_KEYS)))]
++    errors = []
++    if record['schema'] != SCHEMA:
++        errors.append('schema')
++    if not _exact_keys(record['os'], OS_KEYS) or not all(isinstance(record['os'][k], str) for k in OS_KEYS) \
++            or not SHA256.fullmatch(record['os']['system_version_plist_sha256']):
++        errors.append('os')
++    if not _exact_keys(record['host_integrity'], INTEGRITY_KEYS) or not all(isinstance(v, bool) for v in record['host_integrity'].values()):
++        errors.append('host_integrity')
++    if not isinstance(record['arch'], str) or not record['arch']:
++        errors.append('arch')
++    if not _path(record['cache_dir']):
++        errors.append('cache_dir')
++    cache = record['cache']
++    if not _exact_keys(cache, ('main_uuid', 'subcaches', *CACHE_INT_KEYS)) or not all(_int(cache[k]) and cache[k] >= 0 for k in CACHE_INT_KEYS) \
++            or not isinstance(cache['main_uuid'], str) or not cache['main_uuid'] or not isinstance(cache['subcaches'], list) \
++            or not all(_exact_keys(s, ('suffix', 'uuid')) and isinstance(s['suffix'], str) and isinstance(s['uuid'], str)
++                       and s['suffix'] and s['uuid'] and '/' not in s['suffix'] for s in cache['subcaches']):
++        return errors + ['cache']
++    errors += _file_errors(record)
++    alignment = record['slide_alignment']
++    if not _int(alignment) or alignment <= 0 or alignment & (alignment - 1):
++        errors.append('slide_alignment')
++    source = record['capture_source']
++    if not _exact_keys(source, CAPTURE_KEYS) or not all(isinstance(v, str) for v in source.values()):
++        errors.append('capture_source')
++    elif (source['base_address'], source['top_address']) != STUDIED_ADDRESS_SEMANTICS:
++        errors.append('capture_source: address semantics not studied')
++    errors += _image_errors(record)
++    return errors
++
++
++def _file_errors(record):
++    files, arch, cache = record['cache_files'], record['arch'], record['cache']
++    main = 'dyld_shared_cache_' + arch
++    required = {main} | {main + s['suffix'] for s in cache['subcaches']}
++    if not isinstance(files, dict) or not files or not required <= set(files):
++        return ['cache_files: incomplete SHA256 manifest']
++    for name, entry in files.items():
++        if not isinstance(name, str) or '/' in name or not _exact_keys(entry, ('bytes', 'sha256')) \
++                or not _int(entry['bytes']) or entry['bytes'] <= 0 or not isinstance(entry['sha256'], str) or not SHA256.fullmatch(entry['sha256']):
++            return ['cache_files: missing or malformed digest']
++    return []
++
++
++def _image_errors(record):
++    images, aliases, cache = record['images'], record['aliases'], record['cache']
++    if not isinstance(images, list) or not all(_exact_keys(i, IMAGE_KEYS) for i in images):
++        return ['images: explicit list of exact identities required']
++    errors = []
++    start, end = cache['shared_region_start'], cache['shared_region_start'] + cache['shared_region_size']
++    for image in images:
++        if not _path(image['install_path']) or not isinstance(image['image_uuid'], str) or not image['image_uuid'] \
++                or not _int(image['unslid_load_address']) or not _int(image['text_size']) or image['text_size'] <= 0 \
++                or not start <= image['unslid_load_address'] < image['unslid_load_address'] + image['text_size'] <= end:
++            errors.append('images: invalid identity')
++            break
++    paths = [i['install_path'] for i in images]
++    if len(set(paths)) != len(paths):
++        errors.append('images: duplicate install_path')
++    if len(images) >= cache['images_count']:
++        errors.append('images: entire cache image set cannot be enrolled')
++    if not isinstance(aliases, dict) or not all(_path(a) and a not in paths and t in paths for a, t in aliases.items()):
++        errors.append('aliases: explicit reviewed alias to a reviewed image required')
++    return errors
++
++
++def check_host(evidence):
++    """Compare the reviewed record with both independently read host records. Returns setting strings."""
++    record = evidence.expected
++    errors = _record_errors(record)
++    if errors:
++        return ['system cache record: ' + e for e in errors]
++    paths = [i['install_path'] for i in record['images']] + list(record['aliases'])
++    identities = {i['install_path']: {k: i[k] for k in IDENTITY_KEYS} for i in record['images']}
++    boots = set()
++    for side, host in (('pre-capture', evidence.pre_host), ('post-capture', evidence.post_host)):
++        if not _exact_keys(host, HOST_KEYS):
++            errors.append('%s host record incomplete' % side)
++            continue
++        for key in HOST_IDENTITY_KEYS:
++            if not _same(host[key], record[key]):
++                errors.append('%s host identity changed: %s' % (side, key))
++        if not _same(host['cache_image_identities'], identities):
++            errors.append('%s host identity changed: cache_image_identities' % side)
++        status = host['image_path_status']
++        if not isinstance(status, dict) or set(status) != set(paths):
++            errors.append('%s host record incomplete: image_path_status' % side)
++        else:
++            for path in sorted(p for p in paths if status[p] != 'absent'):
++                errors.append('%s host: reviewed cache path not absent as a file: %s' % (side, path))
++        boot = host['boot_session_uuid']
++        if not isinstance(boot, str) or not boot:
++            errors.append('%s host record incomplete: boot session' % side)
++        boots.add(boot)
++    if len(boots) > 1:
++        errors.append('boot session differs between pre-capture and post-capture host')
++    return errors
++
++
++def lookup(evidence, name):
++    """Canonical reviewed install path for an observed name, or None. Only exact paths and reviewed aliases."""
++    record = evidence.expected
++    paths = {i['install_path'] for i in record['images']}
++    if name in paths:
++        return name
++    return record['aliases'].get(name)
++
++
++def check_capture(evidence, observation, entries):
++    """Per-JVM checks for observed cache entries [(canonical_path, observed_entry)]. Returns setting strings."""
++    record = evidence.expected
++    errors = []
++    capture = observation.get('capture') or {}
++    if not _same(capture.get('native_load_source'), record['capture_source']):
++        errors.append('native capture source differs from the reviewed capture source')
++    boot = observation.get('boot_session_uuid')
++    if not isinstance(boot, str) or boot != evidence.pre_host.get('boot_session_uuid') or boot != evidence.post_host.get('boot_session_uuid'):
++        errors.append('boot session of captured JVM differs from host records')
++    images = {i['install_path']: i for i in record['images']}
++    cache, alignment = record['cache'], record['slide_alignment']
++    slides = set()
++    for path, entry in entries:
++        base, top = entry.get('base_address'), entry.get('top_address')
++        if not _int(base):
++            errors.append('system cache image without integer base_address: %s' % path)
++            continue
++        if not (_int(top) and top == 0):
++            errors.append('system cache image top_address differs from reviewed semantics: %s' % path)
++        slide = base - images[path]['unslid_load_address']
++        if slide < 0 or slide % alignment or not (slide < cache['max_slide'] if cache['max_slide'] else slide == 0):
++            errors.append('system cache image slide negative, unaligned or out of bounds: %s' % path)
++        slides.add(slide)
++    if len(slides) > 1:
++        errors.append('system cache images use different slides in one JVM')
++    return errors
+--- /dev/null
++++ b/bindings/react-native/tools/security/test_native_cache.py
+@@ -0,0 +1,321 @@
++#!/usr/bin/env python3
++"""TC-0038 SR-22a/b macOS system shared-cache identities. Pure and synthetic: no JVM, dyld, network or subprocess.
++
++Run: python3 -I bindings/react-native/tools/security/test_native_cache.py
++     python3 -I -O bindings/react-native/tools/security/test_native_cache.py
++"""
++import copy
++from pathlib import Path
++import sys
++import unittest
++
++sys.path.insert(0, str(Path(__file__).resolve().parent))
++import kotlin_guard as G  # noqa: E402
++import native_cache as N  # noqa: E402
++
++ARCH = 'x86_64h'
++MAIN = 'dyld_shared_cache_' + ARCH
++SECRET = 'unrelated-secret-value-7f3a'
++BOOT = '00EBDCD7-544E-4B3D-BF87-B30D07098B2D'
++SLIDE = 0x5000
++LIBSYSTEM = '/usr/lib/libSystem.B.dylib'
++LIBZ = '/usr/lib/libz.1.dylib'
++SECURITY = '/System/Library/Frameworks/Security.framework/Versions/A/Security'
++IMAGES = [
++    {'install_path': LIBSYSTEM, 'image_uuid': '59F4B806-CE61-3332-9C81-B0017DD51338', 'unslid_load_address': 0x7ff812e9d000, 'text_size': 6956},
++    {'install_path': LIBZ, 'image_uuid': '1937863A-A3D1-3A4D-AF24-5492992693BF', 'unslid_load_address': 0x7ff812db2000, 'text_size': 79340},
++    {'install_path': SECURITY, 'image_uuid': 'B2530481-AEDF-36E2-847D-77D5545C91FE', 'unslid_load_address': 0x7ff806220000, 'text_size': 4190288},
++]
++ALIAS = '/System/Library/Frameworks/Security.framework/Security'
++
++
++def expected():
++    files = {MAIN: {'bytes': 888602624, 'sha256': '1' * 64}, MAIN + '.01': {'bytes': 805208064, 'sha256': '2' * 64},
++             MAIN + '.map': {'bytes': 1156006, 'sha256': '3' * 64}}
++    return {
++        'schema': N.SCHEMA,
++        'os': {'product_version': '26.7.1', 'product_build_version': '25G241', 'build_id': '66D2C708-B87D-11F1-B88D-BB1EF7271656',
++               'product_version_extra': '', 'system_version_plist_sha256': '7' * 64},
++        'host_integrity': {'sip_enabled': True, 'authenticated_root': True, 'system_volume_sealed': True},
++        'arch': ARCH,
++        'cache_dir': '/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld',
++        'cache': {'main_uuid': '31374756-89B4-34E8-A34F-56C5D57216A1', 'subcaches': [{'suffix': '.01', 'uuid': '98E79F0E-FCC8-31D5-885B-12E9A5F8A269'}],
++                  'cache_type': 0, 'platform': 1, 'os_version_field': 0x1a0700, 'shared_region_start': 0x7ff800000000,
++                  'shared_region_size': 0x700000000, 'max_slide': 0x1941c000, 'images_count': 3625},
++        'cache_files': files,
++        'slide_alignment': 4096,
++        'capture_source': {'jdk': 'Temurin-17.0.1+12', 'event': 'jdk.NativeLibrary', 'base_address': 'mach_header', 'top_address': 'zero'},
++        'images': copy.deepcopy(IMAGES),
++        'aliases': {},
++    }
++
++
++def host(record=None):
++    """An independently read host record that agrees with the reviewed record."""
++    record = record or expected()
++    paths = [i['install_path'] for i in record['images']] + list(record['aliases'])
++    return {key: copy.deepcopy(record[key]) for key in N.HOST_IDENTITY_KEYS} | {
++        'boot_session_uuid': BOOT,
++        'image_path_status': {p: 'absent' for p in paths},
++        'cache_image_identities': {i['install_path']: {k: i[k] for k in ('image_uuid', 'unslid_load_address', 'text_size')}
++                                   for i in record['images']},
++    }
++
++
++def evidence(record=None, pre=None, post=None):
++    record = record or expected()
++    return N.SystemCacheEvidence(expected=record, pre_host=pre or host(record), post_host=post or host(record))
++
++
++def cached(path, slide=SLIDE, **override):
++    image = next(i for i in IMAGES if i['install_path'] == path)
++    entry = {'name': path, 'base_address': image['unslid_load_address'] + slide, 'top_address': 0}
++    entry.update(override)
++    return entry
++
++
++def jvm(libs, **override):
++    base = {'role': 'kotlin-compiler', 'execution_strategy': 'in-process', 'input_arguments': ['-Xmx2g'],
++            'system_properties': {'kotlin.incremental': 'false'}, 'environment': {'HOME_TOKEN': SECRET},
++            'capture': {'class_load': True, 'native_load': True, 'native_load_source': expected()['capture_source']},
++            'boot_session_uuid': BOOT, 'classes_loaded': [], 'native_libraries_loaded': libs}
++    base.update(override)
++    return base
++
++
++PAYLOADS = {'libjansi.jnilib': 'b' * 64}
++BASELINE = {'/jdk/lib/libjava.dylib': 'd' * 64}
++FILE_LIBS = [{'name': '/jdk/lib/libjava.dylib', 'sha256': 'd' * 64}, {'name': 'libjansi.jnilib', 'sha256': 'b' * 64}]
++
++
++def check(observations, system_cache=None):
++    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
++                                 system_cache=system_cache)
++
++
++class SystemCacheIdentity(unittest.TestCase):
++    def rejected(self, result, text):
++        self.assertFalse(result.ok)
++        joined = ' | '.join(v.setting for v in result.violations)
++        self.assertIn(text, joined)
++        self.assertNotIn(SECRET, repr(result))
++
++    def test_sr22a_reviewed_cache_images_close_and_report_three_bins(self):
++        libs = FILE_LIBS + [cached(LIBSYSTEM), cached(LIBZ), cached(SECURITY)]
++        result = check([jvm(libs)], evidence())
++        self.assertTrue(result.ok, result.violations)
++        self.assertEqual(result.native_loads, [('kotlin-compiler', 'libjansi.jnilib')])
++        self.assertEqual(result.baseline_loads, [('kotlin-compiler', '/jdk/lib/libjava.dylib')])
++        self.assertEqual(result.system_cache_loads, [('kotlin-compiler', LIBSYSTEM), ('kotlin-compiler', LIBZ), ('kotlin-compiler', SECURITY)])
++        self.assertEqual(result.discovered_images, [])
++
++    def test_sr22a_repeated_chunk_event_for_same_image_counts_once(self):
++        result = check([jvm([cached(LIBZ), cached(LIBZ)])], evidence())
++        self.assertTrue(result.ok, result.violations)
++        self.assertEqual(result.system_cache_loads, [('kotlin-compiler', LIBZ)])
++
++    def test_sr22a_missing_digest_is_never_a_general_exemption(self):
++        self.rejected(check([jvm([cached(LIBZ)])]), 'missing digest')
++        self.rejected(check([jvm([{'name': '/jdk/lib/libjava.dylib', 'sha256': None}])], evidence()), 'missing digest')
++        self.rejected(check([jvm([{'name': '/opt/unknown.dylib', 'base_address': 0x1000, 'top_address': 0}])], evidence()), 'missing digest')
++
++    def test_sr22a_regular_file_cannot_enter_through_cache_class(self):
++        self.rejected(check([jvm([cached(LIBZ, sha256='e' * 64)])], evidence()), 'file-backed')
++        for side in ('pre', 'post'):
++            changed = host()
++            changed['image_path_status'][LIBZ] = 'regular_file'
++            self.rejected(check([jvm([cached(LIBSYSTEM)])], evidence(**{side: changed})), 'not absent as a file')
++
++    def test_sr22a_each_entry_classified_exactly_once(self):
++        both = G.check_observed_jvms([jvm([{'name': 'libjansi.jnilib', 'sha256': 'b' * 64}])], ['kotlin-compiler'],
++                                     native_inventory=PAYLOADS, native_baseline={'libjansi.jnilib': 'b' * 64}, system_cache=evidence())
++        self.rejected(both, 'ambiguous native classification')
++
++    def test_sr22b_any_host_identity_change_rejects_in_pre_or_post(self):
++        changes = {
++            'os.product_build_version': lambda h: h['os'].update(product_build_version='25G242'),
++            'os.build_id': lambda h: h['os'].update(build_id='0' * 8),
++            'os.product_version_extra': lambda h: h['os'].update(product_version_extra='(a)'),
++            'os.system_version_plist_sha256': lambda h: h['os'].update(system_version_plist_sha256='8' * 64),
++            'host_integrity': lambda h: h['host_integrity'].update(system_volume_sealed=False),
++            'arch': lambda h: h.update(arch='arm64e'),
++            'cache_dir': lambda h: h.update(cache_dir='/tmp/dyld'),
++            'cache.main_uuid': lambda h: h['cache'].update(main_uuid='0' * 32),
++            'cache.subcache uuid': lambda h: h['cache']['subcaches'][0].update(uuid='0' * 32),
++            'cache.extra subcache': lambda h: h['cache']['subcaches'].append({'suffix': '.02', 'uuid': '1' * 32}),
++            'cache.max_slide': lambda h: h['cache'].update(max_slide=0x2000),
++            'cache.images_count': lambda h: h['cache'].update(images_count=3626),
++            'cache_files sha256': lambda h: h['cache_files'][MAIN + '.01'].update(sha256='9' * 64),
++            'cache_files extra file': lambda h: h['cache_files'].update({MAIN + '.02': {'bytes': 1, 'sha256': '4' * 64}}),
++            'cache_files missing file': lambda h: h['cache_files'].pop(MAIN + '.map'),
++            'image identity uuid': lambda h: h['cache_image_identities'][LIBZ].update(image_uuid='0' * 32),
++            'image identity address': lambda h: h['cache_image_identities'][LIBZ].update(unslid_load_address=0x7ff812db3000),
++        }
++        for label, change in changes.items():
++            for side in ('pre', 'post'):
++                changed = host()
++                change(changed)
++                with self.subTest(label=label, side=side):
++                    self.rejected(check([jvm([cached(LIBZ)])], evidence(**{side: changed})), 'host identity')
++
++    def test_sr22b_host_comparison_is_type_strict(self):
++        for change in (lambda h: h['host_integrity'].update(sip_enabled=1), lambda h: h['cache'].update(cache_type=False),
++                       lambda h: h['cache_image_identities'][LIBZ].update(text_size=79340.0)):
++            changed = host()
++            change(changed)
++            with self.subTest():
++                self.rejected(check([jvm([cached(LIBZ)])], evidence(pre=changed)), 'host identity')
++
++    def test_sr22b_incomplete_host_or_record_rejects(self):
++        for side in ('pre', 'post'):
++            for key in ('os', 'cache_files', 'boot_session_uuid', 'image_path_status', 'cache_image_identities', 'host_integrity'):
++                changed = host()
++                del changed[key]
++                with self.subTest(side=side, key=key):
++                    self.assertFalse(check([jvm([cached(LIBZ)])], evidence(**{side: changed})).ok)
++
++    def test_sr22b_uuid_only_identity_cannot_replace_complete_hashes(self):
++        for change in (lambda r: r.pop('cache_files'), lambda r: r.update(cache_files={}),
++                       lambda r: r['cache_files'][MAIN].update(sha256=None), lambda r: r['cache_files'][MAIN].update(sha256='ABC'),
++                       lambda r: r['cache_files'].pop(MAIN + '.01'), lambda r: r['cache_files'][MAIN].pop('bytes')):
++            record = expected()
++            change(record)
++            with self.subTest(record=record.get('cache_files')):
++                self.rejected(check([jvm([cached(LIBZ)])], evidence(record, pre=host(), post=host())), 'cache_files')
++
++    def test_sr22b_boot_session_binds_pre_capture_and_post(self):
++        changed = host()
++        changed['boot_session_uuid'] = '11111111-2222-3333-4444-555555555555'
++        for side in ('pre', 'post'):
++            self.rejected(check([jvm([cached(LIBZ)])], evidence(**{side: changed})), 'boot session')
++        self.rejected(check([jvm([cached(LIBZ)], boot_session_uuid='11111111-2222-3333-4444-555555555555')], evidence()), 'boot session')
++        observation = jvm([cached(LIBZ)])
++        del observation['boot_session_uuid']
++        self.rejected(check([observation], evidence()), 'boot session')
++
++    def test_sr22b_slide_must_be_common_bounded_and_aligned(self):
++        cases = {
++            'mixed': [cached(LIBZ), cached(LIBSYSTEM, slide=SLIDE + 0x1000)],
++            'negative': [cached(LIBZ, slide=-0x1000)],
++            'unaligned': [cached(LIBZ, slide=0x5800)],
++            'at max_slide': [cached(LIBZ, slide=0x1941c000)],
++            'beyond max_slide': [cached(LIBZ, slide=0x20000000)],
++        }
++        for label, libs in cases.items():
++            with self.subTest(label=label):
++                self.rejected(check([jvm(libs)], evidence()), 'slide')
++        self.assertTrue(check([jvm([cached(LIBZ, slide=0)])], evidence()).ok)
++        self.assertTrue(check([jvm([cached(LIBZ, slide=0x1941b000)])], evidence()).ok)
++
++    def test_sr22b_slide_is_per_jvm(self):
++        first = jvm([cached(LIBZ)])
++        second = jvm([cached(LIBZ, slide=0x9000)], role='kotlin-daemon')
++        result = G.check_observed_jvms([first, second], ['kotlin-compiler', 'kotlin-daemon'], system_cache=evidence())
++        self.assertTrue(result.ok, result.violations)
++
++    def test_sr22b_alignment_is_the_reviewed_architecture_value(self):
++        record = expected()
++        del record['slide_alignment']
++        self.rejected(check([jvm([cached(LIBZ)])], evidence(record, pre=host(), post=host())), 'slide_alignment')
++        for bad in (0, 3000, True, '4096'):
++            record = expected()
++            record['slide_alignment'] = bad
++            with self.subTest(bad=bad):
++                self.rejected(check([jvm([cached(LIBZ)])], evidence(record)), 'slide_alignment')
++        record = expected()
++        record['slide_alignment'] = 0x4000
++        self.rejected(check([jvm([cached(LIBZ)])], evidence(record)), 'slide')
++
++    def test_sr22b_address_semantics_are_pinned(self):
++        self.rejected(check([jvm([cached(LIBZ, top_address=0x7ff812dc5000 + SLIDE)])], evidence()), 'top_address')
++        missing = cached(LIBZ)
++        del missing['base_address']
++        self.rejected(check([jvm([missing])], evidence()), 'base_address')
++        self.rejected(check([jvm([cached(LIBZ, base_address='0x7ff812db7000')])], evidence()), 'base_address')
++        for top in (False, 0.0, None):
++            with self.subTest(top=top):
++                self.rejected(check([jvm([cached(LIBZ, top_address=top)])], evidence()), 'top_address')
++        other = dict(expected()['capture_source'], top_address='module_end')
++        capture = {'class_load': True, 'native_load': True, 'native_load_source': other}
++        self.rejected(check([jvm([cached(LIBZ)], capture=capture)], evidence()), 'capture source')
++        capture = {'class_load': True, 'native_load': True}
++        self.rejected(check([jvm([cached(LIBZ)], capture=capture)], evidence()), 'capture source')
++
++    def test_sr22b_prefix_wildcard_and_whole_cache_enrollment_reject(self):
++        for path in ('/usr/lib/*', '/usr/lib/', '/usr/lib/libz.?.dylib', '/usr/lib/[a-z]*', 'usr/lib/libz.1.dylib', ''):
++            record = expected()
++            record['images'].append({'install_path': path, 'image_uuid': '0' * 32, 'unslid_load_address': 0x7ff812000000, 'text_size': 1})
++            with self.subTest(path=path):
++                self.rejected(check([jvm([cached(LIBZ)])], evidence(record)), 'images')
++        record = expected()
++        record['images'] = 'all'
++        self.rejected(check([jvm([cached(LIBZ)])], evidence(record, pre=host(), post=host())), 'images')
++        record = expected()
++        record['cache']['images_count'] = len(record['images'])
++        self.rejected(check([jvm([cached(LIBZ)])], evidence(record, pre=host(record), post=host(record))), 'entire cache image set')
++        record = expected()
++        record['images'].append(dict(record['images'][0]))
++        self.rejected(check([jvm([cached(LIBZ)])], evidence(record)), 'duplicate')
++
++    def test_sr22b_aliases_need_explicit_review(self):
++        self.rejected(check([jvm([cached(SECURITY, name=ALIAS)])], evidence()), 'missing digest')
++        record = expected()
++        record['aliases'] = {ALIAS: SECURITY}
++        result = check([jvm([cached(SECURITY, name=ALIAS)])], evidence(record, pre=host(record), post=host(record)))
++        self.assertTrue(result.ok, result.violations)
++        self.assertEqual(result.system_cache_loads, [('kotlin-compiler', SECURITY)])
++        for bad in ({ALIAS: '/usr/lib/unreviewed.dylib'}, {'/System/Library/Frameworks/*': SECURITY}, {LIBZ: SECURITY}):
++            record = expected()
++            record['aliases'] = bad
++            with self.subTest(bad=bad):
++                self.rejected(check([jvm([cached(LIBZ)])], evidence(record, pre=host(record), post=host(record))), 'aliases')
++
++    def test_sr22b_discovery_cannot_enroll_itself(self):
++        record = expected()
++        frozen = copy.deepcopy(record)
++        unknown = {'name': '/usr/lib/libobjc.A.dylib', 'base_address': 0x7ff802a22000 + SLIDE, 'top_address': 0}
++        result = check([jvm([cached(LIBZ), unknown])], evidence(record))
++        self.rejected(result, 'missing digest')
++        self.assertEqual(result.discovered_images, [('kotlin-compiler', '/usr/lib/libobjc.A.dylib')])
++        self.assertEqual(record, frozen)
++        self.assertFalse(check([jvm([cached(LIBZ), unknown])], evidence(record)).ok)
++
++    def test_sr22b_record_schema_and_types_are_exact(self):
++        for change in (lambda r: r.update(schema='other/1'), lambda r: r.pop('capture_source'), lambda r: r['os'].pop('build_id'),
++                       lambda r: r['cache'].pop('max_slide'), lambda r: r['cache'].update(max_slide='0x1941c000'),
++                       lambda r: r['images'][0].update(unslid_load_address=None), lambda r: r['images'][0].pop('text_size'),
++                       lambda r: r['images'][0].update(extra=1), lambda r: r['cache'].update(main_uuid=''),
++                       lambda r: r['cache']['subcaches'][0].update(uuid=''), lambda r: r['cache']['subcaches'][0].update(suffix='/.01')):
++            record = expected()
++            change(record)
++            with self.subTest():
++                self.assertFalse(check([jvm([cached(LIBZ)])], evidence(record, pre=host(), post=host())).ok)
++
++
++class LoaderEnvironment(unittest.TestCase):
++    def test_sr22c_dyld_variables_reject_before_launch_by_name_only(self):
++        for name in ('DYLD_INSERT_LIBRARIES', 'DYLD_LIBRARY_PATH', 'DYLD_SHARED_REGION', 'DYLD_SHARED_CACHE_DIR', 'DYLD_FRAMEWORK_PATH',
++                     'DYLD_PRINT_LIBRARIES'):
++            result = G.check_launch(G.secure_launch_args(), {name: '/tmp/' + SECRET}, {})
++            with self.subTest(name=name):
++                self.assertFalse(result.ok)
++                self.assertIn(('env:' + name, 'DYLD_ loader environment'), [(v.source, v.setting) for v in result.violations])
++                self.assertNotIn(SECRET, repr(result))
++
++    def test_sr22c_effective_environment_is_mandatory_and_checked(self):
++        result = check([jvm([], environment={'DYLD_INSERT_LIBRARIES': '/tmp/' + SECRET})])
++        self.assertFalse(result.ok)
++        self.assertIn(('kotlin-compiler', 'DYLD_ loader environment: DYLD_INSERT_LIBRARIES'),
++                      [(v.source, v.setting) for v in result.violations])
++        self.assertNotIn(SECRET, repr(result))
++        for override in ({'environment': None}, {'environment': ['DYLD_X=1']}):
++            self.assertFalse(check([jvm([], **override)]).ok)
++        observation = jvm([])
++        del observation['environment']
++        result = check([observation])
++        self.assertFalse(result.ok)
++        self.assertIn('incomplete capture: effective environment missing', [v.setting for v in result.violations])
++
++
++if __name__ == '__main__':
++    unittest.main()

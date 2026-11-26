@@ -1,0 +1,24 @@
+{
+  "container_sha256": "78b86a47dfdf7697c9bd15da78983fd80da7247d6e02fc106bdf07e0388b60a8",
+  "method": "inert ZIP/class-byte inspection; no class loaded",
+  "entries": [
+    {
+      "class": "shadow/com/google/gson/Gson.class",
+      "sha256": "7801943bd096fe960703d4e0f09af3f241c2b1e0b665cf0041238ff5600edc43",
+      "observed_ascii_version": "2.13.1",
+      "offsets": [
+        10172,
+        13699
+      ]
+    },
+    {
+      "class": "shadow/com/google/gson/internal/reflect/ReflectionHelper.class",
+      "sha256": "343ce60d856954583229ecab3bf4f89aa8070a64cc3535afa64a4750c0efbc3d",
+      "observed_ascii_version": "2.13.1",
+      "offsets": [
+        4516,
+        4905
+      ]
+    }
+  ]
+}

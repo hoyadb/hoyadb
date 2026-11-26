@@ -1,0 +1,52 @@
+{
+  "status": "partial_phase_seven_checkpoint",
+  "swift_tests": {
+    "passed": 44,
+    "failed": 0,
+    "warnings_as_errors": true,
+    "command": [
+      "swift",
+      "test",
+      "--package-path",
+      "bindings/swift",
+      "-Xswiftc",
+      "-warnings-as-errors"
+    ]
+  },
+  "strict_format": {
+    "exit_code": 0,
+    "output_bytes": 0,
+    "command": [
+      "xcrun",
+      "swift-format",
+      "lint",
+      "--strict",
+      "--recursive",
+      "bindings/swift/Sources",
+      "bindings/swift/Tests",
+      "bindings/swift/Examples",
+      "bindings/swift/Package.swift"
+    ]
+  },
+  "outside_consumer": {
+    "build_exit_code": 0,
+    "writer_exit_code": 0,
+    "reader_exit_code": 0,
+    "public_imports_only": true,
+    "actual_memory_and_protected": true
+  },
+  "native_artifact_file_checks": {
+    "HoyaNative.xcframework/Info.plist": true,
+    "HoyaNative.xcframework/ios-arm64/Headers/hoyadb.h": true,
+    "HoyaNative.xcframework/ios-arm64/Headers/module.modulemap": true,
+    "HoyaNative.xcframework/ios-arm64/libhoyadb_native.a": true,
+    "HoyaNative.xcframework/ios-arm64_x86_64-simulator/Headers/hoyadb.h": true,
+    "HoyaNative.xcframework/ios-arm64_x86_64-simulator/Headers/module.modulemap": true,
+    "HoyaNative.xcframework/ios-arm64_x86_64-simulator/libhoyadb_native_simulator.a": true,
+    "HoyaNative.xcframework/macos-x86_64/Headers/hoyadb.h": true,
+    "HoyaNative.xcframework/macos-x86_64/Headers/module.modulemap": true,
+    "HoyaNative.xcframework/macos-x86_64/libhoyadb_native.a": true
+  },
+  "current_ios_runtime": "OPEN; earlier launch-console timeout cause UNKNOWN; no current44-source iOS proof yet",
+  "phase_seven_complete": false
+}

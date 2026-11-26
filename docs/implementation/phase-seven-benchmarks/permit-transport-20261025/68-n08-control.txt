@@ -1,0 +1,4 @@
+ADMIT {"coordinates":{"kind":"cold","engine":"memory","operation":"create","n":0,"run":1,"worker_id":"n08:1"},"environment":{"declared":"non-quiet host; contaminated N08 functional"}}
+ADMIT {"coordinates":{"kind":"cold","engine":"memory","operation":"create","n":0,"run":2,"worker_id":"n08:2"}}
+ADMIT {"coordinates":{"kind":"resources","engine":"memory","run":1,"worker_id":"n08-resources:1"}}
+CANCEL {"reason":"N08 integration complete"}

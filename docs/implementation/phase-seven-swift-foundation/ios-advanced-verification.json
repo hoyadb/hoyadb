@@ -1,0 +1,11 @@
+{
+  "udid": "CC525A65-D03E-4F9D-8936-DD16BBFD9664",
+  "bundle": "dev.hoyadb.phase7.owned.consumer",
+  "binary_sha256": "3a75f3cf3a0e127f6e84f1ad15bc3a21c160c0d00ea8277ff07219142e900c6a",
+  "independent_process_modes": [
+    "writer",
+    "reader"
+  ],
+  "app_uninstalled": true,
+  "owned_simulator_shutdown": true
+}

@@ -1,0 +1,127 @@
+{
+  "source_inputs": 5359,
+  "source_unchanged": true,
+  "sources_sha256": "4e865cde856a69f3a977724e73a6c6fade308ae935733b7854300224d2f4e2d8",
+  "tools_sha256": "b3d8a14e364f9fd14ef12b7d41424d55abb765f8e26cacb9f3b758b72da9a4e3",
+  "results": [
+    {
+      "name": "wasm-build",
+      "command": [
+        "sh",
+        "crates/hoyadb-web/build.sh"
+      ],
+      "exit": 0,
+      "seconds": 75.018
+    },
+    {
+      "name": "memory-bridge",
+      "command": [
+        "node",
+        "crates/hoyadb-web/tests/memory.mjs"
+      ],
+      "exit": 0,
+      "seconds": 0.211
+    },
+    {
+      "name": "npm-test",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "exit": 0,
+      "seconds": 3.558
+    },
+    {
+      "name": "rn-host",
+      "command": [
+        "npm",
+        "run",
+        "test:react-native"
+      ],
+      "exit": 0,
+      "seconds": 0.651
+    },
+    {
+      "name": "package-build",
+      "command": [
+        "npm",
+        "run",
+        "build:packages"
+      ],
+      "exit": 0,
+      "seconds": 0.76
+    },
+    {
+      "name": "package-check",
+      "command": [
+        "npm",
+        "run",
+        "check:packages"
+      ],
+      "exit": 0,
+      "seconds": 0.494
+    },
+    {
+      "name": "packed-consumer",
+      "command": [
+        "npm",
+        "run",
+        "test:packaging"
+      ],
+      "exit": 0,
+      "seconds": 10.107
+    },
+    {
+      "name": "source-compatibility",
+      "command": [
+        "python3",
+        "tools/release/compatibility.py",
+        "sources"
+      ],
+      "exit": 0,
+      "seconds": 0.202
+    }
+  ],
+  "output_inventory_sha256": "b7dd7e3ba09560a52431b44bd2ccff4af3492956b1ab529ef38bf6698ef027b3",
+  "scope": "ordinary WASM build, actual Node memory bridge, JS/RN host tests and independent npm tarball consumer; no browser/OPFS/mobile runtime certification",
+  "recorded_artifacts": {
+    "before-cargo-metadata.json": "9a881556ac180fba51eccaeb53e2e36e8d65971b5fabb6bf3f3d23aff7854a97",
+    "before-sources.json": "4e865cde856a69f3a977724e73a6c6fade308ae935733b7854300224d2f4e2d8",
+    "environment.json": "63e7696943f843017cff735dbbb0b3a16f5e414aafc926c4e2e3657d27476c55",
+    "final-cargo-metadata.json": "9a881556ac180fba51eccaeb53e2e36e8d65971b5fabb6bf3f3d23aff7854a97",
+    "final-generated.json": "b7dd7e3ba09560a52431b44bd2ccff4af3492956b1ab529ef38bf6698ef027b3",
+    "final-sources.json": "4e865cde856a69f3a977724e73a6c6fade308ae935733b7854300224d2f4e2d8",
+    "git-status-before.txt": "c3eea2723ecd7c08f9de722a5c0ff39d27d020c5bfbae0297c0a618caad13179",
+    "memory-bridge-after-cargo-metadata.json": "9a881556ac180fba51eccaeb53e2e36e8d65971b5fabb6bf3f3d23aff7854a97",
+    "memory-bridge-after-sources.json": "4e865cde856a69f3a977724e73a6c6fade308ae935733b7854300224d2f4e2d8",
+    "memory-bridge.log": "8d9c3c1ba023cc7f067abf6b49bc2d70cc8112476663b3d0607a45b13db65a95",
+    "npm-test-after-cargo-metadata.json": "9a881556ac180fba51eccaeb53e2e36e8d65971b5fabb6bf3f3d23aff7854a97",
+    "npm-test-after-sources.json": "4e865cde856a69f3a977724e73a6c6fade308ae935733b7854300224d2f4e2d8",
+    "npm-test.log": "0bb88757c104503701b514f0a549eed363d9faa8a17cd792907a57e4c2530375",
+    "package-build-after-cargo-metadata.json": "9a881556ac180fba51eccaeb53e2e36e8d65971b5fabb6bf3f3d23aff7854a97",
+    "package-build-after-sources.json": "4e865cde856a69f3a977724e73a6c6fade308ae935733b7854300224d2f4e2d8",
+    "package-build.log": "02e61583da0bf486d747ad5b43a23fbd43420ef74d5e7d5916465b1bab9eeb8b",
+    "package-check-after-cargo-metadata.json": "9a881556ac180fba51eccaeb53e2e36e8d65971b5fabb6bf3f3d23aff7854a97",
+    "package-check-after-sources.json": "4e865cde856a69f3a977724e73a6c6fade308ae935733b7854300224d2f4e2d8",
+    "package-check.log": "44ad3a623980eeaa1a38accffc8103e9bf0aa47b79cbc8036c7804045fa1f67c",
+    "packed-consumer-after-cargo-metadata.json": "9a881556ac180fba51eccaeb53e2e36e8d65971b5fabb6bf3f3d23aff7854a97",
+    "packed-consumer-after-sources.json": "4e865cde856a69f3a977724e73a6c6fade308ae935733b7854300224d2f4e2d8",
+    "packed-consumer.log": "f9f914f63878da689b2f05e351e53cf5916e63f9510093fa3acdc4301f88148c",
+    "prior-generated.json": "a35d8bee14cc60c71b715ee2d5ab557d6d2026d306d47b90c819b122ca789f69",
+    "results.json": "ac6bb2f08dcedcfa268a403a6fae8c9927024c0be5682930368e3fdc9e00a9e4",
+    "rn-host-after-cargo-metadata.json": "9a881556ac180fba51eccaeb53e2e36e8d65971b5fabb6bf3f3d23aff7854a97",
+    "rn-host-after-sources.json": "4e865cde856a69f3a977724e73a6c6fade308ae935733b7854300224d2f4e2d8",
+    "rn-host.log": "b2d26c1338ef33323ad741409884ffa6d4c0492949549d4dca73c7b750af6bd1",
+    "run.py": "ea38e285fb5e5c59561d190be3fe9be8e83a0bdaad8d6dde5b05c27fe525a099",
+    "runtime-freeze.json": "8549dc12cf14db7e5ffb47bb0687e799767f29c6350ed5aad0eac5d8f13c1818",
+    "source-compatibility-after-cargo-metadata.json": "9a881556ac180fba51eccaeb53e2e36e8d65971b5fabb6bf3f3d23aff7854a97",
+    "source-compatibility-after-sources.json": "4e865cde856a69f3a977724e73a6c6fade308ae935733b7854300224d2f4e2d8",
+    "source-compatibility.log": "315a0ace8b917610991d4e8db25defbc5888551f8588725ba1a8f7e3e5dc6347",
+    "sources-before.json": "4e865cde856a69f3a977724e73a6c6fade308ae935733b7854300224d2f4e2d8",
+    "tools.json": "b3d8a14e364f9fd14ef12b7d41424d55abb765f8e26cacb9f3b758b72da9a4e3",
+    "tracked-working-tree-before.diff": "4fd5454eebaa54eac75e2dbec45102a32a5b240bffd8311a3b57972d7eeb56c2",
+    "wasm-build-after-cargo-metadata.json": "9a881556ac180fba51eccaeb53e2e36e8d65971b5fabb6bf3f3d23aff7854a97",
+    "wasm-build-after-sources.json": "4e865cde856a69f3a977724e73a6c6fade308ae935733b7854300224d2f4e2d8",
+    "wasm-build.log": "22b28630d11b1a5f3d1ada77f8460f13690f4464cee64a5d9f7739b82e014ec6"
+  }
+}

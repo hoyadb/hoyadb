@@ -1,0 +1,4 @@
+notice files 35
+{'x86_64': '3b8c7f5a01fc91d6eba77dac8c4190ca251ceb4121407d4cde1c6525e90b6788', 'arm64-v8a': '2ca0467dd2527757f8e2635237e8311f005331ce55b1070b435391662b6348ff'}
+x86_64 ['Java_dev_hoyadb_NativeBridge_abiVersion', 'Java_dev_hoyadb_NativeBridge_call', 'Java_dev_hoyadb_NativeBridge_open', 'Java_dev_hoyadb_NativeBridge_validateOpen', 'hoya_v1_abi_version', 'hoya_v1_call', 'hoya_v1_open', 'hoya_v1_validate_open'] ['libc.so', 'libdl.so', 'libm.so'] ['0x4000', '0x4000', '0x4000', '0x4000'] ['9ce71ae01a4c', '69bef658b30b', 'a88deccb447f', 'eceeb9d442fb']
+arm64-v8a ['Java_dev_hoyadb_NativeBridge_abiVersion', 'Java_dev_hoyadb_NativeBridge_call', 'Java_dev_hoyadb_NativeBridge_open', 'Java_dev_hoyadb_NativeBridge_validateOpen', 'hoya_v1_abi_version', 'hoya_v1_call', 'hoya_v1_open', 'hoya_v1_validate_open'] ['libc.so', 'libdl.so', 'libm.so'] ['0x4000', '0x4000', '0x4000', '0x4000'] ['4d6816ea7f4a', 'f157fc06a900', 'f5a17f456dcd', '9edaa7c83d4e']

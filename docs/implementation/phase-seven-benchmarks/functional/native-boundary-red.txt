@@ -1,0 +1,22 @@
+   Compiling hoyadb-benchmark v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/native)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 17.11s
+     Running unittests src/lib.rs (benchmarks/native/target/debug/deps/hoyadb_benchmark-0e7a7c369aeaba1a)
+
+running 1 test
+test tests::p02_observations_and_boundary_are_real_decoded_callbacks ... FAILED
+
+failures:
+
+---- tests::p02_observations_and_boundary_are_real_decoded_callbacks stdout ----
+
+thread 'tests::p02_observations_and_boundary_are_real_decoded_callbacks' (82024362) panicked at src/lib.rs:324:55:
+called `Result::unwrap()` on an `Err` value: "operation pending"
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    tests::p02_observations_and_boundary_are_real_decoded_callbacks
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 1 filtered out; finished in 7.31s
+
+error: test failed, to rerun pass `--lib`

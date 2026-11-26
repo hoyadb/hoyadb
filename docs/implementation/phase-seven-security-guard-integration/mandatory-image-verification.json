@@ -1,0 +1,105 @@
+{
+  "approved_spec_commits": [
+    "3c3096d",
+    "09bf1f5"
+  ],
+  "evidence_index_sha256": "708acffffb2757cbddb825c162340b6674ff562315df282bf7cde414c87cc535",
+  "evidence_entries_rehashed": 27,
+  "evidence_mismatches": 0,
+  "sources": {
+    "README.md": "b58537fe3613564686e43dcc90a4350359f0f8b04bf50d826b8f8e19fd39f4d3",
+    "classfile.py": "d6cddefb56da9ba602a4b85c5e885f47ef03d90a983fb4eb09e18e98f218f6cd",
+    "embedded_scan.py": "20299d9e0518c489effe4e4e6d5c22f485be015cc7a1a56f5adac0e845ad9833",
+    "fixtures.py": "98435b6272b53931ef9261d8dd4d813679a40f5aaeabca067ab35a041c719ed2",
+    "init_script_guard.py": "a03132fa672aa67b56672de7f7b8aec0f4814974fc2485277fee5ad61ef7135a",
+    "java_properties.py": "1520ebe4d58b2667aa4e7df242387ff63c46d1bac0971216bb02320b3a17beab",
+    "kotlin_guard.py": "d0755e6ec0ef69770167b4b018be5df5e066d774fbf144777f8c9822993ddf52",
+    "native_cache.py": "7aefaba492082e25391909065160e573d5c29c11f85a1fadc95a3c0d02da5329",
+    "r1-compile-alignment.init.gradle": "74aa545a6c82cbdc434e71328653979715659818603a6c0d60627245e8d1f9a0",
+    "symbol_guard.py": "56668e924bca2606d5eb2f5dc8983cf7e1c2a22998ba38679d86e23feb26c0a9",
+    "test_embedded_scan.py": "e017988682145333f92540b8cf9c41e66601ecf0050e8565c58d90fcef53e114",
+    "test_init_script_guard.py": "d172782de62399add70feed1df9c2a5e23aafc38bce5bb6453d40c48011a925a",
+    "test_java_properties.py": "5d52254eef75884ba61dc901f22624fb61fb1be919f23e16807458c1a7431eea",
+    "test_kotlin_guard.py": "ed0106864534484486004544e517186a647c2d1ee025992b6aa41724f7b5ecf5",
+    "test_native_cache.py": "bb4bb70ab01b04d4538bb32738ab937b5ebd7660a52f1f29b1560a4271037f1c",
+    "test_symbol_guard.py": "6993bb6abb3bd5cc9176c048e96db9f0391f76e3b05edd603b655cd7f6019f9c"
+  },
+  "source_mismatches": 0,
+  "root_tests": [
+    {
+      "command": [
+        "python3",
+        "-I",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "bindings/react-native/tools/security",
+        "-p",
+        "test_*.py"
+      ],
+      "tests": 109,
+      "exit": 0,
+      "seconds": 0.636
+    },
+    {
+      "command": [
+        "python3",
+        "-I",
+        "-O",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "bindings/react-native/tools/security",
+        "-p",
+        "test_*.py"
+      ],
+      "tests": 109,
+      "exit": 0,
+      "seconds": 0.794
+    }
+  ],
+  "focused_review": {
+    "reviewer": "Claude Opus 5.5, runtime reported claude-opus-5-5",
+    "verdict": "PASS",
+    "identity_checks": "27 evidence entries and 16 sources match; mandatory canonical image subset checked for each JVM; no tests removed or weakened.",
+    "tdd": "Three genuine behavioral RED failures on the old valid record shape, then GREEN; reviewed alias positive control unchanged. Earlier setup/API errors explicitly distinguished from behavioral RED.",
+    "not_a_final_phase_seven_round": true
+  },
+  "runtime_handback_contract": [
+    "For this macOS restricted workflow, the controller MUST supply independently reviewed system-cache evidence; omission must reject before observations are accepted.",
+    "Guard construction is shallow-frozen; caller binds exact approval identities and prevents concurrent mutation.",
+    "Controller captures every compiling JVM using pinned JDK facilities and independently rechecks host identity before/after.",
+    "Actual graph/capture/controller integration not yet verified.",
+    "No new dependency activation or compile permission is implied."
+  ],
+  "open_findings": [
+    "Two applicable compiler-embedded protobuf advisories remain open.",
+    "LZ4 entry-point non-invocation still requires actual capture and positive control.",
+    "Unknown embedded identities remain truthful rejected scans.",
+    "No accepted performance baseline and zero final clean review rounds.",
+    "Coverage remains unmeasured."
+  ],
+  "staged_verification": {
+    "all_163_initial_staged_blobs_equal_working_bytes": true,
+    "whitespace_exit": 2,
+    "findings": 29,
+    "by_path": {
+      "docs/implementation/phase-seven-security-remediation-followup-2-git-view/README-api.diff": 1,
+      "docs/implementation/phase-seven-security-remediation-followup-2-git-view/test_kotlin_guard.diff": 3,
+      "docs/implementation/phase-seven-security-remediation-followup-4-git-view/r2-signatures/keys/2C7B12F2A511E325.ubuntu.asc": 1,
+      "docs/implementation/phase-seven-security-remediation-followup-4-git-view/r2-signatures/keys/3051D45031E13516A6E8FAFF280D66A55F5316C5.asc": 1,
+      "docs/implementation/phase-seven-security-remediation-followup-4-git-view/r2-signatures/keys/78DF98EF7F95578FD545B9A159A7C2A1BD98C013.asc": 1,
+      "docs/implementation/phase-seven-security-remediation-followup-4-git-view/r2-signatures/keys/7B121B76A7ED6CE6E60AD51784E913A8E3A748C0.asc": 1,
+      "docs/implementation/phase-seven-security-remediation-followup-4-git-view/r2-signatures/keys/F3D1600878E85A3D.ubuntu.asc": 1,
+      "docs/implementation/phase-seven-security-remediation-followup-7/changes.diff": 9,
+      "docs/implementation/phase-seven-security-remediation-followup-8/changes.diff": 11
+    },
+    "scope": "Preserved historical diffs, public keys and test output only; authored tool sources have no whitespace findings.",
+    "log": "staged-whitespace.txt.json",
+    "ignored_evidence_logs": "Four known synthetic parser logs explicitly added; no .gitignore change."
+  }
+}

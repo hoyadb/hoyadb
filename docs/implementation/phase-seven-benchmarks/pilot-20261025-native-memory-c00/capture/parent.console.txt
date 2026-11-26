@@ -1,0 +1,16 @@
+AWAIT_ADMISSION {"engine":"memory","kind":"warm","label":"warm-memory-00-1","parameters":{"N":100,"Q":0,"observers":0,"operation":"point"},"run":1}
+BETWEEN_WORKERS {"continuity":"thermal/cache/environment continuity across independent workers is uncontrolled","label":"warm-memory-00-1","monotonic_ns":926292666946980,"pid":10186,"raw_sha256":"c15668160e3a9e20b0fb4843f8c5cad6f9c538be42ff9e1ce2a38275d2a3b247","worker_retirement":"os.wait4 exact child reaped"}
+completed warm-memory-00 run 1
+AWAIT_ADMISSION {"engine":"memory","kind":"warm","label":"warm-memory-00-2","parameters":{"N":100,"Q":0,"observers":0,"operation":"point"},"run":2}
+BETWEEN_WORKERS {"continuity":"thermal/cache/environment continuity across independent workers is uncontrolled","label":"warm-memory-00-2","monotonic_ns":926301623326551,"pid":10431,"raw_sha256":"ead19a07f7ccedfd7ab87335d3fa86b0f7692f56528432f901f9d95ac1b76ca6","worker_retirement":"os.wait4 exact child reaped"}
+completed warm-memory-00 run 2
+AWAIT_ADMISSION {"engine":"memory","kind":"warm","label":"warm-memory-00-3","parameters":{"N":100,"Q":0,"observers":0,"operation":"point"},"run":3}
+BETWEEN_WORKERS {"continuity":"thermal/cache/environment continuity across independent workers is uncontrolled","label":"warm-memory-00-3","monotonic_ns":926304152927025,"pid":10526,"raw_sha256":"1d790e63228a928a2d2d83b3c3acbe51f31fb1e75652d1fc69502c32c950b4d1","worker_retirement":"os.wait4 exact child reaped"}
+completed warm-memory-00 run 3
+AWAIT_ADMISSION {"engine":"memory","kind":"warm","label":"warm-memory-00-4","parameters":{"N":100,"Q":0,"observers":0,"operation":"point"},"run":4}
+BETWEEN_WORKERS {"continuity":"thermal/cache/environment continuity across independent workers is uncontrolled","label":"warm-memory-00-4","monotonic_ns":926306871338138,"pid":10656,"raw_sha256":"a34b1c3ce850183c78b9c963c53c0a69f4b920d16dc9e15bc40ba18c6ddfe63d","worker_retirement":"os.wait4 exact child reaped"}
+completed warm-memory-00 run 4
+AWAIT_ADMISSION {"engine":"memory","kind":"warm","label":"warm-memory-00-5","parameters":{"N":100,"Q":0,"observers":0,"operation":"point"},"run":5}
+BETWEEN_WORKERS {"continuity":"thermal/cache/environment continuity across independent workers is uncontrolled","label":"warm-memory-00-5","monotonic_ns":926309473656204,"pid":10799,"raw_sha256":"0ee0816b9c6e1a4e0dc0955ea58f58a833d04c4eac078eab5b1e01fd9e793dad","worker_retirement":"os.wait4 exact child reaped"}
+completed warm-memory-00 run 5
+runner_exit=0

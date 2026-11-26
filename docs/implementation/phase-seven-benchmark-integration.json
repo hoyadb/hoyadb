@@ -1,0 +1,36 @@
+{
+  "scope": "Integrate already prepared and verified benchmark harness and issue corrections; no new measurement or accepted baseline",
+  "author_lane": "e12f986c-4329-4936-822c-466c82878956",
+  "current_source_closure_sha256": "0dd6d44db46ce65379036fc37c7f5ad568d0fdc21c59c2321ca87d4148cdfaa8",
+  "root_precommit_checks": {
+    "current_source_files_rehashed": 41,
+    "current_source_mismatches": 0,
+    "sealed_evidence_files_rehashed": 68,
+    "sealed_evidence_mismatches": 0,
+    "staged_task_files_compared_raw_to_worktree": 115,
+    "staged_byte_mismatches": 0,
+    "new_test_execution_required": false,
+    "reason": "The current source closure is unchanged from the recorded root 90-test Python and 79-test JavaScript runs; integration adds no source change."
+  },
+  "whitespace_check": {
+    "complete_staged_exit": 2,
+    "findings": [
+      "def-0023-resolution-20261025/70-def23-red.txt",
+      "def-0023-resolution-20261025/71-def23-green.txt",
+      "permit-transport-20261025/65-matrix-loop-red.txt"
+    ],
+    "interpretation": "Preserved original test-output formatting; authored executable sources and docs check clean. Full whitespace check is not claimed to pass; no checks or diff attributes disabled.",
+    "raw_local_report": "target/phase-seven-browser-bench/root-integration-whitespace.txt"
+  },
+  "preserved": [
+    "User Rust formatting overlays in benchmarks/native/src/lib.rs and main.rs remain unstaged",
+    "Historical source closures, interrupted runs, contaminated pilots and their exact package identities",
+    "Existing sample counts, proof oracles and admission rules"
+  ],
+  "remaining_gates": [
+    "RN Android completion and security remediation",
+    "Coordinated quiet baseline after RN Android, with accepted complete measurements and reviewed regression budgets",
+    "Two final clean matching-artifact Opus5.5 reviews",
+    "Delegated coverage work after those reviews"
+  ]
+}

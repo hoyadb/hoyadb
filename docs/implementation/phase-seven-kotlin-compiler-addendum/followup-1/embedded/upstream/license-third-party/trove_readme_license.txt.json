@@ -1,0 +1,7 @@
+{
+  "format": 1,
+  "original_path": "followup-1/embedded/upstream/license-third-party/trove_readme_license.txt",
+  "original_bytes": 766,
+  "original_sha256": "7088d9c07317e94f1f9b794e7ec713f99f65d03614dd105b70754a09e7c46df1",
+  "utf8": "The Trove library is licensed under the Lesser GNU Public License,\nwhich is included with the distribution in a file called trove_license.txt.\n\n\nThe PrimeFinder and HashFunctions classes in Trove are subject to the\nfollowing license restrictions:\n\nCopyright (c) 1999 CERN - European Organization for Nuclear Research.\n\nPermission to use, copy, modify, distribute and sell this software and\nits documentation for any purpose is hereby granted without fee,\nprovided that the above copyright notice appear in all copies and that\nboth that copyright notice and this permission notice appear in\nsupporting documentation. CERN makes no representations about the\nsuitability of this software for any purpose. It is provided \"as is\"\nwithout expressed or implied warranty.\n\n\n"
+}

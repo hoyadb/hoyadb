@@ -1,0 +1,138 @@
+{
+  "intellij-core (com.intellij)": {
+    "entries": 3950,
+    "sample": [
+      "org/jetbrains/kotlin/com/intellij/",
+      "org/jetbrains/kotlin/com/intellij/AbstractBundle$MyResourceControl.class"
+    ]
+  },
+  "fastutil (it.unimi.dsi)": {
+    "entries": 1318,
+    "sample": [
+      "org/jetbrains/kotlin/it/unimi/dsi/fastutil/",
+      "org/jetbrains/kotlin/it/unimi/dsi/fastutil/Arrays.class"
+    ]
+  },
+  "guava (com.google.common)": {
+    "entries": 816,
+    "sample": [
+      "org/jetbrains/kotlin/com/google/common/",
+      "org/jetbrains/kotlin/com/google/common/base/"
+    ]
+  },
+  "asm (org.objectweb.asm)": {
+    "entries": 120,
+    "sample": [
+      "org/jetbrains/org/objectweb/asm/",
+      "org/jetbrains/org/objectweb/asm/AnnotationVisitor.class"
+    ]
+  },
+  "vavr (io.vavr)": {
+    "entries": 121,
+    "sample": [
+      "io/vavr/",
+      "io/vavr/API.class"
+    ]
+  },
+  "jline (org.jline)": {
+    "entries": 184,
+    "sample": [
+      "org/jetbrains/kotlin/org/jline/",
+      "org/jetbrains/kotlin/org/jline/builtins/"
+    ]
+  },
+  "jansi (org.fusesource.jansi)": {
+    "entries": 85,
+    "sample": [
+      "org/jetbrains/kotlin/org/fusesource/jansi/",
+      "org/jetbrains/kotlin/org/fusesource/jansi/Ansi$1.class"
+    ]
+  },
+  "aalto-xml (com.fasterxml.aalto)": {
+    "entries": 56,
+    "sample": [
+      "org/jetbrains/kotlin/com/fasterxml/aalto/",
+      "org/jetbrains/kotlin/com/fasterxml/aalto/UncheckedStreamException.class"
+    ]
+  },
+  "stax2-api (org.codehaus.stax2)": {
+    "entries": 22,
+    "sample": [
+      "org/jetbrains/kotlin/org/codehaus/stax2/",
+      "org/jetbrains/kotlin/org/codehaus/stax2/LocationInfo.class"
+    ]
+  },
+  "lz4-java (net.jpountz)": {
+    "entries": 75,
+    "sample": [
+      "org/jetbrains/kotlin/net/jpountz/",
+      "org/jetbrains/kotlin/net/jpountz/lz4/"
+    ]
+  },
+  "streamex (one.util.streamex)": {
+    "entries": 21,
+    "sample": [
+      "org/jetbrains/kotlin/one/util/streamex/",
+      "org/jetbrains/kotlin/one/util/streamex/AbstractStreamEx.class"
+    ]
+  },
+  "kotlinx-collections-immutable": {
+    "entries": 127,
+    "sample": [
+      "org/jetbrains/kotlin/kotlinx/collections/immutable/",
+      "org/jetbrains/kotlin/kotlinx/collections/immutable/ExtensionsKt.class"
+    ]
+  },
+  "jdom (org.jdom)": {
+    "entries": 44,
+    "sample": [
+      "org/jetbrains/kotlin/org/jdom/",
+      "org/jetbrains/kotlin/org/jdom/Attribute.class"
+    ]
+  },
+  "log4j (org.apache.log4j)": {
+    "entries": 6,
+    "sample": [
+      "org/jetbrains/kotlin/org/apache/log4j/",
+      "org/jetbrains/kotlin/org/apache/log4j/Level.class"
+    ],
+    "all_entries": [
+      "org/jetbrains/kotlin/org/apache/log4j/",
+      "org/jetbrains/kotlin/org/apache/log4j/Level.class",
+      "org/jetbrains/kotlin/org/apache/log4j/Priority.class",
+      "org/jetbrains/kotlin/org/apache/log4j/lf5/",
+      "org/jetbrains/kotlin/org/apache/log4j/lf5/config/",
+      "org/jetbrains/kotlin/org/apache/log4j/lf5/config/defaultconfig.properties"
+    ]
+  },
+  "oro (org.apache.oro)": {
+    "entries": 0,
+    "sample": []
+  },
+  "jna (com.sun.jna)": {
+    "entries": 0,
+    "sample": []
+  },
+  "protobuf (com.google.protobuf)": {
+    "entries": 0,
+    "sample": []
+  },
+  "jsr305 (javax.annotation)": {
+    "entries": 0,
+    "sample": []
+  },
+  "javax.inject": {
+    "entries": 7,
+    "sample": [
+      "org/jetbrains/kotlin/javax/inject/",
+      "org/jetbrains/kotlin/javax/inject/Inject.class"
+    ]
+  },
+  "protobuf (relocated org.jetbrains.kotlin.protobuf)": {
+    "entries": 277,
+    "sample": [
+      "org/jetbrains/kotlin/protobuf/",
+      "org/jetbrains/kotlin/protobuf/AbstractMessage$Builder.class"
+    ]
+  }
+}

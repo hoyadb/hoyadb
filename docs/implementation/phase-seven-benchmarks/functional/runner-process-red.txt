@@ -1,0 +1,44 @@
+.FE..E.E..........
+======================================================================
+ERROR: test_failed_or_invalid_worker_is_preserved_without_fake_measurements (test_runner.RunnerTests.test_failed_or_invalid_worker_is_preserved_without_fake_measurements)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/test_runner.py", line 118, in test_failed_or_invalid_worker_is_preserved_without_fake_measurements
+    result=execute_worker([sys.executable,"-c",code],100,path)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/run.py", line 129, in execute_worker
+    raise RunnerError("worker execution pending")
+run.RunnerError: worker execution pending
+
+======================================================================
+ERROR: test_source_identity_detects_real_edits_and_excludes_build_products (test_runner.RunnerTests.test_source_identity_detects_real_edits_and_excludes_build_products)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/test_runner.py", line 134, in test_source_identity_detects_real_edits_and_excludes_build_products
+    first=source_snapshot(root,["benchmarks"])
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/run.py", line 132, in source_snapshot
+    raise RunnerError("source identity pending")
+run.RunnerError: source identity pending
+
+======================================================================
+ERROR: test_worker_capture_is_linewise_retains_raw_and_never_overwrites (test_runner.RunnerTests.test_worker_capture_is_linewise_retains_raw_and_never_overwrites)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/test_runner.py", line 98, in test_worker_capture_is_linewise_retains_raw_and_never_overwrites
+    result=execute_worker([sys.executable,"-c",code],100,path)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/run.py", line 129, in execute_worker
+    raise RunnerError("worker execution pending")
+run.RunnerError: worker execution pending
+
+======================================================================
+FAIL: test_empty_or_missing_worker_package_cannot_pass_lock_audit (test_runner.RunnerTests.test_empty_or_missing_worker_package_cannot_pass_lock_audit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/test_runner.py", line 144, in test_empty_or_missing_worker_package_cannot_pass_lock_audit
+    with self.assertRaises(RunnerError):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+AssertionError: RunnerError not raised
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.072s
+
+FAILED (failures=1, errors=3)

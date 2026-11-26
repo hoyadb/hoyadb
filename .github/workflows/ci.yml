@@ -1,0 +1,268 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+    tags: ['v*']
+  merge_group:
+  workflow_dispatch:
+  workflow_call:
+    inputs:
+      ref:
+        description: Immutable release commit checked by the caller
+        type: string
+        required: false
+        default: ''
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ inputs.ref || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+defaults:
+  run:
+    shell: bash
+
+env:
+  CARGO_TERM_COLOR: always
+  CC_wasm32_unknown_unknown: clang
+  AR_wasm32_unknown_unknown: llvm-ar
+
+jobs:
+  workspace:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          ref: ${{ inputs.ref || github.sha }}
+          persist-credentials: false
+          submodules: false
+      - uses: ./.github/actions/rust
+      - run: |
+          cargo fetch --locked
+          sh tests/tooling/formatting.sh
+          cargo fmt --all --check
+          cargo test --workspace --offline --locked
+          cargo run -p hoyadb-storage-memory --example data_model --offline --locked
+          cargo run -p hoyadb-storage-memory --example reactive --offline --locked
+          cargo clippy --workspace --all-targets --offline --locked -- -D warnings
+          RUSTFLAGS='-D warnings' cargo build -p hoyadb-core -p hoyadb-storage-memory --target wasm32-unknown-unknown --offline --locked
+
+  spike-rust:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          ref: ${{ inputs.ref || github.sha }}
+          persist-credentials: false
+          submodules: false
+      - uses: ./.github/actions/rust
+      - run: |
+          cargo fetch --manifest-path spikes/cross-platform/Cargo.toml --locked
+          cargo test --manifest-path spikes/cross-platform/Cargo.toml --offline --locked
+          cargo fmt --manifest-path spikes/cross-platform/Cargo.toml --check
+          cargo clippy --manifest-path spikes/cross-platform/Cargo.toml --all-targets --offline --locked -- -D warnings
+          cargo build --manifest-path spikes/cross-platform/Cargo.toml --target wasm32-unknown-unknown --offline --locked
+          cargo fetch --manifest-path spikes/cross-platform/native/Cargo.toml --locked
+          cargo test --manifest-path spikes/cross-platform/native/Cargo.toml --offline --locked
+          cargo fmt --manifest-path spikes/cross-platform/native/Cargo.toml --check
+          cargo clippy --manifest-path spikes/cross-platform/native/Cargo.toml --all-targets --offline --locked -- -D warnings
+          cargo fetch --manifest-path spikes/cross-platform/web/Cargo.toml --locked
+          cargo fmt --manifest-path spikes/cross-platform/web/Cargo.toml --check
+          cargo clippy --manifest-path spikes/cross-platform/web/Cargo.toml --all-targets --offline --locked -- -D warnings
+          cargo build --manifest-path spikes/cross-platform/web/Cargo.toml --target wasm32-unknown-unknown --offline --locked
+
+  spike-storage-browser:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          ref: ${{ inputs.ref || github.sha }}
+          persist-credentials: false
+          submodules: false
+      - uses: ./.github/actions/rust
+      - run: |
+          cargo fetch --locked
+          cargo fetch --manifest-path spikes/storage-browser/Cargo.toml --locked
+          cargo fmt --manifest-path spikes/storage-browser/Cargo.toml --check
+          cargo clippy -p hoyadb-storage-sqlite --lib --target wasm32-unknown-unknown --offline --locked -- -D warnings
+          cargo build -p hoyadb-storage-sqlite --lib --target wasm32-unknown-unknown --offline --locked
+          cargo clippy --manifest-path spikes/storage-browser/Cargo.toml --target wasm32-unknown-unknown --offline --locked -- -D warnings
+          cargo build --manifest-path spikes/storage-browser/Cargo.toml --target wasm32-unknown-unknown --offline --locked
+
+  design:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          ref: ${{ inputs.ref || github.sha }}
+          persist-credentials: false
+          submodules: false
+      - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
+        with:
+          python-version: '3.14.8'
+      - uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6.2.0
+        with:
+          node-version: '22.18.0'
+          package-manager-cache: false
+      - run: |
+          python3 -m unittest discover -s tools/traceability -p 'test_*.py'
+          python3 -m unittest discover -s tests/packaging -p 'test_*.py'
+          python3 -m unittest discover -s tools/release -p 'test_compatibility.py'
+          python3 -m unittest discover -s crates/hoyadb-native/tools -p 'test_*.py'
+          python3 -m unittest discover -s bindings/android/tools -p 'test_*.py'
+          python3 tools/release/compatibility.py sources
+          python3 tools/traceability/trace_check.py docs/design
+          python3 tools/traceability/rtm_gen.py docs/design --check
+
+  javascript:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          ref: ${{ inputs.ref || github.sha }}
+          persist-credentials: false
+          submodules: false
+      - uses: ./.github/actions/rust
+      - uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6.2.0
+        with:
+          node-version: '22.18.0'
+          package-manager-cache: false
+      - run: |
+          npm install --global npm@11.17.0 typescript@7.0.2 --ignore-scripts --no-audit --no-fund
+          cargo install wasm-bindgen-cli --version 0.2.129 --locked --root target/tools/wasm-bindgen
+          cargo fetch --manifest-path crates/hoyadb-web/Cargo.toml --locked
+          sh crates/hoyadb-web/build.sh
+          npm ci --offline --ignore-scripts --no-audit --no-fund
+          npm test
+          npm run test:react-native
+          npm run build:packages
+          npm run check:packages
+          npm run test:packaging
+      - name: Record candidate checksums and revision
+        working-directory: target/packages/javascript/tarballs
+        run: |
+          sha256sum ./*.tgz > SHA256SUMS
+          git -C "$GITHUB_WORKSPACE" rev-parse HEAD > SOURCE_REVISION
+      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
+        with:
+          name: javascript-${{ inputs.ref || github.sha }}
+          path: target/packages/javascript/tarballs/
+          if-no-files-found: error
+          retention-days: 14
+
+  quality-tooling:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          ref: ${{ inputs.ref || github.sha }}
+          persist-credentials: false
+          submodules: false
+      - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
+        with:
+          python-version: '3.14.8'
+      - uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6.2.0
+        with:
+          node-version: '22.18.0'
+          package-manager-cache: false
+      - run: |
+          python3 -m unittest discover -s tests/tooling -p 'test_quality.py'
+          python3 -m unittest discover -s tests/tooling -p 'test_sync_proof.py'
+          python3 tests/tooling/sync_proof.py
+          python3 -m unittest discover -s tools/ci -p 'test_*.py'
+          python3 -m unittest discover -s docs/public -p 'test_*.py'
+          node docs/public/test_search.mjs
+
+  coverage-rust:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          ref: ${{ inputs.ref || github.sha }}
+          persist-credentials: false
+          submodules: false
+      - uses: ./.github/actions/rust
+      - run: |
+          rustup component add --toolchain 1.98.1 llvm-tools-preview
+          cargo install cargo-llvm-cov --version 0.9.1 --locked --root target/quality-tools
+          cargo fetch --locked
+          sh tests/tooling/coverage.sh --release
+      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
+        if: always()
+        with:
+          name: coverage-${{ inputs.ref || github.sha }}
+          path: target/quality/coverage*.json
+          if-no-files-found: error
+          retention-days: 14
+
+  mutation-json:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          ref: ${{ inputs.ref || github.sha }}
+          persist-credentials: false
+          submodules: false
+      - uses: ./.github/actions/rust
+      - run: |
+          cargo install cargo-mutants --version 27.1.0 --locked --root target/quality-tools
+          cargo fetch --locked
+          sh tests/tooling/mutation.sh --file crates/hoyadb-core/src/command/json.rs --re 'hex_quad|unicode|digits|number' --test-workspace=false --test-package hoyadb-core -- --test json_bounded
+      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
+        if: always()
+        with:
+          name: mutation-${{ inputs.ref || github.sha }}
+          path: |
+            target/quality/mutation-source.json
+            target/quality/mutation-measurement.json
+            target/quality/mutation-summary.json
+            target/quality/mutation/mutants.out/
+          if-no-files-found: error
+          retention-days: 14
+
+  workflow-lint:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          ref: ${{ inputs.ref || github.sha }}
+          persist-credentials: false
+          submodules: false
+      - uses: actions/setup-go@44694675825211faa026b3c33043df3e48a5fa00 # v6.0.0
+        with:
+          go-version: '1.26.1'
+          cache: false
+      - run: |
+          sudo apt-get update
+          sudo apt-get install --no-install-recommends -y shellcheck
+          GOBIN="$RUNNER_TEMP/bin" go install github.com/rhysd/actionlint/cmd/actionlint@v1.7.12
+          "$RUNNER_TEMP/bin/actionlint" -color
+
+  required-checks:
+    name: Required checks
+    if: always()
+    needs: [workspace, spike-rust, spike-storage-browser, design, javascript, quality-tooling, coverage-rust, mutation-json, workflow-lint]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          ref: ${{ inputs.ref || github.sha }}
+          persist-credentials: false
+          submodules: false
+      - run: python3 tools/ci/delivery.py results
+        env:
+          CI_JOB_RESULTS: ${{ toJSON(needs) }}

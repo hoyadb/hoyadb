@@ -1,0 +1,1 @@
+HOYA_APPLE_CORPUS {"index_sha256": "929485b9708a605079269768e561645cf96e38b7c607bb4550493a45a22b7340", "notice_sha256": "ec246971a02f145a2c69debeb129e0b8d5509d29668fbcc498c0c9404104dc81", "texts": 26, "excluded_lock_packages": 22}

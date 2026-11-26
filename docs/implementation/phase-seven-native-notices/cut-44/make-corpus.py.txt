@@ -1,0 +1,343 @@
+"""Trusted DEF-0030 controller: derive the Apple native notice corpus from verified local inputs.
+
+Read-only on every input; writes only the fresh output corpus and a summary. No network, no compile.
+- Apple graph: cargo tree --locked --offline per Apple target (normal, and normal+build edges); all four
+  targets must agree.
+- Crate texts: registry crate archives whose SHA256 equals the Cargo.lock checksum, and the rusqlite git
+  database at the locked revision (git show REV:path). Every text must also equal the byte-exact Android
+  corpus copy of the same tuple (reuse only after this agreement).
+- C texts: SQLCipher license entry of the verified sqlcipher-src archive; the SQLite text must be a
+  byte prefix of the verified sqlite3.h entry (same rule as the Android corpus).
+- Toolchain: COPYRIGHT-library.html of the pinned 1.98.1 toolchain, equal to the Android copy.
+- Provider/link evidence: the native archives whose SHA256 equals the compilation parent record; per
+  architecture imported CommonCrypto/Security symbols, LibTomCrypt symbol count, and every archive member
+  classified (Rust std rlibs of that target by hash, compiler_builtins C objects byte-equal to members of
+  the target's compiler_builtins rlib, sqlcipher.o, first-party and graph crates).
+Usage: make-corpus.py OUTPUT_CORPUS_DIR SUMMARY.json
+"""
+from collections import defaultdict
+import hashlib
+import io
+import json
+import os
+from pathlib import Path
+import re
+import subprocess
+import sys
+import tarfile
+import tempfile
+import tomllib
+
+repo = Path(__file__).resolve().parents[3]
+out, summary_path = Path(sys.argv[1]), Path(sys.argv[2])
+if out.exists() or summary_path.exists():
+    raise SystemExit('output corpus and summary must not exist')
+TARGETS = ['x86_64-apple-darwin', 'aarch64-apple-ios', 'aarch64-apple-ios-sim', 'x86_64-apple-ios']
+TOOLCHAIN = Path.home() / '.rustup/toolchains/1.98.1-x86_64-apple-darwin'
+REGISTRY_CACHE = Path.home() / '.cargo/registry/cache/index.crates.io-1949cf8c6b5b557f'
+GIT_DB = Path.home() / '.cargo/git/db/rusqlite-8e5e8204e489f2fd'
+ANDROID = repo / 'bindings/android/third-party'
+LOCK = repo / 'bindings/native/Cargo.lock'
+FRAMEWORK = repo / 'bindings/swift/Artifacts/HoyaNative.xcframework'
+PARENT = repo / 'bindings/swift/Artifacts/native-build.json'
+SLICE_ARCHES = {'macos-x86_64': [('x86_64', 'x86_64-apple-darwin')], 'ios-arm64': [('arm64', 'aarch64-apple-ios')],
+                'ios-arm64_x86_64-simulator': [('x86_64', 'x86_64-apple-ios'), ('arm64', 'aarch64-apple-ios-sim')]}
+LTC = re.compile(r'(ltc_|tomcrypt|register_cipher|register_hash|register_prng|sqlcipher_ltc)', re.I)
+sha = lambda data: hashlib.sha256(data).hexdigest()
+summary = {'commands': [], 'checks': []}
+
+
+def fail(message):
+    raise SystemExit('CORPUS REJECTED: ' + message)
+
+
+def run(argv, binary=False):
+    summary['commands'].append(argv)
+    result = subprocess.run(argv, cwd=repo, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    stderr = result.stderr.decode().splitlines()
+    if argv[:2] == ['xcrun', 'nm'] and not all(l.endswith(': no symbols') for l in stderr):
+        # Apple nm cannot parse rustc's embedded LLVM bitcode; --no-llvm-bc reads the Mach-O symbol tables,
+        # and any other diagnostic means the symbol evidence would be incomplete.
+        fail(f'{argv} reported incomplete symbol reading: {[l for l in stderr if not l.endswith(": no symbols")][:3]}')
+    if result.returncode != 0:
+        fail(f'{argv} exited {result.returncode}: {result.stderr.decode()[-400:]}')
+    return result.stdout if binary else result.stdout.decode()
+
+
+def check(label, ok, detail=None):
+    summary['checks'].append({'check': label, 'ok': bool(ok), 'detail': detail})
+    if not ok:
+        fail(f'{label}: {detail}')
+
+
+# Lock and Apple graph.
+lock_bytes = LOCK.read_bytes()
+locked = {(p['name'], p['version']): p for p in tomllib.loads(lock_bytes.decode())['package'] if 'source' in p}
+graphs = {}
+for target in TARGETS:
+    sets = {}
+    for edges in ['normal', 'normal,build']:
+        lines = run(['cargo', 'tree', '--manifest-path', 'bindings/native/Cargo.toml', '--locked', '--offline', '--target', target,
+                     '-e', edges, '--prefix', 'none', '--format', '{p}|{l}']).splitlines()
+        found = {}
+        for line in lines:
+            spec, license_text = line.removesuffix(' (*)').split('|', 1)
+            name, version = spec.split(' ')[:2]
+            key = (name, version.removeprefix('v'))
+            if key in locked:
+                found[key] = license_text
+            elif not name.startswith('hoyadb-'):
+                fail(f'graph member {key} is neither first-party nor a lock package')
+        sets[edges] = found
+    graphs[target] = (sets['normal'], {k: v for k, v in sets['normal,build'].items() if k not in sets['normal']})
+check('apple targets agree on the graph', len({json.dumps([sorted(n), sorted(b)]) for n, b in graphs.values()}) == 1)
+normal, build = graphs[TARGETS[0]]
+cargo_license = {**normal, **build}
+
+
+def crate_archive(key):
+    path = REGISTRY_CACHE / f'{key[0]}-{key[1]}.crate'
+    data = path.read_bytes()
+    check(f'crate archive checksum {key}', sha(data) == locked[key]['checksum'], str(path))
+    return path, data
+
+
+def archive_entry(data, prefix, entry):
+    with tarfile.open(fileobj=io.BytesIO(data), mode='r:gz') as packed:
+        member = packed.getmember(f'{prefix}/{entry}')
+        if not member.isfile():
+            fail(f'{prefix}/{entry} is not a regular file')
+        return packed.extractfile(member).read()
+
+
+android_index = json.loads((ANDROID / 'index.json').read_bytes())
+android = {p['name']: p for p in android_index['packages']}
+texts, packages = {}, []
+for key in sorted(normal) + sorted(build):
+    name, version = key
+    entry = locked[key]
+    reference = android.get(name)
+    check(f'android tuple agrees {key}', reference is not None and (reference['version'], reference['source'], reference['checksum'])
+          == (version, entry['source'], entry.get('checksum')), reference and reference['version'])
+    check(f'cargo license field {key}', cargo_license[key] == reference['license'], cargo_license[key])
+    role = 'linked_rust' if key in normal else ('build_native_c_source' if name == 'sqlcipher-src' else 'build_tool')
+    files = []
+    for item in reference['files']:
+        relative = item['file']
+        filename = relative.rsplit('/', 1)[1]
+        if entry['source'].startswith('registry+'):
+            path, data = crate_archive(key)
+            text = archive_entry(data, f'{name}-{version}', filename)
+            origin = {'kind': 'crate_entry', 'crate': name, 'version': version, 'archive_sha256': sha(data), 'entry': filename}
+        else:
+            rev = entry['source'].split('#', 1)[1]
+            check(f'git source revision {key}', entry['source'].endswith('#' + rev) and len(rev) == 40, entry['source'])
+            subdirectory = '' if name == 'rusqlite' else f'{name}/'
+            manifest = tomllib.loads(run(['git', '--git-dir', str(GIT_DB), 'show', f'{rev}:{subdirectory}Cargo.toml']))
+            check(f'git manifest identity {key}', (manifest['package']['name'], manifest['package']['version']) == key)
+            path = subdirectory + filename
+            origin = {'kind': 'git_entry', 'repository': entry['source'].split('?', 1)[0].removeprefix('git+'), 'rev': rev,
+                      'path': path}
+            mode = run(['git', '--git-dir', str(GIT_DB), 'ls-tree', rev, path]).split()[0]
+            if mode == '120000':  # Symbolic link in the repository: resolve one level, staying inside the tree.
+                target = os.path.normpath(os.path.join(os.path.dirname(path),
+                                                       run(['git', '--git-dir', str(GIT_DB), 'show', f'{rev}:{path}']).strip()))
+                check(f'git symlink stays in tree {path}', not target.startswith('..') and not os.path.isabs(target), target)
+                check(f'git symlink target is a file {target}',
+                      run(['git', '--git-dir', str(GIT_DB), 'ls-tree', rev, target]).split()[0] == '100644', target)
+                origin['symlink_target'] = target
+                path = target
+            else:
+                check(f'git entry is a regular file {path}', mode == '100644', mode)
+            text = run(['git', '--git-dir', str(GIT_DB), 'show', f'{rev}:{path}'], binary=True)
+        check(f'text equals android copy {relative}', text == (ANDROID / relative).read_bytes(), relative)
+        texts[relative] = text
+        files.append({'file': relative, 'sha256': sha(text), 'origin': origin})
+    packages.append({'name': name, 'version': version, 'source': entry['source'], 'checksum': entry.get('checksum'),
+                     'license': reference['license'], 'role': role, 'files': files})
+
+# C components compiled from sqlcipher-src.
+sqlcipher_key = next(k for k in build if k[0] == 'sqlcipher-src')
+_, sqlcipher_archive = crate_archive(sqlcipher_key)
+prefix = f'{sqlcipher_key[0]}-{sqlcipher_key[1]}'
+for name in ['SQLCipher', 'SQLite']:
+    reference = android[name]
+    item = reference['files'][0]
+    upstream = archive_entry(sqlcipher_archive, prefix, item['origin']['entry'])
+    copy = (ANDROID / item['file']).read_bytes()
+    if item['origin']['kind'] == 'crate_entry':
+        check(f'{name} text equals verified entry', upstream == copy, item['origin']['entry'])
+    else:
+        check(f'{name} text is a byte prefix of verified entry', upstream.startswith(copy) and copy, item['origin']['entry'])
+    texts[item['file']] = copy
+    origin = dict(item['origin'], version=sqlcipher_key[1], archive_sha256=sha(sqlcipher_archive))
+    packages.append({'name': name, 'version': reference['version'], 'license': reference['license'], 'role': 'linked_native_c',
+                     'via': 'sqlcipher-src', 'files': [{'file': item['file'], 'sha256': sha(copy), 'origin': origin}]})
+packages.append({'name': 'LibTomCrypt', 'version': '1.18.2', 'license': 'not applicable: source present in sqlcipher-src, not linked on Apple',
+                 'role': 'unused_source_not_linked', 'via': 'sqlcipher-src', 'files': []})
+
+# Native archives bound to the compilation parent.
+parent = json.loads(PARENT.read_bytes())['artifact_files_sha256']
+providers = {'CommonCrypto': [], 'Security': []}
+link_inputs, member_report, std_crates = {}, {}, set()
+graph_crates = {k[0].replace('-', '_') for k in normal}
+with tempfile.TemporaryDirectory() as scratch:
+    for slice_id, arches in SLICE_ARCHES.items():
+        library = FRAMEWORK / slice_id / 'libhoyadb_native.a'
+        relative = f'{slice_id}/libhoyadb_native.a'
+        digest = sha(library.read_bytes())
+        check(f'library equals compilation parent {relative}', parent[f'HoyaNative.xcframework/{relative}'] == digest)
+        imported = defaultdict(set)
+        ltc_total = 0
+        for arch, target in arches:
+            thin = library
+            if len(arches) > 1:
+                thin = Path(scratch) / f'{slice_id}-{arch}.a'
+                run(['xcrun', 'lipo', '-thin', arch, '-output', str(thin), str(library)])
+            undefined = set(run(['xcrun', 'nm', '--no-llvm-bc', '-u', '-j', str(thin)]).split())
+            for symbol in undefined:
+                if symbol.startswith('_CC'):
+                    imported['CommonCrypto'].add(symbol)
+                if symbol.startswith(('_Sec', '_kSec')):
+                    imported['Security'].add(symbol)
+            all_symbols = run(['xcrun', 'nm', '--no-llvm-bc', '-j', str(thin)]).split()
+            ltc = sorted({s for s in all_symbols if LTC.search(s)})
+            ltc_total += len(ltc)
+            rustlib = TOOLCHAIN / 'lib/rustlib' / target / 'lib'
+            builtins = sorted(rustlib.glob('libcompiler_builtins-*.rlib'))
+            check(f'one compiler_builtins rlib {target}', len(builtins) == 1, [str(p) for p in builtins])
+            builtin_members = set(run(['ar', 't', str(builtins[0])]).split())
+            report = defaultdict(list)
+            for member in run(['ar', 't', str(thin)]).split():
+                match = re.fullmatch(r'([A-Za-z0-9_]+)-([0-9a-f]{16})\.\1\..*\.rcgu\.o', member)
+                if member == '__.SYMDEF' or member == '__.SYMDEF SORTED':
+                    report['symbol-table'].append(member)
+                elif re.fullmatch(r'hoyadb_native\..*\.rcgu\.o', member) or (match and match[1].startswith('hoyadb_')):
+                    report['first-party'].append(member)
+                elif match and (rustlib / f'lib{match[1]}-{match[2]}.rlib').is_file():
+                    rlib = rustlib / f'lib{match[1]}-{match[2]}.rlib'
+                    link_inputs[(target, str(rlib))] = sha(rlib.read_bytes())
+                    std_crates.add(match[1])
+                    report['rust-std'].append(member)
+                elif match and match[1] in graph_crates:
+                    report['graph-crate'].append(member)
+                elif re.fullmatch(r'[0-9a-f]{16}-sqlcipher\.o', member):
+                    report['sqlcipher-c'].append(member)
+                elif member in builtin_members:
+                    same = run(['ar', 'p', str(thin), member], binary=True) == run(['ar', 'p', str(builtins[0]), member], binary=True)
+                    check(f'compiler_builtins object byte-equal {target} {member}', same)
+                    link_inputs[(target, str(builtins[0]))] = sha(builtins[0].read_bytes())
+                    report['compiler-builtins-c'].append(member)
+                else:
+                    fail(f'unclassified archive member {target} {member}')
+            check(f'sqlcipher object present {target}', len(report['sqlcipher-c']) == 1)
+            member_report[f'{relative}:{arch}'] = {k: len(v) for k, v in sorted(report.items())}
+        check(f'LibTomCrypt symbols absent {relative}', ltc_total == 0, ltc_total)
+        for name in providers:
+            check(f'{name} imported {relative}', imported[name], sorted(imported[name]))
+            providers[name].append({'library': relative, 'sha256': digest, 'architectures': [a for a, _ in arches],
+                                    'imported_symbols': sorted(imported[name]), 'libtomcrypt_symbols': ltc_total})
+for name, evidence in providers.items():
+    packages.append({'name': name, 'role': 'os_framework_not_redistributed',
+                     'description': f'Apple {name} imported from the OS at link time; not redistributed in this artifact',
+                     'files': [], 'evidence': evidence})
+
+copyright_path = TOOLCHAIN / 'share/doc/rust/COPYRIGHT-library.html'
+copyright_bytes = copyright_path.read_bytes()
+check('toolchain aggregate text equals android copy', copyright_bytes == (ANDROID / 'toolchain/rust-1.98.1/COPYRIGHT-library.html').read_bytes())
+texts['toolchain/rust-1.98.1/COPYRIGHT-library.html'] = copyright_bytes
+copyright_text = copyright_bytes.decode('utf-8', 'replace')
+not_named = sorted(c for c in std_crates if c not in copyright_text and c.replace('_', '-') not in copyright_text)
+packages.append({'name': 'rust-std', 'version': '1.98.1', 'license': 'aggregate toolchain notice (see texts)', 'role': 'toolchain_aggregate',
+                 'description': 'Rust 1.98.1 standard library sysroot crates linked via the staticlib for the Apple targets',
+                 'qualification': 'Aggregate notice; not every item it lists is linked; not a compiler SBOM or legal certification.',
+                 'linked_sysroot_crates': sorted(std_crates), 'crates_not_named_in_aggregate_text': not_named,
+                 'verified_link_inputs': [{'target': t, 'path': p, 'sha256': d} for (t, p), d in sorted(link_inputs.items())],
+                 'files': [{'file': 'toolchain/rust-1.98.1/COPYRIGHT-library.html', 'sha256': sha(copyright_bytes),
+                            'origin': {'kind': 'toolchain_local', 'path': str(copyright_path)}}]})
+
+excluded = [{'name': k[0], 'version': k[1], 'reason': 'not on the normal or build graph of any Apple target (cargo tree --locked --offline)'}
+            for k in sorted(set(locked) - set(normal) - set(build))]
+
+
+def table(rows):
+    return '\n'.join(['| Component | Version | License | Texts |', '| --- | --- | --- | --- |'] + rows)
+
+
+linked_rows = [f'| {p["name"]} | {p["version"]} | {p["license"]} | third-party/rust/{p["name"]}-{p["version"]}/ |'
+               for p in packages if p['role'] == 'linked_rust']
+build_rows = [f'| {p["name"]} | {p["version"]} | {p["license"]} | third-party/rust/{p["name"]}-{p["version"]}/ |'
+              for p in packages if p['role'] in ('build_tool', 'build_native_c_source')]
+c_rows = [f'| {p["name"]} | {p["version"]} | {p["license"]} | third-party/{p["files"][0]["file"]} |'
+          for p in packages if p['role'] == 'linked_native_c']
+notice = f"""# HoyaDB Apple native package third-party notices
+
+Local, unpublished `HoyaNative.xcframework` (Swift package artifact and the copy
+inside the React Native package). No HoyaDB project distribution license has
+been chosen or is granted by this file, and it is not a legal compliance
+certification or SBOM. The machine-checked inventory is
+[third-party/index.json](third-party/index.json): every listed text is copied
+byte-for-byte from a verified source recorded there, and the packaging
+validator rejects a missing, changed, unexpected or unclassified entry. Paths
+are relative to the XCFramework root; in the source tree the same files sit
+beside this NOTICE under bindings/native/third-party/.
+
+## Linked into `libhoyadb_native.a`
+
+Rust crates on the normal dependency graph of every Apple target
+({', '.join(TARGETS)}):
+
+{table(linked_rows)}
+
+C code compiled from the sqlcipher-src source package. The Apple build uses the
+CommonCrypto crypto provider; LibTomCrypt source is present in that package but
+is not compiled or linked here (no LibTomCrypt symbols in any slice):
+
+{table(c_rows)}
+
+## Provided by the operating system (not redistributed)
+
+The static libraries import CommonCrypto (`_CC*`, from the SQLCipher provider
+and the Rust standard library's random source) and Security
+(`_SecRandomCopyBytes`, `_kSecRandomDefault`) symbols, which resolve against
+Apple's system frameworks when an app links. No Apple framework code is
+included in this artifact. The index records the imported symbols per library,
+bound to each library's SHA256.
+
+## Build-only (no code in the shipped library)
+
+{table(build_rows)}
+
+sqlcipher-src supplies the C sources above.
+
+## Toolchain aggregate notice (supplemental)
+
+The pinned Rust 1.98.1 toolchain statically links standard-library sysroot
+crates into each slice ({', '.join(sorted(std_crates))}). Their exact rlib paths
+and SHA256 are in the index. The byte-exact, version-bound aggregate text is
+third-party/toolchain/rust-1.98.1/COPYRIGHT-library.html. It is an aggregate
+notice: not every item it lists is linked, and some linked sysroot crates are
+not named in it ({', '.join(not_named) or 'none'}). The Android NDK aggregate
+does not apply to these artifacts.
+"""
+notice_bytes = notice.encode('utf-8')
+index = {'format': 1, 'platform': 'apple',
+         'scope': 'Notices for the local unpublished HoyaNative.xcframework: Apple native Rust graph (linked and build-only roles), '
+                  'SQLCipher/SQLite C code, OS-provided CommonCrypto/Security and the Rust std toolchain aggregate.',
+         'project_distribution_license': None,
+         'lock': {'file': 'bindings/native/Cargo.lock', 'sha256': sha(lock_bytes)}, 'apple_targets': TARGETS,
+         'graph': {'normal': [f'{n} {v}' for n, v in sorted(normal)], 'build': [f'{n} {v}' for n, v in sorted(build)]},
+         'excluded_lock_packages': excluded, 'notice': {'file': 'NOTICE.md', 'sha256': sha(notice_bytes)},
+         'provider_evidence_source': {'file': 'bindings/swift/Artifacts/native-build.json', 'sha256': sha(PARENT.read_bytes())},
+         'packages': packages}
+out.mkdir(parents=True)
+for relative, data in sorted(texts.items()):
+    (out / relative).parent.mkdir(parents=True, exist_ok=True)
+    (out / relative).write_bytes(data)
+(out / 'NOTICE.md').write_bytes(notice_bytes)
+(out / 'index.json').write_text(json.dumps(index, indent=2) + '\n')
+summary.update({'output': str(out), 'index_sha256': sha((out / 'index.json').read_bytes()), 'notice_sha256': sha(notice_bytes),
+                'texts': len(texts), 'members': member_report, 'std_crates': sorted(std_crates), 'not_named': not_named,
+                'excluded_lock_packages': len(excluded)})
+summary_path.write_text(json.dumps(summary, indent=2) + '\n')
+print('HOYA_APPLE_CORPUS', json.dumps({k: summary[k] for k in ('index_sha256', 'notice_sha256', 'texts', 'excluded_lock_packages')}))

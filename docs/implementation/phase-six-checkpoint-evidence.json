@@ -1,0 +1,135 @@
+{
+  "observed_at_utc": "2026-10-24T09:59:24.549709+00:00",
+  "prep_commit": "6f5ffb4",
+  "runtime_changes_committed": false,
+  "crypto_dependency_approval": "pending",
+  "cipher_execution_verified": false,
+  "workspace_passed": 293,
+  "node_passed": 32,
+  "swift_backup_passed": 6,
+  "existing_swift_legacy_groups_passed": 4,
+  "reviewer": "claude/claude-opus-5",
+  "review_agent": "e6f3b33e-7787-43bb-904f-646b096c9154",
+  "review_verdict": "PASS; both follow-ups verified resolved; no open items within pre-encryption scope",
+  "source_sha256": {
+    "IMPLEMENTATION_PLAN.md": "fa1904e4de906325b8925712603c2bd31d92daa5759198c76f10c9973f85a32d",
+    "crates/hoyadb-core/src/command/entity.rs": "12865877bfdda3e35d93651720840d65f57743dc01608aa2604e12f7685679f2",
+    "crates/hoyadb-core/src/command/mod.rs": "5613a128e85e9fc2629c2512799300e869a04a1d1580df5d36d18a71808c1113",
+    "crates/hoyadb-core/src/command/owner.rs": "dea073c45a03c18d130b4f538e78875419b4e397c4d6407f62ce2e5565c24cbc",
+    "crates/hoyadb-core/src/command/pull.rs": "fed383a1a3f679649729d9bfe25f178bc37aad34b6359207b0bbb7b3697d7472",
+    "crates/hoyadb-core/src/command/queue.rs": "552df04e8238a0ca154a59448102cf0014823150a47acb20b99046c474ea98a3",
+    "crates/hoyadb-core/src/command/records.rs": "ad299835d15df77b025156239976cc1681600f951c730f554c548d02fd12dabc",
+    "crates/hoyadb-core/src/storage.rs": "e52b7582e3f997a1a6ecb5dee126e97ca98976f6e29580c60b01a2b4ad42d3a8",
+    "crates/hoyadb-storage-sqlite/src/bin/entity_restart_fixture.rs": "67bec3f33795cc52d900458c47d261a2cb13cd3427c89335d5a55c7901a3a6dd",
+    "crates/hoyadb-storage-sqlite/src/bin/restart_fixture.rs": "136cd650706bbaa274e21fbf67c218318f15487b281e4ee69f4b47d797191acd",
+    "crates/hoyadb-storage-sqlite/src/lib.rs": "97d88ea15020ac81f1727868c12aa74aaef8e075e6dfbc07d71c3adf85976439",
+    "crates/hoyadb-storage-sqlite/src/sync.rs": "91c671600e5bceefbb5c1d306ab9af0a18d5408c39d23d3daf2107344e9208d7",
+    "crates/hoyadb-storage-sqlite/tests/command_owner_cases.rs": "5dbfae030b6710cd4ef2001c0a4d6afaa658d7750b8a2af1878e2bdd5e4560b5",
+    "crates/hoyadb-storage-sqlite/tests/command_sync_cases.rs": "72dc889729244eaa3a81e7fe20eeaf63ab86e9e5f0082ad9f1c9bb9d24768e95",
+    "crates/hoyadb-storage-sqlite/tests/contract.rs": "e8b971deb699046fa6cbb87fdee2a4b89a78f5b1213581edf446b5d6061c15a7",
+    "crates/hoyadb-storage-sqlite/tests/entity_cases.rs": "78d104e8d6ba81beb6e76ef3ae536b80c5a82580c20bdbf9da15af385635f24f",
+    "crates/hoyadb-storage-sqlite/tests/model_cases.rs": "014477b7c31abf9cca64be4485b7800e715233b52409727bf78b3ed8739a5b2a",
+    "crates/hoyadb-storage-sqlite/tests/projection_cases.rs": "19a763a7c021d64dddf5fa31f7dfd52e8b26ad9feb15d522399fd55914a08d8b",
+    "crates/hoyadb-storage-sqlite/tests/pull_cases.rs": "d3428fd139bf0875e75ed32703d78f473e97b001e54c65a466c417d8eeb1738d",
+    "crates/hoyadb-storage-sqlite/tests/reactive_fault.rs": "26818db854639b5fdc9e9fa39b0e2453e55500fd3b80cb851dde5168d81fa47b",
+    "crates/hoyadb-storage-sqlite/tests/sqlite_cases.rs": "9bec1997c17470591db347a9b9e849fa477be544d02660950c928ce0b9855d0b",
+    "crates/hoyadb-storage-sqlite/tests/sync_cases.rs": "8107c70fc787254b74485b2b1b3d46721d035cde5bf978b2eadb81ab11ec9c77",
+    "crates/hoyadb-storage-sqlite/tests/typed_cases.rs": "fb39f52be8e506dbdcbcc86c321289f80460847689f00b8847cb4f2e8a65b3c4",
+    "docs/design/spec/registry.yaml": "5c9c22b06c699185ee51635d0974acc3596444ebde1916681c2386508a494a21",
+    "docs/design/traceability/rtm.md": "69e1be4563c3d8a925a2c85d67fa3a78f8e36bc0104aca999c0bdf37ee7c49cf",
+    "spikes/common/command_fixture.rs": "726a736ce98c5653ff7312e699b149df3f15cb85c1dc75ed69eb9c3c0ecce6e1",
+    "spikes/storage-browser/command-client.js": "3362f3052cbc280f7ec79801349a5c544039d246653dcbe34e643e9969eeb881",
+    "spikes/storage-browser/command-client.test.mjs": "59f5451fe87b9b923ee016b6593fd04e27fff3ed971466b7a9b37324e2d864d8",
+    "spikes/storage-browser/command-page.js": "853553d0d359c11db08907d972d757c173b3e74d4f85cb853ddf61a7a1513517",
+    "spikes/storage-browser/command-tests.js": "5990381f490a3537fa4c189e99b8d755150e43dcac87fe94888047068c6d6c3e",
+    "spikes/storage-browser/entity-page.js": "11d02888498efabb844a1114650422b67241f7a19f19d7b0e8659bafdf34e6da",
+    "spikes/storage-browser/entity-tests.js": "b3de1e49acbd2434bd241e598b6bea1fa6a3f6c85b6d37316488bf08cd3f2aa1",
+    "spikes/storage-browser/reactive-page.js": "e408989ebedc68338030eea0c85865e1c86b7284eb592116ee4c866affe6521e",
+    "spikes/storage-browser/reactive-tests.js": "4366d54fb9a32b4648670138aa038202440c915fa095b18748b1d8b6c4ce11e8",
+    "spikes/storage-browser/src/command_conformance.rs": "cb9bc944aa0ffa7989ee0502733f2ab65462c5667cff4fe5cdbc720f656e4a3e",
+    "spikes/storage-browser/src/entity_conformance.rs": "52df596c8632cf678f6507a81ec010b33258f38ac15f5f92ca4c0dcd565f3f52",
+    "spikes/storage-browser/src/lib.rs": "493a125295707ffece6202dcf9303ff63abf87a76f25e97c628ad24954bb7ec9",
+    "spikes/storage-browser/src/model_evidence.rs": "484d2258e0fbeb3b796419489b845b33c612653c48a66d174dbbb9c31691b6ae",
+    "spikes/storage-browser/src/reactive_bridge.rs": "7080b97424b441f4bd38457d16f94c600ed521c648769daeefda69b2f181cd3e",
+    "spikes/storage-browser/src/typed_evidence.rs": "6d26fb2040d504e04868be04d51bbe2522139be2e0ecc1fab7176a6fb4cd8a11",
+    "spikes/storage-browser/tests.js": "4e25cd85e39c9e1525065c75e2593b9499ab478a6bec751980e564bc84f5337e",
+    "spikes/storage-browser/worker.js": "a613a90fc4f5af645dd0729a7be8c30d7c452e64e71ec8cf0ce83a4a8970f3e9",
+    "crates/hoyadb-core/src/command/security.rs": "8c119eb27d7a4a64ca0f49f44cd02c23322a19bef1bec360482037d1dbbe1710",
+    "crates/hoyadb-storage-sqlite/tests/security_cases.rs": "358cd76ca80e51a3a0cccfce4f6d377a57395491a206f8799e7bc3837569503d",
+    "spikes/storage-browser/src/error_boundary.rs": "2e967a29ddf0dde26107dd34a8e321956131ce26fe91504a257326e6e50c6451",
+    "spikes/storage-browser/command-client-security.test.mjs": "902ee3ff410191589302a60203f8a8216cbf9d7611e2e7c4164acb11a850e676",
+    "spikes/storage-browser/worker-errors.test.mjs": "535acb9a652b6c8bb3e671952c1bfb14b9873bec1a6ab34f71e613f05831adf8",
+    "spikes/storage-browser/harness-error.js": "fec1a4d2d32b0cf1991326d9d56aa8fa41f925a2d366a047ef697ce5625d03c7",
+    "spikes/storage-browser/harness-errors.test.mjs": "f2314c55fa8c11019f27a8ad8d033c4665153db824cf8e0a725bff79903f42c9"
+  },
+  "logs": [
+    {
+      "local_log": "target/phase-six-security/workspace-pre-encryption.txt",
+      "sha256": "ce1014a3eb9ebf13467fbd1dfc4a78231537b472cb8b0f556d7b24e7eeeae282"
+    },
+    {
+      "local_log": "target/phase-six-security/clippy-workspace.txt",
+      "sha256": "d9302b0ca034d645263bce20b891f520da2be9e6d8dc80d3579df6de0a3b2ea6"
+    },
+    {
+      "local_log": "target/phase-six-security/clippy-native.txt",
+      "sha256": "cf31678d898e31182f581378f8b258f9bd47558ef00f8d9e28a47ff3ec2be03c"
+    },
+    {
+      "local_log": "target/phase-six-security/cross-platform-host.txt",
+      "sha256": "24210b5986b045d6280f710421caa3115b638bd00dd2cf6e93f82a631566c760"
+    },
+    {
+      "local_log": "target/phase-six-security/s01-preservation-green.txt",
+      "sha256": "365fd51d284285e22cfd187a4de85a6cc36e4a0a89592832e365b8306b5e3ef5"
+    },
+    {
+      "local_log": "target/phase-six-security/diagnostics-rpc-green.txt",
+      "sha256": "f19ad5f6e290ddd7ac28edfbdbb2a461c77ee56608b3326b4aad97edf27a3c16"
+    },
+    {
+      "local_log": "target/phase-six-opus-resolution/core.txt",
+      "sha256": "3f5dd5523be7b70b6b169e26a575ab241d9877b18c01cfdda65a90a4f00aed94"
+    },
+    {
+      "local_log": "target/phase-six-opus-resolution/clippy.txt",
+      "sha256": "f9bc66c947a3ea82fd5f19baaa225b7c3be6aa743ab350920a6a78549653bf9e"
+    },
+    {
+      "local_log": "target/phase-six-browser/wasm-build.txt",
+      "sha256": "cdaeda2fef32dcff159262424034c12123e6af2a469bedf79b25afe9153fc0c5"
+    },
+    {
+      "local_log": "target/phase-six-browser/wasm-clippy.txt",
+      "sha256": "105ad6f6b4dd693298ab74076ebcca3326faea1fb4c510585dd5189329c446e2"
+    },
+    {
+      "local_log": "target/phase-six-native/root-red.txt",
+      "sha256": "e5584286271b78c7af752c232a5d78058149a0d1e9416c1ead0ca6d0ab2c7324"
+    },
+    {
+      "local_log": "target/phase-six-native/root-green.txt",
+      "sha256": "8505b8ac7285610f02a407d6f5d8b286fe146c8f7d6e3a18fdbbd5cf9b56173a"
+    },
+    {
+      "local_log": "target/phase-six-native/root-legacy-green.txt",
+      "sha256": "eca6a5be6f089ed2b2a17121219028f3ef1833032061771a0457cc89f856606c"
+    },
+    {
+      "local_log": "target/phase-six-browser/client-open-green.txt",
+      "sha256": "d725816481ba49e3ae2a516c7c120860b200c680bec04274f7b0927254ebd0b4"
+    },
+    {
+      "local_log": "target/phase-six-browser/worker-secure-owner-green.txt",
+      "sha256": "3fbfe30c50a0fdb14f51206e6b5871e7a78bf970bd6b8c7cac7a3db3e327681e"
+    },
+    {
+      "local_log": "target/phase-six-browser/node-checkpoint-resolution.txt",
+      "sha256": "675502244097498ff90bdbfd9dc395db730b3d84ee1ffe1475806e78bab2041d"
+    },
+    {
+      "local_log": "target/phase-six-browser/harness-wasm-build.txt",
+      "sha256": "bb03ea66600f78e1672f524ad2e4552883899936f2937951308d05c17e10dd9a"
+    }
+  ]
+}

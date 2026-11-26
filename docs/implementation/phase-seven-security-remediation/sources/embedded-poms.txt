@@ -1,0 +1,13 @@
+com.github.gundy:semver4j:0.16.4 <- ['kotlin-gradle-plugin-2.1.20-gradle85.jar']
+com.google.code.gson:gson:2.11.0 <- ['kotlin-gradle-plugin-2.1.20-gradle85.jar']
+com.google.guava:failureaccess:1.0.2 <- ['kotlin-gradle-plugin-2.1.20-gradle85.jar']
+com.google.guava:guava:33.3.1-jre <- ['kotlin-gradle-plugin-2.1.20-gradle85.jar']
+commons-codec:commons-codec:1.17.1 <- ['kotlin-gradle-plugin-2.1.20-gradle85.jar']
+commons-io:commons-io:2.18.0 <- ['kotlin-gradle-plugin-2.1.20-gradle85.jar']
+org.antlr:antlr4-runtime:4.5.2-1 <- ['kotlin-gradle-plugin-2.1.20-gradle85.jar']
+org.antlr:antlr4-runtime:4.5.3 <- ['databinding-compiler-common-8.12.0.jar']
+org.apache.commons:commons-compress:1.27.1 <- ['kotlin-gradle-plugin-2.1.20-gradle85.jar']
+org.apache.commons:commons-lang3:3.16.0 <- ['kotlin-gradle-plugin-2.1.20-gradle85.jar']
+org.jctools:jctools-core:3.1.0 <- ['netty-common-4.1.110.Final.jar']
+org.jetbrains.intellij.deps.fastutil:intellij-deps-fastutil:8.5.4-9 <- ['kotlin-gradle-plugin-2.1.20-gradle85.jar']
+embedded coords 12

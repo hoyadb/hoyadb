@@ -1,0 +1,28 @@
+..F.........
+======================================================================
+FAIL: test_N06_parent_revoke_withdraws_unconsumed_permit_and_blocks_until_recover (test_browser_run.BrowserControlLoopTests.test_N06_parent_revoke_withdraws_unconsumed_permit_and_blocks_until_recover)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/test_browser_run.py", line 155, in test_N06_parent_revoke_withdraws_unconsumed_permit_and_blocks_until_recover
+    self.assertEqual([line.split(' ', 1)[0] for line in emitted], ['ADMITTED', 'REVOKED', 'REJECTED', 'REJECTED', 'RECOVERED', 'ADMITTED', 'CANCELLED'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['ADMITTED', 'REJECTED', 'REJECTED', 'REJECTED', 'RECOVER[24 chars]LED'] != ['ADMITTED', 'REVOKED', 'REJECTED', 'REJECTED', 'RECOVERE[23 chars]LED']
+
+First differing element 1:
+'REJECTED'
+'REVOKED'
+
+  ['ADMITTED',
+-  'REJECTED',
++  'REVOKED',
+   'REJECTED',
+   'REJECTED',
+   'RECOVERED',
+-  'REJECTED',
++  'ADMITTED',
+   'CANCELLED']
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.894s
+
+FAILED (failures=1)

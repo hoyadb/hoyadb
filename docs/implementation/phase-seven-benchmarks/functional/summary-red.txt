@@ -1,0 +1,80 @@
+.E.E.EEEEE
+======================================================================
+ERROR: test_even_median_and_nearest_rank_p95_are_exact (test_summary.SummaryTests.test_even_median_and_nearest_rank_p95_are_exact)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/test_summary.py", line 28, in test_even_median_and_nearest_rank_p95_are_exact
+    result = summarize([document()])
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/summary.py", line 7, in summarize
+    raise InvalidSamples("summary implementation pending")
+summary.InvalidSamples: summary implementation pending
+
+======================================================================
+ERROR: test_independent_runs_remain_separate_and_warmups_do_not_change_tail (test_summary.SummaryTests.test_independent_runs_remain_separate_and_warmups_do_not_change_tail)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/test_summary.py", line 92, in test_independent_runs_remain_separate_and_warmups_do_not_change_tail
+    result = summarize([item])
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/summary.py", line 7, in summarize
+    raise InvalidSamples("summary implementation pending")
+summary.InvalidSamples: summary implementation pending
+
+======================================================================
+ERROR: test_odd_single_repeated_and_unsorted_values (test_summary.SummaryTests.test_odd_single_repeated_and_unsorted_values) (values=[100, 1, 2])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/test_summary.py", line 36, in test_odd_single_repeated_and_unsorted_values
+    result = summarize([document(values)])["runs"][0]
+             ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/summary.py", line 7, in summarize
+    raise InvalidSamples("summary implementation pending")
+summary.InvalidSamples: summary implementation pending
+
+======================================================================
+ERROR: test_odd_single_repeated_and_unsorted_values (test_summary.SummaryTests.test_odd_single_repeated_and_unsorted_values) (values=[8])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/test_summary.py", line 36, in test_odd_single_repeated_and_unsorted_values
+    result = summarize([document(values)])["runs"][0]
+             ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/summary.py", line 7, in summarize
+    raise InvalidSamples("summary implementation pending")
+summary.InvalidSamples: summary implementation pending
+
+======================================================================
+ERROR: test_odd_single_repeated_and_unsorted_values (test_summary.SummaryTests.test_odd_single_repeated_and_unsorted_values) (values=[4, 4, 4])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/test_summary.py", line 36, in test_odd_single_repeated_and_unsorted_values
+    result = summarize([document(values)])["runs"][0]
+             ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/summary.py", line 7, in summarize
+    raise InvalidSamples("summary implementation pending")
+summary.InvalidSamples: summary implementation pending
+
+======================================================================
+ERROR: test_reader_rejects_nonstandard_numbers_duplicate_keys_and_malformed_json (test_summary.SummaryTests.test_reader_rejects_nonstandard_numbers_duplicate_keys_and_malformed_json)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/test_summary.py", line 85, in test_reader_rejects_nonstandard_numbers_duplicate_keys_and_malformed_json
+    self.assertEqual(read(path), document())
+                     ~~~~^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/summary.py", line 10, in read
+    raise InvalidSamples("reader implementation pending")
+summary.InvalidSamples: reader implementation pending
+
+======================================================================
+ERROR: test_u64_median_does_not_round_through_float (test_summary.SummaryTests.test_u64_median_does_not_round_through_float)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/test_summary.py", line 41, in test_u64_median_does_not_round_through_float
+    self.assertEqual(summarize([document(values)])["runs"][0]["median"], "18446744073709551614.5")
+                     ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/summary.py", line 7, in summarize
+    raise InvalidSamples("summary implementation pending")
+summary.InvalidSamples: summary implementation pending
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.032s
+
+FAILED (errors=7)

@@ -1,0 +1,56 @@
+# RETROSPECTIVE COMPILING STUB (follow-up 8 prep), never a historical RED-first claim
+"""SPEC-0034 / TC-0038 SR-22a/b: reviewed macOS system shared-cache identities for observed native loads.
+
+Pure functions over three externally supplied records: the reviewed expected host/cache record and two host
+records read independently before and after the capture (OS identity, complete cache-file SHA256 manifest,
+cache header values, image identities re-read from the cache and per-path file status). Nothing here reads
+the host, the cache or a process.
+
+Source semantics (studied, pinned by `capture_source`): JDK 17.0.1+12 `jdk.NativeLibrary` reports per dyld
+image the image path, the Mach-O header address as `baseAddress` and `topAddress` 0 on macOS; dyld places every
+cached image at its unslid `__TEXT` address plus one shared-region slide that xnu draws below `maxSlide` and
+aligns to the architecture's slide page (4 KiB for the studied x86_64h cache). JFR does not report which cache
+a process mapped: association with the rehashed host cache is an inference under the trusted host boundary,
+not process attestation.
+"""
+from dataclasses import dataclass
+import re
+
+SCHEMA = 'hoyadb.system-shared-cache/1'
+HOST_IDENTITY_KEYS = ('os', 'host_integrity', 'arch', 'cache_dir', 'cache', 'cache_files')
+OS_KEYS = ('product_version', 'product_build_version', 'build_id', 'product_version_extra', 'system_version_plist_sha256')
+INTEGRITY_KEYS = ('sip_enabled', 'authenticated_root', 'system_volume_sealed')
+CACHE_INT_KEYS = ('cache_type', 'platform', 'os_version_field', 'shared_region_start', 'shared_region_size', 'max_slide', 'images_count')
+CAPTURE_KEYS = ('jdk', 'event', 'base_address', 'top_address')
+IMAGE_KEYS = ('install_path', 'image_uuid', 'unslid_load_address', 'text_size')
+IDENTITY_KEYS = IMAGE_KEYS[1:]
+RECORD_KEYS = ('schema', *HOST_IDENTITY_KEYS, 'slide_alignment', 'capture_source', 'images', 'aliases')
+HOST_KEYS = (*HOST_IDENTITY_KEYS, 'boot_session_uuid', 'image_path_status', 'cache_image_identities')
+SHA256 = re.compile(r'[0-9a-f]{64}')
+GLOB = set('*?[]{}')
+STUDIED_ADDRESS_SEMANTICS = ('mach_header', 'zero')  # jdk-17.0.1+12 os_bsd.cpp get_loaded_modules_info (__APPLE__)
+
+
+@dataclass(frozen=True)
+class SystemCacheEvidence:
+    expected: dict
+    pre_host: dict
+    post_host: dict
+
+
+
+
+def _int(value):
+    return isinstance(value, int) and not isinstance(value, bool)
+
+
+def check_host(evidence):
+    return []
+
+
+def lookup(evidence, name):
+    return None  # RETROSPECTIVE STUB: never classifies a cache image
+
+
+def check_capture(evidence, observation, entries):
+    return []

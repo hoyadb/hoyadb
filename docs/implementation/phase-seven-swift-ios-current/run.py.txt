@@ -1,0 +1,107 @@
+"""Current-source Swift iOS simulator writer/reader proof on the task-owned device only.
+
+Every simctl call is bounded and recorded in order (commands.json). Timeouts are recorded as
+UNKNOWN outcomes, never as SDK behavior. No global CoreSimulator/service/user-device operation.
+"""
+from pathlib import Path
+import hashlib
+import json
+import os
+import plistlib
+import shutil
+import subprocess
+import sys
+import time
+
+here = Path(__file__).resolve().parent
+repo = here.parents[2]
+udid = 'CC525A65-D03E-4F9D-8936-DD16BBFD9664'
+identifier = 'dev.hoyadb.phase7.owned.consumer'
+attempt = here / sys.argv[1]
+attempt.mkdir()
+binary = here / 'scratch/x86_64-apple-ios-simulator/debug/GeneralConsumer'
+results = []
+started = time.monotonic()
+
+
+def save():
+    (attempt / 'commands.json').write_text(json.dumps(results, indent=2) + '\n')
+
+
+def call(argv, timeout, env=None, required=True):
+    entry = {'argv': argv, 'start_s': round(time.monotonic() - started, 3), 'timeout_s': timeout}
+    results.append(entry)
+    try:
+        p = subprocess.run(argv, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, timeout=timeout,
+                           env=dict(os.environ, **env) if env else None)
+        entry.update(exit_code=p.returncode, output=p.stdout)
+    except subprocess.TimeoutExpired as error:
+        out = error.stdout or b''
+        entry.update(timed_out=True, outcome='UNKNOWN', output=out.decode(errors='replace') if isinstance(out, bytes) else out)
+        save()
+        raise
+    finally:
+        entry['elapsed_s'] = round(time.monotonic() - started - entry['start_s'], 3)
+        save()
+    if required and p.returncode:
+        raise RuntimeError(f'{argv} exit {p.returncode}: {p.stdout}')
+    return p.stdout
+
+
+def owned_state():
+    devices = json.loads(call(['xcrun', 'simctl', 'list', 'devices', '--json'], 60))
+    owned = [d for group in devices['devices'].values() for d in group if d['udid'] == udid]
+    assert len(owned) == 1 and owned[0]['name'] == 'HoyaDB-Phase7-Owned', owned
+    return owned[0]['state']
+
+
+summary = {'udid': udid, 'bundle_id': identifier, 'binary_sha256': hashlib.sha256(binary.read_bytes()).hexdigest(),
+           'modes': {}, 'current44_swift_source': True}
+try:
+    bundle = attempt / 'GeneralConsumer.app'
+    bundle.mkdir()
+    info = plistlib.loads((here.parent / 'GeneralConsumer.app/Info.plist').read_bytes())
+    (bundle / 'Info.plist').write_bytes(plistlib.dumps(info))
+    shutil.copy2(binary, bundle / 'GeneralConsumer')
+    call(['codesign', '--force', '--sign', '-', str(bundle)], 60)
+    summary['initial_state'] = owned_state()
+    if summary['initial_state'] != 'Booted':
+        call(['xcrun', 'simctl', 'boot', udid], 180)
+    call(['xcrun', 'simctl', 'bootstatus', udid, '-b'], 300)
+    call(['xcrun', 'simctl', 'install', udid, str(bundle)], 300)
+    data = Path(call(['xcrun', 'simctl', 'get_app_container', udid, identifier, 'data'], 60).strip())
+    summary['data_container'] = str(data)
+    for mode in ['writer', 'reader']:
+        proof = data / 'Documents' / f'hoya-consumer-{mode}.txt'
+        assert not proof.exists(), proof
+        out, err = attempt / f'{mode}-stdout.txt', attempt / f'{mode}-stderr.txt'
+        t = time.monotonic()
+        call(['xcrun', 'simctl', 'launch', f'--stdout={out}', f'--stderr={err}', udid, identifier], 120,
+             env={'SIMCTL_CHILD_HOYA_CONSUMER_MODE': mode})
+        deadline = time.monotonic() + 240
+        while time.monotonic() < deadline and not proof.exists() and 'FAILED' not in (out.read_text() if out.exists() else ''):
+            time.sleep(0.5)
+        summary['modes'][mode] = {'proof': proof.read_text() if proof.exists() else None,
+                                  'stdout': out.read_text() if out.exists() else None,
+                                  'elapsed_s': round(time.monotonic() - t, 3)}
+        save()
+        assert proof.exists() and f'HOYA_SWIFT_GENERAL_CONSUMER_GREEN mode={mode}' in proof.read_text(), mode
+        (attempt / f'{mode}-result.txt').write_text(proof.read_text())
+    summary['result'] = 'PASS'
+    print('HOYA_SWIFT_IOS_CURRENT_INDEPENDENT_WRITER_READER_GREEN', flush=True)
+except BaseException as error:
+    summary['result'] = 'FAILED_OR_UNKNOWN'
+    summary['error'] = repr(error)
+    raise
+finally:
+    for argv, timeout in [(['xcrun', 'simctl', 'uninstall', udid, identifier], 120), (['xcrun', 'simctl', 'shutdown', udid], 120)]:
+        try:
+            call(argv, timeout, required=False)
+        except subprocess.TimeoutExpired:
+            pass
+    try:
+        summary['final_state'] = owned_state()
+    except Exception as error:  # Recorded; never escalated to global service actions.
+        summary['final_state'] = 'UNKNOWN ' + repr(error)
+    (attempt / 'summary.json').write_text(json.dumps(summary, indent=2) + '\n')
+    print(json.dumps({k: v for k, v in summary.items() if k != 'modes'}, indent=2), flush=True)

@@ -1,0 +1,3 @@
+PASS DEF21_throwing_observer_explicit_close_releases_token_guard_and_reopen
+
+exit=0

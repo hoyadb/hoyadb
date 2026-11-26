@@ -1,0 +1,7 @@
+..................................
+----------------------------------------------------------------------
+Ran 34 tests in 13.635s
+
+OK
+/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-aar-final-9vh5m7f0/final-repo/certificate.json 553b95458656bdef8ea0156faec31b704dd45f6c77c3b7d659bf7b95144ba864
+exit=0

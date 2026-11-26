@@ -1,0 +1,56 @@
+{
+  "status": "REVIEWED PROPOSAL; OPERATOR DECISION PENDING; NO ACTIVATION",
+  "authority": "ADR-0035 separate component approval gate; SPEC-0034 / TC-0038",
+  "bootstrap": {
+    "index_sha256": "01a1e9149c04216b18aa75f2bb080ccc14f5183c18dc719d5e533f45b0ee333e",
+    "bundle_sha256": "e0d5e13532e625808fc72723f7282d0bda42143ff1c1e46cf67a7b0bf5165f3f",
+    "proposal": "docs/implementation/phase-seven-rn-bootstrap-addendum/bundle.json",
+    "files": 6,
+    "jars": 2
+  },
+  "r2": {
+    "index_sha256": "3689f7bb50c630463d8613cc6296c115dc086e60690c88d47d7b411c6481b18b",
+    "allowlist_sha256": "cf9608e88b682a24bcd4065a70d654881fa65d237bf46aec589ac345aeb42dc9",
+    "proposal": "docs/implementation/phase-seven-security-remediation-followup-6/evidence/r2-allowlist-v2.json",
+    "listed_files": 49,
+    "already_present_byte_identical": [
+      "org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.pom",
+      "org/slf4j/slf4j-parent/1.7.36/slf4j-parent-1.7.36.pom",
+      "org/sonatype/oss/oss-parent/9/oss-parent-9.pom"
+    ],
+    "new_files": 46,
+    "jars": 21,
+    "jar_bytes": 19808511
+  },
+  "independent_review": {
+    "runtime_reported": "claude-opus-5-5",
+    "record_sha256": "f6abdca69cc02a75ded24a7b3de6941b5a400d7ce5b6b8f31baa1b9b8f1c16f2",
+    "verdict": "Ready for risk decision; no blockers; not approval or security-fixed."
+  },
+  "clarifications": [
+    "R2 lists 49 exact files, of which 3 are already present: 46 are new.",
+    "R2 Netty OSV batch has 22 queries: 21 closure coordinates plus jctools proxy; unknown modified-code versions are not clean scans.",
+    "Bootstrap module-signature HTTP200 acquisition record is included separately; frozen initial fetch log remains unchanged."
+  ],
+  "unresolved": [
+    "Two applicable compiler-embedded protobuf advisories remain open; no inferred residual-risk acceptance.",
+    "LZ4 non-invocation and native-library observation require actual bounded capture and positive controls.",
+    "Native baseline identity for macOS shared-cache images needs reviewed specification and regression.",
+    "Several embedded forks have unknown versions or unsupported advisory coordinates.",
+    "Publisher key identity is UNKNOWN; 12 R2 signatures use SHA-1, jose4j/jdom2 expired now but valid at signing; java-diff-utils-parent signature has expired-key status.",
+    "Real Gradle selection, compatibility and unchanged shipped runtime remain unproven."
+  ],
+  "execution_policy": [
+    "Keep isolated offline/outbound-denied controls, exact hashes, reviewed JDK/AAPT2, no shared cache, no downloads/source fallback.",
+    "Stop before compilation on extra/unresolved/unapproved components or runtime drift.",
+    "No compile authorization is created by preserving these proposals."
+  ],
+  "staging_verification": {
+    "all_selected_staged_blobs_equal_working_bytes": true,
+    "whitespace_check_exit": 2,
+    "findings": 9,
+    "scope": "Unmodified upstream license/NOTICE/public-key bytes only; no whitespace suppression added.",
+    "raw_log": "staged-whitespace.txt",
+    "raw_log_sha256": "8960aab607e1d1bd667a1fc9d13f5bb216bbdc54904be34b0d680ed8c6bb419f"
+  }
+}

@@ -1,0 +1,11 @@
+{
+ "native_source_snapshot_sha256": "8c4a89c2a24f10ed5415aec8cdf1689554cf699bbff2b7c865e2f04f104ac57a",
+ "native_source_files": 98,
+ "artifact_hoyadb_benchmark_sha256": "d50bf0e9b76bfae263022d812e113b6943a1d7f704c6a3c80c2e56614981ee93",
+ "workload_sha256": "e1963c2f3a94c6efc45345a4ae0855805c3f62582e29d794840f1a8e5103e82d",
+ "locks": {
+  "Cargo.lock": "c0b3ea34c15984efef184be735421a295069ab385d721861a9dcace707ead295",
+  "benchmarks/native/Cargo.lock": "5596138f4c9a49fada0ed65a7712cdf4c27ea599c30e75d6315447466b4dd090"
+ },
+ "lane_closure_0dd6d44d_mismatches": []
+}

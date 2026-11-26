@@ -1,0 +1,402 @@
+{
+ "roots": [
+  "io.netty:netty-codec-http:4.1.139.Final",
+  "io.netty:netty-codec-http2:4.1.139.Final",
+  "io.netty:netty-handler:4.1.139.Final",
+  "io.netty:netty-codec:4.1.139.Final",
+  "io.netty:netty-common:4.1.139.Final",
+  "io.netty:netty-handler-proxy:4.1.139.Final",
+  "io.netty:netty-buffer:4.1.139.Final",
+  "io.netty:netty-transport:4.1.139.Final",
+  "io.netty:netty-codec-socks:4.1.139.Final",
+  "io.netty:netty-resolver:4.1.139.Final",
+  "io.netty:netty-transport-native-unix-common:4.1.139.Final",
+  "org.apache.commons:commons-compress:1.28.0",
+  "org.bitbucket.b_c:jose4j:0.9.6",
+  "org.bouncycastle:bcprov-jdk18on:1.85",
+  "org.bouncycastle:bcpkix-jdk18on:1.85",
+  "org.bouncycastle:bcutil-jdk18on:1.85",
+  "org.jdom:jdom2:2.0.6.1"
+ ],
+ "components": {
+  "io.netty:netty-codec-http:4.1.139.Final": {
+   "packaging": "jar",
+   "parent": "io.netty:netty-parent:4.1.139.Final",
+   "pom_licenses": [
+    "Apache License, Version 2.0"
+   ],
+   "via": null
+  },
+  "io.netty:netty-codec-http2:4.1.139.Final": {
+   "packaging": "jar",
+   "parent": "io.netty:netty-parent:4.1.139.Final",
+   "pom_licenses": [
+    "Apache License, Version 2.0"
+   ],
+   "via": null
+  },
+  "io.netty:netty-handler:4.1.139.Final": {
+   "packaging": "jar",
+   "parent": "io.netty:netty-parent:4.1.139.Final",
+   "pom_licenses": [
+    "Apache License, Version 2.0"
+   ],
+   "via": null
+  },
+  "io.netty:netty-codec:4.1.139.Final": {
+   "packaging": "jar",
+   "parent": "io.netty:netty-parent:4.1.139.Final",
+   "pom_licenses": [
+    "Apache License, Version 2.0"
+   ],
+   "via": null
+  },
+  "io.netty:netty-common:4.1.139.Final": {
+   "packaging": "jar",
+   "parent": "io.netty:netty-parent:4.1.139.Final",
+   "pom_licenses": [
+    "Apache License, Version 2.0"
+   ],
+   "via": null
+  },
+  "io.netty:netty-handler-proxy:4.1.139.Final": {
+   "packaging": "jar",
+   "parent": "io.netty:netty-parent:4.1.139.Final",
+   "pom_licenses": [
+    "Apache License, Version 2.0"
+   ],
+   "via": null
+  },
+  "io.netty:netty-buffer:4.1.139.Final": {
+   "packaging": "jar",
+   "parent": "io.netty:netty-parent:4.1.139.Final",
+   "pom_licenses": [
+    "Apache License, Version 2.0"
+   ],
+   "via": null
+  },
+  "io.netty:netty-transport:4.1.139.Final": {
+   "packaging": "jar",
+   "parent": "io.netty:netty-parent:4.1.139.Final",
+   "pom_licenses": [
+    "Apache License, Version 2.0"
+   ],
+   "via": null
+  },
+  "io.netty:netty-codec-socks:4.1.139.Final": {
+   "packaging": "jar",
+   "parent": "io.netty:netty-parent:4.1.139.Final",
+   "pom_licenses": [
+    "Apache License, Version 2.0"
+   ],
+   "via": null
+  },
+  "io.netty:netty-resolver:4.1.139.Final": {
+   "packaging": "jar",
+   "parent": "io.netty:netty-parent:4.1.139.Final",
+   "pom_licenses": [
+    "Apache License, Version 2.0"
+   ],
+   "via": null
+  },
+  "io.netty:netty-transport-native-unix-common:4.1.139.Final": {
+   "packaging": "jar",
+   "parent": "io.netty:netty-parent:4.1.139.Final",
+   "pom_licenses": [
+    "Apache License, Version 2.0"
+   ],
+   "via": null
+  },
+  "org.apache.commons:commons-compress:1.28.0": {
+   "packaging": "jar",
+   "parent": "org.apache.commons:commons-parent:85",
+   "pom_licenses": [
+    "Apache-2.0"
+   ],
+   "via": null
+  },
+  "org.bitbucket.b_c:jose4j:0.9.6": {
+   "packaging": "jar",
+   "parent": null,
+   "pom_licenses": [
+    "The Apache Software License, Version 2.0"
+   ],
+   "via": null
+  },
+  "org.bouncycastle:bcprov-jdk18on:1.85": {
+   "packaging": "jar",
+   "parent": null,
+   "pom_licenses": [],
+   "via": null
+  },
+  "org.bouncycastle:bcpkix-jdk18on:1.85": {
+   "packaging": "jar",
+   "parent": null,
+   "pom_licenses": [],
+   "via": null
+  },
+  "org.bouncycastle:bcutil-jdk18on:1.85": {
+   "packaging": "jar",
+   "parent": null,
+   "pom_licenses": [],
+   "via": null
+  },
+  "org.jdom:jdom2:2.0.6.1": {
+   "packaging": "jar",
+   "parent": null,
+   "pom_licenses": [],
+   "via": null
+  },
+  "commons-codec:commons-codec:1.19.0": {
+   "packaging": "jar",
+   "parent": "org.apache.commons:commons-parent:85",
+   "pom_licenses": [
+    "Apache-2.0"
+   ],
+   "via": "org.apache.commons:commons-compress:1.28.0"
+  },
+  "commons-io:commons-io:2.20.0": {
+   "packaging": "jar",
+   "parent": "org.apache.commons:commons-parent:85",
+   "pom_licenses": [
+    "Apache-2.0"
+   ],
+   "via": "org.apache.commons:commons-compress:1.28.0"
+  },
+  "org.apache.commons:commons-lang3:3.18.0": {
+   "packaging": "jar",
+   "parent": "org.apache.commons:commons-parent:85",
+   "pom_licenses": [
+    "Apache-2.0"
+   ],
+   "via": "org.apache.commons:commons-compress:1.28.0"
+  },
+  "org.slf4j:slf4j-api:1.7.36": {
+   "packaging": "jar",
+   "parent": "org.slf4j:slf4j-parent:1.7.36",
+   "pom_licenses": [
+    "MIT License"
+   ],
+   "via": "org.bitbucket.b_c:jose4j:0.9.6"
+  }
+ },
+ "edges": [
+  [
+   "io.netty:netty-codec-http:4.1.139.Final",
+   "io.netty:netty-common:4.1.139.Final",
+   "compile"
+  ],
+  [
+   "io.netty:netty-codec-http:4.1.139.Final",
+   "io.netty:netty-buffer:4.1.139.Final",
+   "compile"
+  ],
+  [
+   "io.netty:netty-codec-http:4.1.139.Final",
+   "io.netty:netty-transport:4.1.139.Final",
+   "compile"
+  ],
+  [
+   "io.netty:netty-codec-http:4.1.139.Final",
+   "io.netty:netty-codec:4.1.139.Final",
+   "compile"
+  ],
+  [
+   "io.netty:netty-codec-http:4.1.139.Final",
+   "io.netty:netty-handler:4.1.139.Final",
+   "compile"
+  ],
+  [
+   "io.netty:netty-codec-http2:4.1.139.Final",
+   "io.netty:netty-common:4.1.139.Final",
+   "compile"
+  ],
+  [
+   "io.netty:netty-codec-http2:4.1.139.Final",
+   "io.netty:netty-buffer:4.1.139.Final",
+   "compile"
+  ],
+  [
+   "io.netty:netty-codec-http2:4.1.139.Final",
+   "io.netty:netty-transport:4.1.139.Final",
+   "compile"
+  ],
+  [
+   "io.netty:netty-codec-http2:4.1.139.Final",
+   "io.netty:netty-codec:4.1.139.Final",
+   "compile"
+  ],
+  [
+   "io.netty:netty-codec-http2:4.1.139.Final",
+   "io.netty:netty-handler:4.1.139.Final",
+   "compile"
+  ],
+  [
+   "io.netty:netty-codec-http2:4.1.139.Final",
+   "io.netty:netty-codec-http:4.1.139.Final",
+   "compile"
+  ],
+  [
+   "io.netty:netty-handler:4.1.139.Final",
+   "io.netty:netty-common:4.1.139.Final",
+   "compile"
+  ],
+  [
+   "io.netty:netty-handler:4.1.139.Final",
+   "io.netty:netty-resolver:4.1.139.Final",
+   "compile"
+  ],
+  [
+   "io.netty:netty-handler:4.1.139.Final",
+   "io.netty:netty-buffer:4.1.139.Final",
+   "compile"
+  ],
+  [
+   "io.netty:netty-handler:4.1.139.Final",
+   "io.netty:netty-transport:4.1.139.Final",
+   "compile"
+  ],
+  [
+   "io.netty:netty-handler:4.1.139.Final",
+   "io.netty:netty-transport-native-unix-common:4.1.139.Final",
+   "compile"
+  ],
+  [
+   "io.netty:netty-handler:4.1.139.Final",
+   "io.netty:netty-codec:4.1.139.Final",
+   "compile"
+  ],
+  [
+   "io.netty:netty-codec:4.1.139.Final",
+   "io.netty:netty-common:4.1.139.Final",
+   "compile"
+  ],
+  [
+   "io.netty:netty-codec:4.1.139.Final",
+   "io.netty:netty-buffer:4.1.139.Final",
+   "compile"
+  ],
+  [
+   "io.netty:netty-codec:4.1.139.Final",
+   "io.netty:netty-transport:4.1.139.Final",
+   "compile"
+  ],
+  [
+   "io.netty:netty-handler-proxy:4.1.139.Final",
+   "io.netty:netty-common:4.1.139.Final",
+   "compile"
+  ],
+  [
+   "io.netty:netty-handler-proxy:4.1.139.Final",
+   "io.netty:netty-buffer:4.1.139.Final",
+   "compile"
+  ],
+  [
+   "io.netty:netty-handler-proxy:4.1.139.Final",
+   "io.netty:netty-transport:4.1.139.Final",
+   "compile"
+  ],
+  [
+   "io.netty:netty-handler-proxy:4.1.139.Final",
+   "io.netty:netty-codec:4.1.139.Final",
+   "compile"
+  ],
+  [
+   "io.netty:netty-handler-proxy:4.1.139.Final",
+   "io.netty:netty-codec-socks:4.1.139.Final",
+   "compile"
+  ],
+  [
+   "io.netty:netty-handler-proxy:4.1.139.Final",
+   "io.netty:netty-codec-http:4.1.139.Final",
+   "compile"
+  ],
+  [
+   "io.netty:netty-buffer:4.1.139.Final",
+   "io.netty:netty-common:4.1.139.Final",
+   "compile"
+  ],
+  [
+   "io.netty:netty-transport:4.1.139.Final",
+   "io.netty:netty-common:4.1.139.Final",
+   "compile"
+  ],
+  [
+   "io.netty:netty-transport:4.1.139.Final",
+   "io.netty:netty-buffer:4.1.139.Final",
+   "compile"
+  ],
+  [
+   "io.netty:netty-transport:4.1.139.Final",
+   "io.netty:netty-resolver:4.1.139.Final",
+   "compile"
+  ],
+  [
+   "io.netty:netty-codec-socks:4.1.139.Final",
+   "io.netty:netty-common:4.1.139.Final",
+   "compile"
+  ],
+  [
+   "io.netty:netty-codec-socks:4.1.139.Final",
+   "io.netty:netty-buffer:4.1.139.Final",
+   "compile"
+  ],
+  [
+   "io.netty:netty-codec-socks:4.1.139.Final",
+   "io.netty:netty-transport:4.1.139.Final",
+   "compile"
+  ],
+  [
+   "io.netty:netty-codec-socks:4.1.139.Final",
+   "io.netty:netty-codec:4.1.139.Final",
+   "compile"
+  ],
+  [
+   "io.netty:netty-resolver:4.1.139.Final",
+   "io.netty:netty-common:4.1.139.Final",
+   "compile"
+  ],
+  [
+   "io.netty:netty-transport-native-unix-common:4.1.139.Final",
+   "io.netty:netty-common:4.1.139.Final",
+   "compile"
+  ],
+  [
+   "io.netty:netty-transport-native-unix-common:4.1.139.Final",
+   "io.netty:netty-buffer:4.1.139.Final",
+   "compile"
+  ],
+  [
+   "io.netty:netty-transport-native-unix-common:4.1.139.Final",
+   "io.netty:netty-transport:4.1.139.Final",
+   "compile"
+  ],
+  [
+   "org.apache.commons:commons-compress:1.28.0",
+   "commons-codec:commons-codec:1.19.0",
+   "compile"
+  ],
+  [
+   "org.apache.commons:commons-compress:1.28.0",
+   "commons-io:commons-io:2.20.0",
+   "compile"
+  ],
+  [
+   "org.apache.commons:commons-compress:1.28.0",
+   "org.apache.commons:commons-lang3:3.18.0",
+   "compile"
+  ],
+  [
+   "org.bitbucket.b_c:jose4j:0.9.6",
+   "org.slf4j:slf4j-api:1.7.36",
+   "compile"
+  ]
+ ],
+ "parents_seen": [
+  "io.netty:netty-parent:4.1.139.Final",
+  "org.apache.commons:commons-parent:85",
+  "org.apache:apache:35",
+  "org.slf4j:slf4j-parent:1.7.36",
+  "org.sonatype.oss:oss-parent:9"
+ ]
+}

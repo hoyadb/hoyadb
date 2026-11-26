@@ -1,0 +1,53 @@
+#!/usr/bin/env python3
+"""TC-0038 SR-23 step 6: independent structural walk of a JFR recording's chunk headers. Pure byte reads only.
+
+Usage: jfr_bytewalk.py <recording.jfr>  -> prints JSON. Layout per the pinned JDK's
+jdk.jfr/jdk/jfr/internal/consumer/ChunkHeader.java (src.zip): 68-byte header, magic 'FLR\\0', big-endian
+fields; state byte at 64 (0 = complete), flag byte at 67 (bit 0x2 = final chunk).
+"""
+import json
+import struct
+import sys
+
+HEADER = 68
+MAGIC = b'FLR\x00'
+
+
+def walk(data):
+    chunks, problems, offset = [], [], 0
+    while offset < len(data):
+        if len(data) - offset < HEADER:
+            problems.append('trailing %d bytes shorter than a chunk header at offset %d' % (len(data) - offset, offset))
+            break
+        head = data[offset:offset + HEADER]
+        if head[:4] != MAGIC:
+            problems.append('bad magic at offset %d' % offset)
+            break
+        major, minor = struct.unpack_from('>HH', head, 4)
+        size, cp, meta, start_ns, duration_ns, start_ticks, tps = struct.unpack_from('>qqqqqqq', head, 8)
+        state, flags = head[64], head[67]
+        chunk = {'offset': offset, 'major': major, 'minor': minor, 'size': size, 'constant_pool_offset': cp,
+                 'metadata_offset': meta, 'start_nanos': start_ns, 'duration_nanos': duration_ns,
+                 'start_ticks': start_ticks, 'ticks_per_second': tps, 'state_byte': state, 'flag_byte': flags,
+                 'final': bool(flags & 0x2)}
+        chunks.append(chunk)
+        if state != 0:
+            problems.append('state byte %d at chunk offset %d' % (state, offset))
+        if size < HEADER or offset + size > len(data):
+            problems.append('chunk size %d at offset %d does not fit the file' % (size, offset))
+            break
+        offset += size
+    covered = sum(c['size'] for c in chunks)
+    if not problems and covered != len(data):
+        problems.append('chunk sizes cover %d of %d bytes' % (covered, len(data)))
+    if chunks and not chunks[-1]['final']:
+        problems.append('last chunk lacks the final flag')
+    if not chunks:
+        problems.append('no chunk')
+    return {'file_bytes': len(data), 'chunks': chunks, 'sizes_cover_file': covered == len(data),
+            'final_chunk_last': bool(chunks) and chunks[-1]['final'], 'problems': problems, 'ok': not problems}
+
+
+if __name__ == '__main__':
+    with open(sys.argv[1], 'rb') as handle:
+        print(json.dumps(walk(handle.read()), indent=1))

@@ -1,0 +1,11 @@
+test_p05_p08_complete_local_coordinate_and_honest_certificate (__main__.FinalCertificate.test_p05_p08_complete_local_coordinate_and_honest_certificate) ... ok
+test_p01_current_so_must_match_native_evidence (__main__.NativeArtifactBinding.test_p01_current_so_must_match_native_evidence) ... ok
+test_p01_missing_native_input_must_not_certify (__main__.NativeArtifactBinding.test_p01_missing_native_input_must_not_certify) ... ok
+test_p01_native_source_must_match_evidence (__main__.NativeArtifactBinding.test_p01_native_source_must_match_evidence) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.077s
+
+OK
+/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-aar-final-tpmeraza/final-repo/certificate.json 770861b5cf941567ca7f375a33ef182d1cfea078d234e78b575ddb3a09dc3222
+exit=0

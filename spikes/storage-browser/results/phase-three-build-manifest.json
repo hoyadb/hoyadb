@@ -1,0 +1,304 @@
+{
+  "recorded_utc": "2026-10-23T06:44:26.672709+00:00",
+  "git_head": "18be46ae606f1326e82cfb35463476790c07d9e7",
+  "versions": {
+    "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)",
+    "cargo": "cargo 1.98.1 (797e8a9bc 2026-08-05)",
+    "wasm_bindgen": "wasm-bindgen 0.2.104",
+    "clang": "Homebrew clang version 22.1.8"
+  },
+  "build_command": "CC_wasm32_unknown_unknown=/usr/local/opt/llvm@22/bin/clang AR_wasm32_unknown_unknown=/usr/local/opt/llvm@22/bin/llvm-ar sh spikes/storage-browser/check.sh",
+  "browser_origin": "http://127.0.0.1:8770",
+  "source_files": [
+    {
+      "path": "Cargo.lock",
+      "bytes": 7788,
+      "sha256": "75c4616fe6b298c68f5b504a61786332718c20d3b9e86c1f902d914c619cd3c4"
+    },
+    {
+      "path": "Cargo.toml",
+      "bytes": 390,
+      "sha256": "9e3defda95db9ed6c151cfd79a597e6d6feb4d17628381f3c9cddc157c89a3a5"
+    },
+    {
+      "path": "crates/hoyadb-core/Cargo.toml",
+      "bytes": 162,
+      "sha256": "393ac6390a59fea8503a060b8992437f49107c10a765f955be1792efefaa3930"
+    },
+    {
+      "path": "crates/hoyadb-core/src/lib.rs",
+      "bytes": 111,
+      "sha256": "a5f258fc7bec7a3aa1d93366cd42d5f5300ebf4281b73a866d77536f29bd854d"
+    },
+    {
+      "path": "crates/hoyadb-core/src/model/database.rs",
+      "bytes": 9630,
+      "sha256": "f0c48249d81d4294e66869ff6b9b7f35aebfa97bf3ce5502554416f92a2d1104"
+    },
+    {
+      "path": "crates/hoyadb-core/src/model/migration.rs",
+      "bytes": 18058,
+      "sha256": "35250723bd853722f5d70d1bcd6099b2fc4df84b10c9265776c8a465df93b77d"
+    },
+    {
+      "path": "crates/hoyadb-core/src/model/mod.rs",
+      "bytes": 242,
+      "sha256": "9b8132927cd06a8c92d62aa7ca74a8f74c6e1e19ed5082c46b98fd023cbbae79"
+    },
+    {
+      "path": "crates/hoyadb-core/src/model/query.rs",
+      "bytes": 10125,
+      "sha256": "617b5d03760dfad3a67e1adad7ad68406a099b1b2137962ae62406607f9bd230"
+    },
+    {
+      "path": "crates/hoyadb-core/src/model/reactive.rs",
+      "bytes": 25580,
+      "sha256": "d608c99f2428903703be80edbf709a70e2e257f5c0b807f172ba5a0ab5c0c168"
+    },
+    {
+      "path": "crates/hoyadb-core/src/model/schema.rs",
+      "bytes": 23538,
+      "sha256": "c31dfafb30e7d345cffd6aa0adbf726734aafe4e5645aa898dd98262b9869bcf"
+    },
+    {
+      "path": "crates/hoyadb-core/src/storage/model.rs",
+      "bytes": 10198,
+      "sha256": "7fc25accd4409ebb1baa7c3a692d3adc7fee251dce55c692f488eaac0f673645"
+    },
+    {
+      "path": "crates/hoyadb-core/src/storage/observation.rs",
+      "bytes": 587,
+      "sha256": "3e5cfe0fbdc8375f3e3b6ad6ce36c3595684e0c19e17ef11232501098da98d91"
+    },
+    {
+      "path": "crates/hoyadb-core/src/storage/typed.rs",
+      "bytes": 12866,
+      "sha256": "2b4e6ee90c3433d380633d1f314e64d1f2bf580cbd6ae0ef90e778546a67fc10"
+    },
+    {
+      "path": "crates/hoyadb-core/src/storage.rs",
+      "bytes": 2646,
+      "sha256": "a09bc79203cadf665723dbd1934d0d361874ecb5b714b322754407044ee0691e"
+    },
+    {
+      "path": "crates/hoyadb-storage-memory/Cargo.toml",
+      "bytes": 230,
+      "sha256": "f894792e4a923e3823af2bc6ac0a6a4181cd7808e81e82d02a8a125450418560"
+    },
+    {
+      "path": "crates/hoyadb-storage-memory/src/lib.rs",
+      "bytes": 5030,
+      "sha256": "0966a6596ca1318527f3c33ed47e39b69bd43e11e0c6c881c67fec689b5648a1"
+    },
+    {
+      "path": "crates/hoyadb-storage-memory/src/lifecycle.rs",
+      "bytes": 4411,
+      "sha256": "36157cf044cb3acdda050e81c18f809a9d523a11063e10c1d7a8de911a602ff7"
+    },
+    {
+      "path": "crates/hoyadb-storage-memory/src/projection.rs",
+      "bytes": 2561,
+      "sha256": "0262e06da13411842816786da5b12ace407ac7d67d0ca1226614de16777ba394"
+    },
+    {
+      "path": "crates/hoyadb-storage-memory/src/typed.rs",
+      "bytes": 8236,
+      "sha256": "68d23e4596db823b987a7cdbc0b492272f4d40b5309ca0a320afccfa3274821d"
+    },
+    {
+      "path": "crates/hoyadb-storage-sqlite/Cargo.toml",
+      "bytes": 711,
+      "sha256": "eeb9afd9a6e6a50e97acb60285e02907f8d0ad4f6b1f9ade2331800300141c2a"
+    },
+    {
+      "path": "crates/hoyadb-storage-sqlite/src/bin/restart_fixture.rs",
+      "bytes": 7097,
+      "sha256": "f4fa0b8051321ea92987e0b93ed4fbe4b04fa42bbc288618c70a391c9893238b"
+    },
+    {
+      "path": "crates/hoyadb-storage-sqlite/src/lib.rs",
+      "bytes": 18837,
+      "sha256": "d5559e6e71a188bf71caa211d27adc735353a1c123bf7d47201c8164eac391fa"
+    },
+    {
+      "path": "crates/hoyadb-storage-sqlite/src/lifecycle.rs",
+      "bytes": 6594,
+      "sha256": "0781032601fdecb3946dbb659f3a989590d8338662d37e671b82794ffb3b6c9d"
+    },
+    {
+      "path": "crates/hoyadb-storage-sqlite/src/projection.rs",
+      "bytes": 5162,
+      "sha256": "9755df1eb7b191862c3f1f422888372a419fdfb1668dbb8e7d11a917deac2226"
+    },
+    {
+      "path": "crates/hoyadb-storage-sqlite/src/query.rs",
+      "bytes": 6691,
+      "sha256": "bf20c670cca194fb56c9917d5207b6bbdb477296665bb6a2d720c844b3a50f8d"
+    },
+    {
+      "path": "rust-toolchain.toml",
+      "bytes": 123,
+      "sha256": "9500030ccefd0bab631fb7f1763f79f4103eca3a344c36cf15be869e330683bb"
+    },
+    {
+      "path": "spikes/storage-browser/Cargo.lock",
+      "bytes": 15284,
+      "sha256": "9b04f6d96b231bd486f6980fc630f8223c1c34805c9959dc474553f1088debd6"
+    },
+    {
+      "path": "spikes/storage-browser/Cargo.toml",
+      "bytes": 659,
+      "sha256": "d4482dafab19696703a184267359a4ca540e8e9c5b069756846531c892546ff4"
+    },
+    {
+      "path": "spikes/storage-browser/check.sh",
+      "bytes": 1219,
+      "sha256": "f872ee0185e721e67d590403762cd433d18512dfefe73a79cdb0023cc1d8598c"
+    },
+    {
+      "path": "spikes/storage-browser/index.html",
+      "bytes": 273,
+      "sha256": "8c471cfed0c51a01ee9a9c9d975cd9099b895be7391012703943dc65bc464efa"
+    },
+    {
+      "path": "spikes/storage-browser/reactive-client.js",
+      "bytes": 3887,
+      "sha256": "0df2a9cf29bb2a9c0ab354fa29458f2ce1a92a462608f71b4a09cf7622378c32"
+    },
+    {
+      "path": "spikes/storage-browser/reactive-page.js",
+      "bytes": 1870,
+      "sha256": "536b75d306c292f983399225c04b1637d67ed79328a07ad1b1896a59729fb4ce"
+    },
+    {
+      "path": "spikes/storage-browser/reactive-tests.js",
+      "bytes": 7273,
+      "sha256": "fa49a3f6a5578c38cb60a352c5526887f935e8fe9327683f6385b6e4b7d2722e"
+    },
+    {
+      "path": "spikes/storage-browser/reactive.html",
+      "bytes": 269,
+      "sha256": "c1cac46f608ae116262cee6f06cc6817a77618bb65f5be727f65fb92be43b605"
+    },
+    {
+      "path": "spikes/storage-browser/src/lib.rs",
+      "bytes": 16211,
+      "sha256": "44f23f37c8ff15be80ba3eb79d27fca7e07fa4aa91e0b137849be26e730cca61"
+    },
+    {
+      "path": "spikes/storage-browser/src/model_evidence.rs",
+      "bytes": 13233,
+      "sha256": "cb7dd356ca37162da68c73fd84eb91e068b7c133310d9e3d060d19da50a726bc"
+    },
+    {
+      "path": "spikes/storage-browser/src/reactive_bridge.rs",
+      "bytes": 9555,
+      "sha256": "874693d78c97d10c3a7a23d02709df6fa802e4bcb38947cbfda10f219732fad1"
+    },
+    {
+      "path": "spikes/storage-browser/src/typed_evidence.rs",
+      "bytes": 14841,
+      "sha256": "9f15cef949c1c402005fba46beff4d6961332f66d6b85cdc858c298c5a0ac082"
+    },
+    {
+      "path": "spikes/storage-browser/tests.js",
+      "bytes": 12481,
+      "sha256": "bd90f7602248cb58e4089eaf7364fcdb77cef91ae60f98da5967f1e02b32f545"
+    },
+    {
+      "path": "spikes/storage-browser/typed-tests.js",
+      "bytes": 2134,
+      "sha256": "2ad37abbf810a8d482a4e12680fb750c9c3ddfc9a90b266e23220ddc12b66f21"
+    },
+    {
+      "path": "spikes/storage-browser/worker.js",
+      "bytes": 10082,
+      "sha256": "8b4c0aa5059716923b25d626b91958c85618ab07d9abdfa045ea03d87557838f"
+    },
+    {
+      "path": "tests/conformance/data_model.rs",
+      "bytes": 47804,
+      "sha256": "dbe794d07cdacafd0b0b40c07ea4526b2f2790ce26a2bf653a10ff5ab5f709c4"
+    },
+    {
+      "path": "tests/conformance/model_restart.rs",
+      "bytes": 4602,
+      "sha256": "ed9effd8a1e266474eb9cdbbd3fab03653bdc203d399ea2ffa311b4f9dec842e"
+    },
+    {
+      "path": "tests/conformance/projection.rs",
+      "bytes": 14706,
+      "sha256": "7c214ffe9f73c5d732e57a0108ef15fd41975ceee095c2f41c52825b508381e0"
+    },
+    {
+      "path": "tests/conformance/reactivity.rs",
+      "bytes": 38550,
+      "sha256": "d3f451834f841a106bbb69ff36c69c41f533872b34adeddc2e54c9bba9195a29"
+    },
+    {
+      "path": "tests/conformance/schema_storage.rs",
+      "bytes": 6301,
+      "sha256": "bffb460f0a9ccca36685467d09bb0d00bfd3315419ce58689d7d1fe1b750c7e9"
+    },
+    {
+      "path": "tests/conformance/storage.rs",
+      "bytes": 14595,
+      "sha256": "6982f876735d700e89d4dd0fbef10f864e5982b778ce5a5436099d6a120c4674"
+    },
+    {
+      "path": "tests/conformance/typed_storage.rs",
+      "bytes": 39897,
+      "sha256": "3bbb2ba76fdb55224e7bbea2ed7fffe8ea9a691cc002f5999863895db1976216"
+    }
+  ],
+  "generated_files": [
+    {
+      "path": "spikes/storage-browser/pkg/hoyadb_storage_browser_spike.d.ts",
+      "bytes": 8452,
+      "sha256": "f844116a094a85eebd9e4441f2253c30184a31bfb0b307b9b2e27cd101b336c0"
+    },
+    {
+      "path": "spikes/storage-browser/pkg/hoyadb_storage_browser_spike.js",
+      "bytes": 43040,
+      "sha256": "e816754128607f35ddcd8f7f7a2453750e10dd7883ed644aa9a81c959230ae9d"
+    },
+    {
+      "path": "spikes/storage-browser/pkg/hoyadb_storage_browser_spike_bg.wasm",
+      "bytes": 8869447,
+      "sha256": "43eae3d9e0c95d68893d394433d19fcf87707f4d3fa24ba21396decdeb9dd675"
+    },
+    {
+      "path": "spikes/storage-browser/pkg/hoyadb_storage_browser_spike_bg.wasm.d.ts",
+      "bytes": 5331,
+      "sha256": "b028101564d41f8a0e02417ef0d12dd482ad0ef0fcd97c496eb60eccd2601228"
+    }
+  ],
+  "observed_checks": {
+    "phase-three-green.json": {
+      "reports": 7,
+      "done": true,
+      "needsReload": null,
+      "namespace": "hoyadb-spec23-23cd5243-6bf8-4910-b583-117ac09ed4de",
+      "sha256": "34125cd379dc235c011624ee150fefca447b0701d7eb9918a9847cd244a916ac"
+    },
+    "phase-three-full-stage1.json": {
+      "reports": 26,
+      "done": false,
+      "needsReload": true,
+      "namespace": "hoyadb-spec23-087b3d52-abe8-437c-9c8f-f67c92498846",
+      "sha256": "0ec81404a1164676289add903d55f3f7b2459cc9d1ea9417c1fb6ac26e366736"
+    },
+    "phase-three-full-stage2.json": {
+      "reports": 12,
+      "done": true,
+      "needsReload": false,
+      "namespace": "hoyadb-spec23-087b3d52-abe8-437c-9c8f-f67c92498846",
+      "sha256": "7337807fd07f3208f921ebfa9bdcd1ae0db266793100b77a8b3e08d27d371509"
+    }
+  },
+  "rust_sources_newer_than_wasm": [],
+  "limits": [
+    "Synthetic isolated fixtures, one worker owner, no remote CI/release claim.",
+    "Untargeted host check of the browser-only sqlite-wasm-rs graph is unsupported and failed C shim/Mac SDK typedef compilation; the documented WASM checks passed."
+  ]
+}

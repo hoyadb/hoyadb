@@ -1,0 +1,56 @@
+Building for debugging...
+[0/4] Write sources
+[2/4] Write swift-version--58304C5D6DBC2206.txt
+[4/7] Emitting module HoyaDB
+[5/7] Compiling HoyaDB Sync.swift
+[6/7] Compiling HoyaDB Database.swift
+[7/11] Compiling HoyaDBTesting MemoryTesting.swift
+[8/11] Emitting module HoyaDBTesting
+[9/11] Compiling HoyaDBTesting ManualClock.swift
+[10/13] Compiling HoyaDBTestingTests TestingTests.swift
+[11/13] Emitting module HoyaDBTestingTests
+[11/13] Write Objects.LinkFileList
+[12/13] Linking HoyaDBPackageTests
+Build complete! (4.23s)
+Test Suite 'Selected tests' started at 2026-10-24 23:06:13.775.
+Test Suite 'HoyaDBPackageTests.xctest' started at 2026-10-24 23:06:13.777.
+Test Suite 'CommandTests' started at 2026-10-24 23:06:13.777.
+Test Case '-[HoyaDBTests.CommandTests testCommittedFinishSurvivesCloseAndReplacementWithoutStaleDelivery]' started.
+Test Case '-[HoyaDBTests.CommandTests testCommittedFinishSurvivesCloseAndReplacementWithoutStaleDelivery]' passed (0.170 seconds).
+Test Suite 'CommandTests' passed at 2026-10-24 23:06:13.947.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.170 (0.170) seconds
+Test Suite 'SyncTests' started at 2026-10-24 23:06:13.947.
+Test Case '-[HoyaDBTests.SyncTests testStoppedDriverDoesNotStartOldMapperAfterSuccessfulPendingReply]' started.
+Test Case '-[HoyaDBTests.SyncTests testStoppedDriverDoesNotStartOldMapperAfterSuccessfulPendingReply]' passed (0.166 seconds).
+Test Case '-[HoyaDBTests.SyncTests testStoppedDriverDoesNotStartOldTransportAfterSuccessfulPrepareReply]' started.
+Test Case '-[HoyaDBTests.SyncTests testStoppedDriverDoesNotStartOldTransportAfterSuccessfulPrepareReply]' passed (0.165 seconds).
+Test Suite 'SyncTests' passed at 2026-10-24 23:06:14.279.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.331 (0.331) seconds
+Test Suite 'TestingTests' started at 2026-10-24 23:06:14.279.
+Test Case '-[HoyaDBTestingTests.TestingTests testST01PublicTimingInjectionControlsManagedCount]' started.
+Test Case '-[HoyaDBTestingTests.TestingTests testST01PublicTimingInjectionControlsManagedCount]' passed (0.003 seconds).
+Test Case '-[HoyaDBTestingTests.TestingTests testST02RealMemoryFactoryIDExhaustionAndRetainedMigration]' started.
+Test Case '-[HoyaDBTestingTests.TestingTests testST02RealMemoryFactoryIDExhaustionAndRetainedMigration]' passed (0.004 seconds).
+Test Case '-[HoyaDBTestingTests.TestingTests testST03ManualClocksOverflowAndTimerCallbacksOutsideLock]' started.
+Test Case '-[HoyaDBTestingTests.TestingTests testST03ManualClocksOverflowAndTimerCallbacksOutsideLock]' passed (0.001 seconds).
+Test Case '-[HoyaDBTestingTests.TestingTests testST04TypedCommandResultsReverseByExactKey]' started.
+/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/swift/Sources/HoyaDBTesting/FakeTransport.swift:29: error: -[HoyaDBTestingTests.TestingTests testST04TypedCommandResultsReverseByExactKey] : failed: caught error: "invalidEnvelope"
+Test Case '-[HoyaDBTestingTests.TestingTests testST04TypedCommandResultsReverseByExactKey]' failed (0.291 seconds).
+Test Case '-[HoyaDBTestingTests.TestingTests testST05EntityRepliesKeepDistinctWriteIDsForSameCanonicalRecord]' started.
+/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/swift/Sources/HoyaDBTesting/FakeTransport.swift:29: error: -[HoyaDBTestingTests.TestingTests testST05EntityRepliesKeepDistinctWriteIDsForSameCanonicalRecord] : failed: caught error: "invalidEnvelope"
+Test Case '-[HoyaDBTestingTests.TestingTests testST05EntityRepliesKeepDistinctWriteIDsForSameCanonicalRecord]' failed (0.031 seconds).
+Test Case '-[HoyaDBTestingTests.TestingTests testST06DelayedDroppedACKRetriesOriginalFrozenBytesAtCoreDeadline]' started.
+/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/swift/Tests/HoyaDBTestingTests/TestingTests.swift:210: error: -[HoyaDBTestingTests.TestingTests testST06DelayedDroppedACKRetriesOriginalFrozenBytesAtCoreDeadline] : Asynchronous wait failed: Exceeded timeout of 2 seconds, with unfulfilled expectations: "fake reply held".
+/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/swift/Tests/HoyaDBTestingTests/TestingTests.swift:214: error: -[HoyaDBTestingTests.TestingTests testST06DelayedDroppedACKRetriesOriginalFrozenBytesAtCoreDeadline] : XCTAssertEqual failed: ("Optional(HoyaDBTesting.FakeTransportError.invalidEnvelope)") is not equal to ("Optional(HoyaDBTesting.FakeTransportError.droppedAcknowledgement)")
+/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/swift/Sources/HoyaDBTesting/FakeTransport.swift:29: error: -[HoyaDBTestingTests.TestingTests testST06DelayedDroppedACKRetriesOriginalFrozenBytesAtCoreDeadline] : failed: caught error: "invalidEnvelope"
+Test Case '-[HoyaDBTestingTests.TestingTests testST06DelayedDroppedACKRetriesOriginalFrozenBytesAtCoreDeadline]' failed (2.041 seconds).
+Test Suite 'TestingTests' failed at 2026-10-24 23:06:16.650.
+	 Executed 6 tests, with 5 failures (3 unexpected) in 2.370 (2.372) seconds
+Test Suite 'HoyaDBPackageTests.xctest' failed at 2026-10-24 23:06:16.651.
+	 Executed 9 tests, with 5 failures (3 unexpected) in 2.871 (2.874) seconds
+Test Suite 'Selected tests' failed at 2026-10-24 23:06:16.651.
+	 Executed 9 tests, with 5 failures (3 unexpected) in 2.871 (2.875) seconds
+◇ Test run started.
+↳ Testing Library Version: 1902
+↳ Target Platform: x86_64-apple-macos14.0
+✔ Test run with 0 tests in 0 suites passed after 0.001 seconds.

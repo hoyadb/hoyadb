@@ -1,0 +1,115 @@
+"""Assemble the final versioned packet presentation (follow-up 1). Presentation only: no resolved graph,
+command, artifact or source input changes. Original bytes stay recoverable losslessly; explicit checks."""
+from pathlib import Path
+import hashlib, json, shutil, subprocess
+repo = Path(__file__).resolve().parents[4]
+D = repo / 'docs/implementation/phase-seven-kotlin-compiler-addendum'
+Q = Path(__file__).resolve().parents[1]
+SNAP = Q / 'initial-cut-snapshot'
+sha = lambda b: hashlib.sha256(b).hexdigest()
+
+def fail(msg):
+    raise SystemExit(msg)
+
+initial_index = json.loads((SNAP / 'files-sha256.json').read_text())
+if sha((SNAP / 'files-sha256.json').read_bytes()) != 'a194306b7a6da538881643f5c2b6ea904e65c460001aa50a21eedf57bef91a18':
+    fail('initial-cut snapshot index differs from the reviewed a194306b')
+for rel, digest in initial_index.items():
+    if sha((D / rel).read_bytes()) != digest:
+        fail('packet file changed before assembly: ' + rel)
+
+def ws_clean(path):
+    p = subprocess.run(['git', 'diff', '--no-index', '--check', '/dev/null', str(path)], stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
+    return p.stdout.strip() == ''
+
+def wrapper(original_path, data):
+    return json.dumps({'format': 1, 'original_path': original_path, 'original_bytes': len(data), 'original_sha256': sha(data),
+                       'utf8': data.decode('utf-8')}, indent=2, ensure_ascii=False) + '\n'
+
+presentation = {'scope': 'presentation only; no resolved graph, command, artifact or source input changed',
+                'initial_cut_index_sha256': 'a194306b7a6da538881643f5c2b6ea904e65c460001aa50a21eedf57bef91a18', 'files': {}}
+
+# 1. Originals of files rewritten for the final version, preserved byte-identically.
+(D / 'initial-cut').mkdir()
+for rel in ['README.md', 'bundle.json', 'files-sha256.json']:
+    data = (D / rel).read_bytes()
+    (D / 'initial-cut' / rel).write_bytes(data)
+    presentation['files'][rel] = {'status': 'superseded in the final version; original preserved byte-identically', 'original_sha256': sha(data),
+                                  'original_preserved_at': f'initial-cut/{rel}'}
+
+# 2. Whitespace-failing originals: lossless wrappers (+ readable JSON view where parseable).
+for rel in ['metadata/online/resolution.json', 'metadata/offline/resolution.json', 'metadata/offline-repeat2/resolution.json']:
+    data = (D / rel).read_bytes()
+    wrap = rel.replace('resolution.json', 'resolution.original.json')
+    (D / wrap).write_text(wrapper(rel, data))
+    readable = json.dumps(json.loads(data), indent=2, ensure_ascii=False) + '\n'
+    (D / rel).write_text(readable)
+    equal = json.loads((D / rel).read_bytes()) == json.loads(data)
+    if not equal:
+        fail('readable JSON view does not parse equal: ' + rel)
+    presentation['files'][rel] = {'status': 'readable derived view (parsed-JSON equal); original bytes in wrapper', 'original_sha256': sha(data),
+                                  'original_preserved_at': wrap, 'wrapper_sha256': sha((D / wrap).read_bytes()),
+                                  'readable_sha256': sha((D / rel).read_bytes()), 'parsed_json_equal': equal}
+for rel in ['metadata/online/output.txt', 'metadata/offline/output.txt', 'metadata/offline-repeat2/output.txt', 'upstream/README.md']:
+    data = (D / rel).read_bytes()
+    wrap = rel + '.json'
+    (D / wrap).write_text(wrapper(rel, data))
+    (D / rel).unlink()
+    presentation['files'][rel] = {'status': 'original bytes only in lossless wrapper (trailing whitespace is part of the original)',
+                                  'original_sha256': sha(data), 'original_preserved_at': wrap, 'wrapper_sha256': sha((D / wrap).read_bytes())}
+for rel, digest in initial_index.items():
+    presentation['files'].setdefault(rel, {'status': 'unchanged at the same path', 'original_sha256': digest})
+
+# 3. Follow-up evidence (copied from quarantine; whitespace-failing text wrapped losslessly).
+F = D / 'followup-1'
+copies = {
+    'attestation/verification.json': 'attestation-followup/verification.json',
+    'attestation/verification-keyid-fallback.json': 'attestation-followup/verification-keyid-fallback.json',
+    'attestation/fallback-crash-note.md': 'attestation-followup/fallback-crash-note.md',
+    'attestation/verify.py.txt': 'attestation-followup/verify.py',
+    'attestation/verify_keyid.py.txt': 'attestation-followup/verify_keyid.py',
+    'embedded/byte-presence.json': 'embedded-evidence/byte-presence.json',
+    'embedded/native-libraries.json': 'embedded-evidence/native-libraries.json',
+    'embedded/osv-query.json': 'embedded-evidence/osv-query.json',
+    'embedded/osv-result.json': 'embedded-evidence/osv-result.json',
+    'embedded/osv-summary.json': 'embedded-evidence/osv-summary.json',
+    'embedded/upstream/versions.properties': 'embedded-evidence/versions.properties',
+    'embedded/upstream/prepare-compiler-embeddable.build.gradle.kts': 'embedded-evidence/build.gradle.kts',
+    'embedded/upstream/prepare-compiler.build.gradle.kts': 'embedded-evidence/prepare-compiler/build.gradle.kts',
+    'embedded/upstream/contents-license_third_party.json': 'embedded-evidence/contents-license_third_party.json',
+    'activation-confirmation/aapt2-and-jdk.json': 'activation-confirmation/aapt2-and-jdk.json',
+    'provenance/strong-sidecars.json': 'strong-sidecars.json',
+    'provenance/parents-match.json': 'parents-match.json',
+    'provenance/q1-jvm-version-check.json': 'q1-jvm-version-check.json',
+    'provenance/fetch-log-followup.json': 'fetch-log.json',
+    'tools-v2/fetch.py.txt': 'tools/fetch.py', 'tools-v2/verify.py.txt': 'tools/verify.py', 'tools-v2/run-gradle.py.txt': 'tools/run-gradle.py',
+    'tools-v2/osv.py.txt': 'tools/osv.py', 'tools-v2/bundle.py.txt': 'tools/bundle.py', 'tools-v2/strong_sidecars.py.txt': 'tools/strong_sidecars.py',
+    'tools-v2/assemble_final.py.txt': 'tools/assemble_final.py',
+}
+for p in sorted((Q / 'attestation-followup/keys').iterdir()):
+    copies[f'attestation/keys/{p.name}'] = f'attestation-followup/keys/{p.name}'
+for p in sorted((Q / 'embedded-evidence/license-third-party').iterdir()):
+    copies[f'embedded/upstream/license-third-party/{p.name}'] = f'embedded-evidence/license-third-party/{p.name}'
+for p in sorted((Q / 'embedded-evidence/advisories').iterdir()):
+    copies[f'embedded/advisories/{p.name}'] = f'embedded-evidence/advisories/{p.name}'
+marker = Q.parent / 'marker-review/bytes'
+for name in ['org.jetbrains.kotlin.jvm.gradle.plugin-2.1.20.pom', 'org.jetbrains.kotlin.jvm.gradle.plugin-2.1.20.pom.sha1', 'org.jetbrains.kotlin.jvm.gradle.plugin-2.1.20.pom.md5']:
+    copies[f'../marker/bytes/{name}'] = str(marker / name)
+followup = {}
+for dest, src in copies.items():
+    src_path = Path(src) if src.startswith('/') else Q / src
+    data = src_path.read_bytes()
+    target = (F / dest).resolve()
+    target.parent.mkdir(parents=True, exist_ok=True)
+    target.write_bytes(data)
+    rel = str(target.relative_to(D))
+    if not ws_clean(target):
+        target.unlink()
+        wrapped = target.with_name(target.name + '.json')
+        wrapped.write_text(wrapper(rel, data))
+        rel = str(wrapped.relative_to(D))
+    followup[rel] = {'source': str(src_path.relative_to(repo)), 'source_sha256': sha(data)}
+presentation['followup_1_sources'] = followup
+(D / 'presentation.json').write_text(json.dumps(presentation, indent=2, ensure_ascii=False) + '\n')
+print('initial files', len(initial_index), 'follow-up files', len(followup))
+print('wrapped follow-up text:', [k for k in followup if k.endswith('.json') and not copies.get(k)][:40])

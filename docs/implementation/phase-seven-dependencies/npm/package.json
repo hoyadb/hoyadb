@@ -1,0 +1,22 @@
+{
+  "name": "hoyadb-phase-seven-dependency-review-cli20-2",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Metadata-only proposed minimal JavaScript native test consumer; not installed or activated",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "dependencies": {
+    "react": "19.2.3",
+    "react-native": "0.86.3"
+  },
+  "devDependencies": {
+    "@babel/core": "7.29.7",
+    "@babel/runtime": "7.29.10",
+    "@react-native-community/cli": "20.2.0",
+    "@react-native-community/cli-platform-android": "20.2.0",
+    "@react-native-community/cli-platform-ios": "20.2.0",
+    "@react-native/babel-preset": "0.86.3",
+    "@react-native/metro-config": "0.86.3"
+  }
+}

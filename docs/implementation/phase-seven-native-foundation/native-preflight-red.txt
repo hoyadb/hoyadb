@@ -1,0 +1,30 @@
+Compiling hoyadb-native v0.1.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/native)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 4.98s
+     Running unittests src/lib.rs (bindings/native/target/debug/deps/hoyadb_native-0c600122144c2530)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 2 filtered out; finished in 0.00s
+
+     Running tests/boundary.rs (bindings/native/target/debug/deps/boundary-86dd142a8fcd0c59)
+
+running 1 test
+test g10_readonly_open_preflight_preserves_original_parser_and_borrow_rules ... FAILED
+
+failures:
+
+---- g10_readonly_open_preflight_preserves_original_parser_and_borrow_rules stdout ----
+
+thread 'g10_readonly_open_preflight_preserves_original_parser_and_borrow_rules' (82357666) panicked at tests/boundary.rs:46:5:
+assertion `left == right` failed: {"error": Object({"kind": String("InvalidRequest")})}
+  left: Some(Bool(false))
+ right: Some(Bool(true))
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    g10_readonly_open_preflight_preserves_original_parser_and_borrow_rules
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 5 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `--test boundary`

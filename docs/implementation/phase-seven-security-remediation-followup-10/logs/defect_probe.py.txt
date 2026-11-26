@@ -1,0 +1,11 @@
+"""Root's SR-22d defect probe (pure): a v2 record whose first image lacks install_path."""
+import sys
+sys.path.insert(0, sys.argv[1])
+import native_cache as N
+import test_native_cache as T
+r = T.expected_v2()
+r['images'][0].pop('install_path')
+try:
+    print('returned', N.check_host(N.SystemCacheEvidence(r, {}, {})))
+except Exception as error:
+    print('RAISED', type(error).__name__, error)

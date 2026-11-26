@@ -1,0 +1,182 @@
+EEEEEE.FFEEEEEE...........................
+======================================================================
+ERROR: test_sr22d_capture_rules_still_apply_to_dual_images (__main__.DualResident.test_sr22d_capture_rules_still_apply_to_dual_images)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 535, in test_sr22d_capture_rules_still_apply_to_dual_images
+    self.rejected_with(check([jvm([cached(LIBSYSTEM), cached_image(KERNEL_IMAGE, slide=SLIDE + 0x1000)])], evidence_v2()), 'different slides')
+                                                                                                           ~~~~~~~~~~~^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 385, in evidence_v2
+    record = record or expected_v2()
+                       ~~~~~~~~~~~^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 369, in expected_v2
+    record['schema'] = N.SCHEMA_V2
+                       ^^^^^^^^^^^
+AttributeError: module 'native_cache' has no attribute 'SCHEMA_V2'. Did you mean: 'SCHEMA'?
+
+======================================================================
+ERROR: test_sr22d_changed_missing_extra_or_incomplete_host_file_evidence_rejects (__main__.DualResident.test_sr22d_changed_missing_extra_or_incomplete_host_file_evidence_rejects)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 506, in test_sr22d_changed_missing_extra_or_incomplete_host_file_evidence_rejects
+    changed = host_v2(expected_v2())
+                      ~~~~~~~~~~~^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 369, in expected_v2
+    record['schema'] = N.SCHEMA_V2
+                       ^^^^^^^^^^^
+AttributeError: module 'native_cache' has no attribute 'SCHEMA_V2'. Did you mean: 'SCHEMA'?
+
+======================================================================
+ERROR: test_sr22d_digest_bearing_cache_claim_rejects_even_with_disk_hash (__main__.DualResident.test_sr22d_digest_bearing_cache_claim_rejects_even_with_disk_hash)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 532, in test_sr22d_digest_bearing_cache_claim_rejects_even_with_disk_hash
+    self.rejected_with(check([jvm([cached(LIBSYSTEM), claim])], evidence_v2()), 'file-backed library claims a reviewed system cache path: ' + KERNEL)
+                                                                ~~~~~~~~~~~^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 385, in evidence_v2
+    record = record or expected_v2()
+                       ~~~~~~~~~~~^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 369, in expected_v2
+    record['schema'] = N.SCHEMA_V2
+                       ^^^^^^^^^^^
+AttributeError: module 'native_cache' has no attribute 'SCHEMA_V2'. Did you mean: 'SCHEMA'?
+
+======================================================================
+ERROR: test_sr22d_malformed_or_unregistered_subset_entries_reject (__main__.DualResident.test_sr22d_malformed_or_unregistered_subset_entries_reject)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 487, in test_sr22d_malformed_or_unregistered_subset_entries_reject
+    record = expected_v2()
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 369, in expected_v2
+    record['schema'] = N.SCHEMA_V2
+                       ^^^^^^^^^^^
+AttributeError: module 'native_cache' has no attribute 'SCHEMA_V2'. Did you mean: 'SCHEMA'?
+
+======================================================================
+ERROR: test_sr22d_pre_and_post_each_match_record_even_when_wrong_values_agree (__main__.DualResident.test_sr22d_pre_and_post_each_match_record_even_when_wrong_values_agree)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 462, in test_sr22d_pre_and_post_each_match_record_even_when_wrong_values_agree
+    wrong = host_v2(expected_v2())
+                    ~~~~~~~~~~~^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 369, in expected_v2
+    record['schema'] = N.SCHEMA_V2
+                       ^^^^^^^^^^^
+AttributeError: module 'native_cache' has no attribute 'SCHEMA_V2'. Did you mean: 'SCHEMA'?
+
+======================================================================
+ERROR: test_sr22d_unknown_or_candidate_schema_and_uuid_only_still_reject (__main__.DualResident.test_sr22d_unknown_or_candidate_schema_and_uuid_only_still_reject)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 542, in test_sr22d_unknown_or_candidate_schema_and_uuid_only_still_reject
+    record = expected_v2()
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 369, in expected_v2
+    record['schema'] = N.SCHEMA_V2
+                       ^^^^^^^^^^^
+AttributeError: module 'native_cache' has no attribute 'SCHEMA_V2'. Did you mean: 'SCHEMA'?
+
+======================================================================
+ERROR: test_sr22d_v2_dual_image_can_be_mandatory (__main__.DualResident.test_sr22d_v2_dual_image_can_be_mandatory)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 420, in test_sr22d_v2_dual_image_can_be_mandatory
+    record = expected_v2()
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 369, in expected_v2
+    record['schema'] = N.SCHEMA_V2
+                       ^^^^^^^^^^^
+AttributeError: module 'native_cache' has no attribute 'SCHEMA_V2'. Did you mean: 'SCHEMA'?
+
+======================================================================
+ERROR: test_sr22d_v2_dual_resident_image_classifies_once_as_system_cache (__main__.DualResident.test_sr22d_v2_dual_resident_image_classifies_once_as_system_cache)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 407, in test_sr22d_v2_dual_resident_image_classifies_once_as_system_cache
+    result = check([jvm(FILE_LIBS + [cached(LIBSYSTEM), cached_image(KERNEL_IMAGE)])], evidence_v2())
+                                                                                       ~~~~~~~~~~~^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 385, in evidence_v2
+    record = record or expected_v2()
+                       ~~~~~~~~~~~^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 369, in expected_v2
+    record['schema'] = N.SCHEMA_V2
+                       ^^^^^^^^^^^
+AttributeError: module 'native_cache' has no attribute 'SCHEMA_V2'. Did you mean: 'SCHEMA'?
+
+======================================================================
+ERROR: test_sr22d_v2_empty_dual_set_grants_no_exception (__main__.DualResident.test_sr22d_v2_empty_dual_set_grants_no_exception)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 426, in test_sr22d_v2_empty_dual_set_grants_no_exception
+    record = expected_v2(dual={})
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 369, in expected_v2
+    record['schema'] = N.SCHEMA_V2
+                       ^^^^^^^^^^^
+AttributeError: module 'native_cache' has no attribute 'SCHEMA_V2'. Did you mean: 'SCHEMA'?
+
+======================================================================
+ERROR: test_sr22d_v2_host_missing_dual_resident_files_rejects (__main__.DualResident.test_sr22d_v2_host_missing_dual_resident_files_rejects)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 455, in test_sr22d_v2_host_missing_dual_resident_files_rejects
+    changed = host_v2(expected_v2())
+                      ~~~~~~~~~~~^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 369, in expected_v2
+    record['schema'] = N.SCHEMA_V2
+                       ^^^^^^^^^^^
+AttributeError: module 'native_cache' has no attribute 'SCHEMA_V2'. Did you mean: 'SCHEMA'?
+
+======================================================================
+ERROR: test_sr22d_v2_reviewed_alias_resolves_to_canonical_dual_image (__main__.DualResident.test_sr22d_v2_reviewed_alias_resolves_to_canonical_dual_image)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 413, in test_sr22d_v2_reviewed_alias_resolves_to_canonical_dual_image
+    record = expected_v2()
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 369, in expected_v2
+    record['schema'] = N.SCHEMA_V2
+                       ^^^^^^^^^^^
+AttributeError: module 'native_cache' has no attribute 'SCHEMA_V2'. Did you mean: 'SCHEMA'?
+
+======================================================================
+ERROR: test_sr22d_wrong_path_kinds_reject_per_side (__main__.DualResident.test_sr22d_wrong_path_kinds_reject_per_side)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 515, in test_sr22d_wrong_path_kinds_reject_per_side
+    changed = host_v2(expected_v2())
+                      ~~~~~~~~~~~^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 369, in expected_v2
+    record['schema'] = N.SCHEMA_V2
+                       ^^^^^^^^^^^
+AttributeError: module 'native_cache' has no attribute 'SCHEMA_V2'. Did you mean: 'SCHEMA'?
+
+======================================================================
+FAIL: test_sr22d_v1_host_carrying_dual_resident_files_rejects (__main__.DualResident.test_sr22d_v1_host_carrying_dual_resident_files_rejects) (side='pre')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 450, in test_sr22d_v1_host_carrying_dual_resident_files_rejects
+    self.rejected_with(check([jvm([cached(LIBSYSTEM)])], evidence(**{side: changed})),
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                       '%s-capture host: dual_resident_files' % side)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 403, in rejected_with
+    self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ('pre-capture host: dual_resident_files', ['native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib', 'pre-capture host record incomplete'])
+
+======================================================================
+FAIL: test_sr22d_v1_host_carrying_dual_resident_files_rejects (__main__.DualResident.test_sr22d_v1_host_carrying_dual_resident_files_rejects) (side='post')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 450, in test_sr22d_v1_host_carrying_dual_resident_files_rejects
+    self.rejected_with(check([jvm([cached(LIBSYSTEM)])], evidence(**{side: changed})),
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                       '%s-capture host: dual_resident_files' % side)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 403, in rejected_with
+    self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ('post-capture host: dual_resident_files', ['native library with missing digest outside reviewed system cache: /usr/lib/libSystem.B.dylib', 'post-capture host record incomplete'])
+
+----------------------------------------------------------------------
+Ran 41 tests in 0.037s
+
+FAILED (failures=2, errors=12)
+exit=1

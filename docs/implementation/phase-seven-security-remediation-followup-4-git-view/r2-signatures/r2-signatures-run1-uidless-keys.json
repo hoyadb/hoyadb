@@ -1,0 +1,608 @@
+{
+ "method": "fresh public-only gpg homedir; keys via keys.openpgp.org (fallback keyserver.ubuntu.com)",
+ "gpg": {
+  "path": "/usr/local/bin/gpg",
+  "realpath": "/usr/local/Cellar/gnupg/2.5.21/bin/gpg",
+  "sha256": "76fb076671a8cd55bdc8d5f10e64ca3159c41005d8e352c866b5b6cb3e953e19",
+  "version": "gpg (GnuPG) 2.5.21"
+ },
+ "homedir_removed": true,
+ "results": [
+  {
+   "coordinate": "io.netty:netty-codec-http:4.1.139.Final",
+   "jar_sha256": "627cfdac2cd5dbd8a33af85977fb81fa6b46f0c00389ab4c8677a415f0f85480",
+   "asc_sha256": "59ca4939a7b898ff66df540d9f4e702565cfb1b8a51094c7be00b741126a229f",
+   "issuer_fingerprint": null,
+   "issuer_keyid": "F3D1600878E85A3D",
+   "digest_algo": "2",
+   "key_lookups": [
+    {
+     "url": "https://keys.openpgp.org/vks/v1/by-keyid/F3D1600878E85A3D",
+     "http_code": "200",
+     "bytes": 2341,
+     "sha256": "548027887abb7578a52f421ee51ac95bd3b03b186a259a6a7165ce2ec6e0587c"
+    }
+   ],
+   "key_file_sha256": "548027887abb7578a52f421ee51ac95bd3b03b186a259a6a7165ce2ec6e0587c",
+   "import_exit": 2,
+   "verify_exit": 2,
+   "status": [
+    "[GNUPG:] NEWSIG",
+    "[GNUPG:] ERRSIG F3D1600878E85A3D 1 2 00 1791275849 9 -",
+    "[GNUPG:] NO_PUBKEY F3D1600878E85A3D",
+    "[GNUPG:] FAILURE gpg-exit 33554433"
+   ],
+   "goodsig": false,
+   "validsig_fingerprint": null,
+   "bad": [
+    "ERRSIG",
+    "NO_PUBKEY"
+   ],
+   "signer_uid": null,
+   "identity_trust": "UNKNOWN: public keyserver key; no independently trusted publisher key"
+  },
+  {
+   "coordinate": "io.netty:netty-codec-http2:4.1.139.Final",
+   "jar_sha256": "4cb8bc95386112f3a9da935272781d577d9e70ca4c56cf0eef603a45e9526e02",
+   "asc_sha256": "79f470b0df224d0c5e46bcf49152259408d484ad2035493accc34b2685708592",
+   "issuer_fingerprint": null,
+   "issuer_keyid": "F3D1600878E85A3D",
+   "digest_algo": "2",
+   "key_lookups": [],
+   "key_file_sha256": "548027887abb7578a52f421ee51ac95bd3b03b186a259a6a7165ce2ec6e0587c",
+   "import_exit": 2,
+   "verify_exit": 2,
+   "status": [
+    "[GNUPG:] NEWSIG",
+    "[GNUPG:] ERRSIG F3D1600878E85A3D 1 2 00 1791275859 9 -",
+    "[GNUPG:] NO_PUBKEY F3D1600878E85A3D",
+    "[GNUPG:] FAILURE gpg-exit 33554433"
+   ],
+   "goodsig": false,
+   "validsig_fingerprint": null,
+   "bad": [
+    "ERRSIG",
+    "NO_PUBKEY"
+   ],
+   "signer_uid": null,
+   "identity_trust": "UNKNOWN: public keyserver key; no independently trusted publisher key"
+  },
+  {
+   "coordinate": "io.netty:netty-handler:4.1.139.Final",
+   "jar_sha256": "ff85f00781b956d618b20f33da076c839a5e43e0084108b07bab0c19737168ec",
+   "asc_sha256": "f57ad8cbddcd48deae156311605e6c89fa26abaf15703a7db43aacffc500106c",
+   "issuer_fingerprint": null,
+   "issuer_keyid": "F3D1600878E85A3D",
+   "digest_algo": "2",
+   "key_lookups": [],
+   "key_file_sha256": "548027887abb7578a52f421ee51ac95bd3b03b186a259a6a7165ce2ec6e0587c",
+   "import_exit": 2,
+   "verify_exit": 2,
+   "status": [
+    "[GNUPG:] NEWSIG",
+    "[GNUPG:] ERRSIG F3D1600878E85A3D 1 2 00 1791275838 9 -",
+    "[GNUPG:] NO_PUBKEY F3D1600878E85A3D",
+    "[GNUPG:] FAILURE gpg-exit 33554433"
+   ],
+   "goodsig": false,
+   "validsig_fingerprint": null,
+   "bad": [
+    "ERRSIG",
+    "NO_PUBKEY"
+   ],
+   "signer_uid": null,
+   "identity_trust": "UNKNOWN: public keyserver key; no independently trusted publisher key"
+  },
+  {
+   "coordinate": "io.netty:netty-codec:4.1.139.Final",
+   "jar_sha256": "ad43f07219dfb757a87b9c2b4765002be478c5401971379954e3d182f285fe6b",
+   "asc_sha256": "fc7c8e7a73010ef62d784d911fc41c63386f2273a52ebaa79bb9003ca0ed931d",
+   "issuer_fingerprint": null,
+   "issuer_keyid": "F3D1600878E85A3D",
+   "digest_algo": "2",
+   "key_lookups": [],
+   "key_file_sha256": "548027887abb7578a52f421ee51ac95bd3b03b186a259a6a7165ce2ec6e0587c",
+   "import_exit": 2,
+   "verify_exit": 2,
+   "status": [
+    "[GNUPG:] NEWSIG",
+    "[GNUPG:] ERRSIG F3D1600878E85A3D 1 2 00 1791275813 9 -",
+    "[GNUPG:] NO_PUBKEY F3D1600878E85A3D",
+    "[GNUPG:] FAILURE gpg-exit 33554433"
+   ],
+   "goodsig": false,
+   "validsig_fingerprint": null,
+   "bad": [
+    "ERRSIG",
+    "NO_PUBKEY"
+   ],
+   "signer_uid": null,
+   "identity_trust": "UNKNOWN: public keyserver key; no independently trusted publisher key"
+  },
+  {
+   "coordinate": "io.netty:netty-common:4.1.139.Final",
+   "jar_sha256": "50372d86e27b4b1cf0810d75eb534795966a199049a1e85a0c41bbd2bb97f519",
+   "asc_sha256": "4e9cb4261473edff3a19557bbe11a6e8f54ad0e299e33f1fdf570400f17f8461",
+   "issuer_fingerprint": null,
+   "issuer_keyid": "F3D1600878E85A3D",
+   "digest_algo": "2",
+   "key_lookups": [],
+   "key_file_sha256": "548027887abb7578a52f421ee51ac95bd3b03b186a259a6a7165ce2ec6e0587c",
+   "import_exit": 2,
+   "verify_exit": 2,
+   "status": [
+    "[GNUPG:] NEWSIG",
+    "[GNUPG:] ERRSIG F3D1600878E85A3D 1 2 00 1791275781 9 -",
+    "[GNUPG:] NO_PUBKEY F3D1600878E85A3D",
+    "[GNUPG:] FAILURE gpg-exit 33554433"
+   ],
+   "goodsig": false,
+   "validsig_fingerprint": null,
+   "bad": [
+    "ERRSIG",
+    "NO_PUBKEY"
+   ],
+   "signer_uid": null,
+   "identity_trust": "UNKNOWN: public keyserver key; no independently trusted publisher key"
+  },
+  {
+   "coordinate": "io.netty:netty-handler-proxy:4.1.139.Final",
+   "jar_sha256": "9c92c2407b6fd3c120ab5efb900475a1fe40ce099703d2500c8679d3c75a90cb",
+   "asc_sha256": "95b4bd7ddcba01cee7936661295bd4881d7a5096fc963fdd60600d6376486af6",
+   "issuer_fingerprint": null,
+   "issuer_keyid": "F3D1600878E85A3D",
+   "digest_algo": "2",
+   "key_lookups": [],
+   "key_file_sha256": "548027887abb7578a52f421ee51ac95bd3b03b186a259a6a7165ce2ec6e0587c",
+   "import_exit": 2,
+   "verify_exit": 2,
+   "status": [
+    "[GNUPG:] NEWSIG",
+    "[GNUPG:] ERRSIG F3D1600878E85A3D 1 2 00 1791275894 9 -",
+    "[GNUPG:] NO_PUBKEY F3D1600878E85A3D",
+    "[GNUPG:] FAILURE gpg-exit 33554433"
+   ],
+   "goodsig": false,
+   "validsig_fingerprint": null,
+   "bad": [
+    "ERRSIG",
+    "NO_PUBKEY"
+   ],
+   "signer_uid": null,
+   "identity_trust": "UNKNOWN: public keyserver key; no independently trusted publisher key"
+  },
+  {
+   "coordinate": "io.netty:netty-buffer:4.1.139.Final",
+   "jar_sha256": "48d805b74e56dc5f92b1f288858185abc86db16d293e8da183542df6243427f2",
+   "asc_sha256": "6abb63d72502f1dc48df4dbea131f21b2286dcf2c5376702a6bfa95ac19773f4",
+   "issuer_fingerprint": null,
+   "issuer_keyid": "F3D1600878E85A3D",
+   "digest_algo": "2",
+   "key_lookups": [],
+   "key_file_sha256": "548027887abb7578a52f421ee51ac95bd3b03b186a259a6a7165ce2ec6e0587c",
+   "import_exit": 2,
+   "verify_exit": 2,
+   "status": [
+    "[GNUPG:] NEWSIG",
+    "[GNUPG:] ERRSIG F3D1600878E85A3D 1 2 00 1791275790 9 -",
+    "[GNUPG:] NO_PUBKEY F3D1600878E85A3D",
+    "[GNUPG:] FAILURE gpg-exit 33554433"
+   ],
+   "goodsig": false,
+   "validsig_fingerprint": null,
+   "bad": [
+    "ERRSIG",
+    "NO_PUBKEY"
+   ],
+   "signer_uid": null,
+   "identity_trust": "UNKNOWN: public keyserver key; no independently trusted publisher key"
+  },
+  {
+   "coordinate": "io.netty:netty-transport:4.1.139.Final",
+   "jar_sha256": "be7bff8b6274e7fae12bbad3c565777539e9b069517e0b3acc06d9ac2cd6ec05",
+   "asc_sha256": "540b21a9852e7b1ff8a0ec78e9efe00de9a0f27dfe1382444e88974e2912c6c9",
+   "issuer_fingerprint": null,
+   "issuer_keyid": "F3D1600878E85A3D",
+   "digest_algo": "2",
+   "key_lookups": [],
+   "key_file_sha256": "548027887abb7578a52f421ee51ac95bd3b03b186a259a6a7165ce2ec6e0587c",
+   "import_exit": 2,
+   "verify_exit": 2,
+   "status": [
+    "[GNUPG:] NEWSIG",
+    "[GNUPG:] ERRSIG F3D1600878E85A3D 1 2 00 1791275804 9 -",
+    "[GNUPG:] NO_PUBKEY F3D1600878E85A3D",
+    "[GNUPG:] FAILURE gpg-exit 33554433"
+   ],
+   "goodsig": false,
+   "validsig_fingerprint": null,
+   "bad": [
+    "ERRSIG",
+    "NO_PUBKEY"
+   ],
+   "signer_uid": null,
+   "identity_trust": "UNKNOWN: public keyserver key; no independently trusted publisher key"
+  },
+  {
+   "coordinate": "io.netty:netty-codec-socks:4.1.139.Final",
+   "jar_sha256": "94d6800d5f717b40db5d0bf42a77b448d472cd9033735e69e7b18311bd902f23",
+   "asc_sha256": "73d318df443e11c74ea7704520be52f90a871b5766bc8b09878a32ecdf432360",
+   "issuer_fingerprint": null,
+   "issuer_keyid": "F3D1600878E85A3D",
+   "digest_algo": "2",
+   "key_lookups": [],
+   "key_file_sha256": "548027887abb7578a52f421ee51ac95bd3b03b186a259a6a7165ce2ec6e0587c",
+   "import_exit": 2,
+   "verify_exit": 2,
+   "status": [
+    "[GNUPG:] NEWSIG",
+    "[GNUPG:] ERRSIG F3D1600878E85A3D 1 2 00 1791275882 9 -",
+    "[GNUPG:] NO_PUBKEY F3D1600878E85A3D",
+    "[GNUPG:] FAILURE gpg-exit 33554433"
+   ],
+   "goodsig": false,
+   "validsig_fingerprint": null,
+   "bad": [
+    "ERRSIG",
+    "NO_PUBKEY"
+   ],
+   "signer_uid": null,
+   "identity_trust": "UNKNOWN: public keyserver key; no independently trusted publisher key"
+  },
+  {
+   "coordinate": "io.netty:netty-resolver:4.1.139.Final",
+   "jar_sha256": "562a5388c88325b7d6ed05e8168736871ce0e64ab01e0ce52ea7710760b9b457",
+   "asc_sha256": "e357b9d5ea0f8ceafba2f242f7484b9b2c6ea1d3f056b9c94ee53c5e0e98a5a6",
+   "issuer_fingerprint": null,
+   "issuer_keyid": "F3D1600878E85A3D",
+   "digest_algo": "2",
+   "key_lookups": [],
+   "key_file_sha256": "548027887abb7578a52f421ee51ac95bd3b03b186a259a6a7165ce2ec6e0587c",
+   "import_exit": 2,
+   "verify_exit": 2,
+   "status": [
+    "[GNUPG:] NEWSIG",
+    "[GNUPG:] ERRSIG F3D1600878E85A3D 1 2 00 1791275794 9 -",
+    "[GNUPG:] NO_PUBKEY F3D1600878E85A3D",
+    "[GNUPG:] FAILURE gpg-exit 33554433"
+   ],
+   "goodsig": false,
+   "validsig_fingerprint": null,
+   "bad": [
+    "ERRSIG",
+    "NO_PUBKEY"
+   ],
+   "signer_uid": null,
+   "identity_trust": "UNKNOWN: public keyserver key; no independently trusted publisher key"
+  },
+  {
+   "coordinate": "io.netty:netty-transport-native-unix-common:4.1.139.Final",
+   "jar_sha256": "8e660ac8a485fc8d8b47d87d04ea33d19902dc6fc5a113e9353b762188b3f333",
+   "asc_sha256": "7c07043ebf866c252e424f5a0673fe3faef0dc3a9355f1f3116cd0a0f8ee4ec2",
+   "issuer_fingerprint": null,
+   "issuer_keyid": "F3D1600878E85A3D",
+   "digest_algo": "2",
+   "key_lookups": [],
+   "key_file_sha256": "548027887abb7578a52f421ee51ac95bd3b03b186a259a6a7165ce2ec6e0587c",
+   "import_exit": 2,
+   "verify_exit": 2,
+   "status": [
+    "[GNUPG:] NEWSIG",
+    "[GNUPG:] ERRSIG F3D1600878E85A3D 1 2 00 1791275828 9 -",
+    "[GNUPG:] NO_PUBKEY F3D1600878E85A3D",
+    "[GNUPG:] FAILURE gpg-exit 33554433"
+   ],
+   "goodsig": false,
+   "validsig_fingerprint": null,
+   "bad": [
+    "ERRSIG",
+    "NO_PUBKEY"
+   ],
+   "signer_uid": null,
+   "identity_trust": "UNKNOWN: public keyserver key; no independently trusted publisher key"
+  },
+  {
+   "coordinate": "org.apache.commons:commons-compress:1.28.0",
+   "jar_sha256": "e1522945218456f3649a39bc4afd70ce4bd466221519dba7d378f2141a4642ca",
+   "asc_sha256": "148c81e18ea9192b8772ae291674106be68577dcea33b365e7de3efbdfc0e508",
+   "issuer_fingerprint": "2DB4F1EF0FA761ECC4EA935C86FDC7E2A11262CB",
+   "issuer_keyid": "86FDC7E2A11262CB",
+   "digest_algo": "10",
+   "key_lookups": [
+    {
+     "url": "https://keys.openpgp.org/vks/v1/by-fingerprint/2DB4F1EF0FA761ECC4EA935C86FDC7E2A11262CB",
+     "http_code": "200",
+     "bytes": 1842,
+     "sha256": "cc677abdbf2ff2a240dd9e21f243675db7bb8455d446a7142155d8e7210dbc29"
+    }
+   ],
+   "key_file_sha256": "cc677abdbf2ff2a240dd9e21f243675db7bb8455d446a7142155d8e7210dbc29",
+   "import_exit": 0,
+   "verify_exit": 0,
+   "status": [
+    "[GNUPG:] NEWSIG",
+    "[GNUPG:] KEY_CONSIDERED 2DB4F1EF0FA761ECC4EA935C86FDC7E2A11262CB 0",
+    "[GNUPG:] SIG_ID Tn6ul2KwEez3nD5plkQozG07nTc 2025-07-26 1753562736",
+    "[GNUPG:] GOODSIG 86FDC7E2A11262CB Gary David Gregory (Code signing key) <ggregory@apache.org>",
+    "[GNUPG:] VALIDSIG 2DB4F1EF0FA761ECC4EA935C86FDC7E2A11262CB 2025-07-26 1753562736 0 4 0 1 10 00 2DB4F1EF0FA761ECC4EA935C86FDC7E2A11262CB",
+    "[GNUPG:] TRUST_UNDEFINED 0 pgp"
+   ],
+   "goodsig": true,
+   "validsig_fingerprint": "2DB4F1EF0FA761ECC4EA935C86FDC7E2A11262CB",
+   "bad": [],
+   "signer_uid": "Gary David Gregory (Code signing key) <ggregory@apache.org>",
+   "identity_trust": "UNKNOWN: public keyserver key; no independently trusted publisher key"
+  },
+  {
+   "coordinate": "org.bitbucket.b_c:jose4j:0.9.6",
+   "jar_sha256": "7314af50cde9c99e8eaf43eee617a23edcc6bb43036221064355094999d837ef",
+   "asc_sha256": "f26b00f12058c86514ac0873b2536bb9ba14949213ff4a1a11bd53773606d1a6",
+   "issuer_fingerprint": "3051D45031E13516A6E8FAFF280D66A55F5316C5",
+   "issuer_keyid": "280D66A55F5316C5",
+   "digest_algo": "10",
+   "key_lookups": [
+    {
+     "url": "https://keys.openpgp.org/vks/v1/by-fingerprint/3051D45031E13516A6E8FAFF280D66A55F5316C5",
+     "http_code": "404",
+     "bytes": 69,
+     "sha256": "df047ec2e01d7cf80b290473293b1e884bec4183caa046611f5ac16b4b50b4c9"
+    },
+    {
+     "url": "https://keyserver.ubuntu.com/pks/lookup?op=get&options=mr&search=0x3051D45031E13516A6E8FAFF280D66A55F5316C5",
+     "http_code": "200",
+     "bytes": 1033,
+     "sha256": "b7454a94d642cb9dfb7651e482af13a085b2a02f8775330ad166accf8b103736"
+    }
+   ],
+   "key_file_sha256": "b7454a94d642cb9dfb7651e482af13a085b2a02f8775330ad166accf8b103736",
+   "import_exit": 0,
+   "verify_exit": 0,
+   "status": [
+    "[GNUPG:] NEWSIG",
+    "[GNUPG:] KEY_CONSIDERED 3051D45031E13516A6E8FAFF280D66A55F5316C5 0",
+    "[GNUPG:] KEYEXPIRED 1717181528",
+    "[GNUPG:] SIG_ID j+WRpQmFc6X5ueY7+f7Ce33WA04 2024-03-06 1709750916",
+    "[GNUPG:] EXPKEYSIG 280D66A55F5316C5 Brian Campbell (key for signing maven artifacts) <brian.d.campbell@gmail.com>",
+    "[GNUPG:] VALIDSIG 3051D45031E13516A6E8FAFF280D66A55F5316C5 2024-03-06 1709750916 0 4 0 1 10 00 3051D45031E13516A6E8FAFF280D66A55F5316C5"
+   ],
+   "goodsig": false,
+   "validsig_fingerprint": "3051D45031E13516A6E8FAFF280D66A55F5316C5",
+   "bad": [
+    "EXPKEYSIG"
+   ],
+   "signer_uid": null,
+   "identity_trust": "UNKNOWN: public keyserver key; no independently trusted publisher key"
+  },
+  {
+   "coordinate": "org.bouncycastle:bcprov-jdk18on:1.85",
+   "jar_sha256": "20af26bf6060bb8005cc2389916812c1e0e998dc48d2ced7131b89461b54cff7",
+   "asc_sha256": "4061e1994e47fa8e7fc3f95eba8ea25f93b69b0e657b2a132a44529949c46ad2",
+   "issuer_fingerprint": "7B121B76A7ED6CE6E60AD51784E913A8E3A748C0",
+   "issuer_keyid": "84E913A8E3A748C0",
+   "digest_algo": "10",
+   "key_lookups": [
+    {
+     "url": "https://keys.openpgp.org/vks/v1/by-fingerprint/7B121B76A7ED6CE6E60AD51784E913A8E3A748C0",
+     "http_code": "200",
+     "bytes": 1525,
+     "sha256": "8ea12d5a6e9d86f84547ec76091298dab3b2b9082297028578075c4640eeba1f"
+    }
+   ],
+   "key_file_sha256": "8ea12d5a6e9d86f84547ec76091298dab3b2b9082297028578075c4640eeba1f",
+   "import_exit": 0,
+   "verify_exit": 0,
+   "status": [
+    "[GNUPG:] NEWSIG",
+    "[GNUPG:] KEY_CONSIDERED 7B121B76A7ED6CE6E60AD51784E913A8E3A748C0 0",
+    "[GNUPG:] SIG_ID t8gE6WutztP5cu6sXa0qlJjHhtY 2026-07-12 1783820495",
+    "[GNUPG:] GOODSIG 84E913A8E3A748C0 The Legion of the Bouncy Castle Inc. (Maven Repository Artifact Signer) <bcmavensync@bouncycastle.org>",
+    "[GNUPG:] VALIDSIG 7B121B76A7ED6CE6E60AD51784E913A8E3A748C0 2026-07-12 1783820495 0 4 0 1 10 00 7B121B76A7ED6CE6E60AD51784E913A8E3A748C0",
+    "[GNUPG:] TRUST_UNDEFINED 0 pgp"
+   ],
+   "goodsig": true,
+   "validsig_fingerprint": "7B121B76A7ED6CE6E60AD51784E913A8E3A748C0",
+   "bad": [],
+   "signer_uid": "The Legion of the Bouncy Castle Inc. (Maven Repository Artifact Signer) <bcmavensync@bouncycastle.org>",
+   "identity_trust": "UNKNOWN: public keyserver key; no independently trusted publisher key"
+  },
+  {
+   "coordinate": "org.bouncycastle:bcpkix-jdk18on:1.85",
+   "jar_sha256": "c9f82b2d4e99c4bbdfccf684e52cc06ea06a0b567bfd0d08f9c5a3f417055996",
+   "asc_sha256": "ac1fddb65ffc6193397363a565d92731a89b53b6f730f8d963ad3dc320040b41",
+   "issuer_fingerprint": "7B121B76A7ED6CE6E60AD51784E913A8E3A748C0",
+   "issuer_keyid": "84E913A8E3A748C0",
+   "digest_algo": "10",
+   "key_lookups": [],
+   "key_file_sha256": "8ea12d5a6e9d86f84547ec76091298dab3b2b9082297028578075c4640eeba1f",
+   "import_exit": 0,
+   "verify_exit": 0,
+   "status": [
+    "[GNUPG:] NEWSIG",
+    "[GNUPG:] KEY_CONSIDERED 7B121B76A7ED6CE6E60AD51784E913A8E3A748C0 0",
+    "[GNUPG:] SIG_ID cpGv7jTNcgJTJX19KM0hqLw0D0U 2026-07-12 1783820498",
+    "[GNUPG:] GOODSIG 84E913A8E3A748C0 The Legion of the Bouncy Castle Inc. (Maven Repository Artifact Signer) <bcmavensync@bouncycastle.org>",
+    "[GNUPG:] VALIDSIG 7B121B76A7ED6CE6E60AD51784E913A8E3A748C0 2026-07-12 1783820498 0 4 0 1 10 00 7B121B76A7ED6CE6E60AD51784E913A8E3A748C0",
+    "[GNUPG:] TRUST_UNDEFINED 0 pgp"
+   ],
+   "goodsig": true,
+   "validsig_fingerprint": "7B121B76A7ED6CE6E60AD51784E913A8E3A748C0",
+   "bad": [],
+   "signer_uid": "The Legion of the Bouncy Castle Inc. (Maven Repository Artifact Signer) <bcmavensync@bouncycastle.org>",
+   "identity_trust": "UNKNOWN: public keyserver key; no independently trusted publisher key"
+  },
+  {
+   "coordinate": "org.bouncycastle:bcutil-jdk18on:1.85",
+   "jar_sha256": "590f55ed5d68529239898a4a5c4f730b6e37f45d1cfa3fbe51f8485abe32c42d",
+   "asc_sha256": "b81b169bd4a450f68bf7aafe98ab6f4ab9e34bc634aae3c187b3557b45941996",
+   "issuer_fingerprint": "7B121B76A7ED6CE6E60AD51784E913A8E3A748C0",
+   "issuer_keyid": "84E913A8E3A748C0",
+   "digest_algo": "10",
+   "key_lookups": [],
+   "key_file_sha256": "8ea12d5a6e9d86f84547ec76091298dab3b2b9082297028578075c4640eeba1f",
+   "import_exit": 0,
+   "verify_exit": 0,
+   "status": [
+    "[GNUPG:] NEWSIG",
+    "[GNUPG:] KEY_CONSIDERED 7B121B76A7ED6CE6E60AD51784E913A8E3A748C0 0",
+    "[GNUPG:] SIG_ID rMQ6yuT/01G8xKfEIGT0Wc55VQE 2026-07-12 1783820496",
+    "[GNUPG:] GOODSIG 84E913A8E3A748C0 The Legion of the Bouncy Castle Inc. (Maven Repository Artifact Signer) <bcmavensync@bouncycastle.org>",
+    "[GNUPG:] VALIDSIG 7B121B76A7ED6CE6E60AD51784E913A8E3A748C0 2026-07-12 1783820496 0 4 0 1 10 00 7B121B76A7ED6CE6E60AD51784E913A8E3A748C0",
+    "[GNUPG:] TRUST_UNDEFINED 0 pgp"
+   ],
+   "goodsig": true,
+   "validsig_fingerprint": "7B121B76A7ED6CE6E60AD51784E913A8E3A748C0",
+   "bad": [],
+   "signer_uid": "The Legion of the Bouncy Castle Inc. (Maven Repository Artifact Signer) <bcmavensync@bouncycastle.org>",
+   "identity_trust": "UNKNOWN: public keyserver key; no independently trusted publisher key"
+  },
+  {
+   "coordinate": "org.jdom:jdom2:2.0.6.1",
+   "jar_sha256": "0b20f45e3a0fd8f0d12cdc5316b06776e902b1365db00118876f9175c60f302c",
+   "asc_sha256": "8f5e447cbaf12d1e0b93d6270ddbdb494fe7d8b80b5fb08e22c266aa2f03f95e",
+   "issuer_fingerprint": "78DF98EF7F95578FD545B9A159A7C2A1BD98C013",
+   "issuer_keyid": "59A7C2A1BD98C013",
+   "digest_algo": "10",
+   "key_lookups": [
+    {
+     "url": "https://keys.openpgp.org/vks/v1/by-fingerprint/78DF98EF7F95578FD545B9A159A7C2A1BD98C013",
+     "http_code": "404",
+     "bytes": 69,
+     "sha256": "7784b1f1c5928a2dec25cc95d654fe24726ed6364dc4f5249e7c1c947e1efba1"
+    },
+    {
+     "url": "https://keyserver.ubuntu.com/pks/lookup?op=get&options=mr&search=0x78DF98EF7F95578FD545B9A159A7C2A1BD98C013",
+     "http_code": "200",
+     "bytes": 1809,
+     "sha256": "43925c1a1d4d1a5824dd795cf92b0afc383146993c6199195bfa5e744684c719"
+    }
+   ],
+   "key_file_sha256": "43925c1a1d4d1a5824dd795cf92b0afc383146993c6199195bfa5e744684c719",
+   "import_exit": 0,
+   "verify_exit": 0,
+   "status": [
+    "[GNUPG:] NEWSIG",
+    "[GNUPG:] KEYEXPIRED 1701898448",
+    "[GNUPG:] KEY_CONSIDERED 78DF98EF7F95578FD545B9A159A7C2A1BD98C013 0",
+    "[GNUPG:] KEYEXPIRED 1701898448",
+    "[GNUPG:] SIG_ID 1DKQZqOL8GXihzRg76ZGMrpm+JM 2021-12-06 1638828392",
+    "[GNUPG:] EXPKEYSIG 59A7C2A1BD98C013 Jason Hunter <jhunter@servlets.com>",
+    "[GNUPG:] VALIDSIG 78DF98EF7F95578FD545B9A159A7C2A1BD98C013 2021-12-06 1638828392 0 4 0 1 10 00 78DF98EF7F95578FD545B9A159A7C2A1BD98C013"
+   ],
+   "goodsig": false,
+   "validsig_fingerprint": "78DF98EF7F95578FD545B9A159A7C2A1BD98C013",
+   "bad": [
+    "EXPKEYSIG"
+   ],
+   "signer_uid": null,
+   "identity_trust": "UNKNOWN: public keyserver key; no independently trusted publisher key"
+  },
+  {
+   "coordinate": "commons-codec:commons-codec:1.19.0",
+   "jar_sha256": "5c3881e4f556855e9c532927ee0c9dfde94cc66760d5805c031a59887070af5f",
+   "asc_sha256": "93bb1e384aaeb2dc8a420d40a3bf4ec96261818c129e0cd006b7f7c3f1f26746",
+   "issuer_fingerprint": "2DB4F1EF0FA761ECC4EA935C86FDC7E2A11262CB",
+   "issuer_keyid": "86FDC7E2A11262CB",
+   "digest_algo": "10",
+   "key_lookups": [],
+   "key_file_sha256": "cc677abdbf2ff2a240dd9e21f243675db7bb8455d446a7142155d8e7210dbc29",
+   "import_exit": 0,
+   "verify_exit": 0,
+   "status": [
+    "[GNUPG:] NEWSIG",
+    "[GNUPG:] KEY_CONSIDERED 2DB4F1EF0FA761ECC4EA935C86FDC7E2A11262CB 0",
+    "[GNUPG:] SIG_ID eH74GoiTESK7TpQJ7eM48pQa0Ks 2025-07-19 1752945588",
+    "[GNUPG:] GOODSIG 86FDC7E2A11262CB Gary David Gregory (Code signing key) <ggregory@apache.org>",
+    "[GNUPG:] VALIDSIG 2DB4F1EF0FA761ECC4EA935C86FDC7E2A11262CB 2025-07-19 1752945588 0 4 0 1 10 00 2DB4F1EF0FA761ECC4EA935C86FDC7E2A11262CB",
+    "[GNUPG:] TRUST_UNDEFINED 0 pgp"
+   ],
+   "goodsig": true,
+   "validsig_fingerprint": "2DB4F1EF0FA761ECC4EA935C86FDC7E2A11262CB",
+   "bad": [],
+   "signer_uid": "Gary David Gregory (Code signing key) <ggregory@apache.org>",
+   "identity_trust": "UNKNOWN: public keyserver key; no independently trusted publisher key"
+  },
+  {
+   "coordinate": "commons-io:commons-io:2.20.0",
+   "jar_sha256": "df90bba0fe3cb586b7f164e78fe8f8f4da3f2dd5c27fa645f888100ccc25dd72",
+   "asc_sha256": "1fdd85b2b81ae30c89736f33e73c2b511ce0959737c9bae0200cdc4d9320b345",
+   "issuer_fingerprint": "2DB4F1EF0FA761ECC4EA935C86FDC7E2A11262CB",
+   "issuer_keyid": "86FDC7E2A11262CB",
+   "digest_algo": "10",
+   "key_lookups": [],
+   "key_file_sha256": "cc677abdbf2ff2a240dd9e21f243675db7bb8455d446a7142155d8e7210dbc29",
+   "import_exit": 0,
+   "verify_exit": 0,
+   "status": [
+    "[GNUPG:] NEWSIG",
+    "[GNUPG:] KEY_CONSIDERED 2DB4F1EF0FA761ECC4EA935C86FDC7E2A11262CB 0",
+    "[GNUPG:] SIG_ID gfIV2PZod0+1G4+uAa53do2lJkA 2025-07-14 1752528586",
+    "[GNUPG:] GOODSIG 86FDC7E2A11262CB Gary David Gregory (Code signing key) <ggregory@apache.org>",
+    "[GNUPG:] VALIDSIG 2DB4F1EF0FA761ECC4EA935C86FDC7E2A11262CB 2025-07-14 1752528586 0 4 0 1 10 00 2DB4F1EF0FA761ECC4EA935C86FDC7E2A11262CB",
+    "[GNUPG:] TRUST_UNDEFINED 0 pgp"
+   ],
+   "goodsig": true,
+   "validsig_fingerprint": "2DB4F1EF0FA761ECC4EA935C86FDC7E2A11262CB",
+   "bad": [],
+   "signer_uid": "Gary David Gregory (Code signing key) <ggregory@apache.org>",
+   "identity_trust": "UNKNOWN: public keyserver key; no independently trusted publisher key"
+  },
+  {
+   "coordinate": "org.apache.commons:commons-lang3:3.18.0",
+   "jar_sha256": "4eeeae8d20c078abb64b015ec158add383ac581571cddc45c68f0c9ae0230720",
+   "asc_sha256": "6ae695bbbb9c2101aba87d2bea0ed5d36017d10f3838e89860fa52e66c89bbae",
+   "issuer_fingerprint": "2DB4F1EF0FA761ECC4EA935C86FDC7E2A11262CB",
+   "issuer_keyid": "86FDC7E2A11262CB",
+   "digest_algo": "10",
+   "key_lookups": [],
+   "key_file_sha256": "cc677abdbf2ff2a240dd9e21f243675db7bb8455d446a7142155d8e7210dbc29",
+   "import_exit": 0,
+   "verify_exit": 0,
+   "status": [
+    "[GNUPG:] NEWSIG",
+    "[GNUPG:] KEY_CONSIDERED 2DB4F1EF0FA761ECC4EA935C86FDC7E2A11262CB 0",
+    "[GNUPG:] SIG_ID D+L/Hyu7oy09R9iPg9qeqaWcVNQ 2025-07-06 1751823783",
+    "[GNUPG:] GOODSIG 86FDC7E2A11262CB Gary David Gregory (Code signing key) <ggregory@apache.org>",
+    "[GNUPG:] VALIDSIG 2DB4F1EF0FA761ECC4EA935C86FDC7E2A11262CB 2025-07-06 1751823783 0 4 0 1 10 00 2DB4F1EF0FA761ECC4EA935C86FDC7E2A11262CB",
+    "[GNUPG:] TRUST_UNDEFINED 0 pgp"
+   ],
+   "goodsig": true,
+   "validsig_fingerprint": "2DB4F1EF0FA761ECC4EA935C86FDC7E2A11262CB",
+   "bad": [],
+   "signer_uid": "Gary David Gregory (Code signing key) <ggregory@apache.org>",
+   "identity_trust": "UNKNOWN: public keyserver key; no independently trusted publisher key"
+  },
+  {
+   "coordinate": "org.slf4j:slf4j-api:1.7.36",
+   "jar_sha256": "d3ef575e3e4979678dc01bf1dcce51021493b4d11fb7f1be8ad982877c16a1c0",
+   "asc_sha256": "7f60e6c3dec52d947b6cf8750b8d14c5b8ccf6b66ff79ab583d62010f7e2696d",
+   "issuer_fingerprint": null,
+   "issuer_keyid": "2C7B12F2A511E325",
+   "digest_algo": "2",
+   "key_lookups": [
+    {
+     "url": "https://keys.openpgp.org/vks/v1/by-keyid/2C7B12F2A511E325",
+     "http_code": "200",
+     "bytes": 1301,
+     "sha256": "0fdf78dec8a11bda48f32e3c280985405f2b64f5566914564333f9fc658f5a7b"
+    }
+   ],
+   "key_file_sha256": "0fdf78dec8a11bda48f32e3c280985405f2b64f5566914564333f9fc658f5a7b",
+   "import_exit": 2,
+   "verify_exit": 2,
+   "status": [
+    "[GNUPG:] NEWSIG",
+    "[GNUPG:] ERRSIG 2C7B12F2A511E325 1 2 00 1644327230 9 -",
+    "[GNUPG:] NO_PUBKEY 2C7B12F2A511E325",
+    "[GNUPG:] FAILURE gpg-exit 33554433"
+   ],
+   "goodsig": false,
+   "validsig_fingerprint": null,
+   "bad": [
+    "ERRSIG",
+    "NO_PUBKEY"
+   ],
+   "signer_uid": null,
+   "identity_trust": "UNKNOWN: public keyserver key; no independently trusted publisher key"
+  }
+ ]
+}

@@ -1,0 +1,52 @@
+// DEF-0026 evidence driver: node check.mjs <before|after> <work-directory>
+// Builds/packs a mirror of the checked-in JS sources and the existing prebuilt WASM in an owned OS
+// temporary directory using the unchanged repository scripts, runs the packed consumer (DOM control,
+// ES2022-only portable probe, actual memory WASM/core cases), typechecks the RN public entry with
+// ES2022 only and ES2022+DOM, and records per-file hashes of both packed tarballs. Installs nothing
+// globally, touches no shared dist/tarball path and removes only its own temporary directories.
+import {cp,mkdtemp,mkdir,readFile,readdir,rm,writeFile,copyFile,stat,realpath} from 'node:fs/promises';
+import {createHash} from 'node:crypto';import {spawnSync} from 'node:child_process';
+import {tmpdir} from 'node:os';import {join,relative,dirname} from 'node:path';import {fileURLToPath} from 'node:url';
+const [phase,work]=process.argv.slice(2);if(!['before','after'].includes(phase)||!work)throw Error('usage: check.mjs <before|after> <work>');
+const repo=fileURLToPath(new URL('../../',import.meta.url)).replace(/\/$/,'');
+const evidence=join(repo,'docs/implementation/phase-seven-portable-declarations');
+const sha=bytes=>createHash('sha256').update(bytes).digest('hex');const hash=async path=>sha(await readFile(path));
+const tool='/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript';
+const expected={package:'3722b30210616a13a3213ded11575ba6b2dbab10c32a5ef67afca8513e27017e',native:'76e4987d060ef8207875a53a73619ce665ff16fb2800c0d57a452e21c829bd7b'};
+const which=spawnSync('which',['tsc'],{encoding:'utf8'}).stdout.trim();
+const record={phase,tool:{which,package_sha256:await hash(join(tool,'package.json')),native_sha256:await hash(join(tool,'node_modules/@typescript/typescript-darwin-x64/lib/tsc')),node:process.version},commands:[],temporary:[]};
+if(record.tool.package_sha256!==expected.package||record.tool.native_sha256!==expected.native||which!==join(dirname(dirname(dirname(tool))),'bin/tsc'))throw Error('unexpected TypeScript tool');
+const redact=(text,root)=>text.split(dirname(root)).join('<tmp>').split(repo).join('<repo>');
+const run=(label,command,args,cwd,root)=>{const r=spawnSync(command,args,{cwd,encoding:'utf8',timeout:600000});const entry={label,argv:[command,...args],cwd:redact(cwd,root),exit:r.status,signal:r.signal,output:redact((r.stdout||'')+(r.stderr||''),root)};record.commands.push(entry);return entry;};
+async function files(directory){const out=[];for(const e of await readdir(directory,{withFileTypes:true})){const p=join(directory,e.name);if(e.isDirectory())out.push(...await files(p));else if(e.isFile())out.push(p);}return out;}
+// Owned root holds the mirror at <owned>/repo, so packed-consumer's base-relative ../../../target
+// tarball directory resolves to <owned>/target inside this owned tree.
+const owned=await realpath(await mkdtemp(join(tmpdir(),'hoyadb-def0026-'+phase+'-'))),mirror=join(owned,'repo');record.temporary.push(owned);
+try{
+ // Mirror exactly the inputs build.mjs/packed-consumer.mjs read; no node_modules, dist or benchmark lane.
+ const skip=new Set(['node_modules','dist','benchmark']);
+ await cp(join(repo,'bindings/javascript'),join(mirror,'bindings/javascript'),{recursive:true,filter:s=>!skip.has(relative(join(repo,'bindings/javascript'),s).split('/')[0])});
+ for(const p of ['bindings/web/pkg','bindings/web/src','bindings/web/Cargo.lock','licenses/sqlcipher',...['hoyadb-bindings','hoyadb-core','hoyadb-storage-memory','hoyadb-storage-sqlite'].map(c=>'crates/'+c+'/src')])await cp(join(repo,p),join(mirror,p),{recursive:true});
+ record.mirror_sources={};for(const f of (await files(mirror)).sort()){const r=relative(mirror,f);const a=await hash(f),b=await hash(join(repo,r));if(a!==b)throw Error('mirror differs '+r);record.mirror_sources[r]=a;}
+ const js=join(mirror,'bindings/javascript');
+ for(const step of [['build',['scripts/build.mjs']],['check-build',['scripts/check-build.mjs']],['packed-consumer',['scripts/packed-consumer.mjs']]]){const e=run(step[0],'node',step[1],js,mirror);if(e.exit!==0&&step[0]!=='packed-consumer')throw Error(step[0]+' failed');}
+ const tarballs=join(owned,'target/phase-seven-web/tarballs'),keep=join(work,phase);await rm(keep,{recursive:true,force:true});await mkdir(keep,{recursive:true});
+ record.tarballs={};record.package_files={};
+ for(const name of ['client','testing']){const file='hoyadb-'+name+'-0.1.0.tgz';await copyFile(join(tarballs,file),join(keep,file));const bytes=await readFile(join(keep,file));record.tarballs[file]={bytes:bytes.length,sha256:sha(bytes)};
+  const out=join(mirror,'extract',name);await mkdir(out,{recursive:true});const x=spawnSync('tar',['-xzf',join(keep,file),'-C',out]);if(x.status!==0)throw Error('extract '+file);
+  for(const f of (await files(out)).sort()){const b=await readFile(f);record.package_files[name+'/'+relative(out,f)]={bytes:b.length,sha256:sha(b)};}}
+ // RN public entry (read-only copy of the RN lane's current package.json/index.d.ts) over the packed client/testing.
+ const rn=join(mirror,'rn');await mkdir(rn,{recursive:true});await writeFile(join(rn,'package.json'),JSON.stringify({private:true,type:'module'})+'\n');
+ const install=run('rn-install','npm',['install','--offline','--ignore-scripts','--no-audit','--no-fund',join(keep,'hoyadb-client-0.1.0.tgz'),join(keep,'hoyadb-testing-0.1.0.tgz')],rn,mirror);if(install.exit!==0)throw Error('rn install');
+ const rnPackage=join(rn,'node_modules/@hoyadb/react-native');await mkdir(rnPackage,{recursive:true});record.react_native_copied={};
+ for(const f of ['package.json','index.d.ts']){await copyFile(join(repo,'bindings/react-native',f),join(rnPackage,f));record.react_native_copied['bindings/react-native/'+f]=await hash(join(rnPackage,f));}
+ await copyFile(join(evidence,'rn-portable.ts'),join(rn,'rn-portable.ts'));await copyFile(join(js,'consumer/portable.ts'),join(rn,'portable.ts'));
+ record.probes={'rn-portable.ts':await hash(join(rn,'rn-portable.ts')),'bindings/javascript/consumer/portable.ts':await hash(join(rn,'portable.ts')),'bindings/javascript/consumer/types.ts':await hash(join(js,'consumer/types.ts'))};
+ for(const [probe,libs] of [['rn-portable.ts',['ES2022']],['rn-portable.ts',['ES2022','DOM']],['portable.ts',['ES2022']],['portable.ts',['ES2022','DOM']]]){
+  const config='tsconfig.'+probe.replace('.ts','')+'.'+libs.join('-').toLowerCase()+'.json';
+  await writeFile(join(rn,config),JSON.stringify({compilerOptions:{strict:true,noEmit:true,noEmitOnError:true,target:'ES2022',module:'NodeNext',moduleResolution:'NodeNext',lib:libs,types:[],skipLibCheck:false},files:[probe]},null,2)+'\n');
+  const listed=run('list '+config,'tsc',['-p',config,'--listFilesOnly'],rn,mirror);listed.output=listed.output.split(/\s+/).filter(Boolean).map(p=>p.replace(/^.*\/lib\/(lib\.[^/]+)$/,'<tool>/$1')).join('\n');
+  run('check '+config,'tsc',['-p',config],rn,mirror);}
+}finally{await rm(owned,{recursive:true,force:true});record.temporary_removed=!(await stat(owned).then(()=>true,()=>false));
+ await writeFile(join(work,'record-'+phase+'.json'),JSON.stringify(record,null,2)+'\n');}
+for(const c of record.commands)console.log(c.label,'exit',c.exit);

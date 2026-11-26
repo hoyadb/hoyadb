@@ -1,0 +1,12 @@
+HOYADB_1 {
+  global:
+    hoya_v1_abi_version;
+    hoya_v1_open;
+    hoya_v1_call;
+    hoya_v1_validate_open;
+    Java_dev_hoyadb_NativeBridge_abiVersion;
+    Java_dev_hoyadb_NativeBridge_open;
+    Java_dev_hoyadb_NativeBridge_call;
+    Java_dev_hoyadb_NativeBridge_validateOpen;
+  local: *;
+};

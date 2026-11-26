@@ -1,0 +1,54 @@
+28:{ platform:iOS, id:00008020-00190C9A3ED2002E, name:NightMare-DB, error:NightMare-DB is not connected Xcode will continue when NightMare-DB is connected and unlocked. }
+3670:    export ALLOW_BUILD_REQUEST_OVERRIDES\=NO
+3696:    export BUILD_ACTIVE_RESOURCES_ONLY\=NO
+3697:    export BUILD_COMPONENTS\=headers\ build
+3698:    export BUILD_DIR\=/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/ios-build-d/DerivedData/Build/Products
+3699:    export BUILD_LIBRARY_FOR_DISTRIBUTION\=NO
+3700:    export BUILD_ONLY_KNOWN_LOCALIZATIONS\=NO
+3701:    export BUILD_ROOT\=/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/ios-build-d/DerivedData/Build/Products
+3702:    export BUILD_STYLE\=
+3703:    export BUILD_VARIANTS\=normal
+3727:    export CLANG_MODULES_BUILD_SESSION_FILE\=/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/ios-build-d/DerivedData/ModuleCache.noindex/Session.modulevalidation
+3767:    export CONFIGURATION_BUILD_DIR\=/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/ios-build-d/DerivedData/Build/Products/Debug-iphonesimulator/React-RCTFBReactNativeSpec
+3862:    export FUSE_BUILD_PHASES\=YES
+3863:    export FUSE_BUILD_SCRIPT_PHASES\=NO
+3906:    export INFOPLIST_EXPAND_BUILD_SETTINGS\=YES
+3919:    export IS_UNOPTIMIZED_BUILD\=YES
+3966:    export MAC_OS_X_PRODUCT_BUILD_VERSION\=25G241
+4012:    export PLATFORM_PRODUCT_BUILD_VERSION\=23F73
+4018:    export PODS_BUILD_DIR\=/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/ios-build-d/DerivedData/Build/Products
+4019:    export PODS_CONFIGURATION_BUILD_DIR\=/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/ios-build-d/DerivedData/Build/Products/Debug-iphonesimulator
+4023:    export PODS_XCFRAMEWORKS_BUILD_DIR\=/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/ios-build-d/DerivedData/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates
+4071:    export SDK_PRODUCT_BUILD_VERSION\=23F73
+4143:    export TARGET_BUILD_DIR\=/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/ios-build-d/DerivedData/Build/Products/Debug-iphonesimulator/React-RCTFBReactNativeSpec
+4172:    export VERSION_INFO_BUILDER\=boristacyniak
+4178:    export XCODE_PRODUCT_BUILD_VERSION\=17F42
+4198:    export ALLOW_BUILD_REQUEST_OVERRIDES\=NO
+4222:    export BUILD_ACTIVE_RESOURCES_ONLY\=NO
+4223:    export BUILD_COMPONENTS\=headers\ build
+4224:    export BUILD_DIR\=/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/ios-build-d/DerivedData/Build/Products
+4225:    export BUILD_LIBRARY_FOR_DISTRIBUTION\=NO
+4226:    export BUILD_ONLY_KNOWN_LOCALIZATIONS\=NO
+4227:    export BUILD_ROOT\=/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/ios-build-d/DerivedData/Build/Products
+4228:    export BUILD_STYLE\=
+4229:    export BUILD_VARIANTS\=normal
+4254:    export CLANG_MODULES_BUILD_SESSION_FILE\=/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/ios-build-d/DerivedData/ModuleCache.noindex/Session.modulevalidation
+4294:    export CONFIGURATION_BUILD_DIR\=/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/ios-build-d/DerivedData/Build/Products/Debug-iphonesimulator/ReactCodegen
+4397:    export FUSE_BUILD_PHASES\=YES
+4398:    export FUSE_BUILD_SCRIPT_PHASES\=NO
+4442:    export INFOPLIST_EXPAND_BUILD_SETTINGS\=YES
+4456:    export IS_UNOPTIMIZED_BUILD\=YES
+4505:    export MAC_OS_X_PRODUCT_BUILD_VERSION\=25G241
+4553:    export PLATFORM_PRODUCT_BUILD_VERSION\=23F73
+4559:    export PODS_BUILD_DIR\=/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/ios-build-d/DerivedData/Build/Products
+4560:    export PODS_CONFIGURATION_BUILD_DIR\=/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/ios-build-d/DerivedData/Build/Products/Debug-iphonesimulator
+4564:    export PODS_XCFRAMEWORKS_BUILD_DIR\=/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/ios-build-d/DerivedData/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates
+4617:    export SDK_PRODUCT_BUILD_VERSION\=23F73
+4690:    export TARGET_BUILD_DIR\=/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/ios-build-d/DerivedData/Build/Products/Debug-iphonesimulator/ReactCodegen
+4719:    export VERSION_INFO_BUILDER\=boristacyniak
+4725:    export XCODE_PRODUCT_BUILD_VERSION\=17F42
+5188:/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-phase7-rn-consumer-v8cue5dl/ios/HoyaConsumerModule.mm:7:3: error: use of undeclared identifier 'HoyaForeignControl'
+5191:/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-phase7-rn-consumer-v8cue5dl/ios/HoyaConsumerModule.mm:10:3: error: use of undeclared identifier 'HoyaForeignControl'
+5194:/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-phase7-rn-consumer-v8cue5dl/ios/HoyaConsumerModule.mm:13:3: error: use of undeclared identifier 'HoyaForeignControl'
+5197:/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-phase7-rn-consumer-v8cue5dl/ios/HoyaConsumerModule.mm:16:3: error: use of undeclared identifier 'HoyaForeignControl'
+5236:** BUILD FAILED **

@@ -1,0 +1,334 @@
+[
+  {
+    "url": "https://repo.maven.apache.org/maven2/io/github/java-diff-utils/java-diff-utils-parent/4.15/java-diff-utils-parent-4.15.pom",
+    "dest": "closure/java-diff-utils-parent-4.15/java-diff-utils-parent-4.15.pom",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/io/github/java-diff-utils/java-diff-utils-parent/4.15/java-diff-utils-parent-4.15.pom",
+    "bytes": 10170,
+    "sha256": "09e7d44a7cfa19bc6b23cad14ec0a41f32ae0b597f0e26ace91916fdc2bb5c82",
+    "sha1": "410e4876451d9773cf86f9283cb5a8aebc5399cf"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/io/github/java-diff-utils/java-diff-utils-parent/4.15/java-diff-utils-parent-4.15.pom.sha1",
+    "dest": "closure/java-diff-utils-parent-4.15/java-diff-utils-parent-4.15.pom.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/io/github/java-diff-utils/java-diff-utils-parent/4.15/java-diff-utils-parent-4.15.pom.sha1",
+    "bytes": 40,
+    "sha256": "ea01e0cc46a024fe2cdc64b92a6763a29bafa26e7a7f45127a0aa98c34ff6f28",
+    "sha1": "07aaffae67cf87fd516b0a8149aaceb4ffcd347f"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/io/github/java-diff-utils/java-diff-utils-parent/4.15/java-diff-utils-parent-4.15.pom.sha256",
+    "dest": "closure/java-diff-utils-parent-4.15/java-diff-utils-parent-4.15.pom.sha256",
+    "exit_code": 0,
+    "http_code": "404",
+    "effective_url": "https://repo.maven.apache.org/maven2/io/github/java-diff-utils/java-diff-utils-parent/4.15/java-diff-utils-parent-4.15.pom.sha256"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/io/github/java-diff-utils/java-diff-utils-parent/4.15/java-diff-utils-parent-4.15.pom.sha512",
+    "dest": "closure/java-diff-utils-parent-4.15/java-diff-utils-parent-4.15.pom.sha512",
+    "exit_code": 0,
+    "http_code": "404",
+    "effective_url": "https://repo.maven.apache.org/maven2/io/github/java-diff-utils/java-diff-utils-parent/4.15/java-diff-utils-parent-4.15.pom.sha512"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/io/github/java-diff-utils/java-diff-utils-parent/4.15/java-diff-utils-parent-4.15.pom.asc",
+    "dest": "closure/java-diff-utils-parent-4.15/java-diff-utils-parent-4.15.pom.asc",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/io/github/java-diff-utils/java-diff-utils-parent/4.15/java-diff-utils-parent-4.15.pom.asc",
+    "bytes": 673,
+    "sha256": "0878de3b03acf45e2d1477571d938880c051c7eb1a4236876e8c06e119b5e378",
+    "sha1": "e0aaf6bd805a102e14d7ee627918b793c153264d"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.2.21/kotlin-stdlib-2.2.21.jar",
+    "dest": "closure/kotlin-stdlib-2.2.21/kotlin-stdlib-2.2.21.jar",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.2.21/kotlin-stdlib-2.2.21.jar",
+    "bytes": 1761445,
+    "sha256": "6558a3d233da56a20934b32159f9db5f86ed5816ef098f78a2c223dc6abb79dd",
+    "sha1": "fa374a986e128314c3db00a20aae55f72a258511"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.2.21/kotlin-stdlib-2.2.21.jar.sha1",
+    "dest": "closure/kotlin-stdlib-2.2.21/kotlin-stdlib-2.2.21.jar.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.2.21/kotlin-stdlib-2.2.21.jar.sha1",
+    "bytes": 40,
+    "sha256": "e287e548446141233b97b2dbb925fa352f479e1e1fe05a01d3414f4a165455f5",
+    "sha1": "c3580e05b8e39f103f8d329e09fb5191d24be57b"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.2.21/kotlin-stdlib-2.2.21.jar.sha256",
+    "dest": "closure/kotlin-stdlib-2.2.21/kotlin-stdlib-2.2.21.jar.sha256",
+    "exit_code": 0,
+    "http_code": "404",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.2.21/kotlin-stdlib-2.2.21.jar.sha256"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.2.21/kotlin-stdlib-2.2.21.jar.sha512",
+    "dest": "closure/kotlin-stdlib-2.2.21/kotlin-stdlib-2.2.21.jar.sha512",
+    "exit_code": 0,
+    "http_code": "404",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.2.21/kotlin-stdlib-2.2.21.jar.sha512"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.2.21/kotlin-stdlib-2.2.21.jar.asc",
+    "dest": "closure/kotlin-stdlib-2.2.21/kotlin-stdlib-2.2.21.jar.asc",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.2.21/kotlin-stdlib-2.2.21.jar.asc",
+    "bytes": 689,
+    "sha256": "987df1e4d2fe52f725fe053244c59664dfe24bd7def525d081e5f1ab5dc903e2",
+    "sha1": "ee8b7d0efe3efcaef432b3035f45f7e4f57eb7d3"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.2.21/kotlin-stdlib-2.2.21.pom",
+    "dest": "closure/kotlin-stdlib-2.2.21/kotlin-stdlib-2.2.21.pom",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.2.21/kotlin-stdlib-2.2.21.pom",
+    "bytes": 2301,
+    "sha256": "cf31f923196c63aedecd0a57c24269bd3702a4e47c0bf0bd64b5ada5de522272",
+    "sha1": "2b7be7d3161001cb0956cde06bbe4dfb3359978c"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.2.21/kotlin-stdlib-2.2.21.pom.sha1",
+    "dest": "closure/kotlin-stdlib-2.2.21/kotlin-stdlib-2.2.21.pom.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.2.21/kotlin-stdlib-2.2.21.pom.sha1",
+    "bytes": 40,
+    "sha256": "f9c66178759e93cbd35e4951421b4c01286673aa0dc8a3f8bb9c40b2bf8b09c8",
+    "sha1": "ad221a0445f62f5beb94ec5814dc15f3ea70f88c"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.2.21/kotlin-stdlib-2.2.21.pom.sha256",
+    "dest": "closure/kotlin-stdlib-2.2.21/kotlin-stdlib-2.2.21.pom.sha256",
+    "exit_code": 0,
+    "http_code": "404",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.2.21/kotlin-stdlib-2.2.21.pom.sha256"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.2.21/kotlin-stdlib-2.2.21.pom.sha512",
+    "dest": "closure/kotlin-stdlib-2.2.21/kotlin-stdlib-2.2.21.pom.sha512",
+    "exit_code": 0,
+    "http_code": "404",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.2.21/kotlin-stdlib-2.2.21.pom.sha512"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.2.21/kotlin-stdlib-2.2.21.pom.asc",
+    "dest": "closure/kotlin-stdlib-2.2.21/kotlin-stdlib-2.2.21.pom.asc",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.2.21/kotlin-stdlib-2.2.21.pom.asc",
+    "bytes": 689,
+    "sha256": "a00316fd645fe5daee639d35674e30132f806fcd15bafcb50c2ae1668c538f71",
+    "sha1": "1662746e29627500ede903a416970a877a7b903e"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.2.21/kotlin-stdlib-2.2.21.module",
+    "dest": "closure/kotlin-stdlib-2.2.21/kotlin-stdlib-2.2.21.module",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.2.21/kotlin-stdlib-2.2.21.module",
+    "bytes": 12430,
+    "sha256": "bfbc657ddd3a8e37e4c8ad417968d5eb0b0b171c9fce48f962c2ad32ee434c21",
+    "sha1": "ffb4a034fc99314511f61aa1268cdb9d795a14d7"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.2.21/kotlin-stdlib-2.2.21.module.sha1",
+    "dest": "closure/kotlin-stdlib-2.2.21/kotlin-stdlib-2.2.21.module.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.2.21/kotlin-stdlib-2.2.21.module.sha1",
+    "bytes": 40,
+    "sha256": "15e2a28ade138a99e15b911bea570f8a7d19995890105dad67405cd9dc5fa26b",
+    "sha1": "a201f507fec21251f12e2c81e1e562ecc986abe8"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.2.21/kotlin-stdlib-2.2.21.module.sha256",
+    "dest": "closure/kotlin-stdlib-2.2.21/kotlin-stdlib-2.2.21.module.sha256",
+    "exit_code": 0,
+    "http_code": "404",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.2.21/kotlin-stdlib-2.2.21.module.sha256"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.2.21/kotlin-stdlib-2.2.21.module.sha512",
+    "dest": "closure/kotlin-stdlib-2.2.21/kotlin-stdlib-2.2.21.module.sha512",
+    "exit_code": 0,
+    "http_code": "404",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.2.21/kotlin-stdlib-2.2.21.module.sha512"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.27.0/error_prone_annotations-2.27.0.jar",
+    "dest": "closure/error_prone_annotations-2.27.0/error_prone_annotations-2.27.0.jar",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.27.0/error_prone_annotations-2.27.0.jar",
+    "bytes": 19370,
+    "sha256": "24c923372c58e35d0b9f16a028929bb9aedc77521867c274f2bd0735df5ba1f5",
+    "sha1": "91b2c29d8a6148b5e2e4930f070d4840e2e48e34"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.27.0/error_prone_annotations-2.27.0.jar.sha1",
+    "dest": "closure/error_prone_annotations-2.27.0/error_prone_annotations-2.27.0.jar.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.27.0/error_prone_annotations-2.27.0.jar.sha1",
+    "bytes": 40,
+    "sha256": "25f3f6d1702f0d712a51dd04a855cc449136762c5f4c931b7a83dd5a63b03df0",
+    "sha1": "9049c7edfb748e940a314d223eb433b3d2b3a7ef"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.27.0/error_prone_annotations-2.27.0.jar.sha256",
+    "dest": "closure/error_prone_annotations-2.27.0/error_prone_annotations-2.27.0.jar.sha256",
+    "exit_code": 0,
+    "http_code": "404",
+    "effective_url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.27.0/error_prone_annotations-2.27.0.jar.sha256"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.27.0/error_prone_annotations-2.27.0.jar.sha512",
+    "dest": "closure/error_prone_annotations-2.27.0/error_prone_annotations-2.27.0.jar.sha512",
+    "exit_code": 0,
+    "http_code": "404",
+    "effective_url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.27.0/error_prone_annotations-2.27.0.jar.sha512"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.27.0/error_prone_annotations-2.27.0.jar.asc",
+    "dest": "closure/error_prone_annotations-2.27.0/error_prone_annotations-2.27.0.jar.asc",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.27.0/error_prone_annotations-2.27.0.jar.asc",
+    "bytes": 833,
+    "sha256": "54733d3cd7a6f5c0f09920021c946c8557cdea48e32f3a0455ac27b9b293ff35",
+    "sha1": "355416392a4be1579b7b917bf270ec7a9868f484"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.27.0/error_prone_annotations-2.27.0.pom",
+    "dest": "closure/error_prone_annotations-2.27.0/error_prone_annotations-2.27.0.pom",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.27.0/error_prone_annotations-2.27.0.pom",
+    "bytes": 4252,
+    "sha256": "4ca5a35d61235e16549ac346d1e34551cdf0fe27e84aa57e03cbeb255ea4e5da",
+    "sha1": "85103026aa50b0e4efafee8f486e3ecd9ebfde31"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.27.0/error_prone_annotations-2.27.0.pom.sha1",
+    "dest": "closure/error_prone_annotations-2.27.0/error_prone_annotations-2.27.0.pom.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.27.0/error_prone_annotations-2.27.0.pom.sha1",
+    "bytes": 40,
+    "sha256": "967a98e52268bd921ed1c514505dedcd99845c8e4e883a69fd1dc8f251a2355b",
+    "sha1": "633e56bed2b3b5975c0524f40e72d3c0e317feb6"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.27.0/error_prone_annotations-2.27.0.pom.sha256",
+    "dest": "closure/error_prone_annotations-2.27.0/error_prone_annotations-2.27.0.pom.sha256",
+    "exit_code": 0,
+    "http_code": "404",
+    "effective_url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.27.0/error_prone_annotations-2.27.0.pom.sha256"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.27.0/error_prone_annotations-2.27.0.pom.sha512",
+    "dest": "closure/error_prone_annotations-2.27.0/error_prone_annotations-2.27.0.pom.sha512",
+    "exit_code": 0,
+    "http_code": "404",
+    "effective_url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.27.0/error_prone_annotations-2.27.0.pom.sha512"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.27.0/error_prone_annotations-2.27.0.pom.asc",
+    "dest": "closure/error_prone_annotations-2.27.0/error_prone_annotations-2.27.0.pom.asc",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.27.0/error_prone_annotations-2.27.0.pom.asc",
+    "bytes": 833,
+    "sha256": "ddf5fcd8f7a3bc4b401013220ebb11c04305f567c1d6427da02c1c8db61fc290",
+    "sha1": "0e3fa8ebe66c55200e2a19aa6aff7d2142d2fd1c"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.27.0/error_prone_annotations-2.27.0.module",
+    "dest": "closure/error_prone_annotations-2.27.0/error_prone_annotations-2.27.0.module",
+    "exit_code": 0,
+    "http_code": "404",
+    "effective_url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.27.0/error_prone_annotations-2.27.0.module"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.27.0/error_prone_annotations-2.27.0.module.sha1",
+    "dest": "closure/error_prone_annotations-2.27.0/error_prone_annotations-2.27.0.module.sha1",
+    "exit_code": 0,
+    "http_code": "404",
+    "effective_url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.27.0/error_prone_annotations-2.27.0.module.sha1"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.27.0/error_prone_annotations-2.27.0.module.sha256",
+    "dest": "closure/error_prone_annotations-2.27.0/error_prone_annotations-2.27.0.module.sha256",
+    "exit_code": 0,
+    "http_code": "404",
+    "effective_url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.27.0/error_prone_annotations-2.27.0.module.sha256"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.27.0/error_prone_annotations-2.27.0.module.sha512",
+    "dest": "closure/error_prone_annotations-2.27.0/error_prone_annotations-2.27.0.module.sha512",
+    "exit_code": 0,
+    "http_code": "404",
+    "effective_url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.27.0/error_prone_annotations-2.27.0.module.sha512"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.10.2/junit-bom-5.10.2.module",
+    "dest": "closure/junit-bom-5.10.2/junit-bom-5.10.2.module",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.10.2/junit-bom-5.10.2.module",
+    "bytes": 6995,
+    "sha256": "de23b114b3e4119a8fe6eb17bed5a3852816698bace67071579d6d927ebb080a",
+    "sha1": "ce536748a853ae6ac09e7815fce0678a96cff778"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.10.2/junit-bom-5.10.2.module.sha1",
+    "dest": "closure/junit-bom-5.10.2/junit-bom-5.10.2.module.sha1",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.10.2/junit-bom-5.10.2.module.sha1",
+    "bytes": 40,
+    "sha256": "6ae2d9b9464e3e0a240dbdc12282932fdad2e9db6ba4ab595e1c409aedac364e",
+    "sha1": "dc4e662d3aa0329cf48ee9ddcc0e1088138cd374"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.10.2/junit-bom-5.10.2.module.sha256",
+    "dest": "closure/junit-bom-5.10.2/junit-bom-5.10.2.module.sha256",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.10.2/junit-bom-5.10.2.module.sha256",
+    "bytes": 64,
+    "sha256": "73dd39ce82230245158ca7caceffde2802adf881aa93d119c052166ea91369a7",
+    "sha1": "cd32801c9d8c23ce25043c1d93b86f574fde69f3"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.10.2/junit-bom-5.10.2.module.sha512",
+    "dest": "closure/junit-bom-5.10.2/junit-bom-5.10.2.module.sha512",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.10.2/junit-bom-5.10.2.module.sha512",
+    "bytes": 128,
+    "sha256": "81774ca47d24c7e8002e64267a97fb8a1b611bf5c406f13192815167a69369fa",
+    "sha1": "754a54dfc9efaac66941617c98ac4a8c1e515903"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.10.2/junit-bom-5.10.2.module.asc",
+    "dest": "closure/junit-bom-5.10.2/junit-bom-5.10.2.module.asc",
+    "exit_code": 0,
+    "http_code": "200",
+    "effective_url": "https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.10.2/junit-bom-5.10.2.module.asc",
+    "bytes": 853,
+    "sha256": "55bc621f6fec4f16530ac2c789af708f0af360f5f64b8780fed62e186b171087",
+    "sha1": "4c433388f5bfab68a854e50d7e254843445612d4"
+  }
+]

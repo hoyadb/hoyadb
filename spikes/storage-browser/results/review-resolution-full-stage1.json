@@ -1,0 +1,1420 @@
+{
+  "results": [
+    {
+      "name": "runtime",
+      "passed": true,
+      "detail": {
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Paseo/0.12.0 Chrome/152.0.7977.76 Electron/44.2.0 Safari/537.36",
+        "origin": "http://127.0.0.1:8772",
+        "secure": true,
+        "crossOriginIsolated": false
+      }
+    },
+    {
+      "name": "W05 simulated unavailable capability",
+      "passed": true,
+      "detail": "BackendFailure; no adapter exposed"
+    },
+    {
+      "name": "W05 actual capabilities and initialization",
+      "passed": true,
+      "detail": {
+        "secure": true,
+        "dedicatedWorker": true,
+        "wasm": true,
+        "bigint": true,
+        "opfs": true,
+        "syncAccessHandle": true,
+        "crossOriginIsolated": false
+      }
+    },
+    {
+      "name": "W03 immediate failed batch rollback",
+      "passed": true,
+      "detail": [
+        [
+          "\u0000🌿'; DROP TABLE x;--",
+          "é\u0000🌿",
+          {
+            "id": "é\u0000🌿",
+            "fields": [
+              {
+                "name": "",
+                "kind": "String",
+                "value": ""
+              },
+              {
+                "name": "max",
+                "kind": "Integer",
+                "value": "9223372036854775807"
+              },
+              {
+                "name": "min",
+                "kind": "Integer",
+                "value": "-9223372036854775808"
+              },
+              {
+                "name": "no",
+                "kind": "Boolean",
+                "value": false
+              },
+              {
+                "name": "text\u0000",
+                "kind": "String",
+                "value": "保留\u0000🌿 '); DROP TABLE x;--"
+              },
+              {
+                "name": "yes",
+                "kind": "Boolean",
+                "value": true
+              }
+            ]
+          }
+        ],
+        [
+          "\u0000🌿'; DROP TABLE x;--",
+          "replace",
+          {
+            "id": "replace",
+            "fields": [
+              {
+                "name": "yes",
+                "kind": "Boolean",
+                "value": true
+              }
+            ]
+          }
+        ],
+        [
+          "\u0000🌿'; DROP TABLE x;--",
+          "removed",
+          null
+        ],
+        [
+          "\u0000🌿'; DROP TABLE x;--",
+          "prefix",
+          null
+        ],
+        [
+          "",
+          "keeper",
+          {
+            "id": "keeper",
+            "fields": [
+              {
+                "name": "k",
+                "kind": "String",
+                "value": "unchanged"
+              }
+            ]
+          }
+        ],
+        [
+          "",
+          "later",
+          null
+        ],
+        [
+          "",
+          "empty",
+          {
+            "id": "empty",
+            "fields": []
+          }
+        ]
+      ]
+    },
+    {
+      "name": "W01/W03 worker termination and recreation",
+      "passed": true,
+      "detail": [
+        [
+          "\u0000🌿'; DROP TABLE x;--",
+          "é\u0000🌿",
+          {
+            "id": "é\u0000🌿",
+            "fields": [
+              {
+                "name": "",
+                "kind": "String",
+                "value": ""
+              },
+              {
+                "name": "max",
+                "kind": "Integer",
+                "value": "9223372036854775807"
+              },
+              {
+                "name": "min",
+                "kind": "Integer",
+                "value": "-9223372036854775808"
+              },
+              {
+                "name": "no",
+                "kind": "Boolean",
+                "value": false
+              },
+              {
+                "name": "text\u0000",
+                "kind": "String",
+                "value": "保留\u0000🌿 '); DROP TABLE x;--"
+              },
+              {
+                "name": "yes",
+                "kind": "Boolean",
+                "value": true
+              }
+            ]
+          }
+        ],
+        [
+          "\u0000🌿'; DROP TABLE x;--",
+          "replace",
+          {
+            "id": "replace",
+            "fields": [
+              {
+                "name": "yes",
+                "kind": "Boolean",
+                "value": true
+              }
+            ]
+          }
+        ],
+        [
+          "\u0000🌿'; DROP TABLE x;--",
+          "removed",
+          null
+        ],
+        [
+          "\u0000🌿'; DROP TABLE x;--",
+          "prefix",
+          null
+        ],
+        [
+          "",
+          "keeper",
+          {
+            "id": "keeper",
+            "fields": [
+              {
+                "name": "k",
+                "kind": "String",
+                "value": "unchanged"
+              }
+            ]
+          }
+        ],
+        [
+          "",
+          "later",
+          null
+        ],
+        [
+          "",
+          "empty",
+          {
+            "id": "empty",
+            "fields": []
+          }
+        ]
+      ]
+    },
+    {
+      "name": "W06/W08 malformed input, stale handles, disposal and recreation",
+      "passed": true,
+      "detail": [
+        [
+          "\u0000🌿'; DROP TABLE x;--",
+          "é\u0000🌿",
+          {
+            "id": "é\u0000🌿",
+            "fields": [
+              {
+                "name": "",
+                "kind": "String",
+                "value": ""
+              },
+              {
+                "name": "max",
+                "kind": "Integer",
+                "value": "9223372036854775807"
+              },
+              {
+                "name": "min",
+                "kind": "Integer",
+                "value": "-9223372036854775808"
+              },
+              {
+                "name": "no",
+                "kind": "Boolean",
+                "value": false
+              },
+              {
+                "name": "text\u0000",
+                "kind": "String",
+                "value": "保留\u0000🌿 '); DROP TABLE x;--"
+              },
+              {
+                "name": "yes",
+                "kind": "Boolean",
+                "value": true
+              }
+            ]
+          }
+        ],
+        [
+          "\u0000🌿'; DROP TABLE x;--",
+          "replace",
+          {
+            "id": "replace",
+            "fields": [
+              {
+                "name": "yes",
+                "kind": "Boolean",
+                "value": true
+              }
+            ]
+          }
+        ],
+        [
+          "\u0000🌿'; DROP TABLE x;--",
+          "removed",
+          null
+        ],
+        [
+          "\u0000🌿'; DROP TABLE x;--",
+          "prefix",
+          null
+        ],
+        [
+          "",
+          "keeper",
+          {
+            "id": "keeper",
+            "fields": [
+              {
+                "name": "k",
+                "kind": "String",
+                "value": "unchanged"
+              }
+            ]
+          }
+        ],
+        [
+          "",
+          "later",
+          null
+        ],
+        [
+          "",
+          "empty",
+          {
+            "id": "empty",
+            "fields": []
+          }
+        ]
+      ]
+    },
+    {
+      "name": "W07 simulated write failure",
+      "passed": true,
+      "detail": "Synthetic BackendFailure before invocation; no actual VFS failure claimed"
+    },
+    {
+      "name": "W07 preserves incompatible unrelated fixture",
+      "passed": true,
+      "detail": {
+        "schema": [
+          [
+            "sentinel",
+            "CREATE TABLE sentinel(value TEXT)"
+          ]
+        ],
+        "data": "preserve 🌿"
+      }
+    },
+    {
+      "name": "W07 preserves incompatible version fixture",
+      "passed": true,
+      "detail": {
+        "schema": [
+          [
+            "__hoya_fields",
+            "CREATE TABLE __hoya_fields(table_name TEXT NOT NULL,row_id TEXT NOT NULL,name TEXT NOT NULL,kind INTEGER NOT NULL,text_value TEXT,int_value INTEGER,PRIMARY KEY(table_name,row_id,name))"
+          ],
+          [
+            "__hoya_fields_numeric",
+            "CREATE INDEX __hoya_fields_numeric ON __hoya_fields(table_name,name,kind,int_value,row_id)"
+          ],
+          [
+            "__hoya_fields_text",
+            "CREATE INDEX __hoya_fields_text ON __hoya_fields(table_name,name,kind,text_value,row_id)"
+          ],
+          [
+            "__hoya_meta",
+            "CREATE TABLE __hoya_meta(version INTEGER NOT NULL)"
+          ],
+          [
+            "__hoya_rows",
+            "CREATE TABLE __hoya_rows(table_name TEXT NOT NULL,id TEXT NOT NULL,PRIMARY KEY(table_name,id))"
+          ],
+          [
+            "__hoya_tables",
+            "CREATE TABLE __hoya_tables(name TEXT PRIMARY KEY NOT NULL)"
+          ],
+          [
+            "sqlite_autoindex___hoya_fields_1",
+            null
+          ],
+          [
+            "sqlite_autoindex___hoya_rows_1",
+            null
+          ],
+          [
+            "sqlite_autoindex___hoya_tables_1",
+            null
+          ]
+        ],
+        "data": "2"
+      }
+    },
+    {
+      "name": "W04 shared assertions",
+      "passed": true,
+      "detail": [
+        "M01",
+        "M02",
+        "M04",
+        "M05",
+        "M06",
+        "M07",
+        "M08",
+        "M09",
+        "T01",
+        "T02",
+        "T03",
+        "T04",
+        "T05",
+        "T06",
+        "T07",
+        "M03 logical tables only; simultaneous instances excluded"
+      ]
+    },
+    {
+      "name": "P01–P10 shared typed Rust assertions",
+      "passed": true,
+      "detail": "All ten shared cases executed in the real SQLite worker"
+    },
+    {
+      "name": "P11 physical fixtures and actual SQL rollback",
+      "passed": true,
+      "detail": [
+        "P11 v1 DDL marker old row and typed batch retained",
+        "P11 malformed Float Timestamp Reference Null payloads reject strictly",
+        "P11 actual SQL trigger abort rolls back prefix and emits no changes after reopen"
+      ]
+    },
+    {
+      "name": "P12 browser engine index costs",
+      "passed": true,
+      "detail": [
+        {
+          "size": 256,
+          "initial_256_raw_population_ms": 41,
+          "populated_index_build_ms": 6,
+          "added_population_ms": 0,
+          "lookups": [
+            {
+              "field": "number",
+              "first_lookup_ms": 1,
+              "repeated_25_ms": 12,
+              "plan": [
+                "SEARCH f0 USING COVERING INDEX __hoya_fields_numeric (table_name=? AND name=? AND kind=? AND int_value=?)",
+                "SEARCH r USING COVERING INDEX sqlite_autoindex___hoya_rows_1 (table_name=? AND id=?)",
+                "USE TEMP B-TREE FOR ORDER BY"
+              ]
+            },
+            {
+              "field": "text",
+              "first_lookup_ms": 0,
+              "repeated_25_ms": 12,
+              "plan": [
+                "SEARCH f0 USING COVERING INDEX __hoya_fields_text (table_name=? AND name=? AND kind=? AND text_value=?)",
+                "SEARCH r USING COVERING INDEX sqlite_autoindex___hoya_rows_1 (table_name=? AND id=?)",
+                "USE TEMP B-TREE FOR ORDER BY"
+              ]
+            }
+          ],
+          "typed_update_ms": 4,
+          "raw_update_ms": 3,
+          "rollback_ms": 1,
+          "ordering_ms": 2,
+          "reopen_ms": 0,
+          "reopened_plan": [
+            "SEARCH f0 USING COVERING INDEX __hoya_fields_numeric (table_name=? AND name=? AND kind=? AND int_value=?)",
+            "SEARCH r USING COVERING INDEX sqlite_autoindex___hoya_rows_1 (table_name=? AND id=?)",
+            "USE TEMP B-TREE FOR ORDER BY"
+          ]
+        },
+        {
+          "size": 2048,
+          "initial_256_raw_population_ms": 41,
+          "populated_index_build_ms": 6,
+          "added_population_ms": 284,
+          "lookups": [
+            {
+              "field": "number",
+              "first_lookup_ms": 0,
+              "repeated_25_ms": 11,
+              "plan": [
+                "SEARCH f0 USING COVERING INDEX __hoya_fields_numeric (table_name=? AND name=? AND kind=? AND int_value=?)",
+                "SEARCH r USING COVERING INDEX sqlite_autoindex___hoya_rows_1 (table_name=? AND id=?)",
+                "USE TEMP B-TREE FOR ORDER BY"
+              ]
+            },
+            {
+              "field": "text",
+              "first_lookup_ms": 0,
+              "repeated_25_ms": 11,
+              "plan": [
+                "SEARCH f0 USING COVERING INDEX __hoya_fields_text (table_name=? AND name=? AND kind=? AND text_value=?)",
+                "SEARCH r USING COVERING INDEX sqlite_autoindex___hoya_rows_1 (table_name=? AND id=?)",
+                "USE TEMP B-TREE FOR ORDER BY"
+              ]
+            }
+          ],
+          "typed_update_ms": 4,
+          "raw_update_ms": 4,
+          "rollback_ms": 2,
+          "ordering_ms": 8,
+          "reopen_ms": 0,
+          "reopened_plan": [
+            "SEARCH f0 USING COVERING INDEX __hoya_fields_numeric (table_name=? AND name=? AND kind=? AND int_value=?)",
+            "SEARCH r USING COVERING INDEX sqlite_autoindex___hoya_rows_1 (table_name=? AND id=?)",
+            "USE TEMP B-TREE FOR ORDER BY"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "D01–D14 shared public model and schema assertions",
+      "passed": true,
+      "detail": "All shared Phase 2 Rust cases executed in the real worker"
+    },
+    {
+      "name": "D15 actual SQL model metadata abort and recovery",
+      "passed": true,
+      "detail": "Initialization, adoption, insertion, migration and reset preserve original state"
+    },
+    {
+      "name": "R01–R12/R15 shared reactive and projection Rust assertions",
+      "passed": true,
+      "detail": [
+        "R01",
+        "R02",
+        "R03",
+        "R04",
+        "R05",
+        "R06",
+        "R07",
+        "R08",
+        "R09",
+        "R10",
+        "R11 values",
+        "R11 operators",
+        "R11 relations",
+        "R11 validation",
+        "R11 names",
+        "R12",
+        "R15"
+      ]
+    },
+    {
+      "name": "R13 callback read/write, owned values, cancellation after extraction and recursive drain",
+      "passed": true,
+      "detail": {
+        "mainThread": true,
+        "initialRows": 1,
+        "nextDrainRows": 2,
+        "canceledCallbacks": 0
+      }
+    },
+    {
+      "name": "R13 exception isolation and final observer release",
+      "passed": true,
+      "detail": {
+        "callbackErrors": 1,
+        "survivingCallbacks": 1,
+        "groups": 0
+      }
+    },
+    {
+      "name": "R13 count-only throttle, typed post-commit error and explicit recovery",
+      "passed": true,
+      "detail": {
+        "counts": [
+          3,
+          13,
+          "BackendFailure",
+          14
+        ],
+        "countMaterializations": 0,
+        "intervalMs": 16
+      }
+    },
+    {
+      "name": "R13 close from callback suppresses remaining extracted callbacks",
+      "passed": true,
+      "detail": {
+        "closed": 1,
+        "afterClose": 0
+      }
+    },
+    {
+      "name": "R13 replacement generation and concurrent-drain guards",
+      "passed": true,
+      "detail": {
+        "obsoleteCallbacks": 0,
+        "currentCallbacks": 1,
+        "distinctHandles": true
+      }
+    },
+    {
+      "name": "R15 actual browser callback latency samples",
+      "passed": true,
+      "detail": {
+        "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Paseo/0.12.0 Chrome/152.0.7977.76 Electron/44.2.0 Safari/537.36",
+        "origin": "http://127.0.0.1:8772",
+        "scheduling": "one explicit drain immediately after each acknowledged write",
+        "milliseconds": [
+          8.899999976158142,
+          8.899999976158142,
+          8.800000071525574,
+          9.299999952316284,
+          9.299999952316284
+        ],
+        "min": 8.800000071525574,
+        "max": 9.299999952316284
+      }
+    },
+    {
+      "name": "Q01 actual worker oversized query/projection and SAH pool inspection",
+      "passed": true,
+      "detail": {
+        "operands": 33002,
+        "rows": [
+          {
+            "id": "needle",
+            "fields": [
+              {
+                "name": "value",
+                "kind": "Integer",
+                "value": "42"
+              }
+            ]
+          }
+        ],
+        "keys": [
+          "needle"
+        ],
+        "queryError": null,
+        "projectError": null,
+        "poolBefore": [
+          "conformance-119.sqlite",
+          "fixture.sqlite",
+          "model-initial-0.sqlite",
+          "model-initial-1.sqlite",
+          "model-insert-failure.sqlite",
+          "model-migration-failure.sqlite",
+          "model-reset-failure.sqlite",
+          "reactive-client.sqlite",
+          "typed-index.sqlite",
+          "typed-legacy.sqlite",
+          "typed-malformed.sqlite",
+          "typed-trigger.sqlite",
+          "unrelated.sqlite",
+          "version.sqlite"
+        ],
+        "poolAfter": [
+          "conformance-119.sqlite",
+          "fixture.sqlite",
+          "model-initial-0.sqlite",
+          "model-initial-1.sqlite",
+          "model-insert-failure.sqlite",
+          "model-migration-failure.sqlite",
+          "model-reset-failure.sqlite",
+          "reactive-client.sqlite",
+          "typed-index.sqlite",
+          "typed-legacy.sqlite",
+          "typed-malformed.sqlite",
+          "typed-trigger.sqlite",
+          "unrelated.sqlite",
+          "version.sqlite"
+        ]
+      }
+    },
+    {
+      "name": "Shared Q01 large observations/navigation/reverse dependencies",
+      "passed": true,
+      "detail": {
+        "milliseconds": 3588.7000000476837,
+        "poolChecks": [
+          {
+            "case": "Q01 large observations/navigation/reverse dependencies",
+            "before": [
+              "fixture.sqlite",
+              "model-initial-0.sqlite",
+              "model-initial-1.sqlite",
+              "model-insert-failure.sqlite",
+              "model-migration-failure.sqlite",
+              "model-reset-failure.sqlite",
+              "reactive-client.sqlite",
+              "typed-index.sqlite",
+              "typed-legacy.sqlite",
+              "typed-malformed.sqlite",
+              "typed-trigger.sqlite",
+              "unrelated.sqlite",
+              "version.sqlite"
+            ],
+            "after": [
+              "fixture.sqlite",
+              "model-initial-0.sqlite",
+              "model-initial-1.sqlite",
+              "model-insert-failure.sqlite",
+              "model-migration-failure.sqlite",
+              "model-reset-failure.sqlite",
+              "reactive-client.sqlite",
+              "typed-index.sqlite",
+              "typed-legacy.sqlite",
+              "typed-malformed.sqlite",
+              "typed-trigger.sqlite",
+              "unrelated.sqlite",
+              "version.sqlite"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Shared Q01 owner TEMP window/intersection",
+      "passed": true,
+      "detail": {
+        "milliseconds": 2357.1999999284744,
+        "poolChecks": [
+          {
+            "case": "Q01 owner TEMP window/intersection",
+            "before": [
+              "fixture.sqlite",
+              "model-initial-0.sqlite",
+              "model-initial-1.sqlite",
+              "model-insert-failure.sqlite",
+              "model-migration-failure.sqlite",
+              "model-reset-failure.sqlite",
+              "reactive-client.sqlite",
+              "typed-index.sqlite",
+              "typed-legacy.sqlite",
+              "typed-malformed.sqlite",
+              "typed-trigger.sqlite",
+              "unrelated.sqlite",
+              "version.sqlite"
+            ],
+            "after": [
+              "fixture.sqlite",
+              "model-initial-0.sqlite",
+              "model-initial-1.sqlite",
+              "model-insert-failure.sqlite",
+              "model-migration-failure.sqlite",
+              "model-reset-failure.sqlite",
+              "reactive-client.sqlite",
+              "typed-index.sqlite",
+              "typed-legacy.sqlite",
+              "typed-malformed.sqlite",
+              "typed-trigger.sqlite",
+              "unrelated.sqlite",
+              "version.sqlite"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Shared Q01 oversized all-kind/Null/AND parity",
+      "passed": true,
+      "detail": {
+        "milliseconds": 2574.7999999523163,
+        "poolChecks": [
+          {
+            "case": "Q01 oversized all-kind/Null/AND parity",
+            "before": [
+              "fixture.sqlite",
+              "model-initial-0.sqlite",
+              "model-initial-1.sqlite",
+              "model-insert-failure.sqlite",
+              "model-migration-failure.sqlite",
+              "model-reset-failure.sqlite",
+              "reactive-client.sqlite",
+              "typed-index.sqlite",
+              "typed-legacy.sqlite",
+              "typed-malformed.sqlite",
+              "typed-trigger.sqlite",
+              "unrelated.sqlite",
+              "version.sqlite"
+            ],
+            "after": [
+              "fixture.sqlite",
+              "model-initial-0.sqlite",
+              "model-initial-1.sqlite",
+              "model-insert-failure.sqlite",
+              "model-migration-failure.sqlite",
+              "model-reset-failure.sqlite",
+              "reactive-client.sqlite",
+              "typed-index.sqlite",
+              "typed-legacy.sqlite",
+              "typed-malformed.sqlite",
+              "typed-trigger.sqlite",
+              "unrelated.sqlite",
+              "version.sqlite"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Shared Q02 repeated explicit retry errors",
+      "passed": true,
+      "detail": {
+        "milliseconds": 29.59999990463257,
+        "poolChecks": [
+          {
+            "case": "Q02 repeated explicit retry errors",
+            "before": [
+              "fixture.sqlite",
+              "model-initial-0.sqlite",
+              "model-initial-1.sqlite",
+              "model-insert-failure.sqlite",
+              "model-migration-failure.sqlite",
+              "model-reset-failure.sqlite",
+              "reactive-client.sqlite",
+              "typed-index.sqlite",
+              "typed-legacy.sqlite",
+              "typed-malformed.sqlite",
+              "typed-trigger.sqlite",
+              "unrelated.sqlite",
+              "version.sqlite"
+            ],
+            "after": [
+              "fixture.sqlite",
+              "model-initial-0.sqlite",
+              "model-initial-1.sqlite",
+              "model-insert-failure.sqlite",
+              "model-migration-failure.sqlite",
+              "model-reset-failure.sqlite",
+              "reactive-client.sqlite",
+              "typed-index.sqlite",
+              "typed-legacy.sqlite",
+              "typed-malformed.sqlite",
+              "typed-trigger.sqlite",
+              "unrelated.sqlite",
+              "version.sqlite"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Shared Q03 row/count failure isolation",
+      "passed": true,
+      "detail": {
+        "milliseconds": 22.899999976158142,
+        "poolChecks": [
+          {
+            "case": "Q03 row/count failure isolation",
+            "before": [
+              "fixture.sqlite",
+              "model-initial-0.sqlite",
+              "model-initial-1.sqlite",
+              "model-insert-failure.sqlite",
+              "model-migration-failure.sqlite",
+              "model-reset-failure.sqlite",
+              "reactive-client.sqlite",
+              "typed-index.sqlite",
+              "typed-legacy.sqlite",
+              "typed-malformed.sqlite",
+              "typed-trigger.sqlite",
+              "unrelated.sqlite",
+              "version.sqlite"
+            ],
+            "after": [
+              "fixture.sqlite",
+              "model-initial-0.sqlite",
+              "model-initial-1.sqlite",
+              "model-insert-failure.sqlite",
+              "model-migration-failure.sqlite",
+              "model-reset-failure.sqlite",
+              "reactive-client.sqlite",
+              "typed-index.sqlite",
+              "typed-legacy.sqlite",
+              "typed-malformed.sqlite",
+              "typed-trigger.sqlite",
+              "unrelated.sqlite",
+              "version.sqlite"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "TC-0031 Q01–Q03 shared large-set and failure regressions with SAH inventory",
+      "passed": true,
+      "detail": {
+        "cases": [
+          "Q01 large observations/navigation/reverse dependencies",
+          "Q01 owner TEMP window/intersection",
+          "Q01 oversized all-kind/Null/AND parity",
+          "Q02 repeated explicit retry errors",
+          "Q03 row/count failure isolation"
+        ],
+        "poolChecks": [
+          {
+            "case": "Q01 large observations/navigation/reverse dependencies",
+            "before": [
+              "fixture.sqlite",
+              "model-initial-0.sqlite",
+              "model-initial-1.sqlite",
+              "model-insert-failure.sqlite",
+              "model-migration-failure.sqlite",
+              "model-reset-failure.sqlite",
+              "reactive-client.sqlite",
+              "typed-index.sqlite",
+              "typed-legacy.sqlite",
+              "typed-malformed.sqlite",
+              "typed-trigger.sqlite",
+              "unrelated.sqlite",
+              "version.sqlite"
+            ],
+            "after": [
+              "fixture.sqlite",
+              "model-initial-0.sqlite",
+              "model-initial-1.sqlite",
+              "model-insert-failure.sqlite",
+              "model-migration-failure.sqlite",
+              "model-reset-failure.sqlite",
+              "reactive-client.sqlite",
+              "typed-index.sqlite",
+              "typed-legacy.sqlite",
+              "typed-malformed.sqlite",
+              "typed-trigger.sqlite",
+              "unrelated.sqlite",
+              "version.sqlite"
+            ]
+          },
+          {
+            "case": "Q01 owner TEMP window/intersection",
+            "before": [
+              "fixture.sqlite",
+              "model-initial-0.sqlite",
+              "model-initial-1.sqlite",
+              "model-insert-failure.sqlite",
+              "model-migration-failure.sqlite",
+              "model-reset-failure.sqlite",
+              "reactive-client.sqlite",
+              "typed-index.sqlite",
+              "typed-legacy.sqlite",
+              "typed-malformed.sqlite",
+              "typed-trigger.sqlite",
+              "unrelated.sqlite",
+              "version.sqlite"
+            ],
+            "after": [
+              "fixture.sqlite",
+              "model-initial-0.sqlite",
+              "model-initial-1.sqlite",
+              "model-insert-failure.sqlite",
+              "model-migration-failure.sqlite",
+              "model-reset-failure.sqlite",
+              "reactive-client.sqlite",
+              "typed-index.sqlite",
+              "typed-legacy.sqlite",
+              "typed-malformed.sqlite",
+              "typed-trigger.sqlite",
+              "unrelated.sqlite",
+              "version.sqlite"
+            ]
+          },
+          {
+            "case": "Q01 oversized all-kind/Null/AND parity",
+            "before": [
+              "fixture.sqlite",
+              "model-initial-0.sqlite",
+              "model-initial-1.sqlite",
+              "model-insert-failure.sqlite",
+              "model-migration-failure.sqlite",
+              "model-reset-failure.sqlite",
+              "reactive-client.sqlite",
+              "typed-index.sqlite",
+              "typed-legacy.sqlite",
+              "typed-malformed.sqlite",
+              "typed-trigger.sqlite",
+              "unrelated.sqlite",
+              "version.sqlite"
+            ],
+            "after": [
+              "fixture.sqlite",
+              "model-initial-0.sqlite",
+              "model-initial-1.sqlite",
+              "model-insert-failure.sqlite",
+              "model-migration-failure.sqlite",
+              "model-reset-failure.sqlite",
+              "reactive-client.sqlite",
+              "typed-index.sqlite",
+              "typed-legacy.sqlite",
+              "typed-malformed.sqlite",
+              "typed-trigger.sqlite",
+              "unrelated.sqlite",
+              "version.sqlite"
+            ]
+          },
+          {
+            "case": "Q02 repeated explicit retry errors",
+            "before": [
+              "fixture.sqlite",
+              "model-initial-0.sqlite",
+              "model-initial-1.sqlite",
+              "model-insert-failure.sqlite",
+              "model-migration-failure.sqlite",
+              "model-reset-failure.sqlite",
+              "reactive-client.sqlite",
+              "typed-index.sqlite",
+              "typed-legacy.sqlite",
+              "typed-malformed.sqlite",
+              "typed-trigger.sqlite",
+              "unrelated.sqlite",
+              "version.sqlite"
+            ],
+            "after": [
+              "fixture.sqlite",
+              "model-initial-0.sqlite",
+              "model-initial-1.sqlite",
+              "model-insert-failure.sqlite",
+              "model-migration-failure.sqlite",
+              "model-reset-failure.sqlite",
+              "reactive-client.sqlite",
+              "typed-index.sqlite",
+              "typed-legacy.sqlite",
+              "typed-malformed.sqlite",
+              "typed-trigger.sqlite",
+              "unrelated.sqlite",
+              "version.sqlite"
+            ]
+          },
+          {
+            "case": "Q03 row/count failure isolation",
+            "before": [
+              "fixture.sqlite",
+              "model-initial-0.sqlite",
+              "model-initial-1.sqlite",
+              "model-insert-failure.sqlite",
+              "model-migration-failure.sqlite",
+              "model-reset-failure.sqlite",
+              "reactive-client.sqlite",
+              "typed-index.sqlite",
+              "typed-legacy.sqlite",
+              "typed-malformed.sqlite",
+              "typed-trigger.sqlite",
+              "unrelated.sqlite",
+              "version.sqlite"
+            ],
+            "after": [
+              "fixture.sqlite",
+              "model-initial-0.sqlite",
+              "model-initial-1.sqlite",
+              "model-insert-failure.sqlite",
+              "model-migration-failure.sqlite",
+              "model-reset-failure.sqlite",
+              "reactive-client.sqlite",
+              "typed-index.sqlite",
+              "typed-legacy.sqlite",
+              "typed-malformed.sqlite",
+              "typed-trigger.sqlite",
+              "unrelated.sqlite",
+              "version.sqlite"
+            ]
+          }
+        ],
+        "milliseconds": [
+          3588.7000000476837,
+          2357.1999999284744,
+          2574.7999999523163,
+          29.59999990463257,
+          22.899999976158142
+        ]
+      }
+    },
+    {
+      "name": "Q03 committed mixed row/count failure delivery",
+      "passed": true,
+      "detail": {
+        "rowEvents": [
+          {
+            "subscription": "62",
+            "kind": "error",
+            "value": {
+              "kind": "BackendFailure",
+              "message": "fixture full-row read failure"
+            }
+          }
+        ],
+        "columnEvents": [
+          {
+            "subscription": "63",
+            "kind": "error",
+            "value": {
+              "kind": "BackendFailure",
+              "message": "fixture full-row read failure"
+            }
+          }
+        ],
+        "countEvents": [
+          {
+            "subscription": "64",
+            "kind": "count",
+            "value": 0
+          },
+          {
+            "subscription": "64",
+            "kind": "count",
+            "value": 1
+          }
+        ],
+        "committed": {
+          "id": "local:1",
+          "fields": [
+            {
+              "name": "active",
+              "kind": "Boolean",
+              "value": false
+            },
+            {
+              "name": "notes",
+              "kind": "String",
+              "value": "owned\u0000🌿 ' --"
+            },
+            {
+              "name": "placed_at",
+              "kind": "Timestamp",
+              "value": "-9223372036854775808"
+            },
+            {
+              "name": "price",
+              "kind": "Float",
+              "value": 1.7976931348623157e+308
+            },
+            {
+              "name": "status",
+              "kind": "String",
+              "value": "pending"
+            },
+            {
+              "name": "total_cents",
+              "kind": "Integer",
+              "value": "71"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Q02/Q05 projected retry errors remain observable and retain count deadline",
+      "passed": true,
+      "detail": {
+        "counts": [
+          0,
+          1,
+          2,
+          "BackendFailure",
+          "BackendFailure",
+          "BackendFailure",
+          3
+        ],
+        "recoveryDeadline": 48
+      }
+    },
+    {
+      "name": "Q03/Q05 repeated explicit row errors, exact recovery, valid counts and dirty cancellation",
+      "passed": true,
+      "detail": {
+        "rowEventKinds": [
+          "error",
+          "error",
+          "error",
+          "rows",
+          "error"
+        ],
+        "columnEventKinds": [
+          "error",
+          "error",
+          "error",
+          "rows",
+          "error"
+        ],
+        "counts": [
+          0,
+          1,
+          2,
+          {
+            "kind": "BackendFailure",
+            "message": "fixture projected read failure"
+          },
+          {
+            "kind": "BackendFailure",
+            "message": "fixture projected read failure"
+          },
+          {
+            "kind": "BackendFailure",
+            "message": "fixture projected read failure"
+          },
+          3
+        ],
+        "observersAfterCancel": 0
+      }
+    },
+    {
+      "name": "P01 bridge finite float, i64 timestamp, reference and Null validation",
+      "passed": true,
+      "detail": {
+        "id": "typed-primitives",
+        "fields": [
+          {
+            "name": "float",
+            "kind": "Float",
+            "value": 1.25
+          },
+          {
+            "name": "max",
+            "kind": "Float",
+            "value": 1.7976931348623157e+308
+          },
+          {
+            "name": "min",
+            "kind": "Float",
+            "value": -1.7976931348623157e+308
+          },
+          {
+            "name": "negativeZero",
+            "kind": "Float",
+            "value": 0
+          },
+          {
+            "name": "null",
+            "kind": "Null",
+            "value": null
+          },
+          {
+            "name": "reference",
+            "kind": "Reference",
+            "value": "引用\u0000'; DROP TABLE x;--"
+          },
+          {
+            "name": "subnormal",
+            "kind": "Float",
+            "value": 5e-324
+          },
+          {
+            "name": "timestamp",
+            "kind": "Timestamp",
+            "value": "-9223372036854775808"
+          },
+          {
+            "name": "timestampMax",
+            "kind": "Timestamp",
+            "value": "9223372036854775807"
+          }
+        ]
+      }
+    },
+    {
+      "name": "P11 typed batch and new primitive worker restart",
+      "passed": true,
+      "detail": {
+        "id": "typed-owned",
+        "fields": [
+          {
+            "name": "float",
+            "kind": "Float",
+            "value": 1.7976931348623157e+308
+          },
+          {
+            "name": "integer",
+            "kind": "Integer",
+            "value": "-9223372036854775808"
+          },
+          {
+            "name": "null",
+            "kind": "Null",
+            "value": null
+          },
+          {
+            "name": "reference",
+            "kind": "Reference",
+            "value": "引用\u0000'; DROP TABLE x;--"
+          },
+          {
+            "name": "timestamp",
+            "kind": "Timestamp",
+            "value": "9223372036854775807"
+          }
+        ]
+      }
+    },
+    {
+      "name": "D16 managed schema and relations after worker restart",
+      "passed": true,
+      "detail": {
+        "rowIds": [
+          "local:2"
+        ],
+        "nextId": null
+      }
+    },
+    {
+      "name": "W08 lifecycle CRUD and batch",
+      "passed": true,
+      "detail": "Disposed and terminated; ready for actual page reload"
+    }
+  ],
+  "checkedErrors": [
+    {
+      "kind": "BackendFailure",
+      "message": "Simulated init failure before invocation; no real VFS failure claimed"
+    },
+    {
+      "kind": "BackendFailure",
+      "message": "worker not initialized"
+    },
+    {
+      "kind": "BackendFailure",
+      "message": "Simulated open failure before invocation; no real VFS failure claimed"
+    },
+    {
+      "kind": "BackendFailure",
+      "message": "stale or disposed handle"
+    },
+    {
+      "kind": "RowAlreadyExists",
+      "table": "\u0000🌿'; DROP TABLE x;--",
+      "id": "é\u0000🌿"
+    },
+    {
+      "kind": "BackendFailure",
+      "message": "unknown operation"
+    },
+    {
+      "kind": "BackendFailure",
+      "message": "stale or disposed handle"
+    },
+    {
+      "kind": "BackendFailure",
+      "message": "number too large to fit in target type"
+    },
+    {
+      "kind": "BackendFailure",
+      "message": "number too small to fit in target type"
+    },
+    {
+      "kind": "BackendFailure",
+      "message": "decimal i64 string required"
+    },
+    {
+      "kind": "BackendFailure",
+      "message": "boolean required"
+    },
+    {
+      "kind": "BackendFailure",
+      "message": "string required"
+    },
+    {
+      "kind": "BackendFailure",
+      "message": "duplicate field"
+    },
+    {
+      "kind": "BackendFailure",
+      "message": "string required"
+    },
+    {
+      "kind": "BackendFailure",
+      "message": "string required"
+    },
+    {
+      "kind": "BackendFailure",
+      "message": "typed row required"
+    },
+    {
+      "kind": "BackendFailure",
+      "message": "stale or disposed handle"
+    },
+    {
+      "kind": "BackendFailure",
+      "message": "Simulated write failure before invocation; no real VFS failure claimed"
+    },
+    {
+      "kind": "BackendFailure",
+      "message": "a local database file path is required"
+    },
+    {
+      "kind": "BackendFailure",
+      "message": "a local database file path is required"
+    },
+    {
+      "kind": "BackendFailure",
+      "message": "a local database file path is required"
+    },
+    {
+      "kind": "BackendFailure",
+      "message": "a local database file path is required"
+    },
+    {
+      "kind": "BackendFailure",
+      "message": "unrelated or incompatible SQLite storage format"
+    },
+    {
+      "kind": "BackendFailure",
+      "message": "unsupported storage format version"
+    },
+    {
+      "kind": "BackendFailure",
+      "message": "finite float required"
+    },
+    {
+      "kind": "BackendFailure",
+      "message": "finite float required"
+    },
+    {
+      "kind": "BackendFailure",
+      "message": "finite float required"
+    },
+    {
+      "kind": "BackendFailure",
+      "message": "finite float required"
+    },
+    {
+      "kind": "BackendFailure",
+      "message": "decimal i64 string required"
+    },
+    {
+      "kind": "BackendFailure",
+      "message": "number too large to fit in target type"
+    },
+    {
+      "kind": "BackendFailure",
+      "message": "string required"
+    },
+    {
+      "kind": "BackendFailure",
+      "message": "null required"
+    }
+  ],
+  "done": false,
+  "needsReload": true,
+  "namespace": "hoyadb-spec23-d9e5dd9e-f63f-4955-a1d4-8aa323f23580"
+}

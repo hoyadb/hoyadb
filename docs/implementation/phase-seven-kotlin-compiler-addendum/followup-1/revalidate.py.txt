@@ -1,0 +1,84 @@
+"""Revalidate the final packet against original bytes and quarantine. Explicit checks only (safe under python -O).
+Reads files; fetches and executes nothing. Signatures are not re-run here (see followup-1/attestation records)."""
+from pathlib import Path
+import hashlib, json, sys
+import xml.etree.ElementTree as ET
+repo = Path(__file__).resolve().parents[4]
+D = repo / 'docs/implementation/phase-seven-kotlin-compiler-addendum'
+Q = repo / 'target/phase-seven-rn/compiler-review'
+H = lambda b, a='sha256': hashlib.new(a, b).hexdigest()
+checks, failures = [], []
+def check(name, ok, detail=None):
+    checks.append({'check': name, 'ok': bool(ok), **({'detail': detail} if detail is not None else {})})
+    if not ok:
+        failures.append(name)
+check('python optimize flag (asserts disabled)', True, {'sys.flags.optimize': sys.flags.optimize})
+# 1. Initial cut reconstruction.
+pres = json.loads((D / 'presentation.json').read_text())
+init_idx_bytes = (D / 'initial-cut/files-sha256.json').read_bytes()
+check('initial-cut index sha256 == a194306b', H(init_idx_bytes) == 'a194306b7a6da538881643f5c2b6ea904e65c460001aa50a21eedf57bef91a18')
+init_idx = json.loads(init_idx_bytes)
+check('presentation covers exactly the 43 indexed originals', set(init_idx) | {'files-sha256.json'} == set(pres['files']), len(pres['files']))
+for rel, digest in init_idx.items():
+    e = pres['files'][rel]
+    if e['status'] == 'unchanged at the same path':
+        ok = H((D / rel).read_bytes()) == digest
+    elif e['original_preserved_at'].startswith('initial-cut/'):
+        ok = H((D / e['original_preserved_at']).read_bytes()) == digest
+    else:
+        w = json.loads((D / e['original_preserved_at']).read_text())
+        ok = w['original_sha256'] == digest and H(w['utf8'].encode('utf-8')) == digest and len(w['utf8'].encode('utf-8')) == w['original_bytes']
+        if 'readable_sha256' in e:
+            check('readable view parses equal to original: ' + rel, json.loads((D / rel).read_text()) == json.loads(w['utf8']))
+    check('original reconstructible: ' + rel, ok)
+# 2. Marker (packet-contained bytes).
+pom = (D / 'marker/bytes/org.jetbrains.kotlin.jvm.gradle.plugin-2.1.20.pom').read_bytes()
+check('marker sha256 == 5ccb905a…', H(pom) == '5ccb905a796717218c1bb4eed8bb31fc674c5803cdd54c23753ead380f7a11b5')
+check('marker sha1 sidecar', (D / 'marker/bytes/org.jetbrains.kotlin.jvm.gradle.plugin-2.1.20.pom.sha1').read_text().split()[0] == H(pom, 'sha1'))
+check('marker md5 sidecar', (D / 'marker/bytes/org.jetbrains.kotlin.jvm.gradle.plugin-2.1.20.pom.md5').read_text().split()[0] == H(pom, 'md5'))
+text = pom.decode('utf-8')
+check('marker has no DOCTYPE/ENTITY', '<!DOCTYPE' not in text and '<!ENTITY' not in text)
+ns = {'m': 'http://maven.apache.org/POM/4.0.0'}
+root = ET.fromstring(pom)
+deps = [tuple((d.findtext('m:' + k, namespaces=ns) or '').strip() for k in ('groupId', 'artifactId', 'version', 'scope', 'type', 'classifier', 'optional'))
+        for d in root.findall('m:dependencies/m:dependency', ns)]
+check('marker packaging pom', (root.findtext('m:packaging', namespaces=ns) or '').strip() == 'pom')
+check('marker sole dependency is KGP 2.1.20 without scope/type/classifier/optional/exclusions',
+      deps == [('org.jetbrains.kotlin', 'kotlin-gradle-plugin', '2.1.20', '', '', '', '')] and not root.findall('m:dependencies/m:dependency/m:exclusions', ns))
+check('marker has no parent/repositories/pluginRepositories/build/profiles/properties/dependencyManagement/modules',
+      all(root.find('m:' + t, ns) is None for t in ('parent', 'repositories', 'pluginRepositories', 'build', 'profiles', 'properties', 'dependencyManagement', 'modules')))
+# 3. Bundle files vs quarantine bytes.
+bundle = json.loads((D / 'bundle.json').read_text())
+n = 0
+for comp in bundle['additional_jar_components'] + bundle['metadata_only_components']:
+    for f in comp['files']:
+        p = Q / 'closure' / comp['coordinate'].replace(':', '__') / f['name']
+        data = p.read_bytes(); n += 1
+        sidecar = (p.with_name(p.name + '.sha1')).read_text().split()[0].lower()
+        check(f"bundle bytes/sha1 sidecar: {comp['coordinate']} {f['name']}",
+              H(data) == f['sha256'] and H(data, 'sha512') == f['sha512'] and sidecar == H(data, 'sha1') and len(data) == f['bytes'])
+expected = sum(1 for e in json.loads((Q / 'verification.json').read_text())['components'].values() for name in e['files'])
+check('bundle file count equals verified closure files (POM+module+JAR)', n == expected and n > 0, {'bundle': n, 'verified': expected})
+strong = json.loads((Q / 'strong-sidecars.json').read_text())
+check('published strong sidecars all match', all(r.get('match') for e in strong for r in e['sidecars'].values() if r['http_code'] == '200'),
+      sum(1 for e in strong for r in e['sidecars'].values() if r['http_code'] == '200'))
+# 4. Parents.
+for r in json.loads((D / 'followup-1/provenance/parents-match.json.json').read_text() if (D / 'followup-1/provenance/parents-match.json.json').exists() else (D / 'followup-1/provenance/parents-match.json').read_text()):
+    data = (Q / 'parents' / (r['coordinate'].split(':')[1] + '-' + r['coordinate'].split(':')[2] + '.pom')).read_bytes()
+    root_bytes = (repo / r['root_captured_path']).read_bytes()
+    check('parent bytes == root captured: ' + r['coordinate'], data == root_bytes and H(data) == r['fetched_sha256'] == r['gradle_cache_sha256'])
+# 5. Follow-up copies vs sources.
+for rel, e in pres['followup_1_sources'].items():
+    cur = (D / rel).read_bytes()
+    src = repo / e['source']
+    if H(cur) == e['source_sha256']:
+        ok = True
+    else:
+        w = json.loads(cur)
+        ok = w.get('original_sha256') == e['source_sha256'] and H(w['utf8'].encode('utf-8')) == e['source_sha256']
+    check('follow-up copy equals source: ' + rel, ok and H(src.read_bytes()) == e['source_sha256'])
+result = {'checks': len(checks), 'failures': failures, 'results': checks}
+(D / 'followup-1/revalidate-result.json').write_text(json.dumps(result, indent=2, ensure_ascii=False) + '\n')
+print('checks', len(checks), 'failures', failures)
+if failures:
+    raise SystemExit(1)

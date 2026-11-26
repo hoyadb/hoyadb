@@ -1,0 +1,93 @@
+#!/usr/bin/env python3
+"""Verify R2 quarantine .asc signatures with the existing local gpg in a fresh public-only homedir.
+
+Keys are fetched read-only over HTTPS (keys.openpgp.org by issuer fingerprint/keyid, keyserver.ubuntu.com fallback).
+No user keyring, no options file, no agent autostart, no auto-key-retrieve. Records every command/status.
+"""
+import hashlib
+import json
+from pathlib import Path
+import re
+import shutil
+import subprocess
+import tempfile
+
+HERE = Path(__file__).resolve().parents[1]
+Q = HERE / 'quarantine-v2'  # v2 successor bytes
+GPG = shutil.which('gpg')
+artifacts = json.loads((HERE / 'artifacts-v2.json').read_text())
+
+
+def run(cmd):
+    p = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=120)
+    return {'command': cmd, 'exit': p.returncode, 'stdout': p.stdout.decode('utf-8', 'replace'), 'stderr': p.stderr.decode('utf-8', 'replace')}
+
+
+def fetch(url, dest):
+    p = subprocess.run(['curl', '-sS', '-L', '--proto', '=https', '--proto-redir', '=https', '--max-time', '60', '-o', str(dest), '-w', '%{http_code}', url],
+                       stdout=subprocess.PIPE, text=True, timeout=90)
+    code = p.stdout.strip()
+    data = dest.read_bytes() if dest.exists() else b''
+    return {'url': url, 'http_code': code, 'bytes': len(data), 'sha256': hashlib.sha256(data).hexdigest() if data else None}
+
+
+home = Path(tempfile.mkdtemp(prefix='hoya-r2-pgp-', dir='/tmp'))
+home.chmod(0o700)
+base = [GPG, '--homedir', str(home), '--no-options', '--no-autostart', '--batch', '--no-auto-key-retrieve']
+keys_dir = HERE / 'r2-keys-v2'
+keys_dir.mkdir(exist_ok=True)
+gpg_info = {'path': GPG, 'realpath': str(Path(GPG).resolve()), 'sha256': hashlib.sha256(Path(GPG).resolve().read_bytes()).hexdigest(),
+            'version': run([GPG, '--version'])['stdout'].splitlines()[0]}
+results = []
+targets = [(c, Q / c.split(':')[0] / c.split(':')[1] / c.split(':')[2] / f"{c.split(':')[1]}-{c.split(':')[2]}.jar") for c in artifacts['components']]
+for bom in artifacts.get('import_boms', {}):
+    g, a, v = bom.split(':')
+    targets += [(bom + ' (pom)', Q / g / a / v / f'{a}-{v}.pom'), (bom + ' (module)', Q / g / a / v / f'{a}-{v}.module')]
+for coord, jar in targets:
+    asc = jar.with_name(jar.name + '.asc')
+    rec = {'coordinate': coord, 'file': jar.name, 'jar_sha256': hashlib.sha256(jar.read_bytes()).hexdigest(), 'asc_sha256': hashlib.sha256(asc.read_bytes()).hexdigest()}
+    packets = run(base + ['--list-packets', str(asc)])
+    fpr = re.search(r'issuer fpr v4 ([0-9A-F]{40})', packets['stdout'])
+    keyid = re.search(r'keyid ([0-9A-F]{16})', packets['stdout'])
+    digest = re.search(r'digest algo (\d+)', packets['stdout'])
+    rec.update(issuer_fingerprint=fpr.group(1) if fpr else None, issuer_keyid=keyid.group(1) if keyid else None, digest_algo=digest.group(1) if digest else None)
+    lookups = []
+    ident = rec['issuer_fingerprint'] or rec['issuer_keyid']
+    key_file = keys_dir / f'{ident}.asc'
+    if not key_file.exists():
+        url = (f'https://keys.openpgp.org/vks/v1/by-fingerprint/{ident}' if rec['issuer_fingerprint'] else f'https://keys.openpgp.org/vks/v1/by-keyid/{ident}')
+        lookups.append(fetch(url, key_file))
+        if lookups[-1]['http_code'] != '200' or not key_file.exists() or key_file.stat().st_size == 0:
+            key_file.unlink(missing_ok=True)
+            lookups.append(fetch(f'https://keyserver.ubuntu.com/pks/lookup?op=get&options=mr&search=0x{ident}', key_file))
+    rec['key_lookups'] = lookups
+    rec['key_file_sha256'] = hashlib.sha256(key_file.read_bytes()).hexdigest() if key_file.exists() and key_file.stat().st_size else None
+    if rec['key_file_sha256']:
+        imp = run(base + ['--import', str(key_file)])
+        rec['import_exit'] = imp['exit']
+        if imp['exit'] != 0:
+            # keys.openpgp.org strips unverified user IDs; gpg cannot import a UID-less key -> fallback keyserver
+            alt = keys_dir / f'{ident}.ubuntu.asc'
+            if not alt.exists():
+                lookups.append(fetch(f'https://keyserver.ubuntu.com/pks/lookup?op=get&options=mr&search=0x{ident}', alt))
+            imp = run(base + ['--import', str(alt)])
+            rec['fallback_key_file_sha256'] = hashlib.sha256(alt.read_bytes()).hexdigest() if alt.exists() else None
+            rec['fallback_import_exit'] = imp['exit']
+    verify = run(base + ['--status-fd', '1', '--verify', str(asc), str(jar)])
+    status = [l for l in verify['stdout'].splitlines() if l.startswith('[GNUPG:]')]
+    rec['verify_exit'] = verify['exit']
+    rec['status'] = status
+    rec['goodsig'] = any(' GOODSIG ' in l for l in status)
+    valid = [l.split()[2] for l in status if ' VALIDSIG ' in l]
+    rec['validsig_fingerprint'] = valid[0] if valid else None
+    rec['bad'] = [l.split()[1] for l in status if l.split()[1] in ('BADSIG', 'ERRSIG', 'EXPKEYSIG', 'REVKEYSIG', 'EXPSIG', 'NO_PUBKEY')]
+    uids = re.findall(r'GOODSIG [0-9A-F]+ (.*)', '\n'.join(status))
+    rec['signer_uid'] = uids[0] if uids else None
+    rec['identity_trust'] = 'UNKNOWN: public keyserver key; no independently trusted publisher key'
+    results.append(rec)
+shutil.rmtree(home)
+out = {'method': 'fresh public-only gpg homedir; keys via keys.openpgp.org (fallback keyserver.ubuntu.com)', 'gpg': gpg_info,
+       'homedir_removed': not home.exists(), 'results': results}
+(HERE / 'r2-signatures-v2.json').write_text(json.dumps(out, indent=1) + '\n')
+for r in results:
+    print(r['coordinate'], 'GOODSIG' if r['goodsig'] else 'NO-GOODSIG', r['validsig_fingerprint'], 'digest', r['digest_algo'], r['bad'], (r['signer_uid'] or '')[:60])

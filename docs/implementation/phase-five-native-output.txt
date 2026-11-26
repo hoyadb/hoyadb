@@ -1,0 +1,104 @@
+Phase 5 final native matrix. Started 2026-10-24T07:59:07.898156+00:00
+
+COMMAND ["cargo", "build", "--manifest-path", "spikes/cross-platform/native/Cargo.toml", "--offline", "--locked"]
+   Compiling hoyadb-core v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-core)
+   Compiling hoyadb-storage-sqlite v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-storage-sqlite)
+   Compiling hoyadb-storage-memory v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-storage-memory)
+   Compiling hoyadb-native-spike v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/spikes/cross-platform/native)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 14.65s
+
+EXIT 0 ELAPSED 14.766
+
+COMMAND ["swiftc", "-target", "x86_64-apple-macosx26.5", "-warnings-as-errors", "-import-objc-header", "spikes/cross-platform/native/include/hoya.h", "spikes/cross-platform/native/tests/main.swift", "spikes/cross-platform/native/target/debug/libhoyadb_native_spike.a", "-o", "spikes/cross-platform/native/target/native-tests"]
+
+EXIT 0 ELAPSED 1.927
+
+COMMAND ["swiftc", "-target", "x86_64-apple-macosx26.5", "-parse-as-library", "-warnings-as-errors", "-import-objc-header", "spikes/cross-platform/native/include/hoya.h", "spikes/cross-platform/native/tests/experiments.swift", "spikes/cross-platform/native/target/debug/libhoyadb_native_spike.a", "-o", "spikes/cross-platform/native/target/native-experiments"]
+
+EXIT 0 ELAPSED 2.156
+
+COMMAND ["swiftc", "-target", "x86_64-apple-macosx26.5", "-warnings-as-errors", "-import-objc-header", "spikes/cross-platform/native/include/hoya.h", "spikes/cross-platform/native/tests/persistence.swift", "spikes/cross-platform/native/target/debug/libhoyadb_native_spike.a", "-o", "spikes/cross-platform/native/target/native-persistence"]
+
+EXIT 0 ELAPSED 1.456
+
+COMMAND ["swiftc", "-target", "x86_64-apple-macosx26.5", "-parse-as-library", "-warnings-as-errors", "-import-objc-header", "spikes/cross-platform/native/include/phase3.h", "spikes/cross-platform/native/tests/reactive.swift", "spikes/cross-platform/native/target/debug/libhoyadb_native_spike.a", "-o", "spikes/cross-platform/native/target/native-reactive"]
+
+EXIT 0 ELAPSED 3.02
+
+COMMAND ["swiftc", "-target", "x86_64-apple-macosx26.5", "-parse-as-library", "-warnings-as-errors", "-import-objc-header", "spikes/cross-platform/native/include/phase4.h", "spikes/cross-platform/native/tests/commands.swift", "spikes/cross-platform/native/target/debug/libhoyadb_native_spike.a", "-o", "spikes/cross-platform/native/target/native-commands"]
+
+EXIT 0 ELAPSED 30.257
+
+COMMAND ["xcrun", "swift-format", "lint", "--strict", "spikes/cross-platform/native/tests/commands.swift"]
+
+EXIT 0 ELAPSED 3.076
+
+COMMAND ["spikes/cross-platform/native/target/native-tests"]
+rows: [main.Row(id: "a", status: "pending", total: 1200, paid: false), main.Row(id: "b", status: "pending", total: 3500, paid: true)]
+PASS N01
+PASS N02
+PASS N03
+PASS N04
+PASS N05
+native: 5 passed, 0 failed
+
+EXIT 0 ELAPSED 2.421
+
+COMMAND ["spikes/cross-platform/native/target/native-experiments"]
+N07 insertion-to-callback ns=74676, thread=79801518; includes explicit immediate-drain scheduling
+PASS N07
+PASS N08
+PASS N09
+native experiments: 3 passed, 0 failed
+
+EXIT 0 ELAPSED 3.228
+
+COMMAND ["spikes/cross-platform/native/target/native-persistence", "writer", "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-phase-five-legacy-persistence-o7hxhjb1/fixture.sqlite"]
+PASS persistence writer, pid=40789 P01/P02/P04
+
+EXIT 0 ELAPSED 3.026
+
+COMMAND ["spikes/cross-platform/native/target/native-persistence", "reader", "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-phase-five-legacy-persistence-o7hxhjb1/fixture.sqlite"]
+restored rows: [main.SavedRow(id: "a-🌿", status: "pending", total: -9223372036854775808, paid: false), main.SavedRow(id: "c", status: "pending", total: 1200, paid: true), main.SavedRow(id: "d", status: "pending", total: 3500, paid: false)]
+restored rows: [main.SavedRow(id: "b-é", status: "complete", total: 9223372036854775807, paid: true)]
+PASS persistence reader, pid=40989 P01/P02/P04
+
+EXIT 0 ELAPSED 0.036
+
+COMMAND ["spikes/cross-platform/native/target/native-reactive"]
+PASS R14A owned rows/count/columns
+PASS R14B reentrant callback lifecycle
+R15 native insertion-to-callback samples ns=[714776, 940825, 814494, 813727, 850336, 1217402, 1456089, 1176410, 1182052, 1156879, 1445604, 1493646], drainCallerThread=79804366, cadence=explicit immediate drain; measured to callback entry
+PASS R14C/R15 stale owners and timing
+PASS Q05 projected error delivery/recovery
+Swift Phase3 runtime: Version 26.7.1 (Build 25G241)
+
+EXIT 0 ELAPSED 4.226
+
+COMMAND ["spikes/cross-platform/native/target/native-commands"]
+H05 writer pre-commit barrier
+PASS H05 reader-before
+H05 writer post-commit barrier
+PASS H05 reader-after
+E-N04 writer partial-bootstrap/queued-entity committed barrier
+PASS E-N04 independent reader
+H01 one bounded handler-to-drain sample ns=45806840
+PASS H01
+PASS H02
+PASS H03
+PASS H04
+PASS H05
+H06 bounded HTTP array members=3
+H06 bounded HTTP array members=1
+PASS H06
+native commands: 6 passed, 0 failed
+E-N01 initial create=1 then mixed envelopes=3 identity preserved context samples=5
+E-N01 correction clock1000->25; older24 kept/newer26 applied
+PASS E-N01
+E-N02 pages=2 large bytes=360264 chunks=3
+PASS E-N02
+PASS E-N03
+PASS E-N04
+native entities: 4 passed, 0 failed
+
+EXIT 0 ELAPSED 116.654

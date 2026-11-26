@@ -1,0 +1,102 @@
+[
+  {
+    "path": "org/jetbrains/kotlin/net/jpountz/util/linux/aarch64/liblz4-java.so",
+    "bytes": 77859,
+    "sha256": "a732552e3855c4f81d70f34a7468c26ffd4f3babcf20a06fa309082905ec4e81"
+  },
+  {
+    "path": "org/jetbrains/kotlin/net/jpountz/util/linux/amd64/liblz4-java.so",
+    "bytes": 203408,
+    "sha256": "108157738367c0a972c2228dead1af896bf5d5a7fc7f58fcbf855aa2b67049ea"
+  },
+  {
+    "path": "org/jetbrains/kotlin/net/jpountz/util/linux/i386/liblz4-java.so",
+    "bytes": 68840,
+    "sha256": "f72fff01f82b13bf54e945d1d9158a4b6c10caabca0a102fba5477c8d8baa8b4"
+  },
+  {
+    "path": "org/jetbrains/kotlin/net/jpountz/util/linux/ppc64le/liblz4-java.so",
+    "bytes": 209016,
+    "sha256": "c6dd51e13b98853688589828e6760f334088bec00a143197c05486bb94fd8495"
+  },
+  {
+    "path": "org/jetbrains/kotlin/net/jpountz/util/linux/s390x/liblz4-java.so",
+    "bytes": 89200,
+    "sha256": "9584dad637d5241fdb649f1db07835623a7c567c43f0c9450249c72a81657990"
+  },
+  {
+    "path": "org/jetbrains/kotlin/net/jpountz/util/win32/amd64/liblz4-java.so",
+    "bytes": 516677,
+    "sha256": "1ba944ded629f0ea2c7669c9cb4b3a39b2d773142a0b5f8fce8e11d6a50800fd"
+  },
+  {
+    "path": "org/jetbrains/kotlin/org/fusesource/jansi/internal/native/FreeBSD/x86/libjansi.so",
+    "bytes": 12100,
+    "sha256": "71d4e610ba70854a344078512afd3ca42676107e48cd753ecd91e806abb45569"
+  },
+  {
+    "path": "org/jetbrains/kotlin/org/fusesource/jansi/internal/native/FreeBSD/x86_64/libjansi.so",
+    "bytes": 15308,
+    "sha256": "8c56980e59f79e7a95b8edcbfe0a4f6b54bb6964aa9034efa7617725179d1d52"
+  },
+  {
+    "path": "org/jetbrains/kotlin/org/fusesource/jansi/internal/native/Linux/arm/libjansi.so",
+    "bytes": 22232,
+    "sha256": "fc3bb7c1178369ae6d3b07e51b0590eb8a6bb6dd6acd90115afeb18c65d85ad6"
+  },
+  {
+    "path": "org/jetbrains/kotlin/org/fusesource/jansi/internal/native/Linux/arm64/libjansi.so",
+    "bytes": 15952,
+    "sha256": "a807b7b420a15ee48e13c694f1e4d84b0d69c8857c2f0008c484328522bc69e5"
+  },
+  {
+    "path": "org/jetbrains/kotlin/org/fusesource/jansi/internal/native/Linux/armv6/libjansi.so",
+    "bytes": 15068,
+    "sha256": "402a6ee45d724e95eacace01e4e17029e10869ddaa5f5f4b45e13eed33d016d7"
+  },
+  {
+    "path": "org/jetbrains/kotlin/org/fusesource/jansi/internal/native/Linux/armv7/libjansi.so",
+    "bytes": 12236,
+    "sha256": "f01f068c1be78380c36868b4f47f8f24877a17a3e2269cc43c43615f9aee3ecb"
+  },
+  {
+    "path": "org/jetbrains/kotlin/org/fusesource/jansi/internal/native/Linux/ppc64/libjansi.so",
+    "bytes": 18064,
+    "sha256": "8d97571bb654005984c4d7595062f94a7bdb8f11203abc9efe005c22571def43"
+  },
+  {
+    "path": "org/jetbrains/kotlin/org/fusesource/jansi/internal/native/Linux/x86/libjansi.so",
+    "bytes": 17580,
+    "sha256": "8bdd29ef7e167116e848594760fe49546cd7a3e45f130bc30766ba1490193653"
+  },
+  {
+    "path": "org/jetbrains/kotlin/org/fusesource/jansi/internal/native/Linux/x86_64/libjansi.so",
+    "bytes": 15800,
+    "sha256": "4bf8600bdeee40175ee1f5978c76bc9caa5083c35d6a7844d5ede74a669fb234"
+  },
+  {
+    "path": "org/jetbrains/kotlin/org/fusesource/jansi/internal/native/Mac/arm64/libjansi.jnilib",
+    "bytes": 53036,
+    "sha256": "a2d8080e97424ddc0c21b6c16326eaa8b5e5c7a6aca0de2113da3ea1aa6726aa"
+  },
+  {
+    "path": "org/jetbrains/kotlin/org/fusesource/jansi/internal/native/Mac/x86/libjansi.jnilib",
+    "bytes": 14748,
+    "sha256": "ea7ceaf2b63f95ac34822fed2f4cdfd436599c682e04383fac3736dd4c4a41a6"
+  },
+  {
+    "path": "org/jetbrains/kotlin/org/fusesource/jansi/internal/native/Mac/x86_64/libjansi.jnilib",
+    "bytes": 15612,
+    "sha256": "537d38ad49b9d159eef64ed0a774c816e679606d9c37266776b74c2cd6074f3f"
+  },
+  {
+    "path": "org/jetbrains/kotlin/org/fusesource/jansi/internal/native/Windows/x86/jansi.dll",
+    "bytes": 113924,
+    "sha256": "1d6314da4b3a7a5e9dded6b0cc1b83f15f8f603897ae00cfe98ef171285620f3"
+  },
+  {
+    "path": "org/jetbrains/kotlin/org/fusesource/jansi/internal/native/Windows/x86_64/jansi.dll",
+    "bytes": 127010,
+    "sha256": "d23fc9293b68781d43314403048d6dc655fa4620b6b4db3dcd345c52c332a2f4"
+  }
+]

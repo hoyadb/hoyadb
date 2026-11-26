@@ -1,0 +1,87 @@
+{
+ "predecessor": {
+  "cut": "follow-up 9 successor (sealed; files-sha256.json a704df53\u2026, 22 files, unchanged)",
+  "sources_sha256": {
+   "README.md": "8b7f4a02e06fc829cb3d135d923a77384a354bf641dd7a0911453cfb5de72054",
+   "classfile.py": "d6cddefb56da9ba602a4b85c5e885f47ef03d90a983fb4eb09e18e98f218f6cd",
+   "embedded_scan.py": "20299d9e0518c489effe4e4e6d5c22f485be015cc7a1a56f5adac0e845ad9833",
+   "fixtures.py": "98435b6272b53931ef9261d8dd4d813679a40f5aaeabca067ab35a041c719ed2",
+   "init_script_guard.py": "a03132fa672aa67b56672de7f7b8aec0f4814974fc2485277fee5ad61ef7135a",
+   "java_properties.py": "1520ebe4d58b2667aa4e7df242387ff63c46d1bac0971216bb02320b3a17beab",
+   "kotlin_guard.py": "d0755e6ec0ef69770167b4b018be5df5e066d774fbf144777f8c9822993ddf52",
+   "native_cache.py": "cec043d7425b0ee9259ff719ddbbed0acf21b0ca9f2bf9971ba8e6199d9006d3",
+   "r1-compile-alignment.init.gradle": "74aa545a6c82cbdc434e71328653979715659818603a6c0d60627245e8d1f9a0",
+   "symbol_guard.py": "56668e924bca2606d5eb2f5dc8983cf7e1c2a22998ba38679d86e23feb26c0a9",
+   "test_embedded_scan.py": "e017988682145333f92540b8cf9c41e66601ecf0050e8565c58d90fcef53e114",
+   "test_init_script_guard.py": "d172782de62399add70feed1df9c2a5e23aafc38bce5bb6453d40c48011a925a",
+   "test_java_properties.py": "5d52254eef75884ba61dc901f22624fb61fb1be919f23e16807458c1a7431eea",
+   "test_kotlin_guard.py": "ed0106864534484486004544e517186a647c2d1ee025992b6aa41724f7b5ecf5",
+   "test_native_cache.py": "74573a65ab2b0e18fc6964d03c23c375238132b897e391b88e2b006e979e126f",
+   "test_symbol_guard.py": "6993bb6abb3bd5cc9176c048e96db9f0391f76e3b05edd603b655cd7f6019f9c"
+  },
+  "local_snapshot": "target/phase-seven-security-remediation/code-snapshots/pre-followup-10",
+  "snapshot_equals_predecessor": true
+ },
+ "successor": {
+  "sources_sha256": {
+   "README.md": "08357ad52ccc63632b9862203546d0cdd5cada3d60020f63368c54c5b324cf33",
+   "classfile.py": "d6cddefb56da9ba602a4b85c5e885f47ef03d90a983fb4eb09e18e98f218f6cd",
+   "embedded_scan.py": "20299d9e0518c489effe4e4e6d5c22f485be015cc7a1a56f5adac0e845ad9833",
+   "fixtures.py": "98435b6272b53931ef9261d8dd4d813679a40f5aaeabca067ab35a041c719ed2",
+   "init_script_guard.py": "a03132fa672aa67b56672de7f7b8aec0f4814974fc2485277fee5ad61ef7135a",
+   "java_properties.py": "1520ebe4d58b2667aa4e7df242387ff63c46d1bac0971216bb02320b3a17beab",
+   "kotlin_guard.py": "d0755e6ec0ef69770167b4b018be5df5e066d774fbf144777f8c9822993ddf52",
+   "native_cache.py": "adb46c03d232e93663029052e4dd9cd083a74296e05b81d338dde080b07e8ebc",
+   "r1-compile-alignment.init.gradle": "74aa545a6c82cbdc434e71328653979715659818603a6c0d60627245e8d1f9a0",
+   "symbol_guard.py": "56668e924bca2606d5eb2f5dc8983cf7e1c2a22998ba38679d86e23feb26c0a9",
+   "test_embedded_scan.py": "e017988682145333f92540b8cf9c41e66601ecf0050e8565c58d90fcef53e114",
+   "test_init_script_guard.py": "d172782de62399add70feed1df9c2a5e23aafc38bce5bb6453d40c48011a925a",
+   "test_java_properties.py": "5d52254eef75884ba61dc901f22624fb61fb1be919f23e16807458c1a7431eea",
+   "test_kotlin_guard.py": "ed0106864534484486004544e517186a647c2d1ee025992b6aa41724f7b5ecf5",
+   "test_native_cache.py": "9291981380ad0125a247e12307cf39bc80599a5a0de72ef52e98af3a8e58590f",
+   "test_symbol_guard.py": "6993bb6abb3bd5cc9176c048e96db9f0391f76e3b05edd603b655cd7f6019f9c"
+  },
+  "changed": [
+   "README.md",
+   "native_cache.py",
+   "test_native_cache.py"
+  ],
+  "added": [],
+  "removed": [],
+  "unchanged": [
+   "classfile.py",
+   "embedded_scan.py",
+   "fixtures.py",
+   "init_script_guard.py",
+   "java_properties.py",
+   "kotlin_guard.py",
+   "r1-compile-alignment.init.gradle",
+   "symbol_guard.py",
+   "test_embedded_scan.py",
+   "test_init_script_guard.py",
+   "test_java_properties.py",
+   "test_kotlin_guard.py",
+   "test_symbol_guard.py"
+  ]
+ },
+ "green": {
+  "all_ok": true,
+  "tests_per_mode": 124,
+  "per_suite": {
+   "test_kotlin_guard": 28,
+   "test_symbol_guard": 9,
+   "test_embedded_scan": 11,
+   "test_init_script_guard": 9,
+   "test_java_properties": 25,
+   "test_native_cache": 42
+  },
+  "python": "3.14.8",
+  "interpreter_sha256": "5f923e627e0bc2c9ad28334bfd32429e8b5b41b0a996e64ed46258220ebca184",
+  "sources_unchanged_during_run": true,
+  "green_sources_equal_successor": true
+ },
+ "unchanged_required": {
+  "kotlin_guard.py": true,
+  "r1-compile-alignment.init.gradle": true
+ }
+}

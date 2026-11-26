@@ -1,0 +1,876 @@
+{
+  "scope": "R9/R10 frozen Apple build/provider/package checks and macOS x86_64 runtime. No iOS runtime, macOS arm64, remote publication or R11 converter claim.",
+  "review_status": "submitted for independent Fable review; not yet received",
+  "runtime_sources": {
+    "Cargo.lock": "a7385544aa00356ebdc3e1fad3e95ca61722d1a85333f19bae18049cd77ac507",
+    "Cargo.toml": "9273a751adcd3ae6e53d9de8e7d7681970e96aa9ebbdbc56cb5b3dd22ddff5d3",
+    "bindings/swift/build-artifacts.py": "81335920373e4587a46ca19d6e746d48a417c00cbd0ecaa99688cb3b204857e7",
+    "crates/hoyadb-bindings/Cargo.toml": "508986656f7406bad3599645e037d2b7c25c945232c9ac137633839777ba7c3f",
+    "crates/hoyadb-bindings/src/budget.rs": "8efe83e4524fa929e9da3d8e5e2a65d014e72fb33b44da0c1effe8b31e8d5e15",
+    "crates/hoyadb-bindings/src/codec.rs": "eef07eec01e3d3cf00b0328d93061becb1127369a293dc4c33d3669e258787a1",
+    "crates/hoyadb-bindings/src/commands.rs": "2837b59a02a58754893a3e1a69c506c3fa01d0459824c81907c2abaefa776756",
+    "crates/hoyadb-bindings/src/data.rs": "a828b4b8afda985e380cd50abcff3ee333854839f3449f369ecc2c118be8c372",
+    "crates/hoyadb-bindings/src/engine.rs": "321d55e0a4a78fccbf5fab590dae146b57b893d57c3c3fe3f8f42be40d5bc572",
+    "crates/hoyadb-bindings/src/entities.rs": "c4b93592b14ffa0f1812e35a37b0358a53ac3a945a1a71577f7e449ee400d56b",
+    "crates/hoyadb-bindings/src/lib.rs": "36f2c223d737b34ecb21b89aeddeeb94be386963ed0f230a1ce1c3c2379c6372",
+    "crates/hoyadb-bindings/src/observations.rs": "360622ce3714c11650d3804bda994f833fdd173b18f820b850d2e487e4cefc87",
+    "crates/hoyadb-bindings/src/reconciliation.rs": "32d3ba19369e728101b39a64bdadd53616f2f37863e30235dd5e290c7b232df6",
+    "crates/hoyadb-core/Cargo.toml": "1cd7711f51b4dc97e28a2160265dd71d1cb1b7202559fd05c4e277f14162075b",
+    "crates/hoyadb-core/src/command/entity.rs": "f1e09c838573217eb0bc1e9910e7708f7524e41e10fa214dec3c6b9df891e089",
+    "crates/hoyadb-core/src/command/entity_owner.rs": "5f8fde79ab2bfae92ddeb9dc74c1888073af8bee0b248f8584a7cc532cb115e5",
+    "crates/hoyadb-core/src/command/execution.rs": "b408c3f67490e18e9ee969d5ac9ccc0253b44d73226956cb8f1d7f9cf7c70e82",
+    "crates/hoyadb-core/src/command/json.rs": "64419603b3ee2d5a890a50d688ed4cd29ce0612136565672103df102c48d3e6c",
+    "crates/hoyadb-core/src/command/ledger_txn.rs": "87ea05ed454e5f8ba194af438eb79fe0996c583e005f59f4d2ef501586d1d329",
+    "crates/hoyadb-core/src/command/merge.rs": "bd74db90486b83d369995fea252a1301fc113ee1c4cfb6fad879324afadebabb",
+    "crates/hoyadb-core/src/command/mod.rs": "877253c2c62d190eb488298237edada832b139a41dbcb0fd146e9a1f2874f1a7",
+    "crates/hoyadb-core/src/command/overlay.rs": "65b36cbcdf2db74c114533373419cd894d1b9bdcf42db198f2092519ad89b847",
+    "crates/hoyadb-core/src/command/owner.rs": "1cabd73405ed5ae15ce20caf3d4d0b6a7965c7dca187daee41f6f800417200b2",
+    "crates/hoyadb-core/src/command/phase3_cases.rs": "633c3603fd16b8f1b6ff18a85ee0990d9430a9aee89f4c1a57279e76c35cf427",
+    "crates/hoyadb-core/src/command/policy.rs": "daf53a58133f92b537d95e08b5bd21346ee2130569ca3199ddb1607f6c6ee58a",
+    "crates/hoyadb-core/src/command/proposed.rs": "9099639354f6f28f0a946d8f15d61e2dbbe99bcca71aad21c65147a31c5afbc5",
+    "crates/hoyadb-core/src/command/pull.rs": "56b0cba7e2fa31c4cb3d620c1bd484b6ac3c91a21a03348eb07b100e4ca63ca7",
+    "crates/hoyadb-core/src/command/queue.rs": "c2efd2b9d2e4a6197b8ec69dcef40b1584363d8a635ac61a179e16e7cda727d3",
+    "crates/hoyadb-core/src/command/reconcile/discard.rs": "57559fe896d922a944caa48cab197f2fb9683af5841cc9d4c908c11050b1a76e",
+    "crates/hoyadb-core/src/command/reconcile/fallback.rs": "26a296158cf3b0a3fac10b7aaebac35e844be8e92487c4dfdd4c7fd8350ed67c",
+    "crates/hoyadb-core/src/command/reconcile.rs": "f31e93619402fc73cd0bbe704259bd79e8157a179825c0ae2355f9c790105cd1",
+    "crates/hoyadb-core/src/command/records.rs": "c817f766428cd9ff7687a38d1464a0e2ecd1f6430d295557f8f71bc55f4a89ad",
+    "crates/hoyadb-core/src/command/security.rs": "8dd4e236fac63c93019ce32e3e17932915409a4262bab5966765e19deb513038",
+    "crates/hoyadb-core/src/command/sync.rs": "f193e3cc2e6894b2cc131095248fc70eb6f5cd0014b423227d79392b7eceb83f",
+    "crates/hoyadb-core/src/lib.rs": "9484a9eb3fcf563086c450d1746c7c6a76f8347f26f7928240c77ccebe9433db",
+    "crates/hoyadb-core/src/model/database.rs": "33329a639cdada74dc7a3748d0e7187bbca7b7d927ddc3ad1af21ed66798ed0b",
+    "crates/hoyadb-core/src/model/migration.rs": "db9cfabe28b4f9a511f2dc77f93e2ae2f2db4096b192277e07ed3b84bff859df",
+    "crates/hoyadb-core/src/model/mod.rs": "9b8132927cd06a8c92d62aa7ca74a8f74c6e1e19ed5082c46b98fd023cbbae79",
+    "crates/hoyadb-core/src/model/query.rs": "224ad496a17f2fc702ed808baa7ff2c1fbbd8f41fcf982e6b7174b32e54bd67f",
+    "crates/hoyadb-core/src/model/reactive.rs": "a9f6323e69b5f74eb06d0879fc7c1d977990d3a3aa602f19268bc874e8faabda",
+    "crates/hoyadb-core/src/model/schema.rs": "b9b79984a9ab98de0811722f207a245fe10c82444c2612dc10769b882d338741",
+    "crates/hoyadb-core/src/storage/counters.rs": "04f36841fd9cb0f95c5cc99d461a94165794a12f93acda466157cb9c9162dde9",
+    "crates/hoyadb-core/src/storage/model.rs": "48faafdadc8aa5e4cb4ef8971e34735bbfc277a0405d27f3a923e1bdf5e592c2",
+    "crates/hoyadb-core/src/storage/observation.rs": "1a09c65d6fd034f888b51a9849a037272f53bc73942b991a4f3d0291dc9998cc",
+    "crates/hoyadb-core/src/storage/snapshot/delta_tests.rs": "8e3395484a6066fd8c10777d5e496f3dad747641031d92f51d91b01ef6d34814",
+    "crates/hoyadb-core/src/storage/snapshot/lifecycle.rs": "21cdee8560896debba4b6ef2084eceec70a635ed9c1c01facf8cec09885ec67e",
+    "crates/hoyadb-core/src/storage/snapshot/mod.rs": "ddf6fc8f99ad03c3ddaa86ae1d9e1d9bf3f415d3882d27c39a46feef8e1691d9",
+    "crates/hoyadb-core/src/storage/snapshot/projection.rs": "91aa2fb3d2fe2aca7d3f62c3ea7de5e78bb9ae8decd177d289ec25135134fd29",
+    "crates/hoyadb-core/src/storage/snapshot/sync.rs": "1d1d6b17f0ec36311bcbde0886b50cb392c7af80ca321a866d55ecd68580c3a9",
+    "crates/hoyadb-core/src/storage/snapshot/typed.rs": "0a8ed744aa90dbc75d1dae649a84a20eeaad57601cc7c0d298d0d67000d21386",
+    "crates/hoyadb-core/src/storage/snapshot/undo.rs": "e00ccf7d6f7048fa81fec025cb11ab963ea9db91e741b2a66fcb6d9c63b644ac",
+    "crates/hoyadb-core/src/storage/sync.rs": "3b26c32d47f308fa620763bd43783070b8d278403ccb167785b208d0a3f19e64",
+    "crates/hoyadb-core/src/storage/typed.rs": "fff0af4a0483e096f9768ccdc24e23a445547098895740d747c76c2d7055b7aa",
+    "crates/hoyadb-core/src/storage.rs": "5b7dc18c1d3de75e0aea273ea65675df4f0724bf7b898b3c3ffe0ca3b3175160",
+    "crates/hoyadb-native/Cargo.lock": "a96a5481be73dc5ab125b4cec4b441bedd256f7a1d834694073cba5f342cb951",
+    "crates/hoyadb-native/Cargo.toml": "a5588297516d698ab453b96d30982abcbdb2ed216b80d5aa72be727666feb0c9",
+    "crates/hoyadb-native/include/HoyaNative/module.modulemap": "33326b1780c8a1c82237313f2ee88578d34e816af4ecc3a4a799abfeb23af60c",
+    "crates/hoyadb-native/include/hoyadb.h": "2f61e513be42d3e7aabbd9bb06f02a98d88096551276ae89dd5b30aa28526b48",
+    "crates/hoyadb-native/src/lib.rs": "4cfa3f57fc11b69b09b7a2c9e5e73ce0ae1b13557f90762bba86da417fa19a47",
+    "crates/hoyadb-storage-memory/Cargo.toml": "408ec7aec3268ea5b8fa87d3d2f1980a01000b1da299662ad9d02b43834a371d",
+    "crates/hoyadb-storage-memory/src/lib.rs": "0c26d6799994174b2c6543fc8cc506a8ada788ae761030b70fd8baa3517724f1",
+    "crates/hoyadb-storage-sqlite/Cargo.toml": "7e274ae6f53a43271949403625bfdb4f84ef3601b5029d9fcd2b6238f3fe6f2b",
+    "crates/hoyadb-storage-sqlite/src/bin/entity_restart_fixture.rs": "67bec3f33795cc52d900458c47d261a2cb13cd3427c89335d5a55c7901a3a6dd",
+    "crates/hoyadb-storage-sqlite/src/bin/restart_fixture.rs": "75c241135617e5a5ef5f6877190c21d08b5b8a3afbc454eb06a9da569fc38f2f",
+    "crates/hoyadb-storage-sqlite/src/encryption.rs": "add0aa6bcd9f08ee7831c51063ca8f007d9f75f59a39ab101399699139f17df8",
+    "crates/hoyadb-storage-sqlite/src/lib.rs": "6eb0e7e6200889eda48a0c4e97dfb02a97628fc34d84d02927e43079e66482ed",
+    "crates/hoyadb-storage-sqlite/src/lifecycle.rs": "a335aa8388d67f22a63198daa2108140909f71f2654f33d5f2222dbb75c70241",
+    "crates/hoyadb-storage-sqlite/src/projection.rs": "0dcb0063c412177f4a515e9959d97f0959ac92f163901234cf553bb1a7148ec1",
+    "crates/hoyadb-storage-sqlite/src/query.rs": "063646093bc87bad5af88920e4f355efa1f183ece8a47d5cbd2bc01ef2c596ec",
+    "crates/hoyadb-storage-sqlite/src/sync.rs": "31ba4850db97406b577390fcc48e091a60f205be0df2040ef03ee117912181b2",
+    "crates/hoyadb-storage-sqlite/src/test_hooks.rs": "4f4c8adbc613dd4132512bd7ea60b657cc9eed14c523ccabf060092edbdf6583",
+    "rust-toolchain.toml": "9500030ccefd0bab631fb7f1763f79f4103eca3a344c36cf15be869e330683bb"
+  },
+  "sdk_inputs": {
+    "bindings/swift/Examples/GeneralConsumer/Package.swift": "f29045a9b4f641a9b554c879103e0f241fffac2ed2594ca21aaa9e3bab71615f",
+    "bindings/swift/Examples/GeneralConsumer/Sources/GeneralConsumer/Advanced.swift": "4d7a39b5bd1a53cd8d98365962257f277a9c3fa8adc1d1d9e0c23a243cbeefa2",
+    "bindings/swift/Examples/GeneralConsumer/Sources/GeneralConsumer/Consumer.swift": "d44058245e9c46079d3f71d72af180910d7a284abfbcd92eeee9a76b4d832f81",
+    "bindings/swift/Examples/GeneralConsumer/Sources/GeneralConsumer/Recovery.swift": "50e86899dcdc5677775c3d5fcb0ef2b15ebe7a5049414bee3d11915fdb1f076f",
+    "bindings/swift/Examples/GeneralConsumer/Sources/GeneralConsumer/Walkthrough.swift": "2e65858c4c6ea691ed58a2edfad9fc06c536f9d897a36a210e99410795c33bdd",
+    "bindings/swift/Package.swift": "c08ee92a5778748aa2d3d078e6acdb1bdd74c569fac209ca581b6d353d47d261",
+    "bindings/swift/Sources/HoyaDB/Admission.swift": "c9fcf5c3eccff2d183d033afdd63df6c505a595a9e834e87f1bf284893811831",
+    "bindings/swift/Sources/HoyaDB/BackupPolicy.swift": "a67a5a67ed446001f4c7b74ab5bf50d07bd99c44c23a0cfe1a98b5ce0d85afe5",
+    "bindings/swift/Sources/HoyaDB/Commands.swift": "68850a4d1225fb6e392c807fe95f1722359daaf2ea46d04e607561bca4ccfd9f",
+    "bindings/swift/Sources/HoyaDB/ConflictPolicy.swift": "71eec91b7ee8a48c5a864d5358583f789c3ccb9de2558c497af46910157191c3",
+    "bindings/swift/Sources/HoyaDB/Database.swift": "ddf52564ad31e7af15622aabd5851029d0c3dbeb74ceccdac9aa943781f5fe7c",
+    "bindings/swift/Sources/HoyaDB/Entities.swift": "a6d09cd51fdf512b4aa28d8820ccffd7241d6c15b1f4e6e820bdb41fa4375d59",
+    "bindings/swift/Sources/HoyaDB/Migrations.swift": "bbb73585ae426cf45fb8f79a145c35ab58c170137bcda0bce0d67a9708264047",
+    "bindings/swift/Sources/HoyaDB/Namespace.swift": "50ab0e021da607a5035f4cb2911e52cfc5ff853933caec046e857b641d72f86f",
+    "bindings/swift/Sources/HoyaDB/NativeRuntime.swift": "5a1a248a290daed4cdc7d24172f1358d77379dbd0d672fbe1da8e06124ccea26",
+    "bindings/swift/Sources/HoyaDB/Observations.swift": "9708da93cbc888b13ef2325b3802e5969c4e7762c57b9bb9020cf747e410b158",
+    "bindings/swift/Sources/HoyaDB/Relations.swift": "dc6aedd6a1ff20e84e101713e682d6e310c06373ae612771748ac09f3a8488ea",
+    "bindings/swift/Sources/HoyaDB/Sync.swift": "9e1f52796a8210e5566c2f3e9d42d613724c044c0c1a94b383e13538e9b8d816",
+    "bindings/swift/Sources/HoyaDB/Types.swift": "0f78e1011554620ead4e4d1e138032d8c259a9930265c4bade440db21d37ab4e",
+    "bindings/swift/Sources/HoyaDB/Values.swift": "63ad3bad3a86d1da299bd99e377c7ad143cdc8deb9dbac5c8d7dafffef777f8a",
+    "bindings/swift/Sources/HoyaDB/Wire.swift": "04c86dfa67952a50492fb0fde7511cdddf460960414f84948f8a11318d3ebb18",
+    "bindings/swift/Sources/HoyaDBTesting/FakeTransport.swift": "4c70a0ec8c7bab3243e274cb81c2682d788e662a9ecf98e3b83f8f629e083842",
+    "bindings/swift/Sources/HoyaDBTesting/ManualClock.swift": "7f0421261eb085336de402a9f60fdfca779211c4f13917f95a8d5ae5eef82fa7",
+    "bindings/swift/Sources/HoyaDBTesting/MemoryTesting.swift": "05cd92fa6cd61af0ed5d31caa5f76aeaf9e4f9c0c5c1d52762298f15a1758ea2",
+    "bindings/swift/Tests/HoyaDBTestingTests/TestingTests.swift": "cd1c6bd7754dc0d02357514207ac108724ac18882c4af1057c646ce6f2bae743",
+    "bindings/swift/Tests/HoyaDBTests/AdmissionTests.swift": "fdb19bf9d02c54cdfeed3260caae31cc1f173d1280771c8d601814a501314be6",
+    "bindings/swift/Tests/HoyaDBTests/BackgroundErrorTests.swift": "f003a8f2ed128ed05a6635dc1190fceb6c6b80b3045c733d4ca039dc063f16b1",
+    "bindings/swift/Tests/HoyaDBTests/BackupPolicyTests.swift": "22a3f8d2cebbe0c00b53049961e0d1a30a0711656c4f61277dc5abf3c79b7b7f",
+    "bindings/swift/Tests/HoyaDBTests/CommandTests.swift": "d89f167edb7e412f6b58f780ca48b387cffd2c799dc98b73faafe5c5b81d65c9",
+    "bindings/swift/Tests/HoyaDBTests/ConflictPolicyNativeTests.swift": "8d1cf04ab9c37bfed293a2248d1ec08c70d4f7ac64caca0dc673fd0c2c854af3",
+    "bindings/swift/Tests/HoyaDBTests/ConflictPolicyTests.swift": "10d2102cd363cac647ba77794729fa4681f97ae0b77d3025781ae6215d47f231",
+    "bindings/swift/Tests/HoyaDBTests/EntityTests.swift": "02159a96237ce7de50d58a23510abca99fe9de739381bc3ffcde6a50161a8be5",
+    "bindings/swift/Tests/HoyaDBTests/GuardGW16bTests.swift": "a727a67de14392459148d50eca916b7b4e038d204cadbb8f34d8704840d6be45",
+    "bindings/swift/Tests/HoyaDBTests/GuardSDKTests.swift": "dccff8fbac17c9ec30aa3a5e7cd6a0f3c41ed109cf3b9305f38cf48e8da78d6d",
+    "bindings/swift/Tests/HoyaDBTests/LifetimeTests.swift": "1cecf2a9ba1e60c8249d0c4956ae9552ea2f65539f028885aeb163778e06908c",
+    "bindings/swift/Tests/HoyaDBTests/MigrationTests.swift": "63a4ce15e902255945e3ed6820d9730683ba5b22b7c01e400280611af7c4d0ce",
+    "bindings/swift/Tests/HoyaDBTests/NamespaceTests.swift": "b372cb4017b72e489d1ebf35f065c72cb1527855cc6f42da2c2c3b5f890dcef5",
+    "bindings/swift/Tests/HoyaDBTests/NativeOwnerTests.swift": "18ea78df74d1dde594f034a37f30813173555fef14894ac9d38876a9e5888880",
+    "bindings/swift/Tests/HoyaDBTests/ObservationTests.swift": "09f361d292942e41b80cd8f133dfa6acdc745ef8299ab6dcfcb4c507f56154ba",
+    "bindings/swift/Tests/HoyaDBTests/ProtocolTests.swift": "6a58ef3e7d34b6bea3c2f767dacca2e57112de499b5f7667cfc7ffaa86f10afb",
+    "bindings/swift/Tests/HoyaDBTests/RelationTests.swift": "db6945c58df3cc151f9877f35e2e13c6f6c0eb9c6930d48eda3b8c51766f4c9d",
+    "bindings/swift/Tests/HoyaDBTests/SDKRecoveryTests.swift": "41c535387eb0500f432959e4ec49865a44d162940a7e7774fecaaf106b9f8861",
+    "bindings/swift/Tests/HoyaDBTests/SyncTests.swift": "537c4b2fab423c44de54ec4c5ae57c6d5e7be7e0349c5d57c9d5030db4094150",
+    "bindings/swift/Tests/HoyaDBTests/TypedValuesTests.swift": "39b045a65ccfc532bb5c8fe5bada415c01bd551c84f1a30cd037d6a98c9d22d9",
+    "bindings/swift/check_artifacts.py": "0729a7ae3a7f678453151fc7f3b6e760bea55e9efb3c9b92cc99edb8a889b47c"
+  },
+  "verification_inputs": {
+    "crates/hoyadb-native/tests/boundary.rs": "368ed066e292b4da824fa023d46ad8bba95427d25f826806f1804ef0a40b11e4",
+    "crates/hoyadb-native/tests/cross_provider.c": "b4fafe997bace5268feb44197643839e2de906f843c84abdcaaaab01088aea72",
+    "crates/hoyadb-native/tests/entropy.c": "c938d8faedd3d4ec8eefe0a668ddc23afe13f323c5dee5b0b2e6c2d1890f78c4",
+    "crates/hoyadb-native/tests/entropy_provider.c": "e5ba28c4f3c371aceaa91ef75ab329da51fee98704b17e7a59e6f3b1f8a03437",
+    "crates/hoyadb-native/tests/exports.py": "47ea0bf7cd1b87c72a5676bdfbfc52d91b6600f9a19f78758c912a09bb6e0e60",
+    "crates/hoyadb-native/tests/fixtures/memory-open.json": "a78db4c5f651f9872a9a4a958b144154049e56b55bb74e501b898b8538d6b649",
+    "crates/hoyadb-native/tests/java/dev/hoyadb/NativeBridgeTest.java": "47f91b76054ec71d287d310ecee626d2c2bd70f9a2a1e3f23137baa04e0b3cdc",
+    "crates/hoyadb-native/tests/policy_downgrade.py": "76c0fe1013b40391f9e03aa6ed8d43bf20dcb4d276c37e3222a9afbda382260d",
+    "crates/hoyadb-native/tests/provider.c": "595c811dafdc766b768e38e95b9d158db985a156d14ce47ffccb5ff920642c9f",
+    "tests/conformance/command_clock.rs": "9ab0d0486eed54a95df55695203791e2907429153cc4e8b0f2f5a3894ef0859a",
+    "tests/conformance/command_guard.rs": "904b9b1b4b22478eb4cede319432576a40eff9ca2f47d5d7dfc8e30063c1b695",
+    "tests/conformance/command_guard_api.rs": "a8d6310ae7293b99acc41a4731fbb44637c52983be567069af4d55f2cadb7ac9",
+    "tests/conformance/command_owner.rs": "7a39c4c095481a48cb3218f7b4046bb359986f317cf75f33645563f46894aceb",
+    "tests/conformance/command_recovery.rs": "7c26e40b6a8120f94107570571d32127f4218cf12b1588f4dd3a3a4a764f0a08",
+    "tests/conformance/command_recovery_api.rs": "d4aa510bdc9d9096aaf792ab66d94a898de228c313ec6a09c9d31fa6283ed808",
+    "tests/conformance/command_sync.rs": "ae3c3af7a0a9b988ee049737ad4a9aa0d251daa1a09468679ee980b47a150038",
+    "tests/conformance/conflict_policy.rs": "dfd30b373cd0c5553e72aa450ad0b12697764bc58952a534c13399b0e9e8e6f6",
+    "tests/conformance/conflict_policy_race.rs": "3406b2610c0ec3a877b1456063d1da1aa49cc7133f5ecddad305efd41722adc3",
+    "tests/conformance/data_model.rs": "0fd218839472e5d559420909086c817a7bc6139e41551a7a335b69ce7b2724de",
+    "tests/conformance/entity_overlap.rs": "161c4ed813e99ddaa4043b3243a260d54571ea6c6ec19d3cbb3c5e328e30430a",
+    "tests/conformance/entity_promotion.rs": "44f45024d2ce622ab33eaa639af60f141b26c6766eab4a6219cf3d6cf5eeafff",
+    "tests/conformance/entity_pull.rs": "2cffcc6c186e7b93df5f43dcefd3e1c39e19a23c368c961d567b331921dbcf70",
+    "tests/conformance/entity_scaling.rs": "31f292b82a30134e376ce2b78bde65b15239767ffae124d8436e14935794fdfa",
+    "tests/conformance/entity_sync.rs": "21d1593595d854f3fde3753d3b43804648b4a810be0156bac3de2988da0ad442",
+    "tests/conformance/format3_scaling.rs": "50aaadca148d9d927e1c1d477cd7edb4823b79464972f6591ac82d6ee3fcfb7c",
+    "tests/conformance/guard_race.rs": "765c78fd7db563bc9ebf378dfe952d1823f82d6bd4ec91b152d36ef53535d423",
+    "tests/conformance/model_restart.rs": "1d7b7bfb60f9b7863e87a6f0905fb8421389713565bdac27227f5d87e78569da",
+    "tests/conformance/ordered.rs": "58351253a9b2123c92b0a39c7c9706b85b69c04b062d05aa914b0106459e9b0b",
+    "tests/conformance/overlay-golden/memory.txt": "07fb53e35a0d50c46f4ba1429c3ace15b9c31af600de2937a6e665caf71e824b",
+    "tests/conformance/overlay-golden/sqlite.txt": "07fb53e35a0d50c46f4ba1429c3ace15b9c31af600de2937a6e665caf71e824b",
+    "tests/conformance/overlay.rs": "b1796639043dd710235f6600541391e3eeb17feaa3f92183185e71697a4c8cd4",
+    "tests/conformance/ownership.rs": "a81e50d25cd98053fc337c750f518497a351e312bb8d3d70bb372e3d323cd9e5",
+    "tests/conformance/platform_core.rs": "2462fd15d4f5165ee25bfb9f4c9f3dc92c5d89c0d780eb020437554b6e89e917",
+    "tests/conformance/projection.rs": "b4a2b430f9a90db14482bdf26836b2bee36dbf971e666f2e5fcd4de8c9bc6ded",
+    "tests/conformance/reactivity.rs": "8f1889404ef104f15177fa4d1b5da6739076c904e977799cb7ae1dcb04cb1cc6",
+    "tests/conformance/resolution_snapshot.rs": "ae5f7d9b9b8c567e4cad20c9998b90e9e2cc7d833261338aac7287961285e0b4",
+    "tests/conformance/schema_storage.rs": "2fca572182213224409f70b60dbbcdf7125fceec1d86497496d99a958daa30d7",
+    "tests/conformance/si_y03_adapter_characterization.rs": "f1385239a2a64e09ae048eeb2c2a1b2bd432a0fc4d8f93c061233484587e9011",
+    "tests/conformance/storage.rs": "266993511651d3717c9ac8d7e16e6eac0835fd7248d2d7ae983c5cb83058e930",
+    "tests/conformance/strict_open.rs": "14c0d0b81d1b05163bd285c811b4107f9a4270154e86b56f3e86c26a71b8326b",
+    "tests/conformance/sync_guard_storage.rs": "73a2a7b0f7245503faae3a09e3c771fe8899a4cf91daf7772ccda075bf0c3566",
+    "tests/conformance/sync_storage.rs": "24689c40710f11ded1df19144a52ca3ec1ba42d602c9bd1f47a2e8c2103af190",
+    "tests/conformance/typed_storage.rs": "80916c42824c0484f72261bfd04c821949580ca816e6a916fc5c660216350dfb",
+    "tests/conformance/work_counters.rs": "bdd164a98150e4585c9379aa4d2640e19bd8226088de659d3d99ce28dab75359"
+  },
+  "packaging_inputs": {
+    "crates/hoyadb-native/third-party/NOTICE.md": "5178e861fbf3c226c42222c4bce70a440fa309fd266105b3eb9c97fffcbf23ba",
+    "crates/hoyadb-native/third-party/index.json": "25cdfe0a33f2adefe49d52bdbc0a7e7581dc0c2cb177500a233788b16f567115",
+    "crates/hoyadb-native/third-party/native/sqlcipher-4.19.0/LICENSE-sqlcipher": "2a2826f6acf46fa650730cf42cbb22a642be33a7ef119c9c4f4bf6daf3bef48e",
+    "crates/hoyadb-native/third-party/native/sqlite-3.53.4/LICENSE-sqlite": "85806d613cfda5901f848b3b5b4b04396c8c64e89c97c0af3706c42b0c44bb47",
+    "crates/hoyadb-native/third-party/rust/bitflags-2.13.2/LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+    "crates/hoyadb-native/third-party/rust/bitflags-2.13.2/LICENSE-MIT": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb",
+    "crates/hoyadb-native/third-party/rust/cc-1.10.0/LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+    "crates/hoyadb-native/third-party/rust/cc-1.10.0/LICENSE-MIT": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+    "crates/hoyadb-native/third-party/rust/fallible-iterator-0.3.0/LICENSE-APACHE": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08",
+    "crates/hoyadb-native/third-party/rust/fallible-iterator-0.3.0/LICENSE-MIT": "0816e154b159ba255c563f7c8c7df5bbb8cc5fc96f5ab8cf9f4743b4f41fe7eb",
+    "crates/hoyadb-native/third-party/rust/fallible-streaming-iterator-0.1.9/LICENSE-APACHE": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08",
+    "crates/hoyadb-native/third-party/rust/fallible-streaming-iterator-0.1.9/LICENSE-MIT": "8dcec5569a9be5b0e086c80faed6f1aefa670af0ec29cecc2f714303096887e0",
+    "crates/hoyadb-native/third-party/rust/find-msvc-tools-0.1.15/LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+    "crates/hoyadb-native/third-party/rust/find-msvc-tools-0.1.15/LICENSE-MIT": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+    "crates/hoyadb-native/third-party/rust/libsqlite3-sys-0.38.1/LICENSE": "c10c1f27337546471e5f7e4e97fdd398b35b9d4e126115dcd22de8d8e65abf6f",
+    "crates/hoyadb-native/third-party/rust/pkg-config-0.3.34/LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+    "crates/hoyadb-native/third-party/rust/pkg-config-0.3.34/LICENSE-MIT": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+    "crates/hoyadb-native/third-party/rust/rusqlite-0.40.1/LICENSE": "c10c1f27337546471e5f7e4e97fdd398b35b9d4e126115dcd22de8d8e65abf6f",
+    "crates/hoyadb-native/third-party/rust/shlex-2.0.1/LICENSE-APACHE": "553fffcd9b1cb158bc3e9edc35da85ca5c3b3d7d2e61c883ebcfa8a65814b583",
+    "crates/hoyadb-native/third-party/rust/shlex-2.0.1/LICENSE-MIT": "4455bf75a91154108304cb283e0fea9948c14f13e20d60887cf2552449dea3b1",
+    "crates/hoyadb-native/third-party/rust/smallvec-1.16.4/LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+    "crates/hoyadb-native/third-party/rust/smallvec-1.16.4/LICENSE-MIT": "0b28172679e0009b655da42797c03fd163a3379d5cfa67ba1f1655e974a2a1a9",
+    "crates/hoyadb-native/third-party/rust/sqlcipher-src-419.0.6+sqlcipher-4.19.0-sqlite-3.53.4-libtomcrypt-1.18.2/LICENSE": "413f82e0f4f8191a8624a7b7b2c9809466f7f3d930ad52a74ad29f2dd907881d",
+    "crates/hoyadb-native/third-party/rust/vcpkg-0.2.15/LICENSE-APACHE": "60c93a31f490375aadf64098b75f10715010379541021e00261045d7800611d3",
+    "crates/hoyadb-native/third-party/rust/vcpkg-0.2.15/LICENSE-MIT": "016d20f335060a70e79d9fcf8dfaa6201114d65d592211f4bdfb8ae9ca2bc1dc",
+    "crates/hoyadb-native/third-party/rust/zeroize-1.9.1/LICENSE-APACHE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "crates/hoyadb-native/third-party/rust/zeroize-1.9.1/LICENSE-MIT": "8c7516d4b27b1e495be5e38b612298b63de48d05f49cdac94f70f3cd70f8864b",
+    "crates/hoyadb-native/third-party/toolchain/rust-1.98.1/COPYRIGHT-library.html": "68129500b616d5838629e68f55ff3aed5e096dacf60ce9eb41bbe599a563afa6",
+    "crates/hoyadb-native/tools/apple_notices.py": "c282426d7b2d0dc14c0621cec471057a4a1086528af8bb7245d86a05b5ad9e53",
+    "crates/hoyadb-native/tools/test_apple_notices.py": "3e057242c4d9b57f7b190d6977d9f2f88a2e087d9b74bccc9d77592cf310eee6",
+    "tools/release/compatibility.py": "d65433a257f213ca39806e8325bca3027632fd644fa16a3fedebcdf3f90edec8",
+    "tools/release/current-api.json": "989e1191b929bacaaeb5e4190d75f3b28e8385a311e6df3fcea623736c906f99",
+    "tools/release/swift-accepted-changes.json": "6196398d00dcadab5ad589711775eeac8dbede7ff33f961c498711881397e34a"
+  },
+  "inventory_counts": {
+    "runtime": 72,
+    "sdk": 45,
+    "verification": 44,
+    "packaging": 33,
+    "external_package_files": 2508,
+    "toolchain_link_inputs": 76
+  },
+  "source_changes": {
+    "runtime": [],
+    "sdk": [],
+    "verification": [],
+    "packaging": [
+      "crates/hoyadb-native/third-party/index.json"
+    ],
+    "external_package_files": [],
+    "toolchain_link_inputs": []
+  },
+  "final_parent_sha256": "f6b92990642e5ce21daf0a048db5c17f43236ea571b22b54167b1a8332cc228e",
+  "final_packaging_sha256": "0432e12a075fe00b74a7051cb12375ad42d48345f22688baa8d4d0fc35662fef",
+  "first_runtime_package_sha256": "4b26d25e611cb9f3b4e24375e3a7b10def43c2799853cb271860889933554894",
+  "first_runtime_parent_sha256": "57baa8be218aff2f1f1e2c688972b8d1d8a2653585e92be3be6caba528bc3690",
+  "runtime_archive_sha256": "4e753c24ef8e666c94ad98ae3b3d0c4c0a4482c9d095f7dc4c1e8931cf9b80b0",
+  "final_archive_sha256": "4e753c24ef8e666c94ad98ae3b3d0c4c0a4482c9d095f7dc4c1e8931cf9b80b0",
+  "native_dylib_sha256": "0d3d8c32393d724180c083ea6af8acfc72b39bebe252fd45bd0a19bcc4bbd112",
+  "final_artifact_files": {
+    "HoyaNative.xcframework/Info.plist": "69e3575d4e5d5b5aba295dfa150ccc9ae7e87062be8bcde4a0134c3ac61cf481",
+    "HoyaNative.xcframework/NOTICE.md": "5178e861fbf3c226c42222c4bce70a440fa309fd266105b3eb9c97fffcbf23ba",
+    "HoyaNative.xcframework/ios-arm64/Headers/HoyaNative/module.modulemap": "33326b1780c8a1c82237313f2ee88578d34e816af4ecc3a4a799abfeb23af60c",
+    "HoyaNative.xcframework/ios-arm64/Headers/hoyadb.h": "2f61e513be42d3e7aabbd9bb06f02a98d88096551276ae89dd5b30aa28526b48",
+    "HoyaNative.xcframework/ios-arm64/libhoyadb_native.a": "3d2a248d201c066b27fa5ee242c5b47e9c59b32f0541c7c836042a0ac2d53390",
+    "HoyaNative.xcframework/ios-arm64_x86_64-simulator/Headers/HoyaNative/module.modulemap": "33326b1780c8a1c82237313f2ee88578d34e816af4ecc3a4a799abfeb23af60c",
+    "HoyaNative.xcframework/ios-arm64_x86_64-simulator/Headers/hoyadb.h": "2f61e513be42d3e7aabbd9bb06f02a98d88096551276ae89dd5b30aa28526b48",
+    "HoyaNative.xcframework/ios-arm64_x86_64-simulator/libhoyadb_native.a": "2ff2ce222bbcf7e768a1eae22d3f6c732b4f007050423fa4bd9e52367f9c714b",
+    "HoyaNative.xcframework/macos-x86_64/Headers/HoyaNative/module.modulemap": "33326b1780c8a1c82237313f2ee88578d34e816af4ecc3a4a799abfeb23af60c",
+    "HoyaNative.xcframework/macos-x86_64/Headers/hoyadb.h": "2f61e513be42d3e7aabbd9bb06f02a98d88096551276ae89dd5b30aa28526b48",
+    "HoyaNative.xcframework/macos-x86_64/libhoyadb_native.a": "4e753c24ef8e666c94ad98ae3b3d0c4c0a4482c9d095f7dc4c1e8931cf9b80b0",
+    "HoyaNative.xcframework/native-build-parent.json": "f6b92990642e5ce21daf0a048db5c17f43236ea571b22b54167b1a8332cc228e",
+    "HoyaNative.xcframework/packaging.json": "0432e12a075fe00b74a7051cb12375ad42d48345f22688baa8d4d0fc35662fef",
+    "HoyaNative.xcframework/third-party/index.json": "25cdfe0a33f2adefe49d52bdbc0a7e7581dc0c2cb177500a233788b16f567115",
+    "HoyaNative.xcframework/third-party/native/sqlcipher-4.19.0/LICENSE-sqlcipher": "2a2826f6acf46fa650730cf42cbb22a642be33a7ef119c9c4f4bf6daf3bef48e",
+    "HoyaNative.xcframework/third-party/native/sqlite-3.53.4/LICENSE-sqlite": "85806d613cfda5901f848b3b5b4b04396c8c64e89c97c0af3706c42b0c44bb47",
+    "HoyaNative.xcframework/third-party/rust/bitflags-2.13.2/LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+    "HoyaNative.xcframework/third-party/rust/bitflags-2.13.2/LICENSE-MIT": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb",
+    "HoyaNative.xcframework/third-party/rust/cc-1.10.0/LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+    "HoyaNative.xcframework/third-party/rust/cc-1.10.0/LICENSE-MIT": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+    "HoyaNative.xcframework/third-party/rust/fallible-iterator-0.3.0/LICENSE-APACHE": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08",
+    "HoyaNative.xcframework/third-party/rust/fallible-iterator-0.3.0/LICENSE-MIT": "0816e154b159ba255c563f7c8c7df5bbb8cc5fc96f5ab8cf9f4743b4f41fe7eb",
+    "HoyaNative.xcframework/third-party/rust/fallible-streaming-iterator-0.1.9/LICENSE-APACHE": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08",
+    "HoyaNative.xcframework/third-party/rust/fallible-streaming-iterator-0.1.9/LICENSE-MIT": "8dcec5569a9be5b0e086c80faed6f1aefa670af0ec29cecc2f714303096887e0",
+    "HoyaNative.xcframework/third-party/rust/find-msvc-tools-0.1.15/LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+    "HoyaNative.xcframework/third-party/rust/find-msvc-tools-0.1.15/LICENSE-MIT": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+    "HoyaNative.xcframework/third-party/rust/libsqlite3-sys-0.38.1/LICENSE": "c10c1f27337546471e5f7e4e97fdd398b35b9d4e126115dcd22de8d8e65abf6f",
+    "HoyaNative.xcframework/third-party/rust/pkg-config-0.3.34/LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+    "HoyaNative.xcframework/third-party/rust/pkg-config-0.3.34/LICENSE-MIT": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+    "HoyaNative.xcframework/third-party/rust/rusqlite-0.40.1/LICENSE": "c10c1f27337546471e5f7e4e97fdd398b35b9d4e126115dcd22de8d8e65abf6f",
+    "HoyaNative.xcframework/third-party/rust/shlex-2.0.1/LICENSE-APACHE": "553fffcd9b1cb158bc3e9edc35da85ca5c3b3d7d2e61c883ebcfa8a65814b583",
+    "HoyaNative.xcframework/third-party/rust/shlex-2.0.1/LICENSE-MIT": "4455bf75a91154108304cb283e0fea9948c14f13e20d60887cf2552449dea3b1",
+    "HoyaNative.xcframework/third-party/rust/smallvec-1.16.4/LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+    "HoyaNative.xcframework/third-party/rust/smallvec-1.16.4/LICENSE-MIT": "0b28172679e0009b655da42797c03fd163a3379d5cfa67ba1f1655e974a2a1a9",
+    "HoyaNative.xcframework/third-party/rust/sqlcipher-src-419.0.6+sqlcipher-4.19.0-sqlite-3.53.4-libtomcrypt-1.18.2/LICENSE": "413f82e0f4f8191a8624a7b7b2c9809466f7f3d930ad52a74ad29f2dd907881d",
+    "HoyaNative.xcframework/third-party/rust/vcpkg-0.2.15/LICENSE-APACHE": "60c93a31f490375aadf64098b75f10715010379541021e00261045d7800611d3",
+    "HoyaNative.xcframework/third-party/rust/vcpkg-0.2.15/LICENSE-MIT": "016d20f335060a70e79d9fcf8dfaa6201114d65d592211f4bdfb8ae9ca2bc1dc",
+    "HoyaNative.xcframework/third-party/rust/zeroize-1.9.1/LICENSE-APACHE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "HoyaNative.xcframework/third-party/rust/zeroize-1.9.1/LICENSE-MIT": "8c7516d4b27b1e495be5e38b612298b63de48d05f49cdac94f70f3cd70f8864b",
+    "HoyaNative.xcframework/third-party/toolchain/rust-1.98.1/COPYRIGHT-library.html": "68129500b616d5838629e68f55ff3aed5e096dacf60ce9eb41bbe599a563afa6",
+    "native-build.json": "f6b92990642e5ce21daf0a048db5c17f43236ea571b22b54167b1a8332cc228e"
+  },
+  "artifact_changes_since_runtime": [
+    "HoyaNative.xcframework/Info.plist",
+    "HoyaNative.xcframework/native-build-parent.json",
+    "HoyaNative.xcframework/packaging.json",
+    "HoyaNative.xcframework/third-party/index.json",
+    "native-build.json"
+  ],
+  "provider_parent_pointer": {
+    "reason": "Warm ordinary build reordered Info.plist AvailableLibraries, changing parent digest only through Info.plist. Preserve provider derivation parent by referring to its immutable retained file instead of generated live path. No archive bytes changed.",
+    "before_index_sha256": "354fc7204a2881cfba1620d5500f73fa934dcbd12d00e3fcd60c8a911cdb8e01",
+    "after_index_sha256": "25cdfe0a33f2adefe49d52bdbc0a7e7581dc0c2cb177500a233788b16f567115",
+    "retained_provider_parent_sha256": "57baa8be218aff2f1f1e2c688972b8d1d8a2653585e92be3be6caba528bc3690",
+    "final_parent_sha256": "f6b92990642e5ce21daf0a048db5c17f43236ea571b22b54167b1a8332cc228e",
+    "plist_equal_after_sorting_libraries": true
+  },
+  "verification": {
+    "swift_tests": 102,
+    "native_tests": 9,
+    "native_unit_tests": 3,
+    "native_integration_tests": 6,
+    "artifact_checks": 5,
+    "release_tool_tests": 22,
+    "all_passed_checks": [
+      "normal builder after provider refresh",
+      "final notice finalizer",
+      "final artifact checks",
+      "Swift tests with warnings as errors",
+      "isolated consumer build + independent writer and reader",
+      "native tests/fmt/Clippy with warnings denied",
+      "Swift API comparison",
+      "all 3 Apple native export comparisons",
+      "source API gate",
+      "release tool tests",
+      "strict Swift formatting",
+      "protected command-only native downgrade probe"
+    ],
+    "failed_attempts_retained": [
+      "first builder stale-provider-evidence; replaced with fresh real per-architecture proof",
+      "restricted SwiftPM failed compiler-cache writes; normal host retry passed",
+      "restricted consumer rejected backup policy; same binary with fresh fixtures passed normal host access",
+      "direct tool SDK path comparison differed only by symlink spelling; resolved directories and all file hashes identical",
+      "warm-builder byte-equality assertion found only reordered slice list and derived parent/package; exact archive bytes unchanged",
+      "finalizer refused notice-full input; fresh native-only stage passed unchanged validator"
+    ]
+  },
+  "commands": {
+    "artifact-check-final-result.json": {
+      "argv": [
+        "python3",
+        "bindings/swift/check_artifacts.py",
+        "--expected-parent-sha256",
+        "f6b92990642e5ce21daf0a048db5c17f43236ea571b22b54167b1a8332cc228e"
+      ],
+      "cwd": "/Users/boristacyniak/Projects/alocasia/hoyadb",
+      "exit": 0,
+      "seconds": 1.3,
+      "log": "/private/tmp/hoyadb-apple-r9-r10-final/logs/artifact-check-final.log"
+    },
+    "artifact-check-result.json": {
+      "argv": [
+        "python3",
+        "bindings/swift/check_artifacts.py",
+        "--expected-parent-sha256",
+        "57baa8be218aff2f1f1e2c688972b8d1d8a2653585e92be3be6caba528bc3690"
+      ],
+      "cwd": "/Users/boristacyniak/Projects/alocasia/hoyadb",
+      "exit": 0,
+      "seconds": 1.04,
+      "log": "/private/tmp/hoyadb-apple-r9-r10-final/logs/artifact-check.log"
+    },
+    "consumer-bin-path-result.json": {
+      "argv": [
+        "swift",
+        "build",
+        "--package-path",
+        "/private/tmp/hoyadb-apple-r9-r10-final/swift-sdk/Examples/GeneralConsumer",
+        "--scratch-path",
+        "/private/tmp/hoyadb-apple-r9-r10-final/swift-consumer-build",
+        "--jobs",
+        "2",
+        "-Xswiftc",
+        "-warnings-as-errors",
+        "--show-bin-path"
+      ],
+      "cwd": "/Users/boristacyniak/Projects/alocasia/hoyadb",
+      "exit": 0,
+      "seconds": 0.75,
+      "log": "/private/tmp/hoyadb-apple-r9-r10-final/logs/consumer-bin-path.log"
+    },
+    "consumer-build-result.json": {
+      "argv": [
+        "swift",
+        "build",
+        "--package-path",
+        "/private/tmp/hoyadb-apple-r9-r10-final/swift-sdk/Examples/GeneralConsumer",
+        "--scratch-path",
+        "/private/tmp/hoyadb-apple-r9-r10-final/swift-consumer-build",
+        "--jobs",
+        "2",
+        "-Xswiftc",
+        "-warnings-as-errors"
+      ],
+      "cwd": "/Users/boristacyniak/Projects/alocasia/hoyadb",
+      "exit": 0,
+      "seconds": 25.96,
+      "log": "/private/tmp/hoyadb-apple-r9-r10-final/logs/consumer-build.log"
+    },
+    "export-ios-arm64-result.json": {
+      "argv": [
+        "python3",
+        "tools/release/compatibility.py",
+        "exports",
+        "--kind",
+        "apple",
+        "--slice",
+        "ios-arm64",
+        "--library",
+        "bindings/swift/Artifacts/HoyaNative.xcframework/ios-arm64/libhoyadb_native.a",
+        "--nm",
+        "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/x86_64-apple-darwin/bin/llvm-nm"
+      ],
+      "cwd": "/Users/boristacyniak/Projects/alocasia/hoyadb",
+      "exit": 0,
+      "seconds": 0.52,
+      "log": "/private/tmp/hoyadb-apple-r9-r10-final/logs/export-ios-arm64.log"
+    },
+    "export-ios-arm64_x86_64-simulator-result.json": {
+      "argv": [
+        "python3",
+        "tools/release/compatibility.py",
+        "exports",
+        "--kind",
+        "apple",
+        "--slice",
+        "ios-arm64_x86_64-simulator",
+        "--library",
+        "bindings/swift/Artifacts/HoyaNative.xcframework/ios-arm64_x86_64-simulator/libhoyadb_native.a",
+        "--nm",
+        "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/x86_64-apple-darwin/bin/llvm-nm"
+      ],
+      "cwd": "/Users/boristacyniak/Projects/alocasia/hoyadb",
+      "exit": 0,
+      "seconds": 0.68,
+      "log": "/private/tmp/hoyadb-apple-r9-r10-final/logs/export-ios-arm64_x86_64-simulator.log"
+    },
+    "export-macos-x86_64-result.json": {
+      "argv": [
+        "python3",
+        "tools/release/compatibility.py",
+        "exports",
+        "--kind",
+        "apple",
+        "--slice",
+        "macos-x86_64",
+        "--library",
+        "bindings/swift/Artifacts/HoyaNative.xcframework/macos-x86_64/libhoyadb_native.a",
+        "--nm",
+        "/Users/boristacyniak/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/x86_64-apple-darwin/bin/llvm-nm"
+      ],
+      "cwd": "/Users/boristacyniak/Projects/alocasia/hoyadb",
+      "exit": 0,
+      "seconds": 0.52,
+      "log": "/private/tmp/hoyadb-apple-r9-r10-final/logs/export-macos-x86_64.log"
+    },
+    "native-build-result.json": {
+      "argv": [
+        "env",
+        "-u",
+        "CARGO_TARGET_DIR",
+        "CARGO_BUILD_JOBS=2",
+        "CARGO_INCREMENTAL=0",
+        "python3",
+        "bindings/swift/build-artifacts.py"
+      ],
+      "exit": 1,
+      "scope": "All four Rust release builds and XCFramework creation completed; finalizer rejected stale-provider-evidence, not a successful packaging build",
+      "log_sha256": "8564faa7b49be719e684ed6fc4d4d63db82203706c546323a63ac8d1ee51ad74",
+      "xcodebuild_notes": "CoreSimulator/log sandbox diagnostics present; xcodebuild create-xcframework returned success. No simulator runtime claim."
+    },
+    "normal-builder-refreshed-result.json": {
+      "argv": [
+        "env",
+        "-u",
+        "CARGO_TARGET_DIR",
+        "CARGO_BUILD_JOBS=2",
+        "CARGO_INCREMENTAL=0",
+        "python3",
+        "bindings/swift/build-artifacts.py"
+      ],
+      "cwd": "/Users/boristacyniak/Projects/alocasia/hoyadb",
+      "exit": 0,
+      "seconds": 4.96,
+      "log": "/private/tmp/hoyadb-apple-r9-r10-final/logs/normal-builder-refreshed.log"
+    },
+    "notice-finalizer-final-result.json": {
+      "argv": [
+        "python3",
+        "crates/hoyadb-native/tools/apple_notices.py",
+        "finalize",
+        "--framework",
+        "bindings/swift/Artifacts/HoyaNative.xcframework",
+        "--parent",
+        "bindings/swift/Artifacts/native-build.json",
+        "--corpus",
+        "crates/hoyadb-native/third-party",
+        "--lock",
+        "crates/hoyadb-native/Cargo.lock"
+      ],
+      "cwd": "/Users/boristacyniak/Projects/alocasia/hoyadb",
+      "exit": 2,
+      "seconds": 0.14,
+      "log": "/private/tmp/hoyadb-apple-r9-r10-final/logs/notice-finalizer-final.log"
+    },
+    "notice-finalizer-restaged-result.json": {
+      "argv": [
+        "python3",
+        "crates/hoyadb-native/tools/apple_notices.py",
+        "finalize",
+        "--framework",
+        "/private/tmp/hoyadb-apple-r9-r10-final/final-framework/HoyaNative.xcframework",
+        "--parent",
+        "bindings/swift/Artifacts/native-build.json",
+        "--corpus",
+        "crates/hoyadb-native/third-party",
+        "--lock",
+        "crates/hoyadb-native/Cargo.lock"
+      ],
+      "cwd": "/Users/boristacyniak/Projects/alocasia/hoyadb",
+      "exit": 0,
+      "seconds": 0.74,
+      "log": "/private/tmp/hoyadb-apple-r9-r10-final/logs/notice-finalizer-restaged.log"
+    },
+    "notice-finalizer-result.json": {
+      "argv": [
+        "python3",
+        "crates/hoyadb-native/tools/apple_notices.py",
+        "finalize",
+        "--framework",
+        "bindings/swift/Artifacts/HoyaNative.xcframework",
+        "--parent",
+        "bindings/swift/Artifacts/native-build.json",
+        "--corpus",
+        "crates/hoyadb-native/third-party",
+        "--lock",
+        "crates/hoyadb-native/Cargo.lock"
+      ],
+      "cwd": "/Users/boristacyniak/Projects/alocasia/hoyadb",
+      "exit": 0,
+      "seconds": 0.76,
+      "log": "/private/tmp/hoyadb-apple-r9-r10-final/logs/notice-finalizer.log"
+    },
+    "provider-refresh-result.json": {
+      "argv": [
+        "python3",
+        "/private/tmp/hoyadb-apple-r9-r10-final/refresh-provider-evidence.py"
+      ],
+      "cwd": "/Users/boristacyniak/Projects/alocasia/hoyadb",
+      "exit": 0,
+      "seconds": 4.2,
+      "log": "/private/tmp/hoyadb-apple-r9-r10-final/logs/provider-refresh.log"
+    },
+    "swift-api-result.json": {
+      "argv": [
+        "python3",
+        "tools/release/compatibility.py",
+        "swift",
+        "--output",
+        "/private/tmp/hoyadb-apple-r9-r10-final/swift-api"
+      ],
+      "cwd": "/Users/boristacyniak/Projects/alocasia/hoyadb",
+      "exit": 0,
+      "seconds": 22.73,
+      "log": "/private/tmp/hoyadb-apple-r9-r10-final/logs/swift-api.log"
+    },
+    "swift-tests-authorized-result.json": {
+      "argv": [
+        "swift",
+        "test",
+        "--package-path",
+        "bindings/swift",
+        "--scratch-path",
+        "/private/tmp/hoyadb-apple-r9-r10-final/swift-tests-build",
+        "--jobs",
+        "2",
+        "-Xswiftc",
+        "-warnings-as-errors"
+      ],
+      "cwd": "/Users/boristacyniak/Projects/alocasia/hoyadb",
+      "exit": 0,
+      "seconds": 54.67,
+      "log": "/private/tmp/hoyadb-apple-r9-r10-final/logs/swift-tests-authorized.log"
+    },
+    "swift-tests-result.json": {
+      "argv": [
+        "swift",
+        "test",
+        "--package-path",
+        "bindings/swift",
+        "--scratch-path",
+        "/private/tmp/hoyadb-apple-r9-r10-final/swift-tests-build",
+        "--jobs",
+        "2",
+        "-Xswiftc",
+        "-warnings-as-errors"
+      ],
+      "cwd": "/Users/boristacyniak/Projects/alocasia/hoyadb",
+      "exit": 1,
+      "seconds": 1.75,
+      "log": "/private/tmp/hoyadb-apple-r9-r10-final/logs/swift-tests.log"
+    },
+    "native-check-results.json": [
+      {
+        "name": "native-tests",
+        "argv": [
+          "cargo",
+          "test",
+          "--manifest-path",
+          "crates/hoyadb-native/Cargo.toml",
+          "--offline",
+          "--locked"
+        ],
+        "cwd": "/Users/boristacyniak/Projects/alocasia/hoyadb",
+        "overrides": {
+          "CARGO_BUILD_JOBS": "2",
+          "CARGO_INCREMENTAL": "0",
+          "MACOSX_DEPLOYMENT_TARGET": "13.0",
+          "CARGO_TARGET_DIR": "unset"
+        },
+        "exit": 0,
+        "seconds": 35.15
+      },
+      {
+        "name": "native-clippy",
+        "argv": [
+          "cargo",
+          "clippy",
+          "--manifest-path",
+          "crates/hoyadb-native/Cargo.toml",
+          "--all-targets",
+          "--offline",
+          "--locked",
+          "--",
+          "-D",
+          "warnings"
+        ],
+        "cwd": "/Users/boristacyniak/Projects/alocasia/hoyadb",
+        "overrides": {
+          "CARGO_BUILD_JOBS": "2",
+          "CARGO_INCREMENTAL": "0",
+          "MACOSX_DEPLOYMENT_TARGET": "13.0",
+          "CARGO_TARGET_DIR": "unset"
+        },
+        "exit": 0,
+        "seconds": 6.53
+      }
+    ],
+    "consumer-authorized-runtime-results.json": {
+      "binary": "/private/tmp/hoyadb-apple-r9-r10-final/swift-consumer-build/x86_64-apple-macosx/debug/GeneralConsumer",
+      "binary_sha256": "259964bda298508b78ed37646af5024328d16d8856b02f15bd8bd91884ae1d2b",
+      "permission": "normal host execution after restricted run failed backupPolicyFailure; backup policy unchanged",
+      "commands": [
+        {
+          "argv": [
+            "/private/tmp/hoyadb-apple-r9-r10-final/swift-consumer-build/x86_64-apple-macosx/debug/GeneralConsumer"
+          ],
+          "overrides": {
+            "HOYA_CONSUMER_ROOT": "/private/tmp/hoyadb-apple-r9-r10-final/swift-consumer-authorized-results",
+            "HOYA_CONSUMER_MODE": "writer"
+          },
+          "exit": 0,
+          "seconds": 0.19
+        },
+        {
+          "argv": [
+            "/private/tmp/hoyadb-apple-r9-r10-final/swift-consumer-build/x86_64-apple-macosx/debug/GeneralConsumer"
+          ],
+          "overrides": {
+            "HOYA_CONSUMER_ROOT": "/private/tmp/hoyadb-apple-r9-r10-final/swift-consumer-authorized-results",
+            "HOYA_CONSUMER_MODE": "reader"
+          },
+          "exit": 0,
+          "seconds": 0.03
+        }
+      ]
+    },
+    "consumer-runtime-results.json": {
+      "binary": "/private/tmp/hoyadb-apple-r9-r10-final/swift-consumer-build/x86_64-apple-macosx/debug/GeneralConsumer",
+      "binary_sha256": "259964bda298508b78ed37646af5024328d16d8856b02f15bd8bd91884ae1d2b",
+      "commands": [
+        {
+          "argv": [
+            "/private/tmp/hoyadb-apple-r9-r10-final/swift-consumer-build/x86_64-apple-macosx/debug/GeneralConsumer"
+          ],
+          "overrides": {
+            "HOYA_CONSUMER_ROOT": "/private/tmp/hoyadb-apple-r9-r10-final/swift-consumer-results",
+            "HOYA_CONSUMER_MODE": "writer"
+          },
+          "exit": 1,
+          "seconds": 0.69
+        }
+      ]
+    }
+  },
+  "evidence_files": {
+    "inputs-final-before.json": {
+      "path": "/private/tmp/hoyadb-apple-r9-r10-final/inputs-final-before.json",
+      "sha256": "0a114e54ead151effa9d5dda21717fcea72bbb83f3a2511217b824df24f754ac"
+    },
+    "inputs-after-compilation.json": {
+      "path": "/private/tmp/hoyadb-apple-r9-r10-final/inputs-after-compilation.json",
+      "sha256": "0a114e54ead151effa9d5dda21717fcea72bbb83f3a2511217b824df24f754ac"
+    },
+    "inputs-final-after.json": {
+      "path": "/private/tmp/hoyadb-apple-r9-r10-final/inputs-final-after.json",
+      "sha256": "e98adc846ba97cb69d3610d4789b680d083fb24d8f2972de5c3b4dcb9806de18"
+    },
+    "tools-before.json": {
+      "path": "/private/tmp/hoyadb-apple-r9-r10-final/tools-before.json",
+      "sha256": "538d36756fef1adb04b999c2fb7befb8777093ade70a3b51d4f185e145a9d740"
+    },
+    "tools-after-compilation.json": {
+      "path": "/private/tmp/hoyadb-apple-r9-r10-final/tools-after-compilation.json",
+      "sha256": "c4ab663cb31a2befc066339f3dc41701c01e81a280b4d730d8bf1c08b548026e"
+    },
+    "tools-comparison.json": {
+      "path": "/private/tmp/hoyadb-apple-r9-r10-final/tools-comparison.json",
+      "sha256": "47aeeb52ea5d252a41b4699d1364df4b0e9f398a172ced8572d3a50b3c14694a"
+    },
+    "tools-final-verification.json": {
+      "path": "/private/tmp/hoyadb-apple-r9-r10-final/tools-final-verification.json",
+      "sha256": "72b96a5d794eb345a1e54dcb5410cb9dd280e89f29b3fea20d297e94507b251b"
+    },
+    "final-source-artifact-comparison.json": {
+      "path": "/private/tmp/hoyadb-apple-r9-r10-final/final-source-artifact-comparison.json",
+      "sha256": "0aa50bbcbc8638e57d7d50ac023afc5fc6c0e2d83c798b40df8f5b8a943dbc52"
+    },
+    "consumer-runtime-results.json": {
+      "path": "/private/tmp/hoyadb-apple-r9-r10-final/consumer-runtime-results.json",
+      "sha256": "0a6ad9fc3c50f1060b57dca91a698b385f74b3eaa506381d8635cb09a17683b1"
+    },
+    "consumer-authorized-runtime-results.json": {
+      "path": "/private/tmp/hoyadb-apple-r9-r10-final/consumer-authorized-runtime-results.json",
+      "sha256": "76b2bf1740af8537fdf8c4ddf6884bb57bbc58d9d1c56f7d9522b84c059cc312"
+    },
+    "swift-consumer-staging.json": {
+      "path": "/private/tmp/hoyadb-apple-r9-r10-final/swift-consumer-staging.json",
+      "sha256": "32b04a9554341055c042a9c2145ed889395861d9c1184924ffe79e138304fcc4"
+    },
+    "retained-parent-reference.json": {
+      "path": "/private/tmp/hoyadb-apple-r9-r10-final/retained-parent-reference.json",
+      "sha256": "1d3a140b9bb0b0b1ac60d7ae28bed7957a29c0da33021ce4eb3ce4bebda5099a"
+    },
+    "final-native-restaging.json": {
+      "path": "/private/tmp/hoyadb-apple-r9-r10-final/final-native-restaging.json",
+      "sha256": "7f743ade9591a1d0e6e0c1741dae3c3dda4b5624e29e71df5b22d96123ecc13b"
+    },
+    "warm-package-preservation.json": {
+      "path": "/private/tmp/hoyadb-apple-r9-r10-final/warm-package-preservation.json",
+      "sha256": "23b6823067a5ee522eb361f769ea894efece86e3e16f4e935836f453e80d77d4"
+    },
+    "policy-downgrade/report.json": {
+      "path": "/private/tmp/hoyadb-apple-r9-r10-final/policy-downgrade/report.json",
+      "sha256": "f0730de4543d3153272eb99948c7ecea726e9ecea7f913d0621ef06b17c2ef87"
+    },
+    "completed-extra-checks.json": {
+      "path": "/private/tmp/hoyadb-apple-r9-r10-final/completed-extra-checks.json",
+      "sha256": "8c40af2b214bdffce9c7e1069957364ad97faae7d57d85e5d96b3ca115539d5e"
+    },
+    "native-check-results.json": {
+      "path": "/private/tmp/hoyadb-apple-r9-r10-final/native-check-results.json",
+      "sha256": "554658796d77958e733c0f58a3f7a0a803fe9b026e44eb37cb6d27e2b4ab62c0"
+    }
+  },
+  "logs": {
+    "logs/artifact-check-final.log": {
+      "path": "/private/tmp/hoyadb-apple-r9-r10-final/logs/artifact-check-final.log",
+      "sha256": "bab2ff5a9654a50175a88c634f3202960a8684ddfa1e7abbe34d18be19016c2a"
+    },
+    "logs/artifact-check.log": {
+      "path": "/private/tmp/hoyadb-apple-r9-r10-final/logs/artifact-check.log",
+      "sha256": "8275abba05f0d9f0048f8e9ffb41f305612fed7a3ef0118433e2da62fb248842"
+    },
+    "logs/capture-after-compilation.log": {
+      "path": "/private/tmp/hoyadb-apple-r9-r10-final/logs/capture-after-compilation.log",
+      "sha256": "9f933072dcc6b823e323ccb763670999e7b4227252fb3f51a4ad3bb8097233a2"
+    },
+    "logs/capture-before.log": {
+      "path": "/private/tmp/hoyadb-apple-r9-r10-final/logs/capture-before.log",
+      "sha256": "9f933072dcc6b823e323ccb763670999e7b4227252fb3f51a4ad3bb8097233a2"
+    },
+    "logs/capture-final-after.log": {
+      "path": "/private/tmp/hoyadb-apple-r9-r10-final/logs/capture-final-after.log",
+      "sha256": "9f933072dcc6b823e323ccb763670999e7b4227252fb3f51a4ad3bb8097233a2"
+    },
+    "logs/capture-final-before.log": {
+      "path": "/private/tmp/hoyadb-apple-r9-r10-final/logs/capture-final-before.log",
+      "sha256": "9f933072dcc6b823e323ccb763670999e7b4227252fb3f51a4ad3bb8097233a2"
+    },
+    "logs/compatibility-sources.log": {
+      "path": "/private/tmp/hoyadb-apple-r9-r10-final/logs/compatibility-sources.log",
+      "sha256": "315a0ace8b917610991d4e8db25defbc5888551f8588725ba1a8f7e3e5dc6347"
+    },
+    "logs/consumer-authorized-reader.log": {
+      "path": "/private/tmp/hoyadb-apple-r9-r10-final/logs/consumer-authorized-reader.log",
+      "sha256": "879843785e015f44ea79da123f4778eb179fb5bbd96e4628c8db72123f9c40cf"
+    },
+    "logs/consumer-authorized-writer.log": {
+      "path": "/private/tmp/hoyadb-apple-r9-r10-final/logs/consumer-authorized-writer.log",
+      "sha256": "a2a085db4820f1b7b7728ac57d1effc91a1b8bf459adf1035619b622f408c760"
+    },
+    "logs/consumer-bin-path.log": {
+      "path": "/private/tmp/hoyadb-apple-r9-r10-final/logs/consumer-bin-path.log",
+      "sha256": "69e78effff21b30817c56da89595ba50fd5dbf0a807d4b7a64d21e968f4eb118"
+    },
+    "logs/consumer-build.log": {
+      "path": "/private/tmp/hoyadb-apple-r9-r10-final/logs/consumer-build.log",
+      "sha256": "26ab5595e4e9998e6785cc2979f56342ae741e2c1cfb7e426452592c1690097f"
+    },
+    "logs/consumer-writer.log": {
+      "path": "/private/tmp/hoyadb-apple-r9-r10-final/logs/consumer-writer.log",
+      "sha256": "b54e23d7c35068f098b3521dfdc35065746738813f8e5c64fb0909c21f926bf2"
+    },
+    "logs/export-ios-arm64.log": {
+      "path": "/private/tmp/hoyadb-apple-r9-r10-final/logs/export-ios-arm64.log",
+      "sha256": "22c25a4faeab1abb34dabc3fa300a159fcecda558ef074c89c8f6d6f3a302a7f"
+    },
+    "logs/export-ios-arm64_x86_64-simulator.log": {
+      "path": "/private/tmp/hoyadb-apple-r9-r10-final/logs/export-ios-arm64_x86_64-simulator.log",
+      "sha256": "5f2e8ca5c06f056a06009f96d3a4cf80f989acfc91f152cfa1880f31e1c7b2ac"
+    },
+    "logs/export-macos-x86_64.log": {
+      "path": "/private/tmp/hoyadb-apple-r9-r10-final/logs/export-macos-x86_64.log",
+      "sha256": "821e25dd67cb69a24c20e4b31689a75b970738e1d4d2cfb6e91b622db0c2873f"
+    },
+    "logs/native-build.log": {
+      "path": "/private/tmp/hoyadb-apple-r9-r10-final/logs/native-build.log",
+      "sha256": "8564faa7b49be719e684ed6fc4d4d63db82203706c546323a63ac8d1ee51ad74"
+    },
+    "logs/native-clippy.log": {
+      "path": "/private/tmp/hoyadb-apple-r9-r10-final/logs/native-clippy.log",
+      "sha256": "fce2601666dc2ed171397ea299f8a8c31ce2aa9d31a9f031b052e8f9f0881e30"
+    },
+    "logs/native-fmt.log": {
+      "path": "/private/tmp/hoyadb-apple-r9-r10-final/logs/native-fmt.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "logs/native-tests.log": {
+      "path": "/private/tmp/hoyadb-apple-r9-r10-final/logs/native-tests.log",
+      "sha256": "6a6df5d14f9662d0805e37f0e77b7b2d87fdab8068a990833be5ed1e977557f9"
+    },
+    "logs/normal-builder-refreshed.log": {
+      "path": "/private/tmp/hoyadb-apple-r9-r10-final/logs/normal-builder-refreshed.log",
+      "sha256": "03cf3b510860f4bcb0f59c19e2dbbc1c3fbcf2407f9b6358fecb72c8b7dd9721"
+    },
+    "logs/notice-finalizer-final.log": {
+      "path": "/private/tmp/hoyadb-apple-r9-r10-final/logs/notice-finalizer-final.log",
+      "sha256": "0f3f8147f7211099630f9b9574bb0fcc87d81840de883cc2417b8dcc9881639e"
+    },
+    "logs/notice-finalizer-restaged.log": {
+      "path": "/private/tmp/hoyadb-apple-r9-r10-final/logs/notice-finalizer-restaged.log",
+      "sha256": "7b82b7e30288411cb42760f24214ecbd6f9468adffc3447bd11564430269e4b4"
+    },
+    "logs/notice-finalizer.log": {
+      "path": "/private/tmp/hoyadb-apple-r9-r10-final/logs/notice-finalizer.log",
+      "sha256": "778c7b3294883d07375406de762f88f33126951f4cb578b978bbb204fc338fa8"
+    },
+    "logs/policy-downgrade.log": {
+      "path": "/private/tmp/hoyadb-apple-r9-r10-final/logs/policy-downgrade.log",
+      "sha256": "f0730de4543d3153272eb99948c7ecea726e9ecea7f913d0621ef06b17c2ef87"
+    },
+    "logs/provider-refresh.log": {
+      "path": "/private/tmp/hoyadb-apple-r9-r10-final/logs/provider-refresh.log",
+      "sha256": "db1cbb9e6a0a31bd3c19e49624131592727adb344c5e81619190eb8fe01627d3"
+    },
+    "logs/release-tool-tests.log": {
+      "path": "/private/tmp/hoyadb-apple-r9-r10-final/logs/release-tool-tests.log",
+      "sha256": "a38af3790a1af0635e439ef78c3ac50b17db30bee872aca975afba444dd40f15"
+    },
+    "logs/swift-api.log": {
+      "path": "/private/tmp/hoyadb-apple-r9-r10-final/logs/swift-api.log",
+      "sha256": "3a8aa593f915277622846001e59c91bb9e1ba218ba52252c3dc5dcd47575fb50"
+    },
+    "logs/swift-format.log": {
+      "path": "/private/tmp/hoyadb-apple-r9-r10-final/logs/swift-format.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "logs/swift-tests-authorized.log": {
+      "path": "/private/tmp/hoyadb-apple-r9-r10-final/logs/swift-tests-authorized.log",
+      "sha256": "35e518e5959c8117a2755be0b57f236cec5cf31528e4689576d78c6c6e1dc716"
+    },
+    "logs/swift-tests.log": {
+      "path": "/private/tmp/hoyadb-apple-r9-r10-final/logs/swift-tests.log",
+      "sha256": "9d8cfbb0718b10bb2f1d8cfb763185cfd5104cf383396542b09d9794c96c8108"
+    }
+  },
+  "limits": [
+    "SDK inventory hashes link stubs/settings, not every installed toolchain file.",
+    "iOS slices build and export only; actual runtime macOS x86_64.",
+    "Xcodebuild CoreSimulator diagnostics retained; framework creation itself exit 0.",
+    "Swift runtime used first finalized package; final archives and headers exactly identical, final package independently passed five checks.",
+    "Current private/local packages are not public release certification."
+  ]
+}

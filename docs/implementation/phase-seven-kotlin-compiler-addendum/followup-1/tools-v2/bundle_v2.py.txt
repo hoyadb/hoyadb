@@ -1,0 +1,74 @@
+"""Final versioned bundle (v2) from recorded evidence only; explicit checks (safe under python -O)."""
+from pathlib import Path
+import hashlib, json
+Q = Path(__file__).resolve().parents[1]
+repo = Q.parents[2]
+D = repo / 'docs/implementation/phase-seven-kotlin-compiler-addendum'
+sha = lambda b: hashlib.sha256(b).hexdigest()
+def fail(m): raise SystemExit(m)
+v1 = json.loads((D / 'initial-cut/bundle.json').read_text())
+idx = json.loads((repo / 'docs/implementation/phase-seven-dependencies/native/artifact-index.json').read_text())['artifacts']
+addendum = json.loads((repo / 'docs/implementation/phase-seven-plugin-addendum/bundle.json').read_text())['additional_plugin_coordinates']
+unique = {a['coordinate'] for a in idx}
+union = unique | set(addendum)
+counts = {'adr0035_index_artifact_entries': len(idx), 'adr0035_unique_coordinates': len(unique), 'plugin_addendum_coordinates': len(addendum), 'approved_union_unique_coordinates': len(union)}
+if counts != {'adr0035_index_artifact_entries': 222, 'adr0035_unique_coordinates': 219, 'plugin_addendum_coordinates': 6, 'approved_union_unique_coordinates': 225}:
+    fail('approved union counts changed: ' + json.dumps(counts))
+strong = {e['file']: {a: r['http_code'] == '200' and r.get('match') for a, r in e['sidecars'].items()} for e in json.loads((Q / 'strong-sidecars.json').read_text())}
+sig = {}
+for name in ['verification.json', 'verification-keyid-fallback.json']:
+    for e in json.loads((Q / 'attestation-followup' / name).read_text())['results']:
+        if e.get('goodsig') is not None:
+            sig[e['jar']] = {'goodsig': e['goodsig'], 'validsig_fingerprint': e.get('validsig_fingerprint'), 'primary_key_fingerprint': e.get('primary_key_fingerprint'),
+                             'uid': e.get('uid'), 'lookup': 'issuer fingerprint' if name == 'verification.json' else '64-bit issuer key ID (fallback), confirmed by VALIDSIG',
+                             'digest_algo_sha1': '\tdigest algo 2,' in e['packets']['stdout'], 'identity_trust': 'UNKNOWN'}
+b = dict(v1)
+b['format'] = 1
+b['bundle_version'] = 2
+b['supersedes'] = {'initial_cut_bundle_sha256': sha((D / 'initial-cut/bundle.json').read_bytes()), 'initial_cut_index_sha256': 'a194306b7a6da538881643f5c2b6ea904e65c460001aa50a21eedf57bef91a18',
+                   'initial_review': 'docs/implementation/phase-seven-kotlin-compiler-initial-review.json (root-owned; initial-cut review only)'}
+b['approval_status'] = 'PREPARATION ONLY: initial independent review done on the initial cut; this final version awaits root review and explicit operator approval under ADR-0035; nothing activated'
+b['approved_union_counts'] = counts
+for comp in b['additional_jar_components'] + b['metadata_only_components']:
+    for f in comp['files']:
+        key = f"closure/{comp['coordinate'].replace(':', '__')}/{f['name']}"
+        f['strong_sidecars_published_and_matching'] = strong.get(key)
+        if f['name'].endswith('.jar'):
+            f['detached_signature'] = sig.get(f['name'])
+            if f['detached_signature'] is None or not f['detached_signature']['goodsig']:
+                fail('missing good signature record for ' + f['name'])
+            f.pop('detached_signature_fetched_unverified', None)
+b['marker']['packet_bytes'] = 'marker/bytes/org.jetbrains.kotlin.jvm.gradle.plugin-2.1.20.pom'
+b['marker']['strong_sidecars_published'] = strong.get('marker-review/bytes/org.jetbrains.kotlin.jvm.gradle.plugin-2.1.20.pom')
+conf = json.loads((Q / 'activation-confirmation/aapt2-and-jdk.json').read_text())
+b['required_jdk'] = {'home': conf['jdk']['home'], 'realpath': conf['jdk']['realpath'], 'java_binary_sha256': conf['jdk']['java_sha256'],
+                     'note': 'Same JDK as the reviewed metadata consumers. MANDATORY runner correction before activation: target/phase-seven-rn/android/build.py currently selects Homebrew openjdk@17 17.0.18 and must be changed to this JDK.'}
+b['activation_options_for_operator_decision'] = [{
+    'option': 'android.aapt2FromMavenOverride',
+    'value': conf['installed_aapt2']['path'], 'aapt2_sha256': conf['installed_aapt2']['sha256'], 'aapt2_version': conf['installed_aapt2']['version'],
+    'evidence': 'approved AGP 8.12.0 gradle-8.12.0.jar StringOption/BooleanOption contain the property and AGP text recommending it for a local AAPT2',
+    'status': 'PROPOSED, NOT AUTHORIZED; part of the future exact-bundle operator decision. Avoids fetching the unapproved platform aapt2 Maven artifact (AGP default 8.12.0-13700139). Acceptance of the local 2.20 build by AGP is unverified until a coordinated run.'}]
+b['limitations'] = [
+    'Q1: the included-build mirror ran on JVM 17 and requested org.gradle.jvm.version=17; the real RN plugin targets Java 11. No external selected variant declares a JVM version above 11 (provenance/q1-jvm-version-check.json), so selection is unaffected in this mirror; the real KGP/AGP graph must still be confirmed.',
+    'The consumer app debugCompileClasspath mirror is not authoritative (AGP attributes and compile/runtime alignment are not reproducible without executing AGP); it proposes nothing.',
+    'Gate: before any compile, the actual selected KGP/AGP build and runtime graphs must equal (ADR-0035 union + 8a87389 + this exact bundle); any extra component or artifact stops activation.',
+    'Publisher identity trust is UNKNOWN (keys from public keyservers); 2 signatures use SHA-1 digests; trove4j is signed by the Bintray repository service key.',
+    'Embedded compiler components: versions are source-declared (Kotlin v2.1.20 build files), not byte-verified; licenses are open for IntelliJ core, JLine, Jansi, LZ4, StreamEx, vavr, kotlinx-collections-immutable, JDOM, the log4j fork, javax.inject and relocated protobuf; this is not an SBOM or legal certification.',
+    'Embedded native code (LZ4 JNI for Linux/Windows; Jansi including macOS .jnilib); whether an in-process compile loads Jansi is unproven without execution.',
+    'Advisories for source-declared embedded versions (lz4-java 1.7.1: 8; upstream bases log4j 1.2.17: 6 and protobuf-java 2.6.1: 3) have unverified applicability to the relocated copies.',
+]
+emb = json.loads((Q / 'embedded-evidence/osv-summary.json').read_text())
+b['followup_1'] = {
+    'signatures': 'followup-1/attestation/ (17/17 GOODSIG+VALIDSIG; identity trust UNKNOWN)',
+    'strong_sidecars': 'followup-1/provenance/strong-sidecars.json (only checker-qual and kotlinx-coroutines files publish .sha256/.sha512, all matching; all others 404)',
+    'parents': 'followup-1/provenance/parents-match.json (fetched == Gradle cache == root captured bytes)',
+    'embedded_byte_presence': 'followup-1/embedded/byte-presence.json', 'embedded_native_libraries': 'followup-1/embedded/native-libraries.json',
+    'embedded_advisories': {k: v for k, v in emb.items() if k != 'upstream_base_notes'}, 'embedded_upstream_base_notes': emb['upstream_base_notes'],
+    'validation': 'followup-1/revalidate.py.txt run under python -O; result followup-1/revalidate-result.json',
+}
+b['restrictions'] = v1['restrictions'] + [
+    'The aapt2 override and the JDK above are part of the exact bundle decision; neither is authorized until explicit operator approval.',
+    'Correct the RN Android runner JDK before any activation run.',
+]
+(D / 'bundle.json').write_text(json.dumps(b, indent=2, ensure_ascii=False) + '\n')
+print('bundle v2 sha256', sha((D / 'bundle.json').read_bytes()), counts)

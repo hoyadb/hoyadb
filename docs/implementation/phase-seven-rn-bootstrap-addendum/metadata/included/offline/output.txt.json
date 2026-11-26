@@ -1,0 +1,7 @@
+{
+  "format": 1,
+  "original_path": "metadata/included/offline/output.txt",
+  "original_bytes": 360,
+  "original_sha256": "6c9dc1b0908fdb89c06d9cd34393bb6136654a1473d8013964ce75be8f0d08a0",
+  "utf8": "To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.3.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.\nDaemon will be stopped at the end of the build \n> Task :captureMetadata\n\nBUILD SUCCESSFUL in 23s\n1 actionable task: 1 executed\n"
+}

@@ -1,0 +1,22 @@
+{
+  "retrieved_utc": "2026-10-24T16:19:01.846623+00:00",
+  "template_commit": "dc3587fd74ab8cd31be7f817e644d874a884c623",
+  "sources": {
+    "package.json": {
+      "url": "https://raw.githubusercontent.com/react-native-community/template/dc3587fd74ab8cd31be7f817e644d874a884c623/template/package.json",
+      "sha256": "b99e5875e69f86418afc789ec84ce6fd4f3aa61532a85768cd9ac914326eb5cc"
+    },
+    "babel.config.js": {
+      "url": "https://raw.githubusercontent.com/react-native-community/template/dc3587fd74ab8cd31be7f817e644d874a884c623/template/babel.config.js",
+      "sha256": "d76a3a8625b204efa0f42c4bdd220f484211798f88a56f2e784bc082231cc292"
+    },
+    "metro.config.js": {
+      "url": "https://raw.githubusercontent.com/react-native-community/template/dc3587fd74ab8cd31be7f817e644d874a884c623/template/metro.config.js",
+      "sha256": "aaf6a75e73476ef1513fee03ff44c91c30da0c5296e21f7e58484cdbb54e93fc"
+    },
+    "react-native-package.json": {
+      "url": "https://raw.githubusercontent.com/facebook/react-native/v0.86.3/packages/react-native/package.json",
+      "sha256": "416224a4e7caf2ee1f8f9bead8508d0b608feed745371ce0a8f0e2cafa16d144"
+    }
+  }
+}

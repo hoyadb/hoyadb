@@ -1,0 +1,2139 @@
+{
+  "status": "Static source inventory, not evaluated Podspec JSON or a Podfile.lock",
+  "source_archive": "react-native0.86.3 SRI-verified npm package",
+  "specs": [
+    {
+      "file": "Libraries/ActionSheetIOS/React-RCTActionSheet.podspec",
+      "sha256": "ae8f95831b9c5e67733b0745bce6ab14b9f614fe942730abf73433d5dd5aaa4c",
+      "literal_names": [
+        "React-RCTActionSheet"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"React-Core/RCTActionSheetHeaders\", version"
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "Libraries/AppDelegate/React-RCTAppDelegate.podspec",
+      "sha256": "f2f9dfb16e1a610828ff9155e142f59b9689b34b2d84217064bed0a5fa8c6f9e",
+      "literal_names": [
+        "React-RCTAppDelegate"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"React-Core\"",
+        "s.dependency \"RCTRequired\"",
+        "s.dependency \"RCTTypeSafety\"",
+        "s.dependency \"React-RCTNetwork\"",
+        "s.dependency \"React-RCTImage\"",
+        "s.dependency \"React-CoreModules\"",
+        "s.dependency \"React-RCTFBReactNativeSpec\"",
+        "s.dependency \"React-defaultsnativemodule\"",
+        "s.dependency 'React-hermes'",
+        "add_rn_third_party_dependencies(s)"
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "Libraries/Blob/React-RCTBlob.podspec",
+      "sha256": "21dd1ca7570b52d61daa7827c7f6f4e3ece42722e56bfb1c48c1d9a5362d3f2b",
+      "literal_names": [
+        "React-RCTBlob"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"React-jsi\"",
+        "s.dependency \"React-Core/RCTBlobHeaders\"",
+        "s.dependency \"React-Core/RCTWebSocket\"",
+        "s.dependency \"React-RCTNetwork\"",
+        "s.dependency \"hermes-engine\"",
+        "add_rn_third_party_dependencies(s)"
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "Libraries/FBLazyVector/FBLazyVector.podspec",
+      "sha256": "45eaa07214c2fa1aa5eaaa1786fac9315b76b196e11b6c57fcc9db0b962f84dd",
+      "literal_names": [
+        "FBLazyVector"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "Libraries/Image/React-RCTImage.podspec",
+      "sha256": "85e0f8b9177d3a4a913a8e297054013d51c639ffbea6f0429fbbf0e3ba5fb11f",
+      "literal_names": [
+        "React-RCTImage"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"RCTTypeSafety\"",
+        "s.dependency \"React-jsi\"",
+        "s.dependency \"React-Core/RCTImageHeaders\"",
+        "s.dependency \"React-RCTNetwork\"",
+        "add_rn_third_party_dependencies(s)"
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "Libraries/LinkingIOS/React-RCTLinking.podspec",
+      "sha256": "399f454e4f92f40c0ccb4a5937a86f7a3cc47062cb520fc440e5e1ae9b2495d1",
+      "literal_names": [
+        "React-RCTLinking"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"React-Core/RCTLinkingHeaders\", version",
+        "s.dependency \"ReactCommon/turbomodule/core\", version",
+        "s.dependency \"React-jsi\", version"
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "Libraries/NativeAnimation/React-RCTAnimation.podspec",
+      "sha256": "f0f67b5341fa206dbc8eb8c000bf89f23fc96c5a6f8460e19ed2ef6ac960f46a",
+      "literal_names": [
+        "React-RCTAnimation"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"RCTTypeSafety\"",
+        "s.dependency \"React-jsi\"",
+        "s.dependency \"React-Core/RCTAnimationHeaders\"",
+        "add_rn_third_party_dependencies(s)"
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "Libraries/Network/React-RCTNetwork.podspec",
+      "sha256": "686db3a99d7ebe76da07bf33faaf85be4539d0272d3d4551c3db04f1b7078c7c",
+      "literal_names": [
+        "React-RCTNetwork"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"RCTTypeSafety\"",
+        "s.dependency \"React-jsi\"",
+        "s.dependency \"React-Core/RCTNetworkHeaders\"",
+        "add_rn_third_party_dependencies(s)"
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "Libraries/PushNotificationIOS/React-RCTPushNotification.podspec",
+      "sha256": "df3ed318d73b91c4d621f060d713a869c514332cfba63a6e3d6ad3bf7da4da0c",
+      "literal_names": [
+        "React-RCTPushNotification"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"RCTTypeSafety\"",
+        "s.dependency \"React-Core/RCTPushNotificationHeaders\"",
+        "s.dependency \"React-jsi\""
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "Libraries/Required/RCTRequired.podspec",
+      "sha256": "9092287ef4b1bb2ddef88bc60113055a4a587278273125ad51b8055d360b080e",
+      "literal_names": [
+        "RCTRequired"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "Libraries/Settings/React-RCTSettings.podspec",
+      "sha256": "c2e761d1163778acab786d717ef890dee2640a77aa55a742f52bbecdf4563e1b",
+      "literal_names": [
+        "React-RCTSettings"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"RCTTypeSafety\"",
+        "s.dependency \"React-jsi\"",
+        "s.dependency \"React-Core/RCTSettingsHeaders\"",
+        "add_rn_third_party_dependencies(s)"
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "Libraries/Text/React-RCTText.podspec",
+      "sha256": "13f40286f24c7fd4e5c4a274675ab902ea4250e805a83baf455f5f0335681e7e",
+      "literal_names": [
+        "React-RCTText"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"Yoga\"",
+        "s.dependency \"React-Core/RCTTextHeaders\", version"
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "Libraries/TypeSafety/RCTTypeSafety.podspec",
+      "sha256": "1813284bebc1095d08458f0c5958e8ec29ff656d5677e8c0d1b38e73ba30bfc7",
+      "literal_names": [
+        "RCTTypeSafety"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"FBLazyVector\", version",
+        "s.dependency \"RCTRequired\", version",
+        "s.dependency \"React-Core\", version"
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "Libraries/Vibration/React-RCTVibration.podspec",
+      "sha256": "3975e69920a5d4a1db93d0f2b5b05b83189b289d90284a7917906e1b39cf38ae",
+      "literal_names": [
+        "React-RCTVibration"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"React-jsi\"",
+        "s.dependency \"React-Core/RCTVibrationHeaders\"",
+        "add_rn_third_party_dependencies(s)"
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "React/CoreModules/React-CoreModules.podspec",
+      "sha256": "654a2d85ffee5091377bda278c4583c8ce028f5949e35cb6468fd058adaf61d0",
+      "literal_names": [
+        "React-CoreModules"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"RCTTypeSafety\", version",
+        "s.dependency \"React-Core/CoreModulesHeaders\", version",
+        "s.dependency \"React-RCTImage\", version",
+        "s.dependency \"React-jsi\", version",
+        "s.dependency 'React-RCTBlob'",
+        "add_rn_third_party_dependencies(s)"
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "React/React-RCTFBReactNativeSpec.podspec",
+      "sha256": "8ff771cf918c94017b53171829ccc2f304a82a3556499ceb39284bc17295663e",
+      "literal_names": [
+        "React-RCTFBReactNativeSpec"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"React-jsi\"",
+        "s.dependency \"RCTRequired\"",
+        "s.dependency \"RCTTypeSafety\"",
+        "s.dependency \"React-Core\"",
+        "s.dependency \"React-NativeModulesApple\"",
+        "add_rn_third_party_dependencies(s)",
+        "ss.dependency \"Yoga\""
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\"",
+        "s.script_phases = ["
+      ]
+    },
+    {
+      "file": "React/React-RCTFabric.podspec",
+      "sha256": "9c9e78513d170f64bf3d5dbce73c810b2cc42e9effcf14a26164235a74b66fd7",
+      "literal_names": [
+        "React-RCTFabric"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"React-Core\"",
+        "s.dependency \"React-RCTImage\"",
+        "s.dependency \"Yoga\"",
+        "s.dependency \"React-RCTText\"",
+        "s.dependency \"React-jsi\"",
+        "s.dependency \"RCTSwiftUIWrapper\"",
+        "add_rn_third_party_dependencies(s)"
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "React/Runtime/React-RCTRuntime.podspec",
+      "sha256": "651da05b016101a7cfd6581b6be25da8f279b21ee107f36a4d2ee44ff29e26db",
+      "literal_names": [
+        "React-RCTRuntime"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"React-Core\"",
+        "s.dependency \"React-jsi\"",
+        "s.dependency \"hermes-engine\"",
+        "add_rn_third_party_dependencies(s)"
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "React-Core-prebuilt.podspec",
+      "sha256": "75c94c85de947ed4cc0b63b6031d8a36876680b2ead00cac35263c3073d92e8a",
+      "literal_names": [
+        "React-Core-prebuilt"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "add_rn_third_party_dependencies(s)"
+      ],
+      "source_assignments": [
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\"",
+        "# This is done in the prepare_command.",
+        "s.prepare_command = <<~'CMD'",
+        "script_phase = {",
+        "script_phase[:always_out_of_date] = \"1\"",
+        "s.script_phase = script_phase"
+      ]
+    },
+    {
+      "file": "React-Core.podspec",
+      "sha256": "191a0b160f9d9da8db97d46a22b9b3795b57cfb45008d9faedc0cb3e19b8a9a5",
+      "literal_names": [
+        "React-Core"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "ss.dependency \"React-Core/Default\", version",
+        "ss.dependency \"React-Core/RCTWebSocket\", version",
+        "ss.dependency \"React-Core/Default\", version",
+        "ss.dependency \"React-Core/Default\"",
+        "s.dependency \"React-cxxreact\"",
+        "s.dependency \"React-perflogger\"",
+        "s.dependency \"React-jsi\"",
+        "s.dependency \"React-jsiexecutor\"",
+        "s.dependency \"React-featureflags\"",
+        "s.dependency \"React-runtimescheduler\"",
+        "s.dependency \"Yoga\"",
+        "s.dependency \"React-hermes\"",
+        "add_rn_third_party_dependencies(s)"
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "React.podspec",
+      "sha256": "1e5caaa008449e5dcdb0a44b57684fcc90b94fc1511726790930cb11a1f42c41",
+      "literal_names": [
+        "React"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"React-Core\", version",
+        "s.dependency \"React-Core/DevSupport\", version",
+        "s.dependency \"React-Core/RCTWebSocket\", version",
+        "s.dependency \"React-RCTActionSheet\", version",
+        "s.dependency \"React-RCTAnimation\", version",
+        "s.dependency \"React-RCTBlob\", version",
+        "s.dependency \"React-RCTImage\", version",
+        "s.dependency \"React-RCTLinking\", version",
+        "s.dependency \"React-RCTNetwork\", version",
+        "s.dependency \"React-RCTSettings\", version",
+        "s.dependency \"React-RCTText\", version",
+        "s.dependency \"React-RCTVibration\", version"
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactApple/Libraries/RCTFoundation/RCTDeprecation/RCTDeprecation.podspec",
+      "sha256": "572fe3cb6685e2ccebb01e49f32282cc58f15da81b88002287593444035f9e09",
+      "literal_names": [
+        "RCTDeprecation"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [],
+      "source_assignments": [
+        "s.source                 = { :git => 'https://github.com/react/react-native.git', :tag => 'v#{version}' }"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactApple/RCTSwiftUI/RCTSwiftUI.podspec",
+      "sha256": "651180ecc69e26a3370fa68ff532df9891071859de5178831c43a2608e9bd57b",
+      "literal_names": [
+        "RCTSwiftUI"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactApple/RCTSwiftUIWrapper/RCTSwiftUIWrapper.podspec",
+      "sha256": "0e1bbcbb77a846c3f92f3c61925a5408ea84e4d9de377b051ff3cf871e1b71df",
+      "literal_names": [
+        "RCTSwiftUIWrapper"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"RCTSwiftUI\""
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/React-Fabric.podspec",
+      "sha256": "dd725906d2f32d907c627ee307b2e40cf4d96cb7bf563bd9a9a3f1d41f337f08",
+      "literal_names": [
+        "React-Fabric"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"React-jsiexecutor\"",
+        "s.dependency \"RCTRequired\"",
+        "s.dependency \"RCTTypeSafety\"",
+        "s.dependency \"ReactCommon/turbomodule/core\"",
+        "s.dependency \"React-jsi\"",
+        "s.dependency \"React-logger\"",
+        "s.dependency \"React-Core\"",
+        "s.dependency \"React-debug\"",
+        "s.dependency \"React-featureflags\"",
+        "s.dependency \"React-runtimescheduler\"",
+        "s.dependency \"React-cxxreact\"",
+        "add_rn_third_party_dependencies(s)",
+        "ss.dependency             \"React-Fabric/animationbackend\"",
+        "sss.dependency             \"React-renderercss\"",
+        "sss.dependency             \"Yoga\"",
+        "ss.dependency             \"React-graphics\"",
+        "ss.dependency             \"React-Fabric/animationbackend\"",
+        "ss.dependency             \"React-Fabric/viewtransition\"",
+        "ss.dependency             \"React-performancecdpmetrics\"",
+        "ss.dependency             \"React-performancetimeline\"",
+        "ss.dependency             \"React-Fabric/observers/events\"",
+        "ss.dependency             \"React-jsinspectortracing\"",
+        "ss.dependency             \"React-rendererconsistency\""
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/React-FabricComponents.podspec",
+      "sha256": "8e27953501ff506ca325ab653433f9820d3fde47e6a9dfc8ad278433358985d1",
+      "literal_names": [
+        "React-FabricComponents"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"React-jsiexecutor\"",
+        "s.dependency \"RCTRequired\"",
+        "s.dependency \"RCTTypeSafety\"",
+        "s.dependency \"ReactCommon/turbomodule/core\"",
+        "s.dependency \"React-jsi\"",
+        "s.dependency \"React-logger\"",
+        "s.dependency \"React-Core\"",
+        "s.dependency \"React-debug\"",
+        "s.dependency \"React-featureflags\"",
+        "s.dependency \"React-utils\"",
+        "s.dependency \"React-runtimescheduler\"",
+        "s.dependency \"React-cxxreact\"",
+        "s.dependency \"Yoga\"",
+        "add_rn_third_party_dependencies(s)",
+        "ss.dependency             \"React-Fabric\""
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/React-FabricImage.podspec",
+      "sha256": "26457e6e29f759bca49f8a8cc56124c26259ad9be9384d0a26fb1c8297bd9145",
+      "literal_names": [
+        "React-FabricImage"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"React-jsiexecutor\", version",
+        "s.dependency \"RCTRequired\", version",
+        "s.dependency \"RCTTypeSafety\", version",
+        "s.dependency \"React-jsi\"",
+        "s.dependency \"React-logger\"",
+        "s.dependency \"React-featureflags\"",
+        "s.dependency \"React-utils\"",
+        "s.dependency \"Yoga\"",
+        "add_rn_third_party_dependencies(s)"
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/React-Mapbuffer.podspec",
+      "sha256": "384b9913ed26998748b4e2e107d6b19035d6ff939dcba3e1b3a9610267eb81f2",
+      "literal_names": [
+        "React-Mapbuffer"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "add_rn_third_party_dependencies(s)"
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/ReactCommon.podspec",
+      "sha256": "87efdbe16b8998bcc0522112a0bf9679443a3efe5a249eeec6002eafebc5f31f",
+      "literal_names": [
+        "ReactCommon"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "add_rn_third_party_dependencies(s)",
+        "ss.dependency \"React-callinvoker\", version",
+        "ss.dependency \"React-perflogger\", version",
+        "ss.dependency \"React-cxxreact\", version",
+        "ss.dependency \"React-jsi\", version",
+        "ss.dependency \"React-logger\", version",
+        "ss.dependency \"hermes-engine\"",
+        "sss.dependency           \"React-jsi\", version",
+        "sss.dependency \"hermes-engine\"",
+        "sss.dependency \"React-debug\", version",
+        "sss.dependency \"React-featureflags\", version",
+        "sss.dependency \"React-utils\", version"
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/callinvoker/React-callinvoker.podspec",
+      "sha256": "0849a8edd2fdaf2ce6f31684dcf39f0243533b6af0b70d4f098425302c2fc7b9",
+      "literal_names": [
+        "React-callinvoker"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/cxxreact/React-cxxreact.podspec",
+      "sha256": "48d45caa0b4bdae583328d91e83cfddee63add9a90bdf4e02b3441b673a8b596",
+      "literal_names": [
+        "React-cxxreact"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"React-callinvoker\", version",
+        "s.dependency \"React-perflogger\", version",
+        "s.dependency \"React-jsi\", version",
+        "s.dependency \"React-logger\", version",
+        "s.dependency \"React-debug\", version",
+        "s.dependency \"React-timing\", version",
+        "s.dependency 'hermes-engine'",
+        "add_rn_third_party_dependencies(s)"
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/hermes/React-hermes.podspec",
+      "sha256": "c0769799009387eb61e32e751d1ebee1d10ccd74b2609338b4b138600cee9bfc",
+      "literal_names": [
+        "React-hermes"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package['license']"
+      ],
+      "dependency_lines": [
+        "s.dependency \"React-cxxreact\", version",
+        "s.dependency \"React-jsiexecutor\", version",
+        "s.dependency \"React-perflogger\", version",
+        "s.dependency \"hermes-engine\"",
+        "s.dependency \"React-jsi\"",
+        "add_rn_third_party_dependencies(s)"
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/hermes/executor/React-jsitracing.podspec",
+      "sha256": "5b788c2bdcd8c5b64a4b2c8b4ab7f8bb31dff314ec8887fece4bde2a6e18eea8",
+      "literal_names": [
+        "React-jsitracing"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"React-jsi\""
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/jserrorhandler/React-jserrorhandler.podspec",
+      "sha256": "a60b0f0990350ee4f59996a03fde90d7656305c65c26c938c7561b1969354e80",
+      "literal_names": [
+        "React-jserrorhandler"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"React-jsi\"",
+        "s.dependency \"React-cxxreact\"",
+        "s.dependency \"ReactCommon/turbomodule/bridging\"",
+        "s.dependency 'hermes-engine'",
+        "add_rn_third_party_dependencies(s)"
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/jsi/React-jsi.podspec",
+      "sha256": "d313670e82ed88dede6ef6f7673cfa0d11c7dda52ca0b4da0ce00055bd59be60",
+      "literal_names": [
+        "React-jsi"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"hermes-engine\"",
+        "add_rn_third_party_dependencies(s)"
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/jsiexecutor/React-jsiexecutor.podspec",
+      "sha256": "c0aa98c8e265d326937a5fb6f0cb6ef06f076049033395054d79a1bf4292cd56",
+      "literal_names": [
+        "React-jsiexecutor"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"React-cxxreact\"",
+        "s.dependency \"React-jserrorhandler\"",
+        "s.dependency \"React-jsi\"",
+        "s.dependency \"React-jsitooling\"",
+        "s.dependency \"React-perflogger\"",
+        "s.dependency 'hermes-engine'",
+        "add_rn_third_party_dependencies(s)"
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/jsinspector-modern/React-jsinspector.podspec",
+      "sha256": "4be5e72336e03f32fd55cbad30722be909f82a783d42b17c109afa3c68ead764",
+      "literal_names": [
+        "React-jsinspector"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"React-featureflags\"",
+        "s.dependency \"React-jsi\"",
+        "s.dependency \"React-perflogger\", version",
+        "s.dependency \"hermes-engine\"",
+        "add_rn_third_party_dependencies(s)"
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/jsinspector-modern/cdp/React-jsinspectorcdp.podspec",
+      "sha256": "35f306217b0c682b20cb61152f5ab138edc4a775219cc3a061357285bcf0da55",
+      "literal_names": [
+        "React-jsinspectorcdp"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "add_rn_third_party_dependencies(s)"
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/jsinspector-modern/network/React-jsinspectornetwork.podspec",
+      "sha256": "b7c8deb68c68ca03072ceee353a6af60d88786fefe6c04d3193bb8b48824e427",
+      "literal_names": [
+        "React-jsinspectornetwork"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "add_rn_third_party_dependencies(s)"
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/jsinspector-modern/tracing/React-jsinspectortracing.podspec",
+      "sha256": "79441a7056d27313322021a5ca1abacabf72d44afffc5b674a9668526d31ca78",
+      "literal_names": [
+        "React-jsinspectortracing"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"React-jsi\"",
+        "s.dependency \"React-oscompat\"",
+        "s.dependency \"React-timing\"",
+        "s.dependency \"hermes-engine\"",
+        "add_rn_third_party_dependencies(s)"
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/jsitooling/React-jsitooling.podspec",
+      "sha256": "7c03c8139e3cbb6b20f73fbfba8c970c19566d6c7abb981aa50d523779618015",
+      "literal_names": [
+        "React-jsitooling"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"React-cxxreact\", version",
+        "s.dependency \"React-jsi\", version",
+        "s.dependency \"hermes-engine\"",
+        "add_rn_third_party_dependencies(s)"
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/logger/React-logger.podspec",
+      "sha256": "72d25b4f44182ba1a5ce933653a24a9a287be4a22b6b5ba2467de601e600b3fb",
+      "literal_names": [
+        "React-logger"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "add_rn_third_party_dependencies(s)"
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/oscompat/React-oscompat.podspec",
+      "sha256": "ee362e43a51fb5d8b7c93fa3d14872cde4c3da7e39aee580226e89dfe0ccf320",
+      "literal_names": [
+        "React-oscompat"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/react/debug/React-debug.podspec",
+      "sha256": "691efcd70ea5f7f5c06e3a658f4cefaa0e97d1ca0c6127b7932bce5ea6805b36",
+      "literal_names": [
+        "React-debug"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/react/featureflags/React-featureflags.podspec",
+      "sha256": "77e7190a785a18caf543c8185d0753d520edb508acb84e90175b0f0aeff20a7e",
+      "literal_names": [
+        "React-featureflags"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "add_rn_third_party_dependencies(s)"
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/react/nativemodule/core/platform/ios/React-NativeModulesApple.podspec",
+      "sha256": "af7d1f0b2aac2b059d9737fa1c01144abbb726d05e949002a2643c09a4cae65d",
+      "literal_names": [
+        "React-NativeModulesApple"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"ReactCommon/turbomodule/core\"",
+        "s.dependency \"ReactCommon/turbomodule/bridging\"",
+        "s.dependency \"React-callinvoker\"",
+        "s.dependency \"React-Core\"",
+        "s.dependency \"React-cxxreact\"",
+        "s.dependency \"React-jsi\"",
+        "s.dependency \"React-featureflags\"",
+        "add_rn_third_party_dependencies(s)"
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/react/nativemodule/defaults/React-defaultsnativemodule.podspec",
+      "sha256": "7d0c637a1860b4b5e95661d6fca3935f2ffdf77c3e4709c1a9945b3a75659c74",
+      "literal_names": [
+        "React-defaultsnativemodule"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"Yoga\"",
+        "s.dependency \"React-jsi\"",
+        "s.dependency \"React-jsiexecutor\"",
+        "add_rn_third_party_dependencies(s)",
+        "s.dependency \"React-domnativemodule\"",
+        "s.dependency \"React-microtasksnativemodule\"",
+        "s.dependency \"React-idlecallbacksnativemodule\"",
+        "s.dependency \"React-intersectionobservernativemodule\"",
+        "s.dependency \"React-mutationobservernativemodule\"",
+        "s.dependency \"React-viewtransitionnativemodule\"",
+        "s.dependency \"React-webperformancenativemodule\"",
+        "s.dependency \"React-Fabric/animated\""
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/react/nativemodule/dom/React-domnativemodule.podspec",
+      "sha256": "ac4afb3d18be45b8ede907d32c7f8fc919e504867cf97305187a23cb8b01d308",
+      "literal_names": [
+        "React-domnativemodule"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"React-jsi\"",
+        "s.dependency \"React-jsiexecutor\"",
+        "add_rn_third_party_dependencies(s)",
+        "s.dependency \"Yoga\"",
+        "s.dependency \"ReactCommon/turbomodule/core\"",
+        "s.dependency \"React-Fabric\"",
+        "s.dependency \"React-Fabric/bridging\"",
+        "s.dependency \"React-FabricComponents\""
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/react/nativemodule/featureflags/React-featureflagsnativemodule.podspec",
+      "sha256": "f0f05355381411c9f9dfb67daf3e43c38eb10b28de9648cbbb07e0afb9980ed3",
+      "literal_names": [
+        "React-featureflagsnativemodule"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"React-jsi\"",
+        "s.dependency \"React-jsiexecutor\"",
+        "add_rn_third_party_dependencies(s)",
+        "s.dependency \"ReactCommon/turbomodule/core\"",
+        "s.dependency \"React-RCTFBReactNativeSpec\"",
+        "s.dependency \"React-featureflags\""
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/react/nativemodule/idlecallbacks/React-idlecallbacksnativemodule.podspec",
+      "sha256": "8060de6df4bfe3834ac6b5c287ed2a04d6859127b83f45e92b24e898518d6b0d",
+      "literal_names": [
+        "React-idlecallbacksnativemodule"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"React-jsi\"",
+        "s.dependency \"React-jsiexecutor\"",
+        "add_rn_third_party_dependencies(s)",
+        "s.dependency \"ReactCommon/turbomodule/core\"",
+        "s.dependency \"React-runtimescheduler\""
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/react/nativemodule/intersectionobserver/React-intersectionobservernativemodule.podspec",
+      "sha256": "40c167df44c18a79a9c1d0611a9c085826354247c205480d8d717a5f75861dfe",
+      "literal_names": [
+        "React-intersectionobservernativemodule"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"Yoga\"",
+        "s.dependency \"React-jsi\"",
+        "s.dependency \"React-jsiexecutor\"",
+        "s.dependency \"React-cxxreact\"",
+        "add_rn_third_party_dependencies(s)",
+        "s.dependency \"ReactCommon/turbomodule/core\"",
+        "s.dependency \"React-Fabric\"",
+        "s.dependency \"React-Fabric/bridging\"",
+        "s.dependency \"React-runtimescheduler\""
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/react/nativemodule/microtasks/React-microtasksnativemodule.podspec",
+      "sha256": "20ea373d4c882b1ff39afba5cdb1c5d1657b0c081470baa77fc355eace1022b7",
+      "literal_names": [
+        "React-microtasksnativemodule"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"React-jsi\"",
+        "s.dependency \"React-jsiexecutor\"",
+        "add_rn_third_party_dependencies(s)",
+        "s.dependency \"ReactCommon/turbomodule/core\""
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/react/nativemodule/mutationobserver/React-mutationobservernativemodule.podspec",
+      "sha256": "e556b08b4936bacd20614efee59f54ab259a649d735b7ccb0d353ff983ff1608",
+      "literal_names": [
+        "React-mutationobservernativemodule"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"Yoga\"",
+        "s.dependency \"React-jsi\"",
+        "s.dependency \"React-jsiexecutor\"",
+        "s.dependency \"React-cxxreact\"",
+        "add_rn_third_party_dependencies(s)",
+        "s.dependency \"ReactCommon/turbomodule/core\"",
+        "s.dependency \"React-Fabric\"",
+        "s.dependency \"React-Fabric/bridging\"",
+        "s.dependency \"React-Fabric/observers/mutation\"",
+        "s.dependency \"React-featureflags\""
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/react/nativemodule/samples/ReactCommon-Samples.podspec",
+      "sha256": "42a67e6f5b763b86b114162cbf6a52c36567dc1b2e26599b4e8b7f06dd4d1eb0",
+      "literal_names": [
+        "ReactCommon-Samples"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"React-Core\"",
+        "s.dependency \"React-cxxreact\"",
+        "s.dependency \"React-jsi\"",
+        "s.dependency \"RCTTypeSafety\"",
+        "add_rn_third_party_dependencies(s)"
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/react/nativemodule/viewtransition/React-viewtransitionnativemodule.podspec",
+      "sha256": "f1e03c3c9877bbf971838dae09442d07d3f231d58503f87a9e7b1c39b09d138d",
+      "literal_names": [
+        "React-viewtransitionnativemodule"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"React-jsi\"",
+        "s.dependency \"React-jsiexecutor\"",
+        "add_rn_third_party_dependencies(s)",
+        "s.dependency \"Yoga\"",
+        "s.dependency \"ReactCommon/turbomodule/core\"",
+        "s.dependency \"React-Fabric\"",
+        "s.dependency \"React-Fabric/bridging\""
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/react/nativemodule/webperformance/React-webperformancenativemodule.podspec",
+      "sha256": "dd436b07c4c1d019a74eaefe50a68c51ae1391cb10ea8545affac1f723f7bcb4",
+      "literal_names": [
+        "React-webperformancenativemodule"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"React-jsi\"",
+        "s.dependency \"React-jsiexecutor\"",
+        "s.dependency \"React-cxxreact\"",
+        "add_rn_third_party_dependencies(s)",
+        "s.dependency \"ReactCommon/turbomodule/core\""
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/react/networking/React-networking.podspec",
+      "sha256": "c746d41d3018a9c1d052a07fb47b592f990b6a2429d716f1340aa6d79f5a3d7e",
+      "literal_names": [
+        "React-networking"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"React-performancetimeline\"",
+        "s.dependency \"React-timing\"",
+        "add_rn_third_party_dependencies(s)"
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/react/performance/cdpmetrics/React-performancecdpmetrics.podspec",
+      "sha256": "383d30666e276612d6040605e64aa3682b319c52f770b52413520a5d88c33df1",
+      "literal_names": [
+        "React-performancecdpmetrics"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"React-jsi\"",
+        "s.dependency \"React-performancetimeline\"",
+        "s.dependency \"React-timing\"",
+        "add_rn_third_party_dependencies(s)",
+        "s.dependency 'hermes-engine'"
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/react/performance/timeline/React-performancetimeline.podspec",
+      "sha256": "96004d39d66e9cb2cf448256fc840e215d92e558f0e527afa8e6ce23ac0c7ffb",
+      "literal_names": [
+        "React-performancetimeline"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"React-featureflags\"",
+        "s.dependency \"React-timing\"",
+        "s.dependency \"React-perflogger\"",
+        "add_rn_third_party_dependencies(s)"
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/react/renderer/consistency/React-rendererconsistency.podspec",
+      "sha256": "b37debf97ed80a1cbcb0617111571e314b225ff607af614cd7ca1dd5d805b5a9",
+      "literal_names": [
+        "React-rendererconsistency"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/react/renderer/css/React-renderercss.podspec",
+      "sha256": "d106d23ba18f67c62d05dad31e7c6c5f6aa6270a901227351d99bb5c50001c78",
+      "literal_names": [
+        "React-renderercss"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/react/renderer/debug/React-rendererdebug.podspec",
+      "sha256": "e3811e6d2674516c745fb9d3862caf05e774282076922136c9e89f5a2d2c4ec1",
+      "literal_names": [
+        "React-rendererdebug"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "add_rn_third_party_dependencies(s)"
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/react/renderer/graphics/React-graphics.podspec",
+      "sha256": "0d8dbdec5e7161ac7ab8b5a11d3300f9a5e76cc9d3dc6c03fc147fdac86f2480",
+      "literal_names": [
+        "React-graphics"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"React-jsi\"",
+        "s.dependency \"React-jsiexecutor\"",
+        "s.dependency \"React-featureflags\"",
+        "s.dependency \"React-utils\"",
+        "s.dependency \"React-rendererdebug\"",
+        "add_rn_third_party_dependencies(s)"
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/react/renderer/imagemanager/platform/ios/React-ImageManager.podspec",
+      "sha256": "0f0d8f7a2cf7c58d148c2d2e5eb2f99b02dd942a6da4e1e876d465de37210195",
+      "literal_names": [
+        "React-ImageManager"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"React-Core/Default\"",
+        "add_rn_third_party_dependencies(s)"
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/react/renderer/runtimescheduler/React-runtimescheduler.podspec",
+      "sha256": "f8cacf1f410040da40f27995a4eef9dd3a22298f5e94e03bbabb1b2632ff1d50",
+      "literal_names": [
+        "React-runtimescheduler"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"React-callinvoker\"",
+        "s.dependency \"React-cxxreact\"",
+        "s.dependency \"React-rendererdebug\"",
+        "s.dependency \"React-utils\"",
+        "s.dependency \"React-featureflags\"",
+        "s.dependency \"React-timing\"",
+        "s.dependency \"React-jsi\"",
+        "s.dependency \"React-performancetimeline\"",
+        "s.dependency \"React-rendererconsistency\"",
+        "add_rn_third_party_dependencies(s)"
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/react/runtime/React-RuntimeCore.podspec",
+      "sha256": "2bc4eee8c4e438c162cd8e7326f5a95cbf720771699229dfc290673c1e1460c2",
+      "literal_names": [
+        "React-RuntimeCore"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"React-jsiexecutor\"",
+        "s.dependency \"React-cxxreact\"",
+        "s.dependency \"React-jsi\"",
+        "s.dependency \"React-jserrorhandler\"",
+        "s.dependency \"React-performancetimeline\"",
+        "s.dependency \"React-runtimescheduler\"",
+        "s.dependency \"React-utils\"",
+        "s.dependency \"React-featureflags\"",
+        "add_rn_third_party_dependencies(s)",
+        "s.dependency \"React-jsinspector\""
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/react/runtime/React-RuntimeHermes.podspec",
+      "sha256": "239b1d4b3440ecfe79b2e5f64762e34bc94581d4d6cd0fc4398d4922a195ab7d",
+      "literal_names": [
+        "React-RuntimeHermes"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"React-jsitracing\"",
+        "s.dependency \"React-jsi\"",
+        "s.dependency \"React-utils\"",
+        "s.dependency \"React-RuntimeCore\"",
+        "s.dependency \"React-featureflags\"",
+        "s.dependency \"React-hermes\"",
+        "s.dependency \"hermes-engine\"",
+        "add_rn_third_party_dependencies(s)"
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/react/runtime/platform/ios/React-RuntimeApple.podspec",
+      "sha256": "bceef980337797a2bb696ae01c87c6481c1052cd686536a0c8ba07f69dc60b1d",
+      "literal_names": [
+        "React-RuntimeApple"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"React-jsiexecutor\"",
+        "s.dependency \"React-cxxreact\"",
+        "s.dependency \"React-callinvoker\"",
+        "s.dependency \"React-runtimescheduler\"",
+        "s.dependency \"React-jsi\"",
+        "s.dependency \"React-Core/Default\"",
+        "s.dependency \"React-CoreModules\"",
+        "s.dependency \"React-NativeModulesApple\"",
+        "s.dependency \"React-RCTFabric\"",
+        "s.dependency \"React-RuntimeCore\"",
+        "s.dependency \"React-Mapbuffer\"",
+        "s.dependency \"React-jserrorhandler\"",
+        "s.dependency \"React-jsinspector\"",
+        "s.dependency \"React-featureflags\"",
+        "s.dependency \"hermes-engine\"",
+        "add_rn_third_party_dependencies(s)"
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/react/timing/React-timing.podspec",
+      "sha256": "4675aa157ea8c09e19a9ecbd271367f504cfabf885672b7eb7072ccbed0d6ede",
+      "literal_names": [
+        "React-timing"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/react/utils/React-utils.podspec",
+      "sha256": "b6a8c0d5c4c381a93c296bb034c87343857fa5e57cd3481b8ec3039307e298f3",
+      "literal_names": [
+        "React-utils"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "s.dependency \"React-jsi\", version",
+        "s.dependency \"hermes-engine\"",
+        "add_rn_third_party_dependencies(s)"
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/reactperflogger/React-perflogger.podspec",
+      "sha256": "818c3b466e9ec5fc6c988cfe87872a4c979939698f9aff85603008b5536cc69c",
+      "literal_names": [
+        "React-perflogger"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "add_rn_third_party_dependencies(s)"
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/runtimeexecutor/React-runtimeexecutor.podspec",
+      "sha256": "8d578ebf93a0ea92dafe10bb894712383dccee4b5d0d648930d137fdb63b9a22",
+      "literal_names": [
+        "React-runtimeexecutor"
+      ],
+      "version_assignments": [
+        "s.version                = version"
+      ],
+      "license_assignments": [
+        "s.license                = package[\"license\"]"
+      ],
+      "dependency_lines": [
+        "add_rn_third_party_dependencies(s)",
+        "s.dependency \"React-jsi\", version"
+      ],
+      "source_assignments": [
+        "source = { :git => 'https://github.com/react/react-native.git' }",
+        "s.source                 = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\""
+      ]
+    },
+    {
+      "file": "ReactCommon/yoga/Yoga.podspec",
+      "sha256": "64eb7b752d3d6eb02514d5763220453dbc3a6a0aa040f27614a4ba6371b4ba9f",
+      "literal_names": [
+        "Yoga"
+      ],
+      "version_assignments": [
+        "spec.version = '0.0.0'"
+      ],
+      "license_assignments": [
+        "spec.license =  { :type => 'MIT' }"
+      ],
+      "dependency_lines": [],
+      "source_assignments": [
+        "source = { :git => ENV['INSTALL_YOGA_FROM_LOCATION'] || 'https://github.com/react/react-native.git' }",
+        "spec.source = source"
+      ],
+      "build_or_prepare_script_declarations": []
+    },
+    {
+      "file": "sdks/hermes-engine/hermes-engine.podspec",
+      "sha256": "ddfe34594624ed40a6299fd00a7105bdef0967ed73aad256ae596963b439dbc0",
+      "literal_names": [
+        "hermes-engine"
+      ],
+      "version_assignments": [
+        "spec.version     = version"
+      ],
+      "license_assignments": [
+        "spec.license     = package['license']"
+      ],
+      "dependency_lines": [],
+      "source_assignments": [
+        "spec.source      = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\"",
+        "require \"pathname\"",
+        "require_relative \"./hermes-utils.rb\"",
+        "react_native_path = File.dirname(Pod::Executable.execute_command('node', ['-p',",
+        "hermes_compiler_path = File.dirname(Pod::Executable.execute_command('node', ['-p',",
+        "spec.script_phase = {",
+        "spec.prepare_command = \". '#{react_native_path}/sdks/hermes-engine/utils/create-dummy-hermes-xcframework.sh'\"",
+        "spec.script_phases = ["
+      ]
+    },
+    {
+      "file": "third-party-podspecs/DoubleConversion.podspec",
+      "sha256": "807a5e38ab23d4c1bfdaf347c9a5440c943003f37e858a8484616a318af698e0",
+      "literal_names": [
+        "DoubleConversion"
+      ],
+      "version_assignments": [
+        "spec.version = '1.1.6'"
+      ],
+      "license_assignments": [
+        "spec.license = { :type => 'MIT' }"
+      ],
+      "dependency_lines": [],
+      "source_assignments": [
+        "spec.source = { :git => double_conversion_git_url,",
+        ":tag => \"v#{spec.version}\" }"
+      ],
+      "build_or_prepare_script_declarations": [
+        "spec.prepare_command = 'mv src double-conversion'"
+      ]
+    },
+    {
+      "file": "third-party-podspecs/RCT-Folly.podspec",
+      "sha256": "ecbf7ad60b38df783555f5c13eb7e1ccf4b906fc8bcf82fbbcdb515ad7dad795",
+      "literal_names": [
+        "RCT-Folly"
+      ],
+      "version_assignments": [
+        "spec.version = folly_release_version"
+      ],
+      "license_assignments": [
+        "spec.license = { :type => 'Apache License, Version 2.0' }"
+      ],
+      "dependency_lines": [
+        "spec.dependency \"boost\"",
+        "spec.dependency \"DoubleConversion\"",
+        "spec.dependency \"glog\"",
+        "spec.dependency \"fast_float\", \"8.0.0\"",
+        "spec.dependency \"fmt\", \"12.1.0\""
+      ],
+      "source_assignments": [
+        "spec.source = { :git => folly_git_url,",
+        ":tag => \"v#{folly_release_version}\" }"
+      ],
+      "build_or_prepare_script_declarations": [
+        "spec.prepare_command = \"echo '#{folly_config_file.join(\"\\n\")}' > folly/folly-config.h\""
+      ]
+    },
+    {
+      "file": "third-party-podspecs/ReactNativeDependencies.podspec",
+      "sha256": "a487ac5c74d9aef1b3c6fa527e3cf929d62e031ebaf587f4948813b6717ee086",
+      "literal_names": [
+        "ReactNativeDependencies"
+      ],
+      "version_assignments": [
+        "spec.version              = version"
+      ],
+      "license_assignments": [
+        "spec.license              = package['license']"
+      ],
+      "dependency_lines": [],
+      "source_assignments": [
+        "spec.source               = source"
+      ],
+      "build_or_prepare_script_declarations": [
+        "require \"json\"",
+        "react_native_path = File.dirname(Pod::Executable.execute_command('node', ['-p',",
+        "spec.prepare_command    = <<-CMD",
+        "script_phase = {",
+        "script_phase[:always_out_of_date] = \"1\"",
+        "spec.script_phase = script_phase"
+      ]
+    },
+    {
+      "file": "third-party-podspecs/boost.podspec",
+      "sha256": "b2e45fe8e2ea15e9a6c9013bb9bf92c094ff0986de0420568a52523b009c177a",
+      "literal_names": [
+        "boost"
+      ],
+      "version_assignments": [
+        "spec.version = '1.84.0'"
+      ],
+      "license_assignments": [
+        "spec.license = { :type => 'Boost Software License', :file => \"LICENSE_1_0.txt\" }"
+      ],
+      "dependency_lines": [],
+      "source_assignments": [
+        "spec.source = { :git => boost_git_url,",
+        ":tag => \"v1.84.0\" }"
+      ],
+      "build_or_prepare_script_declarations": []
+    },
+    {
+      "file": "third-party-podspecs/fast_float.podspec",
+      "sha256": "59294099215845fb148c7bc8ce189379504aabd4abf6d31f3da892bd2198fb34",
+      "literal_names": [
+        "fast_float"
+      ],
+      "version_assignments": [
+        "spec.version = \"8.0.0\""
+      ],
+      "license_assignments": [
+        "spec.license = { :type => \"MIT\" }"
+      ],
+      "dependency_lines": [],
+      "source_assignments": [
+        "spec.source = {",
+        ":git => fast_float_git_url,",
+        ":tag => \"v8.0.0\""
+      ],
+      "build_or_prepare_script_declarations": []
+    },
+    {
+      "file": "third-party-podspecs/fmt.podspec",
+      "sha256": "0131c09d7dbeec869a25c9089760d4fc3e0c3fbd1c53e6777c3628723fc6fa42",
+      "literal_names": [
+        "fmt"
+      ],
+      "version_assignments": [
+        "spec.version = \"12.1.0\""
+      ],
+      "license_assignments": [
+        "spec.license = { :type => \"MIT\" }"
+      ],
+      "dependency_lines": [],
+      "source_assignments": [
+        "spec.source = {",
+        ":git => fmt_git_url,",
+        ":tag => \"12.1.0\""
+      ],
+      "build_or_prepare_script_declarations": []
+    },
+    {
+      "file": "third-party-podspecs/glog.podspec",
+      "sha256": "5a9bbbf879d1ad96374a3cb9769f5c22fc957a84ee37027cef0e93344ed55a9c",
+      "literal_names": [
+        "glog"
+      ],
+      "version_assignments": [
+        "spec.version = '0.3.5'"
+      ],
+      "license_assignments": [
+        "spec.license = { :type => 'Google', :file => 'COPYING' }"
+      ],
+      "dependency_lines": [],
+      "source_assignments": [
+        "spec.source = { :git => glog_git_url,",
+        ":tag => \"v#{spec.version}\" }"
+      ],
+      "build_or_prepare_script_declarations": [
+        "spec.prepare_command = File.read(\"../scripts/ios-configure-glog.sh\")"
+      ]
+    }
+  ]
+}

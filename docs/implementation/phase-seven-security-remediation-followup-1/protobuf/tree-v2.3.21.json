@@ -1,0 +1,118 @@
+{
+  "sha": "83aef5e4a774a2fbd2cdf8b5a9276649f18098a7",
+  "url": "https://api.github.com/repos/JetBrains/kotlin/git/trees/83aef5e4a774a2fbd2cdf8b5a9276649f18098a7",
+  "tree": [
+    {
+      "path": "build.gradle.kts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c6fb7d360deeb820f8ea6d95ad96e74ef941dfb",
+      "size": 569,
+      "url": "https://api.github.com/repos/JetBrains/kotlin/git/blobs/9c6fb7d360deeb820f8ea6d95ad96e74ef941dfb"
+    },
+    {
+      "path": "protobuf-lite",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "70938616dcdd1985145b1dc50c897725b0987857",
+      "url": "https://api.github.com/repos/JetBrains/kotlin/git/trees/70938616dcdd1985145b1dc50c897725b0987857"
+    },
+    {
+      "path": "protobuf-lite/build.gradle.kts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45758ee33fd6050ca45686f2151370afed1d9aea",
+      "size": 4392,
+      "url": "https://api.github.com/repos/JetBrains/kotlin/git/blobs/45758ee33fd6050ca45686f2151370afed1d9aea"
+    },
+    {
+      "path": "protobuf-patches",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4399d517055c24fa3323c7e66784c27186088370",
+      "url": "https://api.github.com/repos/JetBrains/kotlin/git/trees/4399d517055c24fa3323c7e66784c27186088370"
+    },
+    {
+      "path": "protobuf-patches/build.gradle.kts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "511ff3e81b9057afe07311cfc2bdfd13b38e31e7",
+      "size": 353,
+      "url": "https://api.github.com/repos/JetBrains/kotlin/git/blobs/511ff3e81b9057afe07311cfc2bdfd13b38e31e7"
+    },
+    {
+      "path": "protobuf-patches/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "27d6165639c388b1f4cb996900a66a6ee4bbb851",
+      "url": "https://api.github.com/repos/JetBrains/kotlin/git/trees/27d6165639c388b1f4cb996900a66a6ee4bbb851"
+    },
+    {
+      "path": "protobuf-patches/src/main",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e5ae3aea58d310e46345510002e95b0b67e4786e",
+      "url": "https://api.github.com/repos/JetBrains/kotlin/git/trees/e5ae3aea58d310e46345510002e95b0b67e4786e"
+    },
+    {
+      "path": "protobuf-patches/src/main/java",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5aff7db55285a8a1fde8d93a2099762bad7b66ec",
+      "url": "https://api.github.com/repos/JetBrains/kotlin/git/trees/5aff7db55285a8a1fde8d93a2099762bad7b66ec"
+    },
+    {
+      "path": "protobuf-patches/src/main/java/com",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f2f2101852d79ad587ed672e0bfb9ec55a03ee5d",
+      "url": "https://api.github.com/repos/JetBrains/kotlin/git/trees/f2f2101852d79ad587ed672e0bfb9ec55a03ee5d"
+    },
+    {
+      "path": "protobuf-patches/src/main/java/com/google",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8dde3350f1184f66966a1d36a666cb891a159a18",
+      "url": "https://api.github.com/repos/JetBrains/kotlin/git/trees/8dde3350f1184f66966a1d36a666cb891a159a18"
+    },
+    {
+      "path": "protobuf-patches/src/main/java/com/google/protobuf",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0e79ab1e6a0b294e6de40ed135ec2f7cf4c3cf4e",
+      "url": "https://api.github.com/repos/JetBrains/kotlin/git/trees/0e79ab1e6a0b294e6de40ed135ec2f7cf4c3cf4e"
+    },
+    {
+      "path": "protobuf-patches/src/main/java/com/google/protobuf/CodedInputStream.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5fa0ec251208db5b29fa69678c575f36381ed2b9",
+      "size": 45783,
+      "url": "https://api.github.com/repos/JetBrains/kotlin/git/blobs/5fa0ec251208db5b29fa69678c575f36381ed2b9"
+    },
+    {
+      "path": "protobuf-relocated",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8ee90fd03518e4a12887832c5fdf4c1fec3e04e6",
+      "url": "https://api.github.com/repos/JetBrains/kotlin/git/trees/8ee90fd03518e4a12887832c5fdf4c1fec3e04e6"
+    },
+    {
+      "path": "protobuf-relocated/build.gradle.kts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9bc9b5ebd7f10bf49e37354a0372d69c6d17e014",
+      "size": 2903,
+      "url": "https://api.github.com/repos/JetBrains/kotlin/git/blobs/9bc9b5ebd7f10bf49e37354a0372d69c6d17e014"
+    },
+    {
+      "path": "settings.gradle",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2065096047a2b7b6eef9e49fa465ed0b4221c505",
+      "size": 69,
+      "url": "https://api.github.com/repos/JetBrains/kotlin/git/blobs/2065096047a2b7b6eef9e49fa465ed0b4221c505"
+    }
+  ],
+  "truncated": false
+}

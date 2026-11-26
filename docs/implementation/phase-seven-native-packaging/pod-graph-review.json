@@ -1,0 +1,26 @@
+{
+  "pods_installed": 76,
+  "equal_to_previous_local_podspec_inventory": true,
+  "external_source_names": 76,
+  "external_sources_equal_local": true,
+  "spec_repos_section_present": false,
+  "http_sources": {
+    "React-Core-prebuilt": "file:///Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-activation/ios/react-native-artifacts-0.86.3-reactnative-core-debug.tar.gz",
+    "ReactNativeDependencies": "file:///Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-activation/ios/react-native-artifacts-0.86.3-reactnative-dependencies-debug.tar.gz",
+    "hermes-engine": "file:///Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-activation/ios/hermes-ios-250829098.0.17-hermes-ios-debug.tar.gz"
+  },
+  "http_sources_not_in_verified_archives": [],
+  "http_archive_sha256_recheck": {
+    "React-Core-prebuilt": true,
+    "ReactNativeDependencies": true,
+    "hermes-engine": true
+  },
+  "trunk_metadata_note": "second attempt (pre-handoff) printed Adding spec repo trunk with CDN; .pod-home/repos/trunk has only CocoaPods-version.yml+etag, empty Specs; no SPEC REPOS in lock",
+  "trunk_files": [
+    ".pod-home/repos/trunk/.url",
+    ".pod-home/repos/trunk/CocoaPods-version.yml",
+    ".pod-home/repos/trunk/CocoaPods-version.yml.etag"
+  ],
+  "podfile_lock_sha256": "1457ebaec29445b91494c9e0c62049db8189e5f413641a6a082781461bd4e220",
+  "cocoapods": "1.16.2"
+}

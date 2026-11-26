@@ -1,0 +1,143 @@
+{
+  "status": "Implemented and verified on host; matching release-host reruns and final review pending",
+  "preparation_commits": [
+    "0dba466",
+    "a357da5"
+  ],
+  "defects": {
+    "DEF-0009": "Confirmed public ten-row report approximately600KB wrongly rejected before fix. Latest known staged image per table/id replaces unrelated prior candidates; unknown allocated IDs retain conservative bounds.",
+    "DEF-0010": "Confirmed actual two-event drain exactly1MiB with true flag and1byte over with false. Candidate sizing now uses actual terminal status."
+  },
+  "unchanged": "Wire/core limits, persisted formats, core allocation, response atomicity and dependency graph",
+  "current_facade_tests": 28,
+  "logs": [
+    {
+      "path": "target/phase-seven-review-large-batch-red.txt",
+      "sha256": "d02a746c595ac2ee4f8a8d94c8fede20685322189da7cda3be7fb7d4aa932d2e",
+      "observed_exit_code": 101,
+      "meaning": "Authentic public keyed-batch LimitExceeded regression",
+      "result_lines": [
+        "test g11_fitting_large_keyed_batch_does_not_accumulate_other_row_images ... FAILED",
+        "assertion `left == right` failed: {\"abi\":\"1\",\"error\":{\"kind\":\"LimitExceeded\"},\"ok\":false}",
+        "test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 19 filtered out; finished in 2.37s"
+      ]
+    },
+    {
+      "path": "target/phase-seven-review-prefix-red.txt",
+      "sha256": "29e5c497ba8883b3f0a27150fa9dd706a80124a1489c91c132271685a305dde3",
+      "observed_exit_code": 101,
+      "meaning": "Authentic public byte-exact drain LimitExceeded regression",
+      "result_lines": [
+        "test g11_byte_exact_terminal_prefix_makes_progress_without_dropping_events ... FAILED",
+        "assertion `left == right` failed: {\"abi\":\"1\",\"error\":{\"kind\":\"LimitExceeded\"},\"ok\":false}",
+        "test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 18 filtered out; finished in 1.01s"
+      ]
+    },
+    {
+      "path": "target/phase-seven-review-prefix-green.txt",
+      "sha256": "5fbcad6488d75835c30165f954652ad952e69f3817df7df66d13715316fba55d",
+      "observed_exit_code": 0,
+      "meaning": "Prefix fix targeted pass",
+      "result_lines": [
+        "test g11_byte_exact_terminal_prefix_makes_progress_without_dropping_events ... ok",
+        "test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 18 filtered out; finished in 1.30s"
+      ]
+    },
+    {
+      "path": "target/phase-seven-review-budget-green.txt",
+      "sha256": "ac2f5b3056745dc3ef4df9b02418bfd2b0ccdb6de4f12b12f8314ca69963b68e",
+      "observed_exit_code": 0,
+      "meaning": "Seven focused cases pass",
+      "result_lines": [
+        "test g11_batch_reply_overflow_rejects_before_committing_a_large_before_image ... ok",
+        "test g11_fitting_large_keyed_batch_does_not_accumulate_other_row_images ... ok",
+        "test g11_byte_exact_terminal_prefix_makes_progress_without_dropping_events ... ok",
+        "test g11_keyed_entity_budget_excludes_unrelated_rows ... ok",
+        "test g11_keyed_batch_budget_excludes_unrelated_rows ... ok",
+        "test g11_unknown_allocated_before_image_stays_bounded_and_counter_unchanged ... ok",
+        "test g11_keyed_scope_budget_excludes_unrelated_rows ... ok",
+        "test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 13 filtered out; finished in 13.54s"
+      ]
+    },
+    {
+      "path": "target/phase-seven-review-facade-green.txt",
+      "sha256": "54fc2c830ee285fd254a71a18df15e57fa19a96866648b92f629975cc545364c",
+      "observed_exit_code": 0,
+      "meaning": "Complete current facade pass",
+      "result_lines": [
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test g11_mapped_reference_expansion_is_bounded_before_patch ... ok",
+        "test g11_patch_preflights_complete_result_before_mutation ... ok",
+        "test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.90s",
+        "test g11_batch_reply_overflow_rejects_before_committing_a_large_before_image ... ok",
+        "test g11_byte_exact_terminal_prefix_makes_progress_without_dropping_events ... ok",
+        "test g11_fitting_large_keyed_batch_does_not_accumulate_other_row_images ... ok",
+        "test g11_keyed_batch_budget_excludes_unrelated_rows ... ok",
+        "test g11_keyed_entity_budget_excludes_unrelated_rows ... ok",
+        "test g11_keyed_scope_budget_excludes_unrelated_rows ... ok",
+        "test g11_undeliverable_single_snapshot_remains_until_cancellation ... ok",
+        "test g11_unknown_allocated_before_image_stays_bounded_and_counter_unchanged ... ok",
+        "test result: ok. 21 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 14.48s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s"
+      ]
+    },
+    {
+      "path": "target/phase-seven-workspace-final.txt",
+      "sha256": "448b31570d9f9604f286a2b10a9f6daa0a7413da73bc20af4a0cd3ccff8c46bd",
+      "observed_exit_code": 0,
+      "meaning": "374-test full workspace before review fixes; historical checkpoint only",
+      "result_lines": [
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test g11_mapped_reference_expansion_is_bounded_before_patch ... ok",
+        "test g11_patch_preflights_complete_result_before_mutation ... ok",
+        "test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.86s",
+        "test g11_batch_reply_overflow_rejects_before_committing_a_large_before_image ... ok",
+        "test result: ok. 14 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.89s",
+        "test result: ok. 84 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 5.55s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.37s",
+        "test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 184.16s",
+        "test result: ok. 68 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.97s",
+        "test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.09s",
+        "test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s",
+        "test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.15s",
+        "test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.25s",
+        "test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s",
+        "test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s",
+        "test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.99s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.50s",
+        "test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 203.32s",
+        "test result: ok. 68 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 4.22s",
+        "test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.63s",
+        "test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.80s",
+        "test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s",
+        "test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.36s",
+        "test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.56s",
+        "test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s",
+        "test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.44s",
+        "test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s",
+        "test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 53 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 207.40s",
+        "test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.10s",
+        "test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.09s",
+        "test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.18s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s"
+      ]
+    }
+  ],
+  "incomplete_initial_red_run": {
+    "status": "INTERRUPTED_NOT_COMPLETED",
+    "owned_child_pid": 53764,
+    "owned_parent_pid": 53702,
+    "elapsed_observed": "08:44",
+    "reason": "Old 128-row preflight remained CPU-bound. A separate ten-row 600KB public facade regression already demonstrated the same LimitExceeded bug before the fix; new full seven-case suite passes. No claim this incomplete old run produced a batch assertion failure.",
+    "fixture_qualification": "Initial old scope fixture lacked required title; fixed before final green. Initial Rust parser failure was setup, not behavioral RED.",
+    "log": "target/phase-seven-review-budget-red.txt"
+  },
+  "qualification": "128-keyed/repeated ordinary/scoped/entity and remove/reinsert, unknown-ID bounds and intrinsically oversized-event cancellation are positive/negative controls. Do not claim individual pre-fix assertion failures for the interrupted 128-row run or the initial malformed scope fixture."
+}

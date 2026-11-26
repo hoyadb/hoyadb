@@ -1,0 +1,85 @@
+"""Inert detached-signature verification for the 17 quarantined review JARs.
+
+Existing /usr/local/bin/gpg only, in a fresh short task-owned public-only homedir (no user keyring,
+no private keys, no options file, no agent autostart, no automatic key retrieval). Keys are fetched
+by exact full issuer fingerprint over HTTPS. A good mathematical signature does NOT establish trust
+in the publisher identity, which remains UNKNOWN.
+"""
+from pathlib import Path
+import hashlib, json, re, subprocess, tempfile, os
+here = Path(__file__).resolve().parent
+review = here.parent
+gpg = '/usr/local/bin/gpg'
+keys = here / 'keys'
+keys.mkdir(exist_ok=True)
+home = Path(tempfile.mkdtemp(prefix='hoya-pgp-'))
+home.chmod(0o700)
+base = [gpg, '--homedir', str(home), '--no-options', '--no-autostart', '--batch', '--no-auto-key-retrieve']
+sha = lambda p: hashlib.sha256(Path(p).read_bytes()).hexdigest()
+record = {'method': 'existing GPG; task-owned short public-only home; keys by exact issuer fingerprint; identity trust UNKNOWN',
+          'gpg': {'path': gpg, 'realpath': os.path.realpath(gpg), 'sha256': sha(os.path.realpath(gpg)),
+                  'version': subprocess.run([gpg, '--version'], stdout=subprocess.PIPE, text=True).stdout.splitlines()[0]},
+          'owned_home': str(home), 'results': []}
+
+def run(argv):
+    p = subprocess.run(argv, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, errors='replace', timeout=120)
+    return {'command': argv, 'exit_code': p.returncode, 'stdout': p.stdout, 'stderr': p.stderr}
+
+def fetch(url, out):
+    p = subprocess.run(['curl', '--fail', '--location', '--proto', '=https', '--proto-redir', '=https', '--tlsv1.2', '--silent',
+                        '--show-error', '--max-time', '60', '--max-filesize', '2000000', '--output', str(out), '--write-out', '%{url_effective}', url],
+                       stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, timeout=90)
+    rec = {'requested_url': url, 'effective_url': p.stdout, 'exit_code': p.returncode, 'stderr': p.stderr}
+    if p.returncode == 0:
+        rec.update(path=str(out.relative_to(here)), bytes=out.stat().st_size, sha256=sha(out))
+    elif out.exists():
+        out.unlink()
+    return rec
+
+key_cache = {}
+for comp in sorted((review / 'closure').iterdir()):
+    for jar in sorted(comp.glob('*.jar')):
+        asc = jar.with_name(jar.name + '.asc')
+        entry = {'coordinate': comp.name.replace('__', ':'), 'jar': jar.name, 'jar_sha256': sha(jar), 'asc_sha256': sha(asc),
+                 'asc_url': json.loads((review / 'fetch-log.json').read_text()) and next(r['url'] for r in json.loads((review / 'fetch-log.json').read_text()) if r['dest'].endswith('/' + asc.name))}
+        packets = run(base + ['--list-packets', str(asc)])
+        entry['packets'] = packets
+        fpr = re.search(r'issuer fpr v\d ([A-Fa-f0-9]{40,64})', packets['stdout'])
+        keyid = re.search(r'keyid ([A-Fa-f0-9]{16})', packets['stdout'])
+        entry['issuer_fingerprint'] = fpr[1].upper() if fpr else None
+        if entry['issuer_fingerprint']:
+            continue  # Already verified by exact fingerprint in verification.json.
+        entry['issuer_keyid'] = keyid[1].upper() if keyid else None
+        lookup = entry['issuer_keyid']  # Signature carries only a 64-bit issuer key ID; confirmed below by VALIDSIG.
+        if lookup and lookup not in key_cache:
+            f = lookup
+            attempts = []
+            for name, url in [('keys.openpgp.org', f'https://keys.openpgp.org/vks/v1/by-keyid/{f}'),
+                              ('keyserver.ubuntu.com', f'https://keyserver.ubuntu.com/pks/lookup?op=get&options=mr&search=0x{f}')]:
+                out = keys / f'{f}-{name}.asc'
+                rec = fetch(url, out)
+                if rec['exit_code'] == 0:
+                    imp = run(base + ['--import-options', 'import-minimal', '--import', str(out)])
+                    rec['import'] = imp
+                    shown = run(base + ['--with-colons', '--fingerprint', f])
+                    rec['imported_key_listing'] = shown
+                    rec['imported_has_uid'] = 'uid:' in shown['stdout']
+                attempts.append(rec)
+                if rec['exit_code'] == 0 and rec.get('imported_has_uid'):
+                    break
+            key_cache[f] = attempts
+        entry['key_requests'] = key_cache.get(lookup)
+        if lookup:
+            v = run(base + ['--status-fd', '1', '--verify', str(asc), str(jar)])
+            entry['verify'] = v
+            entry['goodsig'] = '[GNUPG:] GOODSIG' in v['stdout']
+            entry['validsig_fingerprint'] = (re.search(r'\[GNUPG:\] VALIDSIG ([A-F0-9]+)', v['stdout']) or [None, None])[1]
+            entry['primary_key_fingerprint'] = (re.search(r'\[GNUPG:\] VALIDSIG (?:\S+ ){9}([A-F0-9]+)', v['stdout']) or [None, None])[1]
+            entry['expired_or_revoked'] = [t for t in ('EXPKEYSIG', 'REVKEYSIG', 'EXPSIG', 'KEYEXPIRED', 'KEYREVOKED') if t in v['stdout']]
+            entry['uid'] = (re.search(r'\[GNUPG:\] GOODSIG \S+ (.*)', v['stdout']) or [None, None])[1]
+        entry['identity_trust'] = 'UNKNOWN: key fetched from a public keyserver; no independently trusted publisher key'
+        record['results'].append(entry)
+record['method'] += '; FALLBACK for signatures without an issuer-fingerprint subpacket: key lookup by the 64-bit issuer key ID, confirmed by the VALIDSIG full fingerprint'
+(here / 'verification-keyid-fallback.json').write_text(json.dumps(record, indent=2) + '\n')
+for e in record['results']:
+    print(e['coordinate'], e['issuer_keyid'], e.get('validsig_fingerprint'), e.get('primary_key_fingerprint'), 'GOOD' if e.get('goodsig') else 'NOT-GOOD', e.get('uid'), e.get('expired_or_revoked'))

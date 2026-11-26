@@ -1,0 +1,11 @@
+{
+  "queries": [
+    {
+      "package": {
+        "name": "org.junit:junit-bom",
+        "ecosystem": "Maven"
+      },
+      "version": "5.10.2"
+    }
+  ]
+}

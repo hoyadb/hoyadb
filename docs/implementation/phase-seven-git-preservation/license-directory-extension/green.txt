@@ -1,0 +1,6 @@
+test_g28_upstream_bytes_survive_clean_and_checkout (__main__.GitProvenance.test_g28_upstream_bytes_survive_clean_and_checkout) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 21.572s
+
+OK

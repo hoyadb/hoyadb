@@ -1,0 +1,510 @@
+npm warn config init.author.name Use `--init-author-name` instead.
+npm warn config init.author.email Use `--init-author-email` instead.
+npm warn config init.author.url Use `--init-author-url` instead.
+npm warn Unknown user config "email". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> test
+> node --test client/test/*.test.mjs testing/test/*.test.mjs
+
+TAP version 13
+# Subtest: G22 injected IDs are sampled for ordinary/scoped insert and managed links before RPC
+ok 1 - G22 injected IDs are sampled for ordinary/scoped insert and managed links before RPC
+  ---
+  duration_ms: 79.681035
+  type: 'test'
+  ...
+# Subtest: G22 an exhausted generator rejects a whole batch before its single native mutation
+ok 2 - G22 an exhausted generator rejects a whole batch before its single native mutation
+  ---
+  duration_ms: 4.419653
+  type: 'test'
+  ...
+# Subtest: G22 automatic entity writes retain the strict core allocator despite injected ordinary IDs
+ok 3 - G22 automatic entity writes retain the strict core allocator despite injected ordinary IDs
+  ---
+  duration_ms: 4.358718
+  type: 'test'
+  ...
+# Subtest: G19 default prepare samples the injected bounded jitter instead of hard-coding zero
+ok 4 - G19 default prepare samples the injected bounded jitter instead of hard-coding zero
+  ---
+  duration_ms: 3.674363
+  type: 'test'
+  ...
+# Subtest: G19 timer delay clamps exact i64 differences without BigInt or unsafe Number coercion
+ok 5 - G19 timer delay clamps exact i64 differences without BigInt or unsafe Number coercion
+  ---
+  duration_ms: 1.577289
+  type: 'test'
+  ...
+# Subtest: G05 an ordinary committed write drains postcommit callbacks once
+ok 6 - G05 an ordinary committed write drains postcommit callbacks once
+  ---
+  duration_ms: 5.645057
+  type: 'test'
+  ...
+# Subtest: G06 command identity must be explicitly provided before allocating a core ticket
+ok 7 - G06 command identity must be explicitly provided before allocating a core ticket
+  ---
+  duration_ms: 3.47433
+  type: 'test'
+  ...
+# Subtest: G17 managed entity links and unlink forward one trusted capture and no ID proposal
+ok 8 - G17 managed entity links and unlink forward one trusted capture and no ID proposal
+  ---
+  duration_ms: 52.118782
+  type: 'test'
+  ...
+# Subtest: G17 receipt outcome and reconciliation methods preserve explicit core correlation shapes
+ok 9 - G17 receipt outcome and reconciliation methods preserve explicit core correlation shapes
+  ---
+  duration_ms: 12.446281
+  type: 'test'
+  ...
+# Subtest: G19 explicit local reconciliation wakes delivery after the actual committed call
+ok 10 - G19 explicit local reconciliation wakes delivery after the actual committed call
+  ---
+  duration_ms: 3.579697
+  type: 'test'
+  ...
+# Subtest: S11 handler context rejects strict and non-strict nested mutation through awaits
+ok 11 - S11 handler context rejects strict and non-strict nested mutation through awaits
+  ---
+  duration_ms: 48.237419
+  type: 'test'
+  ...
+# Subtest: E01 entity calls capture trusted context atomically with each mutation
+ok 12 - E01 entity calls capture trusted context atomically with each mutation
+  ---
+  duration_ms: 25.666948
+  type: 'test'
+  ...
+# Subtest: E13 complete bounded UTF8 pull uses one core decode and one production apply
+ok 13 - E13 complete bounded UTF8 pull uses one core decode and one production apply
+  ---
+  duration_ms: 455.516227
+  type: 'test'
+  ...
+# Subtest: E18 reset changes foreign generation and callbacks only after successful core reset
+ok 14 - E18 reset changes foreign generation and callbacks only after successful core reset
+  ---
+  duration_ms: 5.192156
+  type: 'test'
+  ...
+# Subtest: E18 late transport completion cannot clear a replacement generation sync pump
+ok 15 - E18 late transport completion cannot clear a replacement generation sync pump
+  ---
+  duration_ms: 42.19934
+  type: 'test'
+  ...
+# Subtest: E18 close and reopen can start a new pump while the old transport remains suspended
+ok 16 - E18 close and reopen can start a new pump while the old transport remains suspended
+  ---
+  duration_ms: 28.179548
+  type: 'test'
+  ...
+# Subtest: H01 host invokes its awaited handler and returns the owned result
+ok 17 - H01 host invokes its awaited handler and returns the owned result
+  ---
+  duration_ms: 5.20993
+  type: 'test'
+  ...
+# Subtest: H03 unsafe integer Number coercion rejects before transport
+ok 18 - H03 unsafe integer Number coercion rejects before transport
+  ---
+  duration_ms: 1.372132
+  type: 'test'
+  ...
+# Subtest: H01 two owners execute FIFO and active cancellation releases a never-settling handler
+ok 19 - H01 two owners execute FIFO and active cancellation releases a never-settling handler
+  ---
+  duration_ms: 10.484955
+  type: 'test'
+  ...
+# Subtest: H02 cancellation while finish reply is delayed preserves committed success
+ok 20 - H02 cancellation while finish reply is delayed preserves committed success
+  ---
+  duration_ms: 6.01746
+  type: 'test'
+  ...
+# Subtest: H01 pending begin waits for a release signal without polling or calling handler
+ok 21 - H01 pending begin waits for a release signal without polling or calling handler
+  ---
+  duration_ms: 15.906656
+  type: 'test'
+  ...
+# Subtest: H06 owned HTTP response and application plan survive active-handler Busy without repeating work
+ok 22 - H06 owned HTTP response and application plan survive active-handler Busy without repeating work
+  ---
+  duration_ms: 43.024638
+  type: 'test'
+  ...
+# Subtest: H06 a finish wake during an awaited mapper is replayed when the old batch has no deadline
+ok 23 - H06 a finish wake during an awaited mapper is replayed when the old batch has no deadline
+  ---
+  duration_ms: 17.921655
+  type: 'test'
+  ...
+# Subtest: H04 bounded event pages retain one drain guard and callback liveness
+ok 24 - H04 bounded event pages retain one drain guard and callback liveness
+  ---
+  duration_ms: 6.016282
+  type: 'test'
+  ...
+# Subtest: H06 each bounded prepare prefix is a separate nonempty HTTP array
+ok 25 - H06 each bounded prepare prefix is a separate nonempty HTTP array
+  ---
+  duration_ms: 6.822218
+  type: 'test'
+  ...
+# Subtest: G03 portable integer/float tags preserve exact kinds without optional globals
+ok 26 - G03 portable integer/float tags preserve exact kinds without optional globals
+  ---
+  duration_ms: 17.623744
+  type: 'test'
+  ...
+# Subtest: G03 owned plain trees preserve safe own keys and reject unsupported cycles
+ok 27 - G03 owned plain trees preserve safe own keys and reject unsupported cycles
+  ---
+  duration_ms: 2.57401
+  type: 'test'
+  ...
+# Subtest: G06 owned context rejects strict and non-strict nested mutation
+ok 28 - G06 owned context rejects strict and non-strict nested mutation
+  ---
+  duration_ms: 1.973397
+  type: 'test'
+  ...
+# Subtest: G03 strict UTF8 length works without TextEncoder and rejects lone surrogates
+ok 29 - G03 strict UTF8 length works without TextEncoder and rejects lone surrogates
+  ---
+  duration_ms: 1.912471
+  type: 'test'
+  ...
+# Subtest: G01 schema definition owns arbitrary A and B instead of installing fixture tables
+ok 30 - G01 schema definition owns arbitrary A and B instead of installing fixture tables
+  ---
+  duration_ms: 10.333286
+  type: 'test'
+  ...
+# Subtest: G04 query construction is lazy exact DTO translation including navigation source
+ok 31 - G04 query construction is lazy exact DTO translation including navigation source
+  ---
+  duration_ms: 6.092148
+  type: 'test'
+  ...
+# Subtest: G01/G16 exact general open carries caller schema and binary key outside ABI JSON
+ok 32 - G01/G16 exact general open carries caller schema and binary key outside ABI JSON
+  ---
+  duration_ms: 24.494665
+  type: 'test'
+  ...
+# Subtest: G16 invalid protected key rejects before any channel open
+ok 33 - G16 invalid protected key rejects before any channel open
+  ---
+  duration_ms: 2.747729
+  type: 'test'
+  ...
+# Subtest: G20 explicitly preloaded memory helper bypasses entropy and protected storage
+ok 34 - G20 explicitly preloaded memory helper bypasses entropy and protected storage
+  ---
+  duration_ms: 7.589746
+  type: 'test'
+  ...
+# Subtest: G03 pure core codecs use null-owner ABI without parsing opaque numeric JSON
+ok 35 - G03 pure core codecs use null-owner ABI without parsing opaque numeric JSON
+  ---
+  duration_ms: 4.323637
+  type: 'test'
+  ...
+# Subtest: G22 retained-memory helper calls preserve typed handle ownership
+ok 36 - G22 retained-memory helper calls preserve typed handle ownership
+  ---
+  duration_ms: 4.55368
+  type: 'test'
+  ...
+# Subtest: G09 pending open reserves one client and closes late owner before replacement
+ok 37 - G09 pending open reserves one client and closes late owner before replacement
+  ---
+  duration_ms: 63.217916
+  type: 'test'
+  ...
+# Subtest: S10 protected open failure makes one binary call with no plaintext fallback
+ok 38 - S10 protected open failure makes one binary call with no plaintext fallback
+  ---
+  duration_ms: 20.639796
+  type: 'test'
+  ...
+# Subtest: S10 duplicate protected or memory opens reject Busy before second channel call
+ok 39 - S10 duplicate protected or memory opens reject Busy before second channel call
+  ---
+  duration_ms: 13.959127
+  type: 'test'
+  ...
+# Subtest: S10 pending open cancellation never publishes and close waits for its exact disposal
+ok 40 - S10 pending open cancellation never publishes and close waits for its exact disposal
+  ---
+  duration_ms: 51.268117
+  type: 'test'
+  ...
+# Subtest: S10 close awaits failed opening without fabricating owner disposal
+ok 41 - S10 close awaits failed opening without fabricating owner disposal
+  ---
+  duration_ms: 13.11214
+  type: 'test'
+  ...
+# Subtest: S10 failed disposal retains its handle and coalesces concurrent retries
+ok 42 - S10 failed disposal retains its handle and coalesces concurrent retries
+  ---
+  duration_ms: 7.689412
+  type: 'test'
+  ...
+# Subtest: S10 replacement open uses fresh caller configuration and never replays old key
+ok 43 - S10 replacement open uses fresh caller configuration and never replays old key
+  ---
+  duration_ms: 11.331899
+  type: 'test'
+  ...
+# Subtest: G09 closed clients reject stateful operations without sending a retired owner frame
+ok 44 - G09 closed clients reject stateful operations without sending a retired owner frame
+  ---
+  duration_ms: 15.35114
+  type: 'test'
+  ...
+# Subtest: G05 managed observer delivers its initial snapshot on one host turn without manual drain
+ok 45 - G05 managed observer delivers its initial snapshot on one host turn without manual drain
+  ---
+  duration_ms: 53.790954
+  type: 'test'
+  ...
+# Subtest: G05 one16ms count timer survives later writes without being postponed or polling
+ok 46 - G05 one16ms count timer survives later writes without being postponed or polling
+  ---
+  duration_ms: 29.967573
+  type: 'test'
+  ...
+# Subtest: G05 close cancels initial and count host deadlines and delivers no stale callback
+ok 47 - G05 close cancels initial and count host deadlines and delivers no stale callback
+  ---
+  duration_ms: 4.872129
+  type: 'test'
+  ...
+# Subtest: G05 a write during an outstanding managed drain coalesces a follow-up instead of losing delivery
+ok 48 - G05 a write during an outstanding managed drain coalesces a follow-up instead of losing delivery
+  ---
+  duration_ms: 9.585864
+  type: 'test'
+  ...
+# Subtest: G05 unavailable uptime rejects before core subscription while pure CRUD remains independent
+ok 49 - G05 unavailable uptime rejects before core subscription while pure CRUD remains independent
+  ---
+  duration_ms: 9.336827
+  type: 'test'
+  ...
+# Subtest: G12 hook receives four immutable owned core inputs and only row proposal returns
+ok 50 - G12 hook receives four immutable owned core inputs and only row proposal returns
+  ---
+  duration_ms: 48.441814
+  type: 'test'
+  ...
+# Subtest: G14 Busy retains the original proposal and never repeats a foreign hook
+ok 51 - G14 Busy retains the original proposal and never repeats a foreign hook
+  ---
+  duration_ms: 42.183378
+  type: 'test'
+  ...
+# Subtest: G14 StalePull refetches a fresh page instead of rebinding captured page bytes
+ok 52 - G14 StalePull refetches a fresh page instead of rebinding captured page bytes
+  ---
+  duration_ms: 27.213811
+  type: 'test'
+  ...
+# Subtest: G15 close retires an awaiting hook without publishing its eventual proposal
+ok 53 - G15 close retires an awaiting hook without publishing its eventual proposal
+  ---
+  duration_ms: 25.281044
+  type: 'test'
+  ...
+# Subtest: G15 reset cancels old hooks but a subsequent new-generation pull remains usable
+ok 54 - G15 reset cancels old hooks but a subsequent new-generation pull remains usable
+  ---
+  duration_ms: 8.648843
+  type: 'test'
+  ...
+# Subtest: G09 foreign release wakes pending begin and unsubscribe precedes handler
+ok 55 - G09 foreign release wakes pending begin and unsubscribe precedes handler
+  ---
+  duration_ms: 63.059447
+  type: 'test'
+  ...
+# Subtest: G09 release during suspended false begin response cannot be lost
+ok 56 - G09 release during suspended false begin response cannot be lost
+  ---
+  duration_ms: 8.959169
+  type: 'test'
+  ...
+# Subtest: G09 native release resumes exact Busy-owned operation without remapping
+ok 57 - G09 native release resumes exact Busy-owned operation without remapping
+  ---
+  duration_ms: 5.683106
+  type: 'test'
+  ...
+# Subtest: G09 cancellation removes pending native subscription and original ticket
+ok 58 - G09 cancellation removes pending native subscription and original ticket
+  ---
+  duration_ms: 17.560716
+  type: 'test'
+  ...
+# Subtest: G09 owner invalidation disposes Busy listener and stale notification cannot wake replacement
+ok 59 - G09 owner invalidation disposes Busy listener and stale notification cannot wake replacement
+  ---
+  duration_ms: 8.162632
+  type: 'test'
+  ...
+# Subtest: G09 invalid release registration fails statically before core request allocation
+ok 60 - G09 invalid release registration fails statically before core request allocation
+  ---
+  duration_ms: 14.359381
+  type: 'test'
+  ...
+# Subtest: G09 reset invalidation retires foreign Busy wait without an external release
+ok 61 - G09 reset invalidation retires foreign Busy wait without an external release
+  ---
+  duration_ms: 19.133803
+  type: 'test'
+  ...
+# Subtest: G09 cancelled suspended begin removes subscription before native reply arrives
+ok 62 - G09 cancelled suspended begin removes subscription before native reply arrives
+  ---
+  duration_ms: 8.253838
+  type: 'test'
+  ...
+# Subtest: G09 close removes subscription while an owned native response is still suspended
+ok 63 - G09 close removes subscription while an owned native response is still suspended
+  ---
+  duration_ms: 5.310029
+  type: 'test'
+  ...
+# Subtest: G09 delayed prepare cannot send old bytes to replacement transport or clear its run
+ok 64 - G09 delayed prepare cannot send old bytes to replacement transport or clear its run
+  ---
+  duration_ms: 60.955534
+  type: 'test'
+  ...
+# Subtest: G09 delayed pending list cannot call replacement mapper or alter its active run
+ok 65 - G09 delayed pending list cannot call replacement mapper or alter its active run
+  ---
+  duration_ms: 21.326125
+  type: 'test'
+  ...
+# Subtest: G09 late prepare_push rejection cannot publish errors into replacement owner
+ok 66 - G09 late prepare_push rejection cannot publish errors into replacement owner
+  ---
+  duration_ms: 19.427166
+  type: 'test'
+  ...
+# Subtest: G09 late pending_reconciliations rejection cannot publish errors into replacement owner
+ok 67 - G09 late pending_reconciliations rejection cannot publish errors into replacement owner
+  ---
+  duration_ms: 14.472547
+  type: 'test'
+  ...
+# Subtest: G06/G16 channel waits for bootstrap and transfers only its caller-owned key copy
+ok 68 - G06/G16 channel waits for bootstrap and transfers only its caller-owned key copy
+  ---
+  duration_ms: 28.97696
+  type: 'test'
+  ...
+# Subtest: G06 one request at a time preserves reply ownership without request-ID allocation
+ok 69 - G06 one request at a time preserves reply ownership without request-ID allocation
+  ---
+  duration_ms: 15.096838
+  type: 'test'
+  ...
+# Subtest: G09 worker failure retires its realm and late replies cannot fulfill future calls
+ok 70 - G09 worker failure retires its realm and late replies cannot fulfill future calls
+  ---
+  duration_ms: 10.917591
+  type: 'test'
+  ...
+# Subtest: G09 explicit channel disposal rejects pending bootstrap and sends no deferred open
+ok 71 - G09 explicit channel disposal rejects pending bootstrap and sends no deferred open
+  ---
+  duration_ms: 4.463794
+  type: 'test'
+  ...
+# Subtest: G16 worker admits protected key through separate binary channel after VFS initialization
+ok 72 - G16 worker admits protected key through separate binary channel after VFS initialization
+  ---
+  duration_ms: 24.191362
+  type: 'test'
+  ...
+# Subtest: G20 memory worker never touches protected VFS and passes empty binary key
+ok 73 - G20 memory worker never touches protected VFS and passes empty binary key
+  ---
+  duration_ms: 2.637638
+  type: 'test'
+  ...
+# Subtest: G16 malformed keys and unexpected properties reject before VFS or owner admission
+ok 74 - G16 malformed keys and unexpected properties reject before VFS or owner admission
+  ---
+  duration_ms: 3.525292
+  type: 'test'
+  ...
+# Subtest: G16 foreign worker failures expose no path key SQL or raw message
+ok 75 - G16 foreign worker failures expose no path key SQL or raw message
+  ---
+  duration_ms: 7.492113
+  type: 'test'
+  ...
+# Subtest: G06 one worker serializes initialization and subsequent facade calls without a borrow across awaits
+ok 76 - G06 one worker serializes initialization and subsequent facade calls without a borrow across awaits
+  ---
+  duration_ms: 8.401935
+  type: 'test'
+  ...
+# Subtest: G16 original duplicate ABI and unknown variants honor core preflight before VFS
+ok 77 - G16 original duplicate ABI and unknown variants honor core preflight before VFS
+  ---
+  duration_ms: 2.043507
+  type: 'test'
+  ...
+# Subtest: G16 worker validates the same near-limit original frame without quoting it
+ok 78 - G16 worker validates the same near-limit original frame without quoting it
+  ---
+  duration_ms: 124.775745
+  type: 'test'
+  ...
+# Subtest: G09 a fresh explicit protected open can retry failed storage initialization without replaying old key
+ok 79 - G09 a fresh explicit protected open can retry failed storage initialization without replaying old key
+  ---
+  duration_ms: 3.124351
+  type: 'test'
+  ...
+# Subtest: G21 fake attaches command correlation and preserves core-boxed business numeric kinds
+ok 80 - G21 fake attaches command correlation and preserves core-boxed business numeric kinds
+  ---
+  duration_ms: 18.564951
+  type: 'test'
+  ...
+# Subtest: G21 mixed entity writes to same row retain each tuple and business rejection
+ok 81 - G21 mixed entity writes to same row retain each tuple and business rejection
+  ---
+  duration_ms: 8.390084
+  type: 'test'
+  ...
+# Subtest: G21 missing business handler is explicit and fake never invents outcomes
+ok 82 - G21 missing business handler is explicit and fake never invents outcomes
+  ---
+  duration_ms: 2.957818
+  type: 'test'
+  ...
+1..82
+# tests 82
+# suites 0
+# pass 82
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1282.985767

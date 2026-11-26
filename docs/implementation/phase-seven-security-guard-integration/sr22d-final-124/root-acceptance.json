@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "limitations": [
+    "No concrete image or native baseline approved or enrolled",
+    "No host reader, collector, controller, runtime, Gradle or compiler execution",
+    "Native lifetime completeness and effective runtime properties remain open; holds unchanged",
+    "Inherited unhashable install_path TypeError remains outside SR-22d and is being recorded separately",
+    "Historical RED log source binding rests on manifests and traceback consistency, not a contemporaneous RED hash record"
+  ],
+  "packets": {
+    "followup_10_index_sha256": "4f30dc1e865bcde8fcb781e96e79c0d0bf9560a35045e9e40c8fc23a6ec381bc",
+    "followup_9_index_sha256": "a704df53eda266d2dfd2dbb98538d5a375434d2e64c02aafc33ac070239633f0"
+  },
+  "review": {
+    "agent": "b7d655b2-bede-46bd-82a9-4813dc96483d",
+    "final_phase_seven_rounds_counted": 0,
+    "model": "claude-opus-5-5",
+    "verdict": "PASS on corrected follow-up-10 cut"
+  },
+  "root_tests": {
+    "identity_file": "root-run-identity.json",
+    "normal": 124,
+    "optimized": 124,
+    "sources_unchanged": true
+  },
+  "scope": "SR-22d pure guard schema successor and missing-image-key correction only",
+  "unchanged": [
+    "kotlin_guard.py",
+    "capture classification",
+    "R1 exact script pin",
+    "all other thirteen guard sources"
+  ],
+  "whitespace": {
+    "classification": "Exact blank-context marker lines in preserved diff evidence; no first-party source finding. Original evidence hashes are not rewritten.",
+    "findings": 8,
+    "paths": [
+      "docs/implementation/phase-seven-security-remediation-followup-10/correction.diff",
+      "docs/implementation/phase-seven-security-remediation-followup-9/changes.diff"
+    ]
+  }
+}

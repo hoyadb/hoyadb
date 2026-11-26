@@ -1,0 +1,100 @@
+{
+  "source_framework": "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/swift/Artifacts/HoyaNative.xcframework",
+  "recorded_artifact_sha256": {
+    "HoyaNative.xcframework/Info.plist": "fa4dd51ea8237ba99d7d23badd28bc9db8080dbc1c477038db3fb8ef61463a23",
+    "HoyaNative.xcframework/ios-arm64/Headers/HoyaNative/module.modulemap": "33326b1780c8a1c82237313f2ee88578d34e816af4ecc3a4a799abfeb23af60c",
+    "HoyaNative.xcframework/ios-arm64/Headers/hoyadb.h": "2f61e513be42d3e7aabbd9bb06f02a98d88096551276ae89dd5b30aa28526b48",
+    "HoyaNative.xcframework/ios-arm64/libhoyadb_native.a": "64d6fd9ea798dfb8fc03f36dcce9b7e43ce55971756ed937bf4aa5362723244a",
+    "HoyaNative.xcframework/ios-arm64_x86_64-simulator/Headers/HoyaNative/module.modulemap": "33326b1780c8a1c82237313f2ee88578d34e816af4ecc3a4a799abfeb23af60c",
+    "HoyaNative.xcframework/ios-arm64_x86_64-simulator/Headers/hoyadb.h": "2f61e513be42d3e7aabbd9bb06f02a98d88096551276ae89dd5b30aa28526b48",
+    "HoyaNative.xcframework/ios-arm64_x86_64-simulator/libhoyadb_native.a": "bf491fe39f7275b6589063fa4645e050e38d4a2215623311bac6768ff016f396",
+    "HoyaNative.xcframework/macos-x86_64/Headers/HoyaNative/module.modulemap": "33326b1780c8a1c82237313f2ee88578d34e816af4ecc3a4a799abfeb23af60c",
+    "HoyaNative.xcframework/macos-x86_64/Headers/hoyadb.h": "2f61e513be42d3e7aabbd9bb06f02a98d88096551276ae89dd5b30aa28526b48",
+    "HoyaNative.xcframework/macos-x86_64/libhoyadb_native.a": "5aba91a0c4f53a726b8e4abaca073b45ff5adc5916666544577d3b7d45fe15e1"
+  },
+  "checks": [
+    {
+      "label": "swift-source",
+      "path": "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/swift/Artifacts/HoyaNative.xcframework",
+      "exit_code": 0,
+      "matches_recorded_sha256": true,
+      "files_sha256": {
+        "HoyaNative.xcframework/Info.plist": "fa4dd51ea8237ba99d7d23badd28bc9db8080dbc1c477038db3fb8ef61463a23",
+        "HoyaNative.xcframework/ios-arm64/Headers/HoyaNative/module.modulemap": "33326b1780c8a1c82237313f2ee88578d34e816af4ecc3a4a799abfeb23af60c",
+        "HoyaNative.xcframework/ios-arm64/Headers/hoyadb.h": "2f61e513be42d3e7aabbd9bb06f02a98d88096551276ae89dd5b30aa28526b48",
+        "HoyaNative.xcframework/ios-arm64/libhoyadb_native.a": "64d6fd9ea798dfb8fc03f36dcce9b7e43ce55971756ed937bf4aa5362723244a",
+        "HoyaNative.xcframework/ios-arm64_x86_64-simulator/Headers/HoyaNative/module.modulemap": "33326b1780c8a1c82237313f2ee88578d34e816af4ecc3a4a799abfeb23af60c",
+        "HoyaNative.xcframework/ios-arm64_x86_64-simulator/Headers/hoyadb.h": "2f61e513be42d3e7aabbd9bb06f02a98d88096551276ae89dd5b30aa28526b48",
+        "HoyaNative.xcframework/ios-arm64_x86_64-simulator/libhoyadb_native.a": "bf491fe39f7275b6589063fa4645e050e38d4a2215623311bac6768ff016f396",
+        "HoyaNative.xcframework/macos-x86_64/Headers/HoyaNative/module.modulemap": "33326b1780c8a1c82237313f2ee88578d34e816af4ecc3a4a799abfeb23af60c",
+        "HoyaNative.xcframework/macos-x86_64/Headers/hoyadb.h": "2f61e513be42d3e7aabbd9bb06f02a98d88096551276ae89dd5b30aa28526b48",
+        "HoyaNative.xcframework/macos-x86_64/libhoyadb_native.a": "5aba91a0c4f53a726b8e4abaca073b45ff5adc5916666544577d3b7d45fe15e1"
+      }
+    },
+    {
+      "label": "rn-package-source",
+      "path": "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/Artifacts/HoyaNative.xcframework",
+      "exit_code": 0,
+      "matches_recorded_sha256": true,
+      "files_sha256": {
+        "HoyaNative.xcframework/Info.plist": "fa4dd51ea8237ba99d7d23badd28bc9db8080dbc1c477038db3fb8ef61463a23",
+        "HoyaNative.xcframework/ios-arm64/Headers/HoyaNative/module.modulemap": "33326b1780c8a1c82237313f2ee88578d34e816af4ecc3a4a799abfeb23af60c",
+        "HoyaNative.xcframework/ios-arm64/Headers/hoyadb.h": "2f61e513be42d3e7aabbd9bb06f02a98d88096551276ae89dd5b30aa28526b48",
+        "HoyaNative.xcframework/ios-arm64/libhoyadb_native.a": "64d6fd9ea798dfb8fc03f36dcce9b7e43ce55971756ed937bf4aa5362723244a",
+        "HoyaNative.xcframework/ios-arm64_x86_64-simulator/Headers/HoyaNative/module.modulemap": "33326b1780c8a1c82237313f2ee88578d34e816af4ecc3a4a799abfeb23af60c",
+        "HoyaNative.xcframework/ios-arm64_x86_64-simulator/Headers/hoyadb.h": "2f61e513be42d3e7aabbd9bb06f02a98d88096551276ae89dd5b30aa28526b48",
+        "HoyaNative.xcframework/ios-arm64_x86_64-simulator/libhoyadb_native.a": "bf491fe39f7275b6589063fa4645e050e38d4a2215623311bac6768ff016f396",
+        "HoyaNative.xcframework/macos-x86_64/Headers/HoyaNative/module.modulemap": "33326b1780c8a1c82237313f2ee88578d34e816af4ecc3a4a799abfeb23af60c",
+        "HoyaNative.xcframework/macos-x86_64/Headers/hoyadb.h": "2f61e513be42d3e7aabbd9bb06f02a98d88096551276ae89dd5b30aa28526b48",
+        "HoyaNative.xcframework/macos-x86_64/libhoyadb_native.a": "5aba91a0c4f53a726b8e4abaca073b45ff5adc5916666544577d3b7d45fe15e1"
+      }
+    },
+    {
+      "label": "consumer-installed",
+      "path": "/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-phase7-rn-consumer-v8cue5dl/node_modules/@hoyadb/react-native/Artifacts/HoyaNative.xcframework",
+      "exit_code": 0,
+      "matches_recorded_sha256": true,
+      "files_sha256": {
+        "HoyaNative.xcframework/Info.plist": "fa4dd51ea8237ba99d7d23badd28bc9db8080dbc1c477038db3fb8ef61463a23",
+        "HoyaNative.xcframework/ios-arm64/Headers/HoyaNative/module.modulemap": "33326b1780c8a1c82237313f2ee88578d34e816af4ecc3a4a799abfeb23af60c",
+        "HoyaNative.xcframework/ios-arm64/Headers/hoyadb.h": "2f61e513be42d3e7aabbd9bb06f02a98d88096551276ae89dd5b30aa28526b48",
+        "HoyaNative.xcframework/ios-arm64/libhoyadb_native.a": "64d6fd9ea798dfb8fc03f36dcce9b7e43ce55971756ed937bf4aa5362723244a",
+        "HoyaNative.xcframework/ios-arm64_x86_64-simulator/Headers/HoyaNative/module.modulemap": "33326b1780c8a1c82237313f2ee88578d34e816af4ecc3a4a799abfeb23af60c",
+        "HoyaNative.xcframework/ios-arm64_x86_64-simulator/Headers/hoyadb.h": "2f61e513be42d3e7aabbd9bb06f02a98d88096551276ae89dd5b30aa28526b48",
+        "HoyaNative.xcframework/ios-arm64_x86_64-simulator/libhoyadb_native.a": "bf491fe39f7275b6589063fa4645e050e38d4a2215623311bac6768ff016f396",
+        "HoyaNative.xcframework/macos-x86_64/Headers/HoyaNative/module.modulemap": "33326b1780c8a1c82237313f2ee88578d34e816af4ecc3a4a799abfeb23af60c",
+        "HoyaNative.xcframework/macos-x86_64/Headers/hoyadb.h": "2f61e513be42d3e7aabbd9bb06f02a98d88096551276ae89dd5b30aa28526b48",
+        "HoyaNative.xcframework/macos-x86_64/libhoyadb_native.a": "5aba91a0c4f53a726b8e4abaca073b45ff5adc5916666544577d3b7d45fe15e1"
+      }
+    }
+  ],
+  "rn_artifact_before_sha256": {
+    "HoyaNative.xcframework/Info.plist": "fa4dd51ea8237ba99d7d23badd28bc9db8080dbc1c477038db3fb8ef61463a23",
+    "HoyaNative.xcframework/ios-arm64/Headers/HoyaNative/module.modulemap": "33326b1780c8a1c82237313f2ee88578d34e816af4ecc3a4a799abfeb23af60c",
+    "HoyaNative.xcframework/ios-arm64/Headers/hoyadb.h": "2f61e513be42d3e7aabbd9bb06f02a98d88096551276ae89dd5b30aa28526b48",
+    "HoyaNative.xcframework/ios-arm64/libhoyadb_native.a": "64d6fd9ea798dfb8fc03f36dcce9b7e43ce55971756ed937bf4aa5362723244a",
+    "HoyaNative.xcframework/ios-arm64_x86_64-simulator/Headers/HoyaNative/module.modulemap": "33326b1780c8a1c82237313f2ee88578d34e816af4ecc3a4a799abfeb23af60c",
+    "HoyaNative.xcframework/ios-arm64_x86_64-simulator/Headers/hoyadb.h": "2f61e513be42d3e7aabbd9bb06f02a98d88096551276ae89dd5b30aa28526b48",
+    "HoyaNative.xcframework/ios-arm64_x86_64-simulator/libhoyadb_native.a": "bf491fe39f7275b6589063fa4645e050e38d4a2215623311bac6768ff016f396",
+    "HoyaNative.xcframework/macos-x86_64/Headers/HoyaNative/module.modulemap": "33326b1780c8a1c82237313f2ee88578d34e816af4ecc3a4a799abfeb23af60c",
+    "HoyaNative.xcframework/macos-x86_64/Headers/hoyadb.h": "2f61e513be42d3e7aabbd9bb06f02a98d88096551276ae89dd5b30aa28526b48",
+    "HoyaNative.xcframework/macos-x86_64/libhoyadb_native.a": "5aba91a0c4f53a726b8e4abaca073b45ff5adc5916666544577d3b7d45fe15e1"
+  },
+  "superseded_archive_sha256": "f1961d1a824150125895a8829bdd849fe3ab05ddf4969587f2bf9ca4525c82cb",
+  "pack": {
+    "argv": [
+      "npm",
+      "pack",
+      "--ignore-scripts",
+      "--json",
+      "--pack-destination",
+      "/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-phase7-rn-consumer-v8cue5dl/packages"
+    ],
+    "cwd": "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native",
+    "exit_code": 0,
+    "stdout": "[\n  {\n    \"id\": \"@hoyadb/react-native@0.1.0\",\n    \"name\": \"@hoyadb/react-native\",\n    \"version\": \"0.1.0\",\n    \"size\": 35558582,\n    \"unpackedSize\": 114435659,\n    \"shasum\": \"f4b52927b37e670f0fb0d961d3df6264f588dd8f\",\n    \"integrity\": \"sha512-bFqAhCCqaq82ysFDH3JuQqzE9N0dqVCko9stgrEBAC1ImKHRbAze0MkxhCVBlxbF53topQzY5m+lADxPoA3+jw==\",\n    \"filename\": \"hoyadb-react-native-0.1.0.tgz\",\n    \"files\": [\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/Info.plist\",\n        \"size\": 1693,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/ios-arm64_x86_64-simulator/Headers/hoyadb.h\",\n        \"size\": 2171,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/ios-arm64_x86_64-simulator/Headers/HoyaNative/module.modulemap\",\n        \"size\": 60,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/ios-arm64_x86_64-simulator/libhoyadb_native.a\",\n        \"size\": 56854480,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/ios-arm64/Headers/hoyadb.h\",\n        \"size\": 2171,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/ios-arm64/Headers/HoyaNative/module.modulemap\",\n        \"size\": 60,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/ios-arm64/libhoyadb_native.a\",\n        \"size\": 28398384,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/macos-x86_64/Headers/hoyadb.h\",\n        \"size\": 2171,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/macos-x86_64/Headers/HoyaNative/module.modulemap\",\n        \"size\": 60,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"Artifacts/HoyaNative.xcframework/macos-x86_64/libhoyadb_native.a\",\n        \"size\": 29143544,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"HoyaDBReactNative.podspec\",\n        \"size\": 772,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"README.md\",\n        \"size\": 3140,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"android/build.gradle\",\n        \"size\": 370,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"android/src/main/AndroidManifest.xml\",\n        \"size\": 72,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"android/src/main/java/dev/hoyadb/HoyaDBModule.java\",\n        \"size\": 7966,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"android/src/main/java/dev/hoyadb/HoyaDBPackage.java\",\n        \"size\": 801,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"index.d.ts\",\n        \"size\": 934,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"ios/HoyaDBModule.h\",\n        \"size\": 105,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"ios/HoyaDBModule.mm\",\n        \"size\": 5018,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"ios/HoyaNativeHost.h\",\n        \"size\": 432,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"ios/HoyaNativeHost.mm\",\n        \"size\": 7147,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"package.json\",\n        \"size\": 802,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"react-native.config.cjs\",\n        \"size\": 171,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"src/channel.js\",\n        \"size\": 1364,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"src/index.js\",\n        \"size\": 1225,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"src/NativeHoyaDB.ts\",\n        \"size\": 546,\n        \"mode\": 420\n      }\n    ],\n    \"entryCount\": 26,\n    \"bundled\": []\n  }\n]\n",
+    "stderr": "npm warn config init.author.name Use `--init-author-name` instead.\nnpm warn config init.author.email Use `--init-author-email` instead.\nnpm warn config init.author.url Use `--init-author-url` instead.\nnpm warn Unknown user config \"email\". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.\n"
+  },
+  "archive_sha256": "1ac8d113910f609cc61a3b0784ad7bfeae2b9c5002a41ff4f95ef86670c2c538",
+  "archive_sha512": "6c5a808420aa6aaf36cac1431f726e42acc4f4dd1da950a4a3db2d82b101002d4898a1d16c0cded0c9318425419716c5e77b68a50cd8e66fa5003c4fa00dfe8f"
+}

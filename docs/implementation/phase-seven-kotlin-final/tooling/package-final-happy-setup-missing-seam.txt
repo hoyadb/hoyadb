@@ -1,0 +1,29 @@
+test_p05_p08_complete_local_coordinate_and_honest_certificate (__main__.FinalCertificate.test_p05_p08_complete_local_coordinate_and_honest_certificate) ... ERROR
+test_p01_current_so_must_match_native_evidence (__main__.NativeArtifactBinding.test_p01_current_so_must_match_native_evidence) ... ok
+test_p01_missing_native_input_must_not_certify (__main__.NativeArtifactBinding.test_p01_missing_native_input_must_not_certify) ... ok
+test_p01_native_source_must_match_evidence (__main__.NativeArtifactBinding.test_p01_native_source_must_match_evidence) ... ok
+
+======================================================================
+ERROR: test_p05_p08_complete_local_coordinate_and_honest_certificate (__main__.FinalCertificate.test_p05_p08_complete_local_coordinate_and_honest_certificate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 85, in test_p05_p08_complete_local_coordinate_and_honest_certificate
+    self.package()
+    ~~~~~~~~~~~~^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 78, in package
+    with patch.object(PACKAGE, 'ROOT', fixture.root), patch.object(PACKAGE, 'READELF', fixture.readelf), \
+                                                      ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.14/3.14.8/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/mock.py", line 1510, in __enter__
+    original, local = self.get_original()
+                      ~~~~~~~~~~~~~~~~~^^
+  File "/usr/local/Cellar/python@3.14/3.14.8/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/mock.py", line 1480, in get_original
+    raise AttributeError(
+        "%s does not have the attribute %r" % (target, name)
+    )
+AttributeError: <module 'package_aar_under_test' from '/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/package-aar.py'> does not have the attribute 'READELF'
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.060s
+
+FAILED (errors=1)
+exit=1

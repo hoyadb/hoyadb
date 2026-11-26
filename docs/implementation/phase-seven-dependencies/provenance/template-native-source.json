@@ -1,0 +1,32 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/react-native-community/template/dc3587fd74ab8cd31be7f817e644d874a884c623/template/android/build.gradle",
+    "file": "provenance/template-native/template-android__build.gradle",
+    "sha256": "c5d4ef364977093ec11064d503daa5eed1c7dbcab7630ed74908256bf8cc45f1"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/react-native-community/template/dc3587fd74ab8cd31be7f817e644d874a884c623/template/android/app/build.gradle",
+    "file": "provenance/template-native/template-android__app__build.gradle",
+    "sha256": "4885240243acb3723b790545f9638f68df481799b8a6a6ed494adc0ed71a3c67"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/react-native-community/template/dc3587fd74ab8cd31be7f817e644d874a884c623/template/android/settings.gradle",
+    "file": "provenance/template-native/template-android__settings.gradle",
+    "sha256": "b73514fb28a1502bba0464317d9bf028626c97e907f7474d1648d74009e0b942"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/react-native-community/template/dc3587fd74ab8cd31be7f817e644d874a884c623/template/android/gradle/wrapper/gradle-wrapper.properties",
+    "file": "provenance/template-native/template-android__gradle__wrapper__gradle-wrapper.properties",
+    "sha256": "a180163249c7252412ddaee1c7adcf59f6494b1183136f690fbd9a3b8aaed00e"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/react-native-community/template/dc3587fd74ab8cd31be7f817e644d874a884c623/template/ios/Podfile",
+    "file": "provenance/template-native/template-ios__Podfile",
+    "sha256": "2f92d0007348b3a4146a4e162c5d9eeea6b272406c451b842898a1d28fbcafb6"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/react-native-community/template/dc3587fd74ab8cd31be7f817e644d874a884c623/template/Gemfile",
+    "file": "provenance/template-native/template-Gemfile",
+    "sha256": "731cb657e8b565a302671772c6cde455dfa19f7c4015b778afec9b7e67da5200"
+  }
+]

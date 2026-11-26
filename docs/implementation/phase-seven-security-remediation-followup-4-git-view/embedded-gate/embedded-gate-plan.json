@@ -1,0 +1,256 @@
+{
+ "advisories": {
+  "com.fasterxml:aalto-xml:1.3.0": [],
+  "com.github.gundy:semver4j:0.16.4": [],
+  "com.google.code.gson:gson:2.11.0": [],
+  "com.google.guava:failureaccess:1.0.2": [],
+  "com.google.guava:guava:33.3.1-jre": [],
+  "commons-codec:commons-codec:1.17.1": [],
+  "commons-io:commons-io:2.18.0": [],
+  "io.vavr:vavr:0.10.4": [],
+  "javax.inject:javax.inject:1": [],
+  "one.util:streamex:0.7.2": [],
+  "org.antlr:antlr4-runtime:4.5.2-1": [],
+  "org.antlr:antlr4-runtime:4.5.3": [],
+  "org.apache.commons:commons-compress:1.27.1": [],
+  "org.apache.commons:commons-lang3:3.16.0": [
+   "GHSA-j288-q9x7-2f5v"
+  ],
+  "org.codehaus.woodstox:stax2-api:4.2.1": [],
+  "org.fusesource.jansi:jansi:2.4.0": [],
+  "org.jctools:jctools-core:3.1.0": [],
+  "org.jetbrains.intellij.deps.fastutil:intellij-deps-fastutil:8.5.4-9": [],
+  "org.jetbrains.intellij.deps:asm-all:9.6.1": [],
+  "org.jetbrains.intellij.deps:log4j:1.2.17.2": [
+   "GHSA-2qrg-x229-3v8q",
+   "GHSA-65fg-84f6-3jq3",
+   "GHSA-f7vh-qwp3-x37m",
+   "GHSA-fp5r-v3w9-4333",
+   "GHSA-vp98-w2p3-mv35",
+   "GHSA-w9p3-5cr8-m3jj"
+  ],
+  "org.jetbrains.kotlin:protobuf-relocated:2.6.1-1": [
+   "GHSA-735f-pc8j-v9w8",
+   "GHSA-h4h5-3hr4-j3g2",
+   "GHSA-wrvw-hg22-4m67"
+  ],
+  "org.jetbrains.kotlinx:kotlinx-collections-immutable-jvm:0.3.7": [],
+  "org.jline:jline:3.24.1": [],
+  "org.lz4:lz4-java:1.7.1": [
+   "GHSA-343h-94h5-c4wr",
+   "GHSA-4v53-57pg-c464",
+   "GHSA-6cx8-rjf8-pr8g",
+   "GHSA-cmp6-m4wj-q63q",
+   "GHSA-gm45-99xc-r7wv",
+   "GHSA-mcr4-qmvw-px4g",
+   "GHSA-vqf4-7m7x-wgfc",
+   "GHSA-xx22-p4ch-683r"
+  ]
+ },
+ "jars": [
+  {
+   "own_coordinate": "org.jetbrains.kotlin:kotlin-gradle-plugin:2.1.20",
+   "path": "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/android/repo/org/jetbrains/kotlin/kotlin-gradle-plugin/2.1.20/kotlin-gradle-plugin-2.1.20-gradle85.jar"
+  },
+  {
+   "own_coordinate": "org.jetbrains.kotlin:kotlin-compiler-embeddable:2.1.20",
+   "path": "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/android/repo/org/jetbrains/kotlin/kotlin-compiler-embeddable/2.1.20/kotlin-compiler-embeddable-2.1.20.jar"
+  }
+ ],
+ "namespace_map": {
+  "io/vavr/": "io.vavr:vavr",
+  "org/jetbrains/kotlin/com/fasterxml/aalto/": "com.fasterxml:aalto-xml",
+  "org/jetbrains/kotlin/com/github/gundy/": "com.github.gundy:semver4j",
+  "org/jetbrains/kotlin/com/google/common/": "com.google.guava:guava",
+  "org/jetbrains/kotlin/com/google/gson/": "com.google.code.gson:gson",
+  "org/jetbrains/kotlin/com/google/gwt/": "gwt-derived-sources (no coordinate)",
+  "org/jetbrains/kotlin/com/google/thirdparty/": "com.google.guava:guava",
+  "org/jetbrains/kotlin/com/intellij/": "com.jetbrains.intellij.platform:intellij-core",
+  "org/jetbrains/kotlin/it/unimi/dsi/": "org.jetbrains.intellij.deps.fastutil:intellij-deps-fastutil",
+  "org/jetbrains/kotlin/javax/inject/": "javax.inject:javax.inject",
+  "org/jetbrains/kotlin/kotlinx/collections/immutable/": "org.jetbrains.kotlinx:kotlinx-collections-immutable-jvm",
+  "org/jetbrains/kotlin/net/jpountz/": "org.lz4:lz4-java",
+  "org/jetbrains/kotlin/one/util/streamex/": "one.util:streamex",
+  "org/jetbrains/kotlin/org/apache/commons/codec/": "commons-codec:commons-codec",
+  "org/jetbrains/kotlin/org/apache/commons/compress/": "org.apache.commons:commons-compress",
+  "org/jetbrains/kotlin/org/apache/commons/io/": "commons-io:commons-io",
+  "org/jetbrains/kotlin/org/apache/commons/lang3/": "org.apache.commons:commons-lang3",
+  "org/jetbrains/kotlin/org/apache/log4j/": "org.jetbrains.intellij.deps:log4j",
+  "org/jetbrains/kotlin/org/codehaus/stax2/": "org.codehaus.woodstox:stax2-api",
+  "org/jetbrains/kotlin/org/fusesource/jansi/": "org.fusesource.jansi:jansi",
+  "org/jetbrains/kotlin/org/jdom/": "intellij-fork:jdom (version not declared)",
+  "org/jetbrains/kotlin/org/jline/": "org.jline:jline",
+  "org/jetbrains/kotlin/org/picocontainer/": "intellij-fork:picocontainer (version not declared)",
+  "org/jetbrains/kotlin/protobuf/": "org.jetbrains.kotlin:protobuf-relocated",
+  "org/jetbrains/org/objectweb/asm/": "org.jetbrains.intellij.deps:asm-all"
+ },
+ "relocation_prefixes": [
+  "",
+  "org/jetbrains/",
+  "org/jetbrains/kotlin/"
+ ],
+ "source_declared": {
+  "com.fasterxml:aalto-xml": {
+   "source": "Kotlin v2.1.20 gradle/versions.properties / libs.versions.toml (source-declared, not byte-verified)",
+   "version": "1.3.0"
+  },
+  "com.google.guava:guava": {
+   "source": "Kotlin v2.1.20 gradle/versions.properties / libs.versions.toml (source-declared, not byte-verified)",
+   "version": "33.3.1-jre"
+  },
+  "com.jetbrains.intellij.platform:intellij-core": {
+   "source": "Kotlin v2.1.20 gradle/versions.properties / libs.versions.toml (source-declared, not byte-verified)",
+   "version": "233.13135.128"
+  },
+  "io.vavr:vavr": {
+   "source": "Kotlin v2.1.20 gradle/versions.properties / libs.versions.toml (source-declared, not byte-verified)",
+   "version": "0.10.4"
+  },
+  "javax.inject:javax.inject": {
+   "source": "Kotlin v2.1.20 gradle/versions.properties / libs.versions.toml (source-declared, not byte-verified)",
+   "version": "1"
+  },
+  "one.util:streamex": {
+   "source": "Kotlin v2.1.20 gradle/versions.properties / libs.versions.toml (source-declared, not byte-verified)",
+   "version": "0.7.2"
+  },
+  "org.codehaus.woodstox:stax2-api": {
+   "source": "Kotlin v2.1.20 gradle/versions.properties / libs.versions.toml (source-declared, not byte-verified)",
+   "version": "4.2.1"
+  },
+  "org.fusesource.jansi:jansi": {
+   "source": "Kotlin v2.1.20 gradle/versions.properties / libs.versions.toml (source-declared, not byte-verified)",
+   "version": "2.4.0"
+  },
+  "org.jetbrains.intellij.deps.fastutil:intellij-deps-fastutil": {
+   "source": "Kotlin v2.1.20 gradle/versions.properties / libs.versions.toml (source-declared, not byte-verified)",
+   "version": "8.5.4-9"
+  },
+  "org.jetbrains.intellij.deps:asm-all": {
+   "source": "Kotlin v2.1.20 gradle/versions.properties / libs.versions.toml (source-declared, not byte-verified)",
+   "version": "9.6.1"
+  },
+  "org.jetbrains.intellij.deps:log4j": {
+   "source": "Kotlin v2.1.20 gradle/versions.properties / libs.versions.toml (source-declared, not byte-verified)",
+   "version": "1.2.17.2"
+  },
+  "org.jetbrains.kotlin:protobuf-relocated": {
+   "source": "Kotlin v2.1.20 gradle/versions.properties / libs.versions.toml (source-declared, not byte-verified)",
+   "version": "2.6.1-1"
+  },
+  "org.jetbrains.kotlinx:kotlinx-collections-immutable-jvm": {
+   "source": "Kotlin v2.1.20 gradle/versions.properties / libs.versions.toml (source-declared, not byte-verified)",
+   "version": "0.3.7"
+  },
+  "org.jline:jline": {
+   "source": "Kotlin v2.1.20 gradle/versions.properties / libs.versions.toml (source-declared, not byte-verified)",
+   "version": "3.24.1"
+  },
+  "org.lz4:lz4-java": {
+   "source": "Kotlin v2.1.20 gradle/versions.properties / libs.versions.toml (source-declared, not byte-verified)",
+   "version": "1.7.1"
+  }
+ },
+ "triage": {
+  "com.fasterxml:aalto-xml:1.3.0": {},
+  "com.github.gundy:semver4j:0.16.4": {},
+  "com.google.code.gson:gson:2.11.0": {},
+  "com.google.guava:failureaccess:1.0.2": {},
+  "com.google.guava:guava:33.3.1-jre": {},
+  "commons-codec:commons-codec:1.17.1": {},
+  "commons-io:commons-io:2.18.0": {},
+  "io.vavr:vavr:0.10.4": {},
+  "javax.inject:javax.inject:1": {},
+  "one.util:streamex:0.7.2": {},
+  "org.antlr:antlr4-runtime:4.5.2-1": {},
+  "org.antlr:antlr4-runtime:4.5.3": {},
+  "org.apache.commons:commons-compress:1.27.1": {},
+  "org.apache.commons:commons-lang3:3.16.0": {
+   "GHSA-j288-q9x7-2f5v": {
+    "disposition": "not_applicable",
+    "evidence": "docs/implementation/phase-seven-security-remediation-followup-1/lang3/lang3-getclass-entrypoints.txt: no external getClass invocation or reflective reference in 203 JARs"
+   }
+  },
+  "org.codehaus.woodstox:stax2-api:4.2.1": {},
+  "org.fusesource.jansi:jansi:2.4.0": {},
+  "org.jctools:jctools-core:3.1.0": {},
+  "org.jetbrains.intellij.deps.fastutil:intellij-deps-fastutil:8.5.4-9": {},
+  "org.jetbrains.intellij.deps:asm-all:9.6.1": {},
+  "org.jetbrains.intellij.deps:log4j:1.2.17.2": {
+   "GHSA-2qrg-x229-3v8q": {
+    "disposition": "not_applicable",
+    "evidence": "docs/implementation/phase-seven-security-remediation-followup-1/guards/real-input-dryrun.txt: advisory-affected log4j classes absent (only Level/Priority/lf5 config)"
+   },
+   "GHSA-65fg-84f6-3jq3": {
+    "disposition": "not_applicable",
+    "evidence": "docs/implementation/phase-seven-security-remediation-followup-1/guards/real-input-dryrun.txt: advisory-affected log4j classes absent (only Level/Priority/lf5 config)"
+   },
+   "GHSA-f7vh-qwp3-x37m": {
+    "disposition": "not_applicable",
+    "evidence": "docs/implementation/phase-seven-security-remediation-followup-1/guards/real-input-dryrun.txt: advisory-affected log4j classes absent (only Level/Priority/lf5 config)"
+   },
+   "GHSA-fp5r-v3w9-4333": {
+    "disposition": "not_applicable",
+    "evidence": "docs/implementation/phase-seven-security-remediation-followup-1/guards/real-input-dryrun.txt: advisory-affected log4j classes absent (only Level/Priority/lf5 config)"
+   },
+   "GHSA-vp98-w2p3-mv35": {
+    "disposition": "not_applicable",
+    "evidence": "docs/implementation/phase-seven-security-remediation-followup-1/guards/real-input-dryrun.txt: advisory-affected log4j classes absent (only Level/Priority/lf5 config)"
+   },
+   "GHSA-w9p3-5cr8-m3jj": {
+    "disposition": "not_applicable",
+    "evidence": "docs/implementation/phase-seven-security-remediation-followup-1/guards/real-input-dryrun.txt: advisory-affected log4j classes absent (only Level/Priority/lf5 config)"
+   }
+  },
+  "org.jetbrains.kotlin:protobuf-relocated:2.6.1-1": {
+   "GHSA-735f-pc8j-v9w8": {
+    "disposition": "open",
+    "evidence": "docs/implementation/phase-seven-security-remediation-followup-1/protobuf/ (unpatched 2.6.1-1; fix only in Kotlin>=2.3.0, incompatible with RN0.86 apiVersion1.8)"
+   },
+   "GHSA-h4h5-3hr4-j3g2": {
+    "disposition": "open",
+    "evidence": "followup-3 sources/cve-2022-3171-precondition.json (no Kotlin fix)"
+   },
+   "GHSA-wrvw-hg22-4m67": {
+    "disposition": "not_applicable",
+    "evidence": "docs/implementation/phase-seven-security-remediation-followup-1/protobuf/protobuf-callers.txt: no Kotlin user of full-runtime GeneratedMessage/UnknownFieldSet; advisory states javalite unaffected"
+   }
+  },
+  "org.jetbrains.kotlinx:kotlinx-collections-immutable-jvm:0.3.7": {},
+  "org.jline:jline:3.24.1": {},
+  "org.lz4:lz4-java:1.7.1": {
+   "GHSA-343h-94h5-c4wr": {
+    "disposition": "not_applicable",
+    "evidence": "phase-seven-security-remediation/sources/lz4-callers.txt: affected classes present but no embedded caller (only CompressionUtil uses LZ4Compressor/LZ4FastDecompressor)"
+   },
+   "GHSA-4v53-57pg-c464": {
+    "disposition": "not_applicable",
+    "evidence": "phase-seven-security-remediation/sources/lz4-callers.txt: affected classes present but no embedded caller (only CompressionUtil uses LZ4Compressor/LZ4FastDecompressor)"
+   },
+   "GHSA-6cx8-rjf8-pr8g": {
+    "disposition": "not_applicable",
+    "evidence": "phase-seven-security-remediation/sources/lz4-callers.txt: affected classes present but no embedded caller (only CompressionUtil uses LZ4Compressor/LZ4FastDecompressor)"
+   },
+   "GHSA-cmp6-m4wj-q63q": {
+    "disposition": "open",
+    "evidence": "docs/implementation/phase-seven-security-remediation-followup-1/lz4/lz4-entrypoints.txt (reachable via IC storage; R3/SR-21 pending)"
+   },
+   "GHSA-gm45-99xc-r7wv": {
+    "disposition": "not_applicable",
+    "evidence": "phase-seven-security-remediation/sources/lz4-callers.txt: affected classes present but no embedded caller (only CompressionUtil uses LZ4Compressor/LZ4FastDecompressor)"
+   },
+   "GHSA-mcr4-qmvw-px4g": {
+    "disposition": "open",
+    "evidence": "not on default fastestJavaInstance path (javap); depends on idea.use.native.compression which SR-20 rejects; observation pending"
+   },
+   "GHSA-vqf4-7m7x-wgfc": {
+    "disposition": "open",
+    "evidence": "docs/implementation/phase-seven-security-remediation-followup-1/lz4/lz4-entrypoints.txt (reachable via IC storage; R3/SR-21 pending)"
+   },
+   "GHSA-xx22-p4ch-683r": {
+    "disposition": "open",
+    "evidence": "not on default fastestJavaInstance path (javap); depends on idea.use.native.compression which SR-20 rejects; observation pending"
+   }
+  }
+ }
+}

@@ -1,0 +1,14 @@
+{
+  "method": "inert JDK disassembly; no external dependency class initialized",
+  "command": [
+    "/Users/boristacyniak/.sdkman/candidates/java/17.0.1-tem/bin/javap",
+    "-classpath",
+    "/Users/boristacyniak/.gradle/wrapper/dists/gradle-9.3.1-bin/23ovyewtku6u96viwx3xl3oks/gradle-9.3.1/lib/plugins/gradle-toolchains-jvm-9.3.1.jar",
+    "-p",
+    "-c",
+    "org.gradle.jvm.internal.services.ProviderBackedToolchainConfiguration"
+  ],
+  "jar_sha256": "41ffd88035bbebc765b2c77d880cd1d856bf2e405041e5020fcb4572abcdcffa",
+  "javap_sha256": "2606545a3cffe01243973b60dde325934bc85da994aa980e4f18c7d65cdc9f0b",
+  "exit_code": 0
+}

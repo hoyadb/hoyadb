@@ -1,0 +1,33 @@
+Building for debugging...
+[0/9] Write GeneralConsumer-entitlement.plist
+[0/9] Write sources
+[0/9] Copying libhoyadb_native.a
+[0/9] Write sources
+[5/9] Write swift-version--58304C5D6DBC2206.txt
+[7/23] Compiling HoyaDB Wire.swift
+[8/23] Compiling HoyaDB Values.swift
+[9/23] Compiling HoyaDB Types.swift
+[10/23] Compiling HoyaDB Relations.swift
+[11/23] Compiling HoyaDB Observations.swift
+[12/23] Compiling HoyaDB Sync.swift
+[13/23] Compiling HoyaDB NativeRuntime.swift
+[14/23] Compiling HoyaDB Namespace.swift
+[15/23] Compiling HoyaDB Migrations.swift
+[16/23] Compiling HoyaDB Database.swift
+[17/23] Compiling HoyaDB Commands.swift
+[18/23] Emitting module HoyaDB
+[19/23] Compiling HoyaDB Admission.swift
+[20/23] Compiling HoyaDB Entities.swift
+[21/27] Compiling HoyaDBTesting ManualClock.swift
+[22/27] Compiling HoyaDBTesting FakeTransport.swift
+[23/27] Compiling HoyaDBTesting MemoryTesting.swift
+[24/27] Emitting module HoyaDBTesting
+[25/32] Compiling GeneralConsumer Recovery.swift
+[26/32] Compiling GeneralConsumer Consumer.swift
+[27/32] Compiling GeneralConsumer Advanced.swift
+[28/32] Emitting module GeneralConsumer
+[29/32] Compiling GeneralConsumer Walkthrough.swift
+[29/32] Write Objects.LinkFileList
+[30/32] Linking GeneralConsumer
+[31/32] Applying GeneralConsumer
+Build complete! (120.09s)

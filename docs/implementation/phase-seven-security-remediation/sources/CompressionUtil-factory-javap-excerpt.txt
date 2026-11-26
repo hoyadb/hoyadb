@@ -1,0 +1,9 @@
+      26: ldc           #234                // String idea.use.native.compression
+      28: invokestatic  #240                // Method java/lang/Boolean.getBoolean:(Ljava/lang/String;)Z
+      31: ifeq          55
+      34: invokestatic  #246                // Method org/jetbrains/kotlin/net/jpountz/lz4/LZ4Factory.fastestInstance:()Lorg/jetbrains/kotlin/net/jpountz/lz4/LZ4Factory;
+      37: astore_0
+      38: aload_0
+      39: invokevirtual #249                // Method org/jetbrains/kotlin/net/jpountz/lz4/LZ4Factory.fastCompressor:()Lorg/jetbrains/kotlin/net/jpountz/lz4/LZ4Compressor;
+      42: putstatic     #37                 // Field compressor:Lorg/jetbrains/kotlin/net/jpountz/lz4/LZ4Compressor;
+      45: aload_0

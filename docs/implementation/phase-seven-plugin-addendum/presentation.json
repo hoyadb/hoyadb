@@ -1,0 +1,8 @@
+{
+  "scope": "presentation only; no resolved graph, command, artifact or source input changed",
+  "original_resolution_sha256": "303d2bf733d3b38a582b3bcb8c241d8ad09c922624e642ed47c2766b97c2fe5e",
+  "exact_original_in": "metadata/resolution-original.json",
+  "readable_resolution_sha256": "b537469f8578dd699639709c426092ff89a871686b4c4525ecdfedd3f29847cf",
+  "parsed_json_equal": true,
+  "logs": "trailing blank lines preserved losslessly inside *.txt.json wrappers; ignored target originals unchanged"
+}

@@ -1,0 +1,38 @@
+"""Inert check of publisher .sha256/.sha512 sidecar availability and match for every reviewed file."""
+from pathlib import Path
+import hashlib, json, subprocess, sys
+here = Path(__file__).resolve().parents[1]
+log = json.loads((here / 'fetch-log.json').read_text())
+targets = [r for r in log if r.get('http_code') == '200' and (r['dest'].startswith(('closure/', 'parents/'))) and not r['dest'].endswith(('.sha1', '.asc'))]
+marker = here.parent / 'marker-review/bytes/org.jetbrains.kotlin.jvm.gradle.plugin-2.1.20.pom'
+targets.append({'url': 'https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/jvm/org.jetbrains.kotlin.jvm.gradle.plugin/2.1.20/org.jetbrains.kotlin.jvm.gradle.plugin-2.1.20.pom', 'dest': str(marker.relative_to(here.parent))})
+out = here / 'strong-sidecars'
+results = []
+for t in targets:
+    local = (here / t['dest']) if not t['dest'].startswith('marker-review') else here.parent / t['dest']
+    data = local.read_bytes()
+    entry = {'file': t['dest'], 'url': t['url'], 'sha256': hashlib.sha256(data).hexdigest(), 'sha512': hashlib.sha512(data).hexdigest(), 'sidecars': {}}
+    for algo in ('sha256', 'sha512'):
+        url = t['url'] + '.' + algo
+        dest = out / (t['dest'].replace('/', '__') + '.' + algo)
+        p = subprocess.run(['curl', '--location', '--proto', '=https', '--proto-redir', '=https', '--tlsv1.2', '--silent', '--show-error',
+                            '--max-time', '60', '--output', str(dest), '--write-out', '%{http_code}', url], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, timeout=90)
+        rec = {'url': url, 'exit_code': p.returncode, 'http_code': p.stdout}
+        if p.stdout == '200':
+            value = dest.read_text().split()[0].strip().lower() if dest.read_text().split() else ''
+            rec['published'] = value
+            rec['match'] = value == entry[algo]
+        elif dest.exists():
+            dest.unlink()
+        entry['sidecars'][algo] = rec
+    results.append(entry)
+(here / 'strong-sidecars.json').write_text(json.dumps(results, indent=2) + '\n')
+summary = {}
+for e in results:
+    for algo, r in e['sidecars'].items():
+        key = f"{algo}:{r['http_code']}:{r.get('match')}"
+        summary[key] = summary.get(key, 0) + 1
+print(json.dumps(summary, indent=1))
+bad = [(e['file'], a) for e in results for a, r in e['sidecars'].items() if r.get('match') is False]
+if bad:
+    raise SystemExit('published strong sidecar mismatch: ' + json.dumps(bad))

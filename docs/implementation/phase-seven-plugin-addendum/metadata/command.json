@@ -1,0 +1,26 @@
+{
+  "format": 1,
+  "purpose": "metadata resolution only; builtin Java plugin; no Foojay/ktfmt/AGP/Kotlin plugin applied or dependency JAR loaded",
+  "command": [
+    "/Users/boristacyniak/.gradle/wrapper/dists/gradle-9.3.1-bin/23ovyewtku6u96viwx3xl3oks/gradle-9.3.1/bin/gradle",
+    "--no-daemon",
+    "--no-build-cache",
+    "--no-configuration-cache",
+    "--console=plain",
+    "--max-workers=2",
+    "--write-locks",
+    "captureMetadata"
+  ],
+  "cwd": "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-plugin-addendum/metadata",
+  "environment_overrides": {
+    "JAVA_HOME": "/Users/boristacyniak/.sdkman/candidates/java/17.0.1-tem",
+    "GRADLE_USER_HOME": "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-plugin-addendum/gradle-home"
+  },
+  "started_unix_ns": 1792876017955469000,
+  "input_sha256": {
+    "build.gradle": "d5a1a5209296ccb60922fab37c4022866d9a4a0cfdb2def7b2d0969b3fd34567",
+    "settings.gradle": "3b1665cff97db35ce7a0edc7efa7f728e0036d79ce5dcf35eaa9805d4dc8828b",
+    "gradle.properties": "cf077097b1e78bea50b30a743e231ac53754b13075af78642cf533b6224138c0"
+  },
+  "gradle_launcher_sha256": "e8aca393bbb50d5096c2c6f624f282dd2ab7f065a730209588be92f4a6100dd7"
+}

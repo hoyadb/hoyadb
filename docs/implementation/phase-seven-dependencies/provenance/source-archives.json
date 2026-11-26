@@ -1,0 +1,66 @@
+{
+  "retrieved_utc": "2026-10-24T16:25:29.832894+00:00",
+  "packages": [
+    {
+      "name": "react-native",
+      "version": "0.86.3",
+      "url": "https://registry.npmjs.org/react-native/-/react-native-0.86.3.tgz",
+      "integrity": "sha512-JR5s3bM9ezud+Mw24GlNXNfthqPIKwrQgPPJcam+L97t2sKjjEavhCzBn+fyqZZRcM5+XlhYxpTxVkK7e1n38Q==",
+      "sri_verified": true,
+      "archive_sha256": "04e0ef4284ef9e2fb94075b0f98c6371d12ea1b31c2e42540a900a1e86ea46f5",
+      "archive_bytes": 3927753,
+      "unpacked_bytes": 20320139,
+      "skipped_links": [],
+      "unpacked_file_count": 4575,
+      "unpacked_file_inventory_sha256": "0217abd03e8221077e266dd7feb572eb2e97c33a1f048a84bbd450b19dd3b3e6",
+      "archive_retained_under_ignored_target": "target/phase-seven-dependencies/native-source-review/react-native-0.86.3.tgz",
+      "directory_retained_under_ignored_target": "target/phase-seven-dependencies/native-source-review/react-native-0.86.3"
+    },
+    {
+      "name": "@react-native/gradle-plugin",
+      "version": "0.86.3",
+      "url": "https://registry.npmjs.org/@react-native/gradle-plugin/-/gradle-plugin-0.86.3.tgz",
+      "integrity": "sha512-lxmx0GqLEWRIpZfpYFXlYVIs3ENQwaW6Vmp6oi29l2GoQJ1wZfFZRdMimDWlGEk8LKfHar3QH3iaPMkTcK9lEQ==",
+      "sri_verified": true,
+      "archive_sha256": "9f1222bbd89bbb1f87e651289f10de60e59e78e03d45fcdc27435450d32a6817",
+      "archive_bytes": 88183,
+      "unpacked_bytes": 258897,
+      "skipped_links": [],
+      "unpacked_file_count": 63,
+      "unpacked_file_inventory_sha256": "70e46468fa48665c1b45f742ac4933db5a8616a431a8484a4059f9f0616b7562",
+      "archive_retained_under_ignored_target": "target/phase-seven-dependencies/native-source-review/react-native__gradle-plugin-0.86.3.tgz",
+      "directory_retained_under_ignored_target": "target/phase-seven-dependencies/native-source-review/react-native__gradle-plugin-0.86.3"
+    },
+    {
+      "name": "@react-native/codegen",
+      "version": "0.86.3",
+      "url": "https://registry.npmjs.org/@react-native/codegen/-/codegen-0.86.3.tgz",
+      "integrity": "sha512-Ux4jHi0fh+bdtVEcL0gaPLbY56V+SvFUDl/8sRAE1jdb4k+o7fT/4Nc29yz4X+qfjstkSqObQTMBGhdzxH9JvA==",
+      "sri_verified": true,
+      "archive_sha256": "8b2cfce74cf894ad7bba542e803dc286480cb88a272a5a1b930b700953266030",
+      "archive_bytes": 171490,
+      "unpacked_bytes": 1043445,
+      "skipped_links": [],
+      "unpacked_file_count": 173,
+      "unpacked_file_inventory_sha256": "a81155e364d4971062c3f630e8d7c253c6fca799c7e291665552078f753365d6",
+      "archive_retained_under_ignored_target": "target/phase-seven-dependencies/native-source-review/react-native__codegen-0.86.3.tgz",
+      "directory_retained_under_ignored_target": "target/phase-seven-dependencies/native-source-review/react-native__codegen-0.86.3"
+    },
+    {
+      "name": "hermes-compiler",
+      "version": "250829098.0.17",
+      "url": "https://registry.npmjs.org/hermes-compiler/-/hermes-compiler-250829098.0.17.tgz",
+      "integrity": "sha512-qG1PXzTEtriF6oQLZF3vyHhSMxOdW5h2TqqLri0rdpstPustd2fSvRZQMVAPdlhgFwBfYnj3OUZtiO6LjYsEFw==",
+      "sri_verified": true,
+      "archive_sha256": "517f2a48812931f89fe6e6e8ab4b2b7335269cb502f41cd65d6d396703f60757",
+      "archive_bytes": 19180704,
+      "unpacked_bytes": 48611627,
+      "skipped_links": [],
+      "unpacked_file_count": 14,
+      "unpacked_file_inventory_sha256": "87fd9767bb3698ae548a2e6da29f33ff16c038edabc4078e739e86d2c9f2857e",
+      "archive_retained_under_ignored_target": "target/phase-seven-dependencies/native-source-review/hermes-compiler-250829098.0.17.tgz",
+      "directory_retained_under_ignored_target": "target/phase-seven-dependencies/native-source-review/hermes-compiler-250829098.0.17"
+    }
+  ],
+  "execution": "No package code or hooks executed. All regular files written without executable permission; links skipped."
+}

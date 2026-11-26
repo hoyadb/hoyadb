@@ -1,0 +1,585 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "hoyadb experimental Phase 5 HTTP fixture",
+    "version": "0.0.0-phase5",
+    "description": "Machine-readable API-0009 extension of API-0001 historical reference. An unpublished test fixture, not a production backend contract mandate. Authentication/membership, timeout/backoff scheduling and HTTP stay integrator-owned. Synthetic loopback fixture performs no authorization. Outbound envelopes are opaque lossless JSON; hosts never parse their domain numbers through JavaScript Number. Payloads, identities and checkpoints are Confidential; no payload logging or telemetry. No public SDK release or second transport claim."
+  },
+  "servers": [
+    {
+      "url": "http://127.0.0.1:8775",
+      "description": "Task-owned synthetic verification only"
+    }
+  ],
+  "paths": {
+    "/hoyadb/commands": {
+      "post": {
+        "operationId": "pushPhaseFiveWrites",
+        "x-requirements": [
+          "REQ-0023",
+          "REQ-0029",
+          "REQ-0044"
+        ],
+        "description": "Common ordered array; members resolved independently. Correlate by key/tuple, never position. Duplicates exact, conflicting outcomes reject. Backend auth/membership and safe natural entity retry remain external.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/CommandEnvelope"
+                    },
+                    {
+                      "$ref": "#/components/schemas/EntityEnvelope"
+                    }
+                  ]
+                },
+                "minItems": 1
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Synthetic success; integration authorization is external.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WireOutcome"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Malformed or oversized synthetic request"
+          },
+          "503": {
+            "description": "Synthetic unavailable mode; no receipt"
+          }
+        }
+      }
+    },
+    "/hoyadb/changes": {
+      "get": {
+        "operationId": "pullPhaseFivePage",
+        "x-requirements": [
+          "REQ-0026",
+          "REQ-0027",
+          "REQ-0044"
+        ],
+        "description": "Null initial checkpoint is represented by omitted since. Server selects membership; UI subscriptions do not affect scope. Host binds result to original core ticket, generation/revision and checkpoint. Page/metadata/checkpoint/progress commit together.",
+        "parameters": [
+          {
+            "name": "since",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Opaque prior checkpoint; omit for initial page."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Synthetic success; integration authorization is external.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PullPage"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid synthetic continuation"
+          },
+          "503": {
+            "description": "Synthetic unavailable mode; no checkpoint advancement"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "TrustedContext": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "identity",
+          "capturedAt"
+        ],
+        "properties": {
+          "identity": {},
+          "capturedAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "CommandEnvelope": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "command",
+          "idempotencyKey",
+          "schemaVersion",
+          "args",
+          "context"
+        ],
+        "properties": {
+          "command": {
+            "type": "string"
+          },
+          "idempotencyKey": {
+            "type": "string"
+          },
+          "schemaVersion": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "args": {
+            "type": "object"
+          },
+          "context": {
+            "$ref": "#/components/schemas/TrustedContext"
+          }
+        }
+      },
+      "EntityEnvelope": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "table",
+          "op",
+          "recordId",
+          "changes",
+          "removedFields",
+          "clientTimestamp",
+          "schemaVersion",
+          "context",
+          "writeId"
+        ],
+        "properties": {
+          "table": {
+            "type": "string"
+          },
+          "op": {
+            "enum": [
+              "create",
+              "update",
+              "delete"
+            ]
+          },
+          "recordId": {
+            "type": "string"
+          },
+          "changes": {
+            "type": "object"
+          },
+          "removedFields": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
+          },
+          "clientTimestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "schemaVersion": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "context": {
+            "$ref": "#/components/schemas/TrustedContext"
+          },
+          "writeId": {
+            "type": "string"
+          }
+        },
+        "description": "API-0009: exact generated envelope; writeId is immutable correlation, not idempotency. Removed fields must be optional and also have Null in changes. Delete has empty changes/removals. Core validates schema and UTC-ms bounds.",
+        "x-requirements": [
+          "REQ-0044"
+        ]
+      },
+      "WireOutcome": {
+        "oneOf": [
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "idempotencyKey",
+              "status",
+              "result"
+            ],
+            "properties": {
+              "idempotencyKey": {
+                "type": "string"
+              },
+              "status": {
+                "const": "applied"
+              },
+              "result": {}
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "idempotencyKey",
+              "status",
+              "result"
+            ],
+            "properties": {
+              "idempotencyKey": {
+                "type": "string"
+              },
+              "status": {
+                "const": "corrected"
+              },
+              "result": {}
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "idempotencyKey",
+              "status",
+              "reason"
+            ],
+            "properties": {
+              "idempotencyKey": {
+                "type": "string"
+              },
+              "status": {
+                "const": "rejected"
+              },
+              "reason": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "table",
+              "recordId",
+              "writeId",
+              "status",
+              "result"
+            ],
+            "properties": {
+              "table": {
+                "type": "string"
+              },
+              "recordId": {
+                "type": "string"
+              },
+              "writeId": {
+                "type": "string"
+              },
+              "status": {
+                "const": "applied"
+              },
+              "result": {}
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "table",
+              "recordId",
+              "writeId",
+              "status",
+              "result"
+            ],
+            "properties": {
+              "table": {
+                "type": "string"
+              },
+              "recordId": {
+                "type": "string"
+              },
+              "writeId": {
+                "type": "string"
+              },
+              "status": {
+                "const": "corrected"
+              },
+              "result": {}
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "table",
+              "recordId",
+              "writeId",
+              "status",
+              "reason"
+            ],
+            "properties": {
+              "table": {
+                "type": "string"
+              },
+              "recordId": {
+                "type": "string"
+              },
+              "writeId": {
+                "type": "string"
+              },
+              "status": {
+                "const": "rejected"
+              },
+              "reason": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "table",
+              "recordId",
+              "writeId",
+              "status"
+            ],
+            "properties": {
+              "table": {
+                "type": "string"
+              },
+              "recordId": {
+                "type": "string"
+              },
+              "writeId": {
+                "type": "string"
+              },
+              "status": {
+                "const": "acknowledged"
+              }
+            }
+          }
+        ],
+        "description": "Independent complete correlation; missing response members remain retryable. Command HTTP requires terminal outcome; entity-only acknowledged receipt has no result/reason.",
+        "x-requirements": [
+          "REQ-0044"
+        ]
+      },
+      "Cell": {
+        "oneOf": [
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "kind"
+            ],
+            "properties": {
+              "kind": {
+                "const": "null"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "kind",
+              "value"
+            ],
+            "properties": {
+              "kind": {
+                "const": "string"
+              },
+              "value": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "kind",
+              "value"
+            ],
+            "properties": {
+              "kind": {
+                "const": "reference"
+              },
+              "value": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "kind",
+              "value"
+            ],
+            "properties": {
+              "kind": {
+                "const": "integer"
+              },
+              "value": {
+                "type": "string",
+                "pattern": "^(0|-?[1-9][0-9]*)$"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "kind",
+              "value"
+            ],
+            "properties": {
+              "kind": {
+                "const": "timestamp"
+              },
+              "value": {
+                "type": "string",
+                "pattern": "^(0|-?[1-9][0-9]*)$"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "kind",
+              "value"
+            ],
+            "properties": {
+              "kind": {
+                "const": "float"
+              },
+              "value": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "kind",
+              "value"
+            ],
+            "properties": {
+              "kind": {
+                "const": "boolean"
+              },
+              "value": {
+                "type": "boolean"
+              }
+            }
+          }
+        ],
+        "description": "Lossless API-0009 row cell. Integer/timestamp require exact i64 range, finite f64 for Float. No arrays/objects as row cells.",
+        "x-requirements": [
+          "REQ-0044"
+        ]
+      },
+      "EntityChange": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "table",
+          "record_id",
+          "op",
+          "changes",
+          "removed_fields",
+          "timestamp_ms",
+          "field_timestamps"
+        ],
+        "properties": {
+          "table": {
+            "type": "string"
+          },
+          "record_id": {
+            "type": "string"
+          },
+          "op": {
+            "enum": [
+              "create",
+              "update",
+              "delete"
+            ]
+          },
+          "changes": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/Cell"
+            }
+          },
+          "removed_fields": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
+          },
+          "timestamp_ms": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$"
+          },
+          "field_timestamps": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string",
+              "pattern": "^(0|[1-9][0-9]*)$"
+            }
+          }
+        },
+        "description": "API-0009 exact experimental PullPage codec: timestamps are nonnegative UTC-ms decimal strings; field_timestamps names exactly changed fields; schema/identity/removal and UTC bounds enforced by Rust.",
+        "x-requirements": [
+          "REQ-0044"
+        ]
+      },
+      "PullPage": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "checkpoint",
+          "complete",
+          "changes"
+        ],
+        "properties": {
+          "checkpoint": {
+            "type": "string"
+          },
+          "complete": {
+            "type": "boolean"
+          },
+          "changes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EntityChange"
+            },
+            "maxItems": 1000
+          }
+        },
+        "description": "Entire canonical UTF-8 page <=1048576 bytes. Incomplete page must advance opaque checkpoint; complete is sticky readiness, not a purge instruction. One atomic commit per page; Busy retains request/body, StalePull requires refetch.",
+        "x-requirements": [
+          "REQ-0044"
+        ]
+      }
+    }
+  }
+}

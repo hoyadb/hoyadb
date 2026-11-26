@@ -1,0 +1,57 @@
+[
+  {
+    "command": "python3 -m unittest discover -s tests/packaging -p 'test_*.py'",
+    "status": "fulfilled",
+    "value": {
+      "chunk_id": "5ec5c2",
+      "wall_time_seconds": 0.000025034,
+      "exit_code": 0,
+      "original_token_count": 25,
+      "output": ".........\n----------------------------------------------------------------------\nRan 9 tests in 0.930s\n\nOK\n"
+    }
+  },
+  {
+    "command": "python3 -m unittest discover -s tests/tooling -p 'test_quality.py'",
+    "status": "fulfilled",
+    "value": {
+      "chunk_id": "bf406c",
+      "wall_time_seconds": 0.000008554,
+      "exit_code": 0,
+      "original_token_count": 28,
+      "output": "................................\n----------------------------------------------------------------------\nRan 32 tests in 4.026s\n\nOK\n"
+    }
+  },
+  {
+    "command": "python3 -m unittest discover -s tests/tooling -p 'test_sync_proof.py'",
+    "status": "fulfilled",
+    "value": {
+      "chunk_id": "832d75",
+      "wall_time_seconds": 0.688855234,
+      "exit_code": 0,
+      "original_token_count": 30,
+      "output": "....................\n----------------------------------------------------------------------\nRan 20 tests in 0.529s\n\nOK\n"
+    }
+  },
+  {
+    "command": "python3 -m unittest discover -s tools/traceability -p 'test_*.py'",
+    "status": "fulfilled",
+    "value": {
+      "chunk_id": "6b7c1d",
+      "wall_time_seconds": 0.000026839,
+      "exit_code": 0,
+      "original_token_count": 28,
+      "output": ".............\n----------------------------------------------------------------------\nRan 13 tests in 1.237s\n\nOK\n"
+    }
+  },
+  {
+    "command": "python3 -m unittest discover -s tools/release -p 'test_compatibility.py'",
+    "status": "fulfilled",
+    "value": {
+      "chunk_id": "5ad236",
+      "wall_time_seconds": 0.781680892,
+      "exit_code": 0,
+      "original_token_count": 31,
+      "output": "......................\n----------------------------------------------------------------------\nRan 22 tests in 0.510s\n\nOK\n"
+    }
+  }
+]

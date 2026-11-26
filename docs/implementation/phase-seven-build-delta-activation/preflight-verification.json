@@ -1,0 +1,33 @@
+{
+  "approved_proposal_commit": "565c2bc8aae4af46fc029b1642af5dee4a2f690d",
+  "packet_verification": {
+    "docs/implementation/phase-seven-rn-bootstrap-addendum": {
+      "entries": 58,
+      "index_sha256": "01a1e9149c04216b18aa75f2bb080ccc14f5183c18dc719d5e533f45b0ee333e"
+    },
+    "docs/implementation/phase-seven-security-remediation-followup-6": {
+      "entries": 38,
+      "index_sha256": "3689f7bb50c630463d8613cc6296c115dc086e60690c88d47d7b411c6481b18b"
+    },
+    "docs/implementation/phase-seven-build-delta-decision": {
+      "entries": 5,
+      "index_sha256": "7bcb946a2bb380d30fac210af5e216da452625e4d1db27b12130828d19973b89"
+    }
+  },
+  "listed_inputs_rehashed": 55,
+  "bootstrap_inputs": 6,
+  "r2_inputs": 49,
+  "new_inputs": 52,
+  "overlap_paths": [
+    "org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.pom",
+    "org/slf4j/slf4j-parent/1.7.36/slf4j-parent-1.7.36.pom",
+    "org/sonatype/oss/oss-parent/9/oss-parent-9.pom"
+  ],
+  "baseline_plan_sha256": "9ff3ff84ae0d8f675ea9b6850babb40c452f009701ea1dae8af7cddd2781abac",
+  "assembler_sha256": "0dbe70ee3b080c898deffe640d7b8059c803d15e60799364b9572ec8856cbdff",
+  "expected_repository_entries": 926,
+  "expected_counts": {
+    "binary": 264,
+    "metadata": 662
+  }
+}

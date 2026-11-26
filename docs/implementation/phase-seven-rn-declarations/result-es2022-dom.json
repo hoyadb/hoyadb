@@ -1,0 +1,113 @@
+{
+  "tool": {
+    "which": "/Users/boristacyniak/.nvm/versions/node/v22.18.0/bin/tsc",
+    "package_sha256": "3722b30210616a13a3213ded11575ba6b2dbab10c32a5ef67afca8513e27017e",
+    "native_binary": "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/tsc",
+    "native_sha256": "76e4987d060ef8207875a53a73619ce665ff16fb2800c0d57a452e21c829bd7b"
+  },
+  "temporary_root": "/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-rn-declarations-ech_wk0q",
+  "copied": {
+    "node_modules/@hoyadb/client/package.json": "3db2631cd7625855a785d4692ba6db24b09ce4e2ca54e61d10f4c46f2e28f58a",
+    "node_modules/@hoyadb/client/index.d.ts": "0fb04bd3b8bd2dd639215e9299816c6eddd999d81a8aab749e41625390ccd151",
+    "node_modules/@hoyadb/client/web.d.ts": "9964f4b5a62fb0a2b7d666a3213a42d2288d93fe133d4c2dcc984427ea1f953c",
+    "node_modules/@hoyadb/testing/package.json": "32b25827644a48f155574ce3dcdc4825cd9ed6fb842c5f58ae028a1905c00081",
+    "node_modules/@hoyadb/testing/index.d.ts": "81c71c6c759cc71456ed2db5c16d2e094a4f1de4fc4b367760e420e750a50d3b",
+    "node_modules/@hoyadb/react-native/package.json": "d5dcb80697a8db699204017193237278ac6d0aaaeeefa0b84f37bf3a21985b8d",
+    "node_modules/@hoyadb/react-native/index.d.ts": "8ea711a2dea25e530b4c011b28bf265e31877b27fc33219de20d92e22f3edd44"
+  },
+  "tsconfig": {
+    "compilerOptions": {
+      "strict": true,
+      "noEmit": true,
+      "noEmitOnError": true,
+      "target": "ES2022",
+      "module": "NodeNext",
+      "moduleResolution": "NodeNext",
+      "lib": [
+        "ES2022",
+        "DOM"
+      ],
+      "types": [],
+      "skipLibCheck": false
+    },
+    "files": [
+      "types.ts"
+    ]
+  },
+  "probe_sha256": "3fe7439d2b919590933a82b834adb7ac9cf0347480bf1afb10c15bf2a90cbb5d",
+  "version_output": "Version 7.0.2",
+  "files": [
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es5.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2015.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2016.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2017.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2018.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2019.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2020.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2021.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2022.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.dom.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2015.core.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2015.collection.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2015.generator.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2015.iterable.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2015.promise.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2015.proxy.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2015.reflect.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2015.symbol.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2015.symbol.wellknown.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2016.array.include.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2016.intl.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2017.arraybuffer.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2017.date.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2017.object.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2017.sharedmemory.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2017.string.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2017.intl.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2017.typedarrays.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2018.asyncgenerator.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2018.asynciterable.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2018.intl.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2018.promise.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2018.regexp.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2019.array.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2019.object.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2019.string.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2019.symbol.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2019.intl.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2020.bigint.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2020.date.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2020.promise.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2020.sharedmemory.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2020.string.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2020.symbol.wellknown.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2020.intl.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2020.number.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2021.promise.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2021.string.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2021.weakref.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2021.intl.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2022.array.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2022.error.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2022.intl.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2022.object.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2022.string.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.es2022.regexp.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.decorators.d.ts",
+    "/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript/node_modules/@typescript/typescript-darwin-x64/lib/lib.decorators.legacy.d.ts",
+    "<root>/node_modules/@hoyadb/client/index.d.ts",
+    "<root>/node_modules/@hoyadb/react-native/index.d.ts",
+    "<root>/node_modules/@hoyadb/testing/index.d.ts",
+    "<root>/types.ts"
+  ],
+  "check": {
+    "argv": [
+      "tsc",
+      "-p",
+      "tsconfig.json"
+    ],
+    "exit_code": 0,
+    "output": ""
+  },
+  "temporary_root_removed": true
+}

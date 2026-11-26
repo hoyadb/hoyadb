@@ -1,0 +1,2 @@
+rootProject.name = 'hoyadb-phase-seven-kotlin-compiler-metadata-only'
+include 'included-build-classpaths'

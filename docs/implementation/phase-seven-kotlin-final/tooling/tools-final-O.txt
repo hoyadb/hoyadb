@@ -1,0 +1,26 @@
+....
+----------------------------------------------------------------------
+Ran 4 tests in 1.154s
+
+OK
+manual build complete: /private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-build-guard-gix9a9_7/target/build
+test_build_tool exit=0
+..................................
+----------------------------------------------------------------------
+Ran 34 tests in 17.156s
+
+OK
+/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-aar-final-apodop_a/final-repo/certificate.json bcc1646ef1a39097796a26bc81f227393d3272d0d4aa6bfbdda9bcb8323481de
+test_package_aar exit=0
+.....
+----------------------------------------------------------------------
+Ran 5 tests in 0.439s
+
+OK
+test_runtime_cache exit=0
+.........
+----------------------------------------------------------------------
+Ran 9 tests in 3.135s
+
+OK
+test_consumer_tools exit=0

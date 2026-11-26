@@ -1,0 +1,31 @@
+{
+  "gradle_distribution": "/Users/boristacyniak/.gradle/wrapper/dists/gradle-9.3.1-bin/23ovyewtku6u96viwx3xl3oks/gradle-9.3.1",
+  "bin_gradle_sha256": "e8aca393bbb50d5096c2c6f624f282dd2ab7f065a730209588be92f4a6100dd7",
+  "sources": {
+    "gradle-kotlin-dsl-9.3.1.jar": "b44e6c3332f72aba04d22089ff73a3c4f4f076880e5f8b73d75ca7f6d869e6f2",
+    "gradle-core-9.3.1.jar": "9ee3787fb4972209d51622b42ba39ba9a0263381d49fd9efd4a24c875153a34b"
+  },
+  "tool": "javap from /Users/boristacyniak/.sdkman/candidates/java/17.0.1-tem (inert bytecode parse of extracted classes)",
+  "findings": [
+    {
+      "where": "gradle-kotlin-dsl-9.3.1.jar gradle-kotlin-dsl-embedded-kotlin.properties",
+      "text": "org.jetbrains.kotlin\\:kotlin-reflect=2.2.21\norg.jetbrains.kotlin\\:kotlin-stdlib=2.2.21\norg.jetbrains\\:annotations=13.0\n"
+    },
+    {
+      "where": "org/gradle/kotlin/dsl/support/EmbeddedKotlinProvider.pinEmbeddedKotlinDependenciesOn",
+      "what": "for each embedded module (properties file): DependencyHandler.getConstraints().add(configuration, module:version) with version { strictly(version) } and because(\"Pinned to the embedded Kotlin\")"
+    },
+    {
+      "where": "org/gradle/kotlin/dsl/provider/StandardKotlinScriptEvaluator",
+      "what": "setupEmbeddedKotlinForBuildscript calls pinEmbeddedKotlinDependenciesOn for Kotlin DSL script buildscript classpaths"
+    },
+    {
+      "where": "org/gradle/api/internal/initialization/DefaultScriptClassPathResolver",
+      "what": "script classpath attributes Usage=java-runtime, Category=library, LibraryElements=jar, Bundling=external, TargetJvmVersion=current JVM, GradlePluginApiVersion=current Gradle; plus an org.apache.logging.log4j:log4j-core constraint (2.17.1, reject [2.0,2.17.1)) active only if log4j-core is present"
+    },
+    {
+      "where": "actual official build failure (target/phase-seven-rn/android/build-c/included-build-environment.txt)",
+      "what": "Could not resolve org.jetbrains.kotlin:kotlin-stdlib:2.2.21 Required by: buildscript of root project gradle-plugin-root; java-diff-utils-parent:4.15 POM missing; no task ran, no compile"
+    }
+  ]
+}

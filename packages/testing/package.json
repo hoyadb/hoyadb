@@ -1,0 +1,35 @@
+{
+  "name": "@hoyadb/testing",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./src/index.js"
+    }
+  },
+  "files": [
+    "src",
+    "index.d.ts",
+    "LICENSES.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "@hoyadb/client": "0.1.0"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
+  "types": "./index.d.ts",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hoyadb/hoyadb.git",
+    "directory": "packages/testing"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}

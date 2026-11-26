@@ -1,0 +1,359 @@
+diff --git a/bindings/react-native/tools/security/README.md b/bindings/react-native/tools/security/README.md
+index 9f29a4c..d82531a 100644
+--- a/bindings/react-native/tools/security/README.md
++++ b/bindings/react-native/tools/security/README.md
+@@ -56,6 +56,35 @@ API for the RN Android runner owner (wiring happens after handback):
+     report each of them, matched after reviewed-alias lookup, so a reviewed
+     alias satisfies its canonical image. A JVM with zero cache images, or
+     missing one mandatory image, is an incomplete capture.
++
++  **Schema versions.** Version 1 (`hoyadb.system-shared-cache/1`) rejects
++  every reviewed path that is a real file. Version 2
++  (`hoyadb.system-shared-cache/2`, SR-22d) adds one required field,
++  `dual_resident_images`:
++  - a dict keyed only by canonical `images` paths (never aliases, prefixes or
++    wildcards);
++  - each value is exactly `{bytes: positive int, sha256: 64 lowercase hex}` of
++    the on-disk file;
++  - an empty dict grants no exception.
++
++  **Version 2 host records** must also carry `dual_resident_files`. It must
++  equal that dict type-strictly, and each of `pre_host` and `post_host` is
++  compared with the record on its own. In `image_path_status`, each dual path
++  must be `regular` (a non-symlink regular file); every other reviewed path
++  and alias must stay `absent`.
++
++  **Cross-version rejections:**
++  - a version 1 host carrying `dual_resident_files` rejects;
++  - a version 2 host without it rejects;
++  - a version 1 record carrying the version 2 field rejects.
++
++  **What the disk hashes mean.** They bind the on-disk copies only, not the
++  mapped cache bytes; the complete cache-file manifest remains the cache
++  integrity anchor. The on-disk/cache Mach-O UUID agreement is review-time
++  evidence, not a runtime check.
++
++  **Capture classification is unchanged:** a digest-bearing observation of a
++  reviewed cache path rejects even when its digest equals the disk hash.
+   `pre_host` and `post_host` are records the runner reads independently
+   before and after the capture. They must equal the reviewed identity, re-read
+   every reviewed image identity from the cache, report every reviewed path as
+diff --git a/bindings/react-native/tools/security/native_cache.py b/bindings/react-native/tools/security/native_cache.py
+index 044e00c..4b32853 100644
+--- a/bindings/react-native/tools/security/native_cache.py
++++ b/bindings/react-native/tools/security/native_cache.py
+@@ -11,11 +11,18 @@ cached image at its unslid `__TEXT` address plus one shared-region slide that xn
+ aligns to the architecture's slide page (4 KiB for the studied x86_64h cache). JFR does not report which cache
+ a process mapped: association with the rehashed host cache is an inference under the trusted host boundary,
+ not process attestation.
++
++SR-22d: `hoyadb.system-shared-cache/2` adds `dual_resident_images`, an explicit canonical subset of `images` whose
++paths are also regular on-disk files, each bound to the on-disk file's size and SHA256 as re-read by both host
++records (`dual_resident_files`). That binds the disk copies only, never the mapped cache bytes; the complete
++cache-file manifest stays the cache integrity anchor. Version 1 is unchanged and rejects every real-file cache path.
++The on-disk/cache Mach-O UUID agreement is review-time evidence, not checked here.
+ """
+ from dataclasses import dataclass
+ import re
+ 
+ SCHEMA = 'hoyadb.system-shared-cache/1'
++SCHEMA_V2 = 'hoyadb.system-shared-cache/2'
+ HOST_IDENTITY_KEYS = ('os', 'host_integrity', 'arch', 'cache_dir', 'cache', 'cache_files')
+ OS_KEYS = ('product_version', 'product_build_version', 'build_id', 'product_version_extra', 'system_version_plist_sha256')
+ INTEGRITY_KEYS = ('sip_enabled', 'authenticated_root', 'system_volume_sealed')
+@@ -26,6 +33,9 @@ IDENTITY_KEYS = IMAGE_KEYS[1:]
+ RECORD_KEYS = ('schema', *HOST_IDENTITY_KEYS, 'slide_alignment', 'capture_source', 'images', 'aliases', 'mandatory_images')
+ REQUIRED_MANDATORY_IMAGES = ('/usr/lib/libSystem.B.dylib',)  # every process of the studied macOS workflow maps it
+ HOST_KEYS = (*HOST_IDENTITY_KEYS, 'boot_session_uuid', 'image_path_status', 'cache_image_identities')
++RECORD_KEYS_V2 = (*RECORD_KEYS, 'dual_resident_images')
++HOST_KEYS_V2 = (*HOST_KEYS, 'dual_resident_files')
++DUAL_KEYS = ('bytes', 'sha256')
+ SHA256 = re.compile(r'[0-9a-f]{64}')
+ GLOB = set('*?[]{}')
+ STUDIED_ADDRESS_SEMANTICS = ('mach_header', 'zero')  # jdk-17.0.1+12 os_bsd.cpp get_loaded_modules_info (__APPLE__)
+@@ -68,10 +78,15 @@ def _record_errors(record):
+     """Structural validation of the reviewed record; returns setting strings (no values)."""
+     if not isinstance(record, dict):
+         return ['record fields']
+-    if set(record) != set(RECORD_KEYS):
+-        return ['record fields: missing %s; unexpected %s' % (sorted(set(RECORD_KEYS) - set(record)), sorted(set(record) - set(RECORD_KEYS)))]
++    version2 = record.get('schema') == SCHEMA_V2
++    keys = RECORD_KEYS_V2 if version2 else RECORD_KEYS
++    if set(record) != set(keys):
++        errors = ['record fields: missing %s; unexpected %s' % (sorted(set(keys) - set(record)), sorted(set(record) - set(keys)))]
++        if version2 and 'dual_resident_images' not in record:
++            errors.insert(0, 'dual_resident_images: required for version 2')
++        return errors
+     errors = []
+-    if record['schema'] != SCHEMA:
++    if record['schema'] != SCHEMA and not version2:
+         errors.append('schema')
+     if not _exact_keys(record['os'], OS_KEYS) or not all(isinstance(record['os'][k], str) for k in OS_KEYS) \
+             or not SHA256.fullmatch(record['os']['system_version_plist_sha256']):
+@@ -98,9 +113,21 @@ def _record_errors(record):
+     elif (source['base_address'], source['top_address']) != STUDIED_ADDRESS_SEMANTICS:
+         errors.append('capture_source: address semantics not studied')
+     errors += _image_errors(record)
++    if version2:
++        errors += _dual_errors(record)
+     return errors
+ 
+ 
++def _dual_errors(record):
++    images, dual = record['images'], record['dual_resident_images']
++    canonical = {i['install_path'] for i in images} if isinstance(images, list) and all(isinstance(i, dict) for i in images) else set()
++    if not isinstance(dual, dict) or not all(isinstance(path, str) and path in canonical for path in dual) \
++            or not all(_exact_keys(v, DUAL_KEYS) and _int(v['bytes']) and v['bytes'] > 0
++                       and isinstance(v['sha256'], str) and SHA256.fullmatch(v['sha256']) for v in dual.values()):
++        return ['dual_resident_images: explicit canonical image subset with positive bytes and lowercase sha256 required']
++    return []
++
++
+ def _file_errors(record):
+     files, arch, cache = record['cache_files'], record['arch'], record['cache']
+     main = 'dyld_shared_cache_' + arch
+@@ -148,22 +175,35 @@ def check_host(evidence):
+         return ['system cache record: ' + e for e in errors]
+     paths = [i['install_path'] for i in record['images']] + list(record['aliases'])
+     identities = {i['install_path']: {k: i[k] for k in IDENTITY_KEYS} for i in record['images']}
++    version2 = record['schema'] == SCHEMA_V2
++    dual = record['dual_resident_images'] if version2 else {}
+     boots = set()
+     for side, host in (('pre-capture', evidence.pre_host), ('post-capture', evidence.post_host)):
+-        if not _exact_keys(host, HOST_KEYS):
+-            errors.append('%s host record incomplete' % side)
++        if isinstance(host, dict) and version2 and 'dual_resident_files' not in host:
++            errors.append('%s host: dual_resident_files missing for a version 2 record' % side)
++        if isinstance(host, dict) and not version2 and 'dual_resident_files' in host:
++            errors.append('%s host: dual_resident_files present for a version 1 record' % side)
++        if not _exact_keys(host, HOST_KEYS_V2 if version2 else HOST_KEYS):
++            if not isinstance(host, dict) or set(host) - {'dual_resident_files'} != set(HOST_KEYS):
++                errors.append('%s host record incomplete' % side)
+             continue
+         for key in HOST_IDENTITY_KEYS:
+             if not _same(host[key], record[key]):
+                 errors.append('%s host identity changed: %s' % (side, key))
+         if not _same(host['cache_image_identities'], identities):
+             errors.append('%s host identity changed: cache_image_identities' % side)
++        if version2 and not _same(host['dual_resident_files'], dual):
++            errors.append('%s host: dual_resident_files differ from the reviewed dual_resident_images' % side)
+         status = host['image_path_status']
+         if not isinstance(status, dict) or set(status) != set(paths):
+             errors.append('%s host record incomplete: image_path_status' % side)
+         else:
+-            for path in sorted(p for p in paths if status[p] != 'absent'):
+-                errors.append('%s host: reviewed cache path not absent as a file: %s' % (side, path))
++            for path in sorted(paths):
++                if path in dual:
++                    if status[path] != 'regular':
++                        errors.append('%s host: dual-resident image_path_status not regular: %s' % (side, path))
++                elif status[path] != 'absent':
++                    errors.append('%s host: reviewed cache path not absent as a file: %s' % (side, path))
+         boot = host['boot_session_uuid']
+         if not isinstance(boot, str) or not boot:
+             errors.append('%s host record incomplete: boot session' % side)
+diff --git a/bindings/react-native/tools/security/test_native_cache.py b/bindings/react-native/tools/security/test_native_cache.py
+index 1aaf172..60ae625 100644
+--- a/bindings/react-native/tools/security/test_native_cache.py
++++ b/bindings/react-native/tools/security/test_native_cache.py
+@@ -356,6 +356,200 @@ class SystemCacheIdentity(unittest.TestCase):
+                 self.assertFalse(check([jvm([cached(LIBZ)])], evidence(record, pre=host(), post=host())).ok)
+ 
+ 
++SCHEMA_V2 = 'hoyadb.system-shared-cache/2'  # literal: the RED must come from the guard's result, not a missing constant
++KERNEL = '/usr/lib/system/libsystem_kernel.dylib'
++KERNEL_IMAGE = {'install_path': KERNEL, 'image_uuid': 'C7A3B3F4-1D35-3B5C-9B5F-6E2C51A7D0E1', 'unslid_load_address': 0x7ff812d00000,
++                'text_size': 245760}
++KERNEL_DISK = {'bytes': 1346496, 'sha256': '34a1db9713a098517185fe74b0be8889c39112955cd5462b144df9198dc5899d'}
++KERNEL_ALIAS = '/usr/lib/system/libsystem_kernel_alias.dylib'
++
++
++def expected_v2(dual=None):
++    """SR-22d: a synthetic version-2 record with one explicit dual-resident canonical image."""
++    record = expected()
++    record['schema'] = SCHEMA_V2
++    record['images'].append(dict(KERNEL_IMAGE))
++    record['dual_resident_images'] = copy.deepcopy({KERNEL: KERNEL_DISK} if dual is None else dual)
++    return record
++
++
++def host_v2(record):
++    """Independently read version-2 host: dual paths are regular files with re-read size and hash."""
++    observed = host(record)
++    for path in record['dual_resident_images']:
++        observed['image_path_status'][path] = 'regular'
++    observed['dual_resident_files'] = copy.deepcopy(record['dual_resident_images'])
++    return observed
++
++
++def evidence_v2(record=None, pre=None, post=None):
++    record = record or expected_v2()
++    return N.SystemCacheEvidence(expected=record, pre_host=pre or host_v2(record), post_host=post or host_v2(record))
++
++
++def cached_image(image, slide=SLIDE, **override):
++    entry = {'name': image['install_path'], 'base_address': image['unslid_load_address'] + slide, 'top_address': 0}
++    entry.update(override)
++    return entry
++
++
++class DualResident(unittest.TestCase):
++    """SR-22d version-2 successor. Version-1 behaviour is characterized, not re-labelled."""
++
++    def violations(self, result):
++        return [v.setting for v in result.violations]
++
++    def rejected_with(self, result, identity):
++        self.assertFalse(result.ok)
++        self.assertTrue(any(identity in s for s in self.violations(result)), (identity, self.violations(result)))
++        self.assertNotIn(SECRET, repr(result))
++
++    def test_sr22d_v2_dual_resident_image_classifies_once_as_system_cache(self):
++        result = check([jvm(FILE_LIBS + [cached(LIBSYSTEM), cached_image(KERNEL_IMAGE)])], evidence_v2())
++        self.assertTrue(result.ok, result.violations)
++        self.assertEqual(result.system_cache_loads, [('kotlin-compiler', LIBSYSTEM), ('kotlin-compiler', KERNEL)])
++        self.assertEqual(result.baseline_loads, [('kotlin-compiler', '/jdk/lib/libjava.dylib')])
++
++    def test_sr22d_v2_reviewed_alias_resolves_to_canonical_dual_image(self):
++        record = expected_v2()
++        record['aliases'] = {KERNEL_ALIAS: KERNEL}
++        result = check([jvm([cached(LIBSYSTEM), cached_image(KERNEL_IMAGE, name=KERNEL_ALIAS)])], evidence_v2(record))
++        self.assertTrue(result.ok, result.violations)
++        self.assertEqual(result.system_cache_loads, [('kotlin-compiler', LIBSYSTEM), ('kotlin-compiler', KERNEL)])
++
++    def test_sr22d_v2_dual_image_can_be_mandatory(self):
++        record = expected_v2()
++        record['mandatory_images'] = [LIBSYSTEM, KERNEL]
++        self.assertTrue(check([jvm([cached(LIBSYSTEM), cached_image(KERNEL_IMAGE)])], evidence_v2(record)).ok)
++        self.rejected_with(check([jvm([cached(LIBSYSTEM)])], evidence_v2(record)), 'mandatory system cache image missing: ' + KERNEL)
++
++    def test_sr22d_v2_empty_dual_set_grants_no_exception(self):
++        record = expected_v2(dual={})
++        self.assertTrue(check([jvm([cached(LIBSYSTEM), cached_image(KERNEL_IMAGE)])], evidence_v2(record)).ok)
++        for side in ('pre', 'post'):
++            changed = host_v2(record)
++            changed['image_path_status'][KERNEL] = 'regular'
++            with self.subTest(side=side):
++                self.rejected_with(check([jvm([cached(LIBSYSTEM)])], evidence_v2(record, **{side: changed})),
++                                   'reviewed cache path not absent as a file: ' + KERNEL)
++
++    def test_sr22d_v1_characterization_rejects_real_file_and_v2_fields(self):
++        record = expected()
++        record['images'].append(dict(KERNEL_IMAGE))
++        observed = host(record)
++        observed['image_path_status'][KERNEL] = 'regular'
++        self.rejected_with(check([jvm([cached(LIBSYSTEM)])], evidence(record, pre=observed, post=host(record))),
++                           'pre-capture host: reviewed cache path not absent as a file: ' + KERNEL)
++        record['dual_resident_images'] = {KERNEL: dict(KERNEL_DISK)}
++        self.rejected_with(check([jvm([cached(LIBSYSTEM)])], evidence(record, pre=host(), post=host())), 'dual_resident_images')
++
++    def test_sr22d_v1_host_carrying_dual_resident_files_rejects(self):
++        for side in ('pre', 'post'):
++            changed = host()
++            changed['dual_resident_files'] = {}
++            with self.subTest(side=side):
++                self.rejected_with(check([jvm([cached(LIBSYSTEM)])], evidence(**{side: changed})),
++                                   '%s-capture host: dual_resident_files' % side)
++
++    def test_sr22d_v2_host_missing_dual_resident_files_rejects(self):
++        for side in ('pre', 'post'):
++            changed = host_v2(expected_v2())
++            del changed['dual_resident_files']
++            with self.subTest(side=side):
++                self.rejected_with(check([jvm([cached(LIBSYSTEM)])], evidence_v2(**{side: changed})),
++                                   '%s-capture host: dual_resident_files' % side)
++
++    def test_sr22d_pre_and_post_each_match_record_even_when_wrong_values_agree(self):
++        wrong = host_v2(expected_v2())
++        wrong['dual_resident_files'][KERNEL]['sha256'] = '0' * 64
++        result = check([jvm([cached(LIBSYSTEM)])], evidence_v2(pre=wrong, post=copy.deepcopy(wrong)))
++        self.rejected_with(result, 'pre-capture host: dual_resident_files')
++        self.rejected_with(result, 'post-capture host: dual_resident_files')
++
++    def test_sr22d_malformed_or_unregistered_subset_entries_reject(self):
++        cases = {
++            'absent': lambda r: r.pop('dual_resident_images'),
++            'non-dict': lambda r: r.update(dual_resident_images=[KERNEL]),
++            'unregistered': lambda r: r.update(dual_resident_images={'/usr/lib/system/libsystem_c.dylib': dict(KERNEL_DISK)}),
++            'alias': lambda r: r.update(aliases={KERNEL_ALIAS: KERNEL}, dual_resident_images={KERNEL_ALIAS: dict(KERNEL_DISK)}),
++            'wildcard': lambda r: r.update(dual_resident_images={'/usr/lib/system/*': dict(KERNEL_DISK)}),
++            'prefix': lambda r: r.update(dual_resident_images={'/usr/lib/system/': dict(KERNEL_DISK)}),
++            'bytes bool': lambda r: r['dual_resident_images'][KERNEL].update(bytes=True),
++            'bytes zero': lambda r: r['dual_resident_images'][KERNEL].update(bytes=0),
++            'bytes negative': lambda r: r['dual_resident_images'][KERNEL].update(bytes=-1),
++            'bytes float': lambda r: r['dual_resident_images'][KERNEL].update(bytes=1346496.0),
++            'bytes string': lambda r: r['dual_resident_images'][KERNEL].update(bytes='1346496'),
++            'sha uppercase': lambda r: r['dual_resident_images'][KERNEL].update(sha256=KERNEL_DISK['sha256'].upper()),
++            'sha short': lambda r: r['dual_resident_images'][KERNEL].update(sha256='34a1db97'),
++            'sha missing': lambda r: r['dual_resident_images'][KERNEL].pop('sha256'),
++            'extra value field': lambda r: r['dual_resident_images'][KERNEL].update(uuid='C7A3B3F4'),
++        }
++        for label, change in cases.items():
++            record = expected_v2()
++            change(record)
++            with self.subTest(label=label):
++                result = check([jvm([cached(LIBSYSTEM), cached_image(KERNEL_IMAGE)])],
++                               evidence_v2(record, pre=host_v2(expected_v2()), post=host_v2(expected_v2())))
++                self.rejected_with(result, 'system cache record: dual_resident_images')
++
++    def test_sr22d_changed_missing_extra_or_incomplete_host_file_evidence_rejects(self):
++        changes = {
++            'sha changed': lambda h: h['dual_resident_files'][KERNEL].update(sha256='1' * 64),
++            'bytes changed': lambda h: h['dual_resident_files'][KERNEL].update(bytes=1346497),
++            'bytes type': lambda h: h['dual_resident_files'][KERNEL].update(bytes=1346496.0),
++            'missing entry': lambda h: h['dual_resident_files'].pop(KERNEL),
++            'extra entry': lambda h: h['dual_resident_files'].update({LIBZ: dict(KERNEL_DISK)}),
++            'incomplete entry': lambda h: h['dual_resident_files'][KERNEL].pop('bytes'),
++            'non-dict': lambda h: h.update(dual_resident_files=None),
++        }
++        for label, change in changes.items():
++            for side in ('pre', 'post'):
++                changed = host_v2(expected_v2())
++                change(changed)
++                with self.subTest(label=label, side=side):
++                    self.rejected_with(check([jvm([cached(LIBSYSTEM), cached_image(KERNEL_IMAGE)])], evidence_v2(**{side: changed})),
++                                       '%s-capture host: dual_resident_files' % side)
++
++    def test_sr22d_wrong_path_kinds_reject_per_side(self):
++        for kind in ('symlink', 'absent', 'other', 'regular_file'):
++            for side in ('pre', 'post'):
++                changed = host_v2(expected_v2())
++                changed['image_path_status'][KERNEL] = kind
++                with self.subTest(kind=kind, side=side):
++                    self.rejected_with(check([jvm([cached(LIBSYSTEM)])], evidence_v2(**{side: changed})),
++                                       '%s-capture host: dual-resident image_path_status' % side)
++        changed = host_v2(expected_v2())
++        changed['image_path_status'][LIBZ] = 'regular'
++        self.rejected_with(check([jvm([cached(LIBSYSTEM)])], evidence_v2(pre=changed)), 'reviewed cache path not absent as a file: ' + LIBZ)
++        record = expected_v2()
++        record['aliases'] = {KERNEL_ALIAS: KERNEL}
++        changed = host_v2(record)
++        changed['image_path_status'][KERNEL_ALIAS] = 'regular'
++        self.rejected_with(check([jvm([cached(LIBSYSTEM)])], evidence_v2(record, pre=changed)),
++                           'reviewed cache path not absent as a file: ' + KERNEL_ALIAS)
++
++    def test_sr22d_digest_bearing_cache_claim_rejects_even_with_disk_hash(self):
++        claim = cached_image(KERNEL_IMAGE, sha256=KERNEL_DISK['sha256'])
++        self.rejected_with(check([jvm([cached(LIBSYSTEM), claim])], evidence_v2()), 'file-backed library claims a reviewed system cache path: ' + KERNEL)
++
++    def test_sr22d_capture_rules_still_apply_to_dual_images(self):
++        self.rejected_with(check([jvm([cached(LIBSYSTEM), cached_image(KERNEL_IMAGE, slide=SLIDE + 0x1000)])], evidence_v2()), 'different slides')
++        self.rejected_with(check([jvm([cached(LIBSYSTEM), cached_image(KERNEL_IMAGE, slide=0x5800)])], evidence_v2()), 'slide')
++        self.rejected_with(check([jvm([cached_image(KERNEL_IMAGE)])], evidence_v2()), 'mandatory system cache image missing: ' + LIBSYSTEM)
++        self.rejected_with(check([jvm([cached(LIBSYSTEM), cached_image(KERNEL_IMAGE, top_address=1)])], evidence_v2()), 'top_address')
++
++    def test_sr22d_unknown_or_candidate_schema_and_uuid_only_still_reject(self):
++        for schema in ('hoyadb.system-shared-cache/3', 'hoyadb.system-shared-cache-candidate/1'):
++            record = expected_v2()
++            record['schema'] = schema
++            with self.subTest(schema=schema):
++                self.rejected_with(check([jvm([cached(LIBSYSTEM)])], evidence_v2(record)), 'system cache record')
++        record = expected_v2()
++        record.pop('cache_files')
++        self.rejected_with(check([jvm([cached(LIBSYSTEM)])], evidence_v2(record, pre=host_v2(expected_v2()), post=host_v2(expected_v2()))),
++                           'cache_files')
++
++
+ class LoaderEnvironment(unittest.TestCase):
+     def test_sr22c_dyld_variables_reject_before_launch_by_name_only(self):
+         for name in ('DYLD_INSERT_LIBRARIES', 'DYLD_LIBRARY_PATH', 'DYLD_SHARED_REGION', 'DYLD_SHARED_CACHE_DIR', 'DYLD_FRAMEWORK_PATH',

@@ -1,0 +1,6 @@
+REJECTED pack-failed: hase-seven-rn/def-0030/rn-pack/packed/hoyadb-react-native-0.1.0.tgz
+npm error errno -2
+npm error enoent ENOENT: no such file or directory, open '/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/target/phase-seven-rn/def-0030/rn-pack/packed/hoyadb-react-native-0.1.0.tgz'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /Users/boristacyniak/.npm/_logs/2026-10-25T23_41_38_852Z-debug-0.log

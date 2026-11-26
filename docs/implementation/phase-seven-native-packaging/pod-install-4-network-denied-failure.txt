@@ -1,0 +1,52 @@
+Found 1 module for target `HoyaConsumer`
+link_native_modules! {ios_packages: [{configurations: [], name: "@hoyadb/react-native", root: "/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-phase7-rn-consumer-v8cue5dl/node_modules/@hoyadb/react-native", path: "../node_modules/@hoyadb/react-native", podspec_path: "/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-phase7-rn-consumer-v8cue5dl/node_modules/@hoyadb/react-native/HoyaDBReactNative.podspec", script_phases: []}], ios_project_root_path: "/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-phase7-rn-consumer-v8cue5dl/ios", react_native_path: "../node_modules/react-native"}
+Auto-linking React Native module for target `HoyaConsumer`: HoyaDBReactNative
+Framework build type is static library
+[ReactNativeDependencies] Setting up ReactNativeDependencies...
+[ReactNativeDependencies] Building from source: false
+[ReactNativeDependencies] Using local xcframework at /Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-activation/ios/react-native-artifacts-0.86.3-reactnative-dependencies-debug.tar.gz
+[ReactNativeDependencies] Source: {http: "file:///Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-activation/ios/react-native-artifacts-0.86.3-reactnative-dependencies-debug.tar.gz"}
+[ReactNativeCore] Setting up ReactNativeCore...
+[ReactNativeCore] Building from source: false
+Configuring the target with the New Architecture
+[ReactNativeCore] Using React Native Core and React Native Dependencies prebuilt versions.
+[36m[1m[Codegen][0m Analyzing /private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-phase7-rn-consumer-v8cue5dl/package.json[0m
+[36m[1m[Codegen][0m [33mSearching for codegen-enabled libraries in the app.[0m
+[36m[1m[Codegen][0m Found hoyadb-phase7-owned-rn-consumer[0m
+[36m[1m[Codegen][0m [33mSearching for codegen-enabled libraries in react-native.config.js[0m
+[36m[1m[Codegen][0m Found @hoyadb/react-native[0m
+[36m[1m[Codegen][0m Processing HoyaConsumerSpec[0m
+[36m[1m[Codegen][0m [33mSearching for podspec in the project dependencies.[0m
+[36m[1m[Codegen][0m Processing HoyaDBSpec[0m
+[36m[1m[Codegen][0m [33mSearching for podspec in the project dependencies.[0m
+[36m[1m[Codegen][0m Supported Apple platforms: ios for HoyaDBSpec[0m
+[36m[1m[Codegen][0m Generating Native Code for HoyaConsumerSpec - ios[0m
+[36m[1m[Codegen][0m Generated artifacts: /private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-phase7-rn-consumer-v8cue5dl/ios/build/generated/ios/ReactCodegen[0m
+[36m[1m[Codegen][0m Generating Native Code for HoyaDBSpec - ios[0m
+[36m[1m[Codegen][0m Generated artifacts: /private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-phase7-rn-consumer-v8cue5dl/ios/build/generated/ios/ReactCodegen[0m
+[36m[1m[Codegen][0m Generating RCTThirdPartyComponentsProvider.h[0m
+[36m[1m[Codegen][0m Generated artifact: /private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-phase7-rn-consumer-v8cue5dl/ios/build/generated/ios/ReactCodegen/RCTThirdPartyComponentsProvider.h[0m
+[36m[1m[Codegen][0m Generating RCTThirdPartyComponentsProvider.mm[0m
+[36m[1m[Codegen][0m Generated artifact: /private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-phase7-rn-consumer-v8cue5dl/ios/build/generated/ios/ReactCodegen/RCTThirdPartyComponentsProvider.mm[0m
+[36m[1m[Codegen][0m Generating RCTModulesProvider.h[0m
+[36m[1m[Codegen][0m Generated artifact: /private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-phase7-rn-consumer-v8cue5dl/ios/build/generated/ios/ReactCodegen/RCTModuleProviders.h[0m
+[36m[1m[Codegen][0m Generating RCTModuleProviders.mm[0m
+[36m[1m[Codegen][0m Generated artifact: /private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-phase7-rn-consumer-v8cue5dl/ios/build/generated/ios/ReactCodegen/RCTModuleProviders.mm[0m
+[36m[1m[Codegen][0m Generating RCTAppDependencyProvider[0m
+[36m[1m[Codegen][0m Generated artifact: /private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-phase7-rn-consumer-v8cue5dl/ios/build/generated/ios/ReactAppDependencyProvider/RCTAppDependencyProvider.h[0m
+[36m[1m[Codegen][0m Generated artifact: /private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-phase7-rn-consumer-v8cue5dl/ios/build/generated/ios/ReactAppDependencyProvider/RCTAppDependencyProvider.mm[0m
+[36m[1m[Codegen][0m Generated podspec: /private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-phase7-rn-consumer-v8cue5dl/ios/build/generated/ios/ReactAppDependencyProvider/ReactAppDependencyProvider.podspec[0m
+[36m[1m[Codegen][0m Generated podspec: /private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-phase7-rn-consumer-v8cue5dl/ios/build/generated/ios/ReactCodegen/ReactCodegen.podspec[0m
+[36m[1m[Codegen][0m Generating Package.swift[0m
+[36m[1m[Codegen][0m Generated artifact: /private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-phase7-rn-consumer-v8cue5dl/ios/build/generated/ios/Package.swift[0m
+[36m[1m[Codegen][0m [33mDone.[0m
+Analyzing dependencies
+Fetching podspec for `React-Core-prebuilt` from `../node_modules/react-native/React-Core-prebuilt.podspec`
+[ReactNativeCore] Using local xcframework at /Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-activation/ios/react-native-artifacts-0.86.3-reactnative-core-debug.tar.gz
+Fetching podspec for `ReactNativeDependencies` from `../node_modules/react-native/third-party-podspecs/ReactNativeDependencies.podspec`
+[ReactNativeDependencies] Using local xcframework at /Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-activation/ios/react-native-artifacts-0.86.3-reactnative-dependencies-debug.tar.gz
+Fetching podspec for `hermes-engine` from `../node_modules/react-native/sdks/hermes-engine/hermes-engine.podspec`
+[Hermes] Using pre-built binary from local path defined by HERMES_ENGINE_TARBALL_PATH envvar: /Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-activation/ios/hermes-ios-250829098.0.17-hermes-ios-debug.tar.gz
+Cloning spec repo `trunk` from `https://cdn.cocoapods.org/`
+[!] Unable to add a source with url `https://cdn.cocoapods.org/` named `trunk`.
+You can try adding it manually in `/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-phase7-rn-consumer-v8cue5dl/.pod-home-offline-a/repos` or via `pod repo add`.

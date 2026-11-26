@@ -1,0 +1,5 @@
+PASS KT01_preloaded_real_memory_factory_accepts_two_caller_schemas
+PASS KT02_explicit_namespace_and_exact_injected_clock_IDs_no_fallback
+PASS KT03_manual_clock_checked_overflow_is_atomic_and_formatting_opaque
+
+exit=0

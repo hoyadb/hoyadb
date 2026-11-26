@@ -1,0 +1,132 @@
+#!/usr/bin/env python3
+"""Inert Maven POM closure for R2 candidates: HTTPS GET metadata only, parse XML, never execute.
+
+Resolves compile/runtime (non-optional, non-test/provided/system) dependencies with parent
+inheritance, ${properties} and dependencyManagement (including scope=import BOMs).
+Writes quarantine/<g>/<a>/<v>/<file> and closure.json. Records every request.
+"""
+import hashlib
+import json
+from pathlib import Path
+import re
+import subprocess
+import sys
+import xml.etree.ElementTree as ET
+
+HERE = Path(__file__).resolve().parents[1]
+Q = HERE / 'quarantine'
+LOG = HERE / 'quarantine-fetch-log.json'
+CENTRAL = 'https://repo.maven.apache.org/maven2/'
+NS = {'m': 'http://maven.apache.org/POM/4.0.0'}
+log = json.loads(LOG.read_text()) if LOG.exists() else []
+
+
+def fetch(g, a, v, name):
+    path = Q / g / a / v / name
+    if path.exists():
+        return path.read_bytes()
+    url = CENTRAL + g.replace('.', '/') + '/' + a + '/' + v + '/' + name
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_name(name + '.part')
+    p = subprocess.run(['curl', '--silent', '--show-error', '--location', '--proto', '=https', '--proto-redir', '=https',
+                        '--tlsv1.2', '--max-time', '300', '--output', str(tmp), '--write-out', '%{http_code} %{url_effective}', url],
+                       stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, timeout=360)
+    code, effective = (p.stdout.split(' ', 1) + [''])[:2]
+    entry = {'url': url, 'http_code': code, 'effective_url': effective, 'exit_code': p.returncode}
+    if code == '200' and tmp.exists():
+        data = tmp.read_bytes()
+        tmp.rename(path)
+        entry.update(bytes=len(data), sha256=hashlib.sha256(data).hexdigest(), sha1=hashlib.sha1(data).hexdigest())
+        log.append(entry)
+        return data
+    if tmp.exists():
+        tmp.unlink()
+    log.append(entry)
+    return None
+
+
+def text(el, tag):
+    found = el.find('m:' + tag, NS)
+    return found.text.strip() if found is not None and found.text else None
+
+
+poms = {}
+
+
+def model(g, a, v):
+    key = (g, a, v)
+    if key in poms:
+        return poms[key]
+    data = fetch(g, a, v, f'{a}-{v}.pom')
+    if data is None:
+        raise SystemExit(f'missing POM {g}:{a}:{v}')
+    if b'<!ENTITY' in data or b'<!DOCTYPE' in data:
+        raise SystemExit(f'unsafe POM {g}:{a}:{v}')
+    root = ET.fromstring(data)
+    parent = root.find('m:parent', NS)
+    base = {'props': {}, 'mgmt': {}, 'licenses': []}
+    if parent is not None:
+        base = model(text(parent, 'groupId'), text(parent, 'artifactId'), text(parent, 'version'))
+    props = dict(base['props'])
+    for p in root.findall('m:properties/*', NS):
+        props[p.tag.split('}')[1]] = (p.text or '').strip()
+    pg = text(root, 'groupId') or (text(parent, 'groupId') if parent is not None else None)
+    pv = text(root, 'version') or (text(parent, 'version') if parent is not None else None)
+    props.update({'project.groupId': pg, 'project.version': pv, 'project.artifactId': a, 'pom.version': pv, 'version': pv,
+                  'project.parent.version': text(parent, 'version') if parent is not None else None})
+
+    def sub(s, depth=0):
+        if s is None:
+            return None
+        out = re.sub(r'\$\{([^}]+)\}', lambda m: props.get(m.group(1)) or m.group(0), s)
+        return sub(out, depth + 1) if '${' in out and depth < 10 and out != s else out
+    mgmt = dict(base['mgmt'])
+    for d in root.findall('m:dependencyManagement/m:dependencies/m:dependency', NS):
+        dg, da, dv = sub(text(d, 'groupId')), sub(text(d, 'artifactId')), sub(text(d, 'version'))
+        if text(d, 'scope') == 'import' and text(d, 'type') == 'pom':
+            mgmt.update(model(dg, da, dv)['mgmt'])
+        else:
+            mgmt[(dg, da)] = {'version': dv, 'scope': sub(text(d, 'scope'))}
+    deps = []
+    for d in root.findall('m:dependencies/m:dependency', NS):
+        dg, da = sub(text(d, 'groupId')), sub(text(d, 'artifactId'))
+        dv = sub(text(d, 'version')) or mgmt.get((dg, da), {}).get('version')
+        scope = sub(text(d, 'scope')) or mgmt.get((dg, da), {}).get('scope') or 'compile'
+        excl = {(text(e, 'groupId'), text(e, 'artifactId')) for e in d.findall('m:exclusions/m:exclusion', NS)}
+        deps.append({'g': dg, 'a': da, 'v': dv, 'scope': scope, 'optional': sub(text(d, 'optional')) == 'true',
+                     'type': sub(text(d, 'type')) or 'jar', 'classifier': sub(text(d, 'classifier')), 'exclusions': sorted(excl, key=str)})
+    licenses = [text(l, 'name') for l in root.findall('m:licenses/m:license', NS)] or base['licenses']
+    poms[key] = {'props': props, 'mgmt': mgmt, 'deps': deps, 'licenses': licenses,
+                 'packaging': text(root, 'packaging') or 'jar', 'parent': f'{text(parent,"groupId")}:{text(parent,"artifactId")}:{text(parent,"version")}' if parent is not None else None}
+    return poms[key]
+
+
+def main():
+    roots = [line.strip() for line in (HERE / 'r2-roots.txt').read_text().splitlines() if line.strip() and not line.startswith('#')]
+    closure, edges, queue = {}, [], [(r, None, frozenset()) for r in roots]
+    while queue:
+        coord, via, excl = queue.pop(0)
+        g, a, v = coord.split(':')
+        if coord in closure:
+            continue
+        m = model(g, a, v)
+        if any('${' in str(x) for x in (g, a, v)):
+            raise SystemExit('unresolved property ' + coord)
+        closure[coord] = {'packaging': m['packaging'], 'parent': m['parent'], 'pom_licenses': m['licenses'], 'via': via}
+        for d in m['deps']:
+            if d['optional'] or d['scope'] not in ('compile', 'runtime') or (d['g'], d['a']) in excl or ('*', '*') in excl:
+                continue
+            if d['v'] is None or '${' in d['v'] or d['v'].startswith(('[', '(')):
+                raise SystemExit(f'unresolved/ranged version {d} in {coord}')
+            child = f"{d['g']}:{d['a']}:{d['v']}"
+            edges.append([coord, child, d['scope']])
+            queue.append((child, coord, excl | frozenset((tuple(x) for x in d['exclusions']))))
+    parents = sorted({c['parent'] for c in closure.values() if c['parent']})
+    (HERE / 'closure.json').write_text(json.dumps({'roots': roots, 'components': closure, 'edges': edges,
+                                                   'parents_seen': sorted({p['parent'] for p in poms.values() if p['parent']})}, indent=1) + '\n')
+    LOG.write_text(json.dumps(log, indent=1) + '\n')
+    print(len(closure), 'components;', len(poms), 'POMs parsed')
+
+
+if __name__ == '__main__':
+    main()

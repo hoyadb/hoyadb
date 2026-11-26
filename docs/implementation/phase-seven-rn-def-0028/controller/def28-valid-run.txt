@@ -1,0 +1,1 @@
+HOYA_RN_ANDROID_REPOSITORY_VERIFIED {"result": "verified", "plan_sha256": "9ff3ff84ae0d8f675ea9b6850babb40c452f009701ea1dae8af7cddd2781abac", "inventory_sha256": "71d657709f942a212f96be924a1a9349db0ea341b237d327d4372c5b79fdd661", "counts": {"binary": 241, "metadata": 633}}

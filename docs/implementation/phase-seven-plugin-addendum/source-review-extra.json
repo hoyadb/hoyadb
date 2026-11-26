@@ -1,0 +1,18 @@
+[
+  {
+    "requested_url": "https://raw.githubusercontent.com/gradle/foojay-toolchains/2a6cc60ed8d35e025e44193c895502996c8edf4e/foojay-resolver/build.gradle.kts",
+    "path": "source-review/foojay-build.gradle.kts",
+    "exit_code": 0,
+    "stderr": "",
+    "bytes": 4645,
+    "sha256": "d5cf5b9b29835460b5cfbb8be399b686845e53e66ab2bf8cd4554873569cc626"
+  },
+  {
+    "requested_url": "https://raw.githubusercontent.com/java-diff-utils/java-diff-utils/java-diff-utils-parent-4.15/LICENSE",
+    "path": "source-review/diff-LICENSE",
+    "exit_code": 0,
+    "stderr": "",
+    "bytes": 11357,
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+  }
+]

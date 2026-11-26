@@ -1,0 +1,24 @@
+{
+ "method": "read-only: sw_vers, sysctl, plutil, csrutil status, diskutil info, codesign -dvvv (display only), stat, shasum; pure-Python byte reads of cache headers and jdk.jfr.jmod; no JVM/Gradle/JAR/native payload executed",
+ "host": {"ProductVersion": "26.7.1", "ProductBuildVersion": "25G241", "BuildID": "66D2C708-B87D-11F1-B88D-BB1EF7271656", "productVersionExtra": "", "kernel": "xnu-12377.161.15.700.19~2/RELEASE_X86_64", "arch": "x86_64 (x86_64h cache, i9-9980HK, avx2)",
+  "SystemVersion.plist_sha256": "7a2c974b631091abac8bceac8b96b7411c10b5ddd68e44ac37ed1dd2826fc89c (system volume and OS cryptex copies identical)",
+  "SIP": "enabled", "authenticated_root": "enabled", "system_volume": "sealed APFS snapshot com.apple.os.update-590AC978…, snapshot UUID D016588B-9946-4EFC-8C86-110ED6F4F9BB"},
+ "absent_as_files": ["/usr/lib/libSystem.B.dylib", "/usr/lib/libz.1.dylib", "/usr/lib/libc++.1.dylib", "/System/Library/Frameworks/Security.framework/Versions/A/Security"],
+ "cache": {"dir": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/ (OS cryptex on Preboot volume, NOT on the sealed system snapshot; /System/Cryptexes/OS symlinks here)",
+  "magic": "dyld_v1 x86_64h", "uuid": "31374756-89B4-34E8-A34F-56C5D57216A1", "cacheType": 0, "codesign_identifier": "com.apple.dyld.cache.x86_64h.development", "cdhash_sha256": "e4ded4ba10b33f082fc1dc9d7ed01ec96b6940934cc4dbe200c17702c9328013", "signature": "adhoc, embedded CodeDirectory",
+  "osVersion_field": "0x1a0700 (26.7.0)", "platform": 1, "sharedRegionStart": "0x7ff800000000", "maxSlide": "0x1941c000", "imagesCount": 3625,
+  "subcaches": {".01": "98E79F0E-FCC8-31D5-885B-12E9A5F8A269", ".02": "3B20298F-4E81-3A6C-B50F-DC01DAAE23F0", ".03": "6E7F7754-13C4-398C-9E02-4DA5C308C002", ".04": "FB092B84-BF9B-3240-A0B0-81F7AC1D2646", ".05": "88C45A72-8A74-3475-979A-640B86E61EAE", ".06": "948E4E8F-A108-3510-BC7E-0FEA2943E90D"},
+  "subcache_uuid_matches_own_header": true,
+  "file_sha256": {"main": "3ea41b4da13b29ff7694dfb15797328b39612ca6fc89d8bb61ec48fe10fc3d14", ".01": "588fce39f8b723009f31c0c907dfcbfcb523ec72d072911feffe536e0ea5abaa", ".02": "25ee02c4d4fcaabb0251fbd2f4dbabb7ada9080324ba98da01eaaa1c7f3865f6", ".03": "645d63fdd564935673b6bab93c2c73f81bca9881dcae679ac1245cd784a1fcef", ".04": "af27c249fa2f2218a8e0165a67abb624f1b24eb61d9c57418edbfe46af76b3a2", ".05": "1bfc743f3be9d08b0a8c00263bad8dc07953e385a74f2a74985f82b0f54849d3", ".06": "41731d5b8256ef96186d15e75c9ecb8ac5b13160ead3baf6d4ba6ff6f82ceec5", ".map": "5dd3c59dc8a7cc55d215c6bc81d94369419908f83faa1693d5168d02e4bb7f7e", ".atlas": "90367b1c2093d4003dc9e9cdbc41a6af2e7adeea1608a58c5779277b045bcecb"},
+  "hash_cost": "~5.6 GB, 1m57s wall for shasum",
+  "image_inventory": "cache-image-text-infos.json (3625 entries; sha256 1205ea9c7a0b1a2999fb8a7a4ca8ad2f319adda373d87fbe31e52ebd7d329fd8); image-info and image-text-info path sets identical"},
+ "named_images": {
+  "/usr/lib/libSystem.B.dylib": ["59F4B806-CE61-3332-9C81-B0017DD51338", "0x7ff812e9d000", 6956],
+  "/usr/lib/libz.1.dylib": ["1937863A-A3D1-3A4D-AF24-5492992693BF", "0x7ff812db2000", 79340],
+  "/usr/lib/libc++.1.dylib": ["1D67FE3B-8700-394A-9C22-CA111009C185", "0x7ff802da7000", 568164],
+  "/System/Library/Frameworks/Security.framework/Versions/A/Security": ["B2530481-AEDF-36E2-847D-77D5545C91FE", "0x7ff806220000", 4190288]},
+ "pinned_jdk": {"home": "/Users/boristacyniak/.sdkman/candidates/java/17.0.1-tem", "IMPLEMENTOR_VERSION": "Temurin-17.0.1+12", "OS_ARCH": "x86_64",
+  "jfr_event": "jdk.NativeLibrary fields name:String, baseAddress:long(MemoryAddress), topAddress:long(MemoryAddress); period everyChunk, enabled in default.jfc and profile.jfc (read from jmods/jdk.jfr.jmod metadata.bin and lib/jfr/*.jfc)",
+  "libjvm_imports": "_dyld_image_count, _dyld_get_image_name, _dyld_get_image_header present; _dyld_get_image_vmaddr_slide absent",
+  "UNVERIFIED": "HotSpot os_bsd.cpp get_loaded_modules_info source at jdk-17.0.1+12 not read (not shipped; no fetch authorized). Expected macOS behavior: name=dyld image name, baseAddress=Mach-O header address, topAddress=0, main executable skipped. Confirm by source read or first bounded capture."}
+}

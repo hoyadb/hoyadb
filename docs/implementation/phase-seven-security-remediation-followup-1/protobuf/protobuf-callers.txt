@@ -1,0 +1,4 @@
+lite users by pkg [('org/jetbrains/kotlin/backend', 184), ('org/jetbrains/kotlin/serialization', 141), ('org/jetbrains/kotlin/metadata', 96), ('org/jetbrains/kotlin/fir', 24), ('org/jetbrains/kotlin/library', 12), ('org/jetbrains/kotlin/incremental', 5), ('org/jetbrains/kotlin/load', 5), ('org/jetbrains/kotlin/analysis', 4), ('org/jetbrains/kotlin/codegen', 2), ('org/jetbrains/kotlin/inline', 1)]
+full(GeneratedMessage w/o Lite) users []
+UnknownFieldSet users outside protobuf [] 0
+CodedInputStream users [('org/jetbrains/kotlin/backend', 272), ('org/jetbrains/kotlin/serialization', 196), ('org/jetbrains/kotlin/metadata', 111), ('org/jetbrains/kotlin/ir', 13), ('org/jetbrains/kotlin/library', 10)]

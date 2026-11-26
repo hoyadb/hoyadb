@@ -1,0 +1,24 @@
+"""Inert HTTPS fetch of exact official files into this quarantine; records URL, HTTP code, bytes, SHA256."""
+from pathlib import Path
+import hashlib, json, subprocess, sys
+here = Path(__file__).resolve().parents[1]
+dest_dir = here / sys.argv[1]
+dest_dir.mkdir(parents=True, exist_ok=True)
+log = here / 'fetch-log.json'
+records = json.loads(log.read_text()) if log.exists() else []
+for url in sys.argv[2:]:
+    assert url.startswith(('https://repo.maven.apache.org/maven2/', 'https://dl.google.com/dl/android/maven2/',
+                           'https://raw.githubusercontent.com/JetBrains/kotlin/v2.1.20/', 'https://api.github.com/repos/JetBrains/kotlin/git/ref/tags/v2.1.20')), url
+    out = dest_dir / (url.rsplit('/', 1)[1] if 'api.github.com' not in url else 'tag-v2.1.20.json')
+    assert not out.exists(), out
+    p = subprocess.run(['curl', '--location', '--proto', '=https', '--proto-redir', '=https', '--tlsv1.2', '--silent', '--show-error',
+                        '--max-time', '300', '--output', str(out), '--write-out', '%{http_code} %{url_effective}', url],
+                       stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, timeout=360)
+    code, effective = (p.stdout.split(' ', 1) + [''])[:2]
+    entry = {'url': url, 'dest': str(out.relative_to(here)), 'exit_code': p.returncode, 'http_code': code, 'effective_url': effective}
+    if code == '200' and out.exists():
+        data = out.read_bytes(); entry.update(bytes=len(data), sha256=hashlib.sha256(data).hexdigest(), sha1=hashlib.sha1(data).hexdigest())
+    elif out.exists():
+        out.rename(out.with_name(out.name + '.http-' + code))
+    records.append(entry); print(json.dumps(entry))
+log.write_text(json.dumps(records, indent=2) + '\n')

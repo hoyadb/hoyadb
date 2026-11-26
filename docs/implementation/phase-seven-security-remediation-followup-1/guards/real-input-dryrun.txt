@@ -1,0 +1,10 @@
+jars 186
+KAPT JavaClassCacheManager present: {}
+log4j affected present: {}
+protobuf CodedInputStream declares checkRecursionLimit: False
+protobuf UnknownFieldSet users outside protobuf: []
+protobuf GeneratedMessage(full) users outside protobuf: []
+lang3 external getClass invocations (all jars): []
+lang3 reflective string refs (all jars): []
+KGP embedded byte-bound: [('com.github.gundy:semver4j:0.16.4', 'byte_bound_pom_properties'), ('com.google.code.gson:gson:2.11.0', 'byte_bound_pom_properties'), ('com.google.guava:failureaccess:1.0.2', 'byte_bound_pom_properties'), ('com.google.guava:guava:33.3.1-jre', 'byte_bound_pom_properties'), ('commons-codec:commons-codec:1.17.1', 'byte_bound_pom_properties'), ('commons-io:commons-io:2.18.0', 'byte_bound_pom_properties'), ('org.antlr:antlr4-runtime:4.5.2-1', 'byte_bound_pom_properties'), ('org.apache.commons:commons-compress:1.27.1', 'byte_bound_pom_properties'), ('org.apache.commons:commons-lang3:3.16.0', 'byte_bound_pom_properties'), ('org.jetbrains.intellij.deps.fastutil:intellij-deps-fastutil:8.5.4-9', 'byte_bound_pom_properties')]
+KGP unmapped relocated namespaces: ['org/jetbrains/kotlin/com/github/gundy/', 'org/jetbrains/kotlin/com/google/common/', 'org/jetbrains/kotlin/com/google/gson/', 'org/jetbrains/kotlin/com/google/thirdparty/', 'org/jetbrains/kotlin/com/intellij/concurrency/', 'org/jetbrains/kotlin/com/intellij/diagnostic/', 'org/jetbrains/kotlin/com/intellij/execution/', 'org/jetbrains/kotlin/com/intellij/filename/', 'org/jetbrains/kotlin/com/intellij/jna/', 'org/jetbrains/kotlin/com/intellij/openapi/', 'org/jetbrains/kotlin/com/intellij/platform/', 'org/jetbrains/kotlin/com/intellij/reference/', 'org/jetbrains/kotlin/com/intellij/security/', 'org/jetbrains/kotlin/com/intellij/serialization/', 'org/jetbrains/kotlin/com/intellij/smRunner/', 'org/jetbrains/kotlin/com/intellij/ui/', 'org/jetbrains/kotlin/com/intellij/util/', 'org/jetbrains/kotlin/com/intellij/xml/', 'org/jetbrains/kotlin/it/unimi/dsi/', 'org/jetbrains/kotlin/org/apache/commons/', 'org/jetbrains/kotlin/org/apache/log4j/'] 21

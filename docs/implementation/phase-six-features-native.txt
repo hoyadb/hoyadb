@@ -1,0 +1,54 @@
+hoyadb-phase-six-dependency-review v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-six-dependency-review)
+├── rusqlite feature "bundled-sqlcipher"
+│   ├── rusqlite v0.40.1 (https://github.com/rusqlite/rusqlite?rev=661107f6eb5d7477c61be1221744de3ad96c53e7#661107f6)
+│   │   ├── bitflags feature "default"
+│   │   │   └── bitflags v2.13.2
+│   │   ├── fallible-iterator feature "default"
+│   │   │   ├── fallible-iterator v0.3.0
+│   │   │   └── fallible-iterator feature "alloc"
+│   │   │       └── fallible-iterator v0.3.0
+│   │   ├── fallible-streaming-iterator feature "default"
+│   │   │   └── fallible-streaming-iterator v0.1.9
+│   │   ├── libsqlite3-sys feature "default"
+│   │   │   ├── libsqlite3-sys v0.38.1 (https://github.com/rusqlite/rusqlite?rev=661107f6eb5d7477c61be1221744de3ad96c53e7#661107f6)
+│   │   │   │   [build-dependencies]
+│   │   │   │   ├── cc feature "default"
+│   │   │   │   │   └── cc v1.10.0
+│   │   │   │   │       ├── find-msvc-tools feature "default"
+│   │   │   │   │       │   └── find-msvc-tools v0.1.15
+│   │   │   │   │       └── shlex feature "default"
+│   │   │   │   │           ├── shlex v2.0.1
+│   │   │   │   │           └── shlex feature "std"
+│   │   │   │   │               └── shlex v2.0.1
+│   │   │   │   ├── pkg-config feature "default"
+│   │   │   │   │   └── pkg-config v0.3.34
+│   │   │   │   ├── sqlcipher-src feature "default"
+│   │   │   │   │   └── sqlcipher-src v419.0.6+sqlcipher-4.19.0-sqlite-3.53.4-libtomcrypt-1.18.2
+│   │   │   │   └── vcpkg feature "default"
+│   │   │   │       └── vcpkg v0.2.15
+│   │   │   └── libsqlite3-sys feature "min_sqlite_version_3_45_3"
+│   │   │       ├── libsqlite3-sys v0.38.1 (https://github.com/rusqlite/rusqlite?rev=661107f6eb5d7477c61be1221744de3ad96c53e7#661107f6) (*)
+│   │   │       ├── libsqlite3-sys feature "pkg-config"
+│   │   │       │   └── libsqlite3-sys v0.38.1 (https://github.com/rusqlite/rusqlite?rev=661107f6eb5d7477c61be1221744de3ad96c53e7#661107f6) (*)
+│   │   │       └── libsqlite3-sys feature "vcpkg"
+│   │   │           └── libsqlite3-sys v0.38.1 (https://github.com/rusqlite/rusqlite?rev=661107f6eb5d7477c61be1221744de3ad96c53e7#661107f6) (*)
+│   │   └── smallvec feature "default"
+│   │       └── smallvec v1.16.4
+│   ├── rusqlite feature "bundled"
+│   │   ├── rusqlite v0.40.1 (https://github.com/rusqlite/rusqlite?rev=661107f6eb5d7477c61be1221744de3ad96c53e7#661107f6) (*)
+│   │   ├── rusqlite feature "modern_sqlite"
+│   │   │   ├── rusqlite v0.40.1 (https://github.com/rusqlite/rusqlite?rev=661107f6eb5d7477c61be1221744de3ad96c53e7#661107f6) (*)
+│   │   │   └── libsqlite3-sys feature "bundled_bindings"
+│   │   │       └── libsqlite3-sys v0.38.1 (https://github.com/rusqlite/rusqlite?rev=661107f6eb5d7477c61be1221744de3ad96c53e7#661107f6) (*)
+│   │   └── libsqlite3-sys feature "bundled"
+│   │       ├── libsqlite3-sys v0.38.1 (https://github.com/rusqlite/rusqlite?rev=661107f6eb5d7477c61be1221744de3ad96c53e7#661107f6) (*)
+│   │       ├── libsqlite3-sys feature "bundled_bindings" (*)
+│   │       └── libsqlite3-sys feature "cc"
+│   │           └── libsqlite3-sys v0.38.1 (https://github.com/rusqlite/rusqlite?rev=661107f6eb5d7477c61be1221744de3ad96c53e7#661107f6) (*)
+│   └── libsqlite3-sys feature "bundled-sqlcipher"
+│       ├── libsqlite3-sys v0.38.1 (https://github.com/rusqlite/rusqlite?rev=661107f6eb5d7477c61be1221744de3ad96c53e7#661107f6) (*)
+│       └── libsqlite3-sys feature "bundled" (*)
+└── zeroize feature "default"
+    ├── zeroize v1.9.1
+    └── zeroize feature "alloc"
+        └── zeroize v1.9.1

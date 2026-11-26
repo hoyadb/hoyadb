@@ -1,0 +1,5 @@
+{
+  "encoding": "utf-8",
+  "original_sha256": "1b2c372ee432cc0bea9f455990e83799e8422b53ce58df44a4cfd77b13c8893c",
+  "stdout": "HOYA_SWIFT_GENERAL_CONSUMER_GREEN mode=writer schemas=2 protected=SQLCipher4.19.0 automatic_observers=2 commands=cancel-fifo queue=frozen-retry entity=automatic pull=stale-refetch hook=async migration=authored\n\n"
+}

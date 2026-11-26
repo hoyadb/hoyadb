@@ -1,0 +1,88 @@
+<h2>Run a Todo app in Swift</h2>
+<p>This follows the same flow as <a href="getting-started.html">JavaScript</a>: open a database, read and watch tasks,
+add one with a command, then sync it. Every snippet comes from <a href="source:examples/swift/Sources/TodoGuide/main.swift">one
+Swift program</a> that the documentation build compiles and runs.</p>
+<p>The Swift binding is a local package in <code>bindings/swift</code>; it is not published. Add it to your app with
+<a href="source:examples/swift/Package.swift">a path dependency</a> on the products <code>HoyaDB</code> and, for tests,
+<code>HoyaDBTesting</code>. The package links the native core from <code>Artifacts/HoyaNative.xcframework</code>,
+which is built from source and must match the source you use: rebuild it with
+<code>python3 bindings/swift/build-artifacts.py</code> (macOS and iOS slices) after changing the core. The documentation build does not touch that
+package. <code>python3 docs/public/run_native.py build</code> builds the core into
+<code>target/documentation-languages</code> with a macOS-only XCFramework in a copy of the package, and
+<code>python3 docs/public/run_native.py swift</code> runs this program against it.</p>
+<p>Differences from JavaScript: <code>Database</code> is an actor, so every call is <code>async</code>. Values are typed:
+row fields are <code>Cell</code> values such as <code>.string("Buy milk")</code>, and command arguments and results are
+<code>JSONValue</code>. There is no query builder: a <code>Query</code> is a value with predicates and an order. Sync is
+explicit, step by step.</p>
+
+<h2>1. Describe your data</h2>
+<p>A schema lists your tables and the type of each column. Here a task has a title and a done flag. The same three
+imports serve the rest of the program: <code>HoyaDB</code> is the binding and <code>HoyaDBTesting</code> provides the
+stand-in server used in step 7.</p>
+{{example:swift:schema}}
+<p>A column is required unless you pass <code>optional: true</code>. Other kinds are <code>.integer</code>,
+<code>.float</code>, <code>.timestamp</code> and <code>.reference</code>.</p>
+
+<h2>2. Open one database</h2>
+<p>Create the database actor and open it with the schema. This example uses memory storage, which is ideal for trying
+things out.</p>
+{{example:swift:open}}
+<p>Open once when your app starts and share the actor. Memory storage is lost on close. For data that persists,
+<code>openProtected</code> takes a directory, a file name and a 32-byte key that your app owns; see <a href="persistence.html">persistence</a>
+and <a href="security.html">key ownership</a>.</p>
+
+<h2>3. Query</h2>
+<p>A <code>Query</code> names a table, its predicates and an order. Keep it in a constant: the next step watches the same
+query. Fetching runs locally, so it works offline.</p>
+{{example:swift:query}}
+<p>A new database has no tasks yet, so this first fetch is empty. Predicate operators are <code>.equal</code>,
+<code>.notEqual</code>, <code>.less</code>, <code>.lessOrEqual</code>, <code>.greater</code>, <code>.greaterOrEqual</code>
+and <code>.oneOf</code>. Several predicates must all match.</p>
+
+<h2>4. Watch the results</h2>
+<p><code>observe</code> calls your closure with the query's current rows, then again after each change. Here it hands
+the rows to <code>Seen</code>, a small thread-safe recorder defined in the full program that lets the example check what
+the callback received; in an app, update your UI state instead.</p>
+{{example:swift:observe}}
+<p>The callback receives a <code>Result</code>: rows on success, or the delivery error. It runs on the
+<code>executor</code> you pass, by default the main queue, so it can update your UI directly. Keep the returned
+<code>Subscription</code> and cancel it when the view goes away.</p>
+
+<h2>5. Define a command and its local handler</h2>
+<p>A command has a definition, a stable name with a version suffix and the arguments it takes, and a local handler
+that runs on the device. Your server recognizes the command by its name. The handler reads its arguments from its
+<code>scope</code> and inserts the new task through it. <code>CheckFailure</code> is the example's own error type; throw
+whatever error suits your app.</p>
+{{example:swift:command-definition}}
+<p>Use the <code>scope</code>, not the database, for reads and writes inside a handler: they commit together when the
+handler returns, and nothing is kept if it throws.</p>
+
+<h2>6. Run it</h2>
+<p><code>command</code> runs the handler from step 5 with the arguments and a captured context, and returns the key of
+the queued command with the handler's result.</p>
+{{example:swift:execute}}
+<p>The new task already appears in the watched query from step 4, under a temporary <code>local:</code> ID, and the
+command waits in the queue to sync. The example fixes the time at 1000 ms so that it is repeatable; pass the current
+time in an app. The context is recorded with the command. It is information for your server, not proof of who the user
+is.</p>
+
+<h2>7. Your server</h2>
+<p>Your server has its own handler for <code>add-task-v1</code>, and it decides the final outcome. Here
+<code>FakeTransport</code> from <code>HoyaDBTesting</code> plays the server and answers with the task's real ID.</p>
+{{example:swift:backend}}
+<p>In an app, replace it with your own HTTP client that sends the envelopes from the next step to your API.</p>
+
+<h2>8. Sync and confirm</h2>
+<p><code>preparePush</code> returns the waiting commands as JSON envelopes; send them to your server and pass its answer to
+<code>receiveWire</code>. Each answer the server confirmed then waits in <code>pendingReconciliations()</code> until you
+reconcile it. A command that created rows must map every <code>local:</code> ID it created to the ID your server
+assigned.</p>
+{{example:swift:sync}}
+<p>After reconciling, the command is applied and the task has the ID <code>server-task-1</code>: HoyaDB renames the row
+everywhere, including in watched queries. See <a href="reconciliation.html">reconciliation</a>.</p>
+
+<h2>9. Close</h2>
+<p>Cancel the subscription when the view no longer needs it, and close the database when your app shuts down.</p>
+{{example:swift:close}}
+<p>Continue with <a href="swift-reference.html">the Swift reference</a> and <a href="sync.html">sync</a>. The
+<a href="verification.html#case-swift">verification result</a> records the build and the run.</p>

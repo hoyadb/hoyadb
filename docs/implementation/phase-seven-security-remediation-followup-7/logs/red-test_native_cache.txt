@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 14, in <module>
+    import native_cache as N  # noqa: E402
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'native_cache'
+exit=1

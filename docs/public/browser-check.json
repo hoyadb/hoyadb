@@ -1,0 +1,159 @@
+{
+  "sourceHashes": {
+    "docs/public/assets/search.js": "a9a4038f1c0d2874bdfcd5f386b1a01d2e2fc85e9c176118f95f70bdb33fac24",
+    "docs/public/assets/style.css": "af7e768036850fd70b80517da4e0383b4a1372605d2f04701f550210af032d9e",
+    "docs/public/browser-check.mjs": "3b788ff6578a3bf017bec78e2c58db3eb7045d739f5966074b0d9e3c5da3aa74",
+    "docs/public/build.py": "da41b54fcceb9588af1ddf9376ce7a66063e022fe4e3a44cc50af7770cf4e2f0",
+    "docs/public/check_sources.py": "c98a71f23545d83822e7ffbf02e8e683d0f32f37e6406be63d9ff7031038564e",
+    "docs/public/example-completions.json": "a85281b21c4c4d99ed89d1b352d82a406e0f9f636b482659b087ff7bff538299",
+    "docs/public/examples/Cargo.lock": "71d907bafa18d56599f219a5eab266f96800b6b3b4ef3c071b6994ce995b107c",
+    "docs/public/examples/Cargo.toml": "04db6b1cc664e5b948d8aafdcda3d0615c80c53dba29cd04c5771cbabc38de02",
+    "docs/public/examples/application.mjs": "f68506a418179f4d6333463bed76d45b921b77f2f9bbf9cbf0ac7a81e430d85c",
+    "docs/public/examples/c/todo.c": "bad1c822a9abaf9bb7fe645662a378485ddf78fb81b61f1c34dec50062fcdbcd",
+    "docs/public/examples/javascript.mjs": "a9929e1fbe5d29681cf3527d21b9ecf68670d527417b5ac4886e6f3dc174ed8d",
+    "docs/public/examples/kotlin/TodoGuide.kt": "246afd11de720868905030a516388b7284f5a62e04e3a93e3639f0dfaadcf0bf",
+    "docs/public/examples/react-native-bootstrap.mjs": "a5c71b3c2c72ca52990258e3972ce53f01da793d1358b1ab3b8ae8e86fc3c69e",
+    "docs/public/examples/react-native.mjs": "71d3e0ce3195ed8298be7d71c24382232c8289414f95f13e683aa030f8eb0e14",
+    "docs/public/examples/src/bin/commands.rs": "4fd488cdd71f9f7cb1f403488d823b9dc452294b8ce211747ed46034dc598a23",
+    "docs/public/examples/src/bin/entities.rs": "0a0e41b5b80447fc21bebe1058fb081797b6b5bfcca3c175efa8f3df4dd4f5fa",
+    "docs/public/examples/src/bin/errors.rs": "c4156f9c90313ea1853990ab74681653cbd9f31a4648eae442b59b1de10fc578",
+    "docs/public/examples/src/bin/migrations.rs": "fdf32457de3a76b2b1ddd298e30a75ed0fdfd4ae2674a7d36d670039e689b50e",
+    "docs/public/examples/src/bin/observations.rs": "49923e7b59d3851378ac7d30532952049d325a58d5f6c14c604318885d356bf0",
+    "docs/public/examples/src/bin/persistence.rs": "c3f2215c8db0d498ff8900e2afc10de335994d3eb1fe73e495deacc27170f748",
+    "docs/public/examples/src/bin/pull_merge.rs": "12a226f3b939d74a1a2983dea0e7aa01c2aa40225e3d50e4de9d710324c9b32e",
+    "docs/public/examples/src/bin/queries.rs": "06eda44de44d1c9c6273b99054ede43e8e893aed669f8c11391b7a283ec66228",
+    "docs/public/examples/src/bin/quickstart.rs": "619cc671939caacb3957b52943344478f621cae03b99e979e2b0f1c547b16665",
+    "docs/public/examples/src/bin/relations.rs": "920c75873d0cf2f0695c948ab0e5f5d039fc2d3d3a3ce081b12469d2bfa14e03",
+    "docs/public/examples/src/bin/rust_todo.rs": "669fec9adcfaf60e52beda69b8d93a24de82402d3f8a111de97e605d155f60df",
+    "docs/public/examples/src/lib.rs": "79139317761a8a81763472dc5e8adb7942fdb5db67d8905361eb3c3121e0c095",
+    "docs/public/examples/swift/Package.swift": "28670d1de0fa0360f6f1d2958763817c4289b2d9744ed2cd0708871f386db528",
+    "docs/public/examples/swift/Sources/TodoGuide/main.swift": "9a27b6a972959b6e56688110af49e168dff6150b0ea4cb052f55592ddd684085",
+    "docs/public/examples/typescript.ts": "d5335127c5322adde4f873c78ca2c17275af7c4c1f0f295c2a868264107ee0e3",
+    "docs/public/highlight.py": "04518f356cb0c753b79cb5cf6888df82af2463b3a6872291d1f7a76042719b64",
+    "docs/public/language-examples.json": "47dab853f7085a7ca300d44c5a3e20f64578c8e8fdfd8ab73f82ffe0006acc2b",
+    "docs/public/pages/architecture.html": "25a01e01bdaa494811bf7d53d2fe879e1ed6f40c78e14ef63b2890e21ddcf85f",
+    "docs/public/pages/c-getting-started.html": "001cf9296ec4f18eaf9de17deb979fdd529b8b508de890f07d8cf9c7645a9f4d",
+    "docs/public/pages/commands.html": "5c6326493a01923724084272b54520170ee3bac5739272e0403bb8db4ab78c79",
+    "docs/public/pages/entities.html": "afdc874047197191628b7e022e6ed0accc69af3a0c4cdae9da72c64d8d39bce7",
+    "docs/public/pages/errors.html": "0f5b14b4400c8e067b5854b20c7627f638067c8e6ee5845419b6e1c5985bafa1",
+    "docs/public/pages/getting-started.html": "6abd1a5db8c9b089efbb76731b5136aa2bdffb6968cc03c042269b5171e1f986",
+    "docs/public/pages/glossary.html": "0ebc7b6271ee1816ef4bdccdfa5acd44c4d62c8bcaec00fddbc11bf132f2f353",
+    "docs/public/pages/index.html": "0c983c59a7081d7bf7f9faa7aa9bfb5a5b562642963d72af1d74c77a76f9e05f",
+    "docs/public/pages/installation.html": "a3647a91596409176e49a953103915d685eb942a834bb7bd5f5187f710a56809",
+    "docs/public/pages/javascript.html": "1ffee0c4e094aa5cb519d9a3b46ac5d105ea3437d410255273fbd2da5ae99a7e",
+    "docs/public/pages/kotlin-getting-started.html": "8227d0ec46fcc21346560dd590eb9c3db56cbc3f6d6499cabb38685b4419f2e1",
+    "docs/public/pages/migrations.html": "37281440a4fc743345a003b2880b84e3cc8df2dad852caa14ae5b1b79f2b6937",
+    "docs/public/pages/model.html": "a21cc5c6b1cff4e7ce98ff28aa96bf1a922b21d2e476ef99fb83c2fb1bd2cad3",
+    "docs/public/pages/observations.html": "842e54fdd6aa41ea023c4832879e2d8d408d1e7e6dab646e009da9d2865adefb",
+    "docs/public/pages/persistence.html": "f91476ed9b999d8fa0c6392e4b6803af9542e0cf8a49aeba41ea4a1f24ecb820",
+    "docs/public/pages/platforms.html": "297e1dafe9829314bdab1fe507859050ece0216e34ff1ef55440d556a56d4b7c",
+    "docs/public/pages/pull-merge.html": "0733a976856edbe0fa6953f231fbdc471a9d780336dbae6b1130cab5a638efcf",
+    "docs/public/pages/queries.html": "e7184f4492239934e44a33fffad0c655ec7d3505bc17da619f58d157bc76041b",
+    "docs/public/pages/react-native-getting-started.html": "a7c5fd52e197d1b53b8010e3fae18e49d25326659ae188c676c362d7a4a8f392",
+    "docs/public/pages/reconciliation.html": "53b319bbf6f31491ba99614ba245dea201662f982427eec785a7f82957145b31",
+    "docs/public/pages/relations.html": "2be6c64c5be2356c5dd92ac9bdbfb980ef4d7ec276337050b26d9c64c3ac922b",
+    "docs/public/pages/rust-getting-started.html": "2859793f7dff08736cd3a99cf5a28d1fb10f91e91f6fe2703bae3566a361da2a",
+    "docs/public/pages/rust-reference.html": "2359c4c6bb4760fc4907578e8e996248ed39471423edc00bcc3c169472cba21d",
+    "docs/public/pages/sdk-reference.html": "3dbec96ce99188d718cc3d4fa5e848aec50318cd01baf509af34c9777f851c76",
+    "docs/public/pages/security.html": "a4b71a8a33b0f1a3808b74917fd2eafa7ae1b6a49cd308284b93c0c31e2b2289",
+    "docs/public/pages/swift-getting-started.html": "48253ab83e7d2dc114ab4943ed055a72dad9c05746831bf6132a5ef440c211f3",
+    "docs/public/pages/sync.html": "72b7da2f8b1ef72c7919139e1c43dbb1e7644b9980da9a654720350a92a23945",
+    "docs/public/pages/testing.html": "be787add6062ca7b2091fe174623af4f36414ff0eb51b73e0e0d0c2b519b012e",
+    "docs/public/pages/typescript-getting-started.html": "d24f2f0995dc30fd102032c7c1c9084269d1434617fe6e8d736c0f1e44938b58",
+    "docs/public/run_application.mjs": "1117050019fe5fd0c5b406fc03eaaba4c8b4f6a392c3a183ec480ee8c39633dd",
+    "docs/public/run_kotlin.py": "582f69328b4720671617b2a509628b454720223de23c3553d2d47f8ae288798b",
+    "docs/public/run_language.mjs": "0bb6f765df06e63384a37919eedf6e9dd17f6fe1a61b43e7021fcd25c6ccde46",
+    "docs/public/run_native.py": "ceeeaa614637ef11a13a5244ff63309a82839871af60ba7f18d2ac0eaae98820",
+    "docs/public/site.json": "cdb080d22279b7ff7decd3eda0ce34f60fa868e1144be2dc4243d023e8ce795c",
+    "docs/public/source_checks.py": "7f542fa5ef4dc71aa2266acb9f38dd6c1285e624eb5f24c8442ba4e6060aa29e",
+    "docs/public/symbols.json": "d08ca4af9c7ae450145578ad4b853538a29e59948e19307da34e3ba77e62ed29",
+    "docs/public/test_build.py": "f08f4caa8624bad1a2d2243220f1f0a18ab552906a3003e7c4f6ac1e3c2301f2",
+    "docs/public/test_highlight.py": "b8c99f2e937bea4e3fbbf05c5d551faaa006241da82b2397dc8e20a78476a19c",
+    "docs/public/test_kotlin_runner.py": "3ff15ab427a45492871ad26a56fc4c2428f14bfa1dfeac8f7a6278b2fc380119",
+    "docs/public/test_native_runner.py": "0ab1d8c3d9b0176d7117a9344f77a6958739cb5748e7eaab624448f91316733c",
+    "docs/public/test_readability.py": "c356bbe11eec73f3558a3257c4bc34ebac98917561f554793c7d9aed89226da2",
+    "docs/public/test_search.mjs": "842c4ac76ad64031f376cbf03e00a9e9b358a36bf1835330b4ae0f71d064fdf3",
+    "docs/public/verify.py": "1fdd52b7faf0ec0daa56542d85523f42fe90ac9a5e6c9c7119abb9baa86e790f"
+  },
+  "executable": "/Users/boristacyniak/.cache/puppeteer/chrome/mac-139.0.7258.138/chrome-mac-x64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+  "syntax": [
+    {
+      "kind": "keyword",
+      "color": "rgb(216, 180, 254)"
+    },
+    {
+      "kind": "string",
+      "color": "rgb(167, 243, 161)"
+    },
+    {
+      "kind": "comment",
+      "color": "rgb(175, 189, 181)"
+    },
+    {
+      "kind": "number",
+      "color": "rgb(246, 193, 119)"
+    },
+    {
+      "kind": "type",
+      "color": "rgb(139, 213, 255)"
+    },
+    {
+      "kind": "callable",
+      "color": "rgb(245, 180, 210)"
+    },
+    {
+      "kind": "punctuation",
+      "color": "rgb(220, 229, 223)"
+    }
+  ],
+  "selectableCode": {
+    "text": "import {openDatabase, defineSchema, defineCommand, table, column} from '@hoyadb/client';\nimport {createFakeTransport} from '@hoyadb/testing';\n\nconst schema = defineSchema({\n  version: 1,\n  tables: {\n    todos: table({\n      columns: {\n        title: column.string(),\n        done: column.boolean(),\n        completedAt: column.timestamp({optional: true}),\n        completedBy: column.string({optional: true})\n      }\n    })\n  }\n});",
+    "lang": "javascript",
+    "status": "executed",
+    "font": "12px",
+    "select": "auto"
+  },
+  "resourceSchemes": [
+    "file"
+  ],
+  "pagesCheckedAt320": 35,
+  "date": "2026-10-28T20:17:31.326Z",
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/139.0.7258.138",
+    "revision": "@884e54ea8d42947ed636779015c5b4815e069838",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/139.0.0.0 Safari/537.36",
+    "jsVersion": "13.9.205.20"
+  },
+  "url": "file:///<checkout>/docs/public/dist/index.html",
+  "status": "passed",
+  "checks": [
+    "actual file:// search match/no-match/clear",
+    "Tab reaches visible skip link with focus outline",
+    "home page at 320/768/1440px; all configured pages at 320px without page overflow",
+    "desktop and mobile screenshots captured",
+    "all observed resources are local or embedded",
+    "seven distinct computed syntax colors; language/status labels; selectable source"
+  ],
+  "sizes": [
+    {
+      "width": 1440,
+      "scroll": 1440,
+      "main": 1110
+    },
+    {
+      "width": 768,
+      "scroll": 768,
+      "main": 498
+    },
+    {
+      "width": 320,
+      "scroll": 320,
+      "main": 320
+    }
+  ],
+  "limitations": [
+    "Not a full screen-reader or WCAG audit.",
+    "No application mobile/browser storage runtime claim."
+  ]
+}

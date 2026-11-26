@@ -1,0 +1,43 @@
+FF.F.E...
+======================================================================
+ERROR: test_script_sha256_pin_is_enforced (__main__.InitScript.test_script_sha256_pin_is_enforced)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_init_script_guard.py", line 75, in test_script_sha256_pin_is_enforced
+    self.assertEqual(I.R1_SCRIPT_SHA256, __import__('hashlib').sha256(SCRIPT.read_bytes()).hexdigest())
+                     ^^^^^^^^^^^^^^^^^^
+AttributeError: module 'init_script_guard' has no attribute 'R1_SCRIPT_SHA256'
+
+======================================================================
+FAIL: test_block_comment_and_string_handling (__main__.InitScript.test_block_comment_and_string_handling)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_init_script_guard.py", line 71, in test_block_comment_and_string_handling
+    self.assertTrue(self.check(SCRIPT.read_text() + '/* force exclude */\n').ok)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_exact_constraint_set_required (__main__.InitScript.test_exact_constraint_set_required)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_init_script_guard.py", line 61, in test_exact_constraint_set_required
+    self.assertFalse(result.ok, line)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+AssertionError: True is not false :     'com.google.guava:guava'                        : '33.3.1-jre',
+
+
+======================================================================
+FAIL: test_line_comment_inside_string_cannot_hide_override (__main__.InitScript.test_line_comment_inside_string_cannot_hide_override)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_init_script_guard.py", line 67, in test_line_comment_inside_string_cannot_hide_override
+    self.assertFalse(self.check(SCRIPT.read_text() + injected).ok)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.060s
+
+FAILED (failures=3, errors=1)
+exit=1

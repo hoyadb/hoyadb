@@ -1,0 +1,79 @@
+"""Refresh only the owned RN package's packed XCFramework after the uniform-basename packager fix.
+
+Copies the SwiftPM artifact produced by build-artifacts.py (no byte edits), repacks with
+npm pack --ignore-scripts, replaces only the owned unpacked @hoyadb/react-native directory
+and checks every copy with bindings/swift/check_artifacts.py. Third-party inputs untouched.
+"""
+from pathlib import Path, PurePosixPath
+import hashlib
+import json
+import shutil
+import subprocess
+import tarfile
+
+repo = Path(__file__).resolve().parents[2]
+stage = repo / 'target/phase-seven-rn'
+evidence = stage / 'xcframework-basename'
+evidence.mkdir(exist_ok=True)
+consumer = Path((stage / 'owned-consumer-root.txt').read_text().strip())
+assert consumer.name.startswith('hoyadb-phase7-rn-consumer-')
+check = repo / 'bindings/swift/check_artifacts.py'
+source = repo / 'bindings/swift/Artifacts/HoyaNative.xcframework'
+recorded = json.loads((repo / 'bindings/swift/Artifacts/native-build.json').read_text())['artifact_files_sha256']
+
+
+def tree(framework):
+    return {str(p.relative_to(framework.parent)): hashlib.sha256(p.read_bytes()).hexdigest()
+            for p in sorted(framework.rglob('*')) if p.is_file()}
+
+
+record = {'source_framework': str(source), 'recorded_artifact_sha256': recorded, 'checks': []}
+
+
+def verify(framework, label):
+    p = subprocess.run(['python3', str(check), str(framework)], stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+                       text=True, timeout=120)
+    (evidence / f'check-{label}.txt').write_text(p.stdout)
+    actual = tree(framework)
+    record['checks'].append({'label': label, 'path': str(framework), 'exit_code': p.returncode,
+                             'matches_recorded_sha256': actual == recorded, 'files_sha256': actual})
+    assert p.returncode == 0 and actual == recorded, label
+
+
+verify(source, 'swift-source')
+rn = repo / 'bindings/react-native/Artifacts'
+record['rn_artifact_before_sha256'] = tree(rn / source.name) if (rn / source.name).exists() else {}
+if (rn / source.name).exists():
+    shutil.rmtree(rn / source.name)  # Generated, ignored copy of the previous packager output.
+rn.mkdir(exist_ok=True)
+shutil.copytree(source, rn / source.name)
+verify(rn / source.name, 'rn-package-source')
+
+packages = consumer / 'packages'
+archive = packages / 'hoyadb-react-native-0.1.0.tgz'
+record['superseded_archive_sha256'] = hashlib.sha256(archive.read_bytes()).hexdigest()
+cmd = ['npm', 'pack', '--ignore-scripts', '--json', '--pack-destination', str(packages)]
+p = subprocess.run(cmd, cwd=repo / 'bindings/react-native', stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                   text=True, timeout=120)
+record['pack'] = {'argv': cmd, 'cwd': str(repo / 'bindings/react-native'), 'exit_code': p.returncode,
+                  'stdout': p.stdout, 'stderr': p.stderr}
+(evidence / 'repack.json').write_text(json.dumps(record, indent=2) + '\n')
+p.check_returncode()
+result = json.loads(p.stdout)[0]
+assert result['filename'] == archive.name
+record['archive_sha256'] = hashlib.sha256(archive.read_bytes()).hexdigest()
+record['archive_sha512'] = hashlib.sha512(archive.read_bytes()).hexdigest()
+
+destination = consumer / 'node_modules/@hoyadb/react-native'
+shutil.rmtree(destination)  # Owned unpacked local artifact only; never a symlinked third-party input.
+destination.mkdir()
+with tarfile.open(archive, 'r:gz') as packed:
+    for member in packed.getmembers():
+        parts = PurePosixPath(member.name).parts
+        assert parts and parts[0] == 'package' and '..' not in parts and not member.issym() and not member.islnk()
+        member.name = str(PurePosixPath(*parts[1:]))
+        if member.name not in {'', '.'}:
+            packed.extract(member, destination, filter='data')
+verify(destination / 'Artifacts' / source.name, 'consumer-installed')
+(evidence / 'repack.json').write_text(json.dumps(record, indent=2) + '\n')
+print('HOYA_RN_XCFRAMEWORK_REPACK_GREEN ' + record['archive_sha256'], flush=True)

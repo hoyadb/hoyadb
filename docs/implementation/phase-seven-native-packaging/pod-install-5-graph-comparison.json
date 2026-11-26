@@ -1,0 +1,33 @@
+{
+  "exit_code": 0,
+  "sandbox_probe": "Errno::EPERM",
+  "spec_source": "file:///Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/pod-spec-source",
+  "approved_node_source_differences": {},
+  "podfile_lock_diff_vs_attempt3": [
+    "-  ReactCodegen: 6f0d4064c5d33a1f3993296da6fca2b4fe2547cc",
+    "+  ReactCodegen: ef948ced6db51736204031cde31da802c7967fcb",
+    "-PODFILE CHECKSUM: 0170358e6ff07933a1efaee912b0b09089c1674e",
+    "+PODFILE CHECKSUM: 889d2707404fa629fcd4591deae0b326e4c2abaa"
+  ],
+  "podfile_lock_sha256": "72710053478ac7719743b629e20150a2b4af1a9b17b09361926fa4d2b8671f48",
+  "local_podspec_names_equal": true,
+  "local_podspec_count": 76,
+  "local_podspec_json_changed": [
+    "ReactCodegen.podspec.json"
+  ],
+  "cp_home_top_entries": [
+    "repos/users-boristacyniak-projects-alocasia-hoyadb-target-phase-seven-rn-pod-spec-source"
+  ],
+  "cp_home_clone_head": "ece3c22712e0a92888e4531d969a9af21bca49f1",
+  "cp_home_clone_files": [
+    "README.md",
+    "Specs/.gitkeep"
+  ],
+  "trunk_present_in_fresh_home": false,
+  "cache_external_pods": [
+    "React-Core-prebuilt",
+    "ReactNativeDependencies",
+    "hermes-engine"
+  ],
+  "spec_repos_section": false
+}

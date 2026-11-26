@@ -1,0 +1,1 @@
+REJECTED missing-packaging: HoyaNative.xcframework has no packaging.json (notice-free artifact)

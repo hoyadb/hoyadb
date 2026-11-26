@@ -1,0 +1,1738 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "HoyaDBTesting",
+    "printedName": "HoyaDBTesting",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "HoyaDBTesting"
+      },
+      {
+        "kind": "Import",
+        "name": "HoyaDB",
+        "printedName": "HoyaDB",
+        "declKind": "Import",
+        "moduleName": "HoyaDBTesting"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftOnoneSupport",
+        "printedName": "SwiftOnoneSupport",
+        "declKind": "Import",
+        "moduleName": "HoyaDBTesting"
+      },
+      {
+        "kind": "Import",
+        "name": "_Concurrency",
+        "printedName": "_Concurrency",
+        "declKind": "Import",
+        "moduleName": "HoyaDBTesting"
+      },
+      {
+        "kind": "Import",
+        "name": "_StringProcessing",
+        "printedName": "_StringProcessing",
+        "declKind": "Import",
+        "moduleName": "HoyaDBTesting"
+      },
+      {
+        "kind": "Import",
+        "name": "_SwiftConcurrencyShims",
+        "printedName": "_SwiftConcurrencyShims",
+        "declKind": "Import",
+        "moduleName": "HoyaDBTesting"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FakeOutcome",
+        "printedName": "FakeOutcome",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "applied",
+            "printedName": "applied",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(HoyaDBTesting.FakeOutcome.Type) -> (HoyaDB.JSONValue) -> HoyaDBTesting.FakeOutcome",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(HoyaDB.JSONValue) -> HoyaDBTesting.FakeOutcome",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FakeOutcome",
+                        "printedName": "HoyaDBTesting.FakeOutcome",
+                        "usr": "s:13HoyaDBTesting11FakeOutcomeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "JSONValue",
+                        "printedName": "HoyaDB.JSONValue",
+                        "usr": "s:6HoyaDB9JSONValueO"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "HoyaDBTesting.FakeOutcome.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FakeOutcome",
+                        "printedName": "HoyaDBTesting.FakeOutcome",
+                        "usr": "s:13HoyaDBTesting11FakeOutcomeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13HoyaDBTesting11FakeOutcomeO7appliedyAC0A2DB9JSONValueOcACmF",
+            "mangledName": "$s13HoyaDBTesting11FakeOutcomeO7appliedyAC0A2DB9JSONValueOcACmF",
+            "moduleName": "HoyaDBTesting"
+          },
+          {
+            "kind": "Var",
+            "name": "corrected",
+            "printedName": "corrected",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(HoyaDBTesting.FakeOutcome.Type) -> (HoyaDB.JSONValue) -> HoyaDBTesting.FakeOutcome",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(HoyaDB.JSONValue) -> HoyaDBTesting.FakeOutcome",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FakeOutcome",
+                        "printedName": "HoyaDBTesting.FakeOutcome",
+                        "usr": "s:13HoyaDBTesting11FakeOutcomeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "JSONValue",
+                        "printedName": "HoyaDB.JSONValue",
+                        "usr": "s:6HoyaDB9JSONValueO"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "HoyaDBTesting.FakeOutcome.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FakeOutcome",
+                        "printedName": "HoyaDBTesting.FakeOutcome",
+                        "usr": "s:13HoyaDBTesting11FakeOutcomeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13HoyaDBTesting11FakeOutcomeO9correctedyAC0A2DB9JSONValueOcACmF",
+            "mangledName": "$s13HoyaDBTesting11FakeOutcomeO9correctedyAC0A2DB9JSONValueOcACmF",
+            "moduleName": "HoyaDBTesting"
+          },
+          {
+            "kind": "Var",
+            "name": "rejected",
+            "printedName": "rejected",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(HoyaDBTesting.FakeOutcome.Type) -> (Swift.String) -> HoyaDBTesting.FakeOutcome",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> HoyaDBTesting.FakeOutcome",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FakeOutcome",
+                        "printedName": "HoyaDBTesting.FakeOutcome",
+                        "usr": "s:13HoyaDBTesting11FakeOutcomeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "HoyaDBTesting.FakeOutcome.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FakeOutcome",
+                        "printedName": "HoyaDBTesting.FakeOutcome",
+                        "usr": "s:13HoyaDBTesting11FakeOutcomeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13HoyaDBTesting11FakeOutcomeO8rejectedyACSScACmF",
+            "mangledName": "$s13HoyaDBTesting11FakeOutcomeO8rejectedyACSScACmF",
+            "moduleName": "HoyaDBTesting"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:13HoyaDBTesting11FakeOutcomeO",
+        "mangledName": "$s13HoyaDBTesting11FakeOutcomeO",
+        "moduleName": "HoyaDBTesting",
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FakeTransportError",
+        "printedName": "FakeTransportError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "invalidEnvelope",
+            "printedName": "invalidEnvelope",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(HoyaDBTesting.FakeTransportError.Type) -> HoyaDBTesting.FakeTransportError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FakeTransportError",
+                    "printedName": "HoyaDBTesting.FakeTransportError",
+                    "usr": "s:13HoyaDBTesting18FakeTransportErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "HoyaDBTesting.FakeTransportError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FakeTransportError",
+                        "printedName": "HoyaDBTesting.FakeTransportError",
+                        "usr": "s:13HoyaDBTesting18FakeTransportErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13HoyaDBTesting18FakeTransportErrorO15invalidEnvelopeyA2CmF",
+            "mangledName": "$s13HoyaDBTesting18FakeTransportErrorO15invalidEnvelopeyA2CmF",
+            "moduleName": "HoyaDBTesting"
+          },
+          {
+            "kind": "Var",
+            "name": "missingHandler",
+            "printedName": "missingHandler",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(HoyaDBTesting.FakeTransportError.Type) -> HoyaDBTesting.FakeTransportError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FakeTransportError",
+                    "printedName": "HoyaDBTesting.FakeTransportError",
+                    "usr": "s:13HoyaDBTesting18FakeTransportErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "HoyaDBTesting.FakeTransportError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FakeTransportError",
+                        "printedName": "HoyaDBTesting.FakeTransportError",
+                        "usr": "s:13HoyaDBTesting18FakeTransportErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13HoyaDBTesting18FakeTransportErrorO14missingHandleryA2CmF",
+            "mangledName": "$s13HoyaDBTesting18FakeTransportErrorO14missingHandleryA2CmF",
+            "moduleName": "HoyaDBTesting"
+          },
+          {
+            "kind": "Var",
+            "name": "droppedAcknowledgement",
+            "printedName": "droppedAcknowledgement",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(HoyaDBTesting.FakeTransportError.Type) -> HoyaDBTesting.FakeTransportError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FakeTransportError",
+                    "printedName": "HoyaDBTesting.FakeTransportError",
+                    "usr": "s:13HoyaDBTesting18FakeTransportErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "HoyaDBTesting.FakeTransportError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FakeTransportError",
+                        "printedName": "HoyaDBTesting.FakeTransportError",
+                        "usr": "s:13HoyaDBTesting18FakeTransportErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13HoyaDBTesting18FakeTransportErrorO22droppedAcknowledgementyA2CmF",
+            "mangledName": "$s13HoyaDBTesting18FakeTransportErrorO22droppedAcknowledgementyA2CmF",
+            "moduleName": "HoyaDBTesting"
+          },
+          {
+            "kind": "Function",
+            "name": "__derived_enum_equals",
+            "printedName": "__derived_enum_equals(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FakeTransportError",
+                "printedName": "HoyaDBTesting.FakeTransportError",
+                "usr": "s:13HoyaDBTesting18FakeTransportErrorO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FakeTransportError",
+                "printedName": "HoyaDBTesting.FakeTransportError",
+                "usr": "s:13HoyaDBTesting18FakeTransportErrorO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13HoyaDBTesting18FakeTransportErrorO21__derived_enum_equalsySbAC_ACtFZ",
+            "mangledName": "$s13HoyaDBTesting18FakeTransportErrorO21__derived_enum_equalsySbAC_ACtFZ",
+            "moduleName": "HoyaDBTesting",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Implements",
+              "Semantics"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13HoyaDBTesting18FakeTransportErrorO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s13HoyaDBTesting18FakeTransportErrorO4hash4intoys6HasherVz_tF",
+            "moduleName": "HoyaDBTesting",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13HoyaDBTesting18FakeTransportErrorO9hashValueSivp",
+            "mangledName": "$s13HoyaDBTesting18FakeTransportErrorO9hashValueSivp",
+            "moduleName": "HoyaDBTesting",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13HoyaDBTesting18FakeTransportErrorO9hashValueSivg",
+                "mangledName": "$s13HoyaDBTesting18FakeTransportErrorO9hashValueSivg",
+                "moduleName": "HoyaDBTesting",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:13HoyaDBTesting18FakeTransportErrorO",
+        "mangledName": "$s13HoyaDBTesting18FakeTransportErrorO",
+        "moduleName": "HoyaDBTesting",
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FakeTransport",
+        "printedName": "FakeTransport",
+        "children": [
+          {
+            "kind": "TypeAlias",
+            "name": "Handler",
+            "printedName": "Handler",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(HoyaDB.JSONValue) async throws -> HoyaDBTesting.FakeOutcome",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FakeOutcome",
+                    "printedName": "HoyaDBTesting.FakeOutcome",
+                    "usr": "s:13HoyaDBTesting11FakeOutcomeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "JSONValue",
+                    "printedName": "HoyaDB.JSONValue",
+                    "usr": "s:6HoyaDB9JSONValueO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:13HoyaDBTesting13FakeTransportC7Handlera",
+            "mangledName": "$s13HoyaDBTesting13FakeTransportC7Handlera",
+            "moduleName": "HoyaDBTesting"
+          },
+          {
+            "kind": "TypeAlias",
+            "name": "Delay",
+            "printedName": "Delay",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() async throws -> Swift.Void",
+                "children": [
+                  {
+                    "kind": "TypeNameAlias",
+                    "name": "Void",
+                    "printedName": "Swift.Void",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:13HoyaDBTesting13FakeTransportC5Delaya",
+            "mangledName": "$s13HoyaDBTesting13FakeTransportC5Delaya",
+            "moduleName": "HoyaDBTesting"
+          },
+          {
+            "kind": "TypeAlias",
+            "name": "Drop",
+            "printedName": "Drop",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "([HoyaDB.JSONValue]) async throws -> Swift.Bool",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[HoyaDB.JSONValue]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "JSONValue",
+                        "printedName": "HoyaDB.JSONValue",
+                        "usr": "s:6HoyaDB9JSONValueO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "declKind": "TypeAlias",
+            "usr": "s:13HoyaDBTesting13FakeTransportC4Dropa",
+            "mangledName": "$s13HoyaDBTesting13FakeTransportC4Dropa",
+            "moduleName": "HoyaDBTesting"
+          },
+          {
+            "kind": "Var",
+            "name": "pushes",
+            "printedName": "pushes",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[[HoyaDB.JSONValue]]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[HoyaDB.JSONValue]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "JSONValue",
+                        "printedName": "HoyaDB.JSONValue",
+                        "usr": "s:6HoyaDB9JSONValueO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13HoyaDBTesting13FakeTransportC6pushesSaySay0A2DB9JSONValueOGGvp",
+            "mangledName": "$s13HoyaDBTesting13FakeTransportC6pushesSaySay0A2DB9JSONValueOGGvp",
+            "moduleName": "HoyaDBTesting",
+            "declAttributes": [
+              "HasInitialValue",
+              "SetterAccess",
+              "HasStorage"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[[HoyaDB.JSONValue]]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[HoyaDB.JSONValue]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "JSONValue",
+                            "printedName": "HoyaDB.JSONValue",
+                            "usr": "s:6HoyaDB9JSONValueO"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13HoyaDBTesting13FakeTransportC6pushesSaySay0A2DB9JSONValueOGGvg",
+                "mangledName": "$s13HoyaDBTesting13FakeTransportC6pushesSaySay0A2DB9JSONValueOGGvg",
+                "moduleName": "HoyaDBTesting",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(handlers:entityHandlers:delay:dropAcknowledgement:reverseReplies:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "FakeTransport",
+                "printedName": "HoyaDBTesting.FakeTransport",
+                "usr": "s:13HoyaDBTesting13FakeTransportC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : HoyaDBTesting.FakeTransport.Handler]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNameAlias",
+                    "name": "Handler",
+                    "printedName": "HoyaDBTesting.FakeTransport.Handler",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(HoyaDB.JSONValue) async throws -> HoyaDBTesting.FakeOutcome",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "FakeOutcome",
+                            "printedName": "HoyaDBTesting.FakeOutcome",
+                            "usr": "s:13HoyaDBTesting11FakeOutcomeO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "JSONValue",
+                            "printedName": "HoyaDB.JSONValue",
+                            "usr": "s:6HoyaDB9JSONValueO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : HoyaDBTesting.FakeTransport.Handler]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNameAlias",
+                    "name": "Handler",
+                    "printedName": "HoyaDBTesting.FakeTransport.Handler",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(HoyaDB.JSONValue) async throws -> HoyaDBTesting.FakeOutcome",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "FakeOutcome",
+                            "printedName": "HoyaDBTesting.FakeOutcome",
+                            "usr": "s:13HoyaDBTesting11FakeOutcomeO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "JSONValue",
+                            "printedName": "HoyaDB.JSONValue",
+                            "usr": "s:6HoyaDB9JSONValueO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNameAlias",
+                "name": "Delay",
+                "printedName": "HoyaDBTesting.FakeTransport.Delay",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() async throws -> Swift.Void",
+                    "children": [
+                      {
+                        "kind": "TypeNameAlias",
+                        "name": "Void",
+                        "printedName": "Swift.Void",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true
+              },
+              {
+                "kind": "TypeNameAlias",
+                "name": "Drop",
+                "printedName": "HoyaDBTesting.FakeTransport.Drop",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "([HoyaDB.JSONValue]) async throws -> Swift.Bool",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[HoyaDB.JSONValue]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "JSONValue",
+                            "printedName": "HoyaDB.JSONValue",
+                            "usr": "s:6HoyaDB9JSONValueO"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13HoyaDBTesting13FakeTransportC8handlers14entityHandlers5delay19dropAcknowledgement14reverseRepliesACSDySSAA0C7OutcomeO0A2DB9JSONValueOYaYbKcG_ANyyYaYbKcSbSayAMGYaYbKcSbtcfc",
+            "mangledName": "$s13HoyaDBTesting13FakeTransportC8handlers14entityHandlers5delay19dropAcknowledgement14reverseRepliesACSDySSAA0C7OutcomeO0A2DB9JSONValueOYaYbKcG_ANyyYaYbKcSbSayAMGYaYbKcSbtcfc",
+            "moduleName": "HoyaDBTesting",
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "push",
+            "printedName": "push(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13HoyaDBTesting13FakeTransportC4pushyS2SYaKF",
+            "mangledName": "$s13HoyaDBTesting13FakeTransportC4pushyS2SYaKF",
+            "moduleName": "HoyaDBTesting",
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "unownedExecutor",
+            "printedName": "unownedExecutor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UnownedSerialExecutor",
+                "printedName": "_Concurrency.UnownedSerialExecutor",
+                "usr": "s:Sce"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13HoyaDBTesting13FakeTransportC15unownedExecutorScevp",
+            "mangledName": "$s13HoyaDBTesting13FakeTransportC15unownedExecutorScevp",
+            "moduleName": "HoyaDBTesting",
+            "implicit": true,
+            "intro_Macosx": "10.15",
+            "intro_iOS": "13.0",
+            "intro_tvOS": "13.0",
+            "intro_watchOS": "6.0",
+            "declAttributes": [
+              "Available",
+              "Available",
+              "Available",
+              "Available",
+              "Final",
+              "Nonisolated",
+              "Semantics"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UnownedSerialExecutor",
+                    "printedName": "_Concurrency.UnownedSerialExecutor",
+                    "usr": "s:Sce"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13HoyaDBTesting13FakeTransportC15unownedExecutorScevg",
+                "mangledName": "$s13HoyaDBTesting13FakeTransportC15unownedExecutorScevg",
+                "moduleName": "HoyaDBTesting",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:13HoyaDBTesting13FakeTransportC",
+        "mangledName": "$s13HoyaDBTesting13FakeTransportC",
+        "moduleName": "HoyaDBTesting",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Actor",
+            "printedName": "Actor",
+            "usr": "s:ScA",
+            "mangledName": "$sScA"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ManualClock",
+        "printedName": "ManualClock",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ManualClock",
+                "printedName": "HoyaDBTesting.ManualClock",
+                "usr": "s:13HoyaDBTesting11ManualClockC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int64",
+                "printedName": "Swift.Int64",
+                "hasDefaultArg": true,
+                "usr": "s:s5Int64V"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13HoyaDBTesting11ManualClockCyACs5Int64Vcfc",
+            "mangledName": "$s13HoyaDBTesting11ManualClockCyACs5Int64Vcfc",
+            "moduleName": "HoyaDBTesting",
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "now",
+            "printedName": "now()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int64",
+                "printedName": "Swift.Int64",
+                "usr": "s:s5Int64V"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13HoyaDBTesting11ManualClockC3nows5Int64VyF",
+            "mangledName": "$s13HoyaDBTesting11ManualClockC3nows5Int64VyF",
+            "moduleName": "HoyaDBTesting",
+            "declAttributes": [
+              "Final"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "set",
+            "printedName": "set(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int64",
+                "printedName": "Swift.Int64",
+                "usr": "s:s5Int64V"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13HoyaDBTesting11ManualClockC3setyys5Int64VF",
+            "mangledName": "$s13HoyaDBTesting11ManualClockC3setyys5Int64VF",
+            "moduleName": "HoyaDBTesting",
+            "declAttributes": [
+              "Final"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "advance",
+            "printedName": "advance(by:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int64",
+                "printedName": "Swift.Int64",
+                "usr": "s:s5Int64V"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13HoyaDBTesting11ManualClockC7advance2byys5Int64V_tKF",
+            "mangledName": "$s13HoyaDBTesting11ManualClockC7advance2byys5Int64V_tKF",
+            "moduleName": "HoyaDBTesting",
+            "declAttributes": [
+              "Final"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:13HoyaDBTesting11ManualClockC",
+        "mangledName": "$s13HoyaDBTesting11ManualClockC",
+        "moduleName": "HoyaDBTesting",
+        "declAttributes": [
+          "Final"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ManualUptime",
+        "printedName": "ManualUptime",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ManualUptime",
+                "printedName": "HoyaDBTesting.ManualUptime",
+                "usr": "s:13HoyaDBTesting12ManualUptimeC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt64",
+                "printedName": "Swift.UInt64",
+                "hasDefaultArg": true,
+                "usr": "s:s6UInt64V"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13HoyaDBTesting12ManualUptimeCyACs6UInt64Vcfc",
+            "mangledName": "$s13HoyaDBTesting12ManualUptimeCyACs6UInt64Vcfc",
+            "moduleName": "HoyaDBTesting",
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "now",
+            "printedName": "now()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UInt64",
+                "printedName": "Swift.UInt64",
+                "usr": "s:s6UInt64V"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13HoyaDBTesting12ManualUptimeC3nows6UInt64VyF",
+            "mangledName": "$s13HoyaDBTesting12ManualUptimeC3nows6UInt64VyF",
+            "moduleName": "HoyaDBTesting",
+            "declAttributes": [
+              "Final"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "set",
+            "printedName": "set(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt64",
+                "printedName": "Swift.UInt64",
+                "usr": "s:s6UInt64V"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13HoyaDBTesting12ManualUptimeC3setyys6UInt64VF",
+            "mangledName": "$s13HoyaDBTesting12ManualUptimeC3setyys6UInt64VF",
+            "moduleName": "HoyaDBTesting",
+            "declAttributes": [
+              "Final"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "advance",
+            "printedName": "advance(by:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt64",
+                "printedName": "Swift.UInt64",
+                "usr": "s:s6UInt64V"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13HoyaDBTesting12ManualUptimeC7advance2byys6UInt64V_tKF",
+            "mangledName": "$s13HoyaDBTesting12ManualUptimeC7advance2byys6UInt64V_tKF",
+            "moduleName": "HoyaDBTesting",
+            "declAttributes": [
+              "Final"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:13HoyaDBTesting12ManualUptimeC",
+        "mangledName": "$s13HoyaDBTesting12ManualUptimeC",
+        "moduleName": "HoyaDBTesting",
+        "declAttributes": [
+          "Final"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ManualTimer",
+        "printedName": "ManualTimer",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ManualTimer",
+                "printedName": "HoyaDBTesting.ManualTimer",
+                "usr": "s:13HoyaDBTesting11ManualTimerC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13HoyaDBTesting11ManualTimerCACycfc",
+            "mangledName": "$s13HoyaDBTesting11ManualTimerCACycfc",
+            "moduleName": "HoyaDBTesting",
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "pendingDelays",
+            "printedName": "pendingDelays",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.UInt64]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt64",
+                    "printedName": "Swift.UInt64",
+                    "usr": "s:s6UInt64V"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13HoyaDBTesting11ManualTimerC13pendingDelaysSays6UInt64VGvp",
+            "mangledName": "$s13HoyaDBTesting11ManualTimerC13pendingDelaysSays6UInt64VGvp",
+            "moduleName": "HoyaDBTesting",
+            "declAttributes": [
+              "Final"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.UInt64]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UInt64",
+                        "printedName": "Swift.UInt64",
+                        "usr": "s:s6UInt64V"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13HoyaDBTesting11ManualTimerC13pendingDelaysSays6UInt64VGvg",
+                "mangledName": "$s13HoyaDBTesting11ManualTimerC13pendingDelaysSays6UInt64VGvg",
+                "moduleName": "HoyaDBTesting",
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "schedule",
+            "printedName": "schedule(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TimerCancellation",
+                "printedName": "any HoyaDB.TimerCancellation",
+                "usr": "s:6HoyaDB17TimerCancellationP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt64",
+                "printedName": "Swift.UInt64",
+                "usr": "s:s6UInt64V"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> Swift.Void",
+                "children": [
+                  {
+                    "kind": "TypeNameAlias",
+                    "name": "Void",
+                    "printedName": "Swift.Void",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13HoyaDBTesting11ManualTimerC8scheduley0A2DB0D12Cancellation_ps6UInt64V_yyYbctF",
+            "mangledName": "$s13HoyaDBTesting11ManualTimerC8scheduley0A2DB0D12Cancellation_ps6UInt64V_yyYbctF",
+            "moduleName": "HoyaDBTesting",
+            "declAttributes": [
+              "Final"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "fireNext",
+            "printedName": "fireNext()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13HoyaDBTesting11ManualTimerC8fireNextSbyF",
+            "mangledName": "$s13HoyaDBTesting11ManualTimerC8fireNextSbyF",
+            "moduleName": "HoyaDBTesting",
+            "declAttributes": [
+              "Final",
+              "DiscardableResult"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:13HoyaDBTesting11ManualTimerC",
+        "mangledName": "$s13HoyaDBTesting11ManualTimerC",
+        "moduleName": "HoyaDBTesting",
+        "declAttributes": [
+          "Final"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MemoryTesting",
+        "printedName": "MemoryTesting",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "open",
+            "printedName": "open(schema:namespace:store:migrations:idGenerator:options:monotonicClock:timerScheduler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Database",
+                "printedName": "HoyaDB.Database",
+                "usr": "s:6HoyaDB8DatabaseC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Schema",
+                "printedName": "HoyaDB.Schema",
+                "usr": "s:6HoyaDB6SchemaV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "HoyaDB.MemoryStore?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MemoryStore",
+                    "printedName": "HoyaDB.MemoryStore",
+                    "usr": "s:6HoyaDB11MemoryStoreC"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[HoyaDB.Migration]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Migration",
+                    "printedName": "HoyaDB.Migration",
+                    "usr": "s:6HoyaDB9MigrationV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "HoyaDB.IDGenerator?",
+                "children": [
+                  {
+                    "kind": "TypeNameAlias",
+                    "name": "IDGenerator",
+                    "printedName": "HoyaDB.IDGenerator",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "() throws -> Swift.String?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "Swift.String?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DatabaseOptions",
+                "printedName": "HoyaDB.DatabaseOptions",
+                "hasDefaultArg": true,
+                "usr": "s:6HoyaDB15DatabaseOptionsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "HoyaDB.MonotonicClock?",
+                "children": [
+                  {
+                    "kind": "TypeNameAlias",
+                    "name": "MonotonicClock",
+                    "printedName": "HoyaDB.MonotonicClock",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "() -> Swift.UInt64",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UInt64",
+                            "printedName": "Swift.UInt64",
+                            "usr": "s:s6UInt64V"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "HoyaDB.TimerScheduler?",
+                "children": [
+                  {
+                    "kind": "TypeNameAlias",
+                    "name": "TimerScheduler",
+                    "printedName": "HoyaDB.TimerScheduler",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.UInt64, @escaping () -> Swift.Void) -> any HoyaDB.TimerCancellation",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "TimerCancellation",
+                            "printedName": "any HoyaDB.TimerCancellation",
+                            "usr": "s:6HoyaDB17TimerCancellationP"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(Swift.UInt64, () -> Swift.Void)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "UInt64",
+                                "printedName": "Swift.UInt64",
+                                "usr": "s:s6UInt64V"
+                              },
+                              {
+                                "kind": "TypeFunc",
+                                "name": "Function",
+                                "printedName": "() -> Swift.Void",
+                                "children": [
+                                  {
+                                    "kind": "TypeNameAlias",
+                                    "name": "Void",
+                                    "printedName": "Swift.Void",
+                                    "children": [
+                                      {
+                                        "kind": "TypeNominal",
+                                        "name": "Void",
+                                        "printedName": "()"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "Void",
+                                    "printedName": "()"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13HoyaDBTesting13MemoryTestingO4open6schema9namespace5store10migrations11idGenerator7options14monotonicClock14timerScheduler0A2DB8DatabaseCAM6SchemaV_SSAM0C5StoreCSgSayAM9MigrationVGSSSgyYbKcSgAM0R7OptionsVs6UInt64VyYbcSgAM17TimerCancellation_pA1__yyYbctYbcSgtYaKFZ",
+            "mangledName": "$s13HoyaDBTesting13MemoryTestingO4open6schema9namespace5store10migrations11idGenerator7options14monotonicClock14timerScheduler0A2DB8DatabaseCAM6SchemaV_SSAM0C5StoreCSgSayAM9MigrationVGSSSgyYbKcSgAM0R7OptionsVs6UInt64VyYbcSgAM17TimerCancellation_pA1__yyYbctYbcSgtYaKFZ",
+            "moduleName": "HoyaDBTesting",
+            "static": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:13HoyaDBTesting13MemoryTestingO",
+        "mangledName": "$s13HoyaDBTesting13MemoryTestingO",
+        "moduleName": "HoyaDBTesting",
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8,
+    "tool_arguments": [
+      "-dump-sdk",
+      "-module",
+      "HoyaDBTesting",
+      "-I",
+      "bindings\/swift\/.build\/x86_64-apple-macosx\/debug\/Modules",
+      "-I",
+      "bindings\/swift\/Artifacts\/HoyaNative.xcframework\/macos-x86_64\/Headers",
+      "-sdk",
+      "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX26.5.sdk",
+      "-target",
+      "x86_64-apple-macosx13.0",
+      "-o",
+      "target\/phase-seven-native\/api-snapshots\/HoyaDBTesting.api.json",
+      "-sdk-version",
+      "25F70"
+    ]
+  }
+}

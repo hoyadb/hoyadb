@@ -1,0 +1,4 @@
+PASS K02_actual_readonly_original_frame_validation
+PASS K03_actual_owned_open_call_close_binary_boundary
+
+exit=0

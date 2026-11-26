@@ -1,0 +1,20 @@
+import struct,uuid,json,os
+D='/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/'; M=D+'dyld_shared_cache_x86_64h'
+f=open(M,'rb'); h=f.read(0x400); u32=lambda o:struct.unpack_from('<I',h,o)[0]; u64=lambda o:struct.unpack_from('<Q',h,o)[0]
+def cstr(off):
+    f.seek(off); return f.read(1024).split(b'\0',1)[0].decode()
+f.seek(u64(136)); raw=f.read(32*u64(144))
+text={}
+for i in range(u64(144)):
+    uu,la,sz,po=struct.unpack_from('<16sQII',raw,32*i); text[cstr(po)]=(str(uuid.UUID(bytes=uu)).upper(),hex(la),sz)
+f.seek(u32(448)); raw=f.read(32*u32(452)); paths=[]
+for i in range(u32(452)):
+    a,mt,ino,po,_=struct.unpack_from('<QQQII',raw,32*i); paths.append(cstr(po))
+print('image infos',len(paths),'text infos',len(text),'same set',set(paths)==set(text))
+for p in ['/usr/lib/libSystem.B.dylib','/usr/lib/libz.1.dylib','/usr/lib/libc++.1.dylib','/System/Library/Frameworks/Security.framework/Versions/A/Security','/usr/lib/libobjc.A.dylib','/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation']:
+    print(p, text.get(p))
+f.seek(u32(392)); raw=f.read(56*u32(396))
+for i in range(u32(396)):
+    uu,vmoff,suf=struct.unpack_from('<16sQ32s',raw,56*i); suf=suf.split(b'\0')[0].decode(); su=str(uuid.UUID(bytes=uu)).upper()
+    g=open(M+suf,'rb'); gh=g.read(104); fu=str(uuid.UUID(bytes=gh[88:104])).upper()
+    print('subcache',suf,su,'file-uuid-match',su==fu,hex(vmoff),gh[:16].rstrip(b'\0').decode())

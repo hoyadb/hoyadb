@@ -1,0 +1,61 @@
+#!/usr/bin/env python3
+"""B2 regression: POMs without the Maven xmlns must not silently lose deps/licenses/parents. Offline, synthetic."""
+from pathlib import Path
+import sys
+import unittest
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import closure as C  # noqa: E402
+
+NS = ' xmlns="http://maven.apache.org/POM/4.0.0"'
+
+
+def pom(g, a, v, ns, parent=None, deps=(), licenses=(), mgmt=()):
+    out = f'<?xml version="1.0"?><project{ns}><modelVersion>4.0.0</modelVersion>'
+    if parent:
+        out += '<parent><groupId>%s</groupId><artifactId>%s</artifactId><version>%s</version></parent>' % parent
+    out += f'<groupId>{g}</groupId><artifactId>{a}</artifactId><version>{v}</version>'
+    if licenses:
+        out += '<licenses>' + ''.join(f'<license><name>{n}</name></license>' for n in licenses) + '</licenses>'
+    if mgmt:
+        out += '<dependencyManagement><dependencies>' + ''.join(
+            f'<dependency><groupId>{dg}</groupId><artifactId>{da}</artifactId><version>{dv}</version><type>pom</type><scope>import</scope></dependency>'
+            for dg, da, dv in mgmt) + '</dependencies></dependencyManagement>'
+    out += '<dependencies>' + ''.join(f'<dependency><groupId>{dg}</groupId><artifactId>{da}</artifactId><version>{dv}</version></dependency>'
+                                      for dg, da, dv in deps) + '</dependencies></project>'
+    return out.encode()
+
+
+class NamespaceAgnostic(unittest.TestCase):
+    def run_with(self, files):
+        C.poms.clear()
+        C.fetch = lambda g, a, v, name: files.get((g, a, v, name))
+        return C.model
+
+    def test_pom_without_xmlns_keeps_deps_licenses_parent(self):
+        for ns in ('', NS):
+            files = {('x', 'parent', '1', 'parent-1.pom'): pom('x', 'parent', '1', ns, licenses=['Bouncy Castle Licence']),
+                     ('x', 'child', '1', 'child-1.pom'): pom('x', 'child', '1', ns, parent=('x', 'parent', '1'), deps=[('x', 'dep', '2')])}
+            model = self.run_with(files)('x', 'child', '1')
+            self.assertEqual([(d['g'], d['a'], d['v']) for d in model['deps']], [('x', 'dep', '2')], ns or 'no-ns')
+            self.assertEqual(model['licenses'], ['Bouncy Castle Licence'], ns or 'no-ns')
+            self.assertEqual(model['parent'], 'x:parent:1', ns or 'no-ns')
+
+    def test_properties_resolve_without_and_with_namespace(self):
+        for ns in ('', NS):
+            parent = pom('x', 'parent', '1', ns).replace(b'<groupId>x</groupId>', b'<properties><dep.version>7</dep.version></properties><groupId>x</groupId>', 1)
+            files = {('x', 'parent', '1', 'parent-1.pom'): parent,
+                     ('x', 'child', '1', 'child-1.pom'): pom('x', 'child', '1', ns, parent=('x', 'parent', '1'), deps=[('x', 'dep', '${dep.version}')])}
+            model = self.run_with(files)('x', 'child', '1')
+            self.assertEqual([d['v'] for d in model['deps']], ['7'], ns or 'no-ns')
+
+    def test_import_bom_is_recorded_as_metadata_requirement(self):
+        files = {('x', 'parent', '1', 'parent-1.pom'): pom('x', 'parent', '1', NS, mgmt=[('org.junit', 'junit-bom', '5.13.1')]),
+                 ('org.junit', 'junit-bom', '5.13.1', 'junit-bom-5.13.1.pom'): pom('org.junit', 'junit-bom', '5.13.1', NS)}
+        C.imports.clear()
+        self.run_with(files)('x', 'parent', '1')
+        self.assertIn('org.junit:junit-bom:5.13.1', C.imports)
+
+
+if __name__ == '__main__':
+    unittest.main()

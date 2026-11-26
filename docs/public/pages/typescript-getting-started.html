@@ -1,0 +1,41 @@
+<h2>Run a typed Todo app</h2>
+<p>This follows the same flow as <a href="getting-started.html">JavaScript</a>, with schema-derived row types and typed command arguments. Build the local packages using <a href="installation.html">installation</a>, then run <code>node docs/public/run_language.mjs typescript</code> from the checkout. The runner uses the installed TypeScript compiler with strict checking, emits JavaScript, and executes it against the real WASM database. It installs nothing.</p>
+
+<h2>1. Define your schema</h2>
+<p>Import the public package. Keep the schema object: its private metadata carries the column policies. A required string column is <code>string</code>; an optional string column can be absent, or contain <code>string | null</code>. Narrow both <code>null</code> and <code>undefined</code> before using an optional value; bigint and Date policies are described in the <a href="javascript.html">JavaScript guide</a>.</p>
+{{example:typescript:schema}}
+
+<h2>2. Supply your backend</h2>
+<p>The fake transport stands in for your server. Its command handler is separate from the local handler below. A production server authenticates the user, validates arguments, deduplicates commands, and returns authoritative results. The empty pull page keeps this example local.</p>
+{{example:typescript:backend}}
+
+<h2>3. Open and share one database</h2>
+<p>Open once in your application service. Memory storage is ephemeral. The app-supplied <code>context</code> is not proof of identity. Entity tables track ordinary edits field by field; command-created rows instead require explicit server-ID mappings.</p>
+{{example:typescript:open}}
+
+<h2>4. Insert and query</h2>
+<p>This insert happens outside a command on an entity table. It gets a final <code>entity:</code> ID; the library supplies identity mappings when reconciling entity creates. Fetch returns plain rows inferred from your schema.</p>
+{{example:typescript:insert}}
+<p>The query below returns rows whose type is inferred from your schema, so <code>rows[0].title</code> is a
+<code>string</code> without a cast.</p>
+{{example:typescript:query}}
+<p>The task inserted above is the only open one, so it comes back first.</p>
+
+<h2>5. Observe</h2>
+<p>The callback runs on a later host turn. Await <code>ready</code> to know registration has completed; dispose the returned function when the view no longer needs it.</p>
+{{example:typescript:observe}}
+
+<h2>6. Run a command</h2>
+<p><code>taskId</code> is inferred as a string. The handler receives a tracked database view; its reads and writes share one admission and commit together. Use that view inside the handler. Calls through the outer owner while a handler is admitted return <code>Busy</code>.</p>
+{{example:typescript:command}}
+
+<h2>7. Sync and close</h2>
+<p>This command updates an existing row, so its reconciliation plan needs no new-ID mappings. <code>sync()</code> pushes, receives, reconciles, then pulls. Use <code>startSync()</code> for background scheduling and stop it during application shutdown.</p>
+{{example:typescript:sync}}
+<p>Both the entity insert and the command are now confirmed by the server. When the view no longer needs the watcher,
+call the function that <code>observe</code> returned.</p>
+{{example:typescript:cleanup}}
+<p>Close the database when your application shuts down. The full file does this in a <code>finally</code> block, so it
+also closes after a failed step.</p>
+{{example:typescript:close}}
+<p>Continue with <a href="sdk-declarations.html">the declarations</a>, <a href="reconciliation.html">reconciliation</a>, and <a href="javascript.html#persistence">encrypted browser persistence</a>. The <a href="verification.html#case-typescript">verification result</a> includes both compilation and execution.</p>

@@ -1,0 +1,5 @@
+PASS K07_real_suspended_global_FIFO_and_immutable_captured_context
+PASS K08_noncooperative_cancel_releases_and_late_resume_cannot_commit
+PASS K08_raw_RN_style_terminal_wakes_typed_owner_without_busy_spin
+
+exit=0

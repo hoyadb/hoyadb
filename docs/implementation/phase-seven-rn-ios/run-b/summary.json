@@ -1,0 +1,29 @@
+{
+  "udid": "CC525A65-D03E-4F9D-8936-DD16BBFD9664",
+  "bundle_id": "dev.hoyadb.phase7.rn.consumer",
+  "app": "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/ios-build-f/DerivedData/Build/Products/Debug-iphonesimulator/HoyaConsumer.app",
+  "binary_sha256": "2662dc1ff5f121805b56b359332ae3858fa77b65f4f82cc90767d6018184d25f",
+  "modes": {
+    "all": {
+      "elapsed_s": 34.822,
+      "received": true,
+      "failed": 4,
+      "reports": 51
+    },
+    "writer": {
+      "elapsed_s": 2.936,
+      "received": true,
+      "failed": 0,
+      "reports": 1
+    },
+    "reader": {
+      "elapsed_s": 3.287,
+      "received": true,
+      "failed": 0,
+      "reports": 1
+    }
+  },
+  "initial_state": "Shutdown",
+  "result": "FAILED_OR_UNKNOWN",
+  "final_state": "Shutdown"
+}

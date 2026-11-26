@@ -1,0 +1,5 @@
+[package]
+name = "hoyadb-cross-platform-spike"
+version = "0.0.0"
+edition = "2024"
+publish = false

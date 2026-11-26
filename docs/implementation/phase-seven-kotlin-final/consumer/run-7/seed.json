@@ -1,0 +1,12 @@
+{
+  "mode": "seed",
+  "failed": 0,
+  "cases": [
+    {
+      "id": "K15.seed_real_protected_queue_checkpoint_and_abandoned_scope",
+      "ok": true
+    }
+  ],
+  "page_size": 16384,
+  "pid": 8406
+}

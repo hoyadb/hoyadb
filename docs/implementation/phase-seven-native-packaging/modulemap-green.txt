@@ -1,0 +1,11 @@
+checking /Users/boristacyniak/Projects/alocasia/hoyadb/bindings/swift/Artifacts/HoyaNative.xcframework
+test_claimed_slices_only (__main__.XCFrameworkPackaging.test_claimed_slices_only) ... ok
+test_every_slice_uses_one_static_library_basename (__main__.XCFrameworkPackaging.test_every_slice_uses_one_static_library_basename) ... ok
+test_headers_and_module_map_present_per_slice (__main__.XCFrameworkPackaging.test_headers_and_module_map_present_per_slice) ... ok
+test_recorded_build_evidence_matches_bytes (__main__.XCFrameworkPackaging.test_recorded_build_evidence_matches_bytes) ... ok
+test_two_package_manager_copies_import_one_module (__main__.XCFrameworkPackaging.test_two_package_manager_copies_import_one_module) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.830s
+
+OK

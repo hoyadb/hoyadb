@@ -1,0 +1,50 @@
+{
+  "sha256": "5ccb905a796717218c1bb4eed8bb31fc674c5803cdd54c23753ead380f7a11b5",
+  "bytes": 1397,
+  "sha1_sidecar_match": true,
+  "md5_sidecar_match": true,
+  "no_doctype_or_entity": true,
+  "top_level_elements": [
+    "modelVersion",
+    "groupId",
+    "artifactId",
+    "version",
+    "packaging",
+    "name",
+    "description",
+    "url",
+    "licenses",
+    "developers",
+    "scm",
+    "dependencies"
+  ],
+  "coordinate": "org.jetbrains.kotlin.jvm:org.jetbrains.kotlin.jvm.gradle.plugin:2.1.20",
+  "packaging": "pom",
+  "dependencies": [
+    {
+      "groupId": "org.jetbrains.kotlin",
+      "artifactId": "kotlin-gradle-plugin",
+      "version": "2.1.20",
+      "scope": "",
+      "type": "",
+      "classifier": "",
+      "optional": ""
+    }
+  ],
+  "has_parent": false,
+  "has_repositories": false,
+  "has_pluginRepositories": false,
+  "has_build": false,
+  "has_profiles": false,
+  "has_dependencyManagement": false,
+  "has_distributionManagement": false,
+  "has_modules": false,
+  "has_properties": false,
+  "dependency_exclusions": [
+    0
+  ],
+  "gradle_module_marker_comment": false,
+  "dependency_in_approved_nativeBuildTools": [
+    true
+  ]
+}

@@ -1,0 +1,3 @@
+Exception in thread "main" java.lang.AssertionError: native returned null without an exception
+	at dev.hoyadb.NativeBridgeTest.text(NativeBridgeTest.java:12)
+	at dev.hoyadb.NativeBridgeTest.main(NativeBridgeTest.java:35)

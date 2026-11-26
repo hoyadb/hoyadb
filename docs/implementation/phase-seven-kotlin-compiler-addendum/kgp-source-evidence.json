@@ -1,0 +1,25 @@
+{
+  "sources": [
+    {"file": "kotlin-gradle-plugin-2.1.20-sources.jar", "sha256": "a516e48feee115beb43f1188f4af9c7df08bcb20744457e966793aa0773c1eca", "publisher_module_sha256_match": true},
+    {"file": "kotlin-gradle-plugin-2.1.20-gradle85-sources.jar", "sha256": "42f574267dd946076ca24f1344cf1d22d5c673333475d9d8e28194b172d6ba5f", "publisher_module_sha256_match": true,
+     "note": "Gradle 9.3.1 selects KGP's gradle85 variant; the approved binary is kotlin-gradle-plugin-2.1.20-gradle85.jar"}
+  ],
+  "findings_gradle85_sources": [
+    {"where": "org/jetbrains/kotlin/gradle/plugin/AbstractKotlinPlugin.kt:38-41", "what": "configuration names kotlinCompilerPluginClasspath, kotlinNativeCompilerPluginClasspath, kotlinCompilerClasspath, kotlinBuildToolsApiClasspath"},
+    {"where": "org/jetbrains/kotlin/gradle/plugin/KotlinPluginWrapper.kt:99-133", "what": "kotlinCompilerClasspath: maybeCreateResolvable without attributes, defaultDependencies org.jetbrains.kotlin:kotlin-compiler-embeddable:${pluginVersion}; kotlinBuildToolsApiClasspath: kotlin-build-tools-impl strictly(compilerVersion ?: pluginVersion); compile tasks use the BTA classpath only when runViaBuildToolsApi, otherwise kotlinCompilerClasspath"},
+    {"where": "org/jetbrains/kotlin/gradle/plugin/KotlinPluginWrapper.kt:85-88", "what": "common kotlinCompilerPluginClasspath with addGradlePluginMetadataAttributes"},
+    {"where": "org/jetbrains/kotlin/gradle/utils/gradleConfigurationUtils.kt:32-44", "what": "plugin metadata attributes: Category=library, Usage=java-runtime, LibraryElements=jar, GradlePluginApiVersion=current Gradle"},
+    {"where": "org/jetbrains/kotlin/gradle/plugin/mpp/compilationImpl/factory/KotlinCompilationDependencyConfigurationsFactories.kt:203-211", "what": "per-compilation kotlinCompilerPluginClasspath<Compilation> with the same attributes, extendsFrom the common configuration (non-native)"},
+    {"where": "org/jetbrains/kotlin/gradle/plugin/registerKotlinPluginExtensions.kt:68 and scripting/internal/ScriptingGradleSubplugin.kt:59-60,106-107,203-245", "what": "scripting subplugin registered as a project setup action; ScriptingKotlinGradleSubplugin applies to all non-native compilations with artifact kotlin-scripting-compiler-embeddable (version = plugin version, SubpluginEnvironment.kt:103-104)"},
+    {"where": "org/jetbrains/kotlin/gradle/tasks/configuration/KotlinCompileConfig.kt:184-215", "what": "BuildToolsApiClasspathEntrySnapshotTransform registered with the kotlinBuildToolsApiClasspath configuration (classpath snapshots for incremental compilation)"},
+    {"where": "org/jetbrains/kotlin/gradle/scripting/internal/ScriptingGradleSubplugin.kt:122-133", "what": "script-extension discovery transform also uses kotlinBuildToolsApiClasspath"},
+    {"where": "org/jetbrains/kotlin/compilerRunner/GradleCliCommonizer.kt:49-62", "what": "kotlinKlibCommonizerClasspath (kotlin-klib-commonizer-embeddable) is resolved only by native/multiplatform commonizer tasks; excluded from this JVM/Android review"}
+  ],
+  "official_rn_plugin_build": {
+    "source": "approved @react-native/gradle-plugin 0.86.3 (gradle/libs.versions.toml, */build.gradle.kts)",
+    "facts": ["plugins: org.jetbrains.kotlin.jvm 2.1.20 (marker under review) and com.ncorti.ktfmt.gradle 0.22.0 (approved 8a87389)",
+              "every project: kotlin { jvmToolchain(17) }, jvmTarget 11, apiVersion 1.8",
+              "react-native-gradle-plugin implementation: KGP 2.1.20, AGP 8.12.0, Gson 2.8.9, Guava 31.0.1-jre, JavaPoet 1.13.0 (superset of :shared and :settings-plugin)",
+              "test-only dependencies (JUnit 4.13.2, AssertJ 3.25.1, :shared-testutil) are not needed to build the plugin JARs used by the consumer and are excluded"]
+  }
+}

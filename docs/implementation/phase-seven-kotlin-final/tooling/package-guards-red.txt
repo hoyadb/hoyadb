@@ -1,0 +1,409 @@
+test_p05_p08_complete_local_coordinate_and_honest_certificate (__main__.FinalCertificate.test_p05_p08_complete_local_coordinate_and_honest_certificate) ... ok
+test_p02_failed_tool_exit (__main__.FinalGuards.test_p02_failed_tool_exit) ... FAIL
+test_p02_load_alignment_below_16k (__main__.FinalGuards.test_p02_load_alignment_below_16k) ... FAIL
+test_p02_missing_export (__main__.FinalGuards.test_p02_missing_export) ... FAIL
+test_p02_unexpected_export (__main__.FinalGuards.test_p02_unexpected_export) ... FAIL
+test_p02_unexpected_needed (__main__.FinalGuards.test_p02_unexpected_needed) ... FAIL
+test_p02_wrong_machine (__main__.FinalGuards.test_p02_wrong_machine) ... FAIL
+test_p03_recorded_build_drift (__main__.FinalGuards.test_p03_recorded_build_drift) ... FAIL
+test_p03_source_added_after_build (__main__.FinalGuards.test_p03_source_added_after_build) ... FAIL
+test_p03_source_changed_after_build (__main__.FinalGuards.test_p03_source_changed_after_build) ... FAIL
+test_p03_split_runtime_artifact (__main__.FinalGuards.test_p03_split_runtime_artifact) ... FAIL
+test_p03_test_class_in_production_classes (__main__.FinalGuards.test_p03_test_class_in_production_classes) ... FAIL
+test_p04_corrupted_license_text (__main__.FinalGuards.test_p04_corrupted_license_text) ... FAIL
+test_p04_invented_project_license (__main__.FinalGuards.test_p04_invented_project_license) ... FAIL
+test_p04_kotlin_pom_changed (__main__.FinalGuards.test_p04_kotlin_pom_changed) ... FAIL
+test_p04_kotlin_runtime_not_approved_jar (__main__.FinalGuards.test_p04_kotlin_runtime_not_approved_jar) ... FAIL
+test_p04_lock_tuple_changed (__main__.FinalGuards.test_p04_lock_tuple_changed) ... FAIL
+test_p04_missing_license_text (__main__.FinalGuards.test_p04_missing_license_text) ... ERROR
+test_p04_missing_notice_summary (__main__.FinalGuards.test_p04_missing_notice_summary) ... ERROR
+test_p04_unclassified_active_package (__main__.FinalGuards.test_p04_unclassified_active_package) ... FAIL
+test_p04_unindexed_notice_file (__main__.FinalGuards.test_p04_unindexed_notice_file) ... FAIL
+test_p04_unknown_role (__main__.FinalGuards.test_p04_unknown_role) ... FAIL
+test_p04_wrong_license_text_with_consistent_index (__main__.FinalGuards.test_p04_wrong_license_text_with_consistent_index) ... FAIL
+test_p04_wrong_provider_text_with_consistent_index (__main__.FinalGuards.test_p04_wrong_provider_text_with_consistent_index) ... FAIL
+test_p06_existing_destination (__main__.FinalGuards.test_p06_existing_destination) ... FAIL
+test_p06_source_drift_during_packaging_is_reverified (__main__.FinalGuards.test_p06_source_drift_during_packaging_is_reverified) ... FAIL
+test_p06_symlinked_destination (__main__.FinalGuards.test_p06_symlinked_destination) ... ERROR
+test_p01_current_so_must_match_native_evidence (__main__.NativeArtifactBinding.test_p01_current_so_must_match_native_evidence) ... ok
+test_p01_missing_native_input_must_not_certify (__main__.NativeArtifactBinding.test_p01_missing_native_input_must_not_certify) ... ok
+test_p01_native_source_must_match_evidence (__main__.NativeArtifactBinding.test_p01_native_source_must_match_evidence) ... ok
+
+======================================================================
+ERROR: test_p04_missing_license_text (__main__.FinalGuards.test_p04_missing_license_text)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 198, in test_p04_missing_license_text
+    self.rejects('notice file missing')
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 131, in rejects
+    self.package()
+    ~~~~~~~~~~~~^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 82, in package
+    PACKAGE.main()
+    ~~~~~~~~~~~~^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/package-aar.py", line 164, in main
+    return final(args, files, slices, manifest)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/package-aar.py", line 125, in final
+    notices = notice_files()
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/package-aar.py", line 93, in notice_files
+    files['third-party/' + entry['file']] = (ROOT / 'bindings/android/third-party' / entry['file']).read_bytes()
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/local/Cellar/python@3.14/3.14.8/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.14/3.14.8/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-aar-final-7n0hmbrc/bindings/android/third-party/rust/alpha-1.0.0/LICENSE'
+
+======================================================================
+ERROR: test_p04_missing_notice_summary (__main__.FinalGuards.test_p04_missing_notice_summary)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 256, in test_p04_missing_notice_summary
+    self.rejects('notice file missing')
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 131, in rejects
+    self.package()
+    ~~~~~~~~~~~~^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 82, in package
+    PACKAGE.main()
+    ~~~~~~~~~~~~^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/package-aar.py", line 164, in main
+    return final(args, files, slices, manifest)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/package-aar.py", line 125, in final
+    notices = notice_files()
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/package-aar.py", line 90, in notice_files
+    files = {'NOTICE.md': (ROOT / 'bindings/android/NOTICE.md').read_bytes(), 'third-party/index.json': index_path.read_bytes()}
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/local/Cellar/python@3.14/3.14.8/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.14/3.14.8/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-aar-final-n374pz_t/bindings/android/NOTICE.md'
+
+======================================================================
+ERROR: test_p06_symlinked_destination (__main__.FinalGuards.test_p06_symlinked_destination)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 277, in test_p06_symlinked_destination
+    self.package()
+    ~~~~~~~~~~~~^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 82, in package
+    PACKAGE.main()
+    ~~~~~~~~~~~~^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/package-aar.py", line 164, in main
+    return final(args, files, slices, manifest)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/package-aar.py", line 147, in final
+    pending.rename(out)
+    ~~~~~~~~~~~~~~^^^^^
+  File "/usr/local/Cellar/python@3.14/3.14.8/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 1076, in rename
+    os.rename(self, target)
+    ~~~~~~~~~^^^^^^^^^^^^^^
+NotADirectoryError: [Errno 20] Not a directory: '/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-aar-final-_tb_ir5h/final-repo.pending-2df689b6601f43aa9f36e1e120115fb6' -> '/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-aar-final-_tb_ir5h/final-repo'
+
+======================================================================
+FAIL: test_p02_failed_tool_exit (__main__.FinalGuards.test_p02_failed_tool_exit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 166, in test_p02_failed_tool_exit
+    self.rejects('native ELF inspection failed')
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 130, in rejects
+    with self.assertRaises(SystemExit) as failure:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: SystemExit not raised
+
+======================================================================
+FAIL: test_p02_load_alignment_below_16k (__main__.FinalGuards.test_p02_load_alignment_below_16k)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 146, in test_p02_load_alignment_below_16k
+    self.rejects('native ELF LOAD alignment below 16KiB')
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 130, in rejects
+    with self.assertRaises(SystemExit) as failure:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: SystemExit not raised
+
+======================================================================
+FAIL: test_p02_missing_export (__main__.FinalGuards.test_p02_missing_export)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 154, in test_p02_missing_export
+    self.rejects('native ELF exports differ from exports.map')
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 130, in rejects
+    with self.assertRaises(SystemExit) as failure:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: SystemExit not raised
+
+======================================================================
+FAIL: test_p02_unexpected_export (__main__.FinalGuards.test_p02_unexpected_export)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 150, in test_p02_unexpected_export
+    self.rejects('native ELF exports differ from exports.map')
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 130, in rejects
+    with self.assertRaises(SystemExit) as failure:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: SystemExit not raised
+
+======================================================================
+FAIL: test_p02_unexpected_needed (__main__.FinalGuards.test_p02_unexpected_needed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 158, in test_p02_unexpected_needed
+    self.rejects('native ELF unexpected NEEDED dependency')
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 130, in rejects
+    with self.assertRaises(SystemExit) as failure:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: SystemExit not raised
+
+======================================================================
+FAIL: test_p02_wrong_machine (__main__.FinalGuards.test_p02_wrong_machine)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 162, in test_p02_wrong_machine
+    self.rejects('native ELF machine mismatch')
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 130, in rejects
+    with self.assertRaises(SystemExit) as failure:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: SystemExit not raised
+
+======================================================================
+FAIL: test_p03_recorded_build_drift (__main__.FinalGuards.test_p03_recorded_build_drift)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 186, in test_p03_recorded_build_drift
+    self.rejects('source closure mismatch')
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 130, in rejects
+    with self.assertRaises(SystemExit) as failure:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: SystemExit not raised
+
+======================================================================
+FAIL: test_p03_source_added_after_build (__main__.FinalGuards.test_p03_source_added_after_build)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 179, in test_p03_source_added_after_build
+    self.rejects('source closure mismatch')
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 130, in rejects
+    with self.assertRaises(SystemExit) as failure:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: SystemExit not raised
+
+======================================================================
+FAIL: test_p03_source_changed_after_build (__main__.FinalGuards.test_p03_source_changed_after_build)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 175, in test_p03_source_changed_after_build
+    self.rejects('source closure mismatch')
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 130, in rejects
+    with self.assertRaises(SystemExit) as failure:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: SystemExit not raised
+
+======================================================================
+FAIL: test_p03_split_runtime_artifact (__main__.FinalGuards.test_p03_split_runtime_artifact)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 193, in test_p03_split_runtime_artifact
+    self.rejects('not a verified production-only class artifact', pending=False)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 130, in rejects
+    with self.assertRaises(SystemExit) as failure:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: SystemExit not raised
+
+======================================================================
+FAIL: test_p03_test_class_in_production_classes (__main__.FinalGuards.test_p03_test_class_in_production_classes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 171, in test_p03_test_class_in_production_classes
+    self.rejects('test class in production classes')
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 130, in rejects
+    with self.assertRaises(SystemExit) as failure:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: SystemExit not raised
+
+======================================================================
+FAIL: test_p04_corrupted_license_text (__main__.FinalGuards.test_p04_corrupted_license_text)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 202, in test_p04_corrupted_license_text
+    self.rejects('notice file digest mismatch')
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 130, in rejects
+    with self.assertRaises(SystemExit) as failure:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: SystemExit not raised
+
+======================================================================
+FAIL: test_p04_invented_project_license (__main__.FinalGuards.test_p04_invented_project_license)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 262, in test_p04_invented_project_license
+    self.rejects('no project distribution license may be claimed')
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 130, in rejects
+    with self.assertRaises(SystemExit) as failure:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: SystemExit not raised
+
+======================================================================
+FAIL: test_p04_kotlin_pom_changed (__main__.FinalGuards.test_p04_kotlin_pom_changed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 242, in test_p04_kotlin_pom_changed
+    self.rejects('Kotlin runtime notice provenance mismatch')
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 130, in rejects
+    with self.assertRaises(SystemExit) as failure:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: SystemExit not raised
+
+======================================================================
+FAIL: test_p04_kotlin_runtime_not_approved_jar (__main__.FinalGuards.test_p04_kotlin_runtime_not_approved_jar)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 248, in test_p04_kotlin_runtime_not_approved_jar
+    self.rejects('Kotlin runtime notice provenance mismatch')
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 130, in rejects
+    with self.assertRaises(SystemExit) as failure:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: SystemExit not raised
+
+======================================================================
+FAIL: test_p04_lock_tuple_changed (__main__.FinalGuards.test_p04_lock_tuple_changed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 237, in test_p04_lock_tuple_changed
+    self.rejects('notice tuple differs from Cargo.lock')
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 130, in rejects
+    with self.assertRaises(SystemExit) as failure:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: SystemExit not raised
+
+======================================================================
+FAIL: test_p04_unclassified_active_package (__main__.FinalGuards.test_p04_unclassified_active_package)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 226, in test_p04_unclassified_active_package
+    self.rejects('notice set differs from active native set')
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 130, in rejects
+    with self.assertRaises(SystemExit) as failure:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: SystemExit not raised
+
+======================================================================
+FAIL: test_p04_unindexed_notice_file (__main__.FinalGuards.test_p04_unindexed_notice_file)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 252, in test_p04_unindexed_notice_file
+    self.rejects('unindexed notice file')
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 130, in rejects
+    with self.assertRaises(SystemExit) as failure:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: SystemExit not raised
+
+======================================================================
+FAIL: test_p04_unknown_role (__main__.FinalGuards.test_p04_unknown_role)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 232, in test_p04_unknown_role
+    self.rejects('unclassified notice package')
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 130, in rejects
+    with self.assertRaises(SystemExit) as failure:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: SystemExit not raised
+
+======================================================================
+FAIL: test_p04_wrong_license_text_with_consistent_index (__main__.FinalGuards.test_p04_wrong_license_text_with_consistent_index)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 210, in test_p04_wrong_license_text_with_consistent_index
+    self.rejects('notice text differs from verified source')
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 130, in rejects
+    with self.assertRaises(SystemExit) as failure:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: SystemExit not raised
+
+======================================================================
+FAIL: test_p04_wrong_provider_text_with_consistent_index (__main__.FinalGuards.test_p04_wrong_provider_text_with_consistent_index)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 219, in test_p04_wrong_provider_text_with_consistent_index
+    self.rejects('notice text differs from verified source')
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 130, in rejects
+    with self.assertRaises(SystemExit) as failure:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: SystemExit not raised
+
+======================================================================
+FAIL: test_p06_existing_destination (__main__.FinalGuards.test_p06_existing_destination)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 267, in test_p06_existing_destination
+    with self.assertRaises(SystemExit) as failure:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: SystemExit not raised
+
+======================================================================
+FAIL: test_p06_source_drift_during_packaging_is_reverified (__main__.FinalGuards.test_p06_source_drift_during_packaging_is_reverified)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 289, in test_p06_source_drift_during_packaging_is_reverified
+    self.rejects('source closure mismatch')
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/android/tools/test_package_aar.py", line 130, in rejects
+    with self.assertRaises(SystemExit) as failure:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: SystemExit not raised
+
+----------------------------------------------------------------------
+Ran 30 tests in 13.654s
+
+FAILED (failures=23, errors=3)
+/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-aar-final-_mtpwrn6/final-repo/certificate.json f5e6972f5005477589fc3d3322445786efdb7f5c89cc668d27f32d05cc342e34
+/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-aar-final-vdegekt1/final-repo/certificate.json c90d2673d93fc48f4b6c13d051478b74b6a027dbbdbd372f264d54de9babdefb
+/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-aar-final-ciy23ez7/final-repo/certificate.json b8a05dae6cfbb37e489b4a543cc653008642574ac59fd2b9dd7c91070767f34b
+/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-aar-final-j7qp9eea/final-repo/certificate.json f71bdb350ad1d9a47ae24b4277c458df061594a4194878d2173ca44cd39f3b80
+/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-aar-final-1ryjm_v4/final-repo/certificate.json c46d19f4449da95220661132a2889585d27402f6c09cdc9442a5edfada582581
+/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-aar-final-rnqly63p/final-repo/certificate.json fd85a5d92f809a6b7ff1d4ed16ef02b0dfc51400c8bc9ae565e810494879e18e
+/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-aar-final-s6ndmk5p/final-repo/certificate.json 221c438080eda8a8a171f8e16404ead39eac13f725bc1f5bfa222ee90a41116b
+/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-aar-final-418o4pzj/final-repo/certificate.json c9b199c15b5d861ce4b1f52bcce4a23eda71d90b4f2778a13933f12842c3a62e
+/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-aar-final-3y1qdqib/final-repo/certificate.json bc9ae1b656af218688ea389734bd17f44b7b79b39d1b5afd478e40b99f1c0162
+/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-aar-final-3y_rpt6d/final-repo/certificate.json e7984f095db26c6ed66b73d737d1bf3da6a0dfe844e77c28fd16600be2275c9d
+/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-aar-final-41qxj1cn/final-repo/certificate.json 9a83d3a1c6ba3e4d4a1d0d15e35da8bcf1125949d83b0ff3ff601feb5d02546e
+/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-aar-final-fomge4ea/final-repo/certificate.json 26ead93a11ad31675e16b4a1c27b00d0274c867a4341d817d64fdc45ab5754a1
+/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-aar-final-99y4ho1w/final-repo/certificate.json b5b6ff6e819b17ac82167a8cf0703eefb9b42d5fd4888c99350afc0c42566ac0
+/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-aar-final-c8taldaj/final-repo/certificate.json 93bcf3ea39543e58fff2b72177aa68ee31a91264f01820354f30f732dd7cc4d9
+/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-aar-final-g6xkpj4t/final-repo/certificate.json 16bf5108e468cc2f82b9455cf96b93505d785dca378ed081a7374018837e779e
+/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-aar-final-vvnnf5zi/final-repo/certificate.json 605af34ab4a603fd468f2da9d6037eae651f081133a197fb8eff1c52e5e64c52
+/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-aar-final-g0x9u4bt/final-repo/certificate.json 01181261ec4eb34ee48546fe1a83b9e921d64d7de512d1b9702eafe3263f165f
+/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-aar-final-1elr3580/final-repo/certificate.json 4b2de3057e50bc0b27370789227ab666946ab57647260cf35d62d70e81257cae
+/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-aar-final-nrv3rq6j/final-repo/certificate.json b93b710f92c4c240d27237acff5c01a6a36735809313d705158ae7a6054760a8
+/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-aar-final-m9pjq6dm/final-repo/certificate.json 9813231ee8196df7c4e310c531a6720730959934528f281fa0e4b2d029635af5
+/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-aar-final-ywods8mt/final-repo/certificate.json 7fda1b53bb95df8855a01f2d88302d4c475370962af293a370e5848af2664669
+/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-aar-final-pmcqvk39/final-repo/certificate.json d8636e68be06283f233b3efc744ed1896274c93d01e4a78aff98640c7546025d
+/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-aar-final-7dn1lxx5/final-repo/certificate.json 69a87ebc86ab4e8839da99b259f3ade625e27979624201d62dd07af490b18d3e
+/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-aar-final-oabnkiix/final-repo/certificate.json fed1d72c9d5793355b8e7c196f0fdd781a54e441b585322c36eafb4222d23f36
+exit=1

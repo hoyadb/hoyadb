@@ -1,0 +1,28 @@
+{
+  "profile": "debug",
+  "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)",
+  "command": "cargo run --manifest-path target/phase-five-footprint-probe/Cargo.toml --target-dir target --offline --locked -- target/phase-five-footprint-probe/stores-20261024-one-run",
+  "stores_removed": true,
+  "native_dependency_versions_match_workspace_lock": true,
+  "artifact_sha256": {
+    "target/phase-five-footprint-probe/Cargo.toml": "98ec6cd48c8e57409b5720f91242a3b75d51d8cf806122e1a587e7d357da365c",
+    "target/phase-five-footprint-probe/Cargo.lock": "2fa29eda6adcfec99b86fcacdeb485de619e244a3f0aa2baf987012bb2fe8fc4",
+    "target/phase-five-footprint-probe/src/main.rs": "073d6338a81d509f0c74a94675c29d0f9b4019cc46244686e1b30e1e16bf9e23",
+    "target/phase-five-footprint-observed.jsonl": "355034f196ccfee5ec6f352d3fea81172886ed73c9b5b179d9237ca94f041284",
+    "target/phase-five-footprint-run.txt": "2c6fca888a82e5749631f889293c96f5db134c7b01148b0847bf31673f175d36"
+  },
+  "production_source_sha256": {
+    "Cargo.lock": "75c4616fe6b298c68f5b504a61786332718c20d3b9e86c1f902d914c619cd3c4",
+    "crates/hoyadb-core/src/command/pull.rs": "d298ad73edd45ef542f4a6753c9fd9a9fd8a4bc0c68657731da63002ef0d7b84",
+    "crates/hoyadb-core/src/command/owner.rs": "38487b43c3f81688e4a93823ebd3433db5aba2d58216118979709465568e9a57",
+    "crates/hoyadb-core/src/command/reconcile.rs": "cd33873c6d54a42b6b507b9ca29be0cae32775bb8b7c00e4a3963c7ae848f8de",
+    "crates/hoyadb-core/src/command/entity.rs": "465abd60af4d4a299d214ccaf0e8c15397687fa7c997108821043c60ec29e2a7",
+    "crates/hoyadb-core/src/command/entity_owner.rs": "21225b8b340b6ec44aba40d6ff8a915bb4a21df83aaa7d0c1b11ace08a8a1882",
+    "crates/hoyadb-core/src/command/records.rs": "8a4cf5ffa42f98fbd59b32ca97a448c6cf48b157e6bfb5b69e5f8a81c34fb619",
+    "crates/hoyadb-core/src/command/sync.rs": "97aaa3df8c903efbef06453040149419740ae0b1a218e47956d04abada5c262f",
+    "crates/hoyadb-core/src/command/queue.rs": "3bec45b6a376c2a1663e862ddb300a186393c436b5f1c02531dba2d04df28481",
+    "crates/hoyadb-core/src/storage/sync.rs": "3538587fcd2eafb98edc2cb8cf55dd9a395434ec9562cd314ff0a94e40a898f6",
+    "crates/hoyadb-core/src/storage/snapshot/sync.rs": "15f109b8a92b3aaaf6e2297afc9e007fd2828445813a7a23a3e9efe2ae0ccf94",
+    "crates/hoyadb-storage-sqlite/src/sync.rs": "dfb93b95ef8efa2db260640445a6e5434ebf7f926e87f8f78fd908c726f3b4f1"
+  }
+}

@@ -1,0 +1,10 @@
+{
+ "file": "bindings/react-native/tools/security/native_cache.py",
+ "sha256": "adb46c03d232e93663029052e4dd9cd083a74296e05b81d338dde080b07e8ebc",
+ "assert_nodes": 0,
+ "imports": [
+  "dataclasses",
+  "re"
+ ],
+ "calls_open_exec_eval": []
+}

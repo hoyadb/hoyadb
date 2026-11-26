@@ -1,0 +1,70 @@
+..EE........
+======================================================================
+ERROR: test_N06_parent_revoke_withdraws_unconsumed_permit_and_blocks_until_recover (test_browser_run.BrowserControlLoopTests.test_N06_parent_revoke_withdraws_unconsumed_permit_and_blocks_until_recover)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/test_browser_run.py", line 154, in test_N06_parent_revoke_withdraws_unconsumed_permit_and_blocks_until_recover
+    control_loop(io.StringIO('\n'.join(lines) + '\n'), collector, emitted.append)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/browser_run.py", line 149, in control_loop
+    collector.reject('unknown control command')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/browser_server.py", line 80, in reject
+    self.condition.notify_all()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/local/Cellar/python@3.14/3.14.8/Frameworks/Python.framework/Versions/3.14/lib/python3.14/threading.py", line 445, in notify_all
+    self.notify(len(self._waiters))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.14/3.14.8/Frameworks/Python.framework/Versions/3.14/lib/python3.14/threading.py", line 419, in notify
+    raise RuntimeError("cannot notify on un-acquired lock")
+RuntimeError: cannot notify on un-acquired lock
+
+======================================================================
+ERROR: test_admit_malformed_recover_and_cancel_are_explicit_parent_commands (test_browser_run.BrowserControlLoopTests.test_admit_malformed_recover_and_cancel_are_explicit_parent_commands)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/run.py", line 63, in strict_json
+    return json.loads(value,object_pairs_hook=_pairs,parse_constant=invalid)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.14/3.14.8/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/__init__.py", line 365, in loads
+    return cls(**kw).decode(s)
+           ~~~~~~~~~~~~~~~~^^^
+  File "/usr/local/Cellar/python@3.14/3.14.8/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.14/3.14.8/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/decoder.py", line 363, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/browser_run.py", line 130, in control_loop
+    value = strict_json(body)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/run.py", line 65, in strict_json
+    raise RunnerError("invalid JSON record") from error
+run.RunnerError: invalid JSON record
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/test_browser_run.py", line 136, in test_admit_malformed_recover_and_cancel_are_explicit_parent_commands
+    self.assertEqual(control_loop(io.StringIO('\n'.join(lines) + '\n'), collector, emitted.append), 'cancelled')
+                     ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/browser_run.py", line 133, in control_loop
+    collector.reject('malformed control input')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/browser_server.py", line 80, in reject
+    self.condition.notify_all()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/local/Cellar/python@3.14/3.14.8/Frameworks/Python.framework/Versions/3.14/lib/python3.14/threading.py", line 445, in notify_all
+    self.notify(len(self._waiters))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.14/3.14.8/Frameworks/Python.framework/Versions/3.14/lib/python3.14/threading.py", line 419, in notify
+    raise RuntimeError("cannot notify on un-acquired lock")
+RuntimeError: cannot notify on un-acquired lock
+
+----------------------------------------------------------------------
+Ran 12 tests in 1.248s
+
+FAILED (errors=2)

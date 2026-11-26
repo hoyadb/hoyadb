@@ -1,0 +1,291 @@
+{
+  "format": 1,
+  "scope": "Native Rust-facade functional preparation and historical point N100 pilot, not full baseline or budget",
+  "functional": {
+    "rust_lib": 7,
+    "rust_debug_profile_guard": 1,
+    "python_runner": 12,
+    "python_summary": 9
+  },
+  "pilot": {
+    "classes": [
+      "rust-facade/memory",
+      "rust-facade/native-protected"
+    ],
+    "warmup_per_run": 5,
+    "measured_per_run": 30,
+    "runs_per_class": 5,
+    "source_before_equals_after": true,
+    "workload_sha256": "11e120b0d53fdec9402a7c356ad241e23f2903d98333250cab9ed356228f0db8",
+    "later_metadata_amendment": "d8251bd",
+    "warning": "Historical sources/hashes are retained exactly. No reattribution to the later metadata amendment or future artifacts. Do not pool this pilot into a full baseline."
+  },
+  "files": [
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/functional/native-fixture-red.txt",
+      "bytes": 2073,
+      "sha256": "1362d977041e77709ed24485faa85ec19ae90e850b90cbafe1a20c9d7b5c6e37"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/functional/native-sync-red.txt",
+      "bytes": 972,
+      "sha256": "83a53747721dce2984f8059fd899e4449aa683fcbbe4d2db38630c4b42a9c1c8"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/functional/native-observation-red.txt",
+      "bytes": 954,
+      "sha256": "74dd0785a010ff1eed6da9166c3a4003683c98aa003a2556819ee772202337c1"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/functional/native-boundary-red.txt",
+      "bytes": 953,
+      "sha256": "3a738e5d16e890ba2de342f731388f338b6b37661b36fb72e8dc702e089becc4"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/functional/native-proof-red.txt",
+      "bytes": 968,
+      "sha256": "a0a88c168909daf1cdd7f84de4c60e34c7fa205552e28ef3e7db6f7a1420befd"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/functional/native-profile-red.txt",
+      "bytes": 857,
+      "sha256": "a4ad1712b1e59008df157d2a1f25a337386dc6f09a2ec07ee51d59c5796f8ede"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/functional/native-cold-red.txt",
+      "bytes": 960,
+      "sha256": "672f4bb83b243ffe0a1a8c2953460f70b8e693e2e1df1d24190eadefb6b34537"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/functional/native-retry-fanout-red.txt",
+      "bytes": 964,
+      "sha256": "28517f7c04acdede14e8aaee50dc769fe6ad01b30f65531bea93587e95668881"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/functional/native-batch-proof-red.txt",
+      "bytes": 1001,
+      "sha256": "0dd20dc227392d05b58497d1970b157de95a4be56ec313c1bfe0ff91e1e91583"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/functional/native-rss-red.txt",
+      "bytes": 1002,
+      "sha256": "5f6a96509ee64ee18e3700d93a2313a36bea44132e5e1cdc8dd90581712599dd"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/functional/runner-red.txt",
+      "bytes": 3497,
+      "sha256": "87583dc0b9840d88a4f498bd67e6f02b6b3f59fe0966dc43909064c7364ad0de"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/functional/runner-process-red.txt",
+      "bytes": 3026,
+      "sha256": "d24f30955b68078d89cdaeba9d26fb6e1c18ba2fb488a85eca9231edbf7c6e0f"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/functional/runner-ready-red.txt",
+      "bytes": 1240,
+      "sha256": "757d9bfa5cd5921d0f32e09296b158ffabccbe91cf58287849291eab4ccf0c49"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/functional/runner-acceptance-red.txt",
+      "bytes": 976,
+      "sha256": "690c40b5d79e8b06b3d776895b5e889e7b5e94aa27500d1be81d3df8866bdf5f"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/functional/runner-rss-red.txt",
+      "bytes": 782,
+      "sha256": "b9bdf22d4ce2c5d087ca0312b63cd12ea88a28bde44b7ecf34bf4bf64cef0cdd"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/functional/runner-rss-order-red.txt",
+      "bytes": 766,
+      "sha256": "674405fa8f4e9fc0f9a6b6051f1a38f2d6962ab9c966a2c341857d68530f5acd"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/functional/summary-red.txt",
+      "bytes": 5516,
+      "sha256": "5c6958465b1161953b50ec34af20d008ad7109f5d5c4bfa19aa81f368589606d"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/functional/summary-mixed-sample-red.txt",
+      "bytes": 1534,
+      "sha256": "a62ec3c783f36ec751e843f70260b2a0a758141bf1fd5d14b6adaac19bdf9595"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/functional/root-native-functional.txt",
+      "bytes": 1808,
+      "sha256": "5b3d6293f1176298cce152d88ada27b67094ad1c1ea81c582e0d68ac3a3ad5b6",
+      "raw_bytes": 1809,
+      "raw_sha256": "018e395f4aa14e79cff7145c105888fea7b8b2554adf4678ca3c3e367d6af9db",
+      "presentation": "Remove excess EOF blank lines only; raw output remains target/phase-seven-benchmarks/root-native-functional.txt"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/functional/root-native-runner.txt",
+      "bytes": 111,
+      "sha256": "dbf03ce21dab4f5f9d2fc37e6c971204ffacde0cd4833842aa93becdb1fb615b"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/functional/root-native-summary.txt",
+      "bytes": 107,
+      "sha256": "6542cfa23588d4af4daf63616bca8620905d5eaafa2553b28a1b909d41dc65b8"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/functional/root-release-build.txt",
+      "bytes": 1268,
+      "sha256": "224d425fbe0e9edd551dc5fe632cceeffbe9a24f840ac7143c789f397ccd222b"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/pilot-point-n100/build.txt",
+      "bytes": 62,
+      "sha256": "90c8a1a69c0155761cff4bfe0e61bbee007961d2b96729d2127c2e0c291489dd"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/pilot-point-n100/manifest.json",
+      "bytes": 24910,
+      "sha256": "7ba944e118b1eb9305bfe68820d1b2c12383fa54048c8d71c22c9334b71651ee"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/pilot-point-n100/warm-memory-00-1-config.json",
+      "bytes": 562,
+      "sha256": "70c3144ff27d2b40c554104f9751ac606f6db72c8e7fb8624f65439b946cfc49"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/pilot-point-n100/warm-memory-00-1-raw.json",
+      "bytes": 5324,
+      "sha256": "43f3610ac7a94b1635a22d0c2bd3377d2b8a4693d12169cc284501846bdf994f"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/pilot-point-n100/warm-memory-00-2-config.json",
+      "bytes": 562,
+      "sha256": "0b826d882c6e7019875e1016368e5ecf6ce51e16f354e205a2f02e2bdae80d9e"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/pilot-point-n100/warm-memory-00-2-raw.json",
+      "bytes": 5303,
+      "sha256": "eb91951b2910eb2aa15fabc6488c0d896c0f644cb5639437f1b8c41947768b98"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/pilot-point-n100/warm-memory-00-3-config.json",
+      "bytes": 562,
+      "sha256": "2feed86963c9c9306da0c3cfaf03537999cb14916765efa2dae30184b0f7bedc"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/pilot-point-n100/warm-memory-00-3-raw.json",
+      "bytes": 5325,
+      "sha256": "4f0187efc60f2d3cf3265b637bcbda14a63bb1a7cce3947267841e3f1968dcde"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/pilot-point-n100/warm-memory-00-4-config.json",
+      "bytes": 562,
+      "sha256": "feaeb386c04d187e037904b2cd44b6a0567b1e0fe9865d429b3e1e7cfaa6395c"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/pilot-point-n100/warm-memory-00-4-raw.json",
+      "bytes": 5301,
+      "sha256": "1afb6ddfb5cc4e4e6ee849550d39abe623db8c158acdade307e47c0f9103a4fe"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/pilot-point-n100/warm-memory-00-5-config.json",
+      "bytes": 562,
+      "sha256": "406a145f997645b8c35b03f06f1d8537d2e98006118169b099466dbca2d3c59a"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/pilot-point-n100/warm-memory-00-5-raw.json",
+      "bytes": 5327,
+      "sha256": "f316e925fe89d216536ba9bd2ac80d055bc96c7f40a567f9f20b07fa944d196c"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/pilot-point-n100/warm-memory-00-summary.json",
+      "bytes": 1092,
+      "sha256": "06c07107d1346fc18ccc0d008a7feee630a66e5aedafc890365db6cf1e74f15d"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/pilot-point-n100/warm-native-protected-00-1-config.json",
+      "bytes": 687,
+      "sha256": "79cfd08913a0893f5573e19d4c91f907d1e09ae0af2a10e8b0e6c5966aaeb08d"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/pilot-point-n100/warm-native-protected-00-1-raw.json",
+      "bytes": 5354,
+      "sha256": "bd6a5a077075fa184ef1036859fef71f60c91e50a3da4c5876037e5bb133bf1c"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/pilot-point-n100/warm-native-protected-00-1-store.json",
+      "bytes": 110,
+      "sha256": "818f761fe7501ec117487be6929eebaf583ee751d1a6ed1f1cc3e033b7f4e9d2"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/pilot-point-n100/warm-native-protected-00-2-config.json",
+      "bytes": 687,
+      "sha256": "fc4f13e0afeffa257da90795c4bbb902bd129ad1c9dfaca5cfe473fb7b170e19"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/pilot-point-n100/warm-native-protected-00-2-raw.json",
+      "bytes": 5354,
+      "sha256": "def1f0e60581f272afef0d92435f52177cb708a9159129ffa9efead0bb0177bd"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/pilot-point-n100/warm-native-protected-00-2-store.json",
+      "bytes": 110,
+      "sha256": "818f761fe7501ec117487be6929eebaf583ee751d1a6ed1f1cc3e033b7f4e9d2"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/pilot-point-n100/warm-native-protected-00-3-config.json",
+      "bytes": 687,
+      "sha256": "944612adb45417e0de6094999595136944987c71c8a06ad4613204dacacc163b"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/pilot-point-n100/warm-native-protected-00-3-raw.json",
+      "bytes": 5343,
+      "sha256": "83e59b7478b0aaa77d210599a3225a171d2fdd596ec13ea7be641c0c9ff4f4fd"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/pilot-point-n100/warm-native-protected-00-3-store.json",
+      "bytes": 110,
+      "sha256": "818f761fe7501ec117487be6929eebaf583ee751d1a6ed1f1cc3e033b7f4e9d2"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/pilot-point-n100/warm-native-protected-00-4-config.json",
+      "bytes": 687,
+      "sha256": "0d79239de2ed66015f515c88f405365c5740d6a6272c6f0b4da0b998c606fce4"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/pilot-point-n100/warm-native-protected-00-4-raw.json",
+      "bytes": 5354,
+      "sha256": "755fd2061d2cfe5d550cbd5ffc7c8ad5a5135af7ef2bb3fc23edd64223f0385c"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/pilot-point-n100/warm-native-protected-00-4-store.json",
+      "bytes": 110,
+      "sha256": "818f761fe7501ec117487be6929eebaf583ee751d1a6ed1f1cc3e033b7f4e9d2"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/pilot-point-n100/warm-native-protected-00-5-config.json",
+      "bytes": 687,
+      "sha256": "188294a29cdda52a60bc7f58ab332bbd3c5de236890178897c1b78b964eea2fc"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/pilot-point-n100/warm-native-protected-00-5-raw.json",
+      "bytes": 5343,
+      "sha256": "2d6a2587b49d05a6fafa6e261c3e6807b0e1c90935e0f1ccf80fa008442d1d43"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/pilot-point-n100/warm-native-protected-00-5-store.json",
+      "bytes": 110,
+      "sha256": "818f761fe7501ec117487be6929eebaf583ee751d1a6ed1f1cc3e033b7f4e9d2"
+    },
+    {
+      "path": "docs/implementation/phase-seven-benchmarks/pilot-point-n100/warm-native-protected-00-summary.json",
+      "bytes": 1113,
+      "sha256": "d111a1d2c6478f78e551b2fac97c9f0f131aec7a09944abde0c5e7abcab1ae27"
+    }
+  ],
+  "limitations": [
+    "No full warm/cold/resources matrix yet",
+    "No Swift Kotlin RN browser performance measurements",
+    "No numeric budgets or performance completion",
+    "Debug test wall time is not latency evidence",
+    "Source testing includes separately preserved uncommitted formatter overlays; artifact and before/after source maps identify actual bytes",
+    "Caller coordinated task-owned agents; external background load remains unknown"
+  ]
+}

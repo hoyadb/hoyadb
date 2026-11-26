@@ -1,0 +1,1 @@
+REPOSITORY REJECTED before any subprocess: integrity: repository file changed: jmock/jmock/1.1.0/jmock-1.1.0.pom

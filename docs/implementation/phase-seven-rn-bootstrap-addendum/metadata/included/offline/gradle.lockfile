@@ -1,0 +1,33 @@
+# This is a Gradle generated file for dependency locking.
+# Manual edits can break the build and are not advised.
+# This file is expected to be part of source control.
+com.google.code.gson:gson:2.11.0=includedRootBuildscriptClasspath
+com.google.errorprone:error_prone_annotations:2.27.0=includedRootBuildscriptClasspath
+com.ncorti.ktfmt.gradle:com.ncorti.ktfmt.gradle.gradle.plugin:0.22.0=includedRootBuildscriptClasspath
+com.ncorti.ktfmt.gradle:plugin:0.22.0=includedRootBuildscriptClasspath
+io.github.java-diff-utils:java-diff-utils:4.15=includedRootBuildscriptClasspath
+org.gradle.toolchains.foojay-resolver-convention:org.gradle.toolchains.foojay-resolver-convention.gradle.plugin:1.0.0=includedSettingsClasspath
+org.gradle.toolchains:foojay-resolver:1.0.0=includedSettingsClasspath
+org.jetbrains.kotlin.jvm:org.jetbrains.kotlin.jvm.gradle.plugin:2.1.20=includedRootBuildscriptClasspath
+org.jetbrains.kotlin:fus-statistics-gradle-plugin:2.1.20=includedRootBuildscriptClasspath
+org.jetbrains.kotlin:kotlin-build-statistics:2.1.20=includedRootBuildscriptClasspath
+org.jetbrains.kotlin:kotlin-build-tools-api:2.1.20=includedRootBuildscriptClasspath
+org.jetbrains.kotlin:kotlin-compiler-runner:2.1.20=includedRootBuildscriptClasspath
+org.jetbrains.kotlin:kotlin-daemon-client:2.1.20=includedRootBuildscriptClasspath
+org.jetbrains.kotlin:kotlin-gradle-plugin-annotations:2.1.20=includedRootBuildscriptClasspath
+org.jetbrains.kotlin:kotlin-gradle-plugin-api:2.1.20=includedRootBuildscriptClasspath
+org.jetbrains.kotlin:kotlin-gradle-plugin-idea-proto:2.1.20=includedRootBuildscriptClasspath
+org.jetbrains.kotlin:kotlin-gradle-plugin-idea:2.1.20=includedRootBuildscriptClasspath
+org.jetbrains.kotlin:kotlin-gradle-plugin-model:2.1.20=includedRootBuildscriptClasspath
+org.jetbrains.kotlin:kotlin-gradle-plugin:2.1.20=includedRootBuildscriptClasspath
+org.jetbrains.kotlin:kotlin-gradle-plugins-bom:2.1.20=includedRootBuildscriptClasspath
+org.jetbrains.kotlin:kotlin-klib-commonizer-api:2.1.20=includedRootBuildscriptClasspath
+org.jetbrains.kotlin:kotlin-native-utils:2.1.20=includedRootBuildscriptClasspath
+org.jetbrains.kotlin:kotlin-stdlib:2.2.21=includedRootBuildscriptClasspath
+org.jetbrains.kotlin:kotlin-tooling-core:2.1.20=includedRootBuildscriptClasspath
+org.jetbrains.kotlin:kotlin-util-io:2.1.20=includedRootBuildscriptClasspath
+org.jetbrains.kotlin:kotlin-util-klib-metadata:2.1.20=includedRootBuildscriptClasspath
+org.jetbrains.kotlin:kotlin-util-klib:2.1.20=includedRootBuildscriptClasspath
+org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.8.0=includedRootBuildscriptClasspath
+org.jetbrains:annotations:13.0=includedRootBuildscriptClasspath
+empty=

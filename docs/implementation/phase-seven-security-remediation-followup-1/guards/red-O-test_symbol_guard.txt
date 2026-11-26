@@ -1,0 +1,105 @@
+EEEEEEEEE
+======================================================================
+ERROR: test_kapt_cache_absent_then_synthetic_presence_rejects (__main__.AbsenceClaims.test_kapt_cache_absent_then_synthetic_presence_rejects)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_symbol_guard.py", line 51, in test_kapt_cache_absent_then_synthetic_presence_rejects
+    self.assertEqual(S.present([clean], [KAPT]), {})
+                     ^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/symbol_guard.py", line 5, in __getattr__
+    raise NotImplementedError("symbol_guard." + name + " not implemented")
+NotImplementedError: symbol_guard.present not implemented
+
+======================================================================
+ERROR: test_log4j_affected_classes_absent_vs_present (__main__.AbsenceClaims.test_log4j_affected_classes_absent_vs_present)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_symbol_guard.py", line 61, in test_log4j_affected_classes_absent_vs_present
+    self.assertEqual(S.present([only_safe], LOG4J_AFFECTED, relocation_prefixes=[RELOC]), {})
+                     ^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/symbol_guard.py", line 5, in __getattr__
+    raise NotImplementedError("symbol_guard." + name + " not implemented")
+NotImplementedError: symbol_guard.present not implemented
+
+======================================================================
+ERROR: test_relocated_symbol_is_still_detected (__main__.AbsenceClaims.test_relocated_symbol_is_still_detected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_symbol_guard.py", line 57, in test_relocated_symbol_is_still_detected
+    self.assertEqual(S.present([relocated], [KAPT], relocation_prefixes=[RELOC]), {KAPT: [str(relocated)]})
+                     ^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/symbol_guard.py", line 5, in __getattr__
+    raise NotImplementedError("symbol_guard." + name + " not implemented")
+NotImplementedError: symbol_guard.present not implemented
+
+======================================================================
+ERROR: test_constant_pool_methodrefs_and_methods (__main__.ClassFileParser.test_constant_pool_methodrefs_and_methods)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_symbol_guard.py", line 35, in test_constant_pool_methodrefs_and_methods
+    info = classfile.parse(data)
+           ^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/classfile.py", line 5, in __getattr__
+    raise NotImplementedError("classfile." + name + " not implemented")
+NotImplementedError: classfile.parse not implemented
+
+======================================================================
+ERROR: test_malformed_class_rejects_explicitly (__main__.ClassFileParser.test_malformed_class_rejects_explicitly)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_symbol_guard.py", line 43, in test_malformed_class_rejects_explicitly
+    classfile.parse(b'\xca\xfe\xba\xbe\x00')
+    ^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/classfile.py", line 5, in __getattr__
+    raise NotImplementedError("classfile." + name + " not implemented")
+NotImplementedError: classfile.parse not implemented
+
+======================================================================
+ERROR: test_external_invocations_exclude_owner_and_detect_callers (__main__.ForkAndCallPath.test_external_invocations_exclude_owner_and_detect_callers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_symbol_guard.py", line 80, in test_external_invocations_exclude_owner_and_detect_callers
+    self.assertEqual(S.external_invocations([clean], LANG3, 'getClass'), [])
+                     ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/symbol_guard.py", line 5, in __getattr__
+    raise NotImplementedError("symbol_guard." + name + " not implemented")
+NotImplementedError: symbol_guard.external_invocations not implemented
+
+======================================================================
+ERROR: test_protobuf_patch_presence_is_method_level (__main__.ForkAndCallPath.test_protobuf_patch_presence_is_method_level)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_symbol_guard.py", line 70, in test_protobuf_patch_presence_is_method_level
+    self.assertFalse(S.declares(unpatched, PROTO, 'checkRecursionLimit'))
+                     ^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/symbol_guard.py", line 5, in __getattr__
+    raise NotImplementedError("symbol_guard." + name + " not implemented")
+NotImplementedError: symbol_guard.declares not implemented
+
+======================================================================
+ERROR: test_reflective_string_reference_counts_as_external_reference (__main__.ForkAndCallPath.test_reflective_string_reference_counts_as_external_reference)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_symbol_guard.py", line 88, in test_reflective_string_reference_counts_as_external_reference
+    self.assertEqual(S.string_references([archive], LANG3), [(str(archive), 'x/R')])
+                     ^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/symbol_guard.py", line 5, in __getattr__
+    raise NotImplementedError("symbol_guard." + name + " not implemented")
+NotImplementedError: symbol_guard.string_references not implemented
+
+======================================================================
+ERROR: test_runtime_flavor_users (__main__.ForkAndCallPath.test_runtime_flavor_users)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_symbol_guard.py", line 94, in test_runtime_flavor_users
+    self.assertEqual(S.type_users([archive], 'org/jetbrains/kotlin/protobuf/UnknownFieldSet', exclude_prefix='org/jetbrains/kotlin/protobuf/'), [])
+                     ^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/symbol_guard.py", line 5, in __getattr__
+    raise NotImplementedError("symbol_guard." + name + " not implemented")
+NotImplementedError: symbol_guard.type_users not implemented
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.058s
+
+FAILED (errors=9)
+exit=1

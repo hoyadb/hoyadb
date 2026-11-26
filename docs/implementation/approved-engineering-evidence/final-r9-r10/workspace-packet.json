@@ -1,0 +1,140 @@
+{
+  "source_count": 187,
+  "sources_before_equal_after": true,
+  "final_source_count": 187,
+  "final_sources_match_current": true,
+  "post_workspace_delta": {
+    "path": "crates/hoyadb-core/src/command/ledger_txn.rs",
+    "before": "b22c73382cb8cf8fbe5db0d607b3ab689babb52378097805e28557c33f2d360f",
+    "after": "87ea05ed454e5f8ba194af438eb79fe0996c583e005f59f4d2ef501586d1d329",
+    "change": "two cfg(any(test, feature = \"work-counters\")) attributes, test configurations unchanged; separate production WASM and219 core checks"
+  },
+  "results": [
+    {
+      "name": "workspace",
+      "command": [
+        "cargo",
+        "test",
+        "--workspace",
+        "--offline",
+        "--locked"
+      ],
+      "cwd": "/private/tmp/hoyadb-followup-20261031/r10-integrated-work",
+      "environment": {
+        "CARGO_TARGET_DIR": "/private/tmp/hoyadb-followup-20261031/r10-integrated-target",
+        "CARGO_BUILD_JOBS": "2",
+        "CARGO_INCREMENTAL": "0"
+      },
+      "exit": 0,
+      "seconds": 821.82
+    },
+    {
+      "name": "format",
+      "command": [
+        "cargo",
+        "fmt",
+        "--all",
+        "--check"
+      ],
+      "cwd": "/private/tmp/hoyadb-followup-20261031/r10-integrated-work",
+      "environment": {
+        "CARGO_TARGET_DIR": "/private/tmp/hoyadb-followup-20261031/r10-integrated-target",
+        "CARGO_BUILD_JOBS": "2",
+        "CARGO_INCREMENTAL": "0"
+      },
+      "exit": 0,
+      "seconds": 6.53
+    },
+    {
+      "name": "clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "--workspace",
+        "--all-targets",
+        "--offline",
+        "--locked",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "cwd": "/private/tmp/hoyadb-followup-20261031/r10-integrated-work",
+      "environment": {
+        "CARGO_TARGET_DIR": "/private/tmp/hoyadb-followup-20261031/r10-integrated-target",
+        "CARGO_BUILD_JOBS": "2",
+        "CARGO_INCREMENTAL": "0"
+      },
+      "exit": 0,
+      "seconds": 33.76
+    },
+    {
+      "name": "wasm-core",
+      "command": [
+        "cargo",
+        "build",
+        "-p",
+        "hoyadb-core",
+        "-p",
+        "hoyadb-storage-memory",
+        "--target",
+        "wasm32-unknown-unknown",
+        "--offline",
+        "--locked"
+      ],
+      "cwd": "/private/tmp/hoyadb-followup-20261031/r10-integrated-work",
+      "environment": {
+        "CARGO_TARGET_DIR": "/private/tmp/hoyadb-followup-20261031/r10-integrated-target",
+        "CARGO_BUILD_JOBS": "2",
+        "CARGO_INCREMENTAL": "0"
+      },
+      "exit": 0,
+      "seconds": 15.63
+    },
+    {
+      "name": "wasm-sqlite",
+      "command": [
+        "cargo",
+        "build",
+        "-p",
+        "hoyadb-storage-sqlite",
+        "--lib",
+        "--target",
+        "wasm32-unknown-unknown",
+        "--offline",
+        "--locked"
+      ],
+      "cwd": "/private/tmp/hoyadb-followup-20261031/r10-integrated-work",
+      "environment": {
+        "CARGO_TARGET_DIR": "/private/tmp/hoyadb-followup-20261031/r10-integrated-target",
+        "CARGO_BUILD_JOBS": "2",
+        "CARGO_INCREMENTAL": "0",
+        "CC_wasm32_unknown_unknown": "/usr/local/opt/llvm@22/bin/clang",
+        "AR_wasm32_unknown_unknown": "/usr/local/opt/llvm@22/bin/llvm-ar"
+      },
+      "exit": 0,
+      "seconds": 234.34
+    }
+  ],
+  "counts": {
+    "counting": "last outer result per Cargo Running/Doc-tests block; supervised failing child retained, not counted as outer failure",
+    "total_passed": 882,
+    "total_failed": 0,
+    "total_ignored": 0
+  },
+  "suite_count": 89,
+  "test_binaries_count": 85,
+  "evidence_sha256": {
+    "r10-integrated-capture.json": "6d63cc5d82969d0f3e83e2bdee3d8ba298e2ba7b05e6ba6dd7c4aff50f745d23",
+    "r10-final-runtime-source.json": "8549dc12cf14db7e5ffb47bb0687e799767f29c6350ed5aad0eac5d8f13c1818",
+    "r10-integrated-checks/results.json": "a19535dc48d2af1b8dd88113c2975d61ced84265430cb50849f57a3bd80b6fc1",
+    "r10-integrated-checks/workspace-counts.json": "f0a2b2c5495dbf11c9c5c82af61ff1e1e4f7fc59a388d7360dc7e60b12299bc2",
+    "r10-integrated-checks/workspace.log": "718f27af66c177428d6c1e3197c962bdd32fdb175fd6efdd53ce4f078e278893",
+    "r10-integrated-checks/source-after.json": "3a2a5985bb844f8f5ce46c5910c0380744589d7ca8c60551a490ab50083545c4",
+    "r10-integrated-checks/test-binaries.json": "97bb9d3aed9d99fd5864e4c4d379d05a21e9ad9ac844360a6d64ebaea5031144",
+    "ledger-diagnostic-cfg/green-results.json": "158ab454c2a2d2dd4b4d7186189d12f434efd4603ce1949fe68feed42afa3292",
+    "ledger-diagnostic-cfg/green-source-before.json": "8549dc12cf14db7e5ffb47bb0687e799767f29c6350ed5aad0eac5d8f13c1818",
+    "ledger-diagnostic-cfg/green-source-after.json": "8549dc12cf14db7e5ffb47bb0687e799767f29c6350ed5aad0eac5d8f13c1818",
+    "ledger-diagnostic-cfg/fix.diff": "d8312beea2c0f50376b626b5a7da35e02ef91db12e810a4f98d514b002aaf720",
+    "ledger-diagnostic-cfg/fable-review.md": "fb76639eb1e126285a10afeda02fff63462a0e8d74623a353989786f859ea31c"
+  }
+}

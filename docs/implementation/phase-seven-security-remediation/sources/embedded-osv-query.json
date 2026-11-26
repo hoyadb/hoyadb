@@ -1,0 +1,88 @@
+{
+ "queries": [
+  {
+   "package": {
+    "name": "com.github.gundy:semver4j",
+    "ecosystem": "Maven"
+   },
+   "version": "0.16.4"
+  },
+  {
+   "package": {
+    "name": "com.google.code.gson:gson",
+    "ecosystem": "Maven"
+   },
+   "version": "2.11.0"
+  },
+  {
+   "package": {
+    "name": "com.google.guava:failureaccess",
+    "ecosystem": "Maven"
+   },
+   "version": "1.0.2"
+  },
+  {
+   "package": {
+    "name": "com.google.guava:guava",
+    "ecosystem": "Maven"
+   },
+   "version": "33.3.1-jre"
+  },
+  {
+   "package": {
+    "name": "commons-codec:commons-codec",
+    "ecosystem": "Maven"
+   },
+   "version": "1.17.1"
+  },
+  {
+   "package": {
+    "name": "commons-io:commons-io",
+    "ecosystem": "Maven"
+   },
+   "version": "2.18.0"
+  },
+  {
+   "package": {
+    "name": "org.antlr:antlr4-runtime",
+    "ecosystem": "Maven"
+   },
+   "version": "4.5.2-1"
+  },
+  {
+   "package": {
+    "name": "org.antlr:antlr4-runtime",
+    "ecosystem": "Maven"
+   },
+   "version": "4.5.3"
+  },
+  {
+   "package": {
+    "name": "org.apache.commons:commons-compress",
+    "ecosystem": "Maven"
+   },
+   "version": "1.27.1"
+  },
+  {
+   "package": {
+    "name": "org.apache.commons:commons-lang3",
+    "ecosystem": "Maven"
+   },
+   "version": "3.16.0"
+  },
+  {
+   "package": {
+    "name": "org.jctools:jctools-core",
+    "ecosystem": "Maven"
+   },
+   "version": "3.1.0"
+  },
+  {
+   "package": {
+    "name": "org.jetbrains.intellij.deps.fastutil:intellij-deps-fastutil",
+    "ecosystem": "Maven"
+   },
+   "version": "8.5.4-9"
+  }
+ ]
+}

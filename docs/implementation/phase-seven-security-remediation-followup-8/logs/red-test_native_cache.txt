@@ -1,0 +1,42 @@
+...F.F....F.............
+======================================================================
+FAIL: test_sr22a_every_jvm_must_report_mandatory_images (__main__.SystemCacheIdentity.test_sr22a_every_jvm_must_report_mandatory_images)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 122, in test_sr22a_every_jvm_must_report_mandatory_images
+    self.rejected(result, 'mandatory system cache image missing: ' + LIBSYSTEM)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 99, in rejected
+    self.assertFalse(result.ok)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_sr22a_non_mandatory_cache_image_alone_is_incomplete (__main__.SystemCacheIdentity.test_sr22a_non_mandatory_cache_image_alone_is_incomplete)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 126, in test_sr22a_non_mandatory_cache_image_alone_is_incomplete
+    self.rejected(check([jvm([cached(LIBZ)])], evidence()), 'mandatory system cache image missing: ' + LIBSYSTEM)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 99, in rejected
+    self.assertFalse(result.ok)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_sr22a_zero_cache_images_is_incomplete (__main__.SystemCacheIdentity.test_sr22a_zero_cache_images_is_incomplete)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 115, in test_sr22a_zero_cache_images_is_incomplete
+    self.rejected(check([jvm(FILE_LIBS)], evidence()), 'mandatory system cache image missing: ' + LIBSYSTEM)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 99, in rejected
+    self.assertFalse(result.ok)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.034s
+
+FAILED (failures=3)
+exit=1

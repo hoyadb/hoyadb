@@ -1,0 +1,9 @@
+rustc --version
+cargo --version
+cargo generate-lockfile --manifest-path target/phase-six-dependency-review/Cargo.toml
+cargo metadata --manifest-path target/phase-six-dependency-review/Cargo.toml --locked --format-version 1 --filter-platform x86_64-apple-darwin
+cargo metadata --manifest-path target/phase-six-dependency-review/Cargo.toml --locked --format-version 1 --filter-platform wasm32-unknown-unknown
+cargo tree --manifest-path target/phase-six-dependency-review/Cargo.toml --locked --offline --target x86_64-apple-darwin -e features
+cargo tree --manifest-path target/phase-six-dependency-review/Cargo.toml --locked --offline --target wasm32-unknown-unknown -e features
+cargo tree --manifest-path target/phase-six-dependency-review/Cargo.toml --locked --offline --target x86_64-apple-darwin --prefix none --format {p}
+cargo tree --manifest-path target/phase-six-dependency-review/Cargo.toml --locked --offline --target wasm32-unknown-unknown --prefix none --format {p}

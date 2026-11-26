@@ -1,0 +1,748 @@
+API-0008 / TC-0032 observed behavioral RED→GREEN and final browser build.
+Commands:
+node --test spikes/storage-browser/command-client.test.mjs
+cargo test --manifest-path spikes/cross-platform/native/Cargo.toml --offline --locked bounded_ -- --nocapture
+CC_wasm32_unknown_unknown=/usr/local/opt/llvm@22/bin/clang AR_wasm32_unknown_unknown=/usr/local/opt/llvm@22/bin/llvm-ar sh spikes/storage-browser/check.sh
+
+
+target/phase-four-browser-client-red.txt
+SHA256 f7d313d56dabf5ed8ef71d44eede1e11158e8e6add28ea79dbfc80487babe211
+TAP version 13
+# Subtest: H01 host invokes its awaited handler and returns the owned result
+not ok 1 - H01 host invokes its awaited handler and returns the owned result
+  ---
+  duration_ms: 1.85495
+  type: 'test'
+  location: '/Users/boristacyniak/Projects/alocasia/hoyadb/spikes/storage-browser/command-client.test.mjs:22:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    0 !== 1
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///Users/boristacyniak/Projects/alocasia/hoyadb/spikes/storage-browser/command-client.test.mjs:26:9)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+# Subtest: H03 unsafe integer Number coercion rejects before transport
+not ok 2 - H03 unsafe integer Number coercion rejects before transport
+  ---
+  duration_ms: 0.367514
+  type: 'test'
+  location: '/Users/boristacyniak/Projects/alocasia/hoyadb/spikes/storage-browser/command-client.test.mjs:29:1'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///Users/boristacyniak/Projects/alocasia/hoyadb/spikes/storage-browser/command-client.test.mjs:30:9)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 0
+# fail 2
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 100.544842
+
+target/phase-four-browser-pending-red.txt
+SHA256 c6dc33191ba76d585b9215f52566d75b7e995551e4b4cea4ba04958665ce2a5e
+TAP version 13
+# Subtest: H01 host invokes its awaited handler and returns the owned result
+ok 1 - H01 host invokes its awaited handler and returns the owned result
+  ---
+  duration_ms: 8.239724
+  type: 'test'
+  ...
+# Subtest: H03 unsafe integer Number coercion rejects before transport
+ok 2 - H03 unsafe integer Number coercion rejects before transport
+  ---
+  duration_ms: 0.579097
+  type: 'test'
+  ...
+# Subtest: H01 two owners execute FIFO and active cancellation releases a never-settling handler
+ok 3 - H01 two owners execute FIFO and active cancellation releases a never-settling handler
+  ---
+  duration_ms: 2.367393
+  type: 'test'
+  ...
+# Subtest: H02 cancellation while finish reply is delayed preserves committed success
+ok 4 - H02 cancellation while finish reply is delayed preserves committed success
+  ---
+  duration_ms: 2.218531
+  type: 'test'
+  ...
+# Subtest: H01 pending begin waits for a release signal without polling or calling handler
+not ok 5 - H01 pending begin waits for a release signal without polling or calling handler
+  ---
+  duration_ms: 6.702103
+  type: 'test'
+  location: '/Users/boristacyniak/Projects/alocasia/hoyadb/spikes/storage-browser/command-client.test.mjs:57:1'
+  failureType: 'unhandledRejection'
+  error: 'Busy'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    failure (file:///Users/boristacyniak/Projects/alocasia/hoyadb/spikes/storage-browser/command-client.js:2:39)
+    check (file:///Users/boristacyniak/Projects/alocasia/hoyadb/spikes/storage-browser/command-client.js:3:65)
+    CommandClient.run (file:///Users/boristacyniak/Projects/alocasia/hoyadb/spikes/storage-browser/command-client.js:111:7)
+    async pump (file:///Users/boristacyniak/Projects/alocasia/hoyadb/spikes/storage-browser/command-client.js:49:7)
+  ...
+# (node:83350) PromiseRejectionHandledWarning: Promise rejection was handled asynchronously (rejection id: 2)
+# (Use `node --trace-warnings ...` to show where the warning was created)
+1..5
+# tests 5
+# suites 0
+# pass 4
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 138.479278
+
+target/phase-four-browser-busy-receipt-red.txt
+SHA256 4ebcdfeef74874e238b10208925d5b16b909828ddf392fb13ac2c9ed24462c58
+TAP version 13
+# Subtest: H01 host invokes its awaited handler and returns the owned result
+ok 1 - H01 host invokes its awaited handler and returns the owned result
+  ---
+  duration_ms: 6.496127
+  type: 'test'
+  ...
+# Subtest: H03 unsafe integer Number coercion rejects before transport
+ok 2 - H03 unsafe integer Number coercion rejects before transport
+  ---
+  duration_ms: 0.470809
+  type: 'test'
+  ...
+# Subtest: H01 two owners execute FIFO and active cancellation releases a never-settling handler
+ok 3 - H01 two owners execute FIFO and active cancellation releases a never-settling handler
+  ---
+  duration_ms: 1.853266
+  type: 'test'
+  ...
+# Subtest: H02 cancellation while finish reply is delayed preserves committed success
+ok 4 - H02 cancellation while finish reply is delayed preserves committed success
+  ---
+  duration_ms: 1.740202
+  type: 'test'
+  ...
+# Subtest: H01 pending begin waits for a release signal without polling or calling handler
+ok 5 - H01 pending begin waits for a release signal without polling or calling handler
+  ---
+  duration_ms: 11.45496
+  type: 'test'
+  ...
+# Subtest: H06 owned HTTP response and application plan survive active-handler Busy without repeating work
+not ok 6 - H06 owned HTTP response and application plan survive active-handler Busy without repeating work
+  ---
+  duration_ms: 512.625417
+  type: 'test'
+  location: '/Users/boristacyniak/Projects/alocasia/hoyadb/spikes/storage-browser/command-client.test.mjs:65:1'
+  failureType: 'testCodeFailure'
+  error: 'owned response/plan was dropped after Busy'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: '=='
+  stack: |-
+    wait (file:///Users/boristacyniak/Projects/alocasia/hoyadb/spikes/storage-browser/command-client.test.mjs:86:83)
+    async TestContext.<anonymous> (file:///Users/boristacyniak/Projects/alocasia/hoyadb/spikes/storage-browser/command-client.test.mjs:91:3)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 5
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 631.97201
+
+target/phase-four-browser-wake-red.txt
+SHA256 256da16585023916fb24e50b281f8321a55ec36a308a1e1a673b93c667e1aca1
+TAP version 13
+# Subtest: H01 host invokes its awaited handler and returns the owned result
+ok 1 - H01 host invokes its awaited handler and returns the owned result
+  ---
+  duration_ms: 9.627315
+  type: 'test'
+  ...
+# Subtest: H03 unsafe integer Number coercion rejects before transport
+ok 2 - H03 unsafe integer Number coercion rejects before transport
+  ---
+  duration_ms: 0.69878
+  type: 'test'
+  ...
+# Subtest: H01 two owners execute FIFO and active cancellation releases a never-settling handler
+ok 3 - H01 two owners execute FIFO and active cancellation releases a never-settling handler
+  ---
+  duration_ms: 2.732161
+  type: 'test'
+  ...
+# Subtest: H02 cancellation while finish reply is delayed preserves committed success
+ok 4 - H02 cancellation while finish reply is delayed preserves committed success
+  ---
+  duration_ms: 2.546427
+  type: 'test'
+  ...
+# Subtest: H01 pending begin waits for a release signal without polling or calling handler
+ok 5 - H01 pending begin waits for a release signal without polling or calling handler
+  ---
+  duration_ms: 12.63451
+  type: 'test'
+  ...
+# Subtest: H06 owned HTTP response and application plan survive active-handler Busy without repeating work
+ok 6 - H06 owned HTTP response and application plan survive active-handler Busy without repeating work
+  ---
+  duration_ms: 31.333775
+  type: 'test'
+  ...
+# Subtest: H06 a finish wake during an awaited mapper is replayed when the old batch has no deadline
+not ok 7 - H06 a finish wake during an awaited mapper is replayed when the old batch has no deadline
+  ---
+  duration_ms: 509.313841
+  type: 'test'
+  location: '/Users/boristacyniak/Projects/alocasia/hoyadb/spikes/storage-browser/command-client.test.mjs:95:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    a committed new command stalled after its wake was dropped
+
+    0 !== 1
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///Users/boristacyniak/Projects/alocasia/hoyadb/spikes/storage-browser/command-client.test.mjs:112:124)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 6
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 706.860947
+
+target/phase-four-browser-pages-red.txt
+SHA256 b30fff1e607372609980ca7f3d05a9ba5189eb8244ec81a1006a770747483957
+TAP version 13
+# Subtest: H04 bounded event pages retain one drain guard and callback liveness
+not ok 1 - H04 bounded event pages retain one drain guard and callback liveness
+  ---
+  duration_ms: 8.899385
+  type: 'test'
+  location: '/Users/boristacyniak/Projects/alocasia/hoyadb/spikes/storage-browser/command-client.test.mjs:115:1'
+  failureType: 'testCodeFailure'
+  error: 'events is not iterable'
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    CommandClient.drain (file:///Users/boristacyniak/Projects/alocasia/hoyadb/spikes/storage-browser/command-client.js:179:27)
+    async TestContext.<anonymous> (file:///Users/boristacyniak/Projects/alocasia/hoyadb/spikes/storage-browser/command-client.test.mjs:120:15)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+# Subtest: H06 each bounded prepare prefix is a separate nonempty HTTP array
+not ok 2 - H06 each bounded prepare prefix is a separate nonempty HTTP array
+  ---
+  duration_ms: 503.828754
+  type: 'test'
+  location: '/Users/boristacyniak/Projects/alocasia/hoyadb/spikes/storage-browser/command-client.test.mjs:122:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+
+      [
+        '[{"part":1}]',
+    -   '[{"part":2}]'
+      ]
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0: '[{"part":1}]'
+    1: '[{"part":2}]'
+  actual:
+    0: '[{"part":1}]'
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///Users/boristacyniak/Projects/alocasia/hoyadb/spikes/storage-browser/command-client.test.mjs:130:189)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 0
+# fail 2
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 699.598129
+
+target/phase-four-browser-client-green.txt
+SHA256 5515f9616d6907ff512977f2a014e84111786bd770f04633a9d7fe660bb306c1
+TAP version 13
+# Subtest: H01 host invokes its awaited handler and returns the owned result
+ok 1 - H01 host invokes its awaited handler and returns the owned result
+  ---
+  duration_ms: 10.577969
+  type: 'test'
+  ...
+# Subtest: H03 unsafe integer Number coercion rejects before transport
+ok 2 - H03 unsafe integer Number coercion rejects before transport
+  ---
+  duration_ms: 0.644352
+  type: 'test'
+  ...
+# Subtest: H01 two owners execute FIFO and active cancellation releases a never-settling handler
+ok 3 - H01 two owners execute FIFO and active cancellation releases a never-settling handler
+  ---
+  duration_ms: 2.619107
+  type: 'test'
+  ...
+# Subtest: H02 cancellation while finish reply is delayed preserves committed success
+ok 4 - H02 cancellation while finish reply is delayed preserves committed success
+  ---
+  duration_ms: 2.429808
+  type: 'test'
+  ...
+# Subtest: H01 pending begin waits for a release signal without polling or calling handler
+ok 5 - H01 pending begin waits for a release signal without polling or calling handler
+  ---
+  duration_ms: 13.469357
+  type: 'test'
+  ...
+# Subtest: H06 owned HTTP response and application plan survive active-handler Busy without repeating work
+ok 6 - H06 owned HTTP response and application plan survive active-handler Busy without repeating work
+  ---
+  duration_ms: 31.684363
+  type: 'test'
+  ...
+# Subtest: H06 a finish wake during an awaited mapper is replayed when the old batch has no deadline
+ok 7 - H06 a finish wake during an awaited mapper is replayed when the old batch has no deadline
+  ---
+  duration_ms: 12.118214
+  type: 'test'
+  ...
+# Subtest: H04 bounded event pages retain one drain guard and callback liveness
+ok 8 - H04 bounded event pages retain one drain guard and callback liveness
+  ---
+  duration_ms: 1.514726
+  type: 'test'
+  ...
+# Subtest: H06 each bounded prepare prefix is a separate nonempty HTTP array
+ok 9 - H06 each bounded prepare prefix is a separate nonempty HTTP array
+  ---
+  duration_ms: 3.509455
+  type: 'test'
+  ...
+1..9
+# tests 9
+# suites 0
+# pass 9
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 220.551722
+
+target/phase-four-host-active-begin-red.txt
+SHA256 d2e61024007a718c076aa5f83afe9dcd75907634d4b611bc303e50536780a4b6
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+   Compiling hoyadb-core v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-core)
+   Compiling hoyadb-storage-sqlite v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-storage-sqlite)
+   Compiling hoyadb-storage-memory v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-storage-memory)
+   Compiling hoyadb-native-spike v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/spikes/cross-platform/native)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 5.03s
+     Running unittests src/lib.rs (spikes/cross-platform/native/target/debug/deps/hoyadb_native_spike-c2087483c4f2264f)
+
+running 1 test
+
+thread 'command::fixture::tests::h01_h03_shared_rpc_opens_real_owner_and_rejects_unsafe_wire' (76824779) panicked at src/../../../common/command_fixture.rs:1203:9:
+assertion `left == right` failed: Object({"error": Object({"kind": String("InvalidHandle")}), "ok": Bool(false)})
+  left: Bool(false)
+ right: Bool(true)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+test command::fixture::tests::h01_h03_shared_rpc_opens_real_owner_and_rejects_unsafe_wire ... FAILED
+
+failures:
+
+failures:
+    command::fixture::tests::h01_h03_shared_rpc_opens_real_owner_and_rejects_unsafe_wire
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 6 filtered out; finished in 0.01s
+
+error: test failed, to rerun pass `--lib`
+
+target/phase-four-host-active-begin-green.txt
+SHA256 82b3eff2ad14f7d9ababd56e13611d161a026e97939f6fa3324b7e6bb93553b6
+   Compiling hoyadb-native-spike v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/spikes/cross-platform/native)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.69s
+     Running unittests src/lib.rs (spikes/cross-platform/native/target/debug/deps/hoyadb_native_spike-c2087483c4f2264f)
+
+running 2 tests
+test command::fixture::tests::h03_tagged_values_preserve_all_numbers_and_reject_unsafe_coercion ... ok
+test command::fixture::tests::h01_h03_shared_rpc_opens_real_owner_and_rejects_unsafe_wire ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 5 filtered out; finished in 0.03s
+
+     Running tests/persistence.rs (spikes/cross-platform/native/target/debug/deps/persistence-57dd1511a13c8c6d)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 5 filtered out; finished in 0.00s
+
+
+target/phase-four-common-bounded-red.txt
+SHA256 274cd365777cd1d68d12c1d7bce70ab7ee8365dc725735975310dc333f99ad4b
+   Compiling hoyadb-native-spike v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/spikes/cross-platform/native)
+warning: constant `DEFAULT_ID` is never used
+ --> src/../../../common/command_budget.rs:4:7
+  |
+4 | const DEFAULT_ID: &str = "local:9223372036854775807";
+  |       ^^^^^^^^^^
+  |
+  = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: function `success` is never used
+ --> src/../../../common/command_budget.rs:5:15
+  |
+5 | pub(super) fn success(value: &Json) -> Result<()> {
+  |               ^^^^^^^
+
+warning: function `finish` is never used
+  --> src/../../../common/command_budget.rs:11:15
+   |
+11 | pub(super) fn finish(result: &Json) -> Result<()> {
+   |               ^^^^^^
+
+warning: function `row` is never used
+  --> src/../../../common/command_budget.rs:17:15
+   |
+17 | pub(super) fn row(id: Option<&str>, fields: &BTreeMap<String, Value>) -> Result<()> {
+   |               ^^^
+
+warning: function `batch` is never used
+  --> src/../../../common/command_budget.rs:23:15
+   |
+23 | pub(super) fn batch(
+   |               ^^^^^
+
+warning: function `wire_reports` is never used
+  --> src/../../../common/command_budget.rs:87:15
+   |
+87 | pub(super) fn wire_reports(keys: &[String]) -> Result<()> {
+   |               ^^^^^^^^^^^^
+
+warning: `hoyadb-native-spike` (lib) generated 6 warnings
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 3.54s
+     Running unittests src/lib.rs (spikes/cross-platform/native/target/debug/deps/hoyadb_native_spike-c2087483c4f2264f)
+
+running 4 tests
+
+thread 'command::fixture::tests::bounded_before_image_batch_rejects_before_any_application_mutation' (76998100) panicked at src/../../../common/command_fixture.rs:1855:9:
+assertion `left == right` failed: oversized before-images cannot be removed before a failed reply
+  left: []
+[omitted 1200728-character synthetic assertion payload; full local log path/hash above]
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+test command::fixture::tests::bounded_before_image_batch_rejects_before_any_application_mutation ... FAILED
+
+thread 'command::fixture::tests::bounded_drain_preserves_complete_events_and_snapshot_cancellation' (76998101) panicked at src/../../../common/command_fixture.rs:1278:13:
+assertion `left == right` failed: Object({"error": Object({"kind": String("LimitExceeded")}), "ok": Bool(false)})
+  left: Bool(false)
+ right: Bool(true)
+test command::fixture::tests::bounded_drain_preserves_complete_events_and_snapshot_cancellation ... FAILED
+
+thread 'command::fixture::tests::bounded_finish_rejects_before_commit_and_retains_explicit_abort' (76998102) panicked at src/../../../common/command_fixture.rs:1656:9:
+a rejected reply must not hide committed rows
+test command::fixture::tests::bounded_finish_rejects_before_commit_and_retains_explicit_abort ... FAILED
+
+thread 'command::fixture::tests::bounded_push_preserves_frozen_order_deadline_and_excludes_cancelled_cache' (76998103) panicked at src/../../../common/command_fixture.rs:1278:13:
+assertion `left == right` failed: Object({"error": Object({"kind": String("LimitExceeded")}), "ok": Bool(false)})
+  left: Bool(false)
+ right: Bool(true)
+test command::fixture::tests::bounded_push_preserves_frozen_order_deadline_and_excludes_cancelled_cache ... FAILED
+
+failures:
+
+failures:
+    command::fixture::tests::bounded_before_image_batch_rejects_before_any_application_mutation
+    command::fixture::tests::bounded_drain_preserves_complete_events_and_snapshot_cancellation
+    command::fixture::tests::bounded_finish_rejects_before_commit_and_retains_explicit_abort
+    command::fixture::tests::bounded_push_preserves_frozen_order_deadline_and_excludes_cancelled_cache
+
+test result: FAILED. 0 passed; 4 failed; 0 ignored; 0 measured; 11 filtered out; finished in 29.17s
+
+error: test failed, to rerun pass `--lib`
+
+target/phase-four-common-bounded-green.txt
+SHA256 a54620170c821df271be138129fb41a78b0858b50261122d926cfbef633287a6
+   Compiling hoyadb-native-spike v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/spikes/cross-platform/native)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 7.29s
+     Running unittests src/lib.rs (spikes/cross-platform/native/target/debug/deps/hoyadb_native_spike-c2087483c4f2264f)
+
+running 4 tests
+test command::fixture::tests::bounded_drain_preserves_complete_events_and_snapshot_cancellation ... ok
+test command::fixture::tests::bounded_before_image_batch_rejects_before_any_application_mutation ... ok
+test command::fixture::tests::bounded_finish_rejects_before_commit_and_retains_explicit_abort ... ok
+test command::fixture::tests::bounded_push_preserves_frozen_order_deadline_and_excludes_cancelled_cache has been running for over 60 seconds
+test command::fixture::tests::bounded_push_preserves_frozen_order_deadline_and_excludes_cancelled_cache ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 11 filtered out; finished in 68.94s
+
+     Running tests/persistence.rs (spikes/cross-platform/native/target/debug/deps/persistence-57dd1511a13c8c6d)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 5 filtered out; finished in 0.00s
+
+
+target/phase-four-browser-final-build.txt
+SHA256 95a76db03d3e61e09168043b4d4c6479e9efb991743e8be19bb80ca486847cfa
+    Checking hoyadb-core v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-core)
+    Checking hoyadb-storage-sqlite v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-storage-sqlite)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 2.79s
+   Compiling hoyadb-core v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-core)
+   Compiling hoyadb-storage-sqlite v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-storage-sqlite)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 1.68s
+    Checking hoyadb-core v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-core)
+    Checking hoyadb-storage-sqlite v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-storage-sqlite)
+    Checking hoyadb-storage-browser-spike v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/spikes/storage-browser)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 2.34s
+   Compiling hoyadb-core v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-core)
+   Compiling hoyadb-storage-sqlite v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-storage-sqlite)
+   Compiling hoyadb-storage-browser-spike v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/spikes/storage-browser)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 6.42s
+
+
+target/phase-four-browser-client-final-green.txt
+SHA256 a4e07f9574baeab521c763f0602674cb7b04645746341ca06f20f1ff175f9fea
+TAP version 13
+# Subtest: H01 host invokes its awaited handler and returns the owned result
+ok 1 - H01 host invokes its awaited handler and returns the owned result
+  ---
+  duration_ms: 8.183443
+  type: 'test'
+  ...
+# Subtest: H03 unsafe integer Number coercion rejects before transport
+ok 2 - H03 unsafe integer Number coercion rejects before transport
+  ---
+  duration_ms: 0.51924
+  type: 'test'
+  ...
+# Subtest: H01 two owners execute FIFO and active cancellation releases a never-settling handler
+ok 3 - H01 two owners execute FIFO and active cancellation releases a never-settling handler
+  ---
+  duration_ms: 2.200896
+  type: 'test'
+  ...
+# Subtest: H02 cancellation while finish reply is delayed preserves committed success
+ok 4 - H02 cancellation while finish reply is delayed preserves committed success
+  ---
+  duration_ms: 2.096967
+  type: 'test'
+  ...
+# Subtest: H01 pending begin waits for a release signal without polling or calling handler
+ok 5 - H01 pending begin waits for a release signal without polling or calling handler
+  ---
+  duration_ms: 11.728473
+  type: 'test'
+  ...
+# Subtest: H06 owned HTTP response and application plan survive active-handler Busy without repeating work
+ok 6 - H06 owned HTTP response and application plan survive active-handler Busy without repeating work
+  ---
+  duration_ms: 30.314259
+  type: 'test'
+  ...
+# Subtest: H06 a finish wake during an awaited mapper is replayed when the old batch has no deadline
+ok 7 - H06 a finish wake during an awaited mapper is replayed when the old batch has no deadline
+  ---
+  duration_ms: 12.009286
+  type: 'test'
+  ...
+# Subtest: H04 bounded event pages retain one drain guard and callback liveness
+ok 8 - H04 bounded event pages retain one drain guard and callback liveness
+  ---
+  duration_ms: 1.151769
+  type: 'test'
+  ...
+# Subtest: H06 each bounded prepare prefix is a separate nonempty HTTP array
+ok 9 - H06 each bounded prepare prefix is a separate nonempty HTTP array
+  ---
+  duration_ms: 2.974162
+  type: 'test'
+  ...
+1..9
+# tests 9
+# suites 0
+# pass 9
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 182.55678
+
+
+target/phase-four-browser-release-build.txt
+SHA256 9368e0092ce469ead819764e35505229ade29fbc9e60423095cd902d9fc553e3
+   Compiling unicode-ident v1.0.27
+   Compiling proc-macro2 v1.0.107
+   Compiling quote v1.0.47
+   Compiling wasm-bindgen-shared v0.2.104
+   Compiling rustversion v1.0.23
+   Compiling bumpalo v3.20.3
+   Compiling log v0.4.34
+   Compiling shlex v2.0.1
+   Compiling find-msvc-tools v0.1.15
+    Checking cfg-if v1.0.5
+    Checking once_cell v1.21.4
+   Compiling thiserror v2.0.21
+    Checking foldhash v0.2.0
+    Checking bitflags v2.13.2
+    Checking smallvec v1.16.3
+    Checking fallible-streaming-iterator v0.1.9
+    Checking fallible-iterator v0.3.0
+    Checking hoyadb-core v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-core)
+    Checking hashbrown v0.16.1
+   Compiling cc v1.9.0
+   Compiling sqlite-wasm-rs v0.5.1
+   Compiling syn v2.0.119
+   Compiling syn v3.0.9
+   Compiling wasm-bindgen v0.2.104
+   Compiling thiserror-impl v2.0.21
+   Compiling wasm-bindgen-backend v0.2.104
+   Compiling wasm-bindgen-macro-support v0.2.104
+   Compiling wasm-bindgen-macro v0.2.104
+    Checking js-sys v0.3.81
+    Checking rusqlite v0.40.2
+    Checking hoyadb-storage-sqlite v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-storage-sqlite)
+    Finished `release` profile [optimized] target(s) in 1m 34s
+   Compiling unicode-ident v1.0.27
+   Compiling cfg-if v1.0.5
+   Compiling once_cell v1.21.4
+   Compiling foldhash v0.2.0
+   Compiling fallible-iterator v0.3.0
+   Compiling fallible-streaming-iterator v0.1.9
+   Compiling smallvec v1.16.3
+   Compiling bitflags v2.13.2
+   Compiling hoyadb-core v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-core)
+   Compiling thiserror v2.0.21
+   Compiling wasm-bindgen-shared v0.2.104
+   Compiling hashbrown v0.16.1
+   Compiling wasm-bindgen v0.2.104
+   Compiling js-sys v0.3.81
+   Compiling sqlite-wasm-rs v0.5.1
+   Compiling rusqlite v0.40.2
+   Compiling hoyadb-storage-sqlite v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-storage-sqlite)
+    Finished `release` profile [optimized] target(s) in 17.87s
+   Compiling unicode-ident v1.0.27
+   Compiling proc-macro2 v1.0.107
+   Compiling quote v1.0.47
+   Compiling wasm-bindgen-shared v0.2.104
+   Compiling rustversion v1.0.23
+   Compiling log v0.4.34
+   Compiling bumpalo v3.20.3
+    Checking cfg-if v1.0.5
+    Checking once_cell v1.21.4
+   Compiling thiserror v2.0.21
+   Compiling shlex v2.0.1
+   Compiling find-msvc-tools v0.1.15
+    Checking foldhash v0.2.0
+    Checking smallvec v1.16.3
+   Compiling unicode-xid v0.2.6
+    Checking pin-project-lite v0.2.17
+   Compiling itoa v1.0.18
+    Checking bitflags v2.13.2
+    Checking fallible-iterator v0.3.0
+    Checking fallible-streaming-iterator v0.1.9
+    Checking tokio v1.54.1
+    Checking hashbrown v0.16.1
+    Checking hoyadb-core v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-core)
+   Compiling cc v1.9.0
+   Compiling sqlite-wasm-rs v0.5.1
+   Compiling syn v2.0.119
+   Compiling syn v3.0.9
+   Compiling wasm-bindgen v0.2.104
+   Compiling sealed v0.7.0
+   Compiling thiserror-impl v2.0.21
+   Compiling impartial-ord v2.0.0
+   Compiling macroific_attr_parse v3.1.0
+   Compiling macroific_core v3.1.0
+   Compiling wasm-bindgen-backend v0.2.104
+   Compiling macroific_macro v3.1.0
+   Compiling sealed v0.6.0
+   Compiling derive_more-impl v2.1.1
+   Compiling macroific_core v2.0.0
+   Compiling macroific_attr_parse v2.0.0
+   Compiling macroific v3.1.0
+   Compiling wasm-bindgen-macro-support v0.2.104
+   Compiling fancy_constructor v2.1.1
+   Compiling accessory v2.1.1
+   Compiling delegate-display v3.0.1
+   Compiling macroific_macro v2.0.0
+   Compiling wasm-bindgen-macro v0.2.104
+   Compiling macroific v2.0.0
+   Compiling indexed_db_futures_macros_internal v1.0.0
+    Checking derive_more v2.1.1
+    Checking js-sys v0.3.81
+    Checking web-sys v0.3.81
+    Checking wasm-bindgen-futures v0.4.54
+    Checking indexed_db_futures v0.6.4
+    Checking rusqlite v0.40.2
+    Checking sqlite-wasm-vfs v0.1.1
+    Checking hoyadb-storage-sqlite v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-storage-sqlite)
+    Checking hoyadb-storage-browser-spike v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/spikes/storage-browser)
+    Finished `release` profile [optimized] target(s) in 1m 57s
+   Compiling unicode-ident v1.0.27
+   Compiling once_cell v1.21.4
+   Compiling cfg-if v1.0.5
+   Compiling foldhash v0.2.0
+   Compiling smallvec v1.16.3
+   Compiling pin-project-lite v0.2.17
+   Compiling bitflags v2.13.2
+   Compiling fallible-iterator v0.3.0
+   Compiling fallible-streaming-iterator v0.1.9
+   Compiling hoyadb-core v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-core)
+   Compiling thiserror v2.0.21
+   Compiling derive_more v2.1.1
+   Compiling tokio v1.54.1
+   Compiling wasm-bindgen-shared v0.2.104
+   Compiling hashbrown v0.16.1
+   Compiling wasm-bindgen v0.2.104
+   Compiling js-sys v0.3.81
+   Compiling sqlite-wasm-rs v0.5.1
+   Compiling web-sys v0.3.81
+   Compiling wasm-bindgen-futures v0.4.54
+   Compiling rusqlite v0.40.2
+   Compiling hoyadb-storage-sqlite v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-storage-sqlite)
+   Compiling indexed_db_futures v0.6.4
+   Compiling sqlite-wasm-vfs v0.1.1
+   Compiling hoyadb-storage-browser-spike v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/spikes/storage-browser)
+    Finished `release` profile [optimized] target(s) in 1m 39s

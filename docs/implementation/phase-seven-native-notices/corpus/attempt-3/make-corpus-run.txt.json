@@ -1,0 +1,7 @@
+{
+  "format": 1,
+  "original_path": "corpus/attempt-3/make-corpus-run.txt",
+  "original_bytes": 585,
+  "original_sha256": "5585a287d6dc0b0edf1c8b865f4e8cf53c4f90de579fe756260a2dafd78e82b3",
+  "utf8": "CORPUS REJECTED: ['xcrun', 'nm', '-u', '-j', '/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/swift/Artifacts/HoyaNative.xcframework/macos-x86_64/libhoyadb_native.a'] exited 1: bindings/swift/Artifacts/HoyaNative.xcframework/macos-x86_64/libhoyadb_native.a:compiler_builtins-61f62886d21d43fa.compiler_builtins.2efc08d73144bd4e-cgu.234.rcgu.o: no symbols\n/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/swift/Artifacts/HoyaNative.xcframework/macos-x86_64/libhoyadb_native.a:compiler_builtins-61f62886d21d43fa.compiler_builtins.2efc08d73144bd4e-cgu.236.rcgu.o: no symbols\n\n"
+}

@@ -1,0 +1,60 @@
+{
+  "scope": "Clarification only; no approved snapshot, notice, archive or runtime byte changed",
+  "inventory_sha256": "2187a5da725e107250a4d71522dbd961259ad1d891b833cd3a6cbcd2ef266ca5",
+  "normalization_record_sha256": "1fd33dca2ed73e6cd275861d84d9fb58ddebc9a1c3a159133156d2c3984ac366",
+  "approval_sha256": "d1338bc62dd7d64e59ee1b15b12f4efeed5aa4010a6e759cce705b6696adb6a9",
+  "approved_ios_files_checked": 17,
+  "inventory_self_bindings": 7,
+  "rows": [
+    {
+      "path": "ios/component-licenses/boost-LICENSE_1_0.txt",
+      "raw_sha256": "beb8e42e9d6b4284e03304d05a81a0755200a965fc8d0a5e0aea1e84cf805d6e",
+      "sidecar_sha256": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566",
+      "classification": "approved derived presentation; raw recoverable from inventory license_text",
+      "approval_pinned_sha256_matches": true
+    },
+    {
+      "path": "ios/component-licenses/DoubleConversion-LICENSE",
+      "raw_sha256": "4af93c12062c58058378de2397dc1c92bbff9ddfb1d583a01c84127557ce97ca",
+      "sidecar_sha256": "4af93c12062c58058378de2397dc1c92bbff9ddfb1d583a01c84127557ce97ca",
+      "classification": "exact upstream bytes",
+      "approval_pinned_sha256_matches": true
+    },
+    {
+      "path": "ios/component-licenses/glog-COPYING",
+      "raw_sha256": "0fc497129c5c69ff6f22da6933c7e4aaef082fde8437fd57680c2780100772a4",
+      "sidecar_sha256": "0fc497129c5c69ff6f22da6933c7e4aaef082fde8437fd57680c2780100772a4",
+      "classification": "exact upstream bytes",
+      "approval_pinned_sha256_matches": true
+    },
+    {
+      "path": "ios/component-licenses/fast_float-LICENSE-MIT",
+      "raw_sha256": "e562f3f974ced7e69dd1db77b820b36bcf8f30377f1aa105723fba449c53c4e6",
+      "sidecar_sha256": "e562f3f974ced7e69dd1db77b820b36bcf8f30377f1aa105723fba449c53c4e6",
+      "classification": "exact upstream bytes",
+      "approval_pinned_sha256_matches": true
+    },
+    {
+      "path": "ios/component-licenses/fmt-LICENSE",
+      "raw_sha256": "07580f2a3b35709ce703d523f447b242f6dfec7582a8c0df102c7fa2849375f8",
+      "sidecar_sha256": "07580f2a3b35709ce703d523f447b242f6dfec7582a8c0df102c7fa2849375f8",
+      "classification": "exact upstream bytes",
+      "approval_pinned_sha256_matches": true
+    },
+    {
+      "path": "ios/component-licenses/RCT-Folly-LICENSE",
+      "raw_sha256": "2206c00af7013581ae0d7c8c8a0089f02fab621913daac019b32336bd4d1e1db",
+      "sidecar_sha256": "2206c00af7013581ae0d7c8c8a0089f02fab621913daac019b32336bd4d1e1db",
+      "classification": "exact upstream bytes",
+      "approval_pinned_sha256_matches": true
+    },
+    {
+      "path": "ios/component-licenses/SocketRocket-LICENSE",
+      "raw_sha256": "41c74b84758ab303b091b0afbf958de909559556c8f1591dc4d687ea184356ab",
+      "sidecar_sha256": "d7d8e55c08282204909f7c30d2c75ea0c3433fd69292e6f756bae1ffef9e1304",
+      "classification": "approved derived presentation; raw recoverable from inventory license_text",
+      "approval_pinned_sha256_matches": true
+    }
+  ],
+  "decision": "Keep the approved presentation snapshot; explicitly link its raw-versus-presentation map. No byte restoration or new approval is inferred."
+}

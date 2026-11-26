@@ -1,0 +1,143 @@
+{
+ "source": "https://raw.githubusercontent.com/netty/netty/netty-4.1.139.Final/NOTICE.txt",
+ "local": "fetch/licenses-r2/netty-4.1.139.Final-NOTICE.txt",
+ "sha256": "64e368e79be71463922ebb102b33088667cf975edeed8df7f68efe9f89835ca1",
+ "in_jar_notice_files": "none in any of the 11 closure Netty JARs (zip listing)",
+ "coordinate_osv": "OSV querybatch of the 21 closure coordinates (r2-osv-query.json) returned no vulns for io.netty:* 4.1.139.Final (fetch/r2-osv-result.json); point-in-time result",
+ "claim_limit": "OSV-by-coordinate does not cover modified embedded third-party code; applicability and upstream versions of these portions are UNKNOWN. Not \"JCTools only\", not \"0 OSV for all embedded code\".",
+ "modified_or_contained": [
+  {
+   "notice_entry": "JSR-166 collections extensions",
+   "class_prefix_hint": null,
+   "present_in": {},
+   "mapping": "not mapped: no unambiguous class prefix; presence/version unknown",
+   "upstream_version_of_modified_code": "unknown (NOTICE states none)"
+  },
+  {
+   "notice_entry": "Robert Harder Base64",
+   "class_prefix_hint": "io/netty/handler/codec/base64/Base64",
+   "present_in": {
+    "netty-codec-4.1.139.Final.jar": 6
+   },
+   "mapping": "prefix found",
+   "upstream_version_of_modified_code": "unknown (NOTICE states none)"
+  },
+  {
+   "notice_entry": "Webbit",
+   "class_prefix_hint": "io/netty/handler/codec/http/websocketx/",
+   "present_in": {
+    "netty-codec-http-4.1.139.Final.jar": 117
+   },
+   "mapping": "prefix found",
+   "upstream_version_of_modified_code": "unknown (NOTICE states none)"
+  },
+  {
+   "notice_entry": "SLF4J portion",
+   "class_prefix_hint": "io/netty/util/internal/logging/MessageFormatter",
+   "present_in": {
+    "netty-common-4.1.139.Final.jar": 1
+   },
+   "mapping": "prefix found",
+   "upstream_version_of_modified_code": "unknown (NOTICE states none)"
+  },
+  {
+   "notice_entry": "Apache Harmony",
+   "class_prefix_hint": null,
+   "present_in": {},
+   "mapping": "not mapped: no unambiguous class prefix; presence/version unknown",
+   "upstream_version_of_modified_code": "unknown (NOTICE states none)"
+  },
+  {
+   "notice_entry": "jbzip2",
+   "class_prefix_hint": "io/netty/handler/codec/compression/Bzip2",
+   "present_in": {
+    "netty-codec-4.1.139.Final.jar": 23
+   },
+   "mapping": "prefix found",
+   "upstream_version_of_modified_code": "unknown (NOTICE states none)"
+  },
+  {
+   "notice_entry": "libdivsufsort",
+   "class_prefix_hint": "io/netty/handler/codec/compression/Bzip2DivSufSort",
+   "present_in": {
+    "netty-codec-4.1.139.Final.jar": 4
+   },
+   "mapping": "prefix found",
+   "upstream_version_of_modified_code": "unknown (NOTICE states none)"
+  },
+  {
+   "notice_entry": "JCTools",
+   "class_prefix_hint": "io/netty/util/internal/shaded/org/jctools/",
+   "present_in": {
+    "netty-common-4.1.139.Final.jar": 125
+   },
+   "mapping": "prefix found",
+   "upstream_version_of_modified_code": "unknown (NOTICE states none)"
+  },
+  {
+   "notice_entry": "jfastlz",
+   "class_prefix_hint": "io/netty/handler/codec/compression/FastLz",
+   "present_in": {
+    "netty-codec-4.1.139.Final.jar": 5
+   },
+   "mapping": "prefix found",
+   "upstream_version_of_modified_code": "unknown (NOTICE states none)"
+  },
+  {
+   "notice_entry": "Protocol Buffers portion",
+   "class_prefix_hint": "io/netty/handler/codec/protobuf/",
+   "present_in": {
+    "netty-codec-4.1.139.Final.jar": 7
+   },
+   "mapping": "prefix found",
+   "upstream_version_of_modified_code": "unknown (NOTICE states none)"
+  },
+  {
+   "notice_entry": "HPACK (Twitter, Cory Benfield, Tatsuhiro Tsujikawa)",
+   "class_prefix_hint": "io/netty/handler/codec/http2/Hpack",
+   "present_in": {
+    "netty-codec-http2-4.1.139.Final.jar": 20
+   },
+   "mapping": "prefix found",
+   "upstream_version_of_modified_code": "unknown (NOTICE states none)"
+  },
+  {
+   "notice_entry": "Apache Commons Lang portion",
+   "class_prefix_hint": null,
+   "present_in": {},
+   "mapping": "not mapped: no unambiguous class prefix; presence/version unknown",
+   "upstream_version_of_modified_code": "unknown (NOTICE states none)"
+  },
+  {
+   "notice_entry": "Maven Wrapper scripts",
+   "class_prefix_hint": null,
+   "present_in": {},
+   "mapping": "not mapped: no unambiguous class prefix; presence/version unknown",
+   "upstream_version_of_modified_code": "unknown (NOTICE states none)"
+  },
+  {
+   "notice_entry": "dnsinfo.h",
+   "class_prefix_hint": null,
+   "present_in": {},
+   "mapping": "not mapped: no unambiguous class prefix; presence/version unknown",
+   "upstream_version_of_modified_code": "unknown (NOTICE states none)"
+  }
+ ],
+ "optional_dependencies_not_in_closure": [
+  "JZlib",
+  "Compress-LZF",
+  "lz4",
+  "lzma-java",
+  "zstd-jni",
+  "Bouncy Castle Crypto APIs",
+  "Snappy",
+  "JBoss Marshalling",
+  "Caliper",
+  "Apache Commons Logging",
+  "Apache Log4J",
+  "Aalto XML",
+  "Brotli4j",
+  "Protocol Buffers (optional dependency part)"
+ ],
+ "optional_note": "Of the NOTICE optional dependencies, only Bouncy Castle is in closure-v2.json, and only because bcprov/bcpkix/bcutil 1.85 are explicit R2 roots (r2-roots.txt), not via a Netty edge; the others are absent from closure-v2.json components (name check)."
+}

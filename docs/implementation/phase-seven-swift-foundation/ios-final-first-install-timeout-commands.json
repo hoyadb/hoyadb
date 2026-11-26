@@ -1,0 +1,13 @@
+[
+  {
+    "argv": [
+      "codesign",
+      "--force",
+      "--sign",
+      "-",
+      "target/phase-seven-native/GeneralConsumer.app"
+    ],
+    "exit_code": 0,
+    "output": ""
+  }
+]

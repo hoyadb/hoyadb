@@ -1,0 +1,54 @@
+"""Inert detached-signature verification (existing gpg, fresh short owned public-only home). Identity trust UNKNOWN."""
+from pathlib import Path
+import hashlib, json, re, subprocess, tempfile, os
+here = Path(__file__).resolve().parents[1]
+gpg = '/usr/local/bin/gpg'
+home = Path(tempfile.mkdtemp(prefix='hoya-pgp-')); home.chmod(0o700)
+base = [gpg, '--homedir', str(home), '--no-options', '--no-autostart', '--batch', '--no-auto-key-retrieve']
+keys = here / 'attestation/keys'; keys.mkdir(parents=True, exist_ok=True)
+def run(argv):
+    p = subprocess.run(argv, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, errors='replace', timeout=120)
+    return {'command': argv, 'exit_code': p.returncode, 'stdout': p.stdout, 'stderr': p.stderr}
+def fetch(url, out):
+    p = subprocess.run(['curl', '--fail', '--location', '--proto', '=https', '--proto-redir', '=https', '--tlsv1.2', '--silent', '--show-error', '--max-time', '60',
+                        '--max-filesize', '2000000', '--output', str(out), url], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, timeout=90)
+    rec = {'url': url, 'exit_code': p.returncode, 'stderr': p.stderr}
+    if p.returncode == 0:
+        rec['sha256'] = hashlib.sha256(out.read_bytes()).hexdigest()
+    return rec
+results = []
+done = {}
+for asc in sorted((here / 'closure').rglob('*.asc')):
+    target = asc.with_name(asc.name[:-4])
+    packets = run(base + ['--list-packets', str(asc)])
+    fpr = re.search(r'issuer fpr v\d ([A-Fa-f0-9]{40,64})', packets['stdout'])
+    keyid = re.search(r'keyid ([A-Fa-f0-9]{16})', packets['stdout'])
+    lookup = (fpr[1] if fpr else keyid[1]).upper() if (fpr or keyid) else None
+    entry = {'file': str(target.relative_to(here)), 'file_sha256': hashlib.sha256(target.read_bytes()).hexdigest(), 'asc_sha256': hashlib.sha256(asc.read_bytes()).hexdigest(),
+             'lookup': lookup, 'lookup_kind': 'issuer fingerprint' if fpr else '64-bit key ID (confirmed by VALIDSIG)', 'digest_algo_sha1': '\tdigest algo 2,' in packets['stdout']}
+    if lookup and lookup not in done:
+        attempts = []
+        for name, url in [('keys.openpgp.org', f'https://keys.openpgp.org/vks/v1/by-{"fingerprint" if fpr else "keyid"}/{lookup}'),
+                          ('keyserver.ubuntu.com', f'https://keyserver.ubuntu.com/pks/lookup?op=get&options=mr&search=0x{lookup}')]:
+            out = keys / f'{lookup}-{name}.asc'
+            rec = fetch(url, out)
+            if rec['exit_code'] == 0:
+                rec['import'] = run(base + ['--import-options', 'import-minimal', '--import', str(out)])
+                rec['has_uid'] = 'uid:' in run(base + ['--with-colons', '--list-keys', lookup])['stdout']
+            attempts.append(rec)
+            if rec.get('has_uid'):
+                break
+        done[lookup] = attempts
+    entry['key_requests'] = done.get(lookup)
+    v = run(base + ['--status-fd', '1', '--verify', str(asc), str(target)])
+    entry['verify_status'] = v['stdout']
+    entry['goodsig'] = '[GNUPG:] GOODSIG' in v['stdout']
+    entry['validsig'] = (re.search(r'\[GNUPG:\] VALIDSIG (\S+)', v['stdout']) or [None, None])[1]
+    entry['primary'] = (re.search(r'\[GNUPG:\] VALIDSIG (?:\S+ ){9}(\S+)', v['stdout']) or [None, None])[1]
+    entry['uid'] = (re.search(r'\[GNUPG:\] GOODSIG \S+ (.*)', v['stdout']) or [None, None])[1]
+    entry['expired_or_revoked'] = [t for t in ('EXPKEYSIG', 'REVKEYSIG', 'EXPSIG', 'KEYEXPIRED', 'KEYREVOKED') if t in v['stdout']]
+    entry['identity_trust'] = 'UNKNOWN'
+    results.append(entry)
+(here / 'attestation/verification.json').write_text(json.dumps({'gpg_sha256': hashlib.sha256(Path(os.path.realpath(gpg)).read_bytes()).hexdigest(), 'owned_home': str(home), 'results': results}, indent=2) + '\n')
+for e in results:
+    print(e['file'].split('/')[-1], 'GOOD' if e['goodsig'] else 'NOT-GOOD', e['primary'], e['uid'], e['expired_or_revoked'], 'sha1-digest' if e['digest_algo_sha1'] else '')

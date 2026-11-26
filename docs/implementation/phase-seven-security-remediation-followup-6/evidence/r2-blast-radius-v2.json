@@ -1,0 +1,70 @@
+{
+ "repo": "target/phase-seven-rn/android/repo-v2",
+ "note": "upgrade-only selection raises every co-resolved consumer of these modules to the R2 version; actual selection proven only by the real graph",
+ "modules": {
+  "commons-io:commons-io": {
+   "repo_v2_versions": {
+    "2.16.1": [
+     "commons-io-2.16.1.jar",
+     "commons-io-2.16.1.pom"
+    ],
+    "2.8.0": [
+     "commons-io-2.8.0.pom"
+    ]
+   },
+   "jar_versions": [
+    "2.16.1"
+   ],
+   "pom_only_versions": [
+    "2.8.0"
+   ],
+   "r2_selected_upgrade_only": "2.20.0"
+  },
+  "commons-codec:commons-codec": {
+   "repo_v2_versions": {
+    "1.10": [
+     "commons-codec-1.10.pom"
+    ],
+    "1.11": [
+     "commons-codec-1.11.jar",
+     "commons-codec-1.11.pom"
+    ]
+   },
+   "jar_versions": [
+    "1.11"
+   ],
+   "pom_only_versions": [
+    "1.10"
+   ],
+   "r2_selected_upgrade_only": "1.19.0"
+  },
+  "org/slf4j/slf4j-api": {
+   "repo_v2_versions": {
+    "1.7.30": [
+     "slf4j-api-1.7.30.jar",
+     "slf4j-api-1.7.30.pom"
+    ],
+    "1.7.32": [
+     "slf4j-api-1.7.32.pom"
+    ],
+    "1.7.36": [
+     "slf4j-api-1.7.36.pom"
+    ]
+   },
+   "jar_versions": [
+    "1.7.30"
+   ],
+   "pom_only_versions": [
+    "1.7.32",
+    "1.7.36"
+   ],
+   "r2_selected_upgrade_only": "1.7.36"
+  },
+  "org/apache/commons/commons-lang3": {
+   "repo_v2_versions": {},
+   "jar_versions": [],
+   "pom_only_versions": [],
+   "r2_selected_upgrade_only": "3.18.0"
+  }
+ }
+}

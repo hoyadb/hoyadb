@@ -1,0 +1,24 @@
+{
+  "command": [
+    "/Users/boristacyniak/.gradle/wrapper/dists/gradle-9.3.1-bin/23ovyewtku6u96viwx3xl3oks/gradle-9.3.1/bin/gradle",
+    "--no-daemon",
+    "--no-build-cache",
+    "--no-configuration-cache",
+    "--console=plain",
+    "--max-workers=2",
+    "--write-locks",
+    "--offline",
+    "captureMetadata"
+  ],
+  "exit_code": 0,
+  "before": {
+    "resolution.json": "303d2bf733d3b38a582b3bcb8c241d8ad09c922624e642ed47c2766b97c2fe5e",
+    "gradle.lockfile": "9f0bdfec03956011ed48065715814a7c7f07ad41d7f588e6d0e00dafe6a38add"
+  },
+  "after": {
+    "resolution.json": "303d2bf733d3b38a582b3bcb8c241d8ad09c922624e642ed47c2766b97c2fe5e",
+    "gradle.lockfile": "9f0bdfec03956011ed48065715814a7c7f07ad41d7f588e6d0e00dafe6a38add"
+  },
+  "byte_identical": true,
+  "observed_unix_ns": 1792876351121764000
+}

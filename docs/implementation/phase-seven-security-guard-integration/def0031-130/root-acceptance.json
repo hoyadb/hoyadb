@@ -1,0 +1,53 @@
+{
+  "scope": "DEF-0031 UP01-UP05: image-path, architecture and native-library entry/name type validation only",
+  "preparation_commit": "04b8d99cbcce029103f00d7c752ea03efac0c423",
+  "packet_index_sha256": "5db34eb18e4fa4d7241d2d8de4634115533098ca5b39fdc5c7618f03dc2c1d74",
+  "successor_manifest_sha256": "8985247d5a9534397ac72f33a35076953f08c805ff4ae4d752b06d3a14f57f69",
+  "root_tests": {
+    "identity_file": "run-identity.json",
+    "identity_sha256": "0c62982a7a1a144803765f4130544e36ff720baa387d402219d9cf5bd57ddde2",
+    "normal": 130,
+    "optimized": 130,
+    "no_skips": true,
+    "sources_unchanged": true,
+    "sources_equal_successor": true
+  },
+  "review": {
+    "agent": "e6f3b33e-7787-43bb-904f-646b096c9154",
+    "model": "claude-opus-5-5",
+    "message_id": "93a61fbc-4850-4e65-865b-9ccadd425d60",
+    "verdict": "PASS",
+    "final_phase_seven_rounds_counted": 0
+  },
+  "binding_checks": {
+    "packet_entries": 23,
+    "source_entries": 16,
+    "predecessor_equals_head_and_snapshot": true,
+    "red_implementation_equals_predecessor": true,
+    "red_and_green_tests_equal": true,
+    "red_and_green_log_hashes_match": true,
+    "red_and_green_interpreter_hash_matches_current": true,
+    "followup_9_and_10_unchanged": true
+  },
+  "audit": {
+    "new_try_blocks": 0,
+    "production_assert_nodes": 0,
+    "R1_pin_unchanged": true
+  },
+  "limitations": [
+    "Validation is scoped to the named fields, not general observation-container or class-entry validation",
+    "No actual record, image or baseline approved or enrolled",
+    "No host reader, collector, controller, JVM, Gradle, compiler or native execution in this correction",
+    "Native lifetime completeness and effective runtime properties remain open; execution holds unchanged"
+  ],
+  "whitespace": {
+    "findings": 3,
+    "path": "docs/implementation/phase-seven-security-remediation-followup-11/changes.diff",
+    "lines": [
+      68,
+      127,
+      137
+    ],
+    "classification": "Single-space blank context markers in exact preserved diff evidence; no first-party source finding. Frozen bytes are preserved."
+  }
+}

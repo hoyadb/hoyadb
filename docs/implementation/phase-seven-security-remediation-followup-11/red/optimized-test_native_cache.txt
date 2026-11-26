@@ -1,0 +1,1599 @@
+...............FFFFFFFF.FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF...........................
+======================================================================
+FAIL: test_up01_unhashable_install_path_does_not_escape_validation (__main__.InputTypes.test_up01_unhashable_install_path_does_not_escape_validation) (schema='v1', value='list')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 577, in call
+    return function(*args, **kwargs)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 175, in check_host
+    errors = _record_errors(record)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 115, in _record_errors
+    image_errors = _image_errors(record)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 159, in _image_errors
+    if len(set(paths)) != len(paths):
+           ~~~^^^^^^^
+TypeError: cannot use 'list' as a set element (unhashable type: 'list')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 590, in test_up01_unhashable_install_path_does_not_escape_validation
+    direct = self.call(N.check_host, N.SystemCacheEvidence(record, {}, {}))
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 579, in call
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised TypeError instead of rejecting
+
+======================================================================
+FAIL: test_up01_unhashable_install_path_does_not_escape_validation (__main__.InputTypes.test_up01_unhashable_install_path_does_not_escape_validation) (schema='v1', value='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 577, in call
+    return function(*args, **kwargs)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 175, in check_host
+    errors = _record_errors(record)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 115, in _record_errors
+    image_errors = _image_errors(record)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 159, in _image_errors
+    if len(set(paths)) != len(paths):
+           ~~~^^^^^^^
+TypeError: cannot use 'dict' as a set element (unhashable type: 'dict')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 590, in test_up01_unhashable_install_path_does_not_escape_validation
+    direct = self.call(N.check_host, N.SystemCacheEvidence(record, {}, {}))
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 579, in call
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised TypeError instead of rejecting
+
+======================================================================
+FAIL: test_up01_unhashable_install_path_does_not_escape_validation (__main__.InputTypes.test_up01_unhashable_install_path_does_not_escape_validation) (schema='v2', value='list')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 577, in call
+    return function(*args, **kwargs)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 175, in check_host
+    errors = _record_errors(record)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 115, in _record_errors
+    image_errors = _image_errors(record)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 159, in _image_errors
+    if len(set(paths)) != len(paths):
+           ~~~^^^^^^^
+TypeError: cannot use 'list' as a set element (unhashable type: 'list')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 590, in test_up01_unhashable_install_path_does_not_escape_validation
+    direct = self.call(N.check_host, N.SystemCacheEvidence(record, {}, {}))
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 579, in call
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised TypeError instead of rejecting
+
+======================================================================
+FAIL: test_up01_unhashable_install_path_does_not_escape_validation (__main__.InputTypes.test_up01_unhashable_install_path_does_not_escape_validation) (schema='v2', value='dict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 577, in call
+    return function(*args, **kwargs)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 175, in check_host
+    errors = _record_errors(record)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 115, in _record_errors
+    image_errors = _image_errors(record)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 159, in _image_errors
+    if len(set(paths)) != len(paths):
+           ~~~^^^^^^^
+TypeError: cannot use 'dict' as a set element (unhashable type: 'dict')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 590, in test_up01_unhashable_install_path_does_not_escape_validation
+    direct = self.call(N.check_host, N.SystemCacheEvidence(record, {}, {}))
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 579, in call
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised TypeError instead of rejecting
+
+======================================================================
+FAIL: test_up02_every_non_string_install_path_rejects_without_coercion (__main__.InputTypes.test_up02_every_non_string_install_path_rejects_without_coercion) (schema='v1', value="['malformed-value-sentinel-91c4']")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 577, in call
+    return function(*args, **kwargs)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 175, in check_host
+    errors = _record_errors(record)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 115, in _record_errors
+    image_errors = _image_errors(record)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 159, in _image_errors
+    if len(set(paths)) != len(paths):
+           ~~~^^^^^^^
+TypeError: cannot use 'list' as a set element (unhashable type: 'list')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 602, in test_up02_every_non_string_install_path_rejects_without_coercion
+    direct = self.call(N.check_host, N.SystemCacheEvidence(record, {}, {}))
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 579, in call
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised TypeError instead of rejecting
+
+======================================================================
+FAIL: test_up02_every_non_string_install_path_rejects_without_coercion (__main__.InputTypes.test_up02_every_non_string_install_path_rejects_without_coercion) (schema='v1', value="{'malformed-value-sentinel-91c4': 'malformed-value-sentinel-91c4'}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 577, in call
+    return function(*args, **kwargs)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 175, in check_host
+    errors = _record_errors(record)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 115, in _record_errors
+    image_errors = _image_errors(record)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 159, in _image_errors
+    if len(set(paths)) != len(paths):
+           ~~~^^^^^^^
+TypeError: cannot use 'dict' as a set element (unhashable type: 'dict')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 602, in test_up02_every_non_string_install_path_rejects_without_coercion
+    direct = self.call(N.check_host, N.SystemCacheEvidence(record, {}, {}))
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 579, in call
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised TypeError instead of rejecting
+
+======================================================================
+FAIL: test_up02_every_non_string_install_path_rejects_without_coercion (__main__.InputTypes.test_up02_every_non_string_install_path_rejects_without_coercion) (schema='v2', value="['malformed-value-sentinel-91c4']")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 577, in call
+    return function(*args, **kwargs)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 175, in check_host
+    errors = _record_errors(record)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 115, in _record_errors
+    image_errors = _image_errors(record)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 159, in _image_errors
+    if len(set(paths)) != len(paths):
+           ~~~^^^^^^^
+TypeError: cannot use 'list' as a set element (unhashable type: 'list')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 602, in test_up02_every_non_string_install_path_rejects_without_coercion
+    direct = self.call(N.check_host, N.SystemCacheEvidence(record, {}, {}))
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 579, in call
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised TypeError instead of rejecting
+
+======================================================================
+FAIL: test_up02_every_non_string_install_path_rejects_without_coercion (__main__.InputTypes.test_up02_every_non_string_install_path_rejects_without_coercion) (schema='v2', value="{'malformed-value-sentinel-91c4': 'malformed-value-sentinel-91c4'}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 577, in call
+    return function(*args, **kwargs)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 175, in check_host
+    errors = _record_errors(record)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 115, in _record_errors
+    image_errors = _image_errors(record)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 159, in _image_errors
+    if len(set(paths)) != len(paths):
+           ~~~^^^^^^^
+TypeError: cannot use 'dict' as a set element (unhashable type: 'dict')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 602, in test_up02_every_non_string_install_path_rejects_without_coercion
+    direct = self.call(N.check_host, N.SystemCacheEvidence(record, {}, {}))
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 579, in call
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised TypeError instead of rejecting
+
+======================================================================
+FAIL: test_up04_invalid_architecture_never_reaches_filename_construction (__main__.InputTypes.test_up04_invalid_architecture_never_reaches_filename_construction) (schema='v1', value="''")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 628, in test_up04_invalid_architecture_never_reaches_filename_construction
+    self.assertFalse(any('cache_files' in e for e in direct), direct)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false : ['system cache record: arch', 'system cache record: cache_files: incomplete SHA256 manifest']
+
+======================================================================
+FAIL: test_up04_invalid_architecture_never_reaches_filename_construction (__main__.InputTypes.test_up04_invalid_architecture_never_reaches_filename_construction) (schema='v1', value='None')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 577, in call
+    return function(*args, **kwargs)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 175, in check_host
+    errors = _record_errors(record)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 106, in _record_errors
+    errors += _file_errors(record)
+              ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 135, in _file_errors
+    main = 'dyld_shared_cache_' + arch
+           ~~~~~~~~~~~~~~~~~~~~~^~~~~~
+TypeError: can only concatenate str (not "NoneType") to str
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 626, in test_up04_invalid_architecture_never_reaches_filename_construction
+    direct = self.call(N.check_host, N.SystemCacheEvidence(record, {}, {}))
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 579, in call
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised TypeError instead of rejecting
+
+======================================================================
+FAIL: test_up04_invalid_architecture_never_reaches_filename_construction (__main__.InputTypes.test_up04_invalid_architecture_never_reaches_filename_construction) (schema='v1', value='True')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 577, in call
+    return function(*args, **kwargs)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 175, in check_host
+    errors = _record_errors(record)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 106, in _record_errors
+    errors += _file_errors(record)
+              ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 135, in _file_errors
+    main = 'dyld_shared_cache_' + arch
+           ~~~~~~~~~~~~~~~~~~~~~^~~~~~
+TypeError: can only concatenate str (not "bool") to str
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 626, in test_up04_invalid_architecture_never_reaches_filename_construction
+    direct = self.call(N.check_host, N.SystemCacheEvidence(record, {}, {}))
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 579, in call
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised TypeError instead of rejecting
+
+======================================================================
+FAIL: test_up04_invalid_architecture_never_reaches_filename_construction (__main__.InputTypes.test_up04_invalid_architecture_never_reaches_filename_construction) (schema='v1', value='0')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 577, in call
+    return function(*args, **kwargs)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 175, in check_host
+    errors = _record_errors(record)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 106, in _record_errors
+    errors += _file_errors(record)
+              ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 135, in _file_errors
+    main = 'dyld_shared_cache_' + arch
+           ~~~~~~~~~~~~~~~~~~~~~^~~~~~
+TypeError: can only concatenate str (not "int") to str
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 626, in test_up04_invalid_architecture_never_reaches_filename_construction
+    direct = self.call(N.check_host, N.SystemCacheEvidence(record, {}, {}))
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 579, in call
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised TypeError instead of rejecting
+
+======================================================================
+FAIL: test_up04_invalid_architecture_never_reaches_filename_construction (__main__.InputTypes.test_up04_invalid_architecture_never_reaches_filename_construction) (schema='v1', value='1.5')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 577, in call
+    return function(*args, **kwargs)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 175, in check_host
+    errors = _record_errors(record)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 106, in _record_errors
+    errors += _file_errors(record)
+              ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 135, in _file_errors
+    main = 'dyld_shared_cache_' + arch
+           ~~~~~~~~~~~~~~~~~~~~~^~~~~~
+TypeError: can only concatenate str (not "float") to str
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 626, in test_up04_invalid_architecture_never_reaches_filename_construction
+    direct = self.call(N.check_host, N.SystemCacheEvidence(record, {}, {}))
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 579, in call
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised TypeError instead of rejecting
+
+======================================================================
+FAIL: test_up04_invalid_architecture_never_reaches_filename_construction (__main__.InputTypes.test_up04_invalid_architecture_never_reaches_filename_construction) (schema='v1', value="['malformed-value-sentinel-91c4']")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 577, in call
+    return function(*args, **kwargs)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 175, in check_host
+    errors = _record_errors(record)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 106, in _record_errors
+    errors += _file_errors(record)
+              ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 135, in _file_errors
+    main = 'dyld_shared_cache_' + arch
+           ~~~~~~~~~~~~~~~~~~~~~^~~~~~
+TypeError: can only concatenate str (not "list") to str
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 626, in test_up04_invalid_architecture_never_reaches_filename_construction
+    direct = self.call(N.check_host, N.SystemCacheEvidence(record, {}, {}))
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 579, in call
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised TypeError instead of rejecting
+
+======================================================================
+FAIL: test_up04_invalid_architecture_never_reaches_filename_construction (__main__.InputTypes.test_up04_invalid_architecture_never_reaches_filename_construction) (schema='v1', value="{'malformed-value-sentinel-91c4': 'malformed-value-sentinel-91c4'}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 577, in call
+    return function(*args, **kwargs)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 175, in check_host
+    errors = _record_errors(record)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 106, in _record_errors
+    errors += _file_errors(record)
+              ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 135, in _file_errors
+    main = 'dyld_shared_cache_' + arch
+           ~~~~~~~~~~~~~~~~~~~~~^~~~~~
+TypeError: can only concatenate str (not "dict") to str
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 626, in test_up04_invalid_architecture_never_reaches_filename_construction
+    direct = self.call(N.check_host, N.SystemCacheEvidence(record, {}, {}))
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 579, in call
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised TypeError instead of rejecting
+
+======================================================================
+FAIL: test_up04_invalid_architecture_never_reaches_filename_construction (__main__.InputTypes.test_up04_invalid_architecture_never_reaches_filename_construction) (schema='v2', value="''")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 628, in test_up04_invalid_architecture_never_reaches_filename_construction
+    self.assertFalse(any('cache_files' in e for e in direct), direct)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false : ['system cache record: arch', 'system cache record: cache_files: incomplete SHA256 manifest']
+
+======================================================================
+FAIL: test_up04_invalid_architecture_never_reaches_filename_construction (__main__.InputTypes.test_up04_invalid_architecture_never_reaches_filename_construction) (schema='v2', value='None')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 577, in call
+    return function(*args, **kwargs)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 175, in check_host
+    errors = _record_errors(record)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 106, in _record_errors
+    errors += _file_errors(record)
+              ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 135, in _file_errors
+    main = 'dyld_shared_cache_' + arch
+           ~~~~~~~~~~~~~~~~~~~~~^~~~~~
+TypeError: can only concatenate str (not "NoneType") to str
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 626, in test_up04_invalid_architecture_never_reaches_filename_construction
+    direct = self.call(N.check_host, N.SystemCacheEvidence(record, {}, {}))
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 579, in call
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised TypeError instead of rejecting
+
+======================================================================
+FAIL: test_up04_invalid_architecture_never_reaches_filename_construction (__main__.InputTypes.test_up04_invalid_architecture_never_reaches_filename_construction) (schema='v2', value='True')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 577, in call
+    return function(*args, **kwargs)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 175, in check_host
+    errors = _record_errors(record)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 106, in _record_errors
+    errors += _file_errors(record)
+              ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 135, in _file_errors
+    main = 'dyld_shared_cache_' + arch
+           ~~~~~~~~~~~~~~~~~~~~~^~~~~~
+TypeError: can only concatenate str (not "bool") to str
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 626, in test_up04_invalid_architecture_never_reaches_filename_construction
+    direct = self.call(N.check_host, N.SystemCacheEvidence(record, {}, {}))
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 579, in call
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised TypeError instead of rejecting
+
+======================================================================
+FAIL: test_up04_invalid_architecture_never_reaches_filename_construction (__main__.InputTypes.test_up04_invalid_architecture_never_reaches_filename_construction) (schema='v2', value='0')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 577, in call
+    return function(*args, **kwargs)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 175, in check_host
+    errors = _record_errors(record)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 106, in _record_errors
+    errors += _file_errors(record)
+              ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 135, in _file_errors
+    main = 'dyld_shared_cache_' + arch
+           ~~~~~~~~~~~~~~~~~~~~~^~~~~~
+TypeError: can only concatenate str (not "int") to str
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 626, in test_up04_invalid_architecture_never_reaches_filename_construction
+    direct = self.call(N.check_host, N.SystemCacheEvidence(record, {}, {}))
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 579, in call
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised TypeError instead of rejecting
+
+======================================================================
+FAIL: test_up04_invalid_architecture_never_reaches_filename_construction (__main__.InputTypes.test_up04_invalid_architecture_never_reaches_filename_construction) (schema='v2', value='1.5')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 577, in call
+    return function(*args, **kwargs)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 175, in check_host
+    errors = _record_errors(record)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 106, in _record_errors
+    errors += _file_errors(record)
+              ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 135, in _file_errors
+    main = 'dyld_shared_cache_' + arch
+           ~~~~~~~~~~~~~~~~~~~~~^~~~~~
+TypeError: can only concatenate str (not "float") to str
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 626, in test_up04_invalid_architecture_never_reaches_filename_construction
+    direct = self.call(N.check_host, N.SystemCacheEvidence(record, {}, {}))
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 579, in call
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised TypeError instead of rejecting
+
+======================================================================
+FAIL: test_up04_invalid_architecture_never_reaches_filename_construction (__main__.InputTypes.test_up04_invalid_architecture_never_reaches_filename_construction) (schema='v2', value="['malformed-value-sentinel-91c4']")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 577, in call
+    return function(*args, **kwargs)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 175, in check_host
+    errors = _record_errors(record)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 106, in _record_errors
+    errors += _file_errors(record)
+              ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 135, in _file_errors
+    main = 'dyld_shared_cache_' + arch
+           ~~~~~~~~~~~~~~~~~~~~~^~~~~~
+TypeError: can only concatenate str (not "list") to str
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 626, in test_up04_invalid_architecture_never_reaches_filename_construction
+    direct = self.call(N.check_host, N.SystemCacheEvidence(record, {}, {}))
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 579, in call
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised TypeError instead of rejecting
+
+======================================================================
+FAIL: test_up04_invalid_architecture_never_reaches_filename_construction (__main__.InputTypes.test_up04_invalid_architecture_never_reaches_filename_construction) (schema='v2', value="{'malformed-value-sentinel-91c4': 'malformed-value-sentinel-91c4'}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 577, in call
+    return function(*args, **kwargs)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 175, in check_host
+    errors = _record_errors(record)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 106, in _record_errors
+    errors += _file_errors(record)
+              ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 135, in _file_errors
+    main = 'dyld_shared_cache_' + arch
+           ~~~~~~~~~~~~~~~~~~~~~^~~~~~
+TypeError: can only concatenate str (not "dict") to str
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 626, in test_up04_invalid_architecture_never_reaches_filename_construction
+    direct = self.call(N.check_host, N.SystemCacheEvidence(record, {}, {}))
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 579, in call
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised TypeError instead of rejecting
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=False, kind='not an object', entry='None')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 577, in call
+    return function(*args, **kwargs)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 94, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/kotlin_guard.py", line 232, in check_observed_jvms
+    name, digest = lib.get('name'), lib.get('sha256')
+                   ^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 649, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    result = self.call(check, [jvm(valid + [bad])], evidence() if with_cache else None)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 579, in call
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised AttributeError instead of rejecting
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=False, kind='not an object', entry="'malformed-value-sentinel-91c4'")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 577, in call
+    return function(*args, **kwargs)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 94, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/kotlin_guard.py", line 232, in check_observed_jvms
+    name, digest = lib.get('name'), lib.get('sha256')
+                   ^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 649, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    result = self.call(check, [jvm(valid + [bad])], evidence() if with_cache else None)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 579, in call
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised AttributeError instead of rejecting
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=False, kind='not an object', entry="['malformed-value-sentinel-91c4']")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 577, in call
+    return function(*args, **kwargs)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 94, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/kotlin_guard.py", line 232, in check_observed_jvms
+    name, digest = lib.get('name'), lib.get('sha256')
+                   ^^^^^^^
+AttributeError: 'list' object has no attribute 'get'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 649, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    result = self.call(check, [jvm(valid + [bad])], evidence() if with_cache else None)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 579, in call
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised AttributeError instead of rejecting
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=False, kind='not an object', entry='7')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 577, in call
+    return function(*args, **kwargs)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 94, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/kotlin_guard.py", line 232, in check_observed_jvms
+    name, digest = lib.get('name'), lib.get('sha256')
+                   ^^^^^^^
+AttributeError: 'int' object has no attribute 'get'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 649, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    result = self.call(check, [jvm(valid + [bad])], evidence() if with_cache else None)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 579, in call
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised AttributeError instead of rejecting
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=False, kind='not an object', entry='True')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 577, in call
+    return function(*args, **kwargs)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 94, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/kotlin_guard.py", line 232, in check_observed_jvms
+    name, digest = lib.get('name'), lib.get('sha256')
+                   ^^^^^^^
+AttributeError: 'bool' object has no attribute 'get'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 649, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    result = self.call(check, [jvm(valid + [bad])], evidence() if with_cache else None)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 579, in call
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised AttributeError instead of rejecting
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=False, kind='name', entry='{}')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library with missing digest outside reviewed system cache: None')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=False, kind='name', entry="{'base_address': 140703444987904, 'top_address': 0}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library with missing digest outside reviewed system cache: None')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=False, kind='name', entry="{'sha256': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library outside reviewed inventory and trusted baseline: None')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=False, kind='name', entry="{'sha256': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb', 'base_address': 140703444987904, 'top_address': 0}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library outside reviewed inventory and trusted baseline: None')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=False, kind='name', entry="{'name': ''}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library with missing digest outside reviewed system cache: ')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=False, kind='name', entry="{'name': '', 'base_address': 140703444987904, 'top_address': 0}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library with missing digest outside reviewed system cache: ')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=False, kind='name', entry="{'name': '', 'sha256': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library outside reviewed inventory and trusted baseline: ')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=False, kind='name', entry="{'name': '', 'sha256': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb', 'base_address': 140703444987904, 'top_address': 0}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library outside reviewed inventory and trusted baseline: ')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=False, kind='name', entry="{'name': None}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library with missing digest outside reviewed system cache: None')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=False, kind='name', entry="{'name': None, 'base_address': 140703444987904, 'top_address': 0}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library with missing digest outside reviewed system cache: None')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=False, kind='name', entry="{'name': None, 'sha256': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library outside reviewed inventory and trusted baseline: None')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=False, kind='name', entry="{'name': None, 'sha256': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb', 'base_address': 140703444987904, 'top_address': 0}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library outside reviewed inventory and trusted baseline: None')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=False, kind='name', entry="{'name': True}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library with missing digest outside reviewed system cache: True')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=False, kind='name', entry="{'name': True, 'base_address': 140703444987904, 'top_address': 0}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library with missing digest outside reviewed system cache: True')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=False, kind='name', entry="{'name': True, 'sha256': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library outside reviewed inventory and trusted baseline: True')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=False, kind='name', entry="{'name': True, 'sha256': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb', 'base_address': 140703444987904, 'top_address': 0}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library outside reviewed inventory and trusted baseline: True')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=False, kind='name', entry="{'name': 0}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library with missing digest outside reviewed system cache: 0')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=False, kind='name', entry="{'name': 0, 'base_address': 140703444987904, 'top_address': 0}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library with missing digest outside reviewed system cache: 0')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=False, kind='name', entry="{'name': 0, 'sha256': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library outside reviewed inventory and trusted baseline: 0')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=False, kind='name', entry="{'name': 0, 'sha256': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb', 'base_address': 140703444987904, 'top_address': 0}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library outside reviewed inventory and trusted baseline: 0')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=False, kind='name', entry="{'name': 1.5}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library with missing digest outside reviewed system cache: 1.5')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=False, kind='name', entry="{'name': 1.5, 'base_address': 140703444987904, 'top_address': 0}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library with missing digest outside reviewed system cache: 1.5')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=False, kind='name', entry="{'name': 1.5, 'sha256': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library outside reviewed inventory and trusted baseline: 1.5')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=False, kind='name', entry="{'name': 1.5, 'sha256': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb', 'base_address': 140703444987904, 'top_address': 0}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library outside reviewed inventory and trusted baseline: 1.5')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=False, kind='name', entry="{'name': ['malformed-value-sentinel-91c4']}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', "native library with missing digest outside reviewed system cache: ['malformed-value-sentinel-91c4']")]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=False, kind='name', entry="{'name': ['malformed-value-sentinel-91c4'], 'base_address': 140703444987904, 'top_address': 0}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', "native library with missing digest outside reviewed system cache: ['malformed-value-sentinel-91c4']")]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=False, kind='name', entry="{'name': ['malformed-value-sentinel-91c4'], 'sha256': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 577, in call
+    return function(*args, **kwargs)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 94, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/kotlin_guard.py", line 235, in check_observed_jvms
+    bins = [inventory.get(name) == digest, baseline.get(name) == digest]
+            ~~~~~~~~~~~~~^^^^^^
+TypeError: cannot use 'list' as a dict key (unhashable type: 'list')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 649, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    result = self.call(check, [jvm(valid + [bad])], evidence() if with_cache else None)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 579, in call
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised TypeError instead of rejecting
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=False, kind='name', entry="{'name': ['malformed-value-sentinel-91c4'], 'sha256': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb', 'base_address': 140703444987904, 'top_address': 0}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 577, in call
+    return function(*args, **kwargs)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 94, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/kotlin_guard.py", line 235, in check_observed_jvms
+    bins = [inventory.get(name) == digest, baseline.get(name) == digest]
+            ~~~~~~~~~~~~~^^^^^^
+TypeError: cannot use 'list' as a dict key (unhashable type: 'list')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 649, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    result = self.call(check, [jvm(valid + [bad])], evidence() if with_cache else None)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 579, in call
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised TypeError instead of rejecting
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=False, kind='name', entry="{'name': {'malformed-value-sentinel-91c4': 'malformed-value-sentinel-91c4'}}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', "native library with missing digest outside reviewed system cache: {'malformed-value-sentinel-91c4': 'malformed-value-sentinel-91c4'}")]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=False, kind='name', entry="{'name': {'malformed-value-sentinel-91c4': 'malformed-value-sentinel-91c4'}, 'base_address': 140703444987904, 'top_address': 0}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', "native library with missing digest outside reviewed system cache: {'malformed-value-sentinel-91c4': 'malformed-value-sentinel-91c4'}")]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=False, kind='name', entry="{'name': {'malformed-value-sentinel-91c4': 'malformed-value-sentinel-91c4'}, 'sha256': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 577, in call
+    return function(*args, **kwargs)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 94, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/kotlin_guard.py", line 235, in check_observed_jvms
+    bins = [inventory.get(name) == digest, baseline.get(name) == digest]
+            ~~~~~~~~~~~~~^^^^^^
+TypeError: cannot use 'dict' as a dict key (unhashable type: 'dict')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 649, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    result = self.call(check, [jvm(valid + [bad])], evidence() if with_cache else None)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 579, in call
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised TypeError instead of rejecting
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=False, kind='name', entry="{'name': {'malformed-value-sentinel-91c4': 'malformed-value-sentinel-91c4'}, 'sha256': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb', 'base_address': 140703444987904, 'top_address': 0}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 577, in call
+    return function(*args, **kwargs)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 94, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/kotlin_guard.py", line 235, in check_observed_jvms
+    bins = [inventory.get(name) == digest, baseline.get(name) == digest]
+            ~~~~~~~~~~~~~^^^^^^
+TypeError: cannot use 'dict' as a dict key (unhashable type: 'dict')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 649, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    result = self.call(check, [jvm(valid + [bad])], evidence() if with_cache else None)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 579, in call
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised TypeError instead of rejecting
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=True, kind='not an object', entry='None')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 577, in call
+    return function(*args, **kwargs)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 94, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/kotlin_guard.py", line 232, in check_observed_jvms
+    name, digest = lib.get('name'), lib.get('sha256')
+                   ^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 649, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    result = self.call(check, [jvm(valid + [bad])], evidence() if with_cache else None)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 579, in call
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised AttributeError instead of rejecting
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=True, kind='not an object', entry="'malformed-value-sentinel-91c4'")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 577, in call
+    return function(*args, **kwargs)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 94, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/kotlin_guard.py", line 232, in check_observed_jvms
+    name, digest = lib.get('name'), lib.get('sha256')
+                   ^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 649, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    result = self.call(check, [jvm(valid + [bad])], evidence() if with_cache else None)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 579, in call
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised AttributeError instead of rejecting
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=True, kind='not an object', entry="['malformed-value-sentinel-91c4']")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 577, in call
+    return function(*args, **kwargs)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 94, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/kotlin_guard.py", line 232, in check_observed_jvms
+    name, digest = lib.get('name'), lib.get('sha256')
+                   ^^^^^^^
+AttributeError: 'list' object has no attribute 'get'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 649, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    result = self.call(check, [jvm(valid + [bad])], evidence() if with_cache else None)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 579, in call
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised AttributeError instead of rejecting
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=True, kind='not an object', entry='7')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 577, in call
+    return function(*args, **kwargs)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 94, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/kotlin_guard.py", line 232, in check_observed_jvms
+    name, digest = lib.get('name'), lib.get('sha256')
+                   ^^^^^^^
+AttributeError: 'int' object has no attribute 'get'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 649, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    result = self.call(check, [jvm(valid + [bad])], evidence() if with_cache else None)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 579, in call
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised AttributeError instead of rejecting
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=True, kind='not an object', entry='True')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 577, in call
+    return function(*args, **kwargs)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 94, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/kotlin_guard.py", line 232, in check_observed_jvms
+    name, digest = lib.get('name'), lib.get('sha256')
+                   ^^^^^^^
+AttributeError: 'bool' object has no attribute 'get'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 649, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    result = self.call(check, [jvm(valid + [bad])], evidence() if with_cache else None)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 579, in call
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised AttributeError instead of rejecting
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=True, kind='name', entry='{}')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library with missing digest outside reviewed system cache: None')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=True, kind='name', entry="{'base_address': 140703444987904, 'top_address': 0}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library with missing digest outside reviewed system cache: None')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=True, kind='name', entry="{'sha256': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library outside reviewed inventory and trusted baseline: None')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=True, kind='name', entry="{'sha256': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb', 'base_address': 140703444987904, 'top_address': 0}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library outside reviewed inventory and trusted baseline: None')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=True, kind='name', entry="{'name': ''}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library with missing digest outside reviewed system cache: ')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=True, kind='name', entry="{'name': '', 'base_address': 140703444987904, 'top_address': 0}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library with missing digest outside reviewed system cache: ')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=True, kind='name', entry="{'name': '', 'sha256': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library outside reviewed inventory and trusted baseline: ')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=True, kind='name', entry="{'name': '', 'sha256': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb', 'base_address': 140703444987904, 'top_address': 0}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library outside reviewed inventory and trusted baseline: ')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=True, kind='name', entry="{'name': None}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library with missing digest outside reviewed system cache: None')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=True, kind='name', entry="{'name': None, 'base_address': 140703444987904, 'top_address': 0}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library with missing digest outside reviewed system cache: None')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=True, kind='name', entry="{'name': None, 'sha256': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library outside reviewed inventory and trusted baseline: None')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=True, kind='name', entry="{'name': None, 'sha256': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb', 'base_address': 140703444987904, 'top_address': 0}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library outside reviewed inventory and trusted baseline: None')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=True, kind='name', entry="{'name': True}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library with missing digest outside reviewed system cache: True')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=True, kind='name', entry="{'name': True, 'base_address': 140703444987904, 'top_address': 0}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library with missing digest outside reviewed system cache: True')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=True, kind='name', entry="{'name': True, 'sha256': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library outside reviewed inventory and trusted baseline: True')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=True, kind='name', entry="{'name': True, 'sha256': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb', 'base_address': 140703444987904, 'top_address': 0}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library outside reviewed inventory and trusted baseline: True')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=True, kind='name', entry="{'name': 0}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library with missing digest outside reviewed system cache: 0')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=True, kind='name', entry="{'name': 0, 'base_address': 140703444987904, 'top_address': 0}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library with missing digest outside reviewed system cache: 0')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=True, kind='name', entry="{'name': 0, 'sha256': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library outside reviewed inventory and trusted baseline: 0')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=True, kind='name', entry="{'name': 0, 'sha256': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb', 'base_address': 140703444987904, 'top_address': 0}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library outside reviewed inventory and trusted baseline: 0')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=True, kind='name', entry="{'name': 1.5}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library with missing digest outside reviewed system cache: 1.5')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=True, kind='name', entry="{'name': 1.5, 'base_address': 140703444987904, 'top_address': 0}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library with missing digest outside reviewed system cache: 1.5')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=True, kind='name', entry="{'name': 1.5, 'sha256': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library outside reviewed inventory and trusted baseline: 1.5')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=True, kind='name', entry="{'name': 1.5, 'sha256': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb', 'base_address': 140703444987904, 'top_address': 0}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 653, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    self.assertIn(('kotlin-compiler', identity), [(v.source, v.setting) for v in result.violations])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('kotlin-compiler', 'incomplete capture: native library name missing or not a non-empty string') not found in [('kotlin-compiler', 'native library outside reviewed inventory and trusted baseline: 1.5')]
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=True, kind='name', entry="{'name': ['malformed-value-sentinel-91c4']}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 577, in call
+    return function(*args, **kwargs)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 94, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/kotlin_guard.py", line 233, in check_observed_jvms
+    cache_path = native_cache.lookup(system_cache, name) if cache_ready else None
+                 ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 222, in lookup
+    if name in paths:
+       ^^^^^^^^^^^^^
+TypeError: cannot use 'list' as a set element (unhashable type: 'list')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 649, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    result = self.call(check, [jvm(valid + [bad])], evidence() if with_cache else None)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 579, in call
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised TypeError instead of rejecting
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=True, kind='name', entry="{'name': ['malformed-value-sentinel-91c4'], 'base_address': 140703444987904, 'top_address': 0}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 577, in call
+    return function(*args, **kwargs)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 94, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/kotlin_guard.py", line 233, in check_observed_jvms
+    cache_path = native_cache.lookup(system_cache, name) if cache_ready else None
+                 ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 222, in lookup
+    if name in paths:
+       ^^^^^^^^^^^^^
+TypeError: cannot use 'list' as a set element (unhashable type: 'list')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 649, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    result = self.call(check, [jvm(valid + [bad])], evidence() if with_cache else None)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 579, in call
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised TypeError instead of rejecting
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=True, kind='name', entry="{'name': ['malformed-value-sentinel-91c4'], 'sha256': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 577, in call
+    return function(*args, **kwargs)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 94, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/kotlin_guard.py", line 233, in check_observed_jvms
+    cache_path = native_cache.lookup(system_cache, name) if cache_ready else None
+                 ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 222, in lookup
+    if name in paths:
+       ^^^^^^^^^^^^^
+TypeError: cannot use 'list' as a set element (unhashable type: 'list')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 649, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    result = self.call(check, [jvm(valid + [bad])], evidence() if with_cache else None)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 579, in call
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised TypeError instead of rejecting
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=True, kind='name', entry="{'name': ['malformed-value-sentinel-91c4'], 'sha256': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb', 'base_address': 140703444987904, 'top_address': 0}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 577, in call
+    return function(*args, **kwargs)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 94, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/kotlin_guard.py", line 233, in check_observed_jvms
+    cache_path = native_cache.lookup(system_cache, name) if cache_ready else None
+                 ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 222, in lookup
+    if name in paths:
+       ^^^^^^^^^^^^^
+TypeError: cannot use 'list' as a set element (unhashable type: 'list')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 649, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    result = self.call(check, [jvm(valid + [bad])], evidence() if with_cache else None)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 579, in call
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised TypeError instead of rejecting
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=True, kind='name', entry="{'name': {'malformed-value-sentinel-91c4': 'malformed-value-sentinel-91c4'}}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 577, in call
+    return function(*args, **kwargs)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 94, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/kotlin_guard.py", line 233, in check_observed_jvms
+    cache_path = native_cache.lookup(system_cache, name) if cache_ready else None
+                 ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 222, in lookup
+    if name in paths:
+       ^^^^^^^^^^^^^
+TypeError: cannot use 'dict' as a set element (unhashable type: 'dict')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 649, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    result = self.call(check, [jvm(valid + [bad])], evidence() if with_cache else None)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 579, in call
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised TypeError instead of rejecting
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=True, kind='name', entry="{'name': {'malformed-value-sentinel-91c4': 'malformed-value-sentinel-91c4'}, 'base_address': 140703444987904, 'top_address': 0}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 577, in call
+    return function(*args, **kwargs)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 94, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/kotlin_guard.py", line 233, in check_observed_jvms
+    cache_path = native_cache.lookup(system_cache, name) if cache_ready else None
+                 ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 222, in lookup
+    if name in paths:
+       ^^^^^^^^^^^^^
+TypeError: cannot use 'dict' as a set element (unhashable type: 'dict')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 649, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    result = self.call(check, [jvm(valid + [bad])], evidence() if with_cache else None)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 579, in call
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised TypeError instead of rejecting
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=True, kind='name', entry="{'name': {'malformed-value-sentinel-91c4': 'malformed-value-sentinel-91c4'}, 'sha256': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 577, in call
+    return function(*args, **kwargs)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 94, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/kotlin_guard.py", line 233, in check_observed_jvms
+    cache_path = native_cache.lookup(system_cache, name) if cache_ready else None
+                 ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 222, in lookup
+    if name in paths:
+       ^^^^^^^^^^^^^
+TypeError: cannot use 'dict' as a set element (unhashable type: 'dict')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 649, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    result = self.call(check, [jvm(valid + [bad])], evidence() if with_cache else None)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 579, in call
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised TypeError instead of rejecting
+
+======================================================================
+FAIL: test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned (__main__.InputTypes.test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned) (cache=True, kind='name', entry="{'name': {'malformed-value-sentinel-91c4': 'malformed-value-sentinel-91c4'}, 'sha256': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb', 'base_address': 140703444987904, 'top_address': 0}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 577, in call
+    return function(*args, **kwargs)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 94, in check
+    return G.check_observed_jvms(observations, ['kotlin-compiler'], native_inventory=PAYLOADS, native_baseline=BASELINE,
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                 system_cache=system_cache)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/kotlin_guard.py", line 233, in check_observed_jvms
+    cache_path = native_cache.lookup(system_cache, name) if cache_ready else None
+                 ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/native_cache.py", line 222, in lookup
+    if name in paths:
+       ^^^^^^^^^^^^^
+TypeError: cannot use 'dict' as a set element (unhashable type: 'dict')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 649, in test_up05_invalid_library_entries_and_names_are_role_specific_and_never_echoed_or_binned
+    result = self.call(check, [jvm(valid + [bad])], evidence() if with_cache else None)
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 579, in call
+    self.fail('raised %s instead of rejecting' % type(error).__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: raised TypeError instead of rejecting
+
+----------------------------------------------------------------------
+Ran 47 tests in 0.112s
+
+FAILED (failures=96)

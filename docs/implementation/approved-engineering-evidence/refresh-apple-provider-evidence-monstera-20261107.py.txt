@@ -1,0 +1,48 @@
+from pathlib import Path
+import hashlib,json,re,subprocess
+root=Path('/Users/boristacyniak/Projects/alocasia/hoyadb'); stage=root/'target/monstera-native-20261107'; framework=root/'bindings/swift/Artifacts/HoyaNative.xcframework'
+index_path=root/'crates/hoyadb-native/third-party/index.json'; index=json.loads(index_path.read_text()); parent_path=root/'bindings/swift/Artifacts/native-build.json'; parent=json.loads(parent_path.read_text())
+nm='/usr/local/opt/llvm@22/bin/llvm-nm'; commands=[]
+def sha(data): return hashlib.sha256(data).hexdigest()
+def run(argv,label):
+ result=subprocess.run(argv,capture_output=True)
+ prefix=stage/label
+ prefix.with_suffix('.stdout.txt').write_bytes(result.stdout); prefix.with_suffix('.stderr.txt').write_bytes(result.stderr)
+ commands.append({'argv':argv,'status':result.returncode,'stdout_sha256':sha(result.stdout),'stderr_sha256':sha(result.stderr),'raw_output_prefix':str(prefix)})
+ result.check_returncode()
+ return result.stdout.decode()
+providers={p['name']:p for p in index['packages'] if p['role']=='os_framework_not_redistributed'}
+ltc=set(); object_name=''
+for line in (stage/'android-provider-defined-symbols.txt').read_text().splitlines():
+ if line.endswith('.o:'): object_name=line[:-1]
+ elif line.strip() and (object_name.startswith('ltc-') or object_name=='hoya-entropy.o'):ltc.add(line.split()[0])
+patterns=[r'(ltc_|tomcrypt|register_cipher|register_hash|register_prng|sqlcipher_ltc)',r'^_(find_cipher|find_hash|cipher_descriptor|hash_descriptor|prng_descriptor|crypt_argchk|pkcs_5_alg2|hmac_init|aes_setup|rijndael_|sha1_init|sha256_init|sha512_init|fortuna_)']
+version=run([nm,'--version'],'provider-nm-version').strip()
+records=[]
+for expected in providers['CommonCrypto']['evidence']:
+ relative=expected['library']; library=framework/relative; digest=sha(library.read_bytes());label=relative.replace('/','-').replace('.','-')
+ assert parent['artifact_files_sha256']['HoyaNative.xcframework/'+relative]==digest
+ actual_arches=run(['xcrun','lipo','-archs',str(library)],label+'-archs').strip().split()
+ assert sorted(actual_arches)==sorted(expected['architectures'])
+ arches=[]
+ for arch in actual_arches:
+  imported=run([nm,'--arch='+arch,'--undefined-only','--just-symbol-name',str(library)],label+'-'+arch+'-imports')
+  defined=run([nm,'--arch='+arch,'--defined-only','--just-symbol-name',str(library)],label+'-'+arch+'-defined')
+  names={s.strip() for s in imported.splitlines() if s.strip().startswith('_') and ' ' not in s.strip()}
+  defined_names={s.strip() for s in defined.splitlines() if s.strip().startswith('_') and ' ' not in s.strip()}
+  common=sorted(s for s in names if s.startswith('_CC')); security=sorted(s for s in names if s.startswith(('_Sec','_kSec')))
+  ltc_found=sorted(s for s in names|defined_names if s[1:] in ltc or any(re.search(pattern,s) for pattern in patterns))
+  provider_definitions=sorted(s for s in defined_names if s.startswith(('_CC','_Sec','_kSec')))
+  expected_security=next(x for x in providers['Security']['evidence'] if x['library']==relative)
+  assert common==sorted(expected['imported_symbols']),common
+  assert security==sorted(expected_security['imported_symbols']),security
+  assert not ltc_found,ltc_found
+  assert not provider_definitions,provider_definitions
+  arches.append({'architecture':arch,'commoncrypto_imports':common,'security_imports':security,'libtomcrypt_symbols':ltc_found,'provider_definitions':provider_definitions})
+ records.append({'library':relative,'sha256':digest,'architectures':actual_arches,'evidence':arches})
+inputs=next(p for p in index['packages'] if p['role']=='toolchain_aggregate')['verified_link_inputs']
+for entry in inputs:assert sha(Path(entry['path']).read_bytes())==entry['sha256'],entry['path']
+for path,digest in parent['source_sha256'].items():assert sha((root/path).read_bytes())==digest,path
+result={'scope':'Fresh local archive/provider evidence; not runtime/platform/legal certification','old_index_sha256':sha(index_path.read_bytes()),'symbol_tool':{'path':nm,'sha256':sha(Path(nm).read_bytes()),'version':version},'native_parent_sha256':sha(parent_path.read_bytes()),'native_sources':parent['source_sha256'],'ltc_symbol_reference_count':len(ltc),'libtomcrypt_symbol_patterns':patterns,'retained_toolchain_link_inputs_verified':len(inputs),'commands':commands,'libraries':records}
+(stage/'apple-provider-current.json').write_text(json.dumps(result,indent=2)+'\n')
+print(json.dumps({'parent':result['native_parent_sha256'],'libraries':records,'toolchain_inputs':len(inputs),'commands':len(commands)},indent=2))

@@ -1,0 +1,85 @@
+[0/1] Planning build
+Building for debugging...
+[0/7] Write sources
+[4/7] Write swift-version--58304C5D6DBC2206.txt
+[6/10] Emitting module HoyaDB
+[7/10] Compiling HoyaDB Database.swift
+[8/10] Compiling HoyaDB Observations.swift
+[9/15] Compiling HoyaDB Relations.swift
+[10/15] Compiling HoyaDB Entities.swift
+[11/15] Compiling HoyaDB Sync.swift
+[12/15] Compiling HoyaDB Values.swift
+[13/15] Compiling HoyaDB Commands.swift
+[14/32] Compiling HoyaDBTesting FakeTransport.swift
+[15/32] Compiling HoyaDBTesting ManualClock.swift
+[16/32] Compiling HoyaDBTesting MemoryTesting.swift
+[17/32] Emitting module HoyaDBTesting
+[18/34] Compiling HoyaDBTests EntityTests.swift
+[19/34] Compiling HoyaDBTests AdmissionTests.swift
+[20/34] Compiling HoyaDBTests CommandTests.swift
+[21/34] Emitting module HoyaDBTests
+[22/34] Compiling HoyaDBTests LifetimeTests.swift
+[23/34] Compiling HoyaDBTests TypedValuesTests.swift
+[24/34] Compiling HoyaDBTests RelationTests.swift
+[25/34] Compiling HoyaDBTests NativeOwnerTests.swift
+[26/34] Compiling HoyaDBTests NamespaceTests.swift
+[27/34] Compiling HoyaDBTests MigrationTests.swift
+[28/34] Compiling HoyaDBTests ProtocolTests.swift
+[29/34] Compiling HoyaDBTests SyncTests.swift
+[30/34] Compiling HoyaDBTests ObservationTests.swift
+[31/34] Emitting module HoyaDBTestingTests
+[32/34] Compiling HoyaDBTestingTests TestingTests.swift
+[32/34] Write Objects.LinkFileList
+[33/34] Linking HoyaDBPackageTests
+Build complete! (7.58s)
+Test Suite 'Selected tests' started at 2026-10-24 23:05:04.417.
+Test Suite 'HoyaDBPackageTests.xctest' started at 2026-10-24 23:05:04.419.
+Test Suite 'CommandTests' started at 2026-10-24 23:05:04.419.
+Test Case '-[HoyaDBTests.CommandTests testCommittedFinishSurvivesCloseAndReplacementWithoutStaleDelivery]' started.
+/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/swift/Tests/HoyaDBTests/CommandTests.swift:278: error: -[HoyaDBTests.CommandTests testCommittedFinishSurvivesCloseAndReplacementWithoutStaleDelivery] : failed - submitted committed finish was hidden after close: closed
+Test Case '-[HoyaDBTests.CommandTests testCommittedFinishSurvivesCloseAndReplacementWithoutStaleDelivery]' failed (0.415 seconds).
+Test Suite 'CommandTests' failed at 2026-10-24 23:05:04.834.
+	 Executed 1 test, with 1 failure (0 unexpected) in 0.415 (0.415) seconds
+Test Suite 'SyncTests' started at 2026-10-24 23:05:04.834.
+Test Case '-[HoyaDBTests.SyncTests testStoppedDriverDoesNotStartOldMapperAfterSuccessfulPendingReply]' started.
+/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/swift/Sources/HoyaDB/Commands.swift:428: error: -[HoyaDBTests.SyncTests testStoppedDriverDoesNotStartOldMapperAfterSuccessfulPendingReply] : failed: caught error: "core("InvalidCommand")"
+/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/swift/Tests/HoyaDBTests/SyncTests.swift:349: error: -[HoyaDBTests.SyncTests testStoppedDriverDoesNotStartOldMapperAfterSuccessfulPendingReply] : Failed due to unwaited expectations 'real pending reconciliation reply held', 'retired mapper must not start', 'retired mapper driver must not report errors', 'replacement mapper receives retained outcome'.
+Test Case '-[HoyaDBTests.SyncTests testStoppedDriverDoesNotStartOldMapperAfterSuccessfulPendingReply]' failed (0.006 seconds).
+Test Case '-[HoyaDBTests.SyncTests testStoppedDriverDoesNotStartOldTransportAfterSuccessfulPrepareReply]' started.
+/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/swift/Sources/HoyaDB/Commands.swift:428: error: -[HoyaDBTests.SyncTests testStoppedDriverDoesNotStartOldTransportAfterSuccessfulPrepareReply] : failed: caught error: "core("InvalidCommand")"
+/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/swift/Tests/HoyaDBTests/SyncTests.swift:305: error: -[HoyaDBTests.SyncTests testStoppedDriverDoesNotStartOldTransportAfterSuccessfulPrepareReply] : Failed due to unwaited expectations 'real Sent prepare reply held', 'retired transport must not start', 'retired driver must not report errors', 'current driver retries at durable due'.
+Test Case '-[HoyaDBTests.SyncTests testStoppedDriverDoesNotStartOldTransportAfterSuccessfulPrepareReply]' failed (0.003 seconds).
+Test Suite 'SyncTests' failed at 2026-10-24 23:05:04.843.
+	 Executed 2 tests, with 4 failures (4 unexpected) in 0.009 (0.009) seconds
+Test Suite 'TestingTests' started at 2026-10-24 23:05:04.843.
+Test Case '-[HoyaDBTestingTests.TestingTests testST01PublicTimingInjectionControlsManagedCount]' started.
+/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/swift/Tests/HoyaDBTestingTests/TestingTests.swift:79: error: -[HoyaDBTestingTests.TestingTests testST01PublicTimingInjectionControlsManagedCount] : Asynchronous wait failed: Exceeded timeout of 2 seconds, with unfulfilled expectations: "injected scheduler owns count deadline".
+/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/swift/Tests/HoyaDBTestingTests/TestingTests.swift:80: error: -[HoyaDBTestingTests.TestingTests testST01PublicTimingInjectionControlsManagedCount] : XCTAssertEqual failed: ("[]") is not equal to ("[16]") - public injected timer must own the count deadline
+/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/swift/Tests/HoyaDBTestingTests/TestingTests.swift:81: error: -[HoyaDBTestingTests.TestingTests testST01PublicTimingInjectionControlsManagedCount] : XCTAssertEqual failed: ("[0, 1]") is not equal to ("[0]")
+Test Case '-[HoyaDBTestingTests.TestingTests testST01PublicTimingInjectionControlsManagedCount]' failed (2.017 seconds).
+Test Case '-[HoyaDBTestingTests.TestingTests testST02RealMemoryFactoryIDExhaustionAndRetainedMigration]' started.
+/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/swift/Sources/HoyaDBTesting/MemoryTesting.swift:11: error: -[HoyaDBTestingTests.TestingTests testST02RealMemoryFactoryIDExhaustionAndRetainedMigration] : failed: caught error: "invalidRequest"
+Test Case '-[HoyaDBTestingTests.TestingTests testST02RealMemoryFactoryIDExhaustionAndRetainedMigration]' failed (0.002 seconds).
+Test Case '-[HoyaDBTestingTests.TestingTests testST03ManualClocksOverflowAndTimerCallbacksOutsideLock]' started.
+/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/swift/Tests/HoyaDBTestingTests/TestingTests.swift:112: error: -[HoyaDBTestingTests.TestingTests testST03ManualClocksOverflowAndTimerCallbacksOutsideLock] : XCTAssertEqual failed: ("0") is not equal to ("9223372036854775807")
+/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/swift/Sources/HoyaDBTesting/ManualClock.swift:9: error: -[HoyaDBTestingTests.TestingTests testST03ManualClocksOverflowAndTimerCallbacksOutsideLock] : failed: caught error: "invalidRequest"
+Test Case '-[HoyaDBTestingTests.TestingTests testST03ManualClocksOverflowAndTimerCallbacksOutsideLock]' failed (0.002 seconds).
+Test Case '-[HoyaDBTestingTests.TestingTests testST04TypedCommandResultsReverseByExactKey]' started.
+/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/swift/Sources/HoyaDBTesting/MemoryTesting.swift:11: error: -[HoyaDBTestingTests.TestingTests testST04TypedCommandResultsReverseByExactKey] : failed: caught error: "invalidRequest"
+Test Case '-[HoyaDBTestingTests.TestingTests testST04TypedCommandResultsReverseByExactKey]' failed (0.001 seconds).
+Test Case '-[HoyaDBTestingTests.TestingTests testST05EntityRepliesKeepDistinctWriteIDsForSameCanonicalRecord]' started.
+/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/swift/Sources/HoyaDBTesting/MemoryTesting.swift:11: error: -[HoyaDBTestingTests.TestingTests testST05EntityRepliesKeepDistinctWriteIDsForSameCanonicalRecord] : failed: caught error: "invalidRequest"
+Test Case '-[HoyaDBTestingTests.TestingTests testST05EntityRepliesKeepDistinctWriteIDsForSameCanonicalRecord]' failed (0.001 seconds).
+Test Case '-[HoyaDBTestingTests.TestingTests testST06DelayedDroppedACKRetriesOriginalFrozenBytesAtCoreDeadline]' started.
+/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/swift/Sources/HoyaDBTesting/MemoryTesting.swift:11: error: -[HoyaDBTestingTests.TestingTests testST06DelayedDroppedACKRetriesOriginalFrozenBytesAtCoreDeadline] : failed: caught error: "invalidRequest"
+Test Case '-[HoyaDBTestingTests.TestingTests testST06DelayedDroppedACKRetriesOriginalFrozenBytesAtCoreDeadline]' failed (0.001 seconds).
+Test Suite 'TestingTests' failed at 2026-10-24 23:05:06.870.
+	 Executed 6 tests, with 9 failures (5 unexpected) in 2.025 (2.026) seconds
+Test Suite 'HoyaDBPackageTests.xctest' failed at 2026-10-24 23:05:06.870.
+	 Executed 9 tests, with 14 failures (9 unexpected) in 2.449 (2.451) seconds
+Test Suite 'Selected tests' failed at 2026-10-24 23:05:06.870.
+	 Executed 9 tests, with 14 failures (9 unexpected) in 2.449 (2.453) seconds
+◇ Test run started.
+↳ Testing Library Version: 1902
+↳ Target Platform: x86_64-apple-macos14.0
+✔ Test run with 0 tests in 0 suites passed after 0.001 seconds.

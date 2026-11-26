@@ -1,0 +1,66 @@
+.......FF.....FFF......
+======================================================================
+FAIL: test_sr22b_address_semantics_are_pinned (__main__.SystemCacheIdentity.test_sr22b_address_semantics_are_pinned) (top=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 237, in test_sr22b_address_semantics_are_pinned
+    self.rejected(check([jvm([cached(LIBZ, top_address=top)])], evidence()), 'top_address')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 98, in rejected
+    self.assertFalse(result.ok)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_sr22b_address_semantics_are_pinned (__main__.SystemCacheIdentity.test_sr22b_address_semantics_are_pinned) (top=0.0)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 237, in test_sr22b_address_semantics_are_pinned
+    self.rejected(check([jvm([cached(LIBZ, top_address=top)])], evidence()), 'top_address')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 98, in rejected
+    self.assertFalse(result.ok)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_sr22b_host_comparison_is_type_strict (__main__.SystemCacheIdentity.test_sr22b_host_comparison_is_type_strict) (<subtest>)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 167, in test_sr22b_host_comparison_is_type_strict
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(pre=changed)), 'host identity')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 98, in rejected
+    self.assertFalse(result.ok)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_sr22b_host_comparison_is_type_strict (__main__.SystemCacheIdentity.test_sr22b_host_comparison_is_type_strict) (<subtest>)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 167, in test_sr22b_host_comparison_is_type_strict
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(pre=changed)), 'host identity')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 98, in rejected
+    self.assertFalse(result.ok)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_sr22b_host_comparison_is_type_strict (__main__.SystemCacheIdentity.test_sr22b_host_comparison_is_type_strict) (<subtest>)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 167, in test_sr22b_host_comparison_is_type_strict
+    self.rejected(check([jvm([cached(LIBZ)])], evidence(pre=changed)), 'host identity')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_native_cache.py", line 98, in rejected
+    self.assertFalse(result.ok)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.023s
+
+FAILED (failures=5)
+exit=1

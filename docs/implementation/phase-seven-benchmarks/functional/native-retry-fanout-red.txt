@@ -1,0 +1,22 @@
+   Compiling hoyadb-benchmark v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/native)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.87s
+     Running unittests src/lib.rs (benchmarks/native/target/debug/deps/hoyadb_benchmark-0e7a7c369aeaba1a)
+
+running 1 test
+test tests::p02_real_queue_retry_backoff_and_distinct_callback_fanout ... FAILED
+
+failures:
+
+---- tests::p02_real_queue_retry_backoff_and_distinct_callback_fanout stdout ----
+
+thread 'tests::p02_real_queue_retry_backoff_and_distinct_callback_fanout' (82142074) panicked at src/lib.rs:381:51:
+called `Result::unwrap()` on an `Err` value: "retry correctness pending"
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    tests::p02_real_queue_retry_backoff_and_distinct_callback_fanout
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 4 filtered out; finished in 0.36s
+
+error: test failed, to rerun pass `--lib`

@@ -1,0 +1,68 @@
+[
+  {
+    "coordinate": "com.google.code.gson:gson-parent:2.8.9",
+    "fetched_sha256": "b16e026e63427c1972ad0fc68703ec379b1576e411ba49c32fa9a31ab0bbcffb",
+    "gradle_cache_sha256": "b16e026e63427c1972ad0fc68703ec379b1576e411ba49c32fa9a31ab0bbcffb",
+    "root_captured_path": "target/phase-seven-dependencies/native-source-review/maven/com/google/code/gson/gson-parent/2.8.9/gson-parent-2.8.9.pom",
+    "root_captured_recorded_sha256": "b16e026e63427c1972ad0fc68703ec379b1576e411ba49c32fa9a31ab0bbcffb",
+    "root_captured_url": "https://repo.maven.apache.org/maven2/com/google/code/gson/gson-parent/2.8.9/gson-parent-2.8.9.pom",
+    "fetched_equals_gradle_cache": true,
+    "fetched_bytes_equal_root_captured": true,
+    "root_bytes_match_recorded": true
+  },
+  {
+    "coordinate": "com.google.errorprone:error_prone_parent:2.7.1",
+    "fetched_sha256": "0a6e242e28104e8093405ae37969660a438b71c4c1b73fc4ff716db89da88de6",
+    "gradle_cache_sha256": "0a6e242e28104e8093405ae37969660a438b71c4c1b73fc4ff716db89da88de6",
+    "root_captured_path": "target/phase-seven-dependencies/native-source-review/maven/com/google/errorprone/error_prone_parent/2.7.1/error_prone_parent-2.7.1.pom",
+    "root_captured_recorded_sha256": "0a6e242e28104e8093405ae37969660a438b71c4c1b73fc4ff716db89da88de6",
+    "root_captured_url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_parent/2.7.1/error_prone_parent-2.7.1.pom",
+    "fetched_equals_gradle_cache": true,
+    "fetched_bytes_equal_root_captured": true,
+    "root_bytes_match_recorded": true
+  },
+  {
+    "coordinate": "com.google.guava:guava-parent:26.0-android",
+    "fetched_sha256": "f8698ab46ca996ce889c1afc8ca4f25eb8ac6b034dc898d4583742360016cc04",
+    "gradle_cache_sha256": "f8698ab46ca996ce889c1afc8ca4f25eb8ac6b034dc898d4583742360016cc04",
+    "root_captured_path": "target/phase-seven-dependencies/native-source-review/maven/com/google/guava/guava-parent/26.0-android/guava-parent-26.0-android.pom",
+    "root_captured_recorded_sha256": "f8698ab46ca996ce889c1afc8ca4f25eb8ac6b034dc898d4583742360016cc04",
+    "root_captured_url": "https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/26.0-android/guava-parent-26.0-android.pom",
+    "fetched_equals_gradle_cache": true,
+    "fetched_bytes_equal_root_captured": true,
+    "root_bytes_match_recorded": true
+  },
+  {
+    "coordinate": "com.google.guava:guava-parent:31.0.1-jre",
+    "fetched_sha256": "b3b6b6aa7099c11817acee85b322fd91f7ee32aea69fe083ee36c8735ec06788",
+    "gradle_cache_sha256": "b3b6b6aa7099c11817acee85b322fd91f7ee32aea69fe083ee36c8735ec06788",
+    "root_captured_path": "target/phase-seven-dependencies/native-source-review/maven/com/google/guava/guava-parent/31.0.1-jre/guava-parent-31.0.1-jre.pom",
+    "root_captured_recorded_sha256": "b3b6b6aa7099c11817acee85b322fd91f7ee32aea69fe083ee36c8735ec06788",
+    "root_captured_url": "https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/31.0.1-jre/guava-parent-31.0.1-jre.pom",
+    "fetched_equals_gradle_cache": true,
+    "fetched_bytes_equal_root_captured": true,
+    "root_bytes_match_recorded": true
+  },
+  {
+    "coordinate": "org.sonatype.oss:oss-parent:7",
+    "fetched_sha256": "b51f8867c92b6a722499557fc3a1fdea77bdf9ef574722fe90ce436a29559454",
+    "gradle_cache_sha256": "b51f8867c92b6a722499557fc3a1fdea77bdf9ef574722fe90ce436a29559454",
+    "root_captured_path": "target/phase-seven-dependencies/native-source-review/maven/org/sonatype/oss/oss-parent/7/oss-parent-7.pom",
+    "root_captured_recorded_sha256": "b51f8867c92b6a722499557fc3a1fdea77bdf9ef574722fe90ce436a29559454",
+    "root_captured_url": "https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/7/oss-parent-7.pom",
+    "fetched_equals_gradle_cache": true,
+    "fetched_bytes_equal_root_captured": true,
+    "root_bytes_match_recorded": true
+  },
+  {
+    "coordinate": "org.sonatype.oss:oss-parent:9",
+    "fetched_sha256": "fb40265f982548212ff82e362e59732b2187ec6f0d80182885c14ef1f982827a",
+    "gradle_cache_sha256": "fb40265f982548212ff82e362e59732b2187ec6f0d80182885c14ef1f982827a",
+    "root_captured_path": "target/phase-seven-dependencies/native-source-review/maven/org/sonatype/oss/oss-parent/9/oss-parent-9.pom",
+    "root_captured_recorded_sha256": "fb40265f982548212ff82e362e59732b2187ec6f0d80182885c14ef1f982827a",
+    "root_captured_url": "https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/9/oss-parent-9.pom",
+    "fetched_equals_gradle_cache": true,
+    "fetched_bytes_equal_root_captured": true,
+    "root_bytes_match_recorded": true
+  }
+]

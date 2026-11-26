@@ -1,0 +1,103 @@
+{
+  "method": "existing GPG; task-owned short home; no automatic key retrieval; keyserver identity remains independently untrusted",
+  "owned_home": "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xb9m34wb",
+  "results": [
+    {
+      "coordinate": "com.ncorti.ktfmt.gradle:plugin:0.22.0",
+      "requested_issuer": "5A456ADE180A42C5",
+      "key_url": "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x5A456ADE180A42C5",
+      "fetch_exit_code": 0,
+      "fetch_stderr": "",
+      "key_sha256": "3ac722c04a4f09d4c807b22a4456fad433f0d1e8f19f5c2990919e950e0251f9",
+      "import": {
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "gpg: keybox '/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xb9m34wb/pubring.kbx' created\ngpg: /var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xb9m34wb/trustdb.gpg: trustdb created\ngpg: key 5A456ADE180A42C5: public key \"Nicola Corti <corti.nico@gmail.com>\" imported\ngpg: no gpg-agent running in this session\ngpg: Total number processed: 1\ngpg:               imported: 1\n"
+      },
+      "verify": {
+        "exit_code": 0,
+        "command": [
+          "/usr/local/bin/gpg",
+          "--homedir",
+          "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xb9m34wb",
+          "--no-options",
+          "--no-autostart",
+          "--batch",
+          "--no-auto-key-retrieve",
+          "--status-fd",
+          "1",
+          "--verify",
+          "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-plugin-addendum/attestations/plugin-0.22.0.jar.asc",
+          "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-plugin-addendum/archive-review/com/ncorti/ktfmt/gradle/plugin/0.22.0/plugin-0.22.0.jar"
+        ],
+        "stdout": "[GNUPG:] NEWSIG\n[GNUPG:] KEYEXPIRED 1718245502\n[GNUPG:] KEY_CONSIDERED 447C96E2C6AE137D1DC239B85A456ADE180A42C5 0\n[GNUPG:] KEYEXPIRED 1718245502\n[GNUPG:] SIG_ID AoJMl2excupcaSZNA7vPCBvFRjg 2025-02-06 1738842877\n[GNUPG:] EXPKEYSIG 5A456ADE180A42C5 Nicola Corti <corti.nico@gmail.com>\n[GNUPG:] VALIDSIG 447C96E2C6AE137D1DC239B85A456ADE180A42C5 2025-02-06 1738842877 0 4 0 1 10 00 447C96E2C6AE137D1DC239B85A456ADE180A42C5\n",
+        "stderr": "gpg: Signature made Thu Feb  6 12:54:37 2025 CET\ngpg:                using RSA key 5A456ADE180A42C5\ngpg: Good signature from \"Nicola Corti <corti.nico@gmail.com>\" [expired]\ngpg: Note: This key has expired!\n      447C96E2C6AE137D1DC239B85A456ADE180A42C5\n"
+      }
+    },
+    {
+      "coordinate": "io.github.java-diff-utils:java-diff-utils:4.15",
+      "requested_issuer": "D477D51812E692011DB11E66A6EA2E2BF22E0543",
+      "key_url": "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xD477D51812E692011DB11E66A6EA2E2BF22E0543",
+      "fetch_exit_code": 0,
+      "fetch_stderr": "",
+      "key_sha256": "cc173d5a4a53ec324bb639dd123387e681a98be7358d008891db6faee6ca8407",
+      "import": {
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "gpg: key A6EA2E2BF22E0543: public key \"Tobias Warneke (for development purposes) <t.warneke@gmx.net>\" imported\ngpg: no gpg-agent running in this session\ngpg: Total number processed: 1\ngpg:               imported: 1\n"
+      },
+      "verify": {
+        "exit_code": 0,
+        "command": [
+          "/usr/local/bin/gpg",
+          "--homedir",
+          "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xb9m34wb",
+          "--no-options",
+          "--no-autostart",
+          "--batch",
+          "--no-auto-key-retrieve",
+          "--status-fd",
+          "1",
+          "--verify",
+          "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-plugin-addendum/attestations/java-diff-utils-4.15.jar.asc",
+          "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-plugin-addendum/archive-review/io/github/java-diff-utils/java-diff-utils/4.15/java-diff-utils-4.15.jar"
+        ],
+        "stdout": "[GNUPG:] NEWSIG\n[GNUPG:] KEY_CONSIDERED D477D51812E692011DB11E66A6EA2E2BF22E0543 0\n[GNUPG:] KEYEXPIRED 1667300400\n[GNUPG:] SIG_ID YV1ycndU560Iza4b45grivFWLuE 2024-11-23 1732399173\n[GNUPG:] EXPKEYSIG A6EA2E2BF22E0543 Tobias Warneke (for development purposes) <t.warneke@gmx.net>\n[GNUPG:] VALIDSIG D477D51812E692011DB11E66A6EA2E2BF22E0543 2024-11-23 1732399173 0 4 0 1 8 00 D477D51812E692011DB11E66A6EA2E2BF22E0543\n",
+        "stderr": "gpg: Signature made Sat Nov 23 22:59:33 2024 CET\ngpg:                using RSA key D477D51812E692011DB11E66A6EA2E2BF22E0543\ngpg: Good signature from \"Tobias Warneke (for development purposes) <t.warneke@gmx.net>\" [expired]\ngpg: Note: This key has expired!\n      D477D51812E692011DB11E66A6EA2E2BF22E0543\n"
+      }
+    },
+    {
+      "coordinate": "org.gradle.toolchains:foojay-resolver:1.0.0",
+      "requested_issuer": "E2F38302C8075E3D",
+      "key_url": "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xE2F38302C8075E3D",
+      "fetch_exit_code": 0,
+      "fetch_stderr": "",
+      "key_sha256": "c732eaa435147a7e5c208dabc6541c265af784e8aeb075e0466f24f800fab914",
+      "import": {
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "gpg: key E2F38302C8075E3D: 1 signature not checked due to a missing key\ngpg: key E2F38302C8075E3D: public key \"Gradle Inc. <maven-publishing@gradle.com>\" imported\ngpg: no gpg-agent running in this session\ngpg: Total number processed: 1\ngpg:               imported: 1\ngpg: no ultimately trusted keys found\n"
+      },
+      "verify": {
+        "exit_code": 0,
+        "command": [
+          "/usr/local/bin/gpg",
+          "--homedir",
+          "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoya-pgp-xb9m34wb",
+          "--no-options",
+          "--no-autostart",
+          "--batch",
+          "--no-auto-key-retrieve",
+          "--status-fd",
+          "1",
+          "--verify",
+          "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-plugin-addendum/attestations/foojay-resolver-1.0.0.jar.asc",
+          "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-plugin-addendum/archive-review/org/gradle/toolchains/foojay-resolver/1.0.0/foojay-resolver-1.0.0.jar"
+        ],
+        "stdout": "[GNUPG:] NEWSIG\n[GNUPG:] KEY_CONSIDERED 1BD97A6A154E7810EE0BC832E2F38302C8075E3D 0\n[GNUPG:] SIG_ID lwOMnsVWiN48SYYZXXfeTlEHdrU 2025-05-19 1747673044\n[GNUPG:] REVKEYSIG E2F38302C8075E3D Gradle Inc. <maven-publishing@gradle.com>\n[GNUPG:] VALIDSIG 1BD97A6A154E7810EE0BC832E2F38302C8075E3D 2025-05-19 1747673044 0 4 0 1 10 00 1BD97A6A154E7810EE0BC832E2F38302C8075E3D\n[GNUPG:] KEYREVOKED\n[GNUPG:] KEY_CONSIDERED 1BD97A6A154E7810EE0BC832E2F38302C8075E3D 0\n[GNUPG:] TRUST_UNDEFINED 0 pgp\n",
+        "stderr": "gpg: Signature made Mon May 19 18:44:04 2025 CEST\ngpg:                using RSA key E2F38302C8075E3D\ngpg: Good signature from \"Gradle Inc. <maven-publishing@gradle.com>\" [unknown]\ngpg: WARNING: This key has been revoked by its owner!\ngpg:          This could mean that the signature is forged.\ngpg: reason for revocation: Key is superseded\ngpg: WARNING: This key is not certified with a trusted signature!\ngpg:          There is no indication that the signature belongs to the owner.\n      1BD97A6A154E7810EE0BC832E2F38302C8075E3D\n"
+      }
+    }
+  ],
+  "owned_home_removed": true
+}

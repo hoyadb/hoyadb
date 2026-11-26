@@ -1,0 +1,202 @@
+EEEEEEEEEEEEEEEE
+======================================================================
+ERROR: test_default_secure_configuration_passes_and_pins_both_builds (__main__.LaunchGuard.test_default_secure_configuration_passes_and_pins_both_builds)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py", line 32, in test_default_secure_configuration_passes_and_pins_both_builds
+    args = G.secure_launch_args()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/kotlin_guard.py", line 5, in __getattr__
+    raise NotImplementedError("kotlin_guard." + name + " not implemented")
+NotImplementedError: kotlin_guard.secure_launch_args not implemented
+
+======================================================================
+ERROR: test_each_inherited_jvm_option_source_has_its_own_control (__main__.LaunchGuard.test_each_inherited_jvm_option_source_has_its_own_control)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py", line 60, in test_each_inherited_jvm_option_source_has_its_own_control
+    self.rejected(secure(env={name: f'-Xmx1g -Didea.use.native.compression=TRUE -Dx={SECRET}'}), 'env:' + name, 'idea.use.native.compression')
+                  ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py", line 22, in secure
+    return G.check_launch([*G.secure_launch_args(), *argv], env, props)
+           ^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/kotlin_guard.py", line 5, in __getattr__
+    raise NotImplementedError("kotlin_guard." + name + " not implemented")
+NotImplementedError: kotlin_guard.check_launch not implemented
+
+======================================================================
+ERROR: test_explicit_launch_arguments_cannot_reenable (__main__.LaunchGuard.test_explicit_launch_arguments_cannot_reenable)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py", line 47, in test_explicit_launch_arguments_cannot_reenable
+    self.rejected(secure(['-Pkotlin.incremental=true']), 'launch', 'kotlin.incremental')
+                  ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py", line 22, in secure
+    return G.check_launch([*G.secure_launch_args(), *argv], env, props)
+           ^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/kotlin_guard.py", line 5, in __getattr__
+    raise NotImplementedError("kotlin_guard." + name + " not implemented")
+NotImplementedError: kotlin_guard.check_launch not implemented
+
+======================================================================
+ERROR: test_false_or_absent_native_compression_is_not_enabled (__main__.LaunchGuard.test_false_or_absent_native_compression_is_not_enabled)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py", line 80, in test_false_or_absent_native_compression_is_not_enabled
+    self.assertTrue(secure(env={'JAVA_OPTS': '-Didea.use.native.compression=false'}).ok)
+                    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py", line 22, in secure
+    return G.check_launch([*G.secure_launch_args(), *argv], env, props)
+           ^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/kotlin_guard.py", line 5, in __getattr__
+    raise NotImplementedError("kotlin_guard." + name + " not implemented")
+NotImplementedError: kotlin_guard.check_launch not implemented
+
+======================================================================
+ERROR: test_missing_secure_incremental_argument_rejects (__main__.LaunchGuard.test_missing_secure_incremental_argument_rejects)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py", line 39, in test_missing_secure_incremental_argument_rejects
+    result = G.check_launch([], {}, {})
+             ^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/kotlin_guard.py", line 5, in __getattr__
+    raise NotImplementedError("kotlin_guard." + name + " not implemented")
+NotImplementedError: kotlin_guard.check_launch not implemented
+
+======================================================================
+ERROR: test_prefixed_gradle_environment_property (__main__.LaunchGuard.test_prefixed_gradle_environment_property)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py", line 54, in test_prefixed_gradle_environment_property
+    self.rejected(secure(env={'ORG_GRADLE_PROJECT_kotlin.incremental': 'true'}), 'env:ORG_GRADLE_PROJECT_kotlin.incremental', 'kotlin.incremental')
+                  ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py", line 22, in secure
+    return G.check_launch([*G.secure_launch_args(), *argv], env, props)
+           ^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/kotlin_guard.py", line 5, in __getattr__
+    raise NotImplementedError("kotlin_guard." + name + " not implemented")
+NotImplementedError: kotlin_guard.check_launch not implemented
+
+======================================================================
+ERROR: test_project_property_files_enable_incremental (__main__.LaunchGuard.test_project_property_files_enable_incremental)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py", line 44, in test_project_property_files_enable_incremental
+    self.rejected(secure(properties={name: 'kotlin.incremental=true\n'}), name, 'kotlin.incremental')
+                  ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py", line 22, in secure
+    return G.check_launch([*G.secure_launch_args(), *argv], env, props)
+           ^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/kotlin_guard.py", line 5, in __getattr__
+    raise NotImplementedError("kotlin_guard." + name + " not implemented")
+NotImplementedError: kotlin_guard.check_launch not implemented
+
+======================================================================
+ERROR: test_reports_only_names (__main__.LaunchGuard.test_reports_only_names)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py", line 83, in test_reports_only_names
+    result = secure(env={'JAVA_TOOL_OPTIONS': f'-Didea.use.native.compression=true -Dtoken={SECRET}'})
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py", line 22, in secure
+    return G.check_launch([*G.secure_launch_args(), *argv], env, props)
+           ^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/kotlin_guard.py", line 5, in __getattr__
+    raise NotImplementedError("kotlin_guard." + name + " not implemented")
+NotImplementedError: kotlin_guard.check_launch not implemented
+
+======================================================================
+ERROR: test_system_property_forwarding_and_nested_daemon_options (__main__.LaunchGuard.test_system_property_forwarding_and_nested_daemon_options)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py", line 70, in test_system_property_forwarding_and_nested_daemon_options
+    self.rejected(secure(properties={'consumer/gradle.properties': 'systemProp.idea.use.native.compression=true\n'}),
+                  ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py", line 22, in secure
+    return G.check_launch([*G.secure_launch_args(), *argv], env, props)
+           ^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/kotlin_guard.py", line 5, in __getattr__
+    raise NotImplementedError("kotlin_guard." + name + " not implemented")
+NotImplementedError: kotlin_guard.check_launch not implemented
+
+======================================================================
+ERROR: test_class_load_without_native_capture_is_incomplete (__main__.ObservedJvms.test_class_load_without_native_capture_is_incomplete)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py", line 113, in test_class_load_without_native_capture_is_incomplete
+    result = G.check_observed_jvms([self.jvm(capture={'class_load': True, 'native_load': False})], ['kotlin-compiler'])
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/kotlin_guard.py", line 5, in __getattr__
+    raise NotImplementedError("kotlin_guard." + name + " not implemented")
+NotImplementedError: kotlin_guard.check_observed_jvms not implemented
+
+======================================================================
+ERROR: test_complete_safe_observation_closes (__main__.ObservedJvms.test_complete_safe_observation_closes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py", line 98, in test_complete_safe_observation_closes
+    result = G.check_observed_jvms([self.jvm()], ['kotlin-compiler'])
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/kotlin_guard.py", line 5, in __getattr__
+    raise NotImplementedError("kotlin_guard." + name + " not implemented")
+NotImplementedError: kotlin_guard.check_observed_jvms not implemented
+
+======================================================================
+ERROR: test_effective_native_compression_rejects (__main__.ObservedJvms.test_effective_native_compression_rejects)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py", line 107, in test_effective_native_compression_rejects
+    result = G.check_observed_jvms([self.jvm(input_arguments=['-Didea.use.native.compression=true'])], ['kotlin-compiler'])
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/kotlin_guard.py", line 5, in __getattr__
+    raise NotImplementedError("kotlin_guard." + name + " not implemented")
+NotImplementedError: kotlin_guard.check_observed_jvms not implemented
+
+======================================================================
+ERROR: test_lz4_entry_point_observed_keeps_gate_open (__main__.ObservedJvms.test_lz4_entry_point_observed_keeps_gate_open)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py", line 119, in test_lz4_entry_point_observed_keeps_gate_open
+    result = G.check_observed_jvms([self.jvm(classes_loaded=loaded)], ['kotlin-compiler'])
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/kotlin_guard.py", line 5, in __getattr__
+    raise NotImplementedError("kotlin_guard." + name + " not implemented")
+NotImplementedError: kotlin_guard.check_observed_jvms not implemented
+
+======================================================================
+ERROR: test_native_library_must_match_reviewed_inventory (__main__.ObservedJvms.test_native_library_must_match_reviewed_inventory)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py", line 125, in test_native_library_must_match_reviewed_inventory
+    ok = G.check_observed_jvms([self.jvm(native_libraries_loaded=[{'name': 'jansi-mac-x86_64', 'sha256': 'b' * 64}])],
+         ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/kotlin_guard.py", line 5, in __getattr__
+    raise NotImplementedError("kotlin_guard." + name + " not implemented")
+NotImplementedError: kotlin_guard.check_observed_jvms not implemented
+
+======================================================================
+ERROR: test_strategy_mismatch_rejects (__main__.ObservedJvms.test_strategy_mismatch_rejects)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py", line 134, in test_strategy_mismatch_rejects
+    result = G.check_observed_jvms([self.jvm(execution_strategy='daemon')], ['kotlin-compiler'])
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/kotlin_guard.py", line 5, in __getattr__
+    raise NotImplementedError("kotlin_guard." + name + " not implemented")
+NotImplementedError: kotlin_guard.check_observed_jvms not implemented
+
+======================================================================
+ERROR: test_unobserved_required_jvm_keeps_gate_open (__main__.ObservedJvms.test_unobserved_required_jvm_keeps_gate_open)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_kotlin_guard.py", line 102, in test_unobserved_required_jvm_keeps_gate_open
+    result = G.check_observed_jvms([], ['kotlin-compiler'])
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/kotlin_guard.py", line 5, in __getattr__
+    raise NotImplementedError("kotlin_guard." + name + " not implemented")
+NotImplementedError: kotlin_guard.check_observed_jvms not implemented
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.038s
+
+FAILED (errors=16)
+exit=1

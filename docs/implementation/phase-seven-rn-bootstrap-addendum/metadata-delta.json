@@ -1,0 +1,26 @@
+[
+  {
+    "path": "io/github/java-diff-utils/java-diff-utils-parent/4.15/java-diff-utils-parent-4.15.pom",
+    "bytes": 10170,
+    "sha256": "09e7d44a7cfa19bc6b23cad14ec0a41f32ae0b597f0e26ace91916fdc2bb5c82",
+    "sha1": "410e4876451d9773cf86f9283cb5a8aebc5399cf",
+    "sha1_dir_match": true,
+    "in_repo_but_different": false
+  },
+  {
+    "path": "org/jetbrains/kotlin/kotlin-stdlib/2.2.21/kotlin-stdlib-2.2.21.pom",
+    "bytes": 2301,
+    "sha256": "cf31f923196c63aedecd0a57c24269bd3702a4e47c0bf0bd64b5ada5de522272",
+    "sha1": "2b7be7d3161001cb0956cde06bbe4dfb3359978c",
+    "sha1_dir_match": true,
+    "in_repo_but_different": false
+  },
+  {
+    "path": "org/jetbrains/kotlin/kotlin-stdlib/2.2.21/kotlin-stdlib-2.2.21.module",
+    "bytes": 12430,
+    "sha256": "bfbc657ddd3a8e37e4c8ad417968d5eb0b0b171c9fce48f962c2ad32ee434c21",
+    "sha1": "ffb4a034fc99314511f61aa1268cdb9d795a14d7",
+    "sha1_dir_match": true,
+    "in_repo_but_different": false
+  }
+]

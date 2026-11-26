@@ -1,0 +1,16 @@
+{
+  "files": {
+    "phase-seven-jdk-capture-probe-review.json": "6792639affe174648672acb0647d7a39c1d48886a3a5a8cd8ab116c1990da381",
+    "phase-seven-jdk-capture-probe-run-b-check.json": "3bd475e6ad912b897b150513d50ff5b2e34400f980814f35d2786cce4c82e3e9",
+    "phase-seven-jdk-capture-probe/files-sha256.json": "e93687b3863a89b31262e3fa00ba213fd9205735681a0335b2072a341a75f39f"
+  },
+  "format": 1,
+  "review": {
+    "agent": "b7d655b2-bede-46bd-82a9-4813dc96483d",
+    "final_phase_seven_rounds_counted": 0,
+    "model": "claude-opus-5-5",
+    "supplement_sha256": "6792639affe174648672acb0647d7a39c1d48886a3a5a8cd8ab116c1990da381",
+    "verdict": "No blockers for diagnostic evidence and disclosure supplement; no security PASS"
+  },
+  "root_followup": "Run B address check requested by review is independently recorded and hashed here."
+}

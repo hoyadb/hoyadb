@@ -1,0 +1,861 @@
+{
+  "format": 1,
+  "approval_status": "PREPARATION ONLY: awaiting independent review and explicit operator approval under ADR-0035; nothing activated",
+  "original_approvals": [
+    "ADR-0035 /1a914cd (snapshot dc5469e)",
+    "plugin addendum 8a87389 (snapshot 03048bb)"
+  ],
+  "scope": "Kotlin 2.1.20 compiler build-process inputs for the unchanged official RN0.86.3 includeBuild and the RN consumer app Kotlin compilation; no app/SDK/core runtime pin change",
+  "marker": {
+    "coordinate": "org.jetbrains.kotlin.jvm:org.jetbrains.kotlin.jvm.gradle.plugin:2.1.20",
+    "sha256": "5ccb905a796717218c1bb4eed8bb31fc674c5803cdd54c23753ead380f7a11b5",
+    "bytes": 1397,
+    "packaging": "pom",
+    "sole_dependency": [
+      {
+        "groupId": "org.jetbrains.kotlin",
+        "artifactId": "kotlin-gradle-plugin",
+        "version": "2.1.20",
+        "scope": "",
+        "type": "",
+        "classifier": "",
+        "optional": ""
+      }
+    ],
+    "quarantine": "target/phase-seven-rn/marker-review/bytes"
+  },
+  "additional_jar_components": [
+    {
+      "coordinate": "com.google.code.gson:gson:2.8.9",
+      "role": "Compile-only selection on the official RN Gradle plugin compile classpath (runtime selects approved 2.11.0)",
+      "pom_licenses": [
+        "Apache-2.0"
+      ],
+      "pom_parent": "com.google.code.gson:gson-parent:2.8.9",
+      "osv_exact_version_matches": [],
+      "files": [
+        {
+          "name": "gson-2.8.9.jar",
+          "url": "https://repo.maven.apache.org/maven2/com/google/code/gson/gson/2.8.9/gson-2.8.9.jar",
+          "bytes": 258075,
+          "sha256": "d3999291855de495c94c743761b8ab5176cfeabe281a5ab0d8e8d45326fd703e",
+          "sha512": "46501e4dd34c9a6f33ff63aeeec45b049579365c5273490e5dfd5ea4effaeced907d0fc728204c619aa136e867ad826204582ff9ba3080d06693c1c675c8473f",
+          "sha1_sidecar_match": true,
+          "gradle_independent_retrieval_match": null,
+          "publisher_module_sha256_match": null,
+          "detached_signature_fetched_unverified": true
+        },
+        {
+          "name": "gson-2.8.9.pom",
+          "url": "https://repo.maven.apache.org/maven2/com/google/code/gson/gson/2.8.9/gson-2.8.9.pom",
+          "bytes": 6325,
+          "sha256": "afded6e6a690fbf3ad4ae65ada397f0a90a5f630b303d1b741b9c97926fdd4de",
+          "sha512": "1b32f3407e7bf92341b0223113e807a4bea7da2bbc0485eb6d5ba090b77df4af3f9e547a5181ef1e440e011257b1ea37e1c304c8524ca6a3609e70be1fda960b",
+          "sha1_sidecar_match": true,
+          "gradle_independent_retrieval_match": true,
+          "publisher_module_sha256_match": null,
+          "detached_signature_fetched_unverified": null
+        }
+      ]
+    },
+    {
+      "coordinate": "com.google.errorprone:error_prone_annotations:2.7.1",
+      "role": "Compile-only annotation dependency of Guava 31.0.1-jre",
+      "pom_licenses": [
+        "Apache 2.0"
+      ],
+      "pom_parent": "com.google.errorprone:error_prone_parent:2.7.1",
+      "osv_exact_version_matches": [],
+      "files": [
+        {
+          "name": "error_prone_annotations-2.7.1.jar",
+          "url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.7.1/error_prone_annotations-2.7.1.jar",
+          "bytes": 14835,
+          "sha256": "cd5257c08a246cf8628817ae71cb822be192ef91f6881ca4a3fcff4f1de1cff3",
+          "sha512": "32747ed9abb289da6ec8f3acb3a3be47c1271323847c8e3c1e9f58e9fc4a211221bdaf988990e8ec97bdba3986927ec81cf9d3f3b5939fff8cbdfb0ec7afc7fe",
+          "sha1_sidecar_match": true,
+          "gradle_independent_retrieval_match": null,
+          "publisher_module_sha256_match": null,
+          "detached_signature_fetched_unverified": true
+        },
+        {
+          "name": "error_prone_annotations-2.7.1.pom",
+          "url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.7.1/error_prone_annotations-2.7.1.pom",
+          "bytes": 2111,
+          "sha256": "31a872e1149c5f3a8bc05fb4de455e5ea608ecfad1af222cb7637ca6c762ee25",
+          "sha512": "f31cac8ba7f9ee0115ea486f0b9b647e06e6a1fc578eab6df0d3efce2aa9bf1c3fa21743c0daadc4fa3ce2ed9bb68263a1ca251fb1ff877284ccd7c29d8d3ee5",
+          "sha1_sidecar_match": true,
+          "gradle_independent_retrieval_match": true,
+          "publisher_module_sha256_match": null,
+          "detached_signature_fetched_unverified": null
+        }
+      ]
+    },
+    {
+      "coordinate": "com.google.guava:failureaccess:1.0.1",
+      "role": "Compile-only dependency of Guava 31.0.1-jre",
+      "pom_licenses": [],
+      "pom_parent": "com.google.guava:guava-parent:26.0-android",
+      "osv_exact_version_matches": [],
+      "files": [
+        {
+          "name": "failureaccess-1.0.1.jar",
+          "url": "https://repo.maven.apache.org/maven2/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar",
+          "bytes": 4617,
+          "sha256": "a171ee4c734dd2da837e4b16be9df4661afab72a41adaf31eb84dfdaf936ca26",
+          "sha512": "f8d59b808d6ba617252305b66d5590937da9b2b843d492d06b8d0b1b1f397e39f360d5817707797b979a5bf20bf21987b35333e7a15c44ed7401fea2d2119cae",
+          "sha1_sidecar_match": true,
+          "gradle_independent_retrieval_match": null,
+          "publisher_module_sha256_match": null,
+          "detached_signature_fetched_unverified": true
+        },
+        {
+          "name": "failureaccess-1.0.1.pom",
+          "url": "https://repo.maven.apache.org/maven2/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.pom",
+          "bytes": 2413,
+          "sha256": "e96042ce78fecba0da2be964522947c87b40a291b5fd3cd672a434924103c4b9",
+          "sha512": "d8384a1a93045eefe330570dc9d0de4d0704ca396580d41d20d683eeab452cf78973ef166d5582f0d7e1d4dd5856da5beb88d4fd9ff5d28cd8e862306a471839",
+          "sha1_sidecar_match": true,
+          "gradle_independent_retrieval_match": true,
+          "publisher_module_sha256_match": null,
+          "detached_signature_fetched_unverified": null
+        }
+      ]
+    },
+    {
+      "coordinate": "com.google.guava:guava:31.0.1-jre",
+      "role": "Compile-only selection on the official RN Gradle plugin compile classpath (runtime selects approved 33.3.1-jre)",
+      "pom_licenses": [],
+      "pom_parent": "com.google.guava:guava-parent:31.0.1-jre",
+      "osv_exact_version_matches": [
+        "GHSA-5mg8-w23w-74h3",
+        "GHSA-7g45-4rm6-3mm3"
+      ],
+      "files": [
+        {
+          "name": "guava-31.0.1-jre.jar",
+          "url": "https://repo.maven.apache.org/maven2/com/google/guava/guava/31.0.1-jre/guava-31.0.1-jre.jar",
+          "bytes": 2974216,
+          "sha256": "d5be94d65e87bd219fb3193ad1517baa55a3b88fc91d21cf735826ab5af087b9",
+          "sha512": "c8d8aa38e6fb04c409c37922efcbbe182f65156a853f691d8381d56eea208adf22f7a28873bb7895210e41857dd4411aaf952682a2692051220e281910d0798f",
+          "sha1_sidecar_match": true,
+          "gradle_independent_retrieval_match": null,
+          "publisher_module_sha256_match": null,
+          "detached_signature_fetched_unverified": true
+        },
+        {
+          "name": "guava-31.0.1-jre.pom",
+          "url": "https://repo.maven.apache.org/maven2/com/google/guava/guava/31.0.1-jre/guava-31.0.1-jre.pom",
+          "bytes": 10963,
+          "sha256": "2be566920c21c60c5ccaf2827867caff766646e2113b7fcc3ee9c24a40b2f396",
+          "sha512": "f0dbf254500abee49858f2e6a03a1f14b9883ded5cceda869adfde3164e3e21713eb7b440f1b5aae30072ce4bc25841f2889c2306313a2e7f4ab2e80caecfad9",
+          "sha1_sidecar_match": true,
+          "gradle_independent_retrieval_match": true,
+          "publisher_module_sha256_match": null,
+          "detached_signature_fetched_unverified": null
+        }
+      ]
+    },
+    {
+      "coordinate": "com.google.j2objc:j2objc-annotations:1.3",
+      "role": "Compile-only annotation dependency of Guava 31.0.1-jre",
+      "pom_licenses": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "pom_parent": "org.sonatype.oss:oss-parent:7",
+      "osv_exact_version_matches": [],
+      "files": [
+        {
+          "name": "j2objc-annotations-1.3.jar",
+          "url": "https://repo.maven.apache.org/maven2/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar",
+          "bytes": 8781,
+          "sha256": "21af30c92267bd6122c0e0b4d20cccb6641a37eaf956c6540ec471d584e64a7b",
+          "sha512": "51ea975179f809cb260751d11a513881b643bf016d15949bcb63b57d3c8868a2197e0620ccbaa5739e032797ec6faa3aa6d64606e999fce32930314780ca4115",
+          "sha1_sidecar_match": true,
+          "gradle_independent_retrieval_match": null,
+          "publisher_module_sha256_match": null,
+          "detached_signature_fetched_unverified": true
+        },
+        {
+          "name": "j2objc-annotations-1.3.pom",
+          "url": "https://repo.maven.apache.org/maven2/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.pom",
+          "bytes": 2762,
+          "sha256": "5faca824ba115bee458730337dfdb2fcea46ba2fd774d4304edbf30fa6a3f055",
+          "sha512": "a52065553142f524a032b4ee474aff07d6b01860f1208865591e9caa3501fe3d2ee872fa4f20e6caf1576684d449656985c918feb61f0d119c63f5ce4183caae",
+          "sha1_sidecar_match": true,
+          "gradle_independent_retrieval_match": true,
+          "publisher_module_sha256_match": null,
+          "detached_signature_fetched_unverified": null
+        }
+      ]
+    },
+    {
+      "coordinate": "org.checkerframework:checker-qual:3.12.0",
+      "role": "Compile-only annotation dependency of Guava 31.0.1-jre",
+      "pom_licenses": [
+        "The MIT License"
+      ],
+      "pom_parent": null,
+      "osv_exact_version_matches": [],
+      "files": [
+        {
+          "name": "checker-qual-3.12.0.jar",
+          "url": "https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.jar",
+          "bytes": 208835,
+          "sha256": "ff10785ac2a357ec5de9c293cb982a2cbb605c0309ea4cc1cb9b9bc6dbe7f3cb",
+          "sha512": "ff20c424e130c31c30b4f4f5b4374f8f98f94ddae2b123f3c213f147be6b3de57854ee5651b02dd97d352c1c1df2a8bfeef73d5307a71372f46a6002eab24d78",
+          "sha1_sidecar_match": true,
+          "gradle_independent_retrieval_match": null,
+          "publisher_module_sha256_match": true,
+          "detached_signature_fetched_unverified": true
+        },
+        {
+          "name": "checker-qual-3.12.0.module",
+          "url": "https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.module",
+          "bytes": 3546,
+          "sha256": "d047949c1b81091c2c3913771fac2f32a2fa549ba3d5d548cc8c0b6dfa493777",
+          "sha512": "59ce0e7496960f4ca856a754066bbeb637aa9680776c3343f7f5a67d7556ea946c26d9b9d79728f80495da73aaf3e90aaef5eb4a2b7c85f233050c07aadd563b",
+          "sha1_sidecar_match": true,
+          "gradle_independent_retrieval_match": true,
+          "publisher_module_sha256_match": null,
+          "detached_signature_fetched_unverified": null
+        },
+        {
+          "name": "checker-qual-3.12.0.pom",
+          "url": "https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.pom",
+          "bytes": 2092,
+          "sha256": "775b7ae36e62820b3b86dc1aa39af37c0ac4b85ff48f7fe485a922a2790f46b9",
+          "sha512": "4221cbeb3e5366a07b5623c0bdf756130209f54c6de5c3ca1a0118f741157cccbf44f640f5d79691bac9d92de2406ce7f0368a4fb871943433cf647a00c045bf",
+          "sha1_sidecar_match": true,
+          "gradle_independent_retrieval_match": true,
+          "publisher_module_sha256_match": null,
+          "detached_signature_fetched_unverified": null
+        }
+      ]
+    },
+    {
+      "coordinate": "org.jetbrains.intellij.deps:trove4j:1.0.20200330",
+      "role": "Collections dependency of kotlin-compiler-embeddable",
+      "pom_licenses": [
+        "GNU LESSER GENERAL PUBLIC LICENSE 2.1"
+      ],
+      "pom_parent": null,
+      "osv_exact_version_matches": [],
+      "files": [
+        {
+          "name": "trove4j-1.0.20200330.jar",
+          "url": "https://repo.maven.apache.org/maven2/org/jetbrains/intellij/deps/trove4j/1.0.20200330/trove4j-1.0.20200330.jar",
+          "bytes": 572985,
+          "sha256": "c5fd725bffab51846bf3c77db1383c60aaaebfe1b7fe2f00d23fe1b7df0a439d",
+          "sha512": "f80f1374015f94546f2d1bc39272de08173ac354d119f8b3f04d0976112119f9bd576af74d177a47bdab7c0e362eb3c91a999409c32ccac3488ff884d8b8d62c",
+          "sha1_sidecar_match": true,
+          "gradle_independent_retrieval_match": null,
+          "publisher_module_sha256_match": null,
+          "detached_signature_fetched_unverified": true
+        },
+        {
+          "name": "trove4j-1.0.20200330.pom",
+          "url": "https://repo.maven.apache.org/maven2/org/jetbrains/intellij/deps/trove4j/1.0.20200330/trove4j-1.0.20200330.pom",
+          "bytes": 1322,
+          "sha256": "87721cbaa65a3c97d8b1ba9d207840f164c9fe38759fc9ea10ffe26565f8d3e9",
+          "sha512": "d88f143aa18d2875b60f684f9ccc8cd41aacd6d50abd9efdb792b36f70bcd0e56d7a52c006b169279d8ccad47565e52595317ed9870929bf83dfbdfa300d8233",
+          "sha1_sidecar_match": true,
+          "gradle_independent_retrieval_match": true,
+          "publisher_module_sha256_match": null,
+          "detached_signature_fetched_unverified": null
+        }
+      ]
+    },
+    {
+      "coordinate": "org.jetbrains.kotlin:kotlin-build-tools-impl:2.1.20",
+      "role": "Build Tools API implementation; KGP kotlinBuildToolsApiClasspath (strictly 2.1.20), used by classpath-snapshot and script-extension-discovery transforms",
+      "pom_licenses": [
+        "The Apache License, Version 2.0"
+      ],
+      "pom_parent": null,
+      "osv_exact_version_matches": [],
+      "files": [
+        {
+          "name": "kotlin-build-tools-impl-2.1.20.jar",
+          "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-build-tools-impl/2.1.20/kotlin-build-tools-impl-2.1.20.jar",
+          "bytes": 54292,
+          "sha256": "6e94896e321603e3bfe89fef02478e44d1d64a3d25d49d0694892ffc01c60acf",
+          "sha512": "46669f011a8c3fb64049eca68039a806b0f719fc6db9d635e09c136cc1327e4ce1ba6200a862ee7e6d8d04ec34567be3ccdd13009b34f184f39f4113b2925451",
+          "sha1_sidecar_match": true,
+          "gradle_independent_retrieval_match": null,
+          "publisher_module_sha256_match": null,
+          "detached_signature_fetched_unverified": true
+        },
+        {
+          "name": "kotlin-build-tools-impl-2.1.20.pom",
+          "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-build-tools-impl/2.1.20/kotlin-build-tools-impl-2.1.20.pom",
+          "bytes": 2400,
+          "sha256": "10fb1e35e0e8706747e8e83eae8f8b43406ba664e4201ec9dfcb9af7da6b42ba",
+          "sha512": "243596df506f5a79199b1d68b02ca7c382ca6f0706270c1e3f7358f757c48a86c332183a7d4e6c6e66587176c27061710d3e66509a9e4132a2413b0f5507410a",
+          "sha1_sidecar_match": true,
+          "gradle_independent_retrieval_match": true,
+          "publisher_module_sha256_match": null,
+          "detached_signature_fetched_unverified": null
+        }
+      ]
+    },
+    {
+      "coordinate": "org.jetbrains.kotlin:kotlin-compiler-embeddable:2.1.20",
+      "role": "Kotlin compiler (shades IntelliJ core and other libraries); KGP kotlinCompilerClasspath default dependency; runs in-process to compile Kotlin",
+      "pom_licenses": [
+        "The Apache License, Version 2.0"
+      ],
+      "pom_parent": null,
+      "osv_exact_version_matches": [],
+      "files": [
+        {
+          "name": "kotlin-compiler-embeddable-2.1.20.jar",
+          "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-compiler-embeddable/2.1.20/kotlin-compiler-embeddable-2.1.20.jar",
+          "bytes": 56909275,
+          "sha256": "c54a00718c8c0e3ee858bf42771c7f401c5e3c1738861e18e9536371042fa1b3",
+          "sha512": "ad79a449a0897e664fffcd38f158f62d97b20dbde8252fe6405b07cfedc4b430f7e4f67a3fcb00b6bd05251bcf9a131bf8d6020edc6912b68ba86a36173cc628",
+          "sha1_sidecar_match": true,
+          "gradle_independent_retrieval_match": null,
+          "publisher_module_sha256_match": null,
+          "detached_signature_fetched_unverified": true
+        },
+        {
+          "name": "kotlin-compiler-embeddable-2.1.20.pom",
+          "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-compiler-embeddable/2.1.20/kotlin-compiler-embeddable-2.1.20.pom",
+          "bytes": 2666,
+          "sha256": "227404eac6d809bc0d94def89336dfdf7d9a7d538792a234d52bdbafc2ae85af",
+          "sha512": "1a2e0932e7bb52031f3290a9d8e599a64dccefd6b3fcb0f0cf3f0bb7f90d8b74fe9c09e29bcbd57436680a12c2c57be5808e002206df70d73f9747cc07ea310b",
+          "sha1_sidecar_match": true,
+          "gradle_independent_retrieval_match": true,
+          "publisher_module_sha256_match": null,
+          "detached_signature_fetched_unverified": null
+        }
+      ]
+    },
+    {
+      "coordinate": "org.jetbrains.kotlin:kotlin-daemon-embeddable:2.1.20",
+      "role": "Compiler daemon protocol classes required by kotlin-compiler-embeddable",
+      "pom_licenses": [
+        "The Apache License, Version 2.0"
+      ],
+      "pom_parent": null,
+      "osv_exact_version_matches": [],
+      "files": [
+        {
+          "name": "kotlin-daemon-embeddable-2.1.20.jar",
+          "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-daemon-embeddable/2.1.20/kotlin-daemon-embeddable-2.1.20.jar",
+          "bytes": 345429,
+          "sha256": "d9e83df1d847a201ba3c016a786ced091be9503997d09f6a9cf1796ee489f374",
+          "sha512": "78703829e3fdcf6813b7b36e98f3b105634d27d35cf6d6353cdb89c8480e52b4cc4352a5e8879ed533df1ff972b473d8d4be9c24b4d9ebf45c4af6f2b68177a3",
+          "sha1_sidecar_match": true,
+          "gradle_independent_retrieval_match": null,
+          "publisher_module_sha256_match": null,
+          "detached_signature_fetched_unverified": true
+        },
+        {
+          "name": "kotlin-daemon-embeddable-2.1.20.pom",
+          "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-daemon-embeddable/2.1.20/kotlin-daemon-embeddable-2.1.20.pom",
+          "bytes": 1194,
+          "sha256": "b1d38c0afd6e1d15c48c1c5d156ce60578f433136bec523f4eb199f7af3f8229",
+          "sha512": "0a5bf8d98c488025517e8719f63de58c1d7af5a9f62cba18597dc78230598414fc1e5822189c30bc79b739e4585da5a838c3b21b67b0059706a205d36672f59d",
+          "sha1_sidecar_match": true,
+          "gradle_independent_retrieval_match": true,
+          "publisher_module_sha256_match": null,
+          "detached_signature_fetched_unverified": null
+        }
+      ]
+    },
+    {
+      "coordinate": "org.jetbrains.kotlin:kotlin-reflect:1.6.10",
+      "role": "Dependency of kotlin-compiler-embeddable (version declared by its POM; distinct from approved kotlin-reflect 2.1.20)",
+      "pom_licenses": [
+        "The Apache License, Version 2.0"
+      ],
+      "pom_parent": null,
+      "osv_exact_version_matches": [],
+      "files": [
+        {
+          "name": "kotlin-reflect-1.6.10.jar",
+          "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-reflect/1.6.10/kotlin-reflect-1.6.10.jar",
+          "bytes": 3038560,
+          "sha256": "3277ac102ae17aad10a55abec75ff5696c8d109790396434b496e75087854203",
+          "sha512": "b28392f114dc049bc4582c5bdbb5b60d74358668efb25579c2ed5ac749debda89dc7426aed1f7f548b5f121f7df227c9d37b4aa49b315a0779afd5847d17872d",
+          "sha1_sidecar_match": true,
+          "gradle_independent_retrieval_match": null,
+          "publisher_module_sha256_match": null,
+          "detached_signature_fetched_unverified": true
+        },
+        {
+          "name": "kotlin-reflect-1.6.10.pom",
+          "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-reflect/1.6.10/kotlin-reflect-1.6.10.pom",
+          "bytes": 1375,
+          "sha256": "57905524274a00ae028aaccc27283f6bc5925a934a046c1cc5d06c8ee4d6d5a9",
+          "sha512": "3765a8094a88ebdfac50ac898a6cb3e446bc7493fb6f9fad95a4805170f987b9ca0c5c76ed2a22fb53b5171d4564b353a138e4aaad11d42a50ebfe1a11978fe9",
+          "sha1_sidecar_match": true,
+          "gradle_independent_retrieval_match": true,
+          "publisher_module_sha256_match": null,
+          "detached_signature_fetched_unverified": null
+        }
+      ]
+    },
+    {
+      "coordinate": "org.jetbrains.kotlin:kotlin-script-runtime:2.1.20",
+      "role": "Dependency of the compiler and scripting plugin",
+      "pom_licenses": [
+        "The Apache License, Version 2.0"
+      ],
+      "pom_parent": null,
+      "osv_exact_version_matches": [],
+      "files": [
+        {
+          "name": "kotlin-script-runtime-2.1.20.jar",
+          "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-script-runtime/2.1.20/kotlin-script-runtime-2.1.20.jar",
+          "bytes": 43365,
+          "sha256": "ae4397fbb3aa2a1ada09290e753bba99a4114548977c3115526b9958f4cb1a04",
+          "sha512": "7ffe9eb67b271bb34a580913318aabb3f3ba186eab2dff13cd55fbfc1c0549011ee42e4b0edf0891f150a82d1bed2883386073b1e1969ae1d6482119f3d1fb40",
+          "sha1_sidecar_match": true,
+          "gradle_independent_retrieval_match": null,
+          "publisher_module_sha256_match": null,
+          "detached_signature_fetched_unverified": true
+        },
+        {
+          "name": "kotlin-script-runtime-2.1.20.pom",
+          "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-script-runtime/2.1.20/kotlin-script-runtime-2.1.20.pom",
+          "bytes": 1155,
+          "sha256": "0f83b5a90156c61a6ff109557b2d988e2710ee3fbe9f4a4257a6ea0d8748c3d6",
+          "sha512": "ab0518b756959354d8c9d2f6ab461be0c25b4113692b5aa685e8e65642b6096e8e75638d51a877c4ee163f9dea56c74ea7e0b240f340d53c4b8e6af874e98177",
+          "sha1_sidecar_match": true,
+          "gradle_independent_retrieval_match": true,
+          "publisher_module_sha256_match": null,
+          "detached_signature_fetched_unverified": null
+        }
+      ]
+    },
+    {
+      "coordinate": "org.jetbrains.kotlin:kotlin-scripting-common:2.1.20",
+      "role": "Dependency of the scripting compiler plugin",
+      "pom_licenses": [
+        "The Apache License, Version 2.0"
+      ],
+      "pom_parent": null,
+      "osv_exact_version_matches": [],
+      "files": [
+        {
+          "name": "kotlin-scripting-common-2.1.20.jar",
+          "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-common/2.1.20/kotlin-scripting-common-2.1.20.jar",
+          "bytes": 198395,
+          "sha256": "5fdbf6ae72237ce335d603eb12c49b09bc9c1a33c0c01f1d62e77ff33663cefb",
+          "sha512": "67ca65ff8ae29249c0a13436b715a3797e1369b3297192202314578222b596b75dc67af26a2548c15ddbbb8f0bca9d34087b3dbfa0a4dc910962a12e26aa6146",
+          "sha1_sidecar_match": true,
+          "gradle_independent_retrieval_match": null,
+          "publisher_module_sha256_match": null,
+          "detached_signature_fetched_unverified": true
+        },
+        {
+          "name": "kotlin-scripting-common-2.1.20.pom",
+          "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-common/2.1.20/kotlin-scripting-common-2.1.20.pom",
+          "bytes": 1383,
+          "sha256": "1f77709045dd905eb7505a94280d37ec757f08709cfe9f3a74aba73bbf99f79b",
+          "sha512": "f7b35c58d9bfe7bb09549b28d8285127143021d61c168b169e87247cfe06a58bf442167f2ba85620de9fc9f23d47f3229f828876c400c511fe5ccf404c028c2e",
+          "sha1_sidecar_match": true,
+          "gradle_independent_retrieval_match": true,
+          "publisher_module_sha256_match": null,
+          "detached_signature_fetched_unverified": null
+        }
+      ]
+    },
+    {
+      "coordinate": "org.jetbrains.kotlin:kotlin-scripting-compiler-embeddable:2.1.20",
+      "role": "Scripting compiler plugin added unconditionally by KGP to every non-native compilation plugin classpath",
+      "pom_licenses": [
+        "The Apache License, Version 2.0"
+      ],
+      "pom_parent": null,
+      "osv_exact_version_matches": [],
+      "files": [
+        {
+          "name": "kotlin-scripting-compiler-embeddable-2.1.20.jar",
+          "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-compiler-embeddable/2.1.20/kotlin-scripting-compiler-embeddable-2.1.20.jar",
+          "bytes": 571310,
+          "sha256": "3d4f772b238414650017e97462256b7c4d5edfa1013cbf5477573eb1ac2e2884",
+          "sha512": "049683b15b8fa8799ae34de2e95d06b7746a32fbcb1d19c10f5d7ce63d583bee11e1fa88bb66a36bcfadf692b7bf882e4d531c9fe9feb57fa6726225e5028618",
+          "sha1_sidecar_match": true,
+          "gradle_independent_retrieval_match": null,
+          "publisher_module_sha256_match": null,
+          "detached_signature_fetched_unverified": true
+        },
+        {
+          "name": "kotlin-scripting-compiler-embeddable-2.1.20.pom",
+          "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-compiler-embeddable/2.1.20/kotlin-scripting-compiler-embeddable-2.1.20.pom",
+          "bytes": 1661,
+          "sha256": "0fff7ff1d3bfa9cce3efbb4db38989c268a51eb67f81efd0311b8a64618b85a9",
+          "sha512": "2e4c79ca208256b2225465c487619895f954f36180290d52af50924ec8984b0168348da1247bc9ed75f576df5386bc35425a6c847dd73e03a394c8786edf47fd",
+          "sha1_sidecar_match": true,
+          "gradle_independent_retrieval_match": true,
+          "publisher_module_sha256_match": null,
+          "detached_signature_fetched_unverified": null
+        }
+      ]
+    },
+    {
+      "coordinate": "org.jetbrains.kotlin:kotlin-scripting-compiler-impl-embeddable:2.1.20",
+      "role": "Dependency of the scripting compiler plugin",
+      "pom_licenses": [
+        "The Apache License, Version 2.0"
+      ],
+      "pom_parent": null,
+      "osv_exact_version_matches": [],
+      "files": [
+        {
+          "name": "kotlin-scripting-compiler-impl-embeddable-2.1.20.jar",
+          "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-compiler-impl-embeddable/2.1.20/kotlin-scripting-compiler-impl-embeddable-2.1.20.jar",
+          "bytes": 229523,
+          "sha256": "f665d70b1a0837ff3a0ef7bec4fc5d9fed67ea75e4697de158eb51f1ea501c3f",
+          "sha512": "85fb3952edd477e83886feb207f2175a6fed27eda82058c40da4fff0de47498ba27a2c12d7a794c9fed21def1d8ae926740bc493bddc99379dd51179b7380c1b",
+          "sha1_sidecar_match": true,
+          "gradle_independent_retrieval_match": null,
+          "publisher_module_sha256_match": null,
+          "detached_signature_fetched_unverified": true
+        },
+        {
+          "name": "kotlin-scripting-compiler-impl-embeddable-2.1.20.pom",
+          "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-compiler-impl-embeddable/2.1.20/kotlin-scripting-compiler-impl-embeddable-2.1.20.pom",
+          "bytes": 1859,
+          "sha256": "b639ae20d87a815e304ddd20a0e4c4937e13b5fc7a4267b5e15c0e5902298665",
+          "sha512": "e4e5bf1d4e99ce708e4e479e8476ef391a53fd31fbfc4eece4d365f212ee581d78d91565e4485c85dcac9089b409c9ceb65aed2d693fec678cbd083e452f86d2",
+          "sha1_sidecar_match": true,
+          "gradle_independent_retrieval_match": true,
+          "publisher_module_sha256_match": null,
+          "detached_signature_fetched_unverified": null
+        }
+      ]
+    },
+    {
+      "coordinate": "org.jetbrains.kotlin:kotlin-scripting-jvm:2.1.20",
+      "role": "Dependency of the scripting compiler plugin",
+      "pom_licenses": [
+        "The Apache License, Version 2.0"
+      ],
+      "pom_parent": null,
+      "osv_exact_version_matches": [],
+      "files": [
+        {
+          "name": "kotlin-scripting-jvm-2.1.20.jar",
+          "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-jvm/2.1.20/kotlin-scripting-jvm-2.1.20.jar",
+          "bytes": 149683,
+          "sha256": "69f457acab98364c0eb578c497e0c3ca930b8cfb82be774049da04cde38087f7",
+          "sha512": "6b429bd61fe13ea53b829bc52a4c101d799e313f0feaf7f415eccaea0850176ed5646af035399e0097ddcbf58895e9d6679914904a86e44d1225a37ca277e933",
+          "sha1_sidecar_match": true,
+          "gradle_independent_retrieval_match": null,
+          "publisher_module_sha256_match": null,
+          "detached_signature_fetched_unverified": true
+        },
+        {
+          "name": "kotlin-scripting-jvm-2.1.20.pom",
+          "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-jvm/2.1.20/kotlin-scripting-jvm-2.1.20.pom",
+          "bytes": 1766,
+          "sha256": "3c4453391137ec455c74be496f71d9a498696d2549be64f59a60647ceee2553d",
+          "sha512": "7fddf2017f9906d817587c629f92317ae3468315bc9919218fe423cb922c6abefb3d09a26b538bc5b87a13324821b3a8c46c5316ba583085569a677366d29bc7",
+          "sha1_sidecar_match": true,
+          "gradle_independent_retrieval_match": true,
+          "publisher_module_sha256_match": null,
+          "detached_signature_fetched_unverified": null
+        }
+      ]
+    },
+    {
+      "coordinate": "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.8.0",
+      "role": "Coroutines dependency of kotlin-compiler-embeddable (distinct from approved runtime 1.9.0)",
+      "pom_licenses": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "pom_parent": null,
+      "osv_exact_version_matches": [],
+      "files": [
+        {
+          "name": "kotlinx-coroutines-core-jvm-1.8.0.jar",
+          "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.8.0/kotlinx-coroutines-core-jvm-1.8.0.jar",
+          "bytes": 1548360,
+          "sha256": "9860906a1937490bf5f3b06d2f0e10ef451e65b95b269f22daf68a3d1f5065c5",
+          "sha512": "081391dcc0b66e4f71401a0684c8f0fe0fa10f195ca5e50208419b4f6110d9b0f90250a43950114d75c79455b9d304afadc069b98c5bc86afa7701ddaed51af1",
+          "sha1_sidecar_match": true,
+          "gradle_independent_retrieval_match": null,
+          "publisher_module_sha256_match": true,
+          "detached_signature_fetched_unverified": true
+        },
+        {
+          "name": "kotlinx-coroutines-core-jvm-1.8.0.module",
+          "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.8.0/kotlinx-coroutines-core-jvm-1.8.0.module",
+          "bytes": 4278,
+          "sha256": "ff6a22da40040938751db0ae21177e76517dbf126a76796f5426727bf76c1228",
+          "sha512": "44fbb461d2e7d505915d94fd06d48660482aaf75f136862ff7567ec3dc868a84e645785b45710c2045ffe6087f86585b917703e25892d1c68093537dbab5a665",
+          "sha1_sidecar_match": true,
+          "gradle_independent_retrieval_match": true,
+          "publisher_module_sha256_match": null,
+          "detached_signature_fetched_unverified": null
+        },
+        {
+          "name": "kotlinx-coroutines-core-jvm-1.8.0.pom",
+          "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.8.0/kotlinx-coroutines-core-jvm-1.8.0.pom",
+          "bytes": 2196,
+          "sha256": "a5633abd53467ceb91622d81f2e982080877145e0b76e1b75788715434885d0b",
+          "sha512": "010eb8254d2ff842a039043fe297a3dda0189fbd8ce1a214773724d3fa5e8e8a6a67ed0cd2e72d563d53a061e33041c9745c87c38e2dc7ea98dffab0ee062b03",
+          "sha1_sidecar_match": true,
+          "gradle_independent_retrieval_match": true,
+          "publisher_module_sha256_match": null,
+          "detached_signature_fetched_unverified": null
+        }
+      ]
+    }
+  ],
+  "metadata_only_components": [
+    {
+      "coordinate": "org.jetbrains.kotlin:kotlin-gradle-plugins-bom:2.1.20",
+      "role": "Metadata-only platform (BOM) referenced by KGP module metadata",
+      "pom_licenses": [
+        "The Apache License, Version 2.0"
+      ],
+      "pom_parent": null,
+      "osv_exact_version_matches": [],
+      "files": [
+        {
+          "name": "kotlin-gradle-plugins-bom-2.1.20.module",
+          "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-gradle-plugins-bom/2.1.20/kotlin-gradle-plugins-bom-2.1.20.module",
+          "bytes": 6349,
+          "sha256": "205e1169c628bec05f1d59e44d32091528ae9fd53a7e33ec543bcefdb1288de6",
+          "sha512": "6f16d55b2cfa9f4cb835dbacfd2fde3715bf9b8048077660c3f0e4459baeb26bdc27688a2eee70ff857481e0af1b8aa6c790f6b2600acfdc78ceb664d425da01",
+          "sha1_sidecar_match": true,
+          "gradle_independent_retrieval_match": true,
+          "publisher_module_sha256_match": null,
+          "detached_signature_fetched_unverified": null
+        },
+        {
+          "name": "kotlin-gradle-plugins-bom-2.1.20.pom",
+          "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-gradle-plugins-bom/2.1.20/kotlin-gradle-plugins-bom-2.1.20.pom",
+          "bytes": 4452,
+          "sha256": "639ca6c7653e1a9da95df2a3bae26ccb701c03afd58c797ab6bf6f255f64c301",
+          "sha512": "25a663505fab896e3bd3211efa9df837696b9ff832b45e4c9f53df0fa7ff472d572eb002e64b4ac8e54af970b9ecea70d8ba592fff7bf69f1906f0ebac5ae276",
+          "sha1_sidecar_match": true,
+          "gradle_independent_retrieval_match": true,
+          "publisher_module_sha256_match": null,
+          "detached_signature_fetched_unverified": null
+        }
+      ]
+    },
+    {
+      "coordinate": "org.jetbrains.kotlinx:kotlinx-coroutines-bom:1.9.0",
+      "role": "Metadata-only platform (BOM) on the plugin runtime classpath",
+      "pom_licenses": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "pom_parent": null,
+      "osv_exact_version_matches": [],
+      "files": [
+        {
+          "name": "kotlinx-coroutines-bom-1.9.0.pom",
+          "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-bom/1.9.0/kotlinx-coroutines-bom-1.9.0.pom",
+          "bytes": 4291,
+          "sha256": "bea5511e9001f2c593ab5080df131b219ab5e2085cc5979ce583eacd4946fd78",
+          "sha512": "6d7f6ee873c622ac45c12266c1b2dc7086cb7273a77215ef9c51ce3b8cc1ac3415229b193792d1900d0ed9fba3f464eaa380741e813ed4ed364a6bc21de17671",
+          "sha1_sidecar_match": true,
+          "gradle_independent_retrieval_match": true,
+          "publisher_module_sha256_match": null,
+          "detached_signature_fetched_unverified": null
+        }
+      ]
+    },
+    {
+      "coordinate": "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0",
+      "role": "Metadata-only Kotlin Multiplatform root module; redirects to the approved -jvm 1.9.0 artifact",
+      "pom_licenses": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "pom_parent": null,
+      "osv_exact_version_matches": [],
+      "files": [
+        {
+          "name": "kotlinx-coroutines-core-1.9.0.module",
+          "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core/1.9.0/kotlinx-coroutines-core-1.9.0.module",
+          "bytes": 45570,
+          "sha256": "ad534034a953b4e12cbeeb874c66adf8b1ca14df15fe0d2e6547aa34e86dfeca",
+          "sha512": "e41d384e7e11561a243f838c49bbdf031354ebf51690cfb23aba2e734c8220729ac1b339938853c4b658f0440272fbe09465e17be46e231e21898a9d4fbdc84c",
+          "sha1_sidecar_match": true,
+          "gradle_independent_retrieval_match": true,
+          "publisher_module_sha256_match": null,
+          "detached_signature_fetched_unverified": null
+        },
+        {
+          "name": "kotlinx-coroutines-core-1.9.0.pom",
+          "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core/1.9.0/kotlinx-coroutines-core-1.9.0.pom",
+          "bytes": 2057,
+          "sha256": "770f2793d05e2b027b9c799938ec1d2d4ef141ce5819c780c32c3995cadb0a47",
+          "sha512": "a0031bc41d95c457e2be4ba52dd7af151e5b7519cf01591ea258b7654054666f98f1f82911e4d8282e4d574db3dfffab917031d4e5493acf6df006469f24dbb5",
+          "sha1_sidecar_match": true,
+          "gradle_independent_retrieval_match": true,
+          "publisher_module_sha256_match": null,
+          "detached_signature_fetched_unverified": null
+        }
+      ]
+    }
+  ],
+  "parent_poms_already_in_reviewed_metadata": [
+    "com.google.code.gson:gson-parent:2.8.9",
+    "com.google.errorprone:error_prone_parent:2.7.1",
+    "com.google.guava:guava-parent:26.0-android",
+    "com.google.guava:guava-parent:31.0.1-jre",
+    "org.sonatype.oss:oss-parent:7",
+    "org.sonatype.oss:oss-parent:9"
+  ],
+  "graph_delta": {
+    "approved_union_size": 225,
+    "per_configuration": {
+      "kotlinCompilerClasspath": {
+        "components": 8,
+        "online_offline_same_components": true,
+        "same_variants": true,
+        "new": [
+          "org.jetbrains.intellij.deps:trove4j:1.0.20200330",
+          "org.jetbrains.kotlin:kotlin-compiler-embeddable:2.1.20",
+          "org.jetbrains.kotlin:kotlin-daemon-embeddable:2.1.20",
+          "org.jetbrains.kotlin:kotlin-reflect:1.6.10",
+          "org.jetbrains.kotlin:kotlin-script-runtime:2.1.20",
+          "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.8.0"
+        ]
+      },
+      "kotlinBuildToolsApiClasspath": {
+        "components": 16,
+        "online_offline_same_components": true,
+        "same_variants": true,
+        "new": [
+          "org.jetbrains.intellij.deps:trove4j:1.0.20200330",
+          "org.jetbrains.kotlin:kotlin-build-tools-impl:2.1.20",
+          "org.jetbrains.kotlin:kotlin-compiler-embeddable:2.1.20",
+          "org.jetbrains.kotlin:kotlin-daemon-embeddable:2.1.20",
+          "org.jetbrains.kotlin:kotlin-reflect:1.6.10",
+          "org.jetbrains.kotlin:kotlin-script-runtime:2.1.20",
+          "org.jetbrains.kotlin:kotlin-scripting-common:2.1.20",
+          "org.jetbrains.kotlin:kotlin-scripting-compiler-embeddable:2.1.20",
+          "org.jetbrains.kotlin:kotlin-scripting-compiler-impl-embeddable:2.1.20",
+          "org.jetbrains.kotlin:kotlin-scripting-jvm:2.1.20",
+          "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.8.0"
+        ]
+      },
+      "kotlinCompilerPluginClasspathMain": {
+        "components": 7,
+        "online_offline_same_components": true,
+        "same_variants": true,
+        "new": [
+          "org.jetbrains.kotlin:kotlin-script-runtime:2.1.20",
+          "org.jetbrains.kotlin:kotlin-scripting-common:2.1.20",
+          "org.jetbrains.kotlin:kotlin-scripting-compiler-embeddable:2.1.20",
+          "org.jetbrains.kotlin:kotlin-scripting-compiler-impl-embeddable:2.1.20",
+          "org.jetbrains.kotlin:kotlin-scripting-jvm:2.1.20"
+        ]
+      },
+      "appDebugCompileClasspath": {
+        "components": 73,
+        "online_offline_same_components": true,
+        "same_variants": true,
+        "new": [
+          "androidx.annotation:annotation-jvm:1.6.0",
+          "androidx.annotation:annotation:1.6.0",
+          "androidx.arch.core:core-runtime:2.1.0",
+          "androidx.collection:collection:1.1.0",
+          "androidx.core:core-ktx:1.2.0",
+          "androidx.core:core:1.13.0",
+          "com.squareup.okio:okio:3.4.0",
+          "dev.hoyadb:hoyadb-android:0.1.0",
+          "org.jetbrains.kotlin:kotlin-stdlib-common:2.1.20",
+          "org.jetbrains.kotlinx:kotlinx-coroutines-bom:1.8.1",
+          "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.1"
+        ]
+      },
+      "includedBuild:compileClasspath": {
+        "components": 31,
+        "online_offline_same_components": true,
+        "same_variants": true,
+        "new": [
+          "com.google.code.gson:gson:2.8.9",
+          "com.google.errorprone:error_prone_annotations:2.7.1",
+          "com.google.guava:failureaccess:1.0.1",
+          "com.google.guava:guava:31.0.1-jre",
+          "com.google.j2objc:j2objc-annotations:1.3",
+          "org.checkerframework:checker-qual:3.12.0",
+          "org.jetbrains.kotlin:kotlin-gradle-plugins-bom:2.1.20"
+        ]
+      },
+      "includedBuild:runtimeClasspath": {
+        "components": 145,
+        "online_offline_same_components": true,
+        "same_variants": true,
+        "new": [
+          "org.jetbrains.kotlin:kotlin-gradle-plugins-bom:2.1.20",
+          "org.jetbrains.kotlinx:kotlinx-coroutines-bom:1.9.0",
+          "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0"
+        ]
+      }
+    },
+    "compiler_closure_new": [
+      "org.jetbrains.intellij.deps:trove4j:1.0.20200330",
+      "org.jetbrains.kotlin:kotlin-build-tools-impl:2.1.20",
+      "org.jetbrains.kotlin:kotlin-compiler-embeddable:2.1.20",
+      "org.jetbrains.kotlin:kotlin-daemon-embeddable:2.1.20",
+      "org.jetbrains.kotlin:kotlin-reflect:1.6.10",
+      "org.jetbrains.kotlin:kotlin-script-runtime:2.1.20",
+      "org.jetbrains.kotlin:kotlin-scripting-common:2.1.20",
+      "org.jetbrains.kotlin:kotlin-scripting-compiler-embeddable:2.1.20",
+      "org.jetbrains.kotlin:kotlin-scripting-compiler-impl-embeddable:2.1.20",
+      "org.jetbrains.kotlin:kotlin-scripting-jvm:2.1.20",
+      "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.8.0"
+    ],
+    "included_build_new": [
+      "com.google.code.gson:gson:2.8.9",
+      "com.google.errorprone:error_prone_annotations:2.7.1",
+      "com.google.guava:failureaccess:1.0.1",
+      "com.google.guava:guava:31.0.1-jre",
+      "com.google.j2objc:j2objc-annotations:1.3",
+      "org.checkerframework:checker-qual:3.12.0",
+      "org.jetbrains.kotlin:kotlin-gradle-plugins-bom:2.1.20",
+      "org.jetbrains.kotlinx:kotlinx-coroutines-bom:1.9.0",
+      "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0"
+    ],
+    "app_debug_compile_new": [
+      "androidx.annotation:annotation-jvm:1.6.0",
+      "androidx.annotation:annotation:1.6.0",
+      "androidx.arch.core:core-runtime:2.1.0",
+      "androidx.collection:collection:1.1.0",
+      "androidx.core:core-ktx:1.2.0",
+      "androidx.core:core:1.13.0",
+      "com.squareup.okio:okio:3.4.0",
+      "dev.hoyadb:hoyadb-android:0.1.0",
+      "org.jetbrains.kotlin:kotlin-stdlib-common:2.1.20",
+      "org.jetbrains.kotlinx:kotlinx-coroutines-bom:1.8.1",
+      "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.1"
+    ]
+  },
+  "advisories": {
+    "closure_matches": {
+      "com.google.guava:guava:31.0.1-jre": [
+        "GHSA-5mg8-w23w-74h3",
+        "GHSA-7g45-4rm6-3mm3"
+      ]
+    },
+    "embedded_catalog_declared_informational": {
+      "com.google.guava:guava:33.3.1-jre": [],
+      "io.vavr:vavr:0.10.4": [],
+      "org.jetbrains.intellij.deps:asm-all:9.6.1": [],
+      "org.jdom:jdom2:2.0.6.1": [],
+      "com.fasterxml.woodstox:woodstox-core:7.1.0": [],
+      "com.google.guava:failureaccess:1.0.2": []
+    },
+    "note": "Exact-version OSV registry check only; ADR-0035 original 47 build-only advisories (3 critical) remain disclosed and are not rescanned here"
+  },
+  "restrictions": [
+    "Activate only the exact marker plus listed JAR/metadata bytes after explicit operator approval; verify every hash before use",
+    "Unchanged official includeBuild and consumer; isolated fresh GRADLE_USER_HOME; no HOME override; no shared/remote cache; --offline, no build/configuration cache",
+    "Explicit existing JDK 17.0.1-tem (the reviewed metadata JDK) with auto-detect/auto-download disabled; no JDK fetch",
+    "No ktfmtFormat or formatter 0.54 activation; no source fallback; no SDK component download",
+    "Compare the actual selected build/runtime graphs with (ADR-0035 union + 8a87389 + this addendum) before compilation; stop on any extra component or artifact",
+    "No publication or customer-store operation"
+  ]
+}

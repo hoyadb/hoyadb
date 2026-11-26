@@ -1,0 +1,8 @@
+    Finished `release` profile [optimized] target(s) in 0.38s
+    Finished `release` profile [optimized] target(s) in 0.12s
+    Finished `release` profile [optimized] target(s) in 0.15s
+    Finished `release` profile [optimized] target(s) in 0.12s
+xcframework successfully written out to: /Users/boristacyniak/Projects/alocasia/hoyadb/bindings/swift/Artifacts/HoyaNative.xcframework
+HOYA_APPLE_ARTIFACT_BUILD_GREEN source_files=60
+python3 bindings/swift/build-artifacts.py  3.57s user 4.13s system 63% cpu 12.052 total
+exit=0

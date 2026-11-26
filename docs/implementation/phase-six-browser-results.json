@@ -1,0 +1,1284 @@
+{
+  "namespace": "hoyadb-spec23-fb666dd2-f31b-41ed-bdc5-0ae7942c3027",
+  "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Paseo/0.12.0 Chrome/152.0.7977.76 Electron/44.2.0 Safari/537.36",
+  "origin": "http://127.0.0.1:8775",
+  "profile": "release",
+  "mode": "full",
+  "results": [
+    {
+      "name": "S01/S10 malformed and absent supplied keys create no database",
+      "passed": true,
+      "detail": {
+        "physicalFilesUnchanged": true
+      }
+    },
+    {
+      "name": "S06 encrypted typed[0]",
+      "passed": true,
+      "detail": {
+        "result": [
+          "P01",
+          "P02",
+          "P03",
+          "P04",
+          "P05",
+          "P06",
+          "P07",
+          "P08",
+          "P09",
+          "P10"
+        ],
+        "elapsed_ms": 676
+      }
+    },
+    {
+      "name": "S06 encrypted model[0]",
+      "passed": true,
+      "detail": {
+        "result": [
+          "S01",
+          "S02",
+          "S03",
+          "S04",
+          "S05",
+          "D01",
+          "D02",
+          "D03",
+          "D04",
+          "D05",
+          "D06",
+          "D07",
+          "D08",
+          "D09",
+          "D10",
+          "D11",
+          "D12",
+          "D13",
+          "D14",
+          "TC0028"
+        ],
+        "elapsed_ms": 1138
+      }
+    },
+    {
+      "name": "S06 encrypted reactive[0]",
+      "passed": true,
+      "detail": {
+        "result": [
+          "R01",
+          "R02",
+          "R03",
+          "R04",
+          "R05",
+          "R06",
+          "R07",
+          "R08",
+          "R09",
+          "R10",
+          "R11 values",
+          "R11 operators",
+          "R11 relations",
+          "R11 validation",
+          "R11 names",
+          "R12",
+          "R15"
+        ],
+        "elapsed_ms": 1380
+      }
+    },
+    {
+      "name": "S06 encrypted review[0]",
+      "passed": true,
+      "detail": {
+        "result": {
+          "cases": [
+            "Q01 large observations/navigation/reverse dependencies"
+          ],
+          "poolChecks": [
+            {
+              "case": "Q01 large observations/navigation/reverse dependencies",
+              "before": [],
+              "after": []
+            }
+          ]
+        },
+        "elapsed_ms": 1754
+      }
+    },
+    {
+      "name": "S06 encrypted review[1]",
+      "passed": true,
+      "detail": {
+        "result": {
+          "cases": [
+            "Q01 owner TEMP window/intersection"
+          ],
+          "poolChecks": [
+            {
+              "case": "Q01 owner TEMP window/intersection",
+              "before": [],
+              "after": []
+            }
+          ]
+        },
+        "elapsed_ms": 1110
+      }
+    },
+    {
+      "name": "S06 encrypted review[2]",
+      "passed": true,
+      "detail": {
+        "result": {
+          "cases": [
+            "Q01 oversized all-kind/Null/AND parity"
+          ],
+          "poolChecks": [
+            {
+              "case": "Q01 oversized all-kind/Null/AND parity",
+              "before": [],
+              "after": []
+            }
+          ]
+        },
+        "elapsed_ms": 926
+      }
+    },
+    {
+      "name": "S06 encrypted review[3]",
+      "passed": true,
+      "detail": {
+        "result": {
+          "cases": [
+            "Q02 repeated explicit retry errors"
+          ],
+          "poolChecks": [
+            {
+              "case": "Q02 repeated explicit retry errors",
+              "before": [],
+              "after": []
+            }
+          ]
+        },
+        "elapsed_ms": 29
+      }
+    },
+    {
+      "name": "S06 encrypted review[4]",
+      "passed": true,
+      "detail": {
+        "result": {
+          "cases": [
+            "Q03 row/count failure isolation"
+          ],
+          "poolChecks": [
+            {
+              "case": "Q03 row/count failure isolation",
+              "before": [],
+              "after": []
+            }
+          ]
+        },
+        "elapsed_ms": 31
+      }
+    },
+    {
+      "name": "S06 encrypted command[0]",
+      "passed": true,
+      "detail": {
+        "result": {
+          "case": "atomic_initialization_and_order",
+          "files_before": [],
+          "files_after": []
+        },
+        "elapsed_ms": 31
+      }
+    },
+    {
+      "name": "S06 encrypted command[1]",
+      "passed": true,
+      "detail": {
+        "result": {
+          "case": "ordinary_failure_preserves_absence_data_and_counter",
+          "files_before": [],
+          "files_after": []
+        },
+        "elapsed_ms": 22
+      }
+    },
+    {
+      "name": "S06 encrypted command[2]",
+      "passed": true,
+      "detail": {
+        "result": {
+          "case": "complete_cas_and_initial_guards",
+          "files_before": [],
+          "files_after": []
+        },
+        "elapsed_ms": 51
+      }
+    },
+    {
+      "name": "S06 encrypted command[3]",
+      "passed": true,
+      "detail": {
+        "result": {
+          "case": "reserved_corrupt_and_future_packets_reject",
+          "files_before": [],
+          "files_after": []
+        },
+        "elapsed_ms": 21
+      }
+    },
+    {
+      "name": "S06 encrypted command[4]",
+      "passed": true,
+      "detail": {
+        "result": {
+          "case": "live_lifecycle_guard_and_resolved_history",
+          "files_before": [],
+          "files_after": []
+        },
+        "elapsed_ms": 41
+      }
+    },
+    {
+      "name": "S06 encrypted command[5]",
+      "passed": true,
+      "detail": {
+        "result": {
+          "case": "identity_and_frozen_transition_guards",
+          "files_before": [],
+          "files_after": []
+        },
+        "elapsed_ms": 36
+      }
+    },
+    {
+      "name": "S06 encrypted command[6]",
+      "passed": true,
+      "detail": {
+        "result": {
+          "case": "live_undo_uses_public_rows_and_checked_model_types",
+          "files_before": [],
+          "files_after": []
+        },
+        "elapsed_ms": 24
+      }
+    },
+    {
+      "name": "S06 encrypted command[7]",
+      "passed": true,
+      "detail": {
+        "result": {
+          "case": "live_created_ownership_requires_current_model_tables",
+          "files_before": [],
+          "files_after": []
+        },
+        "elapsed_ms": 24
+      }
+    },
+    {
+      "name": "S06 encrypted command[8]",
+      "passed": true,
+      "detail": {
+        "result": {
+          "case": "owner_contract",
+          "files_before": [],
+          "files_after": []
+        },
+        "elapsed_ms": 177
+      }
+    },
+    {
+      "name": "S06 encrypted command[9]",
+      "passed": true,
+      "detail": {
+        "result": {
+          "case": "dispatch",
+          "files_before": [],
+          "files_after": []
+        },
+        "elapsed_ms": 70
+      }
+    },
+    {
+      "name": "S06 encrypted command[10]",
+      "passed": true,
+      "detail": {
+        "result": {
+          "case": "correction_inverse",
+          "files_before": [],
+          "files_after": []
+        },
+        "elapsed_ms": 146
+      }
+    },
+    {
+      "name": "S06 encrypted command[11]",
+      "passed": true,
+      "detail": {
+        "result": {
+          "case": "graph",
+          "files_before": [],
+          "files_after": []
+        },
+        "elapsed_ms": 100
+      }
+    },
+    {
+      "name": "S06 encrypted command[12]",
+      "passed": true,
+      "detail": {
+        "result": {
+          "case": "zero_history",
+          "files_before": [],
+          "files_after": []
+        },
+        "elapsed_ms": 58
+      }
+    },
+    {
+      "name": "S06 encrypted command[13]",
+      "passed": true,
+      "detail": {
+        "result": {
+          "case": "capacity_boundary",
+          "files_before": [],
+          "files_after": []
+        },
+        "elapsed_ms": 47513
+      }
+    },
+    {
+      "name": "S06 encrypted entity[0]",
+      "passed": true,
+      "detail": {
+        "result": {
+          "case": "automatic_entities",
+          "files_before": [],
+          "files_after": []
+        },
+        "elapsed_ms": 288
+      }
+    },
+    {
+      "name": "S06 encrypted entity[1]",
+      "passed": true,
+      "detail": {
+        "result": {
+          "case": "admission_and_inverse",
+          "files_before": [],
+          "files_after": []
+        },
+        "elapsed_ms": 100
+      }
+    },
+    {
+      "name": "S06 encrypted entity[2]",
+      "passed": true,
+      "detail": {
+        "result": {
+          "case": "two_client_resolution",
+          "files_before": [],
+          "files_after": []
+        },
+        "elapsed_ms": 312
+      }
+    },
+    {
+      "name": "S06 encrypted entity[3]",
+      "passed": true,
+      "detail": {
+        "result": {
+          "case": "pull_atomicity_bootstrap_and_reset",
+          "files_before": [],
+          "files_after": []
+        },
+        "elapsed_ms": 50
+      }
+    },
+    {
+      "name": "S06 encrypted entity[4]",
+      "passed": true,
+      "detail": {
+        "result": {
+          "case": "reset_inventory",
+          "files_before": [],
+          "files_after": []
+        },
+        "elapsed_ms": 33
+      }
+    },
+    {
+      "name": "S06 encrypted entity[5]",
+      "passed": true,
+      "detail": {
+        "result": {
+          "case": "lifecycle_comparison_guard",
+          "files_before": [],
+          "files_after": []
+        },
+        "elapsed_ms": 40
+      }
+    },
+    {
+      "name": "S06 encrypted entity[6]",
+      "passed": true,
+      "detail": {
+        "result": {
+          "case": "pull_recovery_protection",
+          "files_before": [],
+          "files_after": []
+        },
+        "elapsed_ms": 140
+      }
+    },
+    {
+      "name": "S06 encrypted entity[7]",
+      "passed": true,
+      "detail": {
+        "result": {
+          "case": "progress_transition_guard",
+          "files_before": [],
+          "files_after": []
+        },
+        "elapsed_ms": 31
+      }
+    },
+    {
+      "name": "S06 encrypted entity[8]",
+      "passed": true,
+      "detail": {
+        "result": {
+          "case": "reset_modes_and_coordinator_guard",
+          "files_before": [],
+          "files_after": []
+        },
+        "elapsed_ms": 60
+      }
+    },
+    {
+      "name": "S06 encrypted entity[9]",
+      "passed": true,
+      "detail": {
+        "result": {
+          "case": "managed_links_and_mapped_rows",
+          "files_before": [],
+          "files_after": []
+        },
+        "elapsed_ms": 208
+      }
+    },
+    {
+      "name": "S06 encrypted entity[10]",
+      "passed": true,
+      "detail": {
+        "result": {
+          "case": "reconfiguration_guards",
+          "files_before": [],
+          "files_after": []
+        },
+        "elapsed_ms": 53
+      }
+    },
+    {
+      "name": "S06 encrypted entity[11]",
+      "passed": true,
+      "detail": {
+        "result": {
+          "case": "typed_correction_clocks",
+          "files_before": [],
+          "files_after": []
+        },
+        "elapsed_ms": 62
+      }
+    },
+    {
+      "name": "S06 encrypted entity[12]",
+      "passed": true,
+      "detail": {
+        "result": {
+          "case": "reconfigure_inventory",
+          "files_before": [],
+          "files_after": []
+        },
+        "elapsed_ms": 44
+      }
+    },
+    {
+      "name": "S02/S05/S09/S11/S12 protected contents, postcommit worker termination, context and diagnostics",
+      "passed": true,
+      "detail": {
+        "files": [
+          {
+            "path": ".lock",
+            "size": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": ".opaque/1rXGp22eSevYOYxu7sr5GQN1FAevpWiK",
+            "size": 4096,
+            "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+          },
+          {
+            "path": ".opaque/3RBKHZlpYyaHPL8mwnEwBCw49XUSZOu3",
+            "size": 4096,
+            "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+          },
+          {
+            "path": ".opaque/7sTRBc6EMBVuqgCzLMBUDOARSe6OnkDK",
+            "size": 4096,
+            "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+          },
+          {
+            "path": ".opaque/ADNbppmgHNPPKMkEh7n0nO5BDVZOqGBW",
+            "size": 4096,
+            "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+          },
+          {
+            "path": ".opaque/Bten9SDTfofvv1bl45D1CgSd4efo319H",
+            "size": 4096,
+            "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+          },
+          {
+            "path": ".opaque/ctMnHlI0MtrVX31aP2gSeDzdnvF0DhPM",
+            "size": 4096,
+            "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+          },
+          {
+            "path": ".opaque/Detq5bjWMcR0KjqEbXs2k2NINZwG0CGK",
+            "size": 49152,
+            "sha256": "6a859bec1e8baa4367be393ea40d917e659ca47c03afc7346badfb1ef287f684"
+          },
+          {
+            "path": ".opaque/EXdNf4PNDoxQqA6t2sGfL6ZZEHCVcqGs",
+            "size": 4096,
+            "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+          },
+          {
+            "path": ".opaque/gExVEFHIEfHAXiSI8gfzLYoDz40JIdHB",
+            "size": 4096,
+            "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+          },
+          {
+            "path": ".opaque/gj7qotiGHQKJfzrG9tKZosdflVHIupTJ",
+            "size": 4096,
+            "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+          },
+          {
+            "path": ".opaque/gRcY2EMMQT804kPuqCJagMYno0eukLHh",
+            "size": 4096,
+            "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+          },
+          {
+            "path": ".opaque/GTa4wLgW3QaJXFqymDUHDzxa4TjCW2fR",
+            "size": 4096,
+            "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+          },
+          {
+            "path": ".opaque/IBjHiPfH0sOE8xfiJjdqmElIDPYhObhR",
+            "size": 4096,
+            "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+          },
+          {
+            "path": ".opaque/LSLCNerB1XWVRLRHmDoBnelJYzxKv6Ez",
+            "size": 4096,
+            "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+          },
+          {
+            "path": ".opaque/mQ5atq17TUP7xkxzErN98zKU4VvjIwmM",
+            "size": 4096,
+            "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+          },
+          {
+            "path": ".opaque/MT33cHpcK6UvYwKvNACxDQsFc5yUkPOg",
+            "size": 4096,
+            "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+          },
+          {
+            "path": ".opaque/pXCI05IiyKRSTVOHciTXieXHBxoXwa1y",
+            "size": 4096,
+            "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+          },
+          {
+            "path": ".opaque/r3WAHpnpZLD0q9l11mUfqNpvz23WFvdJ",
+            "size": 4096,
+            "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+          },
+          {
+            "path": ".opaque/SASD9uHgTdWJM9bMdxaTrW5IJtsh6thg",
+            "size": 4096,
+            "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+          },
+          {
+            "path": ".opaque/sC64PfAnEHbOCpkAu9Yvtx4PHn13w3AC",
+            "size": 4096,
+            "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+          },
+          {
+            "path": ".opaque/SuLepBvdzP9RmRAGmBstumMNhpDHswf3",
+            "size": 4096,
+            "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+          },
+          {
+            "path": ".opaque/Tc73hyztwofE2x07MXDy2yibfyPn23Ws",
+            "size": 4096,
+            "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+          },
+          {
+            "path": ".opaque/vXg9wCUcoFsEROz0L9Cz3CqAFXo66lD9",
+            "size": 4096,
+            "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+          },
+          {
+            "path": ".opaque/XhLDpxQ86TFTU2dhrDlwNZ2HvZRbE9D3",
+            "size": 4096,
+            "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+          }
+        ],
+        "contextRejections": 4,
+        "cipher": "SQLCipher 4.19.0",
+        "backupExclusion": "unsupported"
+      }
+    },
+    {
+      "name": "S03/S10 wrong key and legacy plaintext reject without fallback or mutation",
+      "passed": true,
+      "detail": {
+        "wrongKeyUnchanged": true,
+        "legacyUnchanged": true
+      }
+    },
+    {
+      "name": "S04 authenticated page corruption rejects and commits nothing",
+      "passed": true,
+      "detail": {
+        "physicalPageTampered": true,
+        "failedOpenUnchanged": true
+      }
+    },
+    {
+      "name": "S07/S10 actual page reload restores keyed rows queue checkpoint and exact retry",
+      "passed": true,
+      "detail": {
+        "exactRetry": true,
+        "checkpoint": true,
+        "ready": false
+      }
+    }
+  ],
+  "stage": 1,
+  "done": true,
+  "rpc_timings": [
+    {
+      "operation": "init",
+      "elapsed_ms": 170
+    },
+    {
+      "operation": "shutdown",
+      "elapsed_ms": 6
+    },
+    {
+      "operation": "init",
+      "elapsed_ms": 107
+    },
+    {
+      "operation": "command_rpc",
+      "elapsed_ms": 1
+    },
+    {
+      "operation": "command_rpc",
+      "elapsed_ms": 0
+    },
+    {
+      "operation": "command_rpc",
+      "elapsed_ms": 0
+    },
+    {
+      "operation": "shutdown",
+      "elapsed_ms": 5
+    },
+    {
+      "operation": "init",
+      "elapsed_ms": 96
+    },
+    {
+      "operation": "security_conformance",
+      "group": "typed",
+      "index": 0,
+      "elapsed_ms": 676
+    },
+    {
+      "operation": "security_conformance",
+      "group": "model",
+      "index": 0,
+      "elapsed_ms": 1138
+    },
+    {
+      "operation": "security_conformance",
+      "group": "reactive",
+      "index": 0,
+      "elapsed_ms": 1380
+    },
+    {
+      "operation": "security_conformance",
+      "group": "review",
+      "index": 0,
+      "elapsed_ms": 1754
+    },
+    {
+      "operation": "security_conformance",
+      "group": "review",
+      "index": 1,
+      "elapsed_ms": 1110
+    },
+    {
+      "operation": "security_conformance",
+      "group": "review",
+      "index": 2,
+      "elapsed_ms": 926
+    },
+    {
+      "operation": "security_conformance",
+      "group": "review",
+      "index": 3,
+      "elapsed_ms": 29
+    },
+    {
+      "operation": "security_conformance",
+      "group": "review",
+      "index": 4,
+      "elapsed_ms": 31
+    },
+    {
+      "operation": "security_conformance",
+      "group": "command",
+      "index": 0,
+      "elapsed_ms": 31
+    },
+    {
+      "operation": "security_conformance",
+      "group": "command",
+      "index": 1,
+      "elapsed_ms": 22
+    },
+    {
+      "operation": "security_conformance",
+      "group": "command",
+      "index": 2,
+      "elapsed_ms": 50
+    },
+    {
+      "operation": "security_conformance",
+      "group": "command",
+      "index": 3,
+      "elapsed_ms": 21
+    },
+    {
+      "operation": "security_conformance",
+      "group": "command",
+      "index": 4,
+      "elapsed_ms": 41
+    },
+    {
+      "operation": "security_conformance",
+      "group": "command",
+      "index": 5,
+      "elapsed_ms": 36
+    },
+    {
+      "operation": "security_conformance",
+      "group": "command",
+      "index": 6,
+      "elapsed_ms": 24
+    },
+    {
+      "operation": "security_conformance",
+      "group": "command",
+      "index": 7,
+      "elapsed_ms": 24
+    },
+    {
+      "operation": "security_conformance",
+      "group": "command",
+      "index": 8,
+      "elapsed_ms": 177
+    },
+    {
+      "operation": "security_conformance",
+      "group": "command",
+      "index": 9,
+      "elapsed_ms": 70
+    },
+    {
+      "operation": "security_conformance",
+      "group": "command",
+      "index": 10,
+      "elapsed_ms": 146
+    },
+    {
+      "operation": "security_conformance",
+      "group": "command",
+      "index": 11,
+      "elapsed_ms": 100
+    },
+    {
+      "operation": "security_conformance",
+      "group": "command",
+      "index": 12,
+      "elapsed_ms": 58
+    },
+    {
+      "operation": "security_conformance",
+      "group": "command",
+      "index": 13,
+      "elapsed_ms": 47513
+    },
+    {
+      "operation": "security_conformance",
+      "group": "entity",
+      "index": 0,
+      "elapsed_ms": 288
+    },
+    {
+      "operation": "security_conformance",
+      "group": "entity",
+      "index": 1,
+      "elapsed_ms": 100
+    },
+    {
+      "operation": "security_conformance",
+      "group": "entity",
+      "index": 2,
+      "elapsed_ms": 312
+    },
+    {
+      "operation": "security_conformance",
+      "group": "entity",
+      "index": 3,
+      "elapsed_ms": 50
+    },
+    {
+      "operation": "security_conformance",
+      "group": "entity",
+      "index": 4,
+      "elapsed_ms": 33
+    },
+    {
+      "operation": "security_conformance",
+      "group": "entity",
+      "index": 5,
+      "elapsed_ms": 40
+    },
+    {
+      "operation": "security_conformance",
+      "group": "entity",
+      "index": 6,
+      "elapsed_ms": 140
+    },
+    {
+      "operation": "security_conformance",
+      "group": "entity",
+      "index": 7,
+      "elapsed_ms": 31
+    },
+    {
+      "operation": "security_conformance",
+      "group": "entity",
+      "index": 8,
+      "elapsed_ms": 60
+    },
+    {
+      "operation": "security_conformance",
+      "group": "entity",
+      "index": 9,
+      "elapsed_ms": 208
+    },
+    {
+      "operation": "security_conformance",
+      "group": "entity",
+      "index": 10,
+      "elapsed_ms": 53
+    },
+    {
+      "operation": "security_conformance",
+      "group": "entity",
+      "index": 11,
+      "elapsed_ms": 62
+    },
+    {
+      "operation": "security_conformance",
+      "group": "entity",
+      "index": 12,
+      "elapsed_ms": 44
+    },
+    {
+      "operation": "command_rpc",
+      "elapsed_ms": 16
+    },
+    {
+      "operation": "command_rpc",
+      "elapsed_ms": 1
+    },
+    {
+      "operation": "command_rpc",
+      "elapsed_ms": 6
+    },
+    {
+      "operation": "command_rpc",
+      "elapsed_ms": 0
+    },
+    {
+      "operation": "command_rpc",
+      "elapsed_ms": 0
+    },
+    {
+      "operation": "command_rpc",
+      "elapsed_ms": 8
+    },
+    {
+      "operation": "command_rpc",
+      "elapsed_ms": 0
+    },
+    {
+      "operation": "command_rpc",
+      "elapsed_ms": 0
+    },
+    {
+      "operation": "command_rpc",
+      "elapsed_ms": 0
+    },
+    {
+      "operation": "command_rpc",
+      "elapsed_ms": 1
+    },
+    {
+      "operation": "command_rpc",
+      "elapsed_ms": 0
+    },
+    {
+      "operation": "command_rpc",
+      "elapsed_ms": 0
+    },
+    {
+      "operation": "command_rpc",
+      "elapsed_ms": 1
+    },
+    {
+      "operation": "command_rpc",
+      "elapsed_ms": 7
+    },
+    {
+      "operation": "command_rpc",
+      "elapsed_ms": 0
+    },
+    {
+      "operation": "command_rpc",
+      "elapsed_ms": 7
+    },
+    {
+      "operation": "command_rpc",
+      "elapsed_ms": 0
+    },
+    {
+      "operation": "command_rpc",
+      "elapsed_ms": 0
+    },
+    {
+      "operation": "command_rpc",
+      "elapsed_ms": 0
+    },
+    {
+      "operation": "command_rpc",
+      "elapsed_ms": 1
+    },
+    {
+      "operation": "command_rpc",
+      "elapsed_ms": 0
+    },
+    {
+      "operation": "init",
+      "elapsed_ms": 97
+    },
+    {
+      "operation": "command_rpc",
+      "elapsed_ms": 11
+    },
+    {
+      "operation": "shutdown",
+      "elapsed_ms": 6
+    },
+    {
+      "operation": "init",
+      "elapsed_ms": 98
+    },
+    {
+      "operation": "command_rpc",
+      "elapsed_ms": 13
+    },
+    {
+      "operation": "shutdown",
+      "elapsed_ms": 6
+    },
+    {
+      "operation": "init",
+      "elapsed_ms": 91
+    },
+    {
+      "operation": "command_rpc",
+      "elapsed_ms": 44
+    },
+    {
+      "operation": "command_rpc",
+      "elapsed_ms": 1
+    },
+    {
+      "operation": "shutdown",
+      "elapsed_ms": 6
+    },
+    {
+      "operation": "init",
+      "elapsed_ms": 93
+    },
+    {
+      "operation": "command_rpc",
+      "elapsed_ms": 13
+    },
+    {
+      "operation": "shutdown",
+      "elapsed_ms": 6
+    },
+    {
+      "operation": "init",
+      "elapsed_ms": 89
+    },
+    {
+      "operation": "command_rpc",
+      "elapsed_ms": 13
+    },
+    {
+      "operation": "shutdown",
+      "elapsed_ms": 6
+    },
+    {
+      "operation": "init",
+      "elapsed_ms": 94
+    },
+    {
+      "operation": "command_rpc",
+      "elapsed_ms": 41
+    },
+    {
+      "operation": "command_rpc",
+      "elapsed_ms": 2
+    },
+    {
+      "operation": "command_rpc",
+      "elapsed_ms": 3
+    },
+    {
+      "operation": "command_rpc",
+      "elapsed_ms": 1
+    },
+    {
+      "operation": "command_rpc",
+      "elapsed_ms": 19
+    },
+    {
+      "operation": "command_rpc",
+      "elapsed_ms": 0
+    },
+    {
+      "operation": "command_rpc",
+      "elapsed_ms": 7
+    },
+    {
+      "operation": "shutdown",
+      "elapsed_ms": 10
+    }
+  ],
+  "capabilities": {
+    "secure": true,
+    "dedicatedWorker": true,
+    "wasm": true,
+    "bigint": true,
+    "opfs": true,
+    "syncAccessHandle": true,
+    "crossOriginIsolated": false
+  },
+  "current": {
+    "group": "entity",
+    "index": 12
+  },
+  "expected": {
+    "envelope": "{\"args\":{\"value\":\"synthetic protected country 東京\\u0000🌿\"},\"command\":\"protected-command-v1\",\"context\":{\"capturedAt\":\"1970-01-01T00:00:01.000Z\",\"identity\":{\"nested\":[{\"name\":\"trusted original\"}],\"tenant\":\"synthetic protected identity\"}},\"idempotencyKey\":\"00000000000003e8-c3d602472183d5e9df54a685630b91d2-0000000000000001\",\"schemaVersion\":1}",
+    "key": "00000000000003e8-c3d602472183d5e9df54a685630b91d2-0000000000000001",
+    "rows": [
+      {
+        "fields": {
+          "country": {
+            "kind": "string",
+            "value": "synthetic protected country 東京\u0000🌿"
+          }
+        },
+        "id": "local:1"
+      },
+      {
+        "fields": {
+          "country": {
+            "kind": "string",
+            "value": "protected field clock"
+          }
+        },
+        "id": "server:protected-pull"
+      }
+    ],
+    "progress": {
+      "changes": "1",
+      "pages": "1",
+      "phase": "bootstrapping",
+      "ready": false,
+      "tombstones": "0"
+    },
+    "diagnostics": {
+      "awaiting_outcome": "0",
+      "blocked": false,
+      "changes": "1",
+      "live": "1",
+      "pages": "1",
+      "pending": "0",
+      "ready": false,
+      "schema_version": "1",
+      "sending": "1",
+      "tombstones": "0"
+    }
+  },
+  "protectedFiles": [
+    {
+      "path": ".lock",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".opaque/1rXGp22eSevYOYxu7sr5GQN1FAevpWiK",
+      "size": 4096,
+      "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+    },
+    {
+      "path": ".opaque/3RBKHZlpYyaHPL8mwnEwBCw49XUSZOu3",
+      "size": 4096,
+      "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+    },
+    {
+      "path": ".opaque/7sTRBc6EMBVuqgCzLMBUDOARSe6OnkDK",
+      "size": 4096,
+      "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+    },
+    {
+      "path": ".opaque/ADNbppmgHNPPKMkEh7n0nO5BDVZOqGBW",
+      "size": 4096,
+      "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+    },
+    {
+      "path": ".opaque/Bten9SDTfofvv1bl45D1CgSd4efo319H",
+      "size": 4096,
+      "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+    },
+    {
+      "path": ".opaque/ctMnHlI0MtrVX31aP2gSeDzdnvF0DhPM",
+      "size": 4096,
+      "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+    },
+    {
+      "path": ".opaque/Detq5bjWMcR0KjqEbXs2k2NINZwG0CGK",
+      "size": 49152,
+      "sha256": "6a859bec1e8baa4367be393ea40d917e659ca47c03afc7346badfb1ef287f684"
+    },
+    {
+      "path": ".opaque/EXdNf4PNDoxQqA6t2sGfL6ZZEHCVcqGs",
+      "size": 4096,
+      "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+    },
+    {
+      "path": ".opaque/gExVEFHIEfHAXiSI8gfzLYoDz40JIdHB",
+      "size": 4096,
+      "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+    },
+    {
+      "path": ".opaque/gj7qotiGHQKJfzrG9tKZosdflVHIupTJ",
+      "size": 4096,
+      "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+    },
+    {
+      "path": ".opaque/gRcY2EMMQT804kPuqCJagMYno0eukLHh",
+      "size": 4096,
+      "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+    },
+    {
+      "path": ".opaque/GTa4wLgW3QaJXFqymDUHDzxa4TjCW2fR",
+      "size": 4096,
+      "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+    },
+    {
+      "path": ".opaque/IBjHiPfH0sOE8xfiJjdqmElIDPYhObhR",
+      "size": 4096,
+      "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+    },
+    {
+      "path": ".opaque/LSLCNerB1XWVRLRHmDoBnelJYzxKv6Ez",
+      "size": 4096,
+      "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+    },
+    {
+      "path": ".opaque/mQ5atq17TUP7xkxzErN98zKU4VvjIwmM",
+      "size": 4096,
+      "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+    },
+    {
+      "path": ".opaque/MT33cHpcK6UvYwKvNACxDQsFc5yUkPOg",
+      "size": 4096,
+      "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+    },
+    {
+      "path": ".opaque/pXCI05IiyKRSTVOHciTXieXHBxoXwa1y",
+      "size": 4096,
+      "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+    },
+    {
+      "path": ".opaque/r3WAHpnpZLD0q9l11mUfqNpvz23WFvdJ",
+      "size": 4096,
+      "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+    },
+    {
+      "path": ".opaque/SASD9uHgTdWJM9bMdxaTrW5IJtsh6thg",
+      "size": 4096,
+      "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+    },
+    {
+      "path": ".opaque/sC64PfAnEHbOCpkAu9Yvtx4PHn13w3AC",
+      "size": 4096,
+      "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+    },
+    {
+      "path": ".opaque/SuLepBvdzP9RmRAGmBstumMNhpDHswf3",
+      "size": 4096,
+      "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+    },
+    {
+      "path": ".opaque/Tc73hyztwofE2x07MXDy2yibfyPn23Ws",
+      "size": 4096,
+      "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+    },
+    {
+      "path": ".opaque/vXg9wCUcoFsEROz0L9Cz3CqAFXo66lD9",
+      "size": 4096,
+      "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+    },
+    {
+      "path": ".opaque/XhLDpxQ86TFTU2dhrDlwNZ2HvZRbE9D3",
+      "size": 4096,
+      "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+    }
+  ],
+  "cleaned": true
+}

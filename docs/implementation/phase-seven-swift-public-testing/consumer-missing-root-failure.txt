@@ -1,0 +1,9 @@
+TC17.1 PASS engine=memory zero_network_schema=true
+TC16.1 TC17.3 PASS engine=memory pending=3 ordinary_fixed_id=exact relation=core
+TC16.2 TC16.7 TC16.8 TC17.4 TC17.5 PASS engine=memory command_id=local:test-fixed-id-001 items=2 clock=2026-09-15T12:00:00Z
+TC16.3 TC16.4 PASS engine=memory real_fake_contract=keyed
+TC16.5 PASS engine=memory business_rejection=true
+TC16.6 PASS engine=memory dropped_ack_sent_retry=true
+TC17.6 TC17.7 TC17.8 PASS engine=memory entity_queued=true network_successes=0
+TC17.2 PASS engine=memory authored_migration=true
+HOYA_SWIFT_GENERAL_CONSUMER_FAILED invalidRequest

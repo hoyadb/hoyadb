@@ -1,0 +1,63 @@
+{
+  "basis": "fresh-context agent account in independent-parser/plan.md; public API contract only; not a legal certification",
+  "derivations": [
+    {
+      "derived_sha256": "eea909e80cac976e042df6bc3545b70fb14ff6a007d31081c1e4a83f66f1a024",
+      "destination": "independent-parser/green-optimized.log",
+      "source": "target/properties-spec-implementation/green-optimized.log",
+      "source_sha256": "eea909e80cac976e042df6bc3545b70fb14ff6a007d31081c1e4a83f66f1a024",
+      "transform": "byte-identical"
+    },
+    {
+      "derived_sha256": "1fc786ec09971f45973026963001c119106185fe80a590edc5513d7692643108",
+      "destination": "independent-parser/green.log",
+      "source": "target/properties-spec-implementation/green.log",
+      "source_sha256": "1fc786ec09971f45973026963001c119106185fe80a590edc5513d7692643108",
+      "transform": "byte-identical"
+    },
+    {
+      "derived_sha256": "3961a07b1e3c5a6e7599c12b3146f748212b0d4f02773a4ea7b6296bf541300d",
+      "destination": "independent-parser/hashes.sha256",
+      "source": "target/properties-spec-implementation/hashes.sha256",
+      "source_sha256": "3961a07b1e3c5a6e7599c12b3146f748212b0d4f02773a4ea7b6296bf541300d",
+      "transform": "byte-identical"
+    },
+    {
+      "derived_sha256": "d4938c73714e0cf7b816702e39a68bc0dad9647f4ba6d70f13cda420f1cfafa5",
+      "destination": "independent-parser/outcome.md",
+      "source": "target/properties-spec-implementation/outcome.md",
+      "source_sha256": "d4938c73714e0cf7b816702e39a68bc0dad9647f4ba6d70f13cda420f1cfafa5",
+      "transform": "byte-identical"
+    },
+    {
+      "derived_sha256": "5e818ff485f48ee96a635b0dbc07f11c2835ab29d0fe616ad9441228eb810f3c",
+      "destination": "independent-parser/plan.md",
+      "source": "target/properties-spec-implementation/plan.md",
+      "source_sha256": "5e818ff485f48ee96a635b0dbc07f11c2835ab29d0fe616ad9441228eb810f3c",
+      "transform": "byte-identical"
+    },
+    {
+      "derived_sha256": "76397be7f8619f32aefba426995ede77058cb7837bdc7ab0bf25fad074c979fd",
+      "destination": "independent-parser/red-stub.py",
+      "source": "target/properties-spec-implementation/red-stub.py",
+      "source_sha256": "76397be7f8619f32aefba426995ede77058cb7837bdc7ab0bf25fad074c979fd",
+      "transform": "byte-identical"
+    },
+    {
+      "derived_sha256": "cc1646b7beed73d365470cd7fbfad3fe2cc94b2a4004f6d072cd2683325930cf",
+      "destination": "independent-parser/red.log",
+      "source": "target/properties-spec-implementation/red.log",
+      "source_sha256": "a4958eafbdc8b7865fcfb71dc4b5a5e48416e807bca75ff8945d7cada5964614",
+      "transform": "replace exact absolute repository path with <repo>"
+    },
+    {
+      "derived_sha256": "ea044cc57c4f612da1fa0930ed0e85e0d70b574e449fdfb6a70c275232b4e2ee",
+      "destination": "independent-parser/static-audit.log",
+      "source": "target/properties-spec-implementation/static-audit.log",
+      "source_sha256": "ea044cc57c4f612da1fa0930ed0e85e0d70b574e449fdfb6a70c275232b4e2ee",
+      "transform": "byte-identical"
+    }
+  ],
+  "source_module_sha256": "1520ebe4d58b2667aa4e7df242387ff63c46d1bac0971216bb02320b3a17beab",
+  "source_tests_sha256": "5d52254eef75884ba61dc901f22624fb61fb1be919f23e16807458c1a7431eea"
+}

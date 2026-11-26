@@ -1,0 +1,272 @@
+{
+  "status": "PASS",
+  "purpose": "Preserve pre-existing formatting and CI work separately from general facade behavior",
+  "base_head": "502ce457cf7970f27da6a3fed09a01cf4ec7a31f",
+  "source_files": [
+    {
+      "path": "crates/hoyadb-core/src/command/entity.rs",
+      "tested_worktree_sha256": "4cd52a8d8b1498bace74960b7c2cf9cfc8d2e5883461ffe542c44db5c8149918",
+      "behavior_only_blob_sha256": "4cd52a8d8b1498bace74960b7c2cf9cfc8d2e5883461ffe542c44db5c8149918",
+      "normalized_lexical_match": true
+    },
+    {
+      "path": "crates/hoyadb-core/src/command/entity_owner.rs",
+      "tested_worktree_sha256": "bf80f821009b014f9f60a41a433fc92b7bb8141d00638425ccf57ac23dc04838",
+      "behavior_only_blob_sha256": "018140e8f74fe6c34a71d583fbbb7f84a353bcefbee90a5196945c1a4b656f7d",
+      "normalized_lexical_match": true
+    },
+    {
+      "path": "crates/hoyadb-core/src/command/mod.rs",
+      "tested_worktree_sha256": "13e7e273787ec911341ccc31ae672f9dc82187346aba7ef7236a785c4b714d56",
+      "behavior_only_blob_sha256": "13e7e273787ec911341ccc31ae672f9dc82187346aba7ef7236a785c4b714d56",
+      "normalized_lexical_match": true
+    },
+    {
+      "path": "crates/hoyadb-core/src/command/owner.rs",
+      "tested_worktree_sha256": "1219be28a22385cb4ac03626fded586969808282c678e6b40240925f37c88717",
+      "behavior_only_blob_sha256": "a11b7db2fc0eca59f062adccff3c12880981eb3b7a8302447e3079860232b81b",
+      "normalized_lexical_match": true
+    },
+    {
+      "path": "crates/hoyadb-core/src/command/pull.rs",
+      "tested_worktree_sha256": "3e00878f88e9be95ae0289c05b7191b0693eb0f3e5c7da63b54245e470ea8af5",
+      "behavior_only_blob_sha256": "31be8a66d5df0bec77204e62891fc335853f64340678917c7af55e2703868599",
+      "normalized_lexical_match": true
+    },
+    {
+      "path": "crates/hoyadb-core/src/command/queue.rs",
+      "tested_worktree_sha256": "a0fc1c2252af878836b4b5b1681673f77ccef6ea8f0bece91274260e6a347996",
+      "behavior_only_blob_sha256": "a43247251956ab2184c9707665c9d94c170237788edb32315bce87ca90ab902a",
+      "normalized_lexical_match": true
+    },
+    {
+      "path": "crates/hoyadb-core/src/model/database.rs",
+      "tested_worktree_sha256": "6ac9d0df29bdd7e5c242b09cdc63eb5153bf10378fb742737eeac3481d9d1a35",
+      "behavior_only_blob_sha256": "a4b61ed58bb47d8e2a72c71a59ed8b07da0c3277d0f21fc936dde15d3022a70c",
+      "normalized_lexical_match": true
+    },
+    {
+      "path": "crates/hoyadb-core/src/model/query.rs",
+      "tested_worktree_sha256": "462e7329287e21ca866627173ca5e1dd09f5cbf98febf9242b443c9f4fef739d",
+      "behavior_only_blob_sha256": "068e28438c48cf80aaf0b2b6c62ea1b931e80a73750e7310d6d6b3dee1d410bb",
+      "normalized_lexical_match": true
+    },
+    {
+      "path": "crates/hoyadb-core/src/model/reactive.rs",
+      "tested_worktree_sha256": "b20c18ee68e45a6585fed92720ac221485869c13fad01935b7a9ca1418d87037",
+      "behavior_only_blob_sha256": "e8f21ed50fcc6079d7de0bb2a5f9a189666d8a5c69e228c5297a41205a286363",
+      "normalized_lexical_match": true
+    },
+    {
+      "path": "crates/hoyadb-core/src/command/merge.rs",
+      "tested_worktree_sha256": "30b4b0793deb5a3778aa7991d4c5b6dd010fc15de3e8d05976678192a7cb2728",
+      "behavior_only_blob_sha256": "30b4b0793deb5a3778aa7991d4c5b6dd010fc15de3e8d05976678192a7cb2728",
+      "normalized_lexical_match": true
+    },
+    {
+      "path": "crates/hoyadb-core/src/command/proposed.rs",
+      "tested_worktree_sha256": "e9628729dde8c3d2f9a9dc081635995d9feee3ebcd951b1f386f6bc829f768ef",
+      "behavior_only_blob_sha256": "e9628729dde8c3d2f9a9dc081635995d9feee3ebcd951b1f386f6bc829f768ef",
+      "normalized_lexical_match": true
+    },
+    {
+      "path": "tests/conformance/platform_core.rs",
+      "tested_worktree_sha256": "755a4a5e16de7a9886e9a731cc97108b925ec002175065ece02288a2302e2a46",
+      "behavior_only_blob_sha256": "f200c0c1c26eeb7d3f786398a5c1d6fad83e9bc2150dcf01b5e90a0018323a1e",
+      "normalized_lexical_match": true
+    },
+    {
+      "path": "crates/hoyadb-storage-memory/tests/platform_core_cases.rs",
+      "tested_worktree_sha256": "b7d472d89ea3b44115015d8d472fe11ca001edd1fad1ceb01035b3683f4a9921",
+      "behavior_only_blob_sha256": "b7d472d89ea3b44115015d8d472fe11ca001edd1fad1ceb01035b3683f4a9921",
+      "normalized_lexical_match": true
+    },
+    {
+      "path": "crates/hoyadb-storage-sqlite/tests/platform_core_cases.rs",
+      "tested_worktree_sha256": "b11b7bb4c3faadc2075e07038017a62e0c3bd49cff8f58807a83f7accd4627af",
+      "behavior_only_blob_sha256": "4fa6b7c00d561096c32c93339eb8debd508fbb710106833ba2fe3cc0c1048a32",
+      "normalized_lexical_match": true
+    },
+    {
+      "path": "crates/hoyadb-bindings/src/budget.rs",
+      "tested_worktree_sha256": "da1b960c6edbe2e088d2f89cf2157b61187f5781c6e346e76105536c3a944898",
+      "behavior_only_blob_sha256": "07cf31b04b4b17080cd0c135b140b7d6510cbd3991a6440d203b07be7ea05358",
+      "normalized_lexical_match": true
+    },
+    {
+      "path": "crates/hoyadb-bindings/src/codec.rs",
+      "tested_worktree_sha256": "eef07eec01e3d3cf00b0328d93061becb1127369a293dc4c33d3669e258787a1",
+      "behavior_only_blob_sha256": "40e88ddaf75265b5da3fe9a0554b365d0bbdda1b3eb8a004c6c562d9379c4c86",
+      "normalized_lexical_match": true
+    },
+    {
+      "path": "crates/hoyadb-bindings/src/commands.rs",
+      "tested_worktree_sha256": "c48852785ea2a14064709221a057a7ee39b860a0dc7a4fba6af0e334e9c86265",
+      "behavior_only_blob_sha256": "c48852785ea2a14064709221a057a7ee39b860a0dc7a4fba6af0e334e9c86265",
+      "normalized_lexical_match": true
+    },
+    {
+      "path": "crates/hoyadb-bindings/src/data.rs",
+      "tested_worktree_sha256": "a828b4b8afda985e380cd50abcff3ee333854839f3449f369ecc2c118be8c372",
+      "behavior_only_blob_sha256": "d4b46c14cee5d454c65c5761f566a347b52f4fd0fe10fa0533950bfa7a7b1270",
+      "normalized_lexical_match": true
+    },
+    {
+      "path": "crates/hoyadb-bindings/src/engine.rs",
+      "tested_worktree_sha256": "0ec9daf66925ede06126c3613fb2fa856c51ae82019bafde9cf2e9d2af1ff968",
+      "behavior_only_blob_sha256": "0ec9daf66925ede06126c3613fb2fa856c51ae82019bafde9cf2e9d2af1ff968",
+      "normalized_lexical_match": true
+    },
+    {
+      "path": "crates/hoyadb-bindings/src/entities.rs",
+      "tested_worktree_sha256": "c4b93592b14ffa0f1812e35a37b0358a53ac3a945a1a71577f7e449ee400d56b",
+      "behavior_only_blob_sha256": "1e78aa77ade73539842e2e7cc7e89437dc66c52b28fd14ebb45ef9e9c3f6919a",
+      "normalized_lexical_match": true
+    },
+    {
+      "path": "crates/hoyadb-bindings/src/lib.rs",
+      "tested_worktree_sha256": "6093398fa60cc3ecb40f318b043d8e5c9d3681e655838bd1fdff06fc1bca0d14",
+      "behavior_only_blob_sha256": "726b34ee616ee0f96c7ef6e44b6496953b6d40009758de0c561c685a84e48917",
+      "normalized_lexical_match": true
+    },
+    {
+      "path": "crates/hoyadb-bindings/src/observations.rs",
+      "tested_worktree_sha256": "86c4a6cec76d3a45b72fb4970219d34d42e8cca1367ed70c4002801903df8de6",
+      "behavior_only_blob_sha256": "86c4a6cec76d3a45b72fb4970219d34d42e8cca1367ed70c4002801903df8de6",
+      "normalized_lexical_match": true
+    },
+    {
+      "path": "crates/hoyadb-bindings/src/reconciliation.rs",
+      "tested_worktree_sha256": "c1146c9b4c74e89f240b7dee83673a90a3aa7e7675c179cfceec229b0cb29988",
+      "behavior_only_blob_sha256": "15d2179348b3f7073d8d353555c9d5d8408285f9f15fe67f42253aaefbbdc622",
+      "normalized_lexical_match": true
+    },
+    {
+      "path": "crates/hoyadb-bindings/tests/entities.rs",
+      "tested_worktree_sha256": "33ba8c4a66d2c02da0cd3a6f95c1d02c51ed937e12c432b0f6d5fcf55c11eeed",
+      "behavior_only_blob_sha256": "598ecea552bc4a362640d38f950ff45dc0b966172506ea96aa7ed5e7da1252cd",
+      "normalized_lexical_match": true
+    },
+    {
+      "path": "crates/hoyadb-bindings/tests/general.rs",
+      "tested_worktree_sha256": "e2e035cb364f98244bbee10710775d062c30b03d5d9a1561833ce4ea12f6fb78",
+      "behavior_only_blob_sha256": "e2e035cb364f98244bbee10710775d062c30b03d5d9a1561833ce4ea12f6fb78",
+      "normalized_lexical_match": true
+    },
+    {
+      "path": "bindings/web/src/lib.rs",
+      "tested_worktree_sha256": "fc932ad83e510467daf2c2967b5171d4394bf26375feedc10a313f3c20a338ce",
+      "behavior_only_blob_sha256": "fc932ad83e510467daf2c2967b5171d4394bf26375feedc10a313f3c20a338ce",
+      "normalized_lexical_match": true
+    }
+  ],
+  "omitted_user_formatting_files": [
+    "crates/hoyadb-core/src/command/execution.rs",
+    "crates/hoyadb-core/src/command/json.rs",
+    "crates/hoyadb-core/src/command/reconcile.rs",
+    "crates/hoyadb-core/src/command/records.rs",
+    "crates/hoyadb-core/src/command/security.rs",
+    "crates/hoyadb-core/src/command/sync.rs",
+    "crates/hoyadb-core/src/model/migration.rs",
+    "crates/hoyadb-core/src/model/schema.rs",
+    "crates/hoyadb-core/src/storage.rs",
+    "crates/hoyadb-core/src/storage/model.rs",
+    "crates/hoyadb-core/src/storage/observation.rs",
+    "crates/hoyadb-core/src/storage/snapshot/lifecycle.rs",
+    "crates/hoyadb-core/src/storage/snapshot/mod.rs",
+    "crates/hoyadb-core/src/storage/snapshot/projection.rs",
+    "crates/hoyadb-core/src/storage/snapshot/sync.rs",
+    "crates/hoyadb-core/src/storage/snapshot/typed.rs",
+    "crates/hoyadb-core/src/storage/sync.rs",
+    "crates/hoyadb-core/src/storage/typed.rs",
+    "crates/hoyadb-storage-memory/examples/data_model.rs",
+    "crates/hoyadb-storage-memory/examples/reactive.rs",
+    "crates/hoyadb-storage-memory/tests/contract.rs",
+    "crates/hoyadb-storage-memory/tests/index_cost.rs",
+    "crates/hoyadb-storage-memory/tests/reactive_smoke.rs",
+    "crates/hoyadb-storage-memory/tests/sync_cases.rs",
+    "crates/hoyadb-storage-sqlite/src/bin/restart_fixture.rs",
+    "crates/hoyadb-storage-sqlite/src/lib.rs",
+    "crates/hoyadb-storage-sqlite/src/lifecycle.rs",
+    "crates/hoyadb-storage-sqlite/src/projection.rs",
+    "crates/hoyadb-storage-sqlite/src/query.rs",
+    "crates/hoyadb-storage-sqlite/src/sync.rs",
+    "crates/hoyadb-storage-sqlite/tests/command_owner_cases.rs",
+    "crates/hoyadb-storage-sqlite/tests/contract.rs",
+    "crates/hoyadb-storage-sqlite/tests/model_cases.rs",
+    "crates/hoyadb-storage-sqlite/tests/process.rs",
+    "crates/hoyadb-storage-sqlite/tests/projection_cases.rs",
+    "crates/hoyadb-storage-sqlite/tests/reactive_fault.rs",
+    "crates/hoyadb-storage-sqlite/tests/security_engine_cases.rs",
+    "crates/hoyadb-storage-sqlite/tests/sqlite_cases.rs",
+    "crates/hoyadb-storage-sqlite/tests/sync_cases.rs",
+    "crates/hoyadb-storage-sqlite/tests/typed_cases.rs",
+    "spikes/common/command_budget.rs",
+    "spikes/common/command_fixture.rs",
+    "spikes/cross-platform/native/src/command.rs",
+    "spikes/cross-platform/native/src/lib.rs",
+    "spikes/cross-platform/native/src/persistence.rs",
+    "spikes/cross-platform/native/src/reactive.rs",
+    "spikes/cross-platform/native/tests/persistence.rs",
+    "spikes/cross-platform/src/lib.rs",
+    "spikes/cross-platform/web/src/lib.rs",
+    "spikes/storage-browser/src/command_bridge.rs",
+    "spikes/storage-browser/src/command_conformance.rs",
+    "spikes/storage-browser/src/error_boundary.rs",
+    "spikes/storage-browser/src/lib.rs",
+    "spikes/storage-browser/src/model_evidence.rs",
+    "spikes/storage-browser/src/reactive_bridge.rs",
+    "spikes/storage-browser/src/security_conformance.rs",
+    "spikes/storage-browser/src/typed_evidence.rs",
+    "tests/conformance/command_owner.rs",
+    "tests/conformance/command_sync.rs",
+    "tests/conformance/data_model.rs",
+    "tests/conformance/model_restart.rs",
+    "tests/conformance/projection.rs",
+    "tests/conformance/reactivity.rs",
+    "tests/conformance/schema_storage.rs",
+    "tests/conformance/storage.rs",
+    "tests/conformance/sync_storage.rs",
+    "tests/conformance/typed_storage.rs"
+  ],
+  "clean_source_checks": [
+    {
+      "name": "default workspace formatting",
+      "command": [
+        "cargo",
+        "fmt",
+        "--all",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 1.482
+    },
+    {
+      "name": "default WebAssembly formatting",
+      "command": [
+        "cargo",
+        "fmt",
+        "--manifest-path",
+        "bindings/web/Cargo.toml",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.182
+    },
+    {
+      "name": "workspace all-target source check",
+      "command": [
+        "cargo",
+        "check",
+        "--workspace",
+        "--all-targets",
+        "--offline",
+        "--locked"
+      ],
+      "exit_code": 0,
+      "seconds": 9.7
+    }
+  ],
+  "build_cache_qualification": "Existing approved dependency cache reused; temporary source mirror removed after checks. No fresh-build claim.",
+  "worktree": "No tracked source rewritten by staging. Existing formatting/CI/.agents work remains unstaged."
+}

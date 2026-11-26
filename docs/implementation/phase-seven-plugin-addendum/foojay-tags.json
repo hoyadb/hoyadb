@@ -1,0 +1,112 @@
+[
+  {
+    "name": "foojay-toolchains-plugin-1.0.0",
+    "zipball_url": "https://api.github.com/repos/gradle/foojay-toolchains/zipball/refs/tags/foojay-toolchains-plugin-1.0.0",
+    "tarball_url": "https://api.github.com/repos/gradle/foojay-toolchains/tarball/refs/tags/foojay-toolchains-plugin-1.0.0",
+    "commit": {
+      "sha": "2a6cc60ed8d35e025e44193c895502996c8edf4e",
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/commits/2a6cc60ed8d35e025e44193c895502996c8edf4e"
+    },
+    "node_id": "REF_kwDOIEWUw9oAKHJlZnMvdGFncy9mb29qYXktdG9vbGNoYWlucy1wbHVnaW4tMS4wLjA"
+  },
+  {
+    "name": "foojay-toolchains-plugin-0.10.0",
+    "zipball_url": "https://api.github.com/repos/gradle/foojay-toolchains/zipball/refs/tags/foojay-toolchains-plugin-0.10.0",
+    "tarball_url": "https://api.github.com/repos/gradle/foojay-toolchains/tarball/refs/tags/foojay-toolchains-plugin-0.10.0",
+    "commit": {
+      "sha": "2c5feabee63fbfffacff3bd722ee8812d0ed3874",
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/commits/2c5feabee63fbfffacff3bd722ee8812d0ed3874"
+    },
+    "node_id": "REF_kwDOIEWUw9oAKXJlZnMvdGFncy9mb29qYXktdG9vbGNoYWlucy1wbHVnaW4tMC4xMC4w"
+  },
+  {
+    "name": "foojay-toolchains-plugin-0.9.0",
+    "zipball_url": "https://api.github.com/repos/gradle/foojay-toolchains/zipball/refs/tags/foojay-toolchains-plugin-0.9.0",
+    "tarball_url": "https://api.github.com/repos/gradle/foojay-toolchains/tarball/refs/tags/foojay-toolchains-plugin-0.9.0",
+    "commit": {
+      "sha": "f4575ddf844fcfd4ad9e758d2040cfd50b59f173",
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/commits/f4575ddf844fcfd4ad9e758d2040cfd50b59f173"
+    },
+    "node_id": "REF_kwDOIEWUw9oAKHJlZnMvdGFncy9mb29qYXktdG9vbGNoYWlucy1wbHVnaW4tMC45LjA"
+  },
+  {
+    "name": "foojay-toolchains-plugin-0.8.0",
+    "zipball_url": "https://api.github.com/repos/gradle/foojay-toolchains/zipball/refs/tags/foojay-toolchains-plugin-0.8.0",
+    "tarball_url": "https://api.github.com/repos/gradle/foojay-toolchains/tarball/refs/tags/foojay-toolchains-plugin-0.8.0",
+    "commit": {
+      "sha": "9d98a5045f93d4a4a86273bd83babf3b960bd368",
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/commits/9d98a5045f93d4a4a86273bd83babf3b960bd368"
+    },
+    "node_id": "REF_kwDOIEWUw9oAKHJlZnMvdGFncy9mb29qYXktdG9vbGNoYWlucy1wbHVnaW4tMC44LjA"
+  },
+  {
+    "name": "foojay-toolchains-plugin-0.7.0",
+    "zipball_url": "https://api.github.com/repos/gradle/foojay-toolchains/zipball/refs/tags/foojay-toolchains-plugin-0.7.0",
+    "tarball_url": "https://api.github.com/repos/gradle/foojay-toolchains/tarball/refs/tags/foojay-toolchains-plugin-0.7.0",
+    "commit": {
+      "sha": "ffae3e05d27091ff5fc05bf7edc3d1756d7c49da",
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/commits/ffae3e05d27091ff5fc05bf7edc3d1756d7c49da"
+    },
+    "node_id": "REF_kwDOIEWUw9oAKHJlZnMvdGFncy9mb29qYXktdG9vbGNoYWlucy1wbHVnaW4tMC43LjA"
+  },
+  {
+    "name": "foojay-toolchains-plugin-0.5.0",
+    "zipball_url": "https://api.github.com/repos/gradle/foojay-toolchains/zipball/refs/tags/foojay-toolchains-plugin-0.5.0",
+    "tarball_url": "https://api.github.com/repos/gradle/foojay-toolchains/tarball/refs/tags/foojay-toolchains-plugin-0.5.0",
+    "commit": {
+      "sha": "d9c53e0fd8faa7826d15e96bf1f8b7437919ef73",
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/commits/d9c53e0fd8faa7826d15e96bf1f8b7437919ef73"
+    },
+    "node_id": "REF_kwDOIEWUw9oAKHJlZnMvdGFncy9mb29qYXktdG9vbGNoYWlucy1wbHVnaW4tMC41LjA"
+  },
+  {
+    "name": "foojay-toolchains-plugin-0.4.0",
+    "zipball_url": "https://api.github.com/repos/gradle/foojay-toolchains/zipball/refs/tags/foojay-toolchains-plugin-0.4.0",
+    "tarball_url": "https://api.github.com/repos/gradle/foojay-toolchains/tarball/refs/tags/foojay-toolchains-plugin-0.4.0",
+    "commit": {
+      "sha": "f425afc49fa1004d2997403649a1b66a05460526",
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/commits/f425afc49fa1004d2997403649a1b66a05460526"
+    },
+    "node_id": "REF_kwDOIEWUw9oAKHJlZnMvdGFncy9mb29qYXktdG9vbGNoYWlucy1wbHVnaW4tMC40LjA"
+  },
+  {
+    "name": "foojay-toolchains-plugin-0.3.0",
+    "zipball_url": "https://api.github.com/repos/gradle/foojay-toolchains/zipball/refs/tags/foojay-toolchains-plugin-0.3.0",
+    "tarball_url": "https://api.github.com/repos/gradle/foojay-toolchains/tarball/refs/tags/foojay-toolchains-plugin-0.3.0",
+    "commit": {
+      "sha": "e85ae75008b49a11dc5eaeebf528e2d9daeab22f",
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/commits/e85ae75008b49a11dc5eaeebf528e2d9daeab22f"
+    },
+    "node_id": "REF_kwDOIEWUw9oAKHJlZnMvdGFncy9mb29qYXktdG9vbGNoYWlucy1wbHVnaW4tMC4zLjA"
+  },
+  {
+    "name": "foojay-toolchain-plugin-0.6.0",
+    "zipball_url": "https://api.github.com/repos/gradle/foojay-toolchains/zipball/refs/tags/foojay-toolchain-plugin-0.6.0",
+    "tarball_url": "https://api.github.com/repos/gradle/foojay-toolchains/tarball/refs/tags/foojay-toolchain-plugin-0.6.0",
+    "commit": {
+      "sha": "197b3845134c8798d48a3002ce3f962b47838c2e",
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/commits/197b3845134c8798d48a3002ce3f962b47838c2e"
+    },
+    "node_id": "REF_kwDOIEWUw9oAJ3JlZnMvdGFncy9mb29qYXktdG9vbGNoYWluLXBsdWdpbi0wLjYuMA"
+  },
+  {
+    "name": "foojay-toolchain-plugin-0.2",
+    "zipball_url": "https://api.github.com/repos/gradle/foojay-toolchains/zipball/refs/tags/foojay-toolchain-plugin-0.2",
+    "tarball_url": "https://api.github.com/repos/gradle/foojay-toolchains/tarball/refs/tags/foojay-toolchain-plugin-0.2",
+    "commit": {
+      "sha": "fd3a71aeb7d9df979f789b70f31d20abb707decc",
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/commits/fd3a71aeb7d9df979f789b70f31d20abb707decc"
+    },
+    "node_id": "REF_kwDOIEWUw9oAJXJlZnMvdGFncy9mb29qYXktdG9vbGNoYWluLXBsdWdpbi0wLjI"
+  },
+  {
+    "name": "foojay-toolchain-plugin-0.1",
+    "zipball_url": "https://api.github.com/repos/gradle/foojay-toolchains/zipball/refs/tags/foojay-toolchain-plugin-0.1",
+    "tarball_url": "https://api.github.com/repos/gradle/foojay-toolchains/tarball/refs/tags/foojay-toolchain-plugin-0.1",
+    "commit": {
+      "sha": "3c8b961e5a02b0b8c18b813ffb41c1720cc00dd2",
+      "url": "https://api.github.com/repos/gradle/foojay-toolchains/commits/3c8b961e5a02b0b8c18b813ffb41c1720cc00dd2"
+    },
+    "node_id": "REF_kwDOIEWUw9oAJXJlZnMvdGFncy9mb29qYXktdG9vbGNoYWluLXBsdWdpbi0wLjE"
+  }
+]

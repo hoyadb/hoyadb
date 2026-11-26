@@ -1,0 +1,1676 @@
+{
+  "artifact": {
+    "build": "manual independent AAR consumer APK",
+    "project": "/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-kotlin-consumer-84acdb78455a4cd2",
+    "app_id": "dev.hoyadb.consumer.pac27769a949f4844",
+    "activity": "dev.hoyadb.consumer.MainActivity",
+    "coordinate": "dev.hoyadb:hoyadb-android:0.1.0",
+    "aar_sha256": "f2e8a16fcc1692d8484d8cc819a85aa27a9d2ce754b30321cd89ec1f689e0bc7",
+    "apk_sha256": "85d2083701f41e14116ef19bc1f23cbbf9a3fc1e198a873fcba3772687712b25",
+    "sdk_classes_sha256": "a40ab5307ae209e8629aad3d6a1dfdff10fb12012522b8d10004f8c898f75646",
+    "templates_sha256": {
+      "AndroidManifest.xml": "80836e9ddccf6088346adfe30522547b4895a48fb5541633219a562d816481be",
+      "README.md": "3e0942d6bdf55b0072b5189cd7908a8d6f97db3626033ad79b1e03900327a075",
+      "TEST_CASES.md": "2e8761c2a786a89a95c0fc5bc5f4e4fa33912f511230dcc569db42cf3462d61e",
+      "expected-cases.json": "2e02aa25d37f72f55e3756664c3557fef35c9d19dbd7b33636a8b47a40de0b3a",
+      "src/dev/hoyadb/consumer/MainActivity.kt": "0d101c81eee6ea7206800204a41b0fa722af81e3d1bfa5f6affc4343812788fd"
+    },
+    "tools_sha256": {
+      "/Users/boristacyniak/.sdkman/candidates/java/17.0.1-tem/bin/java": "2c663a2f4677833e1305ea553aa188af1e22aca92a85f39e6189ae0708e5f8b4",
+      "/Users/boristacyniak/.sdkman/candidates/java/17.0.1-tem/bin/javac": "275d2edae5c19cf08a97c5da451b5d027521780a38bb76d0146a1eaaac5c2a4c",
+      "/Users/boristacyniak/.sdkman/candidates/java/17.0.1-tem/bin/jar": "7320b6ea318acdf216e4cbf9ebf126d32f6f56170130cc2cc7669cc08f233fcd",
+      "/Users/boristacyniak/.sdkman/candidates/java/17.0.1-tem/bin/keytool": "43659d5791f2969c6a471a40b640d697c1ae0ae6309376a2048fde434318fb14",
+      "/Users/boristacyniak/Library/Android/sdk/build-tools/37.0.0/aapt2": "13a206c0b022ba3b92f21b6f142f3a4b2d0f3bb1ac0bddfa820ee2c6b00c4c99",
+      "/Users/boristacyniak/Library/Android/sdk/build-tools/37.0.0/d8": "b773a721be3d4988dea9660815a9e441b76100e5b0f5c72b5893cfadadc76c6f",
+      "/Users/boristacyniak/Library/Android/sdk/build-tools/37.0.0/zipalign": "6d99a9d16c7116850414910b04cffd5ba3aaff86db7a6346179d678abe6d25d1",
+      "/Users/boristacyniak/Library/Android/sdk/build-tools/37.0.0/apksigner": "b47549e373b895ce6ca620d0c7887e674d9615ffa837a86ac601dcfd04adb0f0",
+      "/Users/boristacyniak/Library/Android/sdk/build-tools/37.0.0/lib/d8.jar": "a26ee56252adcff6752c379ae255a0ad538ebec60189e078ec6855487107637d",
+      "/Users/boristacyniak/Library/Android/sdk/build-tools/37.0.0/lib/apksigner.jar": "2defad215d7ff52968a409cde528cdaef7918b115e276b8e3378ca7a178e4180",
+      "/Users/boristacyniak/Library/Android/sdk/platforms/android-37.0/android.jar": "06893f4a316277dfe8c8fe42d4a25552b4e84be474d8c7ea7d34b6ddc26e2ad6"
+    },
+    "runtime_sha256": {
+      "kotlin-stdlib-2.1.20.jar": "1bcc74e8ce84e2c25eaafde10f1248349cce3062b6e36978cbeec610db1e930a",
+      "annotations-13.0.jar": "ace2a10dc8e2d5fd34925ecac03e4988b2c0f851650c94b8cef49ba1bd111478"
+    },
+    "commands": [
+      [
+        "/Applications/Android Studio.app/Contents/plugins/Kotlin/kotlinc/bin/kotlinc",
+        "-language-version",
+        "2.1",
+        "-api-version",
+        "2.1",
+        "-jvm-target",
+        "1.8",
+        "-no-stdlib",
+        "-no-reflect",
+        "-classpath",
+        "/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-kotlin-consumer-84acdb78455a4cd2/sdk/classes.jar:/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-kotlin/deps/kotlin-stdlib-2.1.20.jar:/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-kotlin/deps/annotations-13.0.jar:/Users/boristacyniak/Library/Android/sdk/platforms/android-37.0/android.jar",
+        "-module-name",
+        "hoyadb_consumer",
+        "/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-kotlin-consumer-84acdb78455a4cd2/src/dev/hoyadb/consumer/MainActivity.kt",
+        "-d",
+        "/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-kotlin-consumer-84acdb78455a4cd2/classes"
+      ],
+      [
+        "/Users/boristacyniak/Library/Android/sdk/build-tools/37.0.0/d8",
+        "--lib",
+        "/Users/boristacyniak/Library/Android/sdk/platforms/android-37.0/android.jar",
+        "--min-api",
+        "24",
+        "--output",
+        "/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-kotlin-consumer-84acdb78455a4cd2/dex",
+        "/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-kotlin-consumer-84acdb78455a4cd2/consumer.jar",
+        "/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-kotlin-consumer-84acdb78455a4cd2/sdk/classes.jar",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-kotlin/deps/kotlin-stdlib-2.1.20.jar",
+        "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-kotlin/deps/annotations-13.0.jar"
+      ],
+      [
+        "/Users/boristacyniak/Library/Android/sdk/build-tools/37.0.0/aapt2",
+        "link",
+        "-o",
+        "/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-kotlin-consumer-84acdb78455a4cd2/base.apk",
+        "--manifest",
+        "/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-kotlin-consumer-84acdb78455a4cd2/AndroidManifest.xml",
+        "-I",
+        "/Users/boristacyniak/Library/Android/sdk/platforms/android-37.0/android.jar",
+        "--min-sdk-version",
+        "24",
+        "--target-sdk-version",
+        "37"
+      ],
+      [
+        "/Users/boristacyniak/Library/Android/sdk/build-tools/37.0.0/zipalign",
+        "-P",
+        "16",
+        "-f",
+        "-v",
+        "4",
+        "/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-kotlin-consumer-84acdb78455a4cd2/unsigned.apk",
+        "/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-kotlin-consumer-84acdb78455a4cd2/aligned.apk"
+      ],
+      [
+        "/Users/boristacyniak/.sdkman/candidates/java/17.0.1-tem/bin/keytool",
+        "-genkeypair",
+        "-alias",
+        "hoyadb-owned",
+        "-keyalg",
+        "RSA",
+        "-keysize",
+        "2048",
+        "-validity",
+        "2",
+        "-dname",
+        "CN=HoyaDB Owned Test",
+        "-storetype",
+        "PKCS12",
+        "-keystore",
+        "/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-kotlin-consumer-84acdb78455a4cd2/synthetic-owned-signing.p12",
+        "-storepass",
+        "hoyadb-owned-test-only",
+        "-keypass",
+        "hoyadb-owned-test-only",
+        "-noprompt"
+      ],
+      [
+        "/Users/boristacyniak/Library/Android/sdk/build-tools/37.0.0/apksigner",
+        "sign",
+        "--ks",
+        "/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-kotlin-consumer-84acdb78455a4cd2/synthetic-owned-signing.p12",
+        "--ks-pass",
+        "pass:hoyadb-owned-test-only",
+        "--out",
+        "/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-kotlin-consumer-84acdb78455a4cd2/consumer.apk",
+        "/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-kotlin-consumer-84acdb78455a4cd2/aligned.apk"
+      ],
+      [
+        "/Users/boristacyniak/Library/Android/sdk/build-tools/37.0.0/apksigner",
+        "verify",
+        "--verbose",
+        "/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-kotlin-consumer-84acdb78455a4cd2/consumer.apk"
+      ],
+      [
+        "/Users/boristacyniak/Library/Android/sdk/build-tools/37.0.0/zipalign",
+        "-c",
+        "-P",
+        "16",
+        "-v",
+        "4",
+        "/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-kotlin-consumer-84acdb78455a4cd2/consumer.apk"
+      ]
+    ],
+    "installed": false,
+    "native_zip_alignment_verified": true,
+    "runtime_executed": true,
+    "installation_state": "uninstalled",
+    "runtime_groups": 23
+  },
+  "commands": [
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "getprop",
+      "sys.boot_completed"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "getconf",
+      "PAGE_SIZE"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "pm",
+      "path",
+      "dev.hoyadb.consumer.pac27769a949f4844"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "install",
+      "--no-streaming",
+      "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-kotlin-consumer-84acdb78455a4cd2/consumer.apk"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "am",
+      "start",
+      "-W",
+      "-n",
+      "dev.hoyadb.consumer.pac27769a949f4844/dev.hoyadb.consumer.MainActivity",
+      "--es",
+      "mode",
+      "full"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-full.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "am",
+      "force-stop",
+      "dev.hoyadb.consumer.pac27769a949f4844"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "pidof",
+      "dev.hoyadb.consumer.pac27769a949f4844"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "am",
+      "start",
+      "-W",
+      "-n",
+      "dev.hoyadb.consumer.pac27769a949f4844/dev.hoyadb.consumer.MainActivity",
+      "--es",
+      "mode",
+      "seed"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-seed.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "am",
+      "force-stop",
+      "dev.hoyadb.consumer.pac27769a949f4844"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "pidof",
+      "dev.hoyadb.consumer.pac27769a949f4844"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "am",
+      "start",
+      "-W",
+      "-n",
+      "dev.hoyadb.consumer.pac27769a949f4844/dev.hoyadb.consumer.MainActivity",
+      "--es",
+      "mode",
+      "restart"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "run-as",
+      "dev.hoyadb.consumer.pac27769a949f4844",
+      "cat",
+      "no_backup/results-restart.json"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "am",
+      "force-stop",
+      "dev.hoyadb.consumer.pac27769a949f4844"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "pidof",
+      "dev.hoyadb.consumer.pac27769a949f4844"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "shell",
+      "am",
+      "force-stop",
+      "dev.hoyadb.consumer.pac27769a949f4844"
+    ],
+    [
+      "/Users/boristacyniak/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5588",
+      "uninstall",
+      "dev.hoyadb.consumer.pac27769a949f4844"
+    ]
+  ],
+  "command_results": [
+    {
+      "index": 0,
+      "exit": 0,
+      "timeout": false
+    },
+    {
+      "index": 1,
+      "exit": 0,
+      "timeout": false
+    },
+    {
+      "index": 2,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 3,
+      "exit": 0,
+      "timeout": false
+    },
+    {
+      "index": 4,
+      "exit": 0,
+      "timeout": false
+    },
+    {
+      "index": 5,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 6,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 7,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 8,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 9,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 10,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 11,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 12,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 13,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 14,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 15,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 16,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 17,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 18,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 19,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 20,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 21,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 22,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 23,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 24,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 25,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 26,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 27,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 28,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 29,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 30,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 31,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 32,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 33,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 34,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 35,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 36,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 37,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 38,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 39,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 40,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 41,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 42,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 43,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 44,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 45,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 46,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 47,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 48,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 49,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 50,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 51,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 52,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 53,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 54,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 55,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 56,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 57,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 58,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 59,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 60,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 61,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 62,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 63,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 64,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 65,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 66,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 67,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 68,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 69,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 70,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 71,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 72,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 73,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 74,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 75,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 76,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 77,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 78,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 79,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 80,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 81,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 82,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 83,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 84,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 85,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 86,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 87,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 88,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 89,
+      "exit": 0,
+      "timeout": false
+    },
+    {
+      "index": 90,
+      "exit": 0,
+      "timeout": false
+    },
+    {
+      "index": 91,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 92,
+      "exit": 0,
+      "timeout": false
+    },
+    {
+      "index": 93,
+      "exit": 0,
+      "timeout": false
+    },
+    {
+      "index": 94,
+      "exit": 0,
+      "timeout": false
+    },
+    {
+      "index": 95,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 96,
+      "exit": 0,
+      "timeout": false
+    },
+    {
+      "index": 97,
+      "exit": 0,
+      "timeout": false
+    },
+    {
+      "index": 98,
+      "exit": 0,
+      "timeout": false
+    },
+    {
+      "index": 99,
+      "exit": 1,
+      "timeout": false
+    },
+    {
+      "index": 100,
+      "exit": 0,
+      "timeout": false
+    },
+    {
+      "index": 101,
+      "exit": 0,
+      "timeout": false
+    }
+  ],
+  "serial": "emulator-5588",
+  "failure": null,
+  "process_restart_checked": true
+}

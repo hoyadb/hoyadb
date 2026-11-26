@@ -1,0 +1,937 @@
+{
+  "summary": {
+    "external_locked_packages": 39,
+    "new": 7,
+    "changed": 13,
+    "unchanged": 19,
+    "registry_archive_checksums_verified": 37,
+    "inactive_lock_only": [
+      "tokio"
+    ],
+    "active_native": 13,
+    "active_wasm": 35,
+    "active_tokio_serde_network": [],
+    "project_manifests_and_locks_unchanged": true,
+    "metadata_only_no_buildscripts_executed": true
+  },
+  "baseline_locks": [
+    "Cargo.lock",
+    "spikes/storage-browser/Cargo.lock",
+    "spikes/cross-platform/native/Cargo.lock"
+  ],
+  "packages": [
+    {
+      "name": "bitflags",
+      "version": "2.13.2",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "3ded4057c258ba199e2d26386d3af3780957ecaee6c4ef4041c6b4b8b97c0b06",
+      "downloaded_archive_sha256_verified": "3ded4057c258ba199e2d26386d3af3780957ecaee6c4ef4041c6b4b8b97c0b06",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/bitflags/bitflags",
+      "rust_version": "1.56.0",
+      "change": "unchanged",
+      "prior_versions": [
+        "2.13.2"
+      ],
+      "active_native": true,
+      "active_wasm": true,
+      "metadata_source": "https://crates.io/api/v1/crates/bitflags/2.13.2"
+    },
+    {
+      "name": "bumpalo",
+      "version": "3.20.3",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "72f5acc6cb2ba439de613abc23857ec3d78374d8ed5ac84e9d11336e87da8649",
+      "downloaded_archive_sha256_verified": "72f5acc6cb2ba439de613abc23857ec3d78374d8ed5ac84e9d11336e87da8649",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/fitzgen/bumpalo",
+      "rust_version": "1.71.1",
+      "change": "unchanged",
+      "prior_versions": [
+        "3.20.3"
+      ],
+      "active_native": false,
+      "active_wasm": true,
+      "metadata_source": "https://crates.io/api/v1/crates/bumpalo/3.20.3"
+    },
+    {
+      "name": "cc",
+      "version": "1.10.0",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "86e055fa6e3e40ad6187ba25b6855eeb635d5271f8e0f0e1e9a5826b8d75bea0",
+      "downloaded_archive_sha256_verified": "86e055fa6e3e40ad6187ba25b6855eeb635d5271f8e0f0e1e9a5826b8d75bea0",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/cc-rs",
+      "rust_version": "1.65.0",
+      "change": "changed",
+      "prior_versions": [
+        "1.9.0"
+      ],
+      "active_native": true,
+      "active_wasm": true,
+      "metadata_source": "https://crates.io/api/v1/crates/cc/1.10.0"
+    },
+    {
+      "name": "cfg-if",
+      "version": "1.0.5",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "4e7648175b45a9a48536d676f68d918270699102aa8dab5496df06904c914600",
+      "downloaded_archive_sha256_verified": "4e7648175b45a9a48536d676f68d918270699102aa8dab5496df06904c914600",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/cfg-if",
+      "rust_version": "1.32",
+      "change": "unchanged",
+      "prior_versions": [
+        "1.0.5"
+      ],
+      "active_native": false,
+      "active_wasm": true,
+      "metadata_source": "https://crates.io/api/v1/crates/cfg-if/1.0.5"
+    },
+    {
+      "name": "fallible-iterator",
+      "version": "0.3.0",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "2acce4a10f12dc2fb14a218589d4f1f62ef011b2d0cc4b3cb1bba8e94da14649",
+      "downloaded_archive_sha256_verified": "2acce4a10f12dc2fb14a218589d4f1f62ef011b2d0cc4b3cb1bba8e94da14649",
+      "license": "MIT/Apache-2.0",
+      "repository": "https://github.com/sfackler/rust-fallible-iterator",
+      "rust_version": null,
+      "change": "unchanged",
+      "prior_versions": [
+        "0.3.0"
+      ],
+      "active_native": true,
+      "active_wasm": true,
+      "metadata_source": "https://crates.io/api/v1/crates/fallible-iterator/0.3.0"
+    },
+    {
+      "name": "fallible-streaming-iterator",
+      "version": "0.1.9",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "7360491ce676a36bf9bb3c56c1aa791658183a54d2744120f27285738d90465a",
+      "downloaded_archive_sha256_verified": "7360491ce676a36bf9bb3c56c1aa791658183a54d2744120f27285738d90465a",
+      "license": "MIT/Apache-2.0",
+      "repository": "https://github.com/sfackler/fallible-streaming-iterator",
+      "rust_version": null,
+      "change": "unchanged",
+      "prior_versions": [
+        "0.1.9"
+      ],
+      "active_native": true,
+      "active_wasm": true,
+      "metadata_source": "https://crates.io/api/v1/crates/fallible-streaming-iterator/0.1.9"
+    },
+    {
+      "name": "find-msvc-tools",
+      "version": "0.1.15",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "1c66915cc5391097de7a2b0b972e8505aa33c0df401fd3a6811dbdb32881ba48",
+      "downloaded_archive_sha256_verified": "1c66915cc5391097de7a2b0b972e8505aa33c0df401fd3a6811dbdb32881ba48",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/cc-rs",
+      "rust_version": "1.65.0",
+      "change": "unchanged",
+      "prior_versions": [
+        "0.1.15"
+      ],
+      "active_native": true,
+      "active_wasm": true,
+      "metadata_source": "https://crates.io/api/v1/crates/find-msvc-tools/0.1.15"
+    },
+    {
+      "name": "futures-core",
+      "version": "0.3.34",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "92d699e522242e69e3003b94ecc1f960f3a5e015aa7c5d7486e65ad01dd94f5e",
+      "downloaded_archive_sha256_verified": "92d699e522242e69e3003b94ecc1f960f3a5e015aa7c5d7486e65ad01dd94f5e",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/futures-rs",
+      "rust_version": "1.36",
+      "change": "new",
+      "prior_versions": [],
+      "active_native": false,
+      "active_wasm": true,
+      "metadata_source": "https://crates.io/api/v1/crates/futures-core/0.3.34"
+    },
+    {
+      "name": "futures-task",
+      "version": "0.3.34",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "cd417de3d1d015fc3bfd2b1ea46dfc7bab72ef86f1cc7cc9c78e728b34a6d1fd",
+      "downloaded_archive_sha256_verified": "cd417de3d1d015fc3bfd2b1ea46dfc7bab72ef86f1cc7cc9c78e728b34a6d1fd",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/futures-rs",
+      "rust_version": "1.71",
+      "change": "new",
+      "prior_versions": [],
+      "active_native": false,
+      "active_wasm": true,
+      "metadata_source": "https://crates.io/api/v1/crates/futures-task/0.3.34"
+    },
+    {
+      "name": "futures-util",
+      "version": "0.3.34",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "0d50a92467f8ba5dd6e3ee5d4bd04d73ab2e4e1c44474a0674821dfce14b79bc",
+      "downloaded_archive_sha256_verified": "0d50a92467f8ba5dd6e3ee5d4bd04d73ab2e4e1c44474a0674821dfce14b79bc",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/futures-rs",
+      "rust_version": "1.71",
+      "change": "new",
+      "prior_versions": [],
+      "active_native": false,
+      "active_wasm": true,
+      "metadata_source": "https://crates.io/api/v1/crates/futures-util/0.3.34"
+    },
+    {
+      "name": "js-sys",
+      "version": "0.3.106",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "7883d941dae510fb2d978fc3fe018c71c9e2892fd38854de3e8b92c2e5ad9cc5",
+      "downloaded_archive_sha256_verified": "7883d941dae510fb2d978fc3fe018c71c9e2892fd38854de3e8b92c2e5ad9cc5",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/wasm-bindgen/wasm-bindgen/tree/master/crates/js-sys",
+      "rust_version": "1.81",
+      "change": "changed",
+      "prior_versions": [
+        "0.3.81"
+      ],
+      "active_native": false,
+      "active_wasm": true,
+      "metadata_source": "https://crates.io/api/v1/crates/js-sys/0.3.106"
+    },
+    {
+      "name": "libsqlite3-sys",
+      "version": "0.38.1",
+      "source": "git+https://github.com/rusqlite/rusqlite?rev=661107f6eb5d7477c61be1221744de3ad96c53e7#661107f6eb5d7477c61be1221744de3ad96c53e7",
+      "checksum": null,
+      "downloaded_archive_sha256_verified": null,
+      "license": "MIT",
+      "repository": "https://github.com/rusqlite/rusqlite",
+      "rust_version": "1.88.0",
+      "change": "changed",
+      "prior_versions": [
+        "0.38.2"
+      ],
+      "active_native": true,
+      "active_wasm": false,
+      "metadata_source": "https://github.com/rusqlite/rusqlite/tree/661107f6eb5d7477c61be1221744de3ad96c53e7"
+    },
+    {
+      "name": "once_cell",
+      "version": "1.21.4",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "9f7c3e4beb33f85d45ae3e3a1792185706c8e16d043238c593331cc7cd313b50",
+      "downloaded_archive_sha256_verified": "9f7c3e4beb33f85d45ae3e3a1792185706c8e16d043238c593331cc7cd313b50",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/matklad/once_cell",
+      "rust_version": "1.65",
+      "change": "unchanged",
+      "prior_versions": [
+        "1.21.4"
+      ],
+      "active_native": false,
+      "active_wasm": true,
+      "metadata_source": "https://crates.io/api/v1/crates/once_cell/1.21.4"
+    },
+    {
+      "name": "pin-project-lite",
+      "version": "0.2.17",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "a89322df9ebe1c1578d689c92318e070967d1042b512afbe49518723f4e6d5cd",
+      "downloaded_archive_sha256_verified": "a89322df9ebe1c1578d689c92318e070967d1042b512afbe49518723f4e6d5cd",
+      "license": "Apache-2.0 OR MIT",
+      "repository": "https://github.com/taiki-e/pin-project-lite",
+      "rust_version": "1.37",
+      "change": "unchanged",
+      "prior_versions": [
+        "0.2.17"
+      ],
+      "active_native": false,
+      "active_wasm": true,
+      "metadata_source": "https://crates.io/api/v1/crates/pin-project-lite/0.2.17"
+    },
+    {
+      "name": "pkg-config",
+      "version": "0.3.34",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "f6b464fbc74e149a392436b17d523f769e057cb6877f6a5c4618bc6f11800548",
+      "downloaded_archive_sha256_verified": "f6b464fbc74e149a392436b17d523f769e057cb6877f6a5c4618bc6f11800548",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/pkg-config-rs",
+      "rust_version": "1.63",
+      "change": "unchanged",
+      "prior_versions": [
+        "0.3.34"
+      ],
+      "active_native": true,
+      "active_wasm": false,
+      "metadata_source": "https://crates.io/api/v1/crates/pkg-config/0.3.34"
+    },
+    {
+      "name": "proc-macro2",
+      "version": "1.0.107",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "985e7ec9bb745e6ce6535b544d84d6cd6f7ad8bd711c398938ae983b91a766d9",
+      "downloaded_archive_sha256_verified": "985e7ec9bb745e6ce6535b544d84d6cd6f7ad8bd711c398938ae983b91a766d9",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/dtolnay/proc-macro2",
+      "rust_version": "1.71",
+      "change": "unchanged",
+      "prior_versions": [
+        "1.0.107"
+      ],
+      "active_native": false,
+      "active_wasm": true,
+      "metadata_source": "https://crates.io/api/v1/crates/proc-macro2/1.0.107"
+    },
+    {
+      "name": "quote",
+      "version": "1.0.47",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "1fbf4db142a473a8d80c26bbf18454ed458bf8d26c8219c331daecfdbd079001",
+      "downloaded_archive_sha256_verified": "1fbf4db142a473a8d80c26bbf18454ed458bf8d26c8219c331daecfdbd079001",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/dtolnay/quote",
+      "rust_version": "1.71",
+      "change": "unchanged",
+      "prior_versions": [
+        "1.0.47"
+      ],
+      "active_native": false,
+      "active_wasm": true,
+      "metadata_source": "https://crates.io/api/v1/crates/quote/1.0.47"
+    },
+    {
+      "name": "rsqlite-vfs",
+      "version": "0.2.0",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "353b74f9810d5b085b6c42c9d86a5f0fdb795553235cdd48753b32e3809d18a7",
+      "downloaded_archive_sha256_verified": "353b74f9810d5b085b6c42c9d86a5f0fdb795553235cdd48753b32e3809d18a7",
+      "license": "MIT",
+      "repository": "https://github.com/Spxg/sqlite-wasm-rs",
+      "rust_version": "1.81.0",
+      "change": "new",
+      "prior_versions": [],
+      "active_native": false,
+      "active_wasm": true,
+      "metadata_source": "https://crates.io/api/v1/crates/rsqlite-vfs/0.2.0"
+    },
+    {
+      "name": "rusqlite",
+      "version": "0.40.1",
+      "source": "git+https://github.com/rusqlite/rusqlite?rev=661107f6eb5d7477c61be1221744de3ad96c53e7#661107f6eb5d7477c61be1221744de3ad96c53e7",
+      "checksum": null,
+      "downloaded_archive_sha256_verified": null,
+      "license": "MIT",
+      "repository": "https://github.com/rusqlite/rusqlite",
+      "rust_version": "1.89.0",
+      "change": "changed",
+      "prior_versions": [
+        "0.40.2"
+      ],
+      "active_native": true,
+      "active_wasm": true,
+      "metadata_source": "https://github.com/rusqlite/rusqlite/tree/661107f6eb5d7477c61be1221744de3ad96c53e7"
+    },
+    {
+      "name": "rustversion",
+      "version": "1.0.23",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "cf54715a573b99ac80df0bc206da022bcd442c974952c7b9720069370852e21f",
+      "downloaded_archive_sha256_verified": "cf54715a573b99ac80df0bc206da022bcd442c974952c7b9720069370852e21f",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/dtolnay/rustversion",
+      "rust_version": "1.31",
+      "change": "unchanged",
+      "prior_versions": [
+        "1.0.23"
+      ],
+      "active_native": false,
+      "active_wasm": true,
+      "metadata_source": "https://crates.io/api/v1/crates/rustversion/1.0.23"
+    },
+    {
+      "name": "shlex",
+      "version": "2.0.1",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "f8fadd59c855ef2080decdef8ff161eb6661b86933c9d82e5ba29dc602a55aba",
+      "downloaded_archive_sha256_verified": "f8fadd59c855ef2080decdef8ff161eb6661b86933c9d82e5ba29dc602a55aba",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/comex/rust-shlex",
+      "rust_version": "1.46.0",
+      "change": "unchanged",
+      "prior_versions": [
+        "2.0.1"
+      ],
+      "active_native": true,
+      "active_wasm": true,
+      "metadata_source": "https://crates.io/api/v1/crates/shlex/2.0.1"
+    },
+    {
+      "name": "slab",
+      "version": "0.4.12",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "0c790de23124f9ab44544d7ac05d60440adc586479ce501c1d6d7da3cd8c9cf5",
+      "downloaded_archive_sha256_verified": "0c790de23124f9ab44544d7ac05d60440adc586479ce501c1d6d7da3cd8c9cf5",
+      "license": "MIT",
+      "repository": "https://github.com/tokio-rs/slab",
+      "rust_version": "1.51",
+      "change": "new",
+      "prior_versions": [],
+      "active_native": false,
+      "active_wasm": true,
+      "metadata_source": "https://crates.io/api/v1/crates/slab/0.4.12"
+    },
+    {
+      "name": "smallvec",
+      "version": "1.16.4",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "d0d5d4b1981b8bbbb7aed204cae5726d683d5d6ac7e74ec54122ea28f315e7c8",
+      "downloaded_archive_sha256_verified": "d0d5d4b1981b8bbbb7aed204cae5726d683d5d6ac7e74ec54122ea28f315e7c8",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/servo/rust-smallvec",
+      "rust_version": null,
+      "change": "changed",
+      "prior_versions": [
+        "1.16.3"
+      ],
+      "active_native": true,
+      "active_wasm": true,
+      "metadata_source": "https://crates.io/api/v1/crates/smallvec/1.16.4"
+    },
+    {
+      "name": "sqlcipher-src",
+      "version": "419.0.6+sqlcipher-4.19.0-sqlite-3.53.4-libtomcrypt-1.18.2",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "ab732d48ebf2a1449e94d071b26544f99845834c75c3c210e927ace097b49aa4",
+      "downloaded_archive_sha256_verified": "ab732d48ebf2a1449e94d071b26544f99845834c75c3c210e927ace097b49aa4",
+      "license": "MIT AND BSD-3-Clause AND blessing AND WTFPL",
+      "repository": "https://github.com/LucaCappelletti94/sqlcipher-src",
+      "rust_version": "1.81",
+      "change": "new",
+      "prior_versions": [],
+      "active_native": true,
+      "active_wasm": true,
+      "metadata_source": "https://crates.io/api/v1/crates/sqlcipher-src/419.0.6+sqlcipher-4.19.0-sqlite-3.53.4-libtomcrypt-1.18.2"
+    },
+    {
+      "name": "sqlite-wasm-rs",
+      "version": "0.6.2",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "36bd8e29bf08189a005b2df1df99823aa0861cabe9044e5f31ed54ca292ee618",
+      "downloaded_archive_sha256_verified": "36bd8e29bf08189a005b2df1df99823aa0861cabe9044e5f31ed54ca292ee618",
+      "license": "MIT",
+      "repository": "https://github.com/Spxg/sqlite-wasm-rs",
+      "rust_version": "1.81.0",
+      "change": "changed",
+      "prior_versions": [
+        "0.5.1"
+      ],
+      "active_native": false,
+      "active_wasm": true,
+      "metadata_source": "https://crates.io/api/v1/crates/sqlite-wasm-rs/0.6.2"
+    },
+    {
+      "name": "sqlite-wasm-vfs",
+      "version": "0.3.0",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "11859fbd5ce417c37e9e8c1993b55b9dc21ea7dd6452ba9097115f06e54a7e4a",
+      "downloaded_archive_sha256_verified": "11859fbd5ce417c37e9e8c1993b55b9dc21ea7dd6452ba9097115f06e54a7e4a",
+      "license": "MIT",
+      "repository": "https://github.com/Spxg/sqlite-wasm-rs",
+      "rust_version": "1.81.0",
+      "change": "changed",
+      "prior_versions": [
+        "0.1.1"
+      ],
+      "active_native": false,
+      "active_wasm": true,
+      "metadata_source": "https://crates.io/api/v1/crates/sqlite-wasm-vfs/0.3.0"
+    },
+    {
+      "name": "syn",
+      "version": "3.0.9",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "d78c8dee4c7bf0e14673097256fed6142ce9d3b85a408189d07482442145823b",
+      "downloaded_archive_sha256_verified": "d78c8dee4c7bf0e14673097256fed6142ce9d3b85a408189d07482442145823b",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/dtolnay/syn",
+      "rust_version": "1.71",
+      "change": "unchanged",
+      "prior_versions": [
+        "2.0.119",
+        "3.0.9"
+      ],
+      "active_native": false,
+      "active_wasm": true,
+      "metadata_source": "https://crates.io/api/v1/crates/syn/3.0.9"
+    },
+    {
+      "name": "thiserror",
+      "version": "2.0.21",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "09e52cb86a36cede5cb101bf8908837b3e4c6e5e59fe7fd85c23fb56200d189e",
+      "downloaded_archive_sha256_verified": "09e52cb86a36cede5cb101bf8908837b3e4c6e5e59fe7fd85c23fb56200d189e",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/dtolnay/thiserror",
+      "rust_version": "1.77",
+      "change": "unchanged",
+      "prior_versions": [
+        "2.0.21"
+      ],
+      "active_native": false,
+      "active_wasm": true,
+      "metadata_source": "https://crates.io/api/v1/crates/thiserror/2.0.21"
+    },
+    {
+      "name": "thiserror-impl",
+      "version": "2.0.21",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "fe5197923287db20a58125f0bc85c062f7f2c892de97b18c356f9efb14b28524",
+      "downloaded_archive_sha256_verified": "fe5197923287db20a58125f0bc85c062f7f2c892de97b18c356f9efb14b28524",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/dtolnay/thiserror",
+      "rust_version": "1.77",
+      "change": "unchanged",
+      "prior_versions": [
+        "2.0.21"
+      ],
+      "active_native": false,
+      "active_wasm": true,
+      "metadata_source": "https://crates.io/api/v1/crates/thiserror-impl/2.0.21"
+    },
+    {
+      "name": "tokio",
+      "version": "1.54.1",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "b52fd3255258d26fac7264ab5a76b53c13367136dc011d3d6ad4f8ed070396a3",
+      "downloaded_archive_sha256_verified": "b52fd3255258d26fac7264ab5a76b53c13367136dc011d3d6ad4f8ed070396a3",
+      "license": "MIT",
+      "repository": "https://github.com/tokio-rs/tokio",
+      "rust_version": "1.85",
+      "change": "unchanged",
+      "prior_versions": [
+        "1.54.1"
+      ],
+      "active_native": false,
+      "active_wasm": false,
+      "metadata_source": "https://crates.io/api/v1/crates/tokio/1.54.1"
+    },
+    {
+      "name": "unicode-ident",
+      "version": "1.0.27",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "a2c754d6c33795a1c324727428e5a7dedb5b06195f9890bdbcba760d3e246563",
+      "downloaded_archive_sha256_verified": "a2c754d6c33795a1c324727428e5a7dedb5b06195f9890bdbcba760d3e246563",
+      "license": "(MIT OR Apache-2.0) AND Unicode-3.0",
+      "repository": "https://github.com/dtolnay/unicode-ident",
+      "rust_version": "1.71",
+      "change": "unchanged",
+      "prior_versions": [
+        "1.0.27"
+      ],
+      "active_native": false,
+      "active_wasm": true,
+      "metadata_source": "https://crates.io/api/v1/crates/unicode-ident/1.0.27"
+    },
+    {
+      "name": "vcpkg",
+      "version": "0.2.15",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "accd4ea62f7bb7a82fe23066fb0957d48ef677f6eeb8215f372f52e48bb32426",
+      "downloaded_archive_sha256_verified": "accd4ea62f7bb7a82fe23066fb0957d48ef677f6eeb8215f372f52e48bb32426",
+      "license": "MIT/Apache-2.0",
+      "repository": "https://github.com/mcgoo/vcpkg-rs",
+      "rust_version": null,
+      "change": "unchanged",
+      "prior_versions": [
+        "0.2.15"
+      ],
+      "active_native": true,
+      "active_wasm": false,
+      "metadata_source": "https://crates.io/api/v1/crates/vcpkg/0.2.15"
+    },
+    {
+      "name": "wasm-bindgen",
+      "version": "0.2.129",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "9bb54f33acc68fd454578d9820b0bde1a1a3d17aa17bb7b6595806d02886d409",
+      "downloaded_archive_sha256_verified": "9bb54f33acc68fd454578d9820b0bde1a1a3d17aa17bb7b6595806d02886d409",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/wasm-bindgen/wasm-bindgen",
+      "rust_version": "1.81",
+      "change": "changed",
+      "prior_versions": [
+        "0.2.104"
+      ],
+      "active_native": false,
+      "active_wasm": true,
+      "metadata_source": "https://crates.io/api/v1/crates/wasm-bindgen/0.2.129"
+    },
+    {
+      "name": "wasm-bindgen-futures",
+      "version": "0.4.79",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "3cbab34de2d982e9b48e18d216d04c4a6f641066ff19ffb699980f591ee3610e",
+      "downloaded_archive_sha256_verified": "3cbab34de2d982e9b48e18d216d04c4a6f641066ff19ffb699980f591ee3610e",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/wasm-bindgen/wasm-bindgen/tree/master/crates/futures",
+      "rust_version": "1.81",
+      "change": "changed",
+      "prior_versions": [
+        "0.4.54"
+      ],
+      "active_native": false,
+      "active_wasm": true,
+      "metadata_source": "https://crates.io/api/v1/crates/wasm-bindgen-futures/0.4.79"
+    },
+    {
+      "name": "wasm-bindgen-macro",
+      "version": "0.2.129",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "2e29d0c35b16e224a7eeb5cd2d25e3e1968fbd65604117b44d3b789d00ee8535",
+      "downloaded_archive_sha256_verified": "2e29d0c35b16e224a7eeb5cd2d25e3e1968fbd65604117b44d3b789d00ee8535",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/wasm-bindgen/wasm-bindgen/tree/master/crates/macro",
+      "rust_version": "1.81",
+      "change": "changed",
+      "prior_versions": [
+        "0.2.104"
+      ],
+      "active_native": false,
+      "active_wasm": true,
+      "metadata_source": "https://crates.io/api/v1/crates/wasm-bindgen-macro/0.2.129"
+    },
+    {
+      "name": "wasm-bindgen-macro-support",
+      "version": "0.2.129",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "6f501a8bc3719dba86ef8ae4728879c08001bea749eb1333ac5b91e040e2a6b7",
+      "downloaded_archive_sha256_verified": "6f501a8bc3719dba86ef8ae4728879c08001bea749eb1333ac5b91e040e2a6b7",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/wasm-bindgen/wasm-bindgen/tree/main/crates/macro-support",
+      "rust_version": "1.81",
+      "change": "changed",
+      "prior_versions": [
+        "0.2.104"
+      ],
+      "active_native": false,
+      "active_wasm": true,
+      "metadata_source": "https://crates.io/api/v1/crates/wasm-bindgen-macro-support/0.2.129"
+    },
+    {
+      "name": "wasm-bindgen-shared",
+      "version": "0.2.129",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "23f0c9c52aa7cd7d77769a4cfe2a9adb1b331f489a41d912ce14513d5ab995c6",
+      "downloaded_archive_sha256_verified": "23f0c9c52aa7cd7d77769a4cfe2a9adb1b331f489a41d912ce14513d5ab995c6",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/wasm-bindgen/wasm-bindgen/tree/master/crates/shared",
+      "rust_version": "1.81",
+      "change": "changed",
+      "prior_versions": [
+        "0.2.104"
+      ],
+      "active_native": false,
+      "active_wasm": true,
+      "metadata_source": "https://crates.io/api/v1/crates/wasm-bindgen-shared/0.2.129"
+    },
+    {
+      "name": "web-sys",
+      "version": "0.3.106",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "88261b9deccee56594c11a3460c462c41f58d148598fe70ad77070126a68aba4",
+      "downloaded_archive_sha256_verified": "88261b9deccee56594c11a3460c462c41f58d148598fe70ad77070126a68aba4",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/wasm-bindgen/wasm-bindgen/tree/master/crates/web-sys",
+      "rust_version": "1.81",
+      "change": "changed",
+      "prior_versions": [
+        "0.3.81"
+      ],
+      "active_native": false,
+      "active_wasm": true,
+      "metadata_source": "https://crates.io/api/v1/crates/web-sys/0.3.106"
+    },
+    {
+      "name": "zeroize",
+      "version": "1.9.1",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "e13084392c5e4bc371903e2935a5eaeed24905a7511356b883835e18a78f6879",
+      "downloaded_archive_sha256_verified": "e13084392c5e4bc371903e2935a5eaeed24905a7511356b883835e18a78f6879",
+      "license": "Apache-2.0 OR MIT",
+      "repository": "https://github.com/RustCrypto/utils",
+      "rust_version": "1.85",
+      "change": "new",
+      "prior_versions": [],
+      "active_native": true,
+      "active_wasm": true,
+      "metadata_source": "https://crates.io/api/v1/crates/zeroize/1.9.1"
+    }
+  ],
+  "critical_source_manifest": [
+    {
+      "package": "libsqlite3-sys",
+      "version": "0.38.1",
+      "relative_path": "Cargo.toml",
+      "source_path": "/Users/boristacyniak/.cargo/git/checkouts/rusqlite-8e5e8204e489f2fd/661107f/libsqlite3-sys/Cargo.toml",
+      "sha256": "b0d039d984f557173e23f832febbe2b3d92f85c8b706f25f49c178a2f7a3b091",
+      "bytes": 2211
+    },
+    {
+      "package": "libsqlite3-sys",
+      "version": "0.38.1",
+      "relative_path": "build.rs",
+      "source_path": "/Users/boristacyniak/.cargo/git/checkouts/rusqlite-8e5e8204e489f2fd/661107f/libsqlite3-sys/build.rs",
+      "sha256": "769b31370a41aa722e1d5a530012432c985bb142eab34d095481ffd1a3436e1b",
+      "bytes": 35413
+    },
+    {
+      "package": "libsqlite3-sys",
+      "version": "0.38.1",
+      "relative_path": "src/lib.rs",
+      "source_path": "/Users/boristacyniak/.cargo/git/checkouts/rusqlite-8e5e8204e489f2fd/661107f/libsqlite3-sys/src/lib.rs",
+      "sha256": "f61d8e306e11357479e20999f7b7adc5f3dbaea40cd17361853574001cf79360",
+      "bytes": 826
+    },
+    {
+      "package": "rusqlite",
+      "version": "0.40.1",
+      "relative_path": "Cargo.toml",
+      "source_path": "/Users/boristacyniak/.cargo/git/checkouts/rusqlite-8e5e8204e489f2fd/661107f/Cargo.toml",
+      "sha256": "9831644b5c2cc71ec764b8ffa11d9f0d971c64d468d40d40392c79eecc89d98a",
+      "bytes": 7364
+    },
+    {
+      "package": "rusqlite",
+      "version": "0.40.1",
+      "relative_path": "src/lib.rs",
+      "source_path": "/Users/boristacyniak/.cargo/git/checkouts/rusqlite-8e5e8204e489f2fd/661107f/src/lib.rs",
+      "sha256": "22a7e3d1fdca13eaf79767a3f60c3d0c7df43767ffa7a2f85aaf3f748bf7bf53",
+      "bytes": 87512
+    },
+    {
+      "package": "sqlcipher-src",
+      "version": "419.0.6+sqlcipher-4.19.0-sqlite-3.53.4-libtomcrypt-1.18.2",
+      "relative_path": "Cargo.toml",
+      "source_path": "/Users/boristacyniak/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sqlcipher-src-419.0.6+sqlcipher-4.19.0-sqlite-3.53.4-libtomcrypt-1.18.2/Cargo.toml",
+      "sha256": "81d3673a3c9490c684de54d32bca6b7e89cae32981e3ddf5f6fa4635c1c1652b",
+      "bytes": 1728
+    },
+    {
+      "package": "sqlcipher-src",
+      "version": "419.0.6+sqlcipher-4.19.0-sqlite-3.53.4-libtomcrypt-1.18.2",
+      "relative_path": "src/lib.rs",
+      "source_path": "/Users/boristacyniak/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sqlcipher-src-419.0.6+sqlcipher-4.19.0-sqlite-3.53.4-libtomcrypt-1.18.2/src/lib.rs",
+      "sha256": "453018ac90564fb1955d2d6dabf9c7c0049d133b41f642940823e338e6fae0d5",
+      "bytes": 1375
+    },
+    {
+      "package": "sqlcipher-src",
+      "version": "419.0.6+sqlcipher-4.19.0-sqlite-3.53.4-libtomcrypt-1.18.2",
+      "relative_path": "sqlcipher/sqlcipher.c",
+      "source_path": "/Users/boristacyniak/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sqlcipher-src-419.0.6+sqlcipher-4.19.0-sqlite-3.53.4-libtomcrypt-1.18.2/sqlcipher/sqlcipher.c",
+      "sha256": "838b2ed8a586b8b77f03e82c5a25b97e1a55e524ebac0de05354193865703072",
+      "bytes": 9755262
+    },
+    {
+      "package": "sqlcipher-src",
+      "version": "419.0.6+sqlcipher-4.19.0-sqlite-3.53.4-libtomcrypt-1.18.2",
+      "relative_path": "sqlcipher/sqlite3.h",
+      "source_path": "/Users/boristacyniak/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sqlcipher-src-419.0.6+sqlcipher-4.19.0-sqlite-3.53.4-libtomcrypt-1.18.2/sqlcipher/sqlite3.h",
+      "sha256": "8a9d1bff44d75174ca6dea3ea9bac50a6104d86facb566647b8bb839375b7b3a",
+      "bytes": 692778
+    },
+    {
+      "package": "rsqlite-vfs",
+      "version": "0.2.0",
+      "relative_path": "Cargo.toml",
+      "source_path": "/Users/boristacyniak/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rsqlite-vfs-0.2.0/Cargo.toml",
+      "sha256": "9012cefba7190bf0f4cb2ce41745b3855a4fd935fb8607b1ca49a2ee338e6893",
+      "bytes": 1439
+    },
+    {
+      "package": "rsqlite-vfs",
+      "version": "0.2.0",
+      "relative_path": "src/lib.rs",
+      "source_path": "/Users/boristacyniak/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rsqlite-vfs-0.2.0/src/lib.rs",
+      "sha256": "069d455b8325972fe6898db62bd098d9862321927ae2427fdde4ef180de81ea8",
+      "bytes": 60405
+    },
+    {
+      "package": "sqlite-wasm-rs",
+      "version": "0.6.2",
+      "relative_path": "Cargo.toml",
+      "source_path": "/Users/boristacyniak/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sqlite-wasm-rs-0.6.2/Cargo.toml",
+      "sha256": "46e15091af4eade0c6b60a72f898401c930779c784d7f07e51edc2130bd85807",
+      "bytes": 2122
+    },
+    {
+      "package": "sqlite-wasm-rs",
+      "version": "0.6.2",
+      "relative_path": "build.rs",
+      "source_path": "/Users/boristacyniak/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sqlite-wasm-rs-0.6.2/build.rs",
+      "sha256": "368c4a7695345c1dc1d56c1a56fbed95d95d84e63c912d9af37ccdd7402fc804",
+      "bytes": 13415
+    },
+    {
+      "package": "sqlite-wasm-rs",
+      "version": "0.6.2",
+      "relative_path": "src/lib.rs",
+      "source_path": "/Users/boristacyniak/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sqlite-wasm-rs-0.6.2/src/lib.rs",
+      "sha256": "ef28628e89d256b4822e3e9e8912420ab468164029f97497005364edf27e8027",
+      "bytes": 506
+    },
+    {
+      "package": "sqlite-wasm-rs",
+      "version": "0.6.2",
+      "relative_path": "src/host/wasm_bindgen.rs",
+      "source_path": "/Users/boristacyniak/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sqlite-wasm-rs-0.6.2/src/host/wasm_bindgen.rs",
+      "sha256": "bcc2ff519be396a5bfe63858d3fe09af23ec9600ec7e8d5d49dd5ce412434d11",
+      "bytes": 6506
+    },
+    {
+      "package": "sqlite-wasm-rs",
+      "version": "0.6.2",
+      "relative_path": "shim/sqlcipher/shim.c",
+      "source_path": "/Users/boristacyniak/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sqlite-wasm-rs-0.6.2/shim/sqlcipher/shim.c",
+      "sha256": "2458a33c58f0d8768a69a13d646ddaab673db6c495c3112d2f873dea1028d689",
+      "bytes": 1248
+    },
+    {
+      "package": "sqlite-wasm-rs",
+      "version": "0.6.2",
+      "relative_path": "shim/sqlcipher/libtomcrypt.h",
+      "source_path": "/Users/boristacyniak/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sqlite-wasm-rs-0.6.2/shim/sqlcipher/libtomcrypt.h",
+      "sha256": "d439587b3eaafc022ba21c3815f7862ca2a6475e634d036a40ff2550a6e0f705",
+      "bytes": 836
+    },
+    {
+      "package": "sqlite-wasm-vfs",
+      "version": "0.3.0",
+      "relative_path": "Cargo.toml",
+      "source_path": "/Users/boristacyniak/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sqlite-wasm-vfs-0.3.0/Cargo.toml",
+      "sha256": "42ba6e0bd721296ba8d971e5229a8b734e847618b35dd15f7df22a02c9d68179",
+      "bytes": 2397
+    },
+    {
+      "package": "sqlite-wasm-vfs",
+      "version": "0.3.0",
+      "relative_path": "src/lib.rs",
+      "source_path": "/Users/boristacyniak/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sqlite-wasm-vfs-0.3.0/src/lib.rs",
+      "sha256": "ed40dd745e448aa7535fdb7aad8a292ee69e549f29d8f907ac76e9fa27c17f18",
+      "bytes": 450
+    },
+    {
+      "package": "wasm-bindgen",
+      "version": "0.2.129",
+      "relative_path": "Cargo.toml",
+      "source_path": "/Users/boristacyniak/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-0.2.129/Cargo.toml",
+      "sha256": "96843908592c36f81e731f634488401256cc45e23edbf6543895b2bd79813b32",
+      "bytes": 2997
+    },
+    {
+      "package": "wasm-bindgen",
+      "version": "0.2.129",
+      "relative_path": "build.rs",
+      "source_path": "/Users/boristacyniak/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-0.2.129/build.rs",
+      "sha256": "363b0c2cf7b1353ff702898612ab98956a87fa85e943b41377627c08a053406a",
+      "bytes": 1732
+    },
+    {
+      "package": "wasm-bindgen",
+      "version": "0.2.129",
+      "relative_path": "src/lib.rs",
+      "source_path": "/Users/boristacyniak/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-0.2.129/src/lib.rs",
+      "sha256": "ea888df17073d4d56137b2f5ad06703073431ac1aae3800ab797ce3ab9910f92",
+      "bytes": 58368
+    },
+    {
+      "package": "wasm-bindgen-futures",
+      "version": "0.4.79",
+      "relative_path": "Cargo.toml",
+      "source_path": "/Users/boristacyniak/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-futures-0.4.79/Cargo.toml",
+      "sha256": "b3ad8cff9fe068a9a483c74c1c085c9733c8d70f35b4a2bedd5c4fa70373d69d",
+      "bytes": 2461
+    },
+    {
+      "package": "wasm-bindgen-futures",
+      "version": "0.4.79",
+      "relative_path": "src/lib.rs",
+      "source_path": "/Users/boristacyniak/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-futures-0.4.79/src/lib.rs",
+      "sha256": "56f6c5553a8c44df3e092eb6ddf11498e0545d8bc93abd99111cb8b3f2394529",
+      "bytes": 2116
+    },
+    {
+      "package": "zeroize",
+      "version": "1.9.1",
+      "relative_path": "Cargo.toml",
+      "source_path": "/Users/boristacyniak/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zeroize-1.9.1/Cargo.toml",
+      "sha256": "71dd9b47dcf1ea92e55517d3543d1524448c76582a0a49d1d4c16c24a09f7cb0",
+      "bytes": 2855
+    },
+    {
+      "package": "zeroize",
+      "version": "1.9.1",
+      "relative_path": "src/lib.rs",
+      "source_path": "/Users/boristacyniak/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zeroize-1.9.1/src/lib.rs",
+      "sha256": "0ec1dcf0d7c33b0bab02f85d79d37f29bbb8f034f648513797859a7b37bca637",
+      "bytes": 27748
+    },
+    {
+      "package": "zeroize",
+      "version": "1.9.1",
+      "relative_path": "CHANGELOG.md",
+      "source_path": "/Users/boristacyniak/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zeroize-1.9.1/CHANGELOG.md",
+      "sha256": "5c191abeca49c59b9a7a1c19d02e7e8352ce8615b1b806ac8037c78ca5306274",
+      "bytes": 9146
+    }
+  ],
+  "toolchain": {
+    "rustc": "rustc1.98.1 observed",
+    "cargo": "cargo1.98.1 observed",
+    "future_task_local_cli": {
+      "version": "0.2.129",
+      "checksum": "5fd044ed178958a277eeaf21f3d384287b0f4428d38c019141df01da9c03168c",
+      "license": "MIT OR Apache-2.0",
+      "rust_version": "1.86",
+      "source": "https://crates.io/api/v1/crates/wasm-bindgen-cli/0.2.129",
+      "installed": false
+    }
+  },
+  "candidate_manifest_sha256": "270758d5299c695f74149716771ff3cf052e82a67fbef32ae561002ab023d9e9",
+  "candidate_lock_sha256": "ceb04adc75a3fff9c8fa9218774cd057cd0b649993e5d926d62fd0f7bc01bf9a",
+  "git_review": {
+    "checked_out_commit": "661107f6eb5d7477c61be1221744de3ad96c53e7",
+    "github_verification": "git-commit-verification.json",
+    "github_signature_verified": true,
+    "comparison_source": "../phase-six-source-research/rusqlite-source.diff",
+    "scope_agent_compatibility_review": "No signature break observed in adapter-used open_with_flags/busy_timeout/transaction/commit/execute_batch/prepare/query_map/query_row/get/params and ValueRef/FromSql paths; broader upstream changes require full runtime gates after approval.",
+    "version_label_note": "Git packages label rusqlite0.40.1/libsqlite3-sys0.38.1 despite newer engine sources. Registry0.40.2 is a different source.",
+    "github_verification_api": "https://api.github.com/repos/rusqlite/rusqlite/git/commits/661107f6eb5d7477c61be1221744de3ad96c53e7",
+    "github_verification_reason": "valid"
+  },
+  "notes": [
+    "Cargo.lock includes inactive tokio1.54.1 for cfg(all(target_os=\"emscripten\",wasm_bindgen_unstable_tokio)) in wasm-bindgen-futures0.4.79. It is absent from BOTH actual target-specific cargo trees.",
+    "cargo metadata feature arrays may union target declarations; actual profile activation is recorded by cargo tree --target ... -e features, not inferred solely from metadata node arrays.",
+    "No serde, async runtime or networking client is active in either reviewed target. Existing application-supplied transport is outside this metadata fixture.",
+    "Future task-local wasm-bindgen-cli0.2.129 install is separate toolchain work and has not occurred; this app lock is not its CLI build-dependency graph.",
+    "zeroize1.9.1 selected after primary patch review: opaque Zeroizing Debug, avoid double-zeroizing Vec and potential uninitialized read fix in optimization_barrier fallback; same1.85 MSRV/edition/features/dependency graph. No remaining material compatibility reason to retain1.9.0 found."
+  ],
+  "zeroize_patch_review": {
+    "previous_version": "1.9.0",
+    "selected_version": "1.9.1",
+    "source": "https://github.com/RustCrypto/utils/blob/master/zeroize/CHANGELOG.md",
+    "material_changes": [
+      "Zeroizing Debug now opaque",
+      "Removed internal optimization_barrier use",
+      "Avoids double-zeroizing Vec initialized elements",
+      "Fixes potential uninitialized read in optimization_barrier fallback"
+    ],
+    "msrv_and_features_unchanged": true,
+    "other_locked_packages_unchanged": true,
+    "build_or_runtime_executed": false
+  }
+}

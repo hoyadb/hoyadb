@@ -1,0 +1,49 @@
+{
+ "sha": "bf51df665b458fda7c3eaf436c4d88dc119d7ec6",
+ "message": "KAPT: Deserialize only a handful of classes from KAPT incremental cache\n\nOtherwise, the classes there can be poisoned and thus lead to\nvulnerabilities.\n #KT-86604 Fixed",
+ "date": "2026-06-03T15:51:53Z",
+ "files": [
+  {
+   "filename": "plugins/kapt/kapt-base/src/org/jetbrains/kotlin/kapt/base/KaptContext.kt",
+   "status": "modified",
+   "additions": 1,
+   "deletions": 1
+  },
+  {
+   "filename": "plugins/kapt/kapt-base/src/org/jetbrains/kotlin/kapt/base/incremental/cache.kt",
+   "status": "modified",
+   "additions": 108,
+   "deletions": 17
+  },
+  {
+   "filename": "plugins/kapt/kapt-base/test/org/jetbrains/kotlin/kapt/base/test/incremental/InheritedAnnotationTest.kt",
+   "status": "modified",
+   "additions": 1,
+   "deletions": 1
+  },
+  {
+   "filename": "plugins/kapt/kapt-base/test/org/jetbrains/kotlin/kapt/base/test/incremental/JavaClassCacheManagerTest.kt",
+   "status": "modified",
+   "additions": 57,
+   "deletions": 2
+  },
+  {
+   "filename": "plugins/kapt/kapt-base/test/org/jetbrains/kotlin/kapt/base/test/incremental/ReferencedContantsTest.kt",
+   "status": "modified",
+   "additions": 1,
+   "deletions": 1
+  },
+  {
+   "filename": "plugins/kapt/kapt-base/test/org/jetbrains/kotlin/kapt/base/test/incremental/TestComplexIncrementalAptCache.kt",
+   "status": "modified",
+   "additions": 1,
+   "deletions": 1
+  },
+  {
+   "filename": "plugins/kapt/kapt-base/test/org/jetbrains/kotlin/kapt/base/test/incremental/TestSimpleIncrementalAptCache.kt",
+   "status": "modified",
+   "additions": 1,
+   "deletions": 1
+  }
+ ]
+}

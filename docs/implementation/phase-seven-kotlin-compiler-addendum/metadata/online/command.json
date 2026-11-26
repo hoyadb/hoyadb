@@ -1,0 +1,33 @@
+{
+  "mode": "online",
+  "argv": [
+    "/Users/boristacyniak/.gradle/wrapper/dists/gradle-9.3.1-bin/23ovyewtku6u96viwx3xl3oks/gradle-9.3.1/bin/gradle",
+    "--no-daemon",
+    "--no-build-cache",
+    "--no-configuration-cache",
+    "--console=plain",
+    "--max-workers=2",
+    "--write-locks",
+    "captureMetadata"
+  ],
+  "cwd": "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/compiler-review/metadata",
+  "environment_overrides": {
+    "JAVA_HOME": "/Users/boristacyniak/.sdkman/candidates/java/17.0.1-tem",
+    "GRADLE_USER_HOME": "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/compiler-review/gradle-home"
+  },
+  "input_sha256": {
+    "build.gradle": "a061a668ff0126b47105bad6d99a8b5b0482b91bf72f6a05e5d59e32d0a3492c",
+    "gradle.properties": "cf077097b1e78bea50b30a743e231ac53754b13075af78642cf533b6224138c0",
+    "included-build-classpaths/build.gradle": "c7e9ea4ec7a7042630fd0a15afaefa76b6f5ea7440b0ff41885695febe2fe41c",
+    "settings.gradle": "76854e9dcde2dd57adc699f350d89e9f1c1aabf656a20fc9ed46b6204de2f3c4"
+  },
+  "gradle_launcher_sha256": "e8aca393bbb50d5096c2c6f624f282dd2ab7f065a730209588be92f4a6100dd7",
+  "gradle_launcher_jar_sha256": "85f3ae7e3fd8f2095b0512975e763c62663dd648213e4279c40b75a888edb07a",
+  "started_unix_ns": 1792961118828282000,
+  "exit_code": 0,
+  "outputs_sha256": {
+    "resolution.json": "fd025809cd1efceecaa526dc4c3710e164ce264182a99fe0b485f11233eec2e7",
+    "gradle.lockfile": "a5d7937413a4370ffe2fe953845587e74ca918f0d43ea8a9de15e105acc4aa59",
+    "included-build-classpaths/gradle.lockfile": "a2f1ed3fa5693a7c01674d8d5cfd10216e7375b6eb5eb18a9394d6c792eb487b"
+  }
+}

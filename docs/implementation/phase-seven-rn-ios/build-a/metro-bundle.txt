@@ -1,0 +1,43 @@
+warn Package @hoyadb/react-native contains invalid configuration: "dependency.platforms.ios.podspecPath" is not allowed. Please verify it's properly linked using "npx react-native config" command and contact the package maintainers about this.
+
+                        ▒▒▓▓▓▓▒▒
+                     ▒▓▓▓▒▒░░▒▒▓▓▓▒
+                  ▒▓▓▓▓░░░▒▒▒▒░░░▓▓▓▓▒
+                 ▓▓▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▓▓
+                 ▓▓░░░░░▒▓▓▓▓▓▓▒░░░░░▓▓
+                 ▓▓░░▓▓▒░░░▒▒░░░▒▓▒░░▓▓
+                 ▓▓░░▓▓▓▓▓▒▒▒▒▓▓▓▓▒░░▓▓
+                 ▓▓░░▓▓▓▓▓▓▓▓▓▓▓▓▓▒░░▓▓
+                 ▓▓▒░░▒▒▓▓▓▓▓▓▓▓▒░░░▒▓▓
+                  ▒▓▓▓▒░░░▒▓▓▒░░░▒▓▓▓▒
+                     ▒▓▓▓▒░░░░▒▓▓▓▒
+                        ▒▒▓▓▓▓▒▒
+
+
+ WARN  the transform cache was reset.
+                Welcome to Metro v0.84.6
+              Fast - Scalable - Integrated
+
+
+error Unable to resolve module @babel/runtime/helpers/interopRequireDefault from /private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-phase7-rn-consumer-v8cue5dl/index.js: @babel/runtime/helpers/interopRequireDefault could not be found within the project or in these directories:
+  node_modules
+[0m[31m[1m>[22m[39m[90m 1 |[39m [90m// Ordinary consumer: installed public packages and caller-owned schemas only.[39m
+ [90m 2 |[39m [36mimport[39m [33mReact[39m[33m,[39m{useEffect[33m,[39museState} [36mfrom[39m [32m'react'[39m[33m;[39m
+ [90m 3 |[39m [36mimport[39m {[33mAppRegistry[39m[33m,[39m[33mText[39m[33m,[39m[33mView[39m[33m,[39m[33mPlatform[39m} [36mfrom[39m [32m'react-native'[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m {createNativeRuntime[33m,[39mopenMemoryDatabase[33m,[39mopenNativeDatabase[33m,[39mj} [36mfrom[39m [32m'@hoyadb/react-native'[39m[33m;[39m[0m.
+Error: Unable to resolve module @babel/runtime/helpers/interopRequireDefault from /private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-phase7-rn-consumer-v8cue5dl/index.js: @babel/runtime/helpers/interopRequireDefault could not be found within the project or in these directories:
+  node_modules
+[0m[31m[1m>[22m[39m[90m 1 |[39m [90m// Ordinary consumer: installed public packages and caller-owned schemas only.[39m
+ [90m 2 |[39m [36mimport[39m [33mReact[39m[33m,[39m{useEffect[33m,[39museState} [36mfrom[39m [32m'react'[39m[33m;[39m
+ [90m 3 |[39m [36mimport[39m {[33mAppRegistry[39m[33m,[39m[33mText[39m[33m,[39m[33mView[39m[33m,[39m[33mPlatform[39m} [36mfrom[39m [32m'react-native'[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m {createNativeRuntime[33m,[39mopenMemoryDatabase[33m,[39mopenNativeDatabase[33m,[39mj} [36mfrom[39m [32m'@hoyadb/react-native'[39m[33m;[39m[0m
+    at ModuleResolver.resolveDependency (/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-activation/npm/node_modules/metro/src/node-haste/DependencyGraph/ModuleResolution.js:179:15)
+    at DependencyGraph.resolveDependency (/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-activation/npm/node_modules/metro/src/node-haste/DependencyGraph.js:263:43)
+    at /Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-activation/npm/node_modules/metro/src/lib/transformHelpers.js:165:21
+    at resolveDependencies (/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-activation/npm/node_modules/metro/src/DeltaBundler/buildSubgraph.js:43:25)
+    at visit (/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-activation/npm/node_modules/metro/src/DeltaBundler/buildSubgraph.js:81:30)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Promise.all (index 0)
+    at async buildSubgraph (/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-activation/npm/node_modules/metro/src/DeltaBundler/buildSubgraph.js:105:3)
+    at async Graph._buildDelta (/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-activation/npm/node_modules/metro/src/DeltaBundler/Graph.js:163:22)
+    at async Graph.initialTraverseDependencies (/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-activation/npm/node_modules/metro/src/DeltaBundler/Graph.js:146:19)

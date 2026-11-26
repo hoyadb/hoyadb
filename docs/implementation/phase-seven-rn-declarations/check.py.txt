@@ -1,0 +1,70 @@
+"""Read-only declaration check of the packed @hoyadb/react-native, client and testing packages.
+
+Uses the established JS verifier (global TypeScript 7.0.2, bindings/javascript/README.md and
+scripts/packed-consumer.mjs). Copies only each owned packed package's package.json and .d.ts files into
+a fresh OS temporary directory outside the repository, writes an explicit tsconfig (no extends,
+plugins or @types; ES2022 lib only, no DOM, since RN has no browser globals) and a consumer probe that
+imports only public entry points. Installs nothing; removes only its own temporary directory.
+"""
+from pathlib import Path
+import hashlib
+import json
+import shutil
+import subprocess
+import sys
+import tempfile
+
+here = Path(__file__).resolve().parent
+stage = here.parent
+consumer = Path((stage / 'owned-consumer-root.txt').read_text().strip())
+tool_package = Path('/Users/boristacyniak/.nvm/versions/node/v22.18.0/lib/node_modules/typescript')
+native = tool_package / 'node_modules/@typescript/typescript-darwin-x64/lib/tsc'
+expected_tool = {'package.json': '3722b30210616a13a3213ded11575ba6b2dbab10c32a5ef67afca8513e27017e',
+                 'native': '76e4987d060ef8207875a53a73619ce665ff16fb2800c0d57a452e21c829bd7b'}
+digest = lambda p: hashlib.sha256(p.read_bytes()).hexdigest()
+assert digest(tool_package / 'package.json') == expected_tool['package.json']
+assert digest(native) == expected_tool['native']
+assert shutil.which('tsc') and Path(shutil.which('tsc')).resolve() == (tool_package / 'bin/tsc').resolve()
+
+# Default ES2022 only (RN has no DOM); 'dom' selects the JS lane's established ES2022,DOM set.
+libs = ['ES2022', 'DOM'] if 'dom' in sys.argv[1:] else ['ES2022']
+# 'pre-fix' substitutes the preserved pre-fix RN declaration to show the probe detects the old API.
+prefix = 'pre-fix' in sys.argv[1:]
+root = Path(tempfile.mkdtemp(prefix='hoyadb-rn-declarations-')).resolve()
+record = {'tool': {'which': shutil.which('tsc'), 'package_sha256': expected_tool['package.json'],
+                   'native_binary': str(native), 'native_sha256': expected_tool['native']},
+          'temporary_root': str(root), 'copied': {}}
+try:
+    for name in ['client', 'testing', 'react-native']:
+        source = consumer / 'node_modules/@hoyadb' / name
+        for path in [source / 'package.json', *sorted(source.rglob('*.d.ts'))]:
+            relative = Path('node_modules/@hoyadb') / name / path.relative_to(source)
+            (root / relative).parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(path, root / relative)
+            record['copied'][str(relative)] = digest(path)
+    if prefix:
+        shutil.copy2(stage / 'factory-fix/index.d.ts', root / 'node_modules/@hoyadb/react-native/index.d.ts')
+        record['substituted_pre_fix_declaration_sha256'] = digest(stage / 'factory-fix/index.d.ts')
+    (root / 'package.json').write_text(json.dumps({'private': True, 'type': 'module'}) + '\n')
+    shutil.copy2(here / 'types.ts', root / 'types.ts')
+    (root / 'tsconfig.json').write_text(json.dumps({'compilerOptions': {
+        'strict': True, 'noEmit': True, 'noEmitOnError': True, 'target': 'ES2022', 'module': 'NodeNext',
+        'moduleResolution': 'NodeNext', 'lib': libs, 'types': [], 'skipLibCheck': False},
+        'files': ['types.ts']}, indent=2) + '\n')
+    record['tsconfig'] = json.loads((root / 'tsconfig.json').read_text())
+    record['probe_sha256'] = digest(here / 'types.ts')
+    version = subprocess.run(['tsc', '--version'], cwd=root, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, timeout=60)
+    record['version_output'] = version.stdout.strip()
+    result = subprocess.run(['tsc', '-p', 'tsconfig.json', '--listFilesOnly'], cwd=root, stdout=subprocess.PIPE,
+                            stderr=subprocess.STDOUT, text=True, timeout=120)
+    record['files'] = [line.replace(str(root), '<root>') for line in result.stdout.split()]
+    check = subprocess.run(['tsc', '-p', 'tsconfig.json'], cwd=root, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+                           text=True, timeout=300)
+    record['check'] = {'argv': ['tsc', '-p', 'tsconfig.json'], 'exit_code': check.returncode,
+                       'output': check.stdout.replace(str(root), '<root>')}
+finally:
+    shutil.rmtree(root)
+    record['temporary_root_removed'] = not root.exists()
+    (here / ('result-' + '-'.join(libs).lower() + ('-pre-fix' if prefix else '') + '.json')).write_text(json.dumps(record, indent=2) + '\n')
+print(record['version_output'], 'exit', record['check']['exit_code'])
+print(record['check']['output'])

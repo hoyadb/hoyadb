@@ -1,0 +1,655 @@
+{
+ "changed_tar_members": {
+  "client/package/index.d.ts": {
+   "after": {
+    "bytes": 11725,
+    "sha256": "4b2d759489e1fa83a4738153f59a597c6002e147e3d9dddcd099eb2e3aa9391c"
+   },
+   "before": {
+    "bytes": 11579,
+    "sha256": "0fb04bd3b8bd2dd639215e9299816c6eddd999d81a8aab749e41625390ccd151"
+   }
+  }
+ },
+ "footprint": {
+  "archives": [
+   {
+    "bytes": 1481408,
+    "path": "owned-temp/archives/hoyadb-client-0.1.0.tgz",
+    "sha256": "fb710c70c87cbc8f327d7ee2b97b6eb4365ed25c63c6938c25553b51124c17ad"
+   },
+   {
+    "bytes": 9465,
+    "path": "owned-temp/archives/hoyadb-testing-0.1.0.tgz",
+    "sha256": "808802a4b4e0d341a3d0fbc2fce38d535d5ad3ff12e464e18b32a082a8d5d9f1"
+   }
+  ],
+  "gzip_command": "python3 gzip.compress(data, compresslevel=9, mtime=0) per file",
+  "packages": {
+   "@hoyadb/client": {
+    "by_kind": {
+     "javascript": 69830,
+     "notice": 368204,
+     "other": 73703,
+     "wasm": 5001038
+    },
+    "files": {
+     "LICENSES.md": {
+      "bytes": 965,
+      "gzip_bytes": 528,
+      "kind": "notice"
+     },
+     "README.md": {
+      "bytes": 8195,
+      "gzip_bytes": 3882,
+      "kind": "other"
+     },
+     "SOURCE-MANIFEST.json": {
+      "bytes": 10458,
+      "gzip_bytes": 3436,
+      "kind": "other"
+     },
+     "index.d.ts": {
+      "bytes": 11725,
+      "gzip_bytes": 3293,
+      "kind": "other"
+     },
+     "licenses/crates/bitflags-2.13.2/LICENSE-APACHE": {
+      "bytes": 10847,
+      "gzip_bytes": 3940,
+      "kind": "notice"
+     },
+     "licenses/crates/bitflags-2.13.2/LICENSE-MIT": {
+      "bytes": 1071,
+      "gzip_bytes": 651,
+      "kind": "notice"
+     },
+     "licenses/crates/bumpalo-3.20.3/LICENSE-APACHE": {
+      "bytes": 10847,
+      "gzip_bytes": 3940,
+      "kind": "notice"
+     },
+     "licenses/crates/bumpalo-3.20.3/LICENSE-MIT": {
+      "bytes": 1059,
+      "gzip_bytes": 649,
+      "kind": "notice"
+     },
+     "licenses/crates/cc-1.10.0/LICENSE-APACHE": {
+      "bytes": 10847,
+      "gzip_bytes": 3940,
+      "kind": "notice"
+     },
+     "licenses/crates/cc-1.10.0/LICENSE-MIT": {
+      "bytes": 1057,
+      "gzip_bytes": 646,
+      "kind": "notice"
+     },
+     "licenses/crates/cfg-if-1.0.5/LICENSE-APACHE": {
+      "bytes": 10847,
+      "gzip_bytes": 3940,
+      "kind": "notice"
+     },
+     "licenses/crates/cfg-if-1.0.5/LICENSE-MIT": {
+      "bytes": 1057,
+      "gzip_bytes": 646,
+      "kind": "notice"
+     },
+     "licenses/crates/fallible-iterator-0.3.0/LICENSE-APACHE": {
+      "bytes": 11358,
+      "gzip_bytes": 3967,
+      "kind": "notice"
+     },
+     "licenses/crates/fallible-iterator-0.3.0/LICENSE-MIT": {
+      "bytes": 1078,
+      "gzip_bytes": 655,
+      "kind": "notice"
+     },
+     "licenses/crates/fallible-streaming-iterator-0.1.9/LICENSE-APACHE": {
+      "bytes": 11358,
+      "gzip_bytes": 3967,
+      "kind": "notice"
+     },
+     "licenses/crates/fallible-streaming-iterator-0.1.9/LICENSE-MIT": {
+      "bytes": 1086,
+      "gzip_bytes": 659,
+      "kind": "notice"
+     },
+     "licenses/crates/find-msvc-tools-0.1.15/LICENSE-APACHE": {
+      "bytes": 10847,
+      "gzip_bytes": 3940,
+      "kind": "notice"
+     },
+     "licenses/crates/find-msvc-tools-0.1.15/LICENSE-MIT": {
+      "bytes": 1057,
+      "gzip_bytes": 646,
+      "kind": "notice"
+     },
+     "licenses/crates/futures-core-0.3.34/LICENSE-APACHE": {
+      "bytes": 10874,
+      "gzip_bytes": 3960,
+      "kind": "notice"
+     },
+     "licenses/crates/futures-core-0.3.34/LICENSE-MIT": {
+      "bytes": 1094,
+      "gzip_bytes": 663,
+      "kind": "notice"
+     },
+     "licenses/crates/futures-task-0.3.34/LICENSE-APACHE": {
+      "bytes": 10874,
+      "gzip_bytes": 3960,
+      "kind": "notice"
+     },
+     "licenses/crates/futures-task-0.3.34/LICENSE-MIT": {
+      "bytes": 1094,
+      "gzip_bytes": 663,
+      "kind": "notice"
+     },
+     "licenses/crates/futures-util-0.3.34/LICENSE-APACHE": {
+      "bytes": 10874,
+      "gzip_bytes": 3960,
+      "kind": "notice"
+     },
+     "licenses/crates/futures-util-0.3.34/LICENSE-MIT": {
+      "bytes": 1094,
+      "gzip_bytes": 663,
+      "kind": "notice"
+     },
+     "licenses/crates/index.json": {
+      "bytes": 25911,
+      "gzip_bytes": 4549,
+      "kind": "other"
+     },
+     "licenses/crates/js-sys-0.3.106/LICENSE-APACHE": {
+      "bytes": 10847,
+      "gzip_bytes": 3940,
+      "kind": "notice"
+     },
+     "licenses/crates/js-sys-0.3.106/LICENSE-MIT": {
+      "bytes": 1057,
+      "gzip_bytes": 646,
+      "kind": "notice"
+     },
+     "licenses/crates/libsqlite3-sys-0.38.1/LICENSE": {
+      "bytes": 1067,
+      "gzip_bytes": 645,
+      "kind": "notice"
+     },
+     "licenses/crates/once_cell-1.21.4/LICENSE-APACHE": {
+      "bytes": 10847,
+      "gzip_bytes": 3940,
+      "kind": "notice"
+     },
+     "licenses/crates/once_cell-1.21.4/LICENSE-MIT": {
+      "bytes": 1023,
+      "gzip_bytes": 619,
+      "kind": "notice"
+     },
+     "licenses/crates/pin-project-lite-0.2.17/LICENSE-APACHE": {
+      "bytes": 10174,
+      "gzip_bytes": 3580,
+      "kind": "notice"
+     },
+     "licenses/crates/pin-project-lite-0.2.17/LICENSE-MIT": {
+      "bytes": 1023,
+      "gzip_bytes": 619,
+      "kind": "notice"
+     },
+     "licenses/crates/pkg-config-0.3.34/LICENSE-APACHE": {
+      "bytes": 10847,
+      "gzip_bytes": 3940,
+      "kind": "notice"
+     },
+     "licenses/crates/pkg-config-0.3.34/LICENSE-MIT": {
+      "bytes": 1057,
+      "gzip_bytes": 646,
+      "kind": "notice"
+     },
+     "licenses/crates/proc-macro2-1.0.107/LICENSE-APACHE": {
+      "bytes": 9723,
+      "gzip_bytes": 3554,
+      "kind": "notice"
+     },
+     "licenses/crates/proc-macro2-1.0.107/LICENSE-MIT": {
+      "bytes": 1023,
+      "gzip_bytes": 619,
+      "kind": "notice"
+     },
+     "licenses/crates/quote-1.0.47/LICENSE-APACHE": {
+      "bytes": 9723,
+      "gzip_bytes": 3554,
+      "kind": "notice"
+     },
+     "licenses/crates/quote-1.0.47/LICENSE-MIT": {
+      "bytes": 1023,
+      "gzip_bytes": 619,
+      "kind": "notice"
+     },
+     "licenses/crates/rsqlite-vfs-0.2.0/LICENSE": {
+      "bytes": 1061,
+      "gzip_bytes": 643,
+      "kind": "notice"
+     },
+     "licenses/crates/rusqlite-0.40.1/LICENSE": {
+      "bytes": 1067,
+      "gzip_bytes": 645,
+      "kind": "notice"
+     },
+     "licenses/crates/rustversion-1.0.23/LICENSE-APACHE": {
+      "bytes": 9723,
+      "gzip_bytes": 3554,
+      "kind": "notice"
+     },
+     "licenses/crates/rustversion-1.0.23/LICENSE-MIT": {
+      "bytes": 1023,
+      "gzip_bytes": 619,
+      "kind": "notice"
+     },
+     "licenses/crates/shlex-2.0.1/LICENSE-APACHE": {
+      "bytes": 566,
+      "gzip_bytes": 383,
+      "kind": "notice"
+     },
+     "licenses/crates/shlex-2.0.1/LICENSE-MIT": {
+      "bytes": 1092,
+      "gzip_bytes": 663,
+      "kind": "notice"
+     },
+     "licenses/crates/slab-0.4.12/LICENSE": {
+      "bytes": 1055,
+      "gzip_bytes": 644,
+      "kind": "notice"
+     },
+     "licenses/crates/smallvec-1.16.4/LICENSE-APACHE": {
+      "bytes": 10847,
+      "gzip_bytes": 3940,
+      "kind": "notice"
+     },
+     "licenses/crates/smallvec-1.16.4/LICENSE-MIT": {
+      "bytes": 1072,
+      "gzip_bytes": 653,
+      "kind": "notice"
+     },
+     "licenses/crates/sqlcipher-src-419.0.6+sqlcipher-4.19.0-sqlite-3.53.4-libtomcrypt-1.18.2/LICENSE": {
+      "bytes": 1073,
+      "gzip_bytes": 650,
+      "kind": "notice"
+     },
+     "licenses/crates/sqlite-wasm-rs-0.6.2/LICENSE": {
+      "bytes": 1061,
+      "gzip_bytes": 643,
+      "kind": "notice"
+     },
+     "licenses/crates/sqlite-wasm-vfs-0.3.0/LICENSE": {
+      "bytes": 1061,
+      "gzip_bytes": 643,
+      "kind": "notice"
+     },
+     "licenses/crates/syn-3.0.9/LICENSE-APACHE": {
+      "bytes": 9723,
+      "gzip_bytes": 3554,
+      "kind": "notice"
+     },
+     "licenses/crates/syn-3.0.9/LICENSE-MIT": {
+      "bytes": 1023,
+      "gzip_bytes": 619,
+      "kind": "notice"
+     },
+     "licenses/crates/thiserror-2.0.21/LICENSE-APACHE": {
+      "bytes": 9723,
+      "gzip_bytes": 3554,
+      "kind": "notice"
+     },
+     "licenses/crates/thiserror-2.0.21/LICENSE-MIT": {
+      "bytes": 1023,
+      "gzip_bytes": 619,
+      "kind": "notice"
+     },
+     "licenses/crates/thiserror-impl-2.0.21/LICENSE-APACHE": {
+      "bytes": 9723,
+      "gzip_bytes": 3554,
+      "kind": "notice"
+     },
+     "licenses/crates/thiserror-impl-2.0.21/LICENSE-MIT": {
+      "bytes": 1023,
+      "gzip_bytes": 619,
+      "kind": "notice"
+     },
+     "licenses/crates/tokio-1.54.1/LICENSE": {
+      "bytes": 1070,
+      "gzip_bytes": 642,
+      "kind": "notice"
+     },
+     "licenses/crates/unicode-ident-1.0.27/LICENSE-APACHE": {
+      "bytes": 9723,
+      "gzip_bytes": 3554,
+      "kind": "notice"
+     },
+     "licenses/crates/unicode-ident-1.0.27/LICENSE-MIT": {
+      "bytes": 1023,
+      "gzip_bytes": 619,
+      "kind": "notice"
+     },
+     "licenses/crates/unicode-ident-1.0.27/LICENSE-UNICODE": {
+      "bytes": 1995,
+      "gzip_bytes": 1062,
+      "kind": "notice"
+     },
+     "licenses/crates/vcpkg-0.2.15/LICENSE-APACHE": {
+      "bytes": 11050,
+      "gzip_bytes": 3961,
+      "kind": "notice"
+     },
+     "licenses/crates/vcpkg-0.2.15/LICENSE-MIT": {
+      "bytes": 1082,
+      "gzip_bytes": 664,
+      "kind": "notice"
+     },
+     "licenses/crates/wasm-bindgen-0.2.129/LICENSE-APACHE": {
+      "bytes": 10847,
+      "gzip_bytes": 3940,
+      "kind": "notice"
+     },
+     "licenses/crates/wasm-bindgen-0.2.129/LICENSE-MIT": {
+      "bytes": 1057,
+      "gzip_bytes": 646,
+      "kind": "notice"
+     },
+     "licenses/crates/wasm-bindgen-futures-0.4.79/LICENSE-APACHE": {
+      "bytes": 10847,
+      "gzip_bytes": 3940,
+      "kind": "notice"
+     },
+     "licenses/crates/wasm-bindgen-futures-0.4.79/LICENSE-MIT": {
+      "bytes": 1057,
+      "gzip_bytes": 646,
+      "kind": "notice"
+     },
+     "licenses/crates/wasm-bindgen-macro-0.2.129/LICENSE-APACHE": {
+      "bytes": 10847,
+      "gzip_bytes": 3940,
+      "kind": "notice"
+     },
+     "licenses/crates/wasm-bindgen-macro-0.2.129/LICENSE-MIT": {
+      "bytes": 1057,
+      "gzip_bytes": 646,
+      "kind": "notice"
+     },
+     "licenses/crates/wasm-bindgen-macro-support-0.2.129/LICENSE-APACHE": {
+      "bytes": 10847,
+      "gzip_bytes": 3940,
+      "kind": "notice"
+     },
+     "licenses/crates/wasm-bindgen-macro-support-0.2.129/LICENSE-MIT": {
+      "bytes": 1057,
+      "gzip_bytes": 646,
+      "kind": "notice"
+     },
+     "licenses/crates/wasm-bindgen-shared-0.2.129/LICENSE-APACHE": {
+      "bytes": 10847,
+      "gzip_bytes": 3940,
+      "kind": "notice"
+     },
+     "licenses/crates/wasm-bindgen-shared-0.2.129/LICENSE-MIT": {
+      "bytes": 1057,
+      "gzip_bytes": 646,
+      "kind": "notice"
+     },
+     "licenses/crates/web-sys-0.3.106/LICENSE-APACHE": {
+      "bytes": 10847,
+      "gzip_bytes": 3940,
+      "kind": "notice"
+     },
+     "licenses/crates/web-sys-0.3.106/LICENSE-MIT": {
+      "bytes": 1057,
+      "gzip_bytes": 646,
+      "kind": "notice"
+     },
+     "licenses/crates/zeroize-1.9.1/LICENSE-APACHE": {
+      "bytes": 11358,
+      "gzip_bytes": 3968,
+      "kind": "notice"
+     },
+     "licenses/crates/zeroize-1.9.1/LICENSE-MIT": {
+      "bytes": 1082,
+      "gzip_bytes": 663,
+      "kind": "notice"
+     },
+     "licenses/sqlcipher/LICENSE-libtomcrypt": {
+      "bytes": 718,
+      "gzip_bytes": 420,
+      "kind": "notice"
+     },
+     "licenses/sqlcipher/LICENSE-sqlcipher": {
+      "bytes": 1463,
+      "gzip_bytes": 771,
+      "kind": "notice"
+     },
+     "licenses/sqlcipher/LICENSE-sqlcipher-src": {
+      "bytes": 1073,
+      "gzip_bytes": 650,
+      "kind": "notice"
+     },
+     "licenses/sqlcipher/LICENSE-sqlite": {
+      "bytes": 1485,
+      "gzip_bytes": 733,
+      "kind": "notice"
+     },
+     "package.json": {
+      "bytes": 673,
+      "gzip_bytes": 301,
+      "kind": "other"
+     },
+     "src/client.js": {
+      "bytes": 27178,
+      "gzip_bytes": 7255,
+      "kind": "javascript"
+     },
+     "src/errors.js": {
+      "bytes": 752,
+      "gzip_bytes": 420,
+      "kind": "javascript"
+     },
+     "src/index.js": {
+      "bytes": 301,
+      "gzip_bytes": 167,
+      "kind": "javascript"
+     },
+     "src/query.js": {
+      "bytes": 1171,
+      "gzip_bytes": 449,
+      "kind": "javascript"
+     },
+     "src/runtime.js": {
+      "bytes": 2226,
+      "gzip_bytes": 971,
+      "kind": "javascript"
+     },
+     "src/time.js": {
+      "bytes": 730,
+      "gzip_bytes": 438,
+      "kind": "javascript"
+     },
+     "src/utf8.js": {
+      "bytes": 622,
+      "gzip_bytes": 366,
+      "kind": "javascript"
+     },
+     "src/values.js": {
+      "bytes": 4493,
+      "gzip_bytes": 1624,
+      "kind": "javascript"
+     },
+     "src/wasm/Cargo.lock": {
+      "bytes": 9752,
+      "gzip_bytes": 2625,
+      "kind": "other"
+     },
+     "src/wasm/hoyadb_web.d.ts": {
+      "bytes": 4032,
+      "gzip_bytes": 1064,
+      "kind": "other"
+     },
+     "src/wasm/hoyadb_web.js": {
+      "bytes": 27050,
+      "gzip_bytes": 6028,
+      "kind": "javascript"
+     },
+     "src/wasm/hoyadb_web_bg.wasm": {
+      "bytes": 5001038,
+      "gzip_bytes": 1417320,
+      "kind": "wasm"
+     },
+     "src/wasm/hoyadb_web_bg.wasm.d.ts": {
+      "bytes": 2764,
+      "gzip_bytes": 591,
+      "kind": "other"
+     },
+     "src/web-entry.js": {
+      "bytes": 71,
+      "gzip_bytes": 76,
+      "kind": "javascript"
+     },
+     "src/web.js": {
+      "bytes": 2734,
+      "gzip_bytes": 1103,
+      "kind": "javascript"
+     },
+     "src/worker-host.js": {
+      "bytes": 2060,
+      "gzip_bytes": 932,
+      "kind": "javascript"
+     },
+     "src/worker.js": {
+      "bytes": 442,
+      "gzip_bytes": 285,
+      "kind": "javascript"
+     },
+     "web.d.ts": {
+      "bytes": 193,
+      "gzip_bytes": 155,
+      "kind": "other"
+     }
+    },
+    "total_bytes": 5512775
+   },
+   "@hoyadb/testing": {
+    "by_kind": {
+     "javascript": 2698,
+     "notice": 411,
+     "other": 20174,
+     "wasm": 0
+    },
+    "files": {
+     "LICENSES.md": {
+      "bytes": 411,
+      "gzip_bytes": 283,
+      "kind": "notice"
+     },
+     "README.md": {
+      "bytes": 8195,
+      "gzip_bytes": 3882,
+      "kind": "other"
+     },
+     "SOURCE-MANIFEST.json": {
+      "bytes": 10458,
+      "gzip_bytes": 3436,
+      "kind": "other"
+     },
+     "index.d.ts": {
+      "bytes": 1074,
+      "gzip_bytes": 486,
+      "kind": "other"
+     },
+     "package.json": {
+      "bytes": 447,
+      "gzip_bytes": 262,
+      "kind": "other"
+     },
+     "src/index.js": {
+      "bytes": 2698,
+      "gzip_bytes": 1111,
+      "kind": "javascript"
+     }
+    },
+    "total_bytes": 23283
+   }
+  }
+ },
+ "format": 1,
+ "historical_footprint": {
+  "archives": [
+   {
+    "bytes": 1481367,
+    "path": "target/phase-seven-browser-bench/opus/58-final-prepare-only/archives/hoyadb-client-0.1.0.tgz",
+    "sha256": "b1cec02df8393a7348517a8ae447340aad1f02a66e128f2a5ad491b1dd509530"
+   },
+   {
+    "bytes": 9465,
+    "path": "target/phase-seven-browser-bench/opus/58-final-prepare-only/archives/hoyadb-testing-0.1.0.tgz",
+    "sha256": "808802a4b4e0d341a3d0fbc2fce38d535d5ad3ff12e464e18b32a082a8d5d9f1"
+   }
+  ],
+  "manifest": "target/phase-seven-browser-bench/opus/58-final-prepare-only/manifest-final.json",
+  "manifest_sha256": "7035019ce359165215b499475fa733377c2ccc0b9ece56afbbe5a3c2e74638ca"
+ },
+ "install_command": [
+  "npm",
+  "install",
+  "--offline",
+  "--ignore-scripts",
+  "--no-audit",
+  "--no-fund",
+  "<owned-temp>/hoyadb-client-0.1.0.tgz",
+  "<owned-temp>/hoyadb-testing-0.1.0.tgz"
+ ],
+ "install_fidelity_mismatches": [],
+ "installed_footprint_deltas_vs_historical": {
+  "@hoyadb/client/index.d.ts": {
+   "current": {
+    "bytes": 11725,
+    "gzip_bytes": 3293,
+    "kind": "other"
+   },
+   "historical": {
+    "bytes": 11579,
+    "gzip_bytes": 3251,
+    "kind": "other"
+   }
+  }
+ },
+ "installed_graph": [
+  "",
+  "node_modules/@hoyadb/client",
+  "node_modules/@hoyadb/testing"
+ ],
+ "kind": "static package footprint/input alignment; no browser, worker, timing or memory measurement",
+ "owned_temp_removed": true,
+ "same_file_set": true,
+ "tar_file_count": {
+  "new": 105,
+  "old": 105
+ },
+ "tarballs": {
+  "new_client": {
+   "bytes": 1481408,
+   "sha256": "fb710c70c87cbc8f327d7ee2b97b6eb4365ed25c63c6938c25553b51124c17ad"
+  },
+  "old_client": {
+   "bytes": 1481367,
+   "sha256": "b1cec02df8393a7348517a8ae447340aad1f02a66e128f2a5ad491b1dd509530"
+  },
+  "testing": {
+   "bytes": 9465,
+   "sha256": "808802a4b4e0d341a3d0fbc2fce38d535d5ad3ff12e464e18b32a082a8d5d9f1"
+  }
+ },
+ "tools": {
+  "collector": "benchmarks/browser_run.py package_footprint",
+  "collector_file_sha256": "f7ff2bc52d6780e953b1b1018ee9a413a5b587c943cd3e74bf9457668c1060a2",
+  "node": "v22.18.0",
+  "npm": "11.17.0",
+  "python": "3.14.8",
+  "script_sha256": "2a9a39572bc20f30989dec9d45efb2ad5c712fb00113169a0cdeb89988452522"
+ },
+ "unchanged_tar_members": 104
+}

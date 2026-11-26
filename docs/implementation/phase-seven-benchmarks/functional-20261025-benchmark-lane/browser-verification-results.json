@@ -1,0 +1,17 @@
+{"format":1,"status":"verified_not_measured","measurements_allowed":false,"tab":"6a40e337-edaf-4d30-adea-e9cb60cd4470 (closed)","steps_passed":17,"steps_total":17,"host":"Paseo Electron 44.2.0 / Chrome 152.0.7977.76, non-quiet host","clock":"verify: synthetic tick counter; resources untimed; wall_ms operational only",
+"results":[
+{"step":"verifyResources:memory","checkpoints":61,"proof_lines":228,"ua":"unknown","harness_first_last":[1310720,3080192],"wall_ms":9393},
+{"step":"verifyResources:opfs-protected (same-owned-store-reopen)","checkpoints":61,"proof_lines":228,"ua":"unknown","pool":[[24,0],[24,0]],"canary_equal":true,"removed":2,"main":196608,"journal":"absent","wal":"absent","physical":[98304,98304],"harness_first_last":[1310720,3276800],"wall_ms":11187},
+{"step":"verifyResources:memory profiler=true","checkpoints":61,"proof_lines":228,"ua":"unknown (unavailable_or_rejected)","harness_first_last":[1310720,3080192],"wall_ms":7348},
+{"step":"verifyCold:memory:create:0","ready":1,"proof_lines":8,"wall_ms":282},
+{"step":"verifyCold:opfs-protected:create:0","cipher":"SQLCipher 4.19.0","ready":1,"proof_lines":8,"pool":[[24,0],[24,0]],"canary_equal":true,"removed":2,"main":40960,"journal":"absent","wal":"absent","physical":[98304,98304],"wall_ms":2724},
+{"step":"verifyCold:opfs-protected:reopen:100","cipher":"SQLCipher 4.19.0","ready":1,"proof_lines":228,"pool":[[24,0],[24,0]],"canary_equal":true,"removed":2,"main":196608,"journal":"absent","wal":"absent","physical":[98304,98304],"wall_ms":4828},
+{"step":"verifyCold:opfs-protected:upgrade:1000","cipher":"SQLCipher 4.19.0","ready":1,"proof_lines":2208,"schema_version":"2 checked","pool":[[24,0],[24,0]],"canary_equal":true,"removed":2,"main":1695744,"journal":"absent","wal":"absent","physical":[98304,98304],"wall_ms":17537},
+{"step":"verifyCold:opfs-protected:reopen:1000","cipher":"SQLCipher 4.19.0","ready":1,"proof_lines":2208,"pool":[[24,0],[24,0]],"canary_equal":true,"removed":2,"main":1687552,"journal":"absent","wal":"absent","physical":[98304,98304],"wall_ms":13910},
+{"step":"verifyCold:opfs-protected:reopen:10000","cipher":"SQLCipher 4.19.0","ready":1,"proof_lines":22008,"pool":[[24,0],[24,0]],"canary_equal":true,"removed":2,"main":16404480,"journal":"absent","wal":"absent","physical":[98304,98304],"wall_ms":117418},
+{"step":"verify:memory:0","proof_lines":228,"wall_ms":763},{"step":"verify:memory:32","proof_lines":2208,"wall_ms":4605},{"step":"verify:memory:33","proof_lines":2208,"wall_ms":3308},{"step":"verify:memory:34","proof_lines":2208,"wall_ms":6033},
+{"step":"verify:opfs-protected:0","cipher":"SQLCipher 4.19.0","proof_lines":228,"pool":[[24,0],[24,0]],"canary_equal":true,"removed":2,"wall_ms":5538},
+{"step":"verify:opfs-protected:32","cipher":"SQLCipher 4.19.0","proof_lines":2208,"pool":[[24,0],[24,0]],"canary_equal":true,"removed":2,"wall_ms":17955},
+{"step":"verify:opfs-protected:33","cipher":"SQLCipher 4.19.0","proof_lines":2208,"pool":[[24,0],[24,0]],"canary_equal":true,"removed":2,"wall_ms":12849},
+{"step":"verify:opfs-protected:34","cipher":"SQLCipher 4.19.0","proof_lines":2208,"pool":[[24,0],[24,0]],"canary_equal":true,"removed":2,"wall_ms":14552}],
+"qualification":"Functional correctness on frozen final lane source; in-page proofs not fed to independent Python ProofCapture (that path is covered by the admitted session); not latency/resource baselines."}

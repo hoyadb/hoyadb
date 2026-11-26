@@ -1,0 +1,276 @@
+[
+ {
+  "url": "https://raw.githubusercontent.com/openjdk/jdk17u/jdk-17.0.1%2B12/src/hotspot/os/bsd/os_bsd.cpp",
+  "effective_url": "https://raw.githubusercontent.com/openjdk/jdk17u/jdk-17.0.1%2B12/src/hotspot/os/bsd/os_bsd.cpp",
+  "dest": "jdk17u-jdk-17.0.1+12/src/hotspot/os/bsd/os_bsd.cpp",
+  "http_code": "200",
+  "curl_exit": 0,
+  "utc": "2026-10-25T23:25:15.485658+00:00",
+  "bytes": 82625,
+  "sha256": "005b1463312af3851501ecd2f6e2eee1c02b22ee6948f65e2365f7cf9612873a"
+ },
+ {
+  "url": "https://raw.githubusercontent.com/openjdk/jdk17u/jdk-17.0.1%2B12/src/hotspot/share/runtime/os.hpp",
+  "effective_url": "https://raw.githubusercontent.com/openjdk/jdk17u/jdk-17.0.1%2B12/src/hotspot/share/runtime/os.hpp",
+  "dest": "jdk17u-jdk-17.0.1+12/src/hotspot/share/runtime/os.hpp",
+  "http_code": "200",
+  "curl_exit": 0,
+  "utc": "2026-10-25T23:25:15.955455+00:00",
+  "bytes": 44798,
+  "sha256": "6e00d5470449b1a20bc17b6e3951aadf827d45939fa0f355337e599607b5ff33"
+ },
+ {
+  "url": "https://raw.githubusercontent.com/openjdk/jdk17u/jdk-17.0.1%2B12/src/hotspot/share/jfr/periodic/jfrPeriodic.cpp",
+  "effective_url": "https://raw.githubusercontent.com/openjdk/jdk17u/jdk-17.0.1%2B12/src/hotspot/share/jfr/periodic/jfrPeriodic.cpp",
+  "dest": "jdk17u-jdk-17.0.1+12/src/hotspot/share/jfr/periodic/jfrPeriodic.cpp",
+  "http_code": "200",
+  "curl_exit": 0,
+  "utc": "2026-10-25T23:25:16.424758+00:00",
+  "bytes": 22438,
+  "sha256": "fd9c14257cf376ea6bc06737fedd5a79490dc294905c0e75fc7a8812dd7956f9"
+ },
+ {
+  "url": "https://raw.githubusercontent.com/openjdk/jdk17u/jdk-17.0.1%2B12/src/hotspot/share/jfr/metadata/metadata.xml",
+  "effective_url": "https://raw.githubusercontent.com/openjdk/jdk17u/jdk-17.0.1%2B12/src/hotspot/share/jfr/metadata/metadata.xml",
+  "dest": "jdk17u-jdk-17.0.1+12/src/hotspot/share/jfr/metadata/metadata.xml",
+  "http_code": "200",
+  "curl_exit": 0,
+  "utc": "2026-10-25T23:25:16.910411+00:00",
+  "bytes": 92285,
+  "sha256": "68f312f6330efcfc4e9211febaa28a29caf7b1ed5d5cbdbe56603835f7c71fe0"
+ },
+ {
+  "url": "https://api.github.com/repos/openjdk/jdk17u/commits/jdk-17.0.1%2B12",
+  "effective_url": "https://api.github.com/repos/openjdk/jdk17u/commits/jdk-17.0.1%2B12",
+  "dest": "github/openjdk-jdk17u-commit-jdk-17.0.1+12.json",
+  "http_code": "200",
+  "curl_exit": 0,
+  "utc": "2026-10-25T23:25:54.522773+00:00",
+  "bytes": 9831,
+  "sha256": "49e3ff1156f65ea008e21da3f72953c1291cf712fcbff975b84fffc3ad486dfd"
+ },
+ {
+  "url": "https://api.github.com/repos/adoptium/jdk17u/commits/571f1238bb46",
+  "effective_url": "https://api.github.com/repos/adoptium/jdk17u/commits/571f1238bb46",
+  "dest": "github/adoptium-jdk17u-commit-571f1238bb46.json",
+  "http_code": "200",
+  "curl_exit": 0,
+  "utc": "2026-10-25T23:25:55.170864+00:00",
+  "bytes": 10421,
+  "sha256": "705848362f4df0ecebe3e2fd22a0a9e3800ca8b3c4d2dc30861b71e4bc891bb1"
+ },
+ {
+  "url": "https://raw.githubusercontent.com/adoptium/jdk17u/571f1238bb46938bb964dfef1856d768ee964b51/src/hotspot/os/bsd/os_bsd.cpp",
+  "effective_url": "https://raw.githubusercontent.com/adoptium/jdk17u/571f1238bb46938bb964dfef1856d768ee964b51/src/hotspot/os/bsd/os_bsd.cpp",
+  "dest": "adoptium-jdk17u-571f1238/src/hotspot/os/bsd/os_bsd.cpp",
+  "http_code": "200",
+  "curl_exit": 0,
+  "utc": "2026-10-25T23:26:11.386594+00:00",
+  "bytes": 82625,
+  "sha256": "005b1463312af3851501ecd2f6e2eee1c02b22ee6948f65e2365f7cf9612873a"
+ },
+ {
+  "url": "https://raw.githubusercontent.com/adoptium/jdk17u/571f1238bb46938bb964dfef1856d768ee964b51/src/hotspot/share/runtime/os.hpp",
+  "effective_url": "https://raw.githubusercontent.com/adoptium/jdk17u/571f1238bb46938bb964dfef1856d768ee964b51/src/hotspot/share/runtime/os.hpp",
+  "dest": "adoptium-jdk17u-571f1238/src/hotspot/share/runtime/os.hpp",
+  "http_code": "200",
+  "curl_exit": 0,
+  "utc": "2026-10-25T23:26:11.851536+00:00",
+  "bytes": 44798,
+  "sha256": "6e00d5470449b1a20bc17b6e3951aadf827d45939fa0f355337e599607b5ff33"
+ },
+ {
+  "url": "https://raw.githubusercontent.com/adoptium/jdk17u/571f1238bb46938bb964dfef1856d768ee964b51/src/hotspot/share/jfr/periodic/jfrPeriodic.cpp",
+  "effective_url": "https://raw.githubusercontent.com/adoptium/jdk17u/571f1238bb46938bb964dfef1856d768ee964b51/src/hotspot/share/jfr/periodic/jfrPeriodic.cpp",
+  "dest": "adoptium-jdk17u-571f1238/src/hotspot/share/jfr/periodic/jfrPeriodic.cpp",
+  "http_code": "200",
+  "curl_exit": 0,
+  "utc": "2026-10-25T23:26:12.385243+00:00",
+  "bytes": 22438,
+  "sha256": "fd9c14257cf376ea6bc06737fedd5a79490dc294905c0e75fc7a8812dd7956f9"
+ },
+ {
+  "url": "https://raw.githubusercontent.com/adoptium/jdk17u/571f1238bb46938bb964dfef1856d768ee964b51/src/hotspot/share/jfr/metadata/metadata.xml",
+  "effective_url": "https://raw.githubusercontent.com/adoptium/jdk17u/571f1238bb46938bb964dfef1856d768ee964b51/src/hotspot/share/jfr/metadata/metadata.xml",
+  "dest": "adoptium-jdk17u-571f1238/src/hotspot/share/jfr/metadata/metadata.xml",
+  "http_code": "200",
+  "curl_exit": 0,
+  "utc": "2026-10-25T23:26:12.914863+00:00",
+  "bytes": 92285,
+  "sha256": "68f312f6330efcfc4e9211febaa28a29caf7b1ed5d5cbdbe56603835f7c71fe0"
+ },
+ {
+  "url": "https://api.github.com/repos/apple-oss-distributions/dyld/tags?per_page=100",
+  "effective_url": "https://api.github.com/repos/apple-oss-distributions/dyld/tags?per_page=100",
+  "dest": "github/apple-dyld-tags-p1.json",
+  "http_code": "200",
+  "curl_exit": 0,
+  "utc": "2026-10-25T23:26:32.062184+00:00",
+  "bytes": 39727,
+  "sha256": "b722eede5c81e87c3180354c852fc3ed0af17a34d8e7bf05934c8f848a41b29e"
+ },
+ {
+  "url": "https://raw.githubusercontent.com/apple-oss-distributions/dyld/dyld-1378/cache-builder/dyld_cache_format.h",
+  "effective_url": "https://raw.githubusercontent.com/apple-oss-distributions/dyld/dyld-1378/cache-builder/dyld_cache_format.h",
+  "dest": "apple-dyld-1378/cache-builder/dyld_cache_format.h",
+  "http_code": "404",
+  "curl_exit": 0,
+  "utc": "2026-10-25T23:26:39.106780+00:00"
+ },
+ {
+  "url": "https://raw.githubusercontent.com/apple-oss-distributions/dyld/dyld-1378/include/mach-o/dyld_cache_format.h",
+  "effective_url": "https://raw.githubusercontent.com/apple-oss-distributions/dyld/dyld-1378/include/mach-o/dyld_cache_format.h",
+  "dest": "apple-dyld-1378/include/mach-o/dyld_cache_format.h",
+  "http_code": "200",
+  "curl_exit": 0,
+  "utc": "2026-10-25T23:26:39.620736+00:00",
+  "bytes": 30457,
+  "sha256": "dd6f7d9ffc5cb318988c16dbecf958d04b0c65cd9ee1892a838e374f76fd182c"
+ },
+ {
+  "url": "https://raw.githubusercontent.com/apple-oss-distributions/dyld/dyld-1378/dyld3/shared-cache/dyld_cache_format.h",
+  "effective_url": "https://raw.githubusercontent.com/apple-oss-distributions/dyld/dyld-1378/dyld3/shared-cache/dyld_cache_format.h",
+  "dest": "apple-dyld-1378/dyld3/shared-cache/dyld_cache_format.h",
+  "http_code": "404",
+  "curl_exit": 0,
+  "utc": "2026-10-25T23:26:40.078911+00:00"
+ },
+ {
+  "url": "https://raw.githubusercontent.com/apple-oss-distributions/dyld/dyld-1378/common/dyld_cache_format.h",
+  "effective_url": "https://raw.githubusercontent.com/apple-oss-distributions/dyld/dyld-1378/common/dyld_cache_format.h",
+  "dest": "apple-dyld-1378/common/dyld_cache_format.h",
+  "http_code": "404",
+  "curl_exit": 0,
+  "utc": "2026-10-25T23:26:40.532036+00:00"
+ },
+ {
+  "url": "https://api.github.com/repos/apple-oss-distributions/xnu/tags?per_page=100",
+  "effective_url": "https://api.github.com/repos/apple-oss-distributions/xnu/tags?per_page=100",
+  "dest": "github/apple-xnu-tags-p1.json",
+  "http_code": "200",
+  "curl_exit": 0,
+  "utc": "2026-10-25T23:27:17.109915+00:00",
+  "bytes": 52830,
+  "sha256": "3ccf439a617344df0e5ae7229ddde98655462deccf361797fb1c9b67ec53fc59"
+ },
+ {
+  "url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/xnu-12377.121.6/osfmk/vm/vm_shared_region.c",
+  "effective_url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/xnu-12377.121.6/osfmk/vm/vm_shared_region.c",
+  "dest": "apple-xnu-12377.121.6/osfmk/vm/vm_shared_region.c",
+  "http_code": "200",
+  "curl_exit": 0,
+  "utc": "2026-10-25T23:27:25.516719+00:00",
+  "bytes": 129721,
+  "sha256": "fcbff03b7a1f786305094a5e12132a75e5253da1f49863b1fe6c1b04cf17ec18"
+ },
+ {
+  "url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/xnu-12377.121.6/osfmk/vm/vm_shared_region.h",
+  "effective_url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/xnu-12377.121.6/osfmk/vm/vm_shared_region.h",
+  "dest": "apple-xnu-12377.121.6/osfmk/vm/vm_shared_region.h",
+  "http_code": "200",
+  "curl_exit": 0,
+  "utc": "2026-10-25T23:27:25.984074+00:00",
+  "bytes": 3842,
+  "sha256": "1faee54a92682d95bf9eb8a2d75327a671047b752f9f9d61232f2b3df3673064"
+ },
+ {
+  "url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/xnu-12377.121.6/osfmk/vm/vm_shared_region_internal.h",
+  "effective_url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/xnu-12377.121.6/osfmk/vm/vm_shared_region_internal.h",
+  "dest": "apple-xnu-12377.121.6/osfmk/vm/vm_shared_region_internal.h",
+  "http_code": "200",
+  "curl_exit": 0,
+  "utc": "2026-10-25T23:27:26.412646+00:00",
+  "bytes": 4066,
+  "sha256": "0f7e153b83dfd41e4be5815664a9dee89cc74e7f43f9474760d43fd234f9ab90"
+ },
+ {
+  "url": "https://api.github.com/repos/apple-oss-distributions/dyld/git/trees/dyld-1378?recursive=1",
+  "effective_url": "https://api.github.com/repos/apple-oss-distributions/dyld/git/trees/dyld-1378?recursive=1",
+  "dest": "github/apple-dyld-1378-tree.json",
+  "http_code": "200",
+  "curl_exit": 0,
+  "utc": "2026-10-25T23:27:45.883135+00:00",
+  "bytes": 157098,
+  "sha256": "6e68bbf415de620a3d5cd4012c7d03416eafee70d0b4a30be3c5212b7ac8d97c"
+ },
+ {
+  "url": "https://raw.githubusercontent.com/apple-oss-distributions/dyld/dyld-1378/dyld/SharedCacheRuntime.cpp",
+  "effective_url": "https://raw.githubusercontent.com/apple-oss-distributions/dyld/dyld-1378/dyld/SharedCacheRuntime.cpp",
+  "dest": "apple-dyld-1378/dyld/SharedCacheRuntime.cpp",
+  "http_code": "200",
+  "curl_exit": 0,
+  "utc": "2026-10-25T23:27:51.972371+00:00",
+  "bytes": 53354,
+  "sha256": "5edf7835d47f6b78110da10d556cd45e2ac04c04a9d1627294522dc4aca058be"
+ },
+ {
+  "url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/xnu-12377.121.6/bsd/vm/vm_unix.c",
+  "effective_url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/xnu-12377.121.6/bsd/vm/vm_unix.c",
+  "dest": "apple-xnu-12377.121.6/bsd/vm/vm_unix.c",
+  "http_code": "200",
+  "curl_exit": 0,
+  "utc": "2026-10-25T23:28:09.131596+00:00",
+  "bytes": 169793,
+  "sha256": "822a007542978158ddc0ad13ed8d8a2bcaef35cbb61a03dbd8a01625b9776861"
+ },
+ {
+  "url": "https://raw.githubusercontent.com/apple-oss-distributions/dyld/dyld-1378/dyld/DyldAPIs.cpp",
+  "effective_url": "https://raw.githubusercontent.com/apple-oss-distributions/dyld/dyld-1378/dyld/DyldAPIs.cpp",
+  "dest": "apple-dyld-1378/dyld/DyldAPIs.cpp",
+  "http_code": "200",
+  "curl_exit": 0,
+  "utc": "2026-10-25T23:28:41.330025+00:00",
+  "bytes": 174612,
+  "sha256": "22ad6c141e357f06312b659f0103670c6e32a4763984f00303bb061df59d9239"
+ },
+ {
+  "url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/xnu-12377.121.6/osfmk/mach/vm_param.h",
+  "effective_url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/xnu-12377.121.6/osfmk/mach/vm_param.h",
+  "dest": "apple-xnu-12377.121.6/osfmk/mach/vm_param.h",
+  "http_code": "200",
+  "curl_exit": 0,
+  "utc": "2026-10-25T23:36:35.317952+00:00",
+  "bytes": 23950,
+  "sha256": "a239321abc0bcdf480bfb7210fcfa58676e035f4c15eec6e6d9f284698e837cb"
+ },
+ {
+  "url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/xnu-12377.121.6/osfmk/mach/i386/vm_param.h",
+  "effective_url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/xnu-12377.121.6/osfmk/mach/i386/vm_param.h",
+  "dest": "apple-xnu-12377.121.6/osfmk/mach/i386/vm_param.h",
+  "http_code": "200",
+  "curl_exit": 0,
+  "utc": "2026-10-25T23:36:43.047175+00:00",
+  "bytes": 12721,
+  "sha256": "f75032c88c27276b5cb07ce587c9b80f145826de829faa4ceb96289cbea47c82"
+ },
+ {
+  "url": "https://api.github.com/repos/apple-oss-distributions/xnu/git/trees/xnu-12377.121.6?recursive=1",
+  "effective_url": "https://api.github.com/repos/apple-oss-distributions/xnu/git/trees/xnu-12377.121.6?recursive=1",
+  "dest": "github/apple-xnu-12377.121.6-tree.json",
+  "http_code": "200",
+  "curl_exit": 0,
+  "utc": "2026-10-25T23:36:58.578482+00:00",
+  "bytes": 1976822,
+  "sha256": "1b8a22cb00fa777061620fe5232dc4099962adbbeb9c9633b256b2a036024a2c"
+ },
+ {
+  "url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/xnu-12377.121.6/osfmk/vm/vm_map_xnu.h",
+  "effective_url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/xnu-12377.121.6/osfmk/vm/vm_map_xnu.h",
+  "dest": "apple-xnu-12377.121.6/osfmk/vm/vm_map_xnu.h",
+  "http_code": "200",
+  "curl_exit": 0,
+  "utc": "2026-10-25T23:37:07.274925+00:00",
+  "bytes": 49681,
+  "sha256": "eafbafb64f0b12257103e0a5762ec3f01cf5d0b3aca24a7a8af3b749eb953f99"
+ },
+ {
+  "url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/xnu-12377.121.6/osfmk/vm/vm_map.h",
+  "effective_url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/xnu-12377.121.6/osfmk/vm/vm_map.h",
+  "dest": "apple-xnu-12377.121.6/osfmk/vm/vm_map.h",
+  "http_code": "200",
+  "curl_exit": 0,
+  "utc": "2026-10-25T23:37:07.669603+00:00",
+  "bytes": 18399,
+  "sha256": "afa99bb36339583e4a97c2e38a631c56406010d12bad26abea095b5a399ed142"
+ }
+]

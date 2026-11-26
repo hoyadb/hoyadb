@@ -1,0 +1,39 @@
+   Compiling find-msvc-tools v0.1.15
+   Compiling shlex v2.0.1
+   Compiling pkg-config v0.3.34
+   Compiling vcpkg v0.2.15
+   Compiling sqlcipher-src v419.0.6+sqlcipher-4.19.0-sqlite-3.53.4-libtomcrypt-1.18.2
+   Compiling smallvec v1.16.4
+   Compiling fallible-streaming-iterator v0.1.9
+   Compiling hoyadb-core v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-core)
+   Compiling bitflags v2.13.2
+   Compiling fallible-iterator v0.3.0
+   Compiling zeroize v1.9.1
+   Compiling cc v1.10.0
+   Compiling libsqlite3-sys v0.38.1 (https://github.com/rusqlite/rusqlite?rev=661107f6eb5d7477c61be1221744de3ad96c53e7#661107f6)
+   Compiling hoyadb-storage-memory v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-storage-memory)
+   Compiling rusqlite v0.40.1 (https://github.com/rusqlite/rusqlite?rev=661107f6eb5d7477c61be1221744de3ad96c53e7#661107f6)
+   Compiling hoyadb-storage-sqlite v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-storage-sqlite)
+   Compiling hoyadb-bindings v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/crates/hoyadb-bindings)
+   Compiling hoyadb-benchmark v0.0.0 (/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/native)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 2m 53s
+     Running unittests src/lib.rs (benchmarks/native/target/debug/deps/hoyadb_benchmark-0e7a7c369aeaba1a)
+
+running 1 test
+test tests::p01_p02_literal_fixture_real_public_operations_and_protection ... FAILED
+
+failures:
+
+---- tests::p01_p02_literal_fixture_real_public_operations_and_protection stdout ----
+
+thread 'tests::p01_p02_literal_fixture_real_public_operations_and_protection' (81972926) panicked at src/lib.rs:16:48:
+called `Result::unwrap()` on an `Err` value: "workload pending"
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    tests::p01_p02_literal_fixture_real_public_operations_and_protection
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `--lib`

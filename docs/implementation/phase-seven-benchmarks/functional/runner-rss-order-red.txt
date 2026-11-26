@@ -1,0 +1,14 @@
+.......F.............
+======================================================================
+FAIL: test_rss_handshake_is_untimed_owned_and_requires_all_61_checkpoints (test_runner.RunnerTests.test_rss_handshake_is_untimed_owned_and_requires_all_61_checkpoints)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/benchmarks/test_runner.py", line 203, in test_rss_handshake_is_untimed_owned_and_requires_all_61_checkpoints
+    with self.assertRaises(RunnerError):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+AssertionError: RunnerError not raised
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.841s
+
+FAILED (failures=1)

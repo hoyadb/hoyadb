@@ -1,0 +1,484 @@
+TAP version 13
+# Subtest: P02 cold endpoints stop at decoded SDK ready before proof/ready acknowledgement work
+ok 1 - P02 cold endpoints stop at decoded SDK ready before proof/ready acknowledgement work
+  ---
+  duration_ms: 23.279844
+  type: 'test'
+  ...
+# Subtest: P01 failed cold open terminates acquired worker and returns no fabricated latency
+ok 2 - P01 failed cold open terminates acquired worker and returns no fabricated latency
+  ---
+  duration_ms: 9.932587
+  type: 'test'
+  ...
+# Subtest: P01 ready transport failure closes the acquired actual owner before worker retirement
+ok 3 - P01 ready transport failure closes the acquired actual owner before worker retirement
+  ---
+  duration_ms: 3.401212
+  type: 'test'
+  ...
+# Subtest: P01 authored cold upgrade is exact optional column addition without changing caller schema
+ok 4 - P01 authored cold upgrade is exact optional column addition without changing caller schema
+  ---
+  duration_ms: 2.186645
+  type: 'test'
+  ...
+# Subtest: P01 cohort flow uses exact warm protocol then closes and proves cleanup before acceptance
+ok 5 - P01 cohort flow uses exact warm protocol then closes and proves cleanup before acceptance
+  ---
+  duration_ms: 78.009601
+  type: 'test'
+  ...
+# Subtest: P01 a failed sample remains failed evidence while close and cleanup still execute
+ok 6 - P01 a failed sample remains failed evidence while close and cleanup still execute
+  ---
+  duration_ms: 3.865938
+  type: 'test'
+  ...
+# Subtest: P01 quiet rejection starts no worker or fixture
+ok 7 - P01 quiet rejection starts no worker or fixture
+  ---
+  duration_ms: 31.941588
+  type: 'test'
+  ...
+# Subtest: P02 cold flow sends READY before full proof, keeps one measured sample and retires the worker before finish
+ok 8 - P02 cold flow sends READY before full proof, keeps one measured sample and retires the worker before finish
+  ---
+  duration_ms: 5.691239
+  type: 'test'
+  ...
+# Subtest: P02 failed cold open keeps failed evidence without a fabricated sample
+ok 9 - P02 failed cold open keeps failed evidence without a fabricated sample
+  ---
+  duration_ms: 11.827729
+  type: 'test'
+  ...
+# Subtest: P03 finish documents carry the retired fixture footprint separately from validated lifecycle
+ok 10 - P03 finish documents carry the retired fixture footprint separately from validated lifecycle
+  ---
+  duration_ms: 5.195937
+  type: 'test'
+  ...
+# Subtest: N08 page loop runs exactly the parent-permitted sequence with permit coordinates and stops on none
+ok 11 - N08 page loop runs exactly the parent-permitted sequence with permit coordinates and stops on none
+  ---
+  duration_ms: 9.801026
+  type: 'test'
+  ...
+# Subtest: N08 a failed or rejected flow stops the loop without replay or another permit request
+ok 12 - N08 a failed or rejected flow stops the loop without replay or another permit request
+  ---
+  duration_ms: 7.936092
+  type: 'test'
+  ...
+# Subtest: N08 unknown permit kinds or malformed replies stop before any flow
+ok 13 - N08 unknown permit kinds or malformed replies stop before any flow
+  ---
+  duration_ms: 4.448722
+  type: 'test'
+  ...
+# Subtest: P01 exact synthetic fields preserve missing optional cells and author relation
+ok 14 - P01 exact synthetic fields preserve missing optional cells and author relation
+  ---
+  duration_ms: 64.375087
+  type: 'test'
+  ...
+# Subtest: P01 seed uses public atomic bounded batches and exact deterministic proposals
+ok 15 - P01 seed uses public atomic bounded batches and exact deterministic proposals
+  ---
+  duration_ms: 545.468284
+  type: 'test'
+  ...
+# Subtest: P02 point sample routes public SDK query and checks exact decoded result
+ok 16 - P02 point sample routes public SDK query and checks exact decoded result
+  ---
+  duration_ms: 3.637019
+  type: 'test'
+  ...
+# Subtest: P02 callback gate counts real callbacks once and retains duplicate failure
+ok 17 - P02 callback gate counts real callbacks once and retains duplicate failure
+  ---
+  duration_ms: 22.5912
+  type: 'test'
+  ...
+# Subtest: P02 missing or wrong callback fails without fabricated zero latency
+ok 18 - P02 missing or wrong callback fails without fabricated zero latency
+  ---
+  duration_ms: 4.567705
+  type: 'test'
+  ...
+# Subtest: P01 batch sample verifies exact before/after and restores outside clock
+ok 19 - P01 batch sample verifies exact before/after and restores outside clock
+  ---
+  duration_ms: 66.244803
+  type: 'test'
+  ...
+# Subtest: P02 optimistic sample executes awaited scope and real protocol cleanup
+ok 20 - P02 optimistic sample executes awaited scope and real protocol cleanup
+  ---
+  duration_ms: 44.39524
+  type: 'test'
+  ...
+# Subtest: P02 pull sample commits non-noop page then newer restoration page
+ok 21 - P02 pull sample commits non-noop page then newer restoration page
+  ---
+  duration_ms: 129.907268
+  type: 'test'
+  ...
+# Subtest: P01 non-noop pull cannot pass when only its return status changes
+ok 22 - P01 non-noop pull cannot pass when only its return status changes
+  ---
+  duration_ms: 67.794299
+  type: 'test'
+  ...
+# Subtest: P01 entity inverse must restore exact row after cancelled diff
+ok 23 - P01 entity inverse must restore exact row after cancelled diff
+  ---
+  duration_ms: 9.808708
+  type: 'test'
+  ...
+# Subtest: P02 reaction primary sample is invocation-to-last-callback rather than SDK return
+ok 24 - P02 reaction primary sample is invocation-to-last-callback rather than SDK return
+  ---
+  duration_ms: 4.232304
+  type: 'test'
+  ...
+# Subtest: P01 boundary sample matches native extrema fixture and canonical Float output
+ok 25 - P01 boundary sample matches native extrema fixture and canonical Float output
+  ---
+  duration_ms: 9.803328
+  type: 'test'
+  ...
+# Subtest: P02 callback endpoint is entry time before fixture oracle and byte accounting
+ok 26 - P02 callback endpoint is entry time before fixture oracle and byte accounting
+  ---
+  duration_ms: 76.601539
+  type: 'test'
+  ...
+# Subtest: P01 reactive insertion matches exact frozen native observation row
+ok 27 - P01 reactive insertion matches exact frozen native observation row
+  ---
+  duration_ms: 8.568196
+  type: 'test'
+  ...
+# Subtest: P01 column mutation matches native observed title and exact restoration
+ok 28 - P01 column mutation matches native observed title and exact restoration
+  ---
+  duration_ms: 2.607507
+  type: 'test'
+  ...
+# Subtest: P01 transport batches original proof lines and sends exact controller coordinates
+ok 29 - P01 transport batches original proof lines and sends exact controller coordinates
+  ---
+  duration_ms: 122.313703
+  type: 'test'
+  ...
+# Subtest: P01 controller rejection remains observable and never auto-retries
+ok 30 - P01 controller rejection remains observable and never auto-retries
+  ---
+  duration_ms: 29.282374
+  type: 'test'
+  ...
+# Subtest: P01 unadmitted run cannot emit proof or samples and oversized frame rejects before fetch
+ok 31 - P01 unadmitted run cannot emit proof or samples and oversized frame rejects before fetch
+  ---
+  duration_ms: 19.576432
+  type: 'test'
+  ...
+# Subtest: P02 cold transport keeps ten-worker coordinates and endpoint stream separate from warm
+ok 32 - P02 cold transport keeps ten-worker coordinates and endpoint stream separate from warm
+  ---
+  duration_ms: 4.770752
+  type: 'test'
+  ...
+# Subtest: P03 resource transport admits one exact untimed run and returns the controller acknowledgement
+ok 33 - P03 resource transport admits one exact untimed run and returns the controller acknowledgement
+  ---
+  duration_ms: 22.438186
+  type: 'test'
+  ...
+# Subtest: N04 page permit request is the exact empty POST and returns the controller reply unchanged
+ok 34 - N04 page permit request is the exact empty POST and returns the controller reply unchanged
+  ---
+  duration_ms: 2.5965
+  type: 'test'
+  ...
+# Subtest: P01 ordinary memory platform wraps actual channel and never touches OPFS or keys
+ok 35 - P01 ordinary memory platform wraps actual channel and never touches OPFS or keys
+  ---
+  duration_ms: 48.459756
+  type: 'test'
+  ...
+# Subtest: P01 protected platform closes canary controls before ordinary worker and proves exact cleanup
+ok 36 - P01 protected platform closes canary controls before ordinary worker and proves exact cleanup
+  ---
+  duration_ms: 27.4279
+  type: 'test'
+  ...
+# Subtest: P01 foreign or colliding logical names reject before worker/control acquisition
+ok 37 - P01 foreign or colliding logical names reject before worker/control acquisition
+  ---
+  duration_ms: 24.631999
+  type: 'test'
+  ...
+# Subtest: P01 a failed ordinary open terminates its acquired worker and returns no fabricated fixture
+ok 38 - P01 a failed ordinary open terminates its acquired worker and returns no fabricated fixture
+  ---
+  duration_ms: 2.778375
+  type: 'test'
+  ...
+# Subtest: P01 interrupted pre-existing names are preserved and never silently reused
+ok 39 - P01 interrupted pre-existing names are preserved and never silently reused
+  ---
+  duration_ms: 2.265703
+  type: 'test'
+  ...
+# Subtest: P02 cold memory create times one fresh ordinary worker to decoded ready without controls or keys
+ok 40 - P02 cold memory create times one fresh ordinary worker to decoded ready without controls or keys
+  ---
+  duration_ms: 10.914386
+  type: 'test'
+  ...
+# Subtest: P02 protected reopen seeds an untimed closed fixture in a separate retired worker then reopens it once with the same key
+ok 41 - P02 protected reopen seeds an untimed closed fixture in a separate retired worker then reopens it once with the same key
+  ---
+  duration_ms: 84.923051
+  type: 'test'
+  ...
+# Subtest: P02 protected upgrade prepares exact v1 fixture and times only the reviewed v1-to-v2 migration open
+ok 42 - P02 protected upgrade prepares exact v1 fixture and times only the reviewed v1-to-v2 migration open
+  ---
+  duration_ms: 501.367698
+  type: 'test'
+  ...
+# Subtest: P02 protected empty create uses one worker and no populated fixture
+ok 43 - P02 protected empty create uses one worker and no populated fixture
+  ---
+  duration_ms: 4.231924
+  type: 'test'
+  ...
+# Subtest: P02 undeclared cold class rejects before any worker or control acquisition
+ok 44 - P02 undeclared cold class rejects before any worker or control acquisition
+  ---
+  duration_ms: 76.125916
+  type: 'test'
+  ...
+# Subtest: P02 failed fixture preparation retires its worker, removes only owned names and never creates the measured worker
+ok 45 - P02 failed fixture preparation retires its worker, removes only owned names and never creates the measured worker
+  ---
+  duration_ms: 4.217789
+  type: 'test'
+  ...
+# Subtest: P02 cold open must report the exact post-open schema version before acceptance
+ok 46 - P02 cold open must report the exact post-open schema version before acceptance
+  ---
+  duration_ms: 568.292079
+  type: 'test'
+  ...
+# Subtest: P03 memory resources open a fresh seeded database per cycle in one harness worker
+ok 47 - P03 memory resources open a fresh seeded database per cycle in one harness worker
+  ---
+  duration_ms: 64.225697
+  type: 'test'
+  ...
+# Subtest: P03 protected resources seed one owned store in cycle0 then reopen the same closed store with the same key
+ok 48 - P03 protected resources seed one owned store in cycle0 then reopen the same closed store with the same key
+  ---
+  duration_ms: 28.139758
+  type: 'test'
+  ...
+# Subtest: P03 resource cycles must be sequential, closed before reopen and closed before cleanup
+ok 49 - P03 resource cycles must be sequential, closed before reopen and closed before cleanup
+  ---
+  duration_ms: 129.324447
+  type: 'test'
+  ...
+# Subtest: P03 undeclared resource identity rejects before harness worker or controls
+ok 50 - P03 undeclared resource identity rejects before harness worker or controls
+  ---
+  duration_ms: 1.141036
+  type: 'test'
+  ...
+# Subtest: P03 physical pool inventory is read only while no worker or controls hold the pool and unknown on failure
+ok 51 - P03 physical pool inventory is read only while no worker or controls hold the pool and unknown on failure
+  ---
+  duration_ms: 26.960709
+  type: 'test'
+  ...
+# Subtest: P03 a failed resource cycle open closes its owner so exact owned cleanup still runs
+ok 52 - P03 a failed resource cycle open closes its owner so exact owned cleanup still runs
+  ---
+  duration_ms: 41.647116
+  type: 'test'
+  ...
+# Subtest: P01 proof transport batches at most100 complete records preserving exact UTF8/order
+ok 53 - P01 proof transport batches at most100 complete records preserving exact UTF8/order
+  ---
+  duration_ms: 86.465728
+  type: 'test'
+  ...
+# Subtest: P01 byte boundary flushes complete lines and rejects oversized line before sending
+ok 54 - P01 byte boundary flushes complete lines and rejects oversized line before sending
+  ---
+  duration_ms: 24.228619
+  type: 'test'
+  ...
+# Subtest: P01 proof transfer rejection is observable and never silently discarded
+ok 55 - P01 proof transfer rejection is observable and never silently discarded
+  ---
+  duration_ms: 2.82296
+  type: 'test'
+  ...
+# Subtest: P01 exact51 frozen cohorts schema counts operation details reject divergence
+ok 56 - P01 exact51 frozen cohorts schema counts operation details reject divergence
+  ---
+  duration_ms: 97.067344
+  type: 'test'
+  ...
+# Subtest: P02 real clock conversion preserves endpoints and rejects invalid duration
+ok 57 - P02 real clock conversion preserves endpoints and rejects invalid duration
+  ---
+  duration_ms: 2.470642
+  type: 'test'
+  ...
+# Subtest: P02 empirical resolution ignores equal readings without inventing precision
+ok 58 - P02 empirical resolution ignores equal readings without inventing precision
+  ---
+  duration_ms: 3.61578
+  type: 'test'
+  ...
+# Subtest: P01 independent structural comparison rejects wrong Float Null omission and ID
+ok 59 - P01 independent structural comparison rejects wrong Float Null omission and ID
+  ---
+  duration_ms: 2.783381
+  type: 'test'
+  ...
+# Subtest: P02 ten cold executions require distinct nonempty worker identities
+ok 60 - P02 ten cold executions require distinct nonempty worker identities
+  ---
+  duration_ms: 15.394452
+  type: 'test'
+  ...
+# Subtest: P03 unsupported resource remains unknown and harness allocation never ordinary allocation
+ok 61 - P03 unsupported resource remains unknown and harness allocation never ordinary allocation
+  ---
+  duration_ms: 4.679396
+  type: 'test'
+  ...
+# Subtest: P03 unavailable browser profiler stays unknown and ordinary worker allocation is never inferred
+ok 62 - P03 unavailable browser profiler stays unknown and ordinary worker allocation is never inferred
+  ---
+  duration_ms: 24.068252
+  type: 'test'
+  ...
+# Subtest: P03 preserve actual combined attribution without subtracting an invented JS heap
+ok 63 - P03 preserve actual combined attribution without subtracting an invented JS heap
+  ---
+  duration_ms: 16.928248
+  type: 'test'
+  ...
+# Subtest: P03 timeout and failed profiler remain unknown without a fake zero measurement
+ok 64 - P03 timeout and failed profiler remain unknown without a fake zero measurement
+  ---
+  duration_ms: 2.885204
+  type: 'test'
+  ...
+# Subtest: P03 exact30cycles produce61 acknowledged checkpoints and first/final proof outside clocks
+ok 65 - P03 exact30cycles produce61 acknowledged checkpoints and first/final proof outside clocks
+  ---
+  duration_ms: 17.66933
+  type: 'test'
+  ...
+# Subtest: P03 every intermediate cycle validates the complete fixture without independent proof emission
+ok 66 - P03 every intermediate cycle validates the complete fixture without independent proof emission
+  ---
+  duration_ms: 70.232547
+  type: 'test'
+  ...
+# Subtest: P03 resource flow acknowledges61 harness-worker checkpoints, emits only first/final proofs and retires before finish
+ok 67 - P03 resource flow acknowledges61 harness-worker checkpoints, emits only first/final proofs and retires before finish
+  ---
+  duration_ms: 90.407675
+  type: 'test'
+  ...
+# Subtest: P03 a missing CONTINUE acknowledgement fails the resource run and still retires the harness worker
+ok 68 - P03 a missing CONTINUE acknowledgement fails the resource run and still retires the harness worker
+  ---
+  duration_ms: 15.073795
+  type: 'test'
+  ...
+# Subtest: P03 a profiler record larger than the bounded controller frame is recorded unknown with its size, never truncated
+ok 69 - P03 a profiler record larger than the bounded controller frame is recorded unknown with its size, never truncated
+  ---
+  duration_ms: 3941.706987
+  type: 'test'
+  ...
+# Subtest: P02 byte accounting preserves original frames and measures UTF8 outside calls
+ok 70 - P02 byte accounting preserves original frames and measures UTF8 outside calls
+  ---
+  duration_ms: 18.755312
+  type: 'test'
+  ...
+# Subtest: P02 warm run retains exact5warm30samples and proof order without a DB shortcut
+ok 71 - P02 warm run retains exact5warm30samples and proof order without a DB shortcut
+  ---
+  duration_ms: 60.61118
+  type: 'test'
+  ...
+# Subtest: P02 failed sample retained and cannot become accepted successful run
+ok 72 - P02 failed sample retained and cannot become accepted successful run
+  ---
+  duration_ms: 13.632333
+  type: 'test'
+  ...
+# Subtest: P02 cold orchestration requires10 unique sequential executions
+ok 73 - P02 cold orchestration requires10 unique sequential executions
+  ---
+  duration_ms: 5.518437
+  type: 'test'
+  ...
+# Subtest: P01 protected cleanup validates exact neighboring bytes then removes only owned names
+ok 74 - P01 protected cleanup validates exact neighboring bytes then removes only owned names
+  ---
+  duration_ms: 58.23473
+  type: 'test'
+  ...
+# Subtest: P01 changed neighbor canary fails before any task file removal
+ok 75 - P01 changed neighbor canary fails before any task file removal
+  ---
+  duration_ms: 3.478953
+  type: 'test'
+  ...
+# Subtest: P01 foreign names or paths reject before reading any files
+ok 76 - P01 foreign names or paths reject before reading any files
+  ---
+  duration_ms: 2.731218
+  type: 'test'
+  ...
+# Subtest: P03 closed journal and WAL are exact-name observations: absent stays explicitly absent
+ok 77 - P03 closed journal and WAL are exact-name observations: absent stays explicitly absent
+  ---
+  duration_ms: 6.047738
+  type: 'test'
+  ...
+# Subtest: P03 a present closed journal is measured, not hidden, and its leftover fails pool restoration
+ok 78 - P03 a present closed journal is measured, not hidden, and its leftover fails pool restoration
+  ---
+  duration_ms: 3.589953
+  type: 'test'
+  ...
+# Subtest: P03 physical pool footprint is a read-only recursive regular-file inventory including unassigned pool files
+ok 79 - P03 physical pool footprint is a read-only recursive regular-file inventory including unassigned pool files
+  ---
+  duration_ms: 17.071017
+  type: 'test'
+  ...
+1..79
+# tests 79
+# suites 0
+# pass 79
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 6191.91632

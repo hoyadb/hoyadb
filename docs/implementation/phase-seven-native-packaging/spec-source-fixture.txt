@@ -1,0 +1,8 @@
+commit ece3c22712e0a92888e4531d969a9af21bca49f1
+tree 62c8fec4714a88c744db1d676cf602968b3f8066
+author HoyaDB Phase7 fixture <contact@btk-consulting.fr> Sun Oct 25 00:00:00 2026 +0000
+100644 blob 970099d870efc7dc61f7ee0de7de423d3d9385a8	README.md
+100644 blob e69de29bb2d1d6434b8b29ae775ad8c2e48c5391	Specs/.gitkeep
+6571cb6edc9288c173a7f17c86ecbfcf3670a054cb9fbba6afcddf2badc30d86  README.md
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  Specs/.gitkeep
+url file:///Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-rn/pod-spec-source

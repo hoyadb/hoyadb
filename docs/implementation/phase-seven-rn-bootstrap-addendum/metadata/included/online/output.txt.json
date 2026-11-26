@@ -1,0 +1,7 @@
+{
+  "format": 1,
+  "original_path": "metadata/included/online/output.txt",
+  "original_bytes": 691,
+  "original_sha256": "95f7a24183285fa788c4d51530d006fc7e5ff372b73512d1a9b2f99bac987791",
+  "utf8": "\nWelcome to Gradle 9.3.1!\n\nHere are the highlights of this release:\n - Test reporting improvements\n - Error and warning improvements\n - Build authoring improvements\n\nFor more details see https://docs.gradle.org/9.3.1/release-notes.html\n\nTo honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.3.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.\nDaemon will be stopped at the end of the build \n> Task :captureMetadata\nPersisted dependency lock state for root project 'hoyadb-phase-seven-bootstrap-metadata-only'\n\nBUILD SUCCESSFUL in 30s\n1 actionable task: 1 executed\n"
+}

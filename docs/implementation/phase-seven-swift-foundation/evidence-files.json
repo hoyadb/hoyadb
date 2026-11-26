@@ -1,0 +1,111 @@
+[
+  {
+    "source": "target/phase-seven-native/swift-full-formal-current.txt",
+    "file": "swift-full-formal-current.txt",
+    "sha256": "d35714257693c739cfc087837ac2c1db812e4f2e361dd9fd9e82a56dbc305c3e"
+  },
+  {
+    "source": "target/phase-seven-native/swift-prepare-observe-formal-red.txt",
+    "file": "swift-prepare-observe-formal-red.txt",
+    "sha256": "6ebe8a9ece79f47b3145332f048924957bc7a0ca58719b32ff52f7058f1923db"
+  },
+  {
+    "source": "target/phase-seven-native/swift-format-current.txt",
+    "file": "swift-format-current.txt",
+    "sha256": "62bc2ef363231b99057ba1695d5ca28cc57164ed2381afc24f0957fd4c5ffdc2"
+  },
+  {
+    "source": "target/phase-seven-native/swift-final-macos-build.txt",
+    "file": "swift-final-macos-build.txt",
+    "sha256": "dfd7008b5f76fce391a742d79cd9047b3933292a91803bfb264830fb49796bc5"
+  },
+  {
+    "source": "target/phase-seven-native/swift-final-macos-run.txt",
+    "file": "swift-final-macos-run.txt",
+    "sha256": "21ef5c216985829442f1d02faf3299d057165e8f22043ba8cc8db5209d7057dd"
+  },
+  {
+    "source": "target/phase-seven-native/swift-final-macos-results.json",
+    "file": "swift-final-macos-results.json",
+    "sha256": "a0b5d054d6499757f6b963856258466a021061fb146370743e0ed65088ce1dda"
+  },
+  {
+    "source": "target/phase-seven-native/swift-final-macos-writer.txt",
+    "file": "swift-final-macos-writer.json",
+    "sha256": "f6d24692fc6e807250e5a51b4aeb3c410c79d6d7ceec9dd8b4372fed0667c19f",
+    "original_sha256": "1b2c372ee432cc0bea9f455990e83799e8422b53ce58df44a4cfd77b13c8893c",
+    "representation": "lossless stdout JSON wrapper"
+  },
+  {
+    "source": "target/phase-seven-native/swift-final-macos-reader.txt",
+    "file": "swift-final-macos-reader.json",
+    "sha256": "9e15a6501b110a626561d985c8106069d8580e91259d69217b6cb98b9cf92b6c",
+    "original_sha256": "879843785e015f44ea79da123f4778eb179fb5bbd96e4628c8db72123f9c40cf",
+    "representation": "lossless stdout JSON wrapper"
+  },
+  {
+    "source": "target/phase-seven-native/swift-foundation-evidence.json",
+    "file": "swift-foundation-evidence.json",
+    "sha256": "43ea9ce7c2e008c8fd4549e7720190ca3bedc2d8a06c125ed74ff24bd950eed8"
+  },
+  {
+    "source": "target/phase-seven-native/swift-foundation-files.txt",
+    "file": "swift-foundation-files.txt",
+    "sha256": "ce7abd302536ffa5da89892e20e295587efc9ccf7d48a9a5b7ae829bc4432b19"
+  },
+  {
+    "source": "target/phase-seven-native/swift-admission-bus-red-valid-setup.txt",
+    "file": "swift-admission-bus-red-valid-setup.txt",
+    "sha256": "af648e0353f358fcbfdbf723be77d1a4b6f5179a3d4be3e08c754495c24ad506"
+  },
+  {
+    "source": "target/phase-seven-native/swift-admission-bus-green.txt",
+    "file": "swift-admission-bus-green.txt",
+    "sha256": "28756a498b4b502c8ef449c4d0016070407d5c612c310b8caae227ec65381079"
+  },
+  {
+    "source": "target/phase-seven-native/swift-final-ios-build.txt",
+    "file": "swift-final-ios-build.txt",
+    "sha256": "cf717ece335119a33ff306f1eb644be14c9d397ef9ccd03214653f88b2cc1b14"
+  },
+  {
+    "source": "target/phase-seven-native/ios-final-runtime.txt",
+    "file": "ios-final-runtime.txt",
+    "sha256": "d242b396f84a08924de932611f32e08000f10fe37c8c4f199d25de0b8bddc39d"
+  },
+  {
+    "source": "target/phase-seven-native/ios-final-commands.json",
+    "file": "ios-final-commands.json",
+    "sha256": "59b65d266e59d85868bf907ce52765c1abfb6699dee04112a5e2062ec2559ab2"
+  },
+  {
+    "source": "target/phase-seven-native/ios-final-first-install-timeout-runtime.txt",
+    "file": "ios-final-first-install-timeout-runtime.txt",
+    "sha256": "69c6245c6fe48cc1472437dcee9b841c71b09b0fefd3c4be25a2a5909eaa79cd"
+  },
+  {
+    "source": "target/phase-seven-native/ios-final-first-install-timeout-commands.json",
+    "file": "ios-final-first-install-timeout-commands.json",
+    "sha256": "ce1f4ef87c3bb5bd60e7efc07d09c8f988f4003df256dd40217fb8de38433666"
+  },
+  {
+    "source": "target/phase-seven-native/ios-final-quiet-shutdown.txt",
+    "file": "ios-final-quiet-shutdown.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "source": "target/phase-seven-native/ios-advanced-verification.json",
+    "file": "ios-advanced-verification.json",
+    "sha256": "9654a54e418c475bd8ec58f18eb0dcbd6a7028c14e9fb92705adbf8e55069fe3"
+  },
+  {
+    "source": "target/phase-seven-native/ios-advanced-runtime.txt",
+    "file": "ios-advanced-runtime.txt",
+    "sha256": "8ebbec6f3b6857746273d00da2b35f11e33f15117a6d9b44d74f14daf36895f7"
+  },
+  {
+    "source": "bindings/swift/Artifacts/native-build.json",
+    "file": "apple-artifact-build-manifest.json",
+    "sha256": "0642a7f9623531431a22844f4aa73a8c2625a85ae96f71ab89aabc62bec2bf8a"
+  }
+]

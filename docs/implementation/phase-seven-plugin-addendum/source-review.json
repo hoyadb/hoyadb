@@ -1,0 +1,63 @@
+[
+  {
+    "path": "source-review/foojay-build.gradle.kts",
+    "requested_url": "https://raw.githubusercontent.com/gradle/foojay-toolchains/2a6cc60ed8d35e025e44193c895502996c8edf4e/build.gradle.kts",
+    "effective_url": "https://raw.githubusercontent.com/gradle/foojay-toolchains/2a6cc60ed8d35e025e44193c895502996c8edf4e/build.gradle.kts",
+    "exit_code": 56,
+    "stderr": "curl: (56) The requested URL returned error: 404\n"
+  },
+  {
+    "path": "source-review/foojay-LICENSE",
+    "requested_url": "https://raw.githubusercontent.com/gradle/foojay-toolchains/2a6cc60ed8d35e025e44193c895502996c8edf4e/LICENSE",
+    "effective_url": "https://raw.githubusercontent.com/gradle/foojay-toolchains/2a6cc60ed8d35e025e44193c895502996c8edf4e/LICENSE",
+    "exit_code": 0,
+    "stderr": "",
+    "bytes": 11357,
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+  },
+  {
+    "path": "source-review/ktfmt-LICENSE",
+    "requested_url": "https://raw.githubusercontent.com/cortinico/ktfmt-gradle/c318821f268aacf356a565c4e2b312d2f11ec432/LICENSE",
+    "effective_url": "https://raw.githubusercontent.com/cortinico/ktfmt-gradle/c318821f268aacf356a565c4e2b312d2f11ec432/LICENSE",
+    "exit_code": 0,
+    "stderr": "",
+    "bytes": 1060,
+    "sha256": "ad5134592b2b908f3e51f63fec69d88fd51a721b78abb7faaece2bf1dfa52f3f"
+  },
+  {
+    "path": "source-review/gson-LICENSE",
+    "requested_url": "https://raw.githubusercontent.com/google/gson/gson-parent-2.13.1/LICENSE",
+    "effective_url": "https://raw.githubusercontent.com/google/gson/gson-parent-2.13.1/LICENSE",
+    "exit_code": 0,
+    "stderr": "",
+    "bytes": 11358,
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  },
+  {
+    "path": "source-review/kotlin-LICENSE",
+    "requested_url": "https://raw.githubusercontent.com/JetBrains/kotlin/v2.1.10/license/LICENSE.txt",
+    "effective_url": "https://raw.githubusercontent.com/JetBrains/kotlin/v2.1.10/license/LICENSE.txt",
+    "exit_code": 0,
+    "stderr": "",
+    "bytes": 11358,
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  },
+  {
+    "path": "source-review/kotlin-NOTICE",
+    "requested_url": "https://raw.githubusercontent.com/JetBrains/kotlin/v2.1.10/license/NOTICE.txt",
+    "effective_url": "https://raw.githubusercontent.com/JetBrains/kotlin/v2.1.10/license/NOTICE.txt",
+    "exit_code": 0,
+    "stderr": "",
+    "bytes": 482,
+    "sha256": "0b09a83d3ef7795c7dec65e815866597c066c53898f2852a76599b8f5552941a"
+  },
+  {
+    "path": "source-review/diff-parent.pom",
+    "requested_url": "https://repo.maven.apache.org/maven2/io/github/java-diff-utils/java-diff-utils-parent/4.15/java-diff-utils-parent-4.15.pom",
+    "effective_url": "https://repo.maven.apache.org/maven2/io/github/java-diff-utils/java-diff-utils-parent/4.15/java-diff-utils-parent-4.15.pom",
+    "exit_code": 0,
+    "stderr": "",
+    "bytes": 10170,
+    "sha256": "09e7d44a7cfa19bc6b23cad14ec0a41f32ae0b597f0e26ace91916fdc2bb5c82"
+  }
+]

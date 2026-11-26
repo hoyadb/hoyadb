@@ -1,0 +1,25 @@
+{
+  "consumer": "/private/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-phase7-rn-consumer-v8cue5dl",
+  "sandbox_probe": "Errno::EPERM",
+  "podfile_lock_sha256": "f8f398191e5ddce74f26c06a9556e22d50e6645335d22ab29ff12c9e7ebc5ca5",
+  "owned_package_sha256": {
+    "packages/hoyadb-client-0.1.0.tgz": "db7e3d5af32ba8b9f36373f1adf647b2ef5d0ef1d130eebd3b728fdb09a01ddd",
+    "packages/hoyadb-react-native-0.1.0.tgz": "3f4d4cc80f51db7be1ef56e6c1a8bdfdadba4f52952d27656a6261ed3b320334",
+    "packages/hoyadb-testing-0.1.0.tgz": "b27941c4dcfb6e971c7b5fa4d5da4743d35445fd5dbd5a411c3f1dfa8bc15e18"
+  },
+  "consumer_sources_sha256": {
+    "conformance.mjs": "a758e996b0c838f4732a4468e6cf1efabb07a00bd27e4285c11cd7be0ad8be29",
+    "guards.mjs": "908113709901dfb97e83b78aed3a21b7d2ebcc4014243a943cb91be1aea95cc3",
+    "mixed.mjs": "14b60f9c3afa68e4b19d83fff715e3ef3c22a4750fab58c45983b73f1abadfa9",
+    "retained.mjs": "fdbadc03b293a33ef4f0a193f2a21e3f45fb6f156203041426f33878fa505ad1",
+    "schemas.mjs": "c75f11cbcfeffcc63ab84409671ac8fb4f14998761b746d98b03a4845ba50029",
+    "walkthrough.mjs": "34190a8bad4f74dd8152128296322b0dc471412e8112ae754fa7df9537846590",
+    "index.js": "59c5b154d94acf380242f61978f26275dc060415e0e121b49cb5cb2d14bac3ba"
+  },
+  "bundle": {
+    "js_sha256": "f793a3a99b1a694b20162818242c7c94f339dc4e87287227b85903c10790fd98",
+    "hbc_sha256": "90df758232a640940afbf992aea28f59be2746b56629060d17e83e5d106e0ca3",
+    "hbc_magic_hex": "c61fbc03c103191f"
+  },
+  "approved_node_source_differences": {}
+}

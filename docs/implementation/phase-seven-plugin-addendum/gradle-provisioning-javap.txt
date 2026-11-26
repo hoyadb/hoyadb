@@ -1,0 +1,452 @@
+Compiled from "DefaultJavaToolchainProvisioningService.java"
+public class org.gradle.jvm.toolchain.internal.install.DefaultJavaToolchainProvisioningService implements org.gradle.jvm.toolchain.internal.install.JavaToolchainProvisioningService {
+  private static final org.slf4j.Logger LOGGER;
+
+  private static final java.lang.Object PROVISIONING_PROCESS_LOCK;
+
+  private final org.gradle.jvm.toolchain.internal.JavaToolchainResolverRegistryInternal toolchainResolverRegistry;
+
+  private final org.gradle.jvm.toolchain.internal.install.SecureFileDownloader downloader;
+
+  private final org.gradle.jvm.toolchain.internal.install.DefaultJdkCacheDirectory cacheDirProvider;
+
+  private final org.gradle.api.provider.Provider<java.lang.Boolean> downloadEnabled;
+
+  private final org.gradle.internal.operations.BuildOperationRunner buildOperationRunner;
+
+  private final org.gradle.platform.internal.CurrentBuildPlatform currentBuildPlatform;
+
+  public org.gradle.jvm.toolchain.internal.install.DefaultJavaToolchainProvisioningService(org.gradle.jvm.toolchain.JavaToolchainResolverRegistry, org.gradle.jvm.toolchain.internal.install.SecureFileDownloader, org.gradle.jvm.toolchain.internal.JdkCacheDirectory, org.gradle.api.provider.ProviderFactory, org.gradle.jvm.toolchain.internal.ToolchainConfiguration, org.gradle.internal.operations.BuildOperationRunner, org.gradle.platform.internal.CurrentBuildPlatform);
+    Code:
+       0: aload_0
+       1: invokespecial #7                  // Method java/lang/Object."<init>":()V
+       4: aload_0
+       5: aload_1
+       6: checkcast     #13                 // class org/gradle/jvm/toolchain/internal/JavaToolchainResolverRegistryInternal
+       9: putfield      #15                 // Field toolchainResolverRegistry:Lorg/gradle/jvm/toolchain/internal/JavaToolchainResolverRegistryInternal;
+      12: aload_0
+      13: aload_2
+      14: putfield      #19                 // Field downloader:Lorg/gradle/jvm/toolchain/internal/install/SecureFileDownloader;
+      17: aload_0
+      18: aload_3
+      19: checkcast     #23                 // class org/gradle/jvm/toolchain/internal/install/DefaultJdkCacheDirectory
+      22: putfield      #25                 // Field cacheDirProvider:Lorg/gradle/jvm/toolchain/internal/install/DefaultJdkCacheDirectory;
+      25: aload_0
+      26: aload         4
+      28: aload         5
+      30: dup
+      31: invokestatic  #29                 // Method java/util/Objects.requireNonNull:(Ljava/lang/Object;)Ljava/lang/Object;
+      34: pop
+      35: invokedynamic #35,  0             // InvokeDynamic #0:call:(Lorg/gradle/jvm/toolchain/internal/ToolchainConfiguration;)Ljava/util/concurrent/Callable;
+      40: invokeinterface #39,  2           // InterfaceMethod org/gradle/api/provider/ProviderFactory.provider:(Ljava/util/concurrent/Callable;)Lorg/gradle/api/provider/Provider;
+      45: putfield      #45                 // Field downloadEnabled:Lorg/gradle/api/provider/Provider;
+      48: aload_0
+      49: aload         6
+      51: putfield      #49                 // Field buildOperationRunner:Lorg/gradle/internal/operations/BuildOperationRunner;
+      54: aload_0
+      55: aload         7
+      57: putfield      #53                 // Field currentBuildPlatform:Lorg/gradle/platform/internal/CurrentBuildPlatform;
+      60: return
+
+  public boolean isAutoDownloadEnabled();
+    Code:
+       0: aload_0
+       1: getfield      #45                 // Field downloadEnabled:Lorg/gradle/api/provider/Provider;
+       4: invokeinterface #57,  1           // InterfaceMethod org/gradle/api/provider/Provider.get:()Ljava/lang/Object;
+       9: checkcast     #63                 // class java/lang/Boolean
+      12: invokevirtual #65                 // Method java/lang/Boolean.booleanValue:()Z
+      15: ireturn
+
+  public boolean hasConfiguredToolchainRepositories();
+    Code:
+       0: aload_0
+       1: getfield      #15                 // Field toolchainResolverRegistry:Lorg/gradle/jvm/toolchain/internal/JavaToolchainResolverRegistryInternal;
+       4: invokeinterface #69,  1           // InterfaceMethod org/gradle/jvm/toolchain/internal/JavaToolchainResolverRegistryInternal.requestedRepositories:()Ljava/util/List;
+       9: invokeinterface #73,  1           // InterfaceMethod java/util/List.isEmpty:()Z
+      14: ifne          21
+      17: iconst_1
+      18: goto          22
+      21: iconst_0
+      22: ireturn
+
+  public java.io.File tryInstall(org.gradle.jvm.toolchain.JavaToolchainSpec);
+    Code:
+       0: aload_0
+       1: invokevirtual #78                 // Method isAutoDownloadEnabled:()Z
+       4: ifne          28
+       7: new           #81                 // class org/gradle/jvm/toolchain/internal/install/exceptions/ToolchainProvisioningException
+      10: dup
+      11: aload_1
+      12: ldc           #83                 // String Toolchain auto-provisioning is not enabled.
+      14: iconst_1
+      15: anewarray     #85                 // class java/lang/String
+      18: dup
+      19: iconst_0
+      20: getstatic     #87                 // Field org/gradle/jvm/toolchain/internal/install/exceptions/ToolchainProvisioningException.AUTO_DETECTION_RESOLUTION:Ljava/lang/String;
+      23: aastore
+      24: invokespecial #91                 // Method org/gradle/jvm/toolchain/internal/install/exceptions/ToolchainProvisioningException."<init>":(Lorg/gradle/jvm/toolchain/JavaToolchainSpec;Ljava/lang/String;[Ljava/lang/String;)V
+      27: athrow
+      28: aload_0
+      29: getfield      #15                 // Field toolchainResolverRegistry:Lorg/gradle/jvm/toolchain/internal/JavaToolchainResolverRegistryInternal;
+      32: invokeinterface #69,  1           // InterfaceMethod org/gradle/jvm/toolchain/internal/JavaToolchainResolverRegistryInternal.requestedRepositories:()Ljava/util/List;
+      37: astore_2
+      38: aload_2
+      39: invokeinterface #73,  1           // InterfaceMethod java/util/List.isEmpty:()Z
+      44: ifeq          74
+      47: new           #81                 // class org/gradle/jvm/toolchain/internal/install/exceptions/ToolchainProvisioningException
+      50: dup
+      51: aload_1
+      52: ldc           #94                 // String Toolchain download repositories have not been configured.
+      54: iconst_2
+      55: anewarray     #85                 // class java/lang/String
+      58: dup
+      59: iconst_0
+      60: getstatic     #87                 // Field org/gradle/jvm/toolchain/internal/install/exceptions/ToolchainProvisioningException.AUTO_DETECTION_RESOLUTION:Ljava/lang/String;
+      63: aastore
+      64: dup
+      65: iconst_1
+      66: getstatic     #96                 // Field org/gradle/jvm/toolchain/internal/install/exceptions/ToolchainProvisioningException.DOWNLOAD_REPOSITORIES_RESOLUTION:Ljava/lang/String;
+      69: aastore
+      70: invokespecial #91                 // Method org/gradle/jvm/toolchain/internal/install/exceptions/ToolchainProvisioningException."<init>":(Lorg/gradle/jvm/toolchain/JavaToolchainSpec;Ljava/lang/String;[Ljava/lang/String;)V
+      73: athrow
+      74: new           #99                 // class org/gradle/jvm/toolchain/internal/install/DefaultJavaToolchainProvisioningService$ToolchainDownloadFailureTracker
+      77: dup
+      78: aconst_null
+      79: invokespecial #101                // Method org/gradle/jvm/toolchain/internal/install/DefaultJavaToolchainProvisioningService$ToolchainDownloadFailureTracker."<init>":(Lorg/gradle/jvm/toolchain/internal/install/DefaultJavaToolchainProvisioningService$1;)V
+      82: astore_3
+      83: aconst_null
+      84: astore        4
+      86: aload_2
+      87: invokeinterface #104,  1          // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+      92: astore        5
+      94: aload         5
+      96: invokeinterface #108,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+     101: ifeq          238
+     104: aload         5
+     106: invokeinterface #113,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+     111: checkcast     #116                // class org/gradle/jvm/toolchain/internal/RealizedJavaToolchainRepository
+     114: astore        6
+     116: aload         6
+     118: invokevirtual #118                // Method org/gradle/jvm/toolchain/internal/RealizedJavaToolchainRepository.getResolver:()Lorg/gradle/jvm/toolchain/JavaToolchainResolver;
+     121: astore        7
+     123: aload         7
+     125: new           #122                // class org/gradle/jvm/toolchain/internal/DefaultJavaToolchainRequest
+     128: dup
+     129: aload_1
+     130: aload_0
+     131: getfield      #53                 // Field currentBuildPlatform:Lorg/gradle/platform/internal/CurrentBuildPlatform;
+     134: invokevirtual #124                // Method org/gradle/platform/internal/CurrentBuildPlatform.toBuildPlatform:()Lorg/gradle/platform/BuildPlatform;
+     137: invokespecial #130                // Method org/gradle/jvm/toolchain/internal/DefaultJavaToolchainRequest."<init>":(Lorg/gradle/jvm/toolchain/JavaToolchainSpec;Lorg/gradle/platform/BuildPlatform;)V
+     140: invokeinterface #133,  2          // InterfaceMethod org/gradle/jvm/toolchain/JavaToolchainResolver.resolve:(Lorg/gradle/jvm/toolchain/JavaToolchainRequest;)Ljava/util/Optional;
+     145: astore        8
+     147: goto          166
+     150: astore        9
+     152: aload_3
+     153: aload         6
+     155: invokevirtual #141                // Method org/gradle/jvm/toolchain/internal/RealizedJavaToolchainRepository.getRepositoryName:()Ljava/lang/String;
+     158: aload         9
+     160: invokevirtual #145                // Method org/gradle/jvm/toolchain/internal/install/DefaultJavaToolchainProvisioningService$ToolchainDownloadFailureTracker.addResolveFailure:(Ljava/lang/String;Ljava/lang/Exception;)V
+     163: goto          94
+     166: aload         8
+     168: invokevirtual #149                // Method java/util/Optional.isPresent:()Z
+     171: ifeq          219
+     174: aload         6
+     176: aload         8
+     178: invokevirtual #154                // Method java/util/Optional.get:()Ljava/lang/Object;
+     181: checkcast     #155                // class org/gradle/jvm/toolchain/JavaToolchainDownload
+     184: invokeinterface #157,  1          // InterfaceMethod org/gradle/jvm/toolchain/JavaToolchainDownload.getUri:()Ljava/net/URI;
+     189: invokevirtual #161                // Method org/gradle/jvm/toolchain/internal/RealizedJavaToolchainRepository.getAuthentications:(Ljava/net/URI;)Ljava/util/Collection;
+     192: astore        9
+     194: aload_0
+     195: aload_1
+     196: aload         8
+     198: invokevirtual #154                // Method java/util/Optional.get:()Ljava/lang/Object;
+     201: checkcast     #155                // class org/gradle/jvm/toolchain/JavaToolchainDownload
+     204: invokeinterface #157,  1          // InterfaceMethod org/gradle/jvm/toolchain/JavaToolchainDownload.getUri:()Ljava/net/URI;
+     209: aload         9
+     211: invokespecial #165                // Method provisionInstallation:(Lorg/gradle/jvm/toolchain/JavaToolchainSpec;Ljava/net/URI;Ljava/util/Collection;)Ljava/io/File;
+     214: astore        4
+     216: goto          238
+     219: goto          235
+     222: astore        9
+     224: aload_3
+     225: aload         6
+     227: invokevirtual #141                // Method org/gradle/jvm/toolchain/internal/RealizedJavaToolchainRepository.getRepositoryName:()Ljava/lang/String;
+     230: aload         9
+     232: invokevirtual #169                // Method org/gradle/jvm/toolchain/internal/install/DefaultJavaToolchainProvisioningService$ToolchainDownloadFailureTracker.addProvisioningFailure:(Ljava/lang/String;Ljava/lang/Exception;)V
+     235: goto          94
+     238: aload         4
+     240: ifnonnull     249
+     243: aload_3
+     244: aload_1
+     245: invokevirtual #172                // Method org/gradle/jvm/toolchain/internal/install/DefaultJavaToolchainProvisioningService$ToolchainDownloadFailureTracker.buildFailureException:(Lorg/gradle/jvm/toolchain/JavaToolchainSpec;)Lorg/gradle/jvm/toolchain/internal/install/exceptions/ToolchainProvisioningException;
+     248: athrow
+     249: aload_3
+     250: invokevirtual #176                // Method org/gradle/jvm/toolchain/internal/install/DefaultJavaToolchainProvisioningService$ToolchainDownloadFailureTracker.logFailuresIfAny:()V
+     253: aload         4
+     255: areturn
+    Exception table:
+       from    to  target type
+         123   147   150   Class java/lang/Exception
+         166   216   222   Class java/lang/Exception
+
+  private java.io.File provisionInstallation(org.gradle.jvm.toolchain.JavaToolchainSpec, java.net.URI, java.util.Collection<org.gradle.authentication.Authentication>);
+    Code:
+       0: getstatic     #179                // Field PROVISIONING_PROCESS_LOCK:Ljava/lang/Object;
+       3: dup
+       4: astore        4
+       6: monitorenter
+       7: aload_0
+       8: getfield      #25                 // Field cacheDirProvider:Lorg/gradle/jvm/toolchain/internal/install/DefaultJdkCacheDirectory;
+      11: invokevirtual #183                // Method org/gradle/jvm/toolchain/internal/install/DefaultJdkCacheDirectory.getDownloadLocation:()Ljava/io/File;
+      14: astore        5
+      16: aload_0
+      17: new           #187                // class java/lang/StringBuilder
+      20: dup
+      21: invokespecial #189                // Method java/lang/StringBuilder."<init>":()V
+      24: ldc           #190                // String Examining toolchain URI
+      26: invokevirtual #192                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      29: aload_2
+      30: invokevirtual #196                // Method java/lang/StringBuilder.append:(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+      33: invokevirtual #199                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+      36: aload_0
+      37: aload_2
+      38: aload_3
+      39: invokedynamic #202,  0            // InvokeDynamic #1:call:(Lorg/gradle/jvm/toolchain/internal/install/DefaultJavaToolchainProvisioningService;Ljava/net/URI;Ljava/util/Collection;)Ljava/util/concurrent/Callable;
+      44: invokespecial #205                // Method wrapInOperation:(Ljava/lang/String;Ljava/util/concurrent/Callable;)Ljava/lang/Object;
+      47: checkcast     #209                // class org/gradle/internal/resource/ExternalResource
+      50: astore        6
+      52: new           #211                // class java/io/File
+      55: dup
+      56: aload         5
+      58: aload_0
+      59: aload_2
+      60: aload         6
+      62: aload_1
+      63: invokevirtual #213                // Method buildFileNameWithDetails:(Ljava/net/URI;Lorg/gradle/internal/resource/ExternalResource;Lorg/gradle/jvm/toolchain/JavaToolchainSpec;)Ljava/lang/String;
+      66: invokespecial #217                // Method java/io/File."<init>":(Ljava/io/File;Ljava/lang/String;)V
+      69: astore        7
+      71: aload_0
+      72: getfield      #25                 // Field cacheDirProvider:Lorg/gradle/jvm/toolchain/internal/install/DefaultJdkCacheDirectory;
+      75: aload         7
+      77: ldc           #220                // String Downloading toolchain
+      79: invokevirtual #222                // Method org/gradle/jvm/toolchain/internal/install/DefaultJdkCacheDirectory.acquireWriteLock:(Ljava/io/File;Ljava/lang/String;)Lorg/gradle/cache/FileLock;
+      82: astore        8
+      84: aload         7
+      86: invokevirtual #226                // Method java/io/File.exists:()Z
+      89: istore        9
+      91: iload         9
+      93: ifne          131
+      96: aload_0
+      97: new           #187                // class java/lang/StringBuilder
+     100: dup
+     101: invokespecial #189                // Method java/lang/StringBuilder."<init>":()V
+     104: ldc           #229                // String Downloading toolchain from URI
+     106: invokevirtual #192                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     109: aload_2
+     110: invokevirtual #196                // Method java/lang/StringBuilder.append:(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+     113: invokevirtual #199                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+     116: aload_0
+     117: aload_2
+     118: aload         7
+     120: aload         6
+     122: invokedynamic #231,  0            // InvokeDynamic #2:call:(Lorg/gradle/jvm/toolchain/internal/install/DefaultJavaToolchainProvisioningService;Ljava/net/URI;Ljava/io/File;Lorg/gradle/internal/resource/ExternalResource;)Ljava/util/concurrent/Callable;
+     127: invokespecial #205                // Method wrapInOperation:(Ljava/lang/String;Ljava/util/concurrent/Callable;)Ljava/lang/Object;
+     130: pop
+     131: aload_0
+     132: new           #187                // class java/lang/StringBuilder
+     135: dup
+     136: invokespecial #189                // Method java/lang/StringBuilder."<init>":()V
+     139: ldc           #234                // String Unpacking toolchain archive
+     141: invokevirtual #192                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     144: aload         7
+     146: invokevirtual #236                // Method java/io/File.getName:()Ljava/lang/String;
+     149: invokevirtual #192                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     152: invokevirtual #199                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+     155: aload_0
+     156: aload_1
+     157: aload         7
+     159: aload_2
+     160: invokedynamic #239,  0            // InvokeDynamic #3:call:(Lorg/gradle/jvm/toolchain/internal/install/DefaultJavaToolchainProvisioningService;Lorg/gradle/jvm/toolchain/JavaToolchainSpec;Ljava/io/File;Ljava/net/URI;)Ljava/util/concurrent/Callable;
+     165: invokespecial #205                // Method wrapInOperation:(Ljava/lang/String;Ljava/util/concurrent/Callable;)Ljava/lang/Object;
+     168: checkcast     #211                // class java/io/File
+     171: astore        10
+     173: aload         8
+     175: invokeinterface #242,  1          // InterfaceMethod org/gradle/cache/FileLock.close:()V
+     180: aload         4
+     182: monitorexit
+     183: aload         10
+     185: areturn
+     186: astore        10
+     188: iload         9
+     190: ifeq          314
+     193: getstatic     #1                  // Field LOGGER:Lorg/slf4j/Logger;
+     196: ldc           #247                // String Re-downloading toolchain from URI {} because unpacking the existing archive {} failed with an exception
+     198: iconst_3
+     199: anewarray     #8                  // class java/lang/Object
+     202: dup
+     203: iconst_0
+     204: aload_2
+     205: aastore
+     206: dup
+     207: iconst_1
+     208: aload         7
+     210: invokevirtual #236                // Method java/io/File.getName:()Ljava/lang/String;
+     213: aastore
+     214: dup
+     215: iconst_2
+     216: aload         10
+     218: aastore
+     219: invokeinterface #249,  3          // InterfaceMethod org/slf4j/Logger.info:(Ljava/lang/String;[Ljava/lang/Object;)V
+     224: aload_0
+     225: new           #187                // class java/lang/StringBuilder
+     228: dup
+     229: invokespecial #189                // Method java/lang/StringBuilder."<init>":()V
+     232: ldc           #255                // String Re-downloading toolchain from URI
+     234: invokevirtual #192                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     237: aload_2
+     238: invokevirtual #196                // Method java/lang/StringBuilder.append:(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+     241: invokevirtual #199                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+     244: aload_0
+     245: aload_2
+     246: aload         7
+     248: aload         6
+     250: invokedynamic #257,  0            // InvokeDynamic #4:call:(Lorg/gradle/jvm/toolchain/internal/install/DefaultJavaToolchainProvisioningService;Ljava/net/URI;Ljava/io/File;Lorg/gradle/internal/resource/ExternalResource;)Ljava/util/concurrent/Callable;
+     255: invokespecial #205                // Method wrapInOperation:(Ljava/lang/String;Ljava/util/concurrent/Callable;)Ljava/lang/Object;
+     258: pop
+     259: aload_0
+     260: new           #187                // class java/lang/StringBuilder
+     263: dup
+     264: invokespecial #189                // Method java/lang/StringBuilder."<init>":()V
+     267: ldc           #234                // String Unpacking toolchain archive
+     269: invokevirtual #192                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     272: aload         7
+     274: invokevirtual #236                // Method java/io/File.getName:()Ljava/lang/String;
+     277: invokevirtual #192                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     280: invokevirtual #199                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+     283: aload_0
+     284: aload_1
+     285: aload         7
+     287: aload_2
+     288: invokedynamic #258,  0            // InvokeDynamic #5:call:(Lorg/gradle/jvm/toolchain/internal/install/DefaultJavaToolchainProvisioningService;Lorg/gradle/jvm/toolchain/JavaToolchainSpec;Ljava/io/File;Ljava/net/URI;)Ljava/util/concurrent/Callable;
+     293: invokespecial #205                // Method wrapInOperation:(Ljava/lang/String;Ljava/util/concurrent/Callable;)Ljava/lang/Object;
+     296: checkcast     #211                // class java/io/File
+     299: astore        11
+     301: aload         8
+     303: invokeinterface #242,  1          // InterfaceMethod org/gradle/cache/FileLock.close:()V
+     308: aload         4
+     310: monitorexit
+     311: aload         11
+     313: areturn
+     314: aload         10
+     316: athrow
+     317: astore        12
+     319: aload         8
+     321: invokeinterface #242,  1          // InterfaceMethod org/gradle/cache/FileLock.close:()V
+     326: aload         12
+     328: athrow
+     329: astore        5
+     331: new           #259                // class org/gradle/jvm/toolchain/internal/install/exceptions/ToolchainDownloadException
+     334: dup
+     335: aload_1
+     336: aload_2
+     337: aload         5
+     339: invokespecial #261                // Method org/gradle/jvm/toolchain/internal/install/exceptions/ToolchainDownloadException."<init>":(Lorg/gradle/jvm/toolchain/JavaToolchainSpec;Ljava/net/URI;Ljava/lang/Throwable;)V
+     342: athrow
+     343: astore        13
+     345: aload         4
+     347: monitorexit
+     348: aload         13
+     350: athrow
+    Exception table:
+       from    to  target type
+         131   173   186   Class java/lang/Exception
+          91   173   317   any
+         186   301   317   any
+         314   319   317   any
+           7   180   329   Class java/lang/Exception
+         186   308   329   Class java/lang/Exception
+         314   329   329   Class java/lang/Exception
+           7   183   343   any
+         186   311   343   any
+         314   348   343   any
+
+  private <T> T wrapInOperation(java.lang.String, java.util.concurrent.Callable<T>);
+    Code:
+       0: aload_0
+       1: getfield      #49                 // Field buildOperationRunner:Lorg/gradle/internal/operations/BuildOperationRunner;
+       4: new           #264                // class org/gradle/jvm/toolchain/internal/install/DefaultJavaToolchainProvisioningService$ToolchainProvisioningBuildOperation
+       7: dup
+       8: aload_1
+       9: aload_2
+      10: invokespecial #266                // Method org/gradle/jvm/toolchain/internal/install/DefaultJavaToolchainProvisioningService$ToolchainProvisioningBuildOperation."<init>":(Ljava/lang/String;Ljava/util/concurrent/Callable;)V
+      13: invokeinterface #269,  2          // InterfaceMethod org/gradle/internal/operations/BuildOperationRunner.call:(Lorg/gradle/internal/operations/CallableBuildOperation;)Ljava/lang/Object;
+      18: areturn
+
+  private java.io.File lambda$provisionInstallation$4(org.gradle.jvm.toolchain.JavaToolchainSpec, java.io.File, java.net.URI) throws java.lang.Exception;
+    Code:
+       0: aload_0
+       1: getfield      #25                 // Field cacheDirProvider:Lorg/gradle/jvm/toolchain/internal/install/DefaultJdkCacheDirectory;
+       4: aload_1
+       5: aload_2
+       6: aload_3
+       7: invokevirtual #274                // Method org/gradle/jvm/toolchain/internal/install/DefaultJdkCacheDirectory.provisionFromArchive:(Lorg/gradle/jvm/toolchain/JavaToolchainSpec;Ljava/io/File;Ljava/net/URI;)Ljava/io/File;
+      10: areturn
+
+  private java.lang.Object lambda$provisionInstallation$3(java.net.URI, java.io.File, org.gradle.internal.resource.ExternalResource) throws java.lang.Exception;
+    Code:
+       0: aload_0
+       1: getfield      #19                 // Field downloader:Lorg/gradle/jvm/toolchain/internal/install/SecureFileDownloader;
+       4: aload_1
+       5: aload_2
+       6: aload_3
+       7: invokevirtual #278                // Method org/gradle/jvm/toolchain/internal/install/SecureFileDownloader.download:(Ljava/net/URI;Ljava/io/File;Lorg/gradle/internal/resource/ExternalResource;)V
+      10: aconst_null
+      11: areturn
+
+  private java.io.File lambda$provisionInstallation$2(org.gradle.jvm.toolchain.JavaToolchainSpec, java.io.File, java.net.URI) throws java.lang.Exception;
+    Code:
+       0: aload_0
+       1: getfield      #25                 // Field cacheDirProvider:Lorg/gradle/jvm/toolchain/internal/install/DefaultJdkCacheDirectory;
+       4: aload_1
+       5: aload_2
+       6: aload_3
+       7: invokevirtual #274                // Method org/gradle/jvm/toolchain/internal/install/DefaultJdkCacheDirectory.provisionFromArchive:(Lorg/gradle/jvm/toolchain/JavaToolchainSpec;Ljava/io/File;Ljava/net/URI;)Ljava/io/File;
+      10: areturn
+
+  private java.lang.Object lambda$provisionInstallation$1(java.net.URI, java.io.File, org.gradle.internal.resource.ExternalResource) throws java.lang.Exception;
+    Code:
+       0: aload_0
+       1: getfield      #19                 // Field downloader:Lorg/gradle/jvm/toolchain/internal/install/SecureFileDownloader;
+       4: aload_1
+       5: aload_2
+       6: aload_3
+       7: invokevirtual #278                // Method org/gradle/jvm/toolchain/internal/install/SecureFileDownloader.download:(Ljava/net/URI;Ljava/io/File;Lorg/gradle/internal/resource/ExternalResource;)V
+      10: aconst_null
+      11: areturn
+
+  private org.gradle.internal.resource.ExternalResource lambda$provisionInstallation$0(java.net.URI, java.util.Collection) throws java.lang.Exception;
+    Code:
+       0: aload_0
+       1: getfield      #19                 // Field downloader:Lorg/gradle/jvm/toolchain/internal/install/SecureFileDownloader;
+       4: aload_1
+       5: aload_2
+       6: invokevirtual #284                // Method org/gradle/jvm/toolchain/internal/install/SecureFileDownloader.getResourceFor:(Ljava/net/URI;Ljava/util/Collection;)Lorg/gradle/internal/resource/ExternalResource;
+       9: areturn
+
+  static org.slf4j.Logger access$100();
+    Code:
+       0: getstatic     #1                  // Field LOGGER:Lorg/slf4j/Logger;
+       3: areturn
+
+  static {};
+    Code:
+       0: ldc           #2                  // class org/gradle/jvm/toolchain/internal/install/DefaultJavaToolchainProvisioningService
+       2: invokestatic  #288                // Method org/slf4j/LoggerFactory.getLogger:(Ljava/lang/Class;)Lorg/slf4j/Logger;
+       5: putstatic     #1                  // Field LOGGER:Lorg/slf4j/Logger;
+       8: new           #8                  // class java/lang/Object
+      11: dup
+      12: invokespecial #7                  // Method java/lang/Object."<init>":()V
+      15: putstatic     #179                // Field PROVISIONING_PROCESS_LOCK:Ljava/lang/Object;
+      18: return
+}

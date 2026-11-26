@@ -1,0 +1,71 @@
+EEEEE
+======================================================================
+ERROR: test_forbidden_resolution_overrides_reject (__main__.InitScript.test_forbidden_resolution_overrides_reject)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_init_script_guard.py", line 41, in test_forbidden_resolution_overrides_reject
+    result = self.check(base + f'\n// injected\n{bad}\n')
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_init_script_guard.py", line 26, in check
+    return I.check(path, approved=APPROVED)
+           ^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/init_script_guard.py", line 5, in __getattr__
+    raise NotImplementedError("init_script_guard." + name + " not implemented")
+NotImplementedError: init_script_guard.check not implemented
+
+======================================================================
+ERROR: test_reviewed_script_passes_with_exact_scope (__main__.InitScript.test_reviewed_script_passes_with_exact_scope)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_init_script_guard.py", line 29, in test_reviewed_script_passes_with_exact_scope
+    result = I.check(SCRIPT, approved=APPROVED)
+             ^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/init_script_guard.py", line 5, in __getattr__
+    raise NotImplementedError("init_script_guard." + name + " not implemented")
+NotImplementedError: init_script_guard.check not implemented
+
+======================================================================
+ERROR: test_unapproved_version_rejects (__main__.InitScript.test_unapproved_version_rejects)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_init_script_guard.py", line 45, in test_unapproved_version_rejects
+    result = self.check(SCRIPT.read_text().replace("'33.3.1-jre'", "'32.0.0-jre'"))
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_init_script_guard.py", line 26, in check
+    return I.check(path, approved=APPROVED)
+           ^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/init_script_guard.py", line 5, in __getattr__
+    raise NotImplementedError("init_script_guard." + name + " not implemented")
+NotImplementedError: init_script_guard.check not implemented
+
+======================================================================
+ERROR: test_unnamed_configuration_or_extra_project_rejects (__main__.InitScript.test_unnamed_configuration_or_extra_project_rejects)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_init_script_guard.py", line 50, in test_unnamed_configuration_or_extra_project_rejects
+    self.assertFalse(self.check(SCRIPT.read_text().replace("'compileClasspath'", "'runtimeClasspath'")).ok)
+                     ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_init_script_guard.py", line 26, in check
+    return I.check(path, approved=APPROVED)
+           ^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/init_script_guard.py", line 5, in __getattr__
+    raise NotImplementedError("init_script_guard." + name + " not implemented")
+NotImplementedError: init_script_guard.check not implemented
+
+======================================================================
+ERROR: test_wrong_build_name_rejects (__main__.InitScript.test_wrong_build_name_rejects)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_init_script_guard.py", line 55, in test_wrong_build_name_rejects
+    self.assertFalse(self.check(SCRIPT.read_text().replace("'gradle-plugin-root'", "'other'")).ok)
+                     ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/test_init_script_guard.py", line 26, in check
+    return I.check(path, approved=APPROVED)
+           ^^^^^^^
+  File "/Users/boristacyniak/Projects/alocasia/hoyadb/bindings/react-native/tools/security/init_script_guard.py", line 5, in __getattr__
+    raise NotImplementedError("init_script_guard." + name + " not implemented")
+NotImplementedError: init_script_guard.check not implemented
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.031s
+
+FAILED (errors=5)
+exit=1

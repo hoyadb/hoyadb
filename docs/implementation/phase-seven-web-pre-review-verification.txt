@@ -1,0 +1,46 @@
+
+--- final-python.txt ---
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+OK
+
+--- final-syntax.txt ---
+PASS node --check: 37 JS/MJS source files
+
+--- final-guide-example.txt ---
+Exact first JavaScript fenced block from docs/guides/sdk-integration.md executed unchanged as guide-example.mjs in installed-tarball consumer.
+Command: node /var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-sdk-consumer-HoM5vL/guide-example.mjs
+Exit: 0; assertions passed; no stdout/stderr.
+
+--- final-hash-closure.txt ---
+PASS unchanged 183 source hashes and 8 ordinary/instrumented artifact hashes across final matrix
+
+--- final-cleanup.json ---
+{
+  "ownedTabsClosed": [
+    "faf054b5-102e-4d28-82b5-54db90276f94",
+    "ed31e8f3-f4c5-4b24-8011-d14846a5057f",
+    "e52de6c7-fd95-444f-919d-7d9fa367b59e",
+    "21bf454a-2b4b-495f-8234-fe881c326336",
+    "f741a9fd-e8b3-415d-b52b-041defc16786",
+    "6c59b9b6-dd29-4ffc-aca4-6bbe7851abad"
+  ],
+  "verifiedStoppedPids": [
+    33477,
+    33716,
+    37988
+  ],
+  "verifiedNoListeners": [
+    8877,
+    8878
+  ],
+  "removedExactTempRoot": "/var/folders/hf/sr2zg_w551x9y7x9p64rkclw0000gn/T/hoyadb-sdk-consumer-HoM5vL",
+  "logicalCleanup": {
+    "ordinary": "passed exact-owned removal and pre/post pool tuple equality",
+    "instrumented": "passed neighbor encrypted canary exact-byte equality and pre/post pool tuple equality",
+    "retry": "passed exact two-name removal after worker termination"
+  },
+  "poolQualification": "Numeric pool tuples were asserted in-browser but not emitted; report records successful equality assertion, not invented numeric measurements."
+}

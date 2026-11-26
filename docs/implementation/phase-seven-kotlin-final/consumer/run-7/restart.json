@@ -1,0 +1,12 @@
+{
+  "mode": "restart",
+  "failed": 0,
+  "cases": [
+    {
+      "id": "K15.fresh_process_reopens_real_rows_frozen_retry_and_checkpoint",
+      "ok": true
+    }
+  ],
+  "page_size": 16384,
+  "pid": 8450
+}
