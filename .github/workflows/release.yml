@@ -74,7 +74,7 @@ jobs:
         run: |
           cd target/github-release
           find native npm maven central -type f -print0 | sort -z | xargs -0 shasum -a 256 > SHA256SUMS
-      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: native-${{ needs.preflight.outputs.commit }}
           path: |
@@ -139,7 +139,7 @@ jobs:
         env:
           CENTRAL_TOKEN: ${{ secrets.CENTRAL_TOKEN }}
         run: python3 tools/ci/central_wait.py release/central-deployment-id.txt
-      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: central-deployment-${{ needs.preflight.outputs.commit }}
           path: release/central-deployment-id.txt
