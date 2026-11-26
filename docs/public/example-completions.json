@@ -1,0 +1,20 @@
+{
+  "observations": "PASS observations: initial snapshot, rows, timed count and disposal",
+  "relations": "PASS relations: to-one, has-many and related-field predicate",
+  "persistence": "PASS protected SQLite: supplied key, write, reopen and wrong-key refusal",
+  "commands": "PASS commands: staged commit, frozen retry, receive and reconcile",
+  "quickstart": "PASS quickstart: insert, fetch, replace, remove",
+  "entities": "PASS entities: configured ordinary insert and partial patch",
+  "errors": "PASS errors: typed rejection, atomic failure, lossless integer and finite float",
+  "pull_merge": "PASS pull/merge: applied page, checkpoint and passive merge commit",
+  "rust_todo": "rust todo tour: ok",
+  "queries": "PASS queries: conjunction, IN, order, limit, typed rejection",
+  "migrations": "PASS migrations: authored version change and backfill",
+  "application": "application tour: ok",
+  "javascript": "javascript tour: ok",
+  "typescript": "typescript tour: ok",
+  "react-native": "react-native shared tour: ok (WASM; native bootstrap not compiled or executed)",
+  "swift": "swift tour: ok",
+  "c": "c tour: ok",
+  "kotlin": "kotlin tour: ok"
+}

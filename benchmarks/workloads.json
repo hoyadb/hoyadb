@@ -1,0 +1,581 @@
+{
+  "await": "actual cooperative Pending to Ready, manual std-only caller driver; no network latency claim",
+  "budget": null,
+  "classes": [
+    "rust-facade/memory",
+    "rust-facade/native-protected"
+  ],
+  "cohorts": [
+    {
+      "N": 100,
+      "Q": 0,
+      "observers": 0,
+      "operation": "point"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "observers": 0,
+      "operation": "point"
+    },
+    {
+      "N": 10000,
+      "Q": 0,
+      "observers": 0,
+      "operation": "point"
+    },
+    {
+      "N": 100,
+      "Q": 0,
+      "observers": 0,
+      "operation": "selective"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "observers": 0,
+      "operation": "selective"
+    },
+    {
+      "N": 10000,
+      "Q": 0,
+      "observers": 0,
+      "operation": "selective"
+    },
+    {
+      "N": 100,
+      "Q": 0,
+      "observers": 0,
+      "operation": "sorted-related"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "observers": 0,
+      "operation": "sorted-related"
+    },
+    {
+      "N": 10000,
+      "Q": 0,
+      "observers": 0,
+      "operation": "sorted-related"
+    },
+    {
+      "N": 100,
+      "Q": 0,
+      "observers": 0,
+      "operation": "batch-insert"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "observers": 0,
+      "operation": "batch-insert"
+    },
+    {
+      "N": 10000,
+      "Q": 0,
+      "observers": 0,
+      "operation": "batch-insert"
+    },
+    {
+      "N": 100,
+      "Q": 0,
+      "observers": 0,
+      "operation": "batch-update"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "observers": 0,
+      "operation": "batch-update"
+    },
+    {
+      "N": 10000,
+      "Q": 0,
+      "observers": 0,
+      "operation": "batch-update"
+    },
+    {
+      "N": 100,
+      "Q": 0,
+      "observers": 0,
+      "operation": "batch-remove"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "observers": 0,
+      "operation": "batch-remove"
+    },
+    {
+      "N": 10000,
+      "Q": 0,
+      "observers": 0,
+      "operation": "batch-remove"
+    },
+    {
+      "N": 100,
+      "Q": 0,
+      "observers": 0,
+      "operation": "optimistic-command"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "observers": 0,
+      "operation": "optimistic-command"
+    },
+    {
+      "N": 10000,
+      "Q": 0,
+      "observers": 0,
+      "operation": "optimistic-command"
+    },
+    {
+      "N": 100,
+      "Q": 0,
+      "observers": 0,
+      "operation": "entity-patch"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "observers": 0,
+      "operation": "entity-patch"
+    },
+    {
+      "N": 10000,
+      "Q": 0,
+      "observers": 0,
+      "operation": "entity-patch"
+    },
+    {
+      "N": 100,
+      "Q": 0,
+      "observers": 0,
+      "operation": "non-noop-pull"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "observers": 0,
+      "operation": "non-noop-pull"
+    },
+    {
+      "N": 10000,
+      "Q": 0,
+      "observers": 0,
+      "operation": "non-noop-pull"
+    },
+    {
+      "N": 100,
+      "Q": 0,
+      "observers": 0,
+      "operation": "reset"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "observers": 0,
+      "operation": "reset"
+    },
+    {
+      "N": 10000,
+      "Q": 0,
+      "observers": 0,
+      "operation": "reset"
+    },
+    {
+      "N": 1000,
+      "Q": 10,
+      "observers": 0,
+      "operation": "optimistic-command"
+    },
+    {
+      "N": 1000,
+      "Q": 100,
+      "observers": 0,
+      "operation": "optimistic-command"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "mode": "membership",
+      "observers": 1,
+      "operation": "reactivity",
+      "sharing": "equivalent"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "mode": "columns",
+      "observers": 1,
+      "operation": "reactivity",
+      "sharing": "equivalent"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "mode": "count",
+      "observers": 1,
+      "operation": "reactivity",
+      "sharing": "equivalent"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "mode": "membership",
+      "observers": 1,
+      "operation": "reactivity",
+      "sharing": "distinct"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "mode": "columns",
+      "observers": 1,
+      "operation": "reactivity",
+      "sharing": "distinct"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "mode": "count",
+      "observers": 1,
+      "operation": "reactivity",
+      "sharing": "distinct"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "mode": "membership",
+      "observers": 10,
+      "operation": "reactivity",
+      "sharing": "equivalent"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "mode": "columns",
+      "observers": 10,
+      "operation": "reactivity",
+      "sharing": "equivalent"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "mode": "count",
+      "observers": 10,
+      "operation": "reactivity",
+      "sharing": "equivalent"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "mode": "membership",
+      "observers": 10,
+      "operation": "reactivity",
+      "sharing": "distinct"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "mode": "columns",
+      "observers": 10,
+      "operation": "reactivity",
+      "sharing": "distinct"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "mode": "count",
+      "observers": 10,
+      "operation": "reactivity",
+      "sharing": "distinct"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "mode": "membership",
+      "observers": 100,
+      "operation": "reactivity",
+      "sharing": "equivalent"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "mode": "columns",
+      "observers": 100,
+      "operation": "reactivity",
+      "sharing": "equivalent"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "mode": "count",
+      "observers": 100,
+      "operation": "reactivity",
+      "sharing": "equivalent"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "mode": "membership",
+      "observers": 100,
+      "operation": "reactivity",
+      "sharing": "distinct"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "mode": "columns",
+      "observers": 100,
+      "operation": "reactivity",
+      "sharing": "distinct"
+    },
+    {
+      "N": 1000,
+      "Q": 0,
+      "mode": "count",
+      "observers": 100,
+      "operation": "reactivity",
+      "sharing": "distinct"
+    },
+    {
+      "N": 100,
+      "Q": 0,
+      "extra_probe_rows": 1,
+      "observers": 0,
+      "operation": "boundary-known"
+    }
+  ],
+  "cold": [
+    {
+      "N": 0,
+      "engines": [
+        "memory",
+        "native-protected"
+      ],
+      "operation": "create"
+    },
+    {
+      "N": [
+        100,
+        1000,
+        10000
+      ],
+      "engines": [
+        "native-protected"
+      ],
+      "operation": "reopen"
+    },
+    {
+      "N": 1000,
+      "engines": [
+        "native-protected"
+      ],
+      "migration": "v1->v2 AddColumn optionalString benchmark_extra",
+      "operation": "upgrade"
+    }
+  ],
+  "correctness_only": [
+    {
+      "N": 100,
+      "Q": [
+        10,
+        100
+      ],
+      "operation": "retry"
+    },
+    {
+      "authority": "unchanged existing conformance case",
+      "capacity": 500,
+      "operation": "capacity-stress"
+    }
+  ],
+  "dataset": {
+    "active": "i%2==0",
+    "article_ids": "article:<6-digit decimal i>",
+    "article_tags": 0,
+    "at": "1700000000000+i",
+    "author_count": "N/10",
+    "author_ids": "author:<6-digit decimal floor(i/10)>",
+    "note": "absent even i; note-<i> odd i",
+    "ratio": "i+0.25",
+    "score": "i",
+    "seed_version": 1,
+    "tags": 0,
+    "title": "東京🌿-<i>",
+    "validation_page_limit": 100
+  },
+  "fixture": "TC-0036-A",
+  "format": 1,
+  "observer_fanouts": [
+    1,
+    10,
+    100
+  ],
+  "operation_details": {
+    "batch-insert": "new IDs article:N..N+9 with exact last10baseline fieldsets; valid existing authors",
+    "batch-remove": "first10exact rows, exact before/after",
+    "batch-update": "first10titles changed-<iteration>-<index>, exact before/after",
+    "boundary-known": "extra row id benchmark:extrema; baseline article0 fields overridden score i64MAX, at i64MIN, ratio Float42.0 input/canonical Float42 output, title 東京🌿<NUL>extrema, note present Null; exact schema/protection/point read, then remove probe; N+1 declared",
+    "queue-baseline": "Q10/100 durable no-op commands Sent, attempts1,due2000 after prepare at1000,jitter0; new sample push at1000; exact QueueStatus restoration"
+  },
+  "proof": {
+    "hash": "SHA256 of canonical UTF8 record plus newline, prefix excluded",
+    "max_fetch_rows": 100,
+    "ordering": [
+      "articles:score:Asc",
+      "authors:id:Asc",
+      "tags:verified-empty-null-marker",
+      "article_tags:verified-empty-null-marker"
+    ],
+    "phases": [
+      "initial",
+      "final"
+    ],
+    "protocol": "PROOF/1",
+    "ready": "READY/1 line after actual decoded open, before proof; parent receipt includes pipe/host scheduling",
+    "record": {
+      "row": "typed Row or null for verified empty table",
+      "table": "String"
+    },
+    "retained": "counts/hashes only, no row payload files",
+    "timing": "outside all timed endpoints before and after cohort"
+  },
+  "queue_sizes": [
+    0,
+    10,
+    100
+  ],
+  "resources": {
+    "darwin_ru_maxrss_unit": "bytes per man2getrusage",
+    "other_os_ru_maxrss_unit": "unknown until verified",
+    "peak": "os.wait4 exact owned Rust PID direct rusage outside timers",
+    "retained_rss": {
+      "N": 100,
+      "cycles": 30,
+      "darwin_raw_unit": "1024 bytes per man1ps",
+      "mode": "membership",
+      "observers": 1,
+      "phases": [
+        "baseline",
+        "after_open",
+        "after_close"
+      ],
+      "proof": "first/final independent PROOF/1; explicit intermediate complete fixture validation",
+      "protocol": "RSS/1 bounded checkpoint JSON then fixed CONTINUE",
+      "timing": "untimed separate worker, no latency samples",
+      "tool": "ps -o rss= -p exact_owned_worker_pid"
+    }
+  },
+  "reviewed_commits": [
+    "da7a897",
+    "5a9f16c"
+  ],
+  "rows": [
+    100,
+    1000,
+    10000
+  ],
+  "sampling": {
+    "cold_processes": 10,
+    "independent_runs": 5,
+    "samples": 30,
+    "warmups": 5
+  },
+  "schema": {
+    "tables": {
+      "article_tags": {
+        "columns": {},
+        "relations": {
+          "article": {
+            "foreign_key": "article_id",
+            "kind": "ToOne",
+            "optional": false,
+            "table": "articles"
+          },
+          "tag": {
+            "foreign_key": "tag_id",
+            "kind": "ToOne",
+            "optional": false,
+            "table": "tags"
+          }
+        }
+      },
+      "articles": {
+        "columns": {
+          "active": {
+            "kind": "Boolean",
+            "optional": false
+          },
+          "at": {
+            "kind": "Timestamp",
+            "optional": false
+          },
+          "note": {
+            "kind": "String",
+            "optional": true
+          },
+          "ratio": {
+            "kind": "Float",
+            "optional": false
+          },
+          "score": {
+            "kind": "Integer",
+            "optional": false
+          },
+          "title": {
+            "kind": "String",
+            "optional": false
+          }
+        },
+        "relations": {
+          "author": {
+            "foreign_key": "author_id",
+            "kind": "ToOne",
+            "optional": false,
+            "table": "authors"
+          },
+          "tags": {
+            "kind": "ManyToMany",
+            "source_relation": "article",
+            "table": "tags",
+            "target_relation": "tag",
+            "through": "article_tags"
+          }
+        }
+      },
+      "authors": {
+        "columns": {
+          "name": {
+            "kind": "String",
+            "optional": false
+          }
+        },
+        "relations": {}
+      },
+      "tags": {
+        "columns": {
+          "label": {
+            "kind": "String",
+            "optional": false
+          }
+        },
+        "relations": {}
+      }
+    },
+    "version": "1"
+  },
+  "status": "reviewed_for_implementation",
+  "timers": {
+    "callback_watchdog_ms": 60000,
+    "count_poll_ms": 1,
+    "inner": "std::time::Instant",
+    "inner_resolution": "observed_min_positive_tick_separate_from_unknown_hardware_resolution",
+    "inner_unit": "ns",
+    "outer": "time.monotonic_ns"
+  }
+}

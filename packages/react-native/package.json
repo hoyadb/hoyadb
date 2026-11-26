@@ -1,0 +1,53 @@
+{
+  "name": "@hoyadb/react-native",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "main": "src/index.js",
+  "types": "index.d.ts",
+  "react-native": "src/index.js",
+  "files": [
+    "src",
+    "index.d.ts",
+    "ios",
+    "android",
+    "HoyaDBReactNative.podspec",
+    "react-native.config.cjs",
+    "README.md",
+    "Artifacts",
+    "LICENSE"
+  ],
+  "peerDependencies": {
+    "react": "19.2.3",
+    "react-native": "0.86.3",
+    "@hoyadb/client": "0.1.0"
+  },
+  "codegenConfig": {
+    "name": "HoyaDBSpec",
+    "type": "modules",
+    "jsSrcsDir": "src",
+    "android": {
+      "javaPackageName": "dev.hoyadb"
+    },
+    "ios": {
+      "modules": {
+        "HoyaDB": {
+          "className": "HoyaDBModule"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hoyadb/hoyadb.git",
+    "directory": "packages/react-native"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}

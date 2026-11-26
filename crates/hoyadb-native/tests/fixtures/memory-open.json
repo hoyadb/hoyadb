@@ -1,0 +1,1 @@
+{"abi":"1","op":"open","owner":null,"args":{"engine":{"kind":"memory","store":null},"schema":{"version":"1","tables":{"items":{"columns":{"name":{"kind":"String","optional":false}},"relations":{}}}},"migrations":[],"namespace":"00000000000000000000000000000000","options":{"capacity":"1000","history":"100","initial_delay_ms":"1000","multiplier":"2","max_delay_ms":"60000"}}}

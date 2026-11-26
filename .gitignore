@@ -1,0 +1,17 @@
+node_modules/
+dist/
+build/
+.env
+.env.*
+*.log
+.DS_Store
+.venv/
+__pycache__/
+target/
+.gradle/
+.build/
+/packages/react-native/Artifacts/
+# Optional local maintainer tooling; never needed by the public checkout.
+/ai-governance/
+/.agents/
+/.claude/skills/

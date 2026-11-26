@@ -1,0 +1,56 @@
+{
+  "name": "@hoyadb/client",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "node": {
+        "types": "./node.d.ts",
+        "import": "./src/node-entry.js"
+      },
+      "types": "./web.d.ts",
+      "import": "./src/web-entry.js"
+    },
+    "./host": {
+      "types": "./index.d.ts",
+      "import": "./src/index.js"
+    },
+    "./wasm": {
+      "types": "./src/wasm/hoyadb_web.d.ts",
+      "import": "./src/wasm/hoyadb_web.js"
+    },
+    "./wasm/hoyadb_web_bg.wasm": "./src/wasm/hoyadb_web_bg.wasm",
+    "./node": {
+      "types": "./node.d.ts",
+      "import": "./src/node-entry.js"
+    },
+    "./application": {
+      "types": "./application.d.ts",
+      "import": "./src/application.js"
+    }
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
+  "files": [
+    "src",
+    "index.d.ts",
+    "web.d.ts",
+    "LICENSES.md",
+    "application.d.ts",
+    "node.d.ts",
+    "LICENSE"
+  ],
+  "types": "./index.d.ts",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hoyadb/hoyadb.git",
+    "directory": "packages/client"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}

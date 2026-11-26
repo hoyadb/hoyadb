@@ -1,0 +1,161 @@
+stages:
+  - verify
+
+variables:
+  GIT_SUBMODULE_STRATEGY: none
+
+.rust-checks:
+  image: rust:1.98.1@sha256:a8a5f0a1e5fe7dfe1d352591e4a1c7dd2c08fd70475cae872cf3458ba0df0546
+  before_script:
+    - rustup component add --toolchain 1.98.1 rustfmt clippy
+    - rustup target add --toolchain 1.98.1 wasm32-unknown-unknown
+
+workspace:
+  extends: .rust-checks
+  stage: verify
+  tags:
+    - home
+  script:
+    - cargo fetch --locked
+    - sh tests/tooling/formatting.sh
+    - cargo fmt --all --check
+    - cargo test --workspace --offline --locked
+    - cargo run -p hoyadb-storage-memory --example data_model --offline --locked
+    - cargo run -p hoyadb-storage-memory --example reactive --offline --locked
+    - cargo clippy --workspace --all-targets --offline --locked -- -D warnings
+    - RUSTFLAGS='-D warnings' cargo build -p hoyadb-core -p hoyadb-storage-memory --target wasm32-unknown-unknown --offline --locked
+
+spike-rust:
+  extends: .rust-checks
+  stage: verify
+  tags:
+    - home
+  script:
+    - cargo test --manifest-path spikes/cross-platform/Cargo.toml --offline --locked
+    - cargo fmt --manifest-path spikes/cross-platform/Cargo.toml --check
+    - cargo clippy --manifest-path spikes/cross-platform/Cargo.toml --all-targets --offline --locked -- -D warnings
+    - cargo build --manifest-path spikes/cross-platform/Cargo.toml --target wasm32-unknown-unknown --offline --locked
+    - cargo fetch --manifest-path spikes/cross-platform/native/Cargo.toml --locked
+    - cargo test --manifest-path spikes/cross-platform/native/Cargo.toml --offline --locked
+    - cargo fmt --manifest-path spikes/cross-platform/native/Cargo.toml --check
+    - cargo clippy --manifest-path spikes/cross-platform/native/Cargo.toml --all-targets --offline --locked -- -D warnings
+    - cargo fetch --manifest-path spikes/cross-platform/web/Cargo.toml --locked
+    - cargo fmt --manifest-path spikes/cross-platform/web/Cargo.toml --check
+    - cargo clippy --manifest-path spikes/cross-platform/web/Cargo.toml --all-targets --offline --locked -- -D warnings
+    - cargo build --manifest-path spikes/cross-platform/web/Cargo.toml --target wasm32-unknown-unknown --offline --locked
+
+# SPEC-0025 / TC-0025 P13: compile-only; browser runtime checks remain separate.
+spike-storage-browser:
+  extends: .rust-checks
+  stage: verify
+  tags:
+    - home
+  variables:
+    CC_wasm32_unknown_unknown: clang
+    AR_wasm32_unknown_unknown: llvm-ar
+  script:
+    - apt-get update
+    - apt-get install --no-install-recommends -y clang llvm
+    - clang --version
+    - llvm-ar --version
+    - cargo fetch --locked
+    - cargo fetch --manifest-path spikes/storage-browser/Cargo.toml --locked
+    - cargo fmt --manifest-path spikes/storage-browser/Cargo.toml --check
+    - cargo clippy -p hoyadb-storage-sqlite --lib --target wasm32-unknown-unknown --offline --locked -- -D warnings
+    - cargo build -p hoyadb-storage-sqlite --lib --target wasm32-unknown-unknown --offline --locked
+    - cargo clippy --manifest-path spikes/storage-browser/Cargo.toml --target wasm32-unknown-unknown --offline --locked -- -D warnings
+    - cargo build --manifest-path spikes/storage-browser/Cargo.toml --target wasm32-unknown-unknown --offline --locked
+
+design:
+  image: python:3.14.8-slim@sha256:00ebdcac87ebf7fd62576d8bbe8f8f1e94198befcc4e38c4db9671e61e0dfcfe
+  stage: verify
+  tags:
+    - home
+  script:
+    - python3 -m unittest discover -s tools/traceability -p 'test_*.py'
+    - python3 -m unittest discover -s tests/packaging -p 'test_*.py'
+    - python3 -m unittest discover -s tools/release -p 'test_compatibility.py'
+    - python3 tools/release/compatibility.py sources
+    - python3 tools/traceability/trace_check.py docs/design
+    - python3 tools/traceability/rtm_gen.py docs/design --check
+
+# SPEC-0046 / TC-0050: supply real integration inputs to a clean Node checkout.
+javascript-wasm:
+  extends: .rust-checks
+  stage: verify
+  tags:
+    - home
+  variables:
+    CC_wasm32_unknown_unknown: clang
+    AR_wasm32_unknown_unknown: llvm-ar
+  script:
+    - apt-get update
+    - apt-get install --no-install-recommends -y clang llvm ripgrep
+    - cargo install wasm-bindgen-cli --version 0.2.129 --locked --root target/tools/wasm-bindgen
+    - cargo fetch --manifest-path crates/hoyadb-web/Cargo.toml --locked
+    - sh crates/hoyadb-web/build.sh
+  artifacts:
+    paths:
+      - crates/hoyadb-web/pkg/
+
+# SPEC-0044 / TC-0048: keep evidence validation independent of coverage tools.
+javascript-host-quality:
+  image: node:22.18.0@sha256:3266bc9e8bee1acc8a77386eefaf574987d2729b8c5ec35b0dbd6ddbc40b0ce2
+  stage: verify
+  tags:
+    - home
+  needs:
+    - job: javascript-wasm
+      artifacts: true
+  script:
+    - npm ci --offline --ignore-scripts --no-audit --no-fund
+    - npm test
+    - npm run test:react-native
+
+quality-tooling:
+  image: python:3.14.8-slim@sha256:00ebdcac87ebf7fd62576d8bbe8f8f1e94198befcc4e38c4db9671e61e0dfcfe
+  stage: verify
+  tags:
+    - home
+  script:
+    - python3 -m unittest discover -s tests/tooling -p 'test_quality.py'
+    - python3 -m unittest discover -s tests/tooling -p 'test_sync_proof.py'
+    - python3 tests/tooling/sync_proof.py
+
+coverage-rust:
+  extends: .rust-checks
+  stage: verify
+  tags:
+    - home
+  script:
+    - apt-get update
+    - apt-get install --no-install-recommends -y python3
+    - rustup component add --toolchain 1.98.1 llvm-tools-preview
+    - cargo install cargo-llvm-cov --version 0.9.1 --locked --root target/quality-tools
+    - export PATH="$CI_PROJECT_DIR/target/quality-tools/bin:$PATH"
+    - cargo fetch --locked
+    - sh tests/tooling/coverage.sh --release
+  artifacts:
+    when: always
+    paths:
+      - target/quality/coverage*.json
+
+# Focused decoder gate, not a claim of whole-workspace mutation coverage.
+mutation-json:
+  extends: .rust-checks
+  stage: verify
+  tags:
+    - home
+  script:
+    - apt-get update
+    - apt-get install --no-install-recommends -y python3
+    - cargo install cargo-mutants --version 27.1.0 --locked --root target/quality-tools
+    - cargo fetch --locked
+    - sh tests/tooling/mutation.sh --file crates/hoyadb-core/src/command/json.rs --re 'hex_quad|unicode|digits|number' --test-workspace=false --test-package hoyadb-core -- --test json_bounded
+  artifacts:
+    when: always
+    paths:
+      - target/quality/mutation-source.json
+      - target/quality/mutation-measurement.json
+      - target/quality/mutation-summary.json
+      - target/quality/mutation/mutants.out/

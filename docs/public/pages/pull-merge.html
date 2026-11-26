@@ -1,0 +1,21 @@
+<p class="callout">Using JavaScript? Follow the <a href="getting-started.html">complete application tutorial</a> and <a href="javascript.html">binding guide</a>. The core concepts and Rust examples below describe the same engine; tagged host DTOs are an advanced surface.</p>
+<h2>Pull a page</h2><p>Begin a pull to obtain its request, scope and previous checkpoint. Your transport supplies a complete PullPage. Apply it through the same owner and request. A checkpoint is opaque application data, not a row offset. The complete flag marks bootstrap readiness.</p>
+<p>The examples use <code>run</code>, <code>schema</code>, <code>fields</code> and <code>owner</code> from the <a href="testing.html#support">example support module</a>. <code>run</code> drives this memory fixture; applications with suspending adapters use their async executor. The examples use <code>unwrap()</code> to stop on unexpected failures; an application should handle the <a href="errors.html">typed errors</a>.</p>
+<p><a href="source:examples/src/bin/pull_merge.rs">Read the complete runnable example</a>, including setup and assertions. The verification link beneath each snippet records its execution.</p>
+<h3>Capture a pull request</h3><p>The complete example first configures notes for entity sync. Begin a pull to capture its current checkpoint; initially there is none.</p>
+{{example:pull_merge:request}}
+<h3>Decode the server change</h3><p>This synthetic server response creates a note. Field timestamps describe exactly the changed fields; a real transport obtains this data from the backend.</p>
+{{example:pull_merge:change}}
+<h3>Apply the page</h3><p>Use the captured request when applying the page. The test checks that bootstrap is ready and the new row is stored.</p>
+{{example:pull_merge:apply}}
+<h3>Continue from the checkpoint</h3><p>The next request starts from page-1. A checkpoint is opaque data supplied by your backend.</p>
+{{example:pull_merge:checkpoint}}
+<h3>Prepare a passive merge</h3><p>The second page is empty and offers no table to a hook, so preparation reaches Ready. This demonstrates the commit path, rather than a custom merge proposal.</p>
+{{example:pull_merge:prepare}}
+<h3>Commit the prepared session</h3><p>Commit only once preparation is Ready. The complete test verifies that the next checkpoint is page-2.</p>
+{{example:pull_merge:commit}}
+
+<h2>Offer custom merges without granting authority</h2><p>The example exercises the passive session's Ready/commit path with an empty page. For an offered table, merge_prepare can return Offer. Read its owned merge_input, await your application hook, submit the proposal with merge_reply and continue until Ready. Only merge_commit applies the staged page. Abort disposes the session.</p>
+<p>A proposal is a row or absence constrained by core validation; hooks cannot fabricate new comparison metadata or bypass tombstones. SDK hooks receive immutable owned input. Busy can be retried with the retained proposal; StalePull means the captured page can no longer be committed and must be fetched again from the unchanged checkpoint.</p>
+<h2>Reset is explicit</h2><p>ResetMode::PreserveRecovery is the conservative choice. DiscardRecovery is a separate destructive recovery decision, not the planned per-command Discarded state. Reset invalidates tickets and subscriptions. This documentation executes no reset against a persistent user store.</p>
+<p>Reference: <a href="api/hoyadb_core/command/enum.MergeStep.html">MergeStep</a>, <a href="api/hoyadb_core/command/struct.PullPage.html">PullPage</a>.</p>

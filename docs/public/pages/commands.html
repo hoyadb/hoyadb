@@ -1,0 +1,80 @@
+<p class="callout">This walkthrough uses the Rust core directly. For a managed callback API, use your <a href="getting-started.html">binding's tutorial</a>.</p>
+<h2>Two commands for a Todo app</h2>
+<p>A command is a named action that works offline. Its local handler changes the database now; your server processes the action later. We will create a task, then complete it and record an activity entry.</p>
+<table><thead><tr><th>Command</th><th>Argument</th><th>Local business logic</th><th>Handler's JSON result</th></tr></thead><tbody>
+<tr><td><code>create-task-v1</code></td><td><code>title: String</code></td><td>Trim the title, reject a blank title, insert an unfinished task</td><td><code>task_id</code></td></tr>
+<tr><td><code>complete-task-v1</code></td><td><code>task_id: String</code></td><td>Set done to true and insert an activity entry</td><td><code>task_id</code> and <code>activity_id</code></td></tr>
+</tbody></table>
+<p>Every snippet comes from <a href="source:examples/src/bin/commands.rs">one runnable Todo program</a>. We start with its caller code, then unpack the helper definitions; this page revisits those definitions by topic rather than file order. The full program puts the definitions before the calls.</p>
+<h2>Start with the calls your application makes</h2>
+<p>The example opens <code>db</code> with <code>open_todo_app()</code>. Call the application's <code>create_task</code> function with a title. It returns a <code>CommandResult</code>: a queued command key and the JSON value returned by the local handler. The example's <code>result_id</code> helper reads an ID string from that JSON object.</p>
+{{example:commands:run-create}}
+<p>The title stored in the row is Buy milk, without the surrounding spaces. The task has a temporary <code>local:</code> ID. <code>created.key</code> identifies the queued command; <code>task_id</code> identifies the task row. They are different identifiers.</p>
+<p>Pass that task ID to <code>complete_task</code>. You can do this immediately, while still offline. Its handler updates the task and inserts an activity entry in the same command.</p>
+{{example:commands:run-complete}}
+<p>The task is now done and the activity exists. There are two queued commands total: one creation and one completion. Completion contains two local writes, but contributes just one queue record.</p>
+<h2>What calls what in Rust?</h2>
+<p><strong>The functions in this example are application code, not extra library APIs.</strong> <code>CommandDefinition</code> describes a name and argument types; it does not register a Rust handler. Your application calls its own handler after <code>begin</code> admits the request, then passes the handler's result to <code>finish</code>.</p>
+<ol><li><strong>Definition:</strong> which action is this, and which argument types are valid?</li><li><strong>Invocation:</strong> which values did the user supply this time?</li><li><strong>Handler:</strong> what business rules and local writes should run?</li><li><strong>Receipt:</strong> which queue key and local result does the caller receive?</li></ol>
+<p>The local result is not the server's later response. The Rust function body is not sent to the backend; the server receives the command name and invocation data.</p>
+<h2>1. Describe the create command</h2>
+<p><code>title</code> is required because <code>optional</code> is false. This declares its type; it does not supply a title value or execute any business logic.</p>
+{{example:commands:create-definition}}
+<h2>2. Pass a title and call the handler</h2>
+<p>Here is the application function used above. Its Rust parameter <code>title</code> becomes the <code>title</code> property of the invocation's JSON object. The matching definition and values are passed to <code>begin</code>. Once admitted, the application explicitly calls <code>create_task_handler</code>.</p>
+<p>The example's <code>json_object</code> helper constructs a one-field JSON object. For this call, its field name is title and its value is the Rust string supplied by the caller.</p>
+{{example:commands:json-object}}
+<p>The entry point passes that object as the invocation arguments and explicitly calls the handler.</p>
+{{example:commands:create-task}}
+<p>This small entry point cancels an unadmitted request and returns Busy, so a caller can try the intent again with a new request. A host that retains queued requests can instead retry that same pending request until it is admitted. Never run the handler when <code>begin</code> returns false.</p>
+<p><code>NOW_MS</code> is the fixed 1000 ms fixture clock, and ada is its example identity. An application captures its actual context once per action; the server must authenticate the user independently.</p>
+<h2>3. Put your business logic in a named function</h2>
+<p><code>create_task_handler</code> reads the arguments actually admitted for this request through <code>scope_args</code>. The example's <code>string_argument</code> helper extracts the named string. The handler trims it and rejects a blank title with the application-defined <code>TodoError::BlankTitle</code>.</p>
+{{example:commands:create-handler}}
+<p>The <code>create_task_handler(db, request)</code> call in the entry point is the application's choice of business function. Replace that call with your own handler, or call shared business services from inside it; the command name alone does not dispatch Rust code.</p>
+<p>This is where you add application rules, derived fields or further scoped reads and writes. The returned JSON object contains the new task ID. It is the value that the caller later reads through <code>created.result</code>; it is not automatically the inserted row.</p>
+<h2>4. Finish on success, abort on failure</h2>
+<p><code>finish_or_abort</code> is another small application helper. A successful handler result is passed to <code>finish</code>, which commits the local scope and returns the receipt. On a handler error, abort the scope and return that error without finishing.</p>
+{{example:commands:finish-or-abort}}
+<p>If <code>finish</code> itself fails, nothing is committed and the active request is consumed; retry the intent with a new request rather than aborting that consumed request.</p>
+<p><code>CommandResult.key</code> identifies durable queue work. <code>CommandResult.result</code> is the JSON value chosen by the local handler. To read the current task row, query the tasks table; the complete program checks its title and done flag after each step.</p>
+<h2>5. Describe completion and its reference argument</h2>
+<p>Completion takes a task ID, not another title. It is a string argument, and <code>reference_paths</code> tells the core that this string refers to a row. That declaration is needed for dependency tracking and ID rewriting when the task was created offline.</p>
+{{example:commands:complete-definition}}
+<h2>6. Perform several writes in one handler</h2>
+<p><code>complete_task_handler</code> reads <code>task_id</code>, uses the application helper <code>fetch_task</code> to read the task through the active scope, updates it, then inserts an activity. Both writes use the same <code>request</code>. The application-defined <code>TodoError::UnknownTask</code> handles a missing row.</p>
+{{example:commands:complete-handler}}
+<p>The function returns both IDs. It does not call <code>finish</code> between writes: the same <code>finish_or_abort</code> helper commits everything once the handler succeeds.</p>
+<p>The completion entry point follows the same sequence as creation, with a different definition, argument and handler.</p>
+{{example:commands:complete-task}}
+<h2>What if a later insert fails?</h2>
+<p>The executable tests deliberately cause the activity insert to fail after the task update was staged. The handler returns an error, <code>finish_or_abort</code> calls <code>abort</code>, and the prior task, activities and queue state remain unchanged. The tests then retry the same intent successfully with a new request. This is a failure demonstration, not an invalid-write pattern to copy.</p>
+<p>The same rule applies to several inserts or updates in a loop, or to <code>scope_apply_batch</code>: keep one request for all operations and finish only after every step succeeds. Do not begin a nested command inside the handler. Starting separate commands does not combine them into one atomic command.</p>
+<details><summary>Database setup and argument helpers</summary>
+<p><code>TodoDb</code> is an example alias for <code>CommandDatabase&lt;MemoryStorage&gt;</code>. The tasks table stores title and done; activities stores a task reference and a kind.</p>
+{{example:commands:schema}}
+<p>Open one owner and share it. The fixed namespace is fixture data: use a unique namespace for a new store and retain it across reopens. Memory storage disappears on drop; see <a href="persistence.html">protected persistence</a> for durable storage.</p>
+{{example:commands:open}}
+<p>The <a href="testing.html#support">shared example module</a> supplies imported types, the required-column constructor <code>column</code>, and <code>run</code>, which drives this memory fixture's ready futures. With a suspending adapter, use your application's async executor and await calls. Unexpected failures stop this example; production callers should handle the <a href="errors.html">typed errors</a>.</p>
+<p><code>TodoError</code> belongs to this application example. Its business errors are separate from the core errors it wraps.</p>
+{{example:commands:errors}}
+<p><code>string_argument</code> is application-side JSON decoding. The core checks argument types at admission; this helper converts one admitted JSON string into an owned Rust String.</p>
+{{example:commands:string-argument}}
+<p><code>fetch_task</code> builds an ID query and reads it with <code>scope_fetch</code>, so the handler sees its own staged writes. A missing task becomes the application's UnknownTask error.</p>
+{{example:commands:fetch-task}}
+</details>
+<details><summary>How these two commands sync and get server IDs</summary>
+<p>This section resumes the caller sequence after creating and completing the task. No network client is installed by the core. Your transport sends its prepared envelopes to your authenticated backend, whose own handlers process and deduplicate these named actions.</p>
+<p>The first batch sends creation only. Completion waits because its <code>task_id</code> refers to the locally created task. The program also checks that a due retry has the same frozen envelope.</p>
+{{example:commands:first-push}}
+<p>The example's <code>confirm</code> helper stands in for recording a successful server response and reconciling one created ID. It takes the command key, the local row ID, the server's JSON result and the name of the result field containing the authoritative ID. That field name is this app's explicit server-response convention, not a core inference rule. An actual transport decodes its response through the wire codec.</p>
+{{example:commands:confirm}}
+<p>The server has assigned server-task-1. Map the creation's task ID when confirming that command.</p>
+{{example:commands:confirm-create}}
+<p>The next batch can now send completion, with task_id rewritten to server-task-1. The activity's task reference has been rewritten too; both facts are checked in the executable program.</p>
+{{example:commands:second-push}}
+<p>Completion also created a row: its activity needs its own mapping. Every command-created ID must be covered by that command's reconciliation plan. This is separate from the handler's local result.</p>
+{{example:commands:confirm-complete}}
+<p>After both confirmations, there is no live work in the queue. See <a href="sync.html">durable retries</a> and <a href="reconciliation.html">reconciliation</a> for protocol and recovery details.</p>
+</details>
+<p>Reference: <a href="api/hoyadb_core/command/struct.CommandDatabase.html">CommandDatabase</a>, <a href="api/hoyadb_core/command/struct.CommandDefinition.html">CommandDefinition</a>, and <a href="api/hoyadb_core/command/struct.CommandResult.html">CommandResult</a>.</p>

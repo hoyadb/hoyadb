@@ -1,0 +1,13 @@
+[workspace]
+members = ["crates/hoyadb-core", "crates/hoyadb-storage-memory", "crates/hoyadb-storage-sqlite", "crates/hoyadb-bindings"]
+exclude = ["spikes/cross-platform", "spikes/cross-platform/native", "spikes/cross-platform/web", "spikes/storage-browser", "crates/hoyadb-native", "crates/hoyadb-web", "benchmarks/native"]
+resolver = "3"
+
+[workspace.package]
+version = "0.0.0"
+edition = "2024"
+rust-version = "1.98.1"
+publish = false
+
+[workspace.lints.rust]
+unsafe_code = "forbid"

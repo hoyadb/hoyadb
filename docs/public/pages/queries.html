@@ -1,0 +1,15 @@
+<p class="callout">Using a binding? Start with its <a href="getting-started.html">application tutorial</a>. This page teaches the Rust core. Snippets are consecutive parts of one tested program.</p>
+<h2>Build a local query</h2><p>A query describes what to read. Fetching it returns an owned result from local storage; building it does not make a network request.</p>
+<p>The examples use <code>run</code>, <code>schema</code>, <code>fields</code> and <code>owner</code> from the <a href="testing.html#support">example support module</a>. <code>run</code> drives this memory fixture; applications with suspending adapters use their async executor. The examples use <code>unwrap()</code> to stop on unexpected failures; an application should handle the <a href="errors.html">typed errors</a>.</p>
+<p><a href="source:examples/src/bin/queries.rs">Read the complete runnable example</a>, including setup and assertions. The verification link beneath each snippet records its execution.</p>
+<h2>1. Add some data</h2><p>Open the example's two-column notes schema and insert two unfinished notes.</p>
+{{example:queries:seed}}
+<h2>2. Describe the result</h2><p>Combine predicates with AND, keep titles in a supplied list, then order descending and take the first row. <code>where_in</code> is the list form of a predicate.</p>
+{{example:queries:filter}}
+<h2>3. Fetch when needed</h2><p>Only fetching evaluates the query. In this fixture the result is the note titled Beta; the complete example verifies that result.</p>
+{{example:queries:fetch}}
+<p>You can reuse the query after writes. The builder describes a query rather than a saved snapshot.</p>
+<h2>4. Handle invalid queries</h2><p>An unknown field is rejected when fetched. The example checks for <code>StorageError::InvalidQuery</code>; applications should handle that variant rather than retry unchanged input.</p>
+{{example:queries:invalid}}
+<h2>Practical limits</h2><p>Use bounded queries for results sent through a binding; a large complete result can exceed the SDK frame limit. One builder holds one order specification. Declared to-one paths such as <code>author.name</code> are shown in <a href="relations.html">relations</a>.</p>
+<p>Reference: <a href="api/hoyadb_core/model/struct.QueryBuilder.html">QueryBuilder</a>.</p>

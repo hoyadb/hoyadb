@@ -1,0 +1,6 @@
+{
+  "mirror_sources": {
+    "bindings/javascript/third-party/vcpkg-0.2.15/LICENSE-APACHE": "60c93a31f490375aadf64098b75f10715010379541021e00261045d7800611d3",
+    "bindings/javascript/third-party/vcpkg-0.2.15/LICENSE-MIT": "016d20f335060a70e79d9fcf8dfaa6201114d65d592211f4bdfb8ae9ca2bc1dc"
+  }
+}

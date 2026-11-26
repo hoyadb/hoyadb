@@ -1,0 +1,16 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+  <uses-permission android:name="android.permission.INTERNET" />
+  <application android:name=".MainApplication" android:label="HoyaDB owned consumer"
+    android:allowBackup="false" android:usesCleartextTraffic="true"
+    android:theme="@android:style/Theme.Material.Light.NoActionBar">
+    <activity android:name=".MainActivity" android:exported="true"
+      android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+  </application>
+  <instrumentation android:name="dev.hoyadb.consumer.PolicyInstrumentation"
+    android:targetPackage="dev.hoyadb.phase7.rn.consumer" />
+</manifest>

@@ -1,0 +1,215 @@
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Existing vMAJOR.MINOR.PATCH tag on main
+        required: true
+        type: string
+      publish:
+        description: Publish validated artifacts after release environment review
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  preflight:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    outputs:
+      commit: ${{ steps.source.outputs.commit }}
+      version: ${{ steps.source.outputs.version }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+          submodules: false
+      - name: Validate tag ancestry and release metadata
+        id: source
+        env:
+          RELEASE_TAG: ${{ inputs.tag }}
+        run: |
+          [[ "$RELEASE_TAG" =~ ^v(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$ ]]
+          commit=$(git rev-parse --verify "refs/tags/$RELEASE_TAG^{commit}")
+          git merge-base --is-ancestor "$commit" origin/main
+          git worktree add --detach "$RUNNER_TEMP/release-source" "$commit"
+          version=$(python3 tools/ci/delivery.py release --root "$RUNNER_TEMP/release-source" --tag "$RELEASE_TAG")
+          printf 'commit=%s\nversion=%s\n' "$commit" "$version" >> "$GITHUB_OUTPUT"
+
+  checks:
+    needs: preflight
+    uses: ./.github/workflows/ci.yml
+    with:
+      ref: ${{ needs.preflight.outputs.commit }}
+
+  native:
+    needs: [preflight, checks]
+    runs-on: [self-hosted, macOS, X64, hoyadb-native-reviewed]
+    environment: native-build
+    concurrency:
+      group: native-reviewed
+      cancel-in-progress: false
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ needs.preflight.outputs.commit }}
+          persist-credentials: false
+          submodules: false
+      - run: bash tools/ci/native.sh
+      - name: Record artifact checksums
+        run: |
+          cd target/github-release
+          find native npm maven central -type f -print0 | sort -z | xargs -0 shasum -a 256 > SHA256SUMS
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: native-${{ needs.preflight.outputs.commit }}
+          path: |
+            target/github-release/native/
+            target/github-release/npm/
+            target/github-release/maven/
+            target/github-release/central/
+            target/github-release/SHA256SUMS
+            target/github-release/SOURCE_REVISION
+          if-no-files-found: error
+          retention-days: 14
+
+  maven:
+    if: inputs.publish
+    needs: [preflight, native]
+    runs-on: ubuntu-24.04
+    environment: maven-central
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ needs.preflight.outputs.commit }}
+          persist-credentials: false
+          submodules: false
+      - uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
+        with:
+          name: native-${{ needs.preflight.outputs.commit }}
+          path: release
+      - name: Verify, sign and upload to Central
+        working-directory: release
+        env:
+          EXPECTED_COMMIT: ${{ needs.preflight.outputs.commit }}
+          CENTRAL_TOKEN: ${{ secrets.CENTRAL_TOKEN }}
+          MAVEN_GPG_PRIVATE_KEY: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }}
+          MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
+        run: |
+          test "$(cat SOURCE_REVISION)" = "$EXPECTED_COMMIT"
+          sha256sum --check SHA256SUMS
+          test -n "$CENTRAL_TOKEN"
+          test -n "$MAVEN_GPG_PRIVATE_KEY"
+          export GNUPGHOME="$RUNNER_TEMP/gnupg"
+          install -d -m 700 "$GNUPGHOME"
+          trap 'rm -rf "$GNUPGHOME"' EXIT
+          gpg --batch --import <<< "$MAVEN_GPG_PRIVATE_KEY"
+          mapfile -d '' primary_files < <(find central -type f -print0)
+          test "${#primary_files[@]}" -gt 0
+          for file in "${primary_files[@]}"; do
+            gpg --batch --yes --pinentry-mode loopback --passphrase-fd 0 --armor --detach-sign "$file" <<< "$MAVEN_GPG_PASSPHRASE"
+          done
+          for file in "${primary_files[@]}"; do
+            sha1sum "$file" | cut -d ' ' -f 1 > "$file.sha1"
+            md5sum "$file" | cut -d ' ' -f 1 > "$file.md5"
+          done
+          (cd central && zip -r ../central-bundle.zip .)
+          curl --fail-with-body --silent --show-error \
+            --header "Authorization: Bearer $CENTRAL_TOKEN" \
+            --form bundle=@central-bundle.zip \
+            'https://central.sonatype.com/api/v1/publisher/upload?publishingType=AUTOMATIC' \
+            --output central-deployment-id.txt
+          printf 'Central deployment submitted: %s\n' "$(cat central-deployment-id.txt)"
+      - name: Wait for Maven Central publication
+        env:
+          CENTRAL_TOKEN: ${{ secrets.CENTRAL_TOKEN }}
+        run: python3 tools/ci/central_wait.py release/central-deployment-id.txt
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: central-deployment-${{ needs.preflight.outputs.commit }}
+          path: release/central-deployment-id.txt
+          if-no-files-found: error
+
+  github-release:
+    if: inputs.publish
+    needs: [preflight, maven]
+    runs-on: ubuntu-24.04
+    environment: github-release
+    permissions:
+      contents: write
+    timeout-minutes: 10
+    steps:
+      - uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
+        with:
+          name: native-${{ needs.preflight.outputs.commit }}
+          path: release
+      - name: Publish Apple binaries and native build evidence
+        working-directory: release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ inputs.tag }}
+          EXPECTED_COMMIT: ${{ needs.preflight.outputs.commit }}
+        run: |
+          test "$(cat SOURCE_REVISION)" = "$EXPECTED_COMMIT"
+          sha256sum --check SHA256SUMS
+          gh release create "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --verify-tag \
+            --title "HoyaDB $RELEASE_TAG" --generate-notes \
+            native/HoyaNative.xcframework.zip native/native-build.json native/APPLE_PARENT_SHA256
+
+  npm:
+    if: inputs.publish
+    needs: [preflight, github-release]
+    runs-on: ubuntu-24.04
+    environment: npm
+    permissions:
+      contents: read
+      id-token: write
+    timeout-minutes: 15
+    steps:
+      - uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6.2.0
+        with:
+          node-version: '22.18.0'
+          package-manager-cache: false
+          registry-url: https://registry.npmjs.org
+      - uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
+        with:
+          name: javascript-${{ needs.preflight.outputs.commit }}
+          path: javascript
+      - uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
+        with:
+          name: native-${{ needs.preflight.outputs.commit }}
+          path: native
+      - name: Publish the checked tarballs in dependency order
+        env:
+          EXPECTED_COMMIT: ${{ needs.preflight.outputs.commit }}
+          RELEASE_VERSION: ${{ needs.preflight.outputs.version }}
+          BOOTSTRAP_NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          npm install --global npm@11.17.0 --ignore-scripts --no-audit --no-fund
+          if [[ -n "$BOOTSTRAP_NPM_TOKEN" ]]; then
+            export NODE_AUTH_TOKEN="$BOOTSTRAP_NPM_TOKEN"
+          else
+            unset NODE_AUTH_TOKEN
+          fi
+          test "$(cat javascript/SOURCE_REVISION)" = "$EXPECTED_COMMIT"
+          test "$(cat native/SOURCE_REVISION)" = "$EXPECTED_COMMIT"
+          (cd javascript && sha256sum --check SHA256SUMS)
+          (cd native && sha256sum --check SHA256SUMS)
+          npm publish "javascript/hoyadb-client-$RELEASE_VERSION.tgz" --access public --provenance --ignore-scripts
+          npm publish "javascript/hoyadb-testing-$RELEASE_VERSION.tgz" --access public --provenance --ignore-scripts
+          npm publish "native/npm/hoyadb-react-native-$RELEASE_VERSION.tgz" --access public --provenance --ignore-scripts

@@ -1,0 +1,19 @@
+[package]
+name = "hoyadb-storage-memory"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[dependencies]
+hoyadb-core = { path = "../hoyadb-core" }
+
+# SPEC-0037 R4: test instrumentation only; never enabled by production builds.
+[features]
+work-counters = ["hoyadb-core/work-counters"]
+
+[dev-dependencies]
+hoyadb-storage-memory = { path = ".", features = ["work-counters"] }
+
+[lints]
+workspace = true

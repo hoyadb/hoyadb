@@ -1,0 +1,33 @@
+{
+  "full": [
+    "K14.actual_16KiB_native_abi",
+    "K01.memory.literal_schema_A_all_values_relations_queries_batch",
+    "K01.memory.literal_schema_B_HasMany",
+    "K06.memory.initial_UI_executor_reentrant_drain_cancel",
+    "K07.memory.awaited_command_context_injected_ID",
+    "K08.memory.noncooperative_cancel_late_resume_releases_scope",
+    "K09.memory.packaged_fake_exact_wire_and_i64",
+    "K01.protected.literal_schema_A_all_values_relations_queries_batch",
+    "K01.protected.literal_schema_B_HasMany",
+    "K06.protected.initial_UI_executor_reentrant_drain_cancel",
+    "K07.protected.awaited_command_context_injected_ID",
+    "K08.protected.noncooperative_cancel_late_resume_releases_scope",
+    "K09.protected.packaged_fake_exact_wire_and_i64",
+    "K04.retained_memory_all_seven_authored_steps",
+    "K13.actual_noBackup_optin_key_cipher_foreign_corruption_preservation",
+    "K11_K12.actual_protected_passive_hooks_pull_reset",
+    "K10_K22.all_local_operations_without_successful_transport",
+    "K02_K24.public_opaque_formatting_and_static_boundaries",
+    "K02_K11.large_owned_event_prefixes",
+    "K02_K11.aggregate_push_prefixes_retain_exact_core_batch",
+    "K15.late_sync_response_cannot_reach_replacement_owner_or_mapper",
+    "CP13.memory.packaged_policy_reports_and_callback_containment",
+    "CP13.protected.packaged_policy_reports_and_callback_containment"
+  ],
+  "seed": [
+    "K15.seed_real_protected_queue_checkpoint_and_abandoned_scope"
+  ],
+  "restart": [
+    "K15.fresh_process_reopens_real_rows_frozen_retry_and_checkpoint"
+  ]
+}

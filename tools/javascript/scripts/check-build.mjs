@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';import {readFile,stat} from 'node:fs/promises';
+const root=new URL('../dist/',import.meta.url);
+const client=JSON.parse(await readFile(new URL('client/package.json',root),'utf8'));
+assert.equal(client.name,'@hoyadb/client');assert.equal(client.version,'0.1.0');assert.equal(client.private,false);assert.equal(client.license,'MIT');
+assert.equal((await stat(new URL('client/src/wasm/hoyadb_web_bg.wasm',root))).size>1000,true);
+for(const path of ['client/index.d.ts','client/web.d.ts','client/src/worker.js','client/LICENSES.md','testing/index.d.ts','testing/LICENSES.md'])assert.ok((await stat(new URL(path,root))).size>0,path);
+const testing=await readFile(new URL('testing/src/index.js',root),'utf8');assert.ok(testing.includes("from '@hoyadb/client/host'"));assert.ok(!testing.includes('../../client'));
+const generated=await readFile(new URL('client/src/wasm/hoyadb_web.js',root),'utf8');assert.ok(!generated.includes('testFile')&&!generated.includes('testPoolStats'),'ordinary artifact excludes test controls');
+const notices=JSON.parse(await readFile(new URL('client/licenses/crates/index.json',root),'utf8'));assert.equal(notices.missing_top_level_notices.length,0);assert.equal(notices.packages.length,39);
+console.log('PASS local package trees include exact declarations, own package links and generated WASM');

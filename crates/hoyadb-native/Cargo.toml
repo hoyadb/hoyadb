@@ -1,0 +1,18 @@
+[package]
+name = "hoyadb-native"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.98.1"
+publish = false
+
+[lib]
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[dependencies]
+hoyadb-bindings = { path = "../hoyadb-bindings" }
+
+[dev-dependencies]
+hoyadb-core = { path = "../hoyadb-core" }
+
+[lints.rust]
+unsafe_op_in_unsafe_fn = "deny"

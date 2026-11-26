@@ -1,0 +1,400 @@
+Enum JSONValue
+  EnumElement null
+  EnumElement boolean
+  EnumElement string
+  EnumElement integer
+  EnumElement float
+  EnumElement array
+  EnumElement object
+  Func __derived_enum_equals(_:_:)
+  Func decodeJSON(_:)
+  Func encodeJSON()
+Struct CapturedContext
+  Var identity
+  Var nowMilliseconds
+  Constructor init(identity:nowMilliseconds:)
+  Func __derived_struct_equals(_:_:)
+Struct CommandDefinition
+  Struct Argument
+    Enum Kind
+      EnumElement any
+      EnumElement string
+      EnumElement integer
+      EnumElement float
+      EnumElement boolean
+      EnumElement array
+      EnumElement object
+      Constructor init(rawValue:)
+      TypeAlias RawValue
+      Var rawValue
+    Var kind
+    Var optional
+    Constructor init(_:optional:)
+    Func __derived_struct_equals(_:_:)
+  Enum PathPart
+    EnumElement key
+    EnumElement index
+    Func __derived_enum_equals(_:_:)
+  Var name
+  Var arguments
+  Var referencePaths
+  Constructor init(_:arguments:referencePaths:)
+  Func __derived_struct_equals(_:_:)
+Struct CommandResult
+  Var key
+  Var value
+  Func __derived_struct_equals(_:_:)
+Class CommandScope
+  Func arguments()
+  Func context()
+  Func fetch(_:)
+  Func insert(_:fields:proposedID:)
+  Func replace(_:id:fields:)
+  Func remove(_:id:)
+  Func batch(_:)
+  Func link(_:id:relation:target:fields:proposedID:)
+  Func unlink(_:id:relation:target:)
+TypeAlias IDGenerator
+Class Database
+  Constructor init(idGenerator:options:monotonicClock:timerScheduler:)
+  Func openMemory(schema:)
+  Func openMemory(schema:namespace:store:migrations:)
+  Func openProtected(directory:name:key:schema:backupExcluded:migrations:)
+  Func openProtected(directory:name:key:schema:namespace:backupExcluded:migrations:)
+  Func execute(_:arguments:)
+  Func schema()
+  Func protection()
+  Func close()
+  Var unownedExecutor
+  Func command(_:value:context:handler:)
+  Func configureEntities(scope:tables:context:)
+  Func reconfigureEntities(scope:tables:context:)
+  Func entityBatch(_:)
+  Func patch(_:id:fields:)
+  Func syncProgress()
+  Func setMergeHooks(_:)
+  Func pullOnce(transport:)
+  Func drainNotifications()
+  Func observe(_:mode:columns:executor:callback:)
+  Func observe(_:mode:columns:executor:callback:)
+  Func observeQueueStatus(executor:callback:)
+  Func observeProgress(executor:callback:)
+  Func observeOutcome(_:executor:callback:)
+  Func link(_:id:relation:target:fields:proposedID:)
+  Func unlink(_:id:relation:target:)
+  Func entityLink(_:id:relation:target:fields:)
+  Func entityUnlink(_:id:relation:target:)
+  Func queueStatus()
+  Func preparePush(nowMilliseconds:jitterBasisPoints:)
+  Func receive(_:outcome:)
+  Func receiveEntity(table:recordID:writeID:outcome:)
+  Func receiveWire(_:)
+  Func pendingReconciliations()
+  Func reconcile(_:plan:)
+  Func rollback(_:)
+  Func cancel(_:)
+  Func forget(_:)
+  Func startSync(transport:reconcile:now:jitter:onError:)
+  Func stopSync()
+  Func insert(_:fields:proposedID:)
+  Func replace(_:id:fields:)
+  Func remove(_:id:)
+  Func fetch(_:)
+  Func batch(_:)
+Struct EntityChange
+  Enum Operation
+    EnumElement create
+    EnumElement update
+    EnumElement delete
+    Constructor init(rawValue:)
+    TypeAlias RawValue
+    Var rawValue
+  Var table
+  Var recordID
+  Var operation
+  Var fields
+  Var removedFields
+  Var timestamp
+  Var fieldTimestamps
+  Constructor init(table:recordID:operation:fields:removedFields:timestamp:fieldTimestamps:)
+  Func __derived_struct_equals(_:_:)
+Struct PullPage
+  Var checkpoint
+  Var complete
+  Var changes
+  Constructor init(checkpoint:complete:changes:)
+  Func __derived_struct_equals(_:_:)
+  Func decodeJSON(_:)
+  Func encodeJSON()
+Struct SyncProgress
+  Enum Phase
+    EnumElement notStarted
+    EnumElement bootstrapping
+    EnumElement ready
+    Constructor init(rawValue:)
+    TypeAlias RawValue
+    Var rawValue
+  Var phase
+  Var ready
+  Var pages
+  Var changes
+  Var tombstones
+  Func __derived_struct_equals(_:_:)
+Struct FieldStamp
+  Var timestamp
+  Var authoritative
+  Func __derived_struct_equals(_:_:)
+Struct RowMetadata
+  Var fields
+  Var tombstone
+  Func __derived_struct_equals(_:_:)
+Struct EntityResolution
+  Var row
+  Var metadata
+  Func __derived_struct_equals(_:_:)
+Struct MergeInput
+  Var schema
+  Var current
+  Var metadata
+  Var incoming
+  Var defaultResolution
+  Func __derived_struct_equals(_:_:)
+TypeAlias MergeHook
+TypeAlias EntityContextProvider
+Struct Migration
+  Var fromVersion
+  Var to
+  Var steps
+  Constructor init(fromVersion:to:steps:)
+  Func __derived_struct_equals(_:_:)
+Enum MigrationStep
+  EnumElement addTable
+  EnumElement dropTable
+  EnumElement addColumn
+  EnumElement dropColumn
+  EnumElement renameColumn
+  EnumElement backfill
+  EnumElement setRelations
+  Func __derived_enum_equals(_:_:)
+Class MemoryStore
+  Func create()
+  Func dispose()
+TypeAlias EventExecutor
+Enum ObservationMode
+  EnumElement membership
+  EnumElement columns
+  EnumElement count
+  Constructor init(rawValue:)
+  TypeAlias RawValue
+  Var rawValue
+Class Subscription
+  Func cancel()
+Protocol TimerCancellation
+  Func cancel()
+TypeAlias MonotonicClock
+TypeAlias TimerScheduler
+Enum ObservedValue
+  EnumElement rows
+  EnumElement count
+  Func __derived_enum_equals(_:_:)
+Enum CommandOutcome
+  EnumElement queued
+  EnumElement sent
+  EnumElement acknowledged
+  EnumElement applied
+  EnumElement corrected
+  EnumElement rejected
+  Func __derived_enum_equals(_:_:)
+Enum RemoteOutcome
+  EnumElement applied
+  EnumElement corrected
+  EnumElement rejected
+  Func __derived_enum_equals(_:_:)
+Struct QueueEntry
+  Enum Kind
+    EnumElement command
+    EnumElement entity
+    Constructor init(rawValue:)
+    TypeAlias RawValue
+    Var rawValue
+  Enum State
+    EnumElement queued
+    EnumElement sent
+    EnumElement acknowledged
+    EnumElement applied
+    EnumElement corrected
+    EnumElement rejected
+    EnumElement cancelled
+    Constructor init(rawValue:)
+    TypeAlias RawValue
+    Var rawValue
+  Var kind
+  Var table
+  Var recordID
+  Var key
+  Var state
+  Var blockedOn
+  Var awaitingLocal
+  Var rolledBack
+  Var attempts
+  Var nextDueMilliseconds
+  Func __derived_struct_equals(_:_:)
+Struct QueueStatus
+  Var pending
+  Var sending
+  Var awaitingOutcome
+  Var live
+  Var blocked
+  Var entries
+  Func __derived_struct_equals(_:_:)
+Struct PushBatch
+  Var envelopes
+  Var nextDueMilliseconds
+  Var hasMore
+  Func __derived_struct_equals(_:_:)
+Struct PendingReconciliation
+  Var key
+  Var outcome
+  Func __derived_struct_equals(_:_:)
+Enum ReconcileWrite
+  EnumElement put
+  EnumElement remove
+  EnumElement entity
+  Func __derived_enum_equals(_:_:)
+Struct ReconcilePlan
+  Var writes
+  Var mappings
+  Constructor init(writes:mappings:)
+  Func __derived_struct_equals(_:_:)
+TypeAlias PushTransport
+TypeAlias Reconciler
+TypeAlias UTCClock
+TypeAlias JitterProvider
+Enum HoyaError
+  EnumElement invalidRequest
+  EnumElement invalidResponse
+  EnumElement boundaryFailure
+  EnumElement backupPolicyFailure
+  EnumElement busy
+  EnumElement closed
+  EnumElement core
+  Func __derived_enum_equals(_:_:)
+Struct Column
+  Enum Kind
+    EnumElement string
+    EnumElement integer
+    EnumElement float
+    EnumElement boolean
+    EnumElement timestamp
+    EnumElement reference
+    Constructor init(rawValue:)
+    TypeAlias RawValue
+    Var rawValue
+  Var kind
+  Var optional
+  Constructor init(_:optional:)
+  Func __derived_struct_equals(_:_:)
+Enum Relation
+  EnumElement toOne
+  EnumElement hasMany
+  EnumElement manyToMany
+  Func __derived_enum_equals(_:_:)
+Struct Table
+  Var columns
+  Var relations
+  Constructor init(columns:relations:)
+  Func __derived_struct_equals(_:_:)
+Struct Schema
+  Var version
+  Var tables
+  Constructor init(version:tables:)
+  Func __derived_struct_equals(_:_:)
+Struct Protection
+  Var encrypted
+  Var cipher
+  Var version
+  Var backup
+  Var verifiedBackupExcluded
+  Func __derived_struct_equals(_:_:)
+Struct DatabaseOptions
+  Var capacity
+  Var history
+  Var initialDelayMilliseconds
+  Var multiplier
+  Var maxDelayMilliseconds
+  Constructor init(capacity:history:initialDelayMilliseconds:multiplier:maxDelayMilliseconds:)
+  Func __derived_struct_equals(_:_:)
+Enum Cell
+  EnumElement null
+  EnumElement boolean
+  EnumElement string
+  EnumElement integer
+  EnumElement float
+  EnumElement timestamp
+  EnumElement reference
+  Func __derived_enum_equals(_:_:)
+Struct Row
+  Var id
+  Var fields
+  Constructor init(id:fields:)
+  Func __derived_struct_equals(_:_:)
+Struct Query
+  Struct Predicate
+    Enum Operator
+      EnumElement equal
+      EnumElement notEqual
+      EnumElement less
+      EnumElement lessOrEqual
+      EnumElement greater
+      EnumElement greaterOrEqual
+      EnumElement oneOf
+      Constructor init(rawValue:)
+      TypeAlias RawValue
+      Var rawValue
+    Var field
+    Var operation
+    Var values
+    Constructor init(_:_:_:)
+    Func __derived_struct_equals(_:_:)
+  Struct Order
+    Enum Direction
+      EnumElement ascending
+      EnumElement descending
+      Constructor init(rawValue:)
+      TypeAlias RawValue
+      Var rawValue
+    Var field
+    Var direction
+    Constructor init(_:_:)
+    Func __derived_struct_equals(_:_:)
+  Struct Source
+    Var table
+    Var id
+    Var relation
+    Constructor init(table:id:relation:)
+    Func __derived_struct_equals(_:_:)
+  Var table
+  Var predicates
+  Var order
+  Var limit
+  Var source
+  Constructor init(_:predicates:order:limit:source:)
+  Func __derived_struct_equals(_:_:)
+Enum Write
+  EnumElement insert
+  EnumElement replace
+  EnumElement remove
+  Func __derived_enum_equals(_:_:)
+Struct Change
+  Var table
+  Var id
+  Var before
+  Var after
+  Func __derived_struct_equals(_:_:)
+Enum ProtocolValue
+  EnumElement null
+  EnumElement boolean
+  EnumElement string
+  EnumElement array
+  EnumElement object
+  Func __derived_enum_equals(_:_:)

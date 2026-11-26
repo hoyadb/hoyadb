@@ -1,0 +1,13 @@
+<h2>Author the transition</h2><p>A migration names its previous version, complete target schema and ordered steps. Supported steps include AddTable, DropTable, AddColumn, DropColumn, RenameColumn, Backfill and SetRelations. Required new columns need a suitable default for existing rows.</p>
+<p>The examples use <code>run</code>, <code>schema</code>, <code>fields</code> and <code>owner</code> from the <a href="testing.html#support">example support module</a>. <code>run</code> drives this memory fixture; applications with suspending adapters use their async executor. The examples use <code>unwrap()</code> to stop on unexpected failures; an application should handle the <a href="errors.html">typed errors</a>.</p>
+<p><a href="source:examples/src/bin/migrations.rs">Read the complete runnable example</a>, including setup and assertions. The verification link beneath each snippet records its execution.</p>
+<h3>Describe version 2</h3><p>The example starts with a stored version-1 note. Add a required archived flag to the target schema.</p>
+{{example:migrations:target}}
+<h3>Supply the transition</h3><p>Existing rows need a value for the required new column. This transition backfills it with false.</p>
+{{example:migrations:plan}}
+<h3>Reopen the same store</h3><p>Pass the original adapter, target schema and migration together. The test verifies version 2 and the existing row's backfilled value.</p>
+{{example:migrations:reopen}}
+
+<h2>Preserve the original on failure</h2><p>The model validates the target and migration plan before applying the atomic schema transition. <code>open_recoverable</code> returns the storage along with an error when open fails; choose it when the caller must retain its adapter. Memory migration tests can reopen the same adapter rather than substituting a new empty one.</p>
+<p>Do not edit internal SQLite tables or change the stored schema version yourself. Schema migration is distinct from the planned sync-ledger format converter; no automatic converter is advertised here.</p>
+<p>Reference: <a href="api/hoyadb_core/model/struct.Migration.html">Migration</a> and <a href="api/hoyadb_core/model/enum.MigrationStep.html">MigrationStep</a>.</p>

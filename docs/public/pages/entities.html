@@ -1,0 +1,14 @@
+<p class="callout">Using JavaScript? Follow the <a href="getting-started.html">complete application tutorial</a> and <a href="javascript.html">binding guide</a>. The core concepts and Rust examples below describe the same engine; tagged host DTOs are an advanced surface.</p>
+<h2>Configure first</h2><p><code>EntityConfig</code> contains a scope string and table set. The context provider supplies identity and UTC milliseconds. Once configured, ordinary writes to these tables generate entity queue records. Nonconfigured tables keep their ordinary local semantics outside named scopes.</p>
+<p>The examples use <code>run</code>, <code>schema</code>, <code>fields</code> and <code>owner</code> from the <a href="testing.html#support">example support module</a>. <code>run</code> drives this memory fixture; applications with suspending adapters use their async executor. The examples use <code>unwrap()</code> to stop on unexpected failures; an application should handle the <a href="errors.html">typed errors</a>.</p>
+<p><a href="source:examples/src/bin/entities.rs">Read the complete runnable example</a>, including setup and assertions. The verification link beneath each snippet records its execution.</p>
+<h3>Choose the synced tables</h3><p>The example owner uses the notes schema. Persist the scope and table set, then install a context provider. The null identity and fixed timestamp are deterministic fixture values.</p>
+{{example:entities:configure}}
+<h3>Insert through the owner</h3><p>An ordinary insert on a configured table also produces entity sync work.</p>
+{{example:entities:insert}}
+<h3>Change just one field</h3><p>Supply only done in a patch. The test checks that the title stays Entity, done becomes true, and both writes produce entity queue records.</p>
+{{example:entities:patch}}
+
+<h2>Resolve fields, not whole objects</h2><p>Entity changes carry table, record ID, create/update/delete operation, changed fields, removed fields, a timestamp and per-field timestamps for exactly the changed fields. Core owns field stamps and tombstone rules. <code>patch</code> preserves unsupplied fields, unlike complete-row replace. Equal-time authoritative and local values follow core's explicit resolution rules; an application merge hook cannot change comparison authority.</p>
+<p>Configuration is persisted. Reopening the same configuration reinstalls the provider; changing scope/tables is not an arbitrary in-place switch on a populated sync history. Reconfigure is restricted to the reset/pristine conditions in the API. Entity acknowledgements must correlate table, record and write identity.</p>
+<p>Reference: <a href="api/hoyadb_core/command/entity/struct.EntityChange.html">EntityChange</a>, <a href="api/hoyadb_core/command/entity/struct.EntityConfig.html">EntityConfig</a>.</p>

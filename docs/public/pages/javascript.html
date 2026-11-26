@@ -1,0 +1,212 @@
+<h2 id="overview">JavaScript guide</h2>
+<p>This guide explains the JavaScript application API used in <a href="getting-started.html">getting started</a>:
+how to import it, describe and open a database, read and watch data, write commands, and sync. Every snippet comes
+from <a href="source:examples/application.mjs">one tested Todo app</a>. The packages are local,
+unpublished <code>0.1.0</code> builds.</p>
+<p>The following sections revisit parts of that file by topic, not in execution order. The
+<a href="getting-started.html">getting started</a> page follows it step by step.</p>
+
+<h2 id="imports">Imports</h2>
+<table>
+  <thead><tr><th>Import</th><th>What it gives you</th></tr></thead>
+  <tbody>
+    <tr><td><code>@hoyadb/client</code></td><td>The application API: <code>defineSchema</code>, <code>table</code>,
+    <code>column</code>, <code>relation</code>, <code>openDatabase</code> and <code>defineCommand</code>. The same import
+    works in the browser and in Node, and loads the database engine automatically.</td></tr>
+    <tr><td><code>@hoyadb/testing</code></td><td><code>createFakeTransport</code>, a stand-in server for tests and
+    tutorials.</td></tr>
+    <tr><td><code>@hoyadb/client/host</code></td><td>The advanced, lower-level API with tagged values. See
+    <a href="#advanced">below</a>.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="schema">Schemas and value types</h2>
+<p>Import the application API and describe each table with <code>defineSchema</code>, <code>table</code> and
+<code>column</code>. This is the schema of the Todo app.</p>
+{{example:application:schema}}
+<p>Each column has a type. You read and write ordinary JavaScript values; the column type decides how they are
+stored:</p>
+<table>
+  <thead><tr><th>Column</th><th>JavaScript value</th></tr></thead>
+  <tbody>
+    <tr><td><code>column.string()</code></td><td>string</td></tr>
+    <tr><td><code>column.boolean()</code></td><td><code>true</code> or <code>false</code></td></tr>
+    <tr><td><code>column.integer()</code></td><td>number. Values beyond <code>Number.MAX_SAFE_INTEGER</code> are
+    rejected. Use <code>column.integer({bigint: true})</code> to always read and write bigint.</td></tr>
+    <tr><td><code>column.float()</code></td><td>finite number (negative zero is rejected)</td></tr>
+    <tr><td><code>column.timestamp()</code></td><td>a <code>Date</code> on read; a Date or milliseconds on write. Use
+    <code>column.timestamp({bigint: true})</code> for bigint milliseconds.</td></tr>
+    <tr><td><code>column.reference()</code></td><td>the ID string of another row</td></tr>
+  </tbody>
+</table>
+<p>Columns are required unless you pass <code>{optional: true}</code>. An optional field can be <code>null</code> or
+simply missing; the two stay different. Relations connect tables:
+<code>relation.toOne(table, {foreignKey})</code>, <code>relation.hasMany(table, {foreignKey})</code> and
+<code>relation.manyToMany(table, {through, sourceRelation, targetRelation})</code>. A to-one relation's foreign key
+holds the related row's ID.</p>
+
+<h2 id="open">Opening a database</h2>
+<p><code>openDatabase</code> takes the schema and everything the database needs from your app. This call opens the Todo
+app in memory, with its server transport and confirmation callback, then pulls the server's tasks once.</p>
+{{example:application:open}}
+<p>Open one database per store when your app starts, share it, and close it on shutdown. Options:</p>
+<ul>
+  <li><code>schema</code>: the result of <code>defineSchema</code>.</li>
+  <li><code>engine: 'memory'</code>: in-memory storage, lost on close. This is the default.</li>
+  <li><code>context</code>: a function returning plain JSON about the current user. It is recorded with every
+  command. It is information for your server, not proof of authorization.</li>
+  <li><code>clock</code>: a function returning the current time (a Date, milliseconds or bigint). It defaults to
+  <code>Date.now</code>.</li>
+  <li><code>entities: {scope, tables}</code>: tables that sync field by field with your server (see
+  <a href="#entities">entity tables</a>).</li>
+  <li><code>transport</code> and <code>reconcile</code>: your server connection and confirmation callback (see
+  <a href="#sync">sync</a>). They are only used when you call <code>sync()</code> or <code>startSync()</code>.</li>
+</ul>
+<p id="persistence">To keep data in the browser, pass <code>filename</code> and a 32-byte
+<code>encryptionKey</code> (a <code>Uint8Array</code> your app owns and stores securely). Storage is always
+encrypted; there is no unencrypted option. It needs a dedicated worker and the browser's private file system
+(OPFS). Node currently supports memory storage only.</p>
+
+<h2 id="query">Queries</h2>
+<p>This query reads the open tasks, sorted by title. It runs locally and returns plain rows.</p>
+{{example:application:query}}
+<p><code>db.query(table)</code> builds a query. <code>where(field, operator, value)</code> accepts <code>=</code>,
+<code>!=</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, <code>&gt;=</code> and <code>in</code>;
+several <code>where</code> calls must all match. <code>orderBy(field, 'asc' | 'desc')</code> and <code>limit(n)</code>
+shape the result, and <code>fetch()</code> returns plain rows. A field can follow a to-one relation, such as
+<code>'author.name'</code>. <code>db.related(table, id, relation)</code> builds a query for related rows.</p>
+<p>For single rows, <code>db.table(table)</code> offers <code>insert(fields)</code>, which returns the new row, and
+<code>findById(id)</code>, which returns a handle with <code>fetch()</code>, a partial <code>update(fields)</code> and
+<code>remove()</code>.</p>
+
+<h2 id="observe">Watching data</h2>
+<p>A query can also be watched. The callback here keeps the titles of the open tasks up to date.</p>
+{{example:application:observe}}
+<p><code>observe(callback)</code> returns a stop function at once. Its <code>ready</code> promise settles when the
+watcher is registered, and rejects with the error if registration fails. The callback receives plain rows: first
+the current result on a later turn, then again after each change. Pass a second callback to be told about delivery
+errors. <code>observeCount(callback)</code> watches only the number of matching rows. Calling the stop function more
+than once is harmless, and closing the database stops every watcher.</p>
+
+<h2 id="commands">Commands: three pieces</h2>
+<p>A command has three parts, and it helps to keep them apart:</p>
+<ol>
+  <li><strong>The definition</strong>: a stable name with a version suffix, and the arguments it takes. The name is
+  how your server recognizes the command.</li>
+  <li><strong>The local handler</strong>: runs on the device the moment you call <code>execute</code>, so the UI
+  updates immediately.</li>
+  <li><strong>The server handler</strong>: your backend's own code for the same command name. It decides the final
+  outcome. HoyaDB never runs your server code.</li>
+</ol>
+{{example:application:command-definition}}
+<p>Argument types are <code>'string'</code>, <code>'reference'</code>, <code>'integer'</code>, <code>'float'</code>,
+<code>'boolean'</code>, <code>'array'</code>, <code>'object'</code> and <code>'any'</code>, or
+<code>{type, optional: true}</code>. Use <code>'reference'</code> for an argument that holds a row ID, so the
+command waits until that row's ID is confirmed by the server.</p>
+<p>The handler's <code>db</code> is not your app's database object. It is a view limited to this command:
+<code>query</code>, <code>table</code> and <code>related</code>. Its reads see the handler's own earlier writes, and
+all of its writes are committed together when the handler returns. If the handler throws, nothing is kept. A
+handler cannot run another command, and while it runs, writes through the app's database fail with
+<code>Busy</code>. <code>ctx.identity</code> is read-only, and <code>ctx.now()</code> returns the command's
+time.</p>
+{{example:application:execute}}
+<p><code>db.command(definition)</code> binds a definition to one database. <code>execute(args)</code> resolves to
+the handler's result. <code>executeWithReceipt(args)</code> also returns the command's <code>key</code>, which you
+can pass to <code>db.observeOutcome(key, callback)</code> to hear the server's final answer.</p>
+
+<h2 id="sync">Sync and the server</h2>
+<p>HoyaDB never makes network requests itself; you supply a transport. In the Todo app, the test backend from
+<code>@hoyadb/testing</code> plays the server: it holds two tasks and has a server handler for each command.</p>
+{{example:application:backend}}
+<p>Your transport's <code>push(envelopes)</code> receives the waiting commands and edits as plain objects. A
+command envelope has its <code>command</code> name, <code>args</code>, <code>context</code> and an
+<code>idempotencyKey</code>. Push returns one answer per envelope, carrying the same key with
+<code>status: 'applied'</code> or <code>'corrected'</code> and a <code>result</code>, or <code>status: 'rejected'</code>
+and a <code>reason</code>. <code>pull(since, scope)</code> returns the server's changes after a checkpoint. A real
+transport sends these to your HTTP API. Large integers arrive as bigint, so serialize them with care.</p>
+{{example:application:sync}}
+<p><code>sync()</code> sends waiting work, records the answers, confirms them through your <code>reconcile</code>
+callback, then pulls when entity tables are configured. <code>startSync()</code> does the same in the background:
+it retries with backoff and pulls every 30 seconds by default (<code>pullIntervalMs</code>).
+<code>stopSync()</code> stops it.</p>
+<p><code>reconcile(pending)</code> is called for each answer the server confirmed, and returns a plan. The
+<code>pending</code> object has:</p>
+<ul>
+  <li><code>key</code>: the command's key.</li>
+  <li><code>kind</code>: <code>'command'</code> or <code>'entity'</code>.</li>
+  <li><code>outcome</code>: the server's answer, with its <code>result</code> as plain values.</li>
+  <li><code>created</code>: the IDs this write created locally, each mapped to its table.</li>
+</ul>
+<p><code>created</code> is read from the database's stored records, so it is still correct after a restart. The plan
+needs <code>mappings</code> from each created local ID to the ID your server assigned, plus optional authoritative
+<code>writes</code>. A command that creates no rows, like <code>complete-task-v1</code>, returns empty mappings. Your
+code decides the mapping for commands, because only your server's result says which ID belongs to which row. Rows
+created in entity tables keep their IDs, and HoyaDB adds those identity mappings for you without overriding yours.
+See <a href="#create">commands that create rows</a> and <a href="reconciliation.html">reconciliation</a>. For a
+rejected command, return empty mappings, then call <code>db.rollback(key)</code> if you want to undo its local
+changes.</p>
+
+<h2 id="create">Commands that create rows</h2>
+<p>A handler can insert rows as well as update them. <code>add-task-v1</code> creates one task.</p>
+{{example:application:create-command}}
+<p>Rows a command creates get temporary IDs that start with <code>local:</code>, and the UI can use them at once.
+Another command can refer to such a row through a <code>'reference'</code> argument; it then waits to sync until the
+row's real ID is known.</p>
+{{example:application:create-execute}}
+<p>The server answers <code>add-task-v1</code> with the new task's ID. The <code>reconcile</code> callback in
+<a href="#open">the open options</a> maps the one created local ID to that ID, and HoyaDB renames the row in the
+table, in references and in watched queries.</p>
+
+<h2 id="entities">Entity tables</h2>
+<p>The Todo app lists <code>todos</code> in its <code>entities</code> option, so edits made outside a command sync by
+themselves. This update renames a task.</p>
+{{example:application:entity}}
+<p>Tables listed in <code>entities</code> sync field by field. An update outside a command records only the
+changed fields, and the newest value of each field wins when your server's changes are pulled. Other tables change
+only locally, unless a command writes them. See <a href="entities.html">entity sync</a>.</p>
+{{example:application:entity-insert}}
+<p>A row inserted into an entity table outside a command gets its final ID immediately (it starts with
+<code>entity:</code>), so no mapping from you is needed.</p>
+
+<h2 id="cleanup">Cleaning up</h2>
+<p>Call the function that <code>observe</code> returned to stop a watcher.</p>
+{{example:application:cleanup}}
+<p>Close the database on shutdown. The Todo app does this in a <code>finally</code> block, so it also closes after a
+failed step.</p>
+{{example:application:close}}
+<p>Errors are <code>Error</code> objects with a fixed <code>kind</code>, such as <code>InvalidRow</code>,
+<code>Busy</code>, <code>Closed</code> or <code>RollbackConflict</code>; see <a href="errors.html">errors</a>.
+Problems in background work can be reported to an <code>onBackgroundError</code> option.</p>
+
+<h2 id="advanced">Advanced: the host API</h2>
+<p><code>@hoyadb/client/host</code> is the lower-level API that the application API is built on. It uses tagged
+values (<code>j.string('x')</code>), explicit runtimes, and manual <code>preparePush</code> and
+<code>receiveWire</code> steps. Use it when you need exact control of the wire format. The excerpts below come from
+<a href="source:examples/javascript.mjs">a separate tested tour</a>, which runs it directly against the
+WebAssembly core and also covers CRUD, relation queries, observation, entity patches, errors and reopening.</p>
+<p>First load the WebAssembly core once and wrap it in a runtime. Every host database opened later uses this
+runtime.</p>
+{{example:javascript:runtime}}
+<p>After a command has run, sync is a sequence of explicit steps. <code>preparePush</code> freezes the waiting work into
+envelopes. Your server answers with an outcome array, which you encode with the runtime's JSON codec and pass to
+<code>receiveWire</code>. Here <code>command</code> is the result of an earlier <code>db.execute</code> in the tour, and
+<code>now</code> is its fixed clock.</p>
+{{example:javascript:manual-sync}}
+<p>The command is now applied. Confirming it is explicit too: read the pending confirmation and map the row the command
+created to the server's ID.</p>
+{{example:javascript:reconcile}}
+<p>The task is then stored under <code>server-task-3</code>.</p>
+<p>On the host API, every operation on a command is explicit:</p>
+<ul>
+  <li><code>reconcile</code> and <code>reconcileGuarded</code> confirm a command.</li>
+  <li><code>rollback</code> undoes a processed rejection.</li>
+  <li><code>cancel</code> withdraws queued, sent or rejected work.</li>
+  <li><code>forget</code> removes finished history.</li>
+</ul>
+<p>Frames are limited to 1 MiB, 64 nesting levels and 100 000 nodes. Methods are described in the
+<a href="sdk-reference.html">SDK reference</a>.</p>
+<p class="note">A configurable stop-or-discard conflict policy (<code>ConflictPolicy</code>, a
+<code>discard</code> operation, an <code>onResolution</code> callback and a <code>discarded</code> state) is
+specified in SPEC-0040 but <strong>not implemented</strong>. Today a conflicting rollback or correction returns
+<code>RollbackConflict</code> and changes nothing. Cancel is different: on an inverse conflict it can record
+Cancelled while retaining recovery data.</p>

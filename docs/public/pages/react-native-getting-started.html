@@ -1,0 +1,37 @@
+<h2>Use one owner across your screens</h2>
+<p>React Native uses the native TurboModule and the JavaScript application layer. Set up the local package and native build using the <a href="source:packages/react-native/README.md">binding README</a>. There is no published registry package in this checkout. Create one database in your application service and share it; do not open a new owner on every render.</p>
+<p><strong>Verification boundary:</strong> the shared application flow below executes against the real WASM core in Node. The React Native bootstrap is checked against current exported symbols, but is <strong>not compiled or executed</strong>: this documentation run does not launch a native app or emulator. It is not native runtime certification.</p>
+
+<h2>1. Describe tasks and your backend</h2>
+<p>The same schema builders and command definitions are available through the application package. The shared file
+exports its schema so that the native bootstrap in step 2 can open the database with it.</p>
+{{example:react-native:schema}}
+<p>The fake backend is for tests; replace it with your authenticated server transport. It answers the
+<code>complete-task-v1</code> command with its own server handler, distinct from the local handler in step 5, and confirms
+entity edits. Its pull returns no changes, which keeps this example local.</p>
+{{example:react-native:backend}}
+
+<h2>2. Open the native database</h2>
+<p>Put the shared file next to the bootstrap in your application service, and call it after the native module is linked. This example uses memory to avoid any key or filesystem setup. For persistence, use <code>openNativeDatabase</code> with an application-managed 32-byte key and the binding's protected-store rules. Never hard-code a production key.</p>
+{{example:react-native-bootstrap:open}}
+<p><code>context</code> is supplied by the app and conveys no authorization guarantee. The server authenticates independently. The demo's <code>runTodo</code> closes its owner; in an app, keep the owner alive until application-service shutdown.</p>
+
+<h2>3. Write and query locally</h2>
+<p>These operations are the body of <code>runTodo(db)</code>. Entity-table inserts have final IDs and sync independently; queries return plain snapshots.</p>
+{{example:react-native:query}}
+
+<h2>4. Observe and dispose</h2>
+<p>Use the callback to update screen state. Keep the unsubscribe function and dispose it when the screen unmounts. Await <code>ready</code> for installation. An owner shared by other screens stays open.</p>
+{{example:react-native:observe}}
+
+<h2>5. Run a local command</h2>
+<p>The tracked handler view commits atomically when the handler returns. The backend handler confirms the same named action later. Calls through the outer owner during an admitted handler return <code>Busy</code>. This command edits an existing task; commands creating <code>local:</code> IDs need explicit application mappings.</p>
+{{example:react-native:command}}
+
+<h2>6. Sync and shut down</h2>
+<p><code>sync()</code> performs one push/receive/reconcile/pull pass. <code>startSync()</code> supplies background scheduling. Stop watchers and close only when the service itself shuts down.</p>
+{{example:react-native:sync}}
+<p>Both the entity insert and the command are now confirmed by the server. In <code>runTodo</code>, the cleanup runs in
+a <code>finally</code> block: it stops the watcher and closes the owner.</p>
+{{example:react-native:cleanup}}
+<p>Run <code>node docs/public/run_language.mjs react-native</code> after building local JavaScript packages to reproduce the shared-core checks. Continue with <a href="react-native-reference.html">the binding reference</a>, <a href="javascript.html">the common application API</a>, and <a href="security.html">key ownership</a>.</p>

@@ -1,0 +1,15 @@
+<h2>Supply a key explicitly</h2><p><code>SqliteStorage::open_with_options</code> takes a caller-supplied 32-byte EncryptionKey. The no-key convenience open refuses. <code>open_unprotected</code> exists for explicit historical/synthetic fixtures and does not meet the protected contract. There is no automatic plaintext fallback.</p>
+<p>The examples use <code>run</code>, <code>schema</code>, <code>fields</code> and <code>owner</code> from the <a href="testing.html#support">example support module</a>. <code>run</code> drives this memory fixture; applications with suspending adapters use their async executor. The examples use <code>unwrap()</code> to stop on unexpected failures; an application should handle the <a href="errors.html">typed errors</a>.</p>
+<p><a href="source:examples/src/bin/persistence.rs">Read the complete runnable example</a>, including setup and assertions. The verification link beneath each snippet records its execution.</p>
+<h3>Provide the key</h3><p>The complete fixture creates a unique temporary path. Its constant key is disposable test data: obtain production key bytes from your platform's secure key mechanism.</p>
+{{example:persistence:key}}
+<h3>Open protected storage</h3><p>Pass both the path and key options explicitly. Failure does not trigger a plaintext fallback.</p>
+{{example:persistence:open}}
+<h3>Write and release the owner</h3><p>Insert a note, then drop the owner so the file can be reopened.</p>
+{{example:persistence:write}}
+<h3>Reopen with the same key</h3><p>The test fetches the original note from this reopened store. It also checks that a different key is refused and removes only its own temporary directory.</p>
+{{example:persistence:reopen}}
+
+<p>This fixture creates a unique temporary directory, uses a deliberately disposable constant key, closes and reopens the actual SQLCipher-backed file, rejects a different key and removes only its own directory. Do not copy its fixed key into an application. Acquire production key bytes through your platform's secure key mechanism.</p>
+<h2>Store lifecycle</h2><p>The adapter initializes only an empty store and validates known formats. Opening an unknown or damaged store fails; it is not silently reset. A second owner can receive StoreInUse. Close all owners before inspecting, backing up or converting files. Browser OPFS storage has additional worker/pool constraints described under <a href="platforms.html">platforms</a>.</p>
+<p>Reference: <a href="api/hoyadb_storage_sqlite/struct.SqliteStorage.html">SqliteStorage</a>, <a href="api/hoyadb_storage_sqlite/struct.SqliteOpenOptions.html">SqliteOpenOptions</a>.</p>

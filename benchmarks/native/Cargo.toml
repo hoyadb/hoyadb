@@ -1,0 +1,13 @@
+[package]
+name = "hoyadb-benchmark"
+version = "0.0.0"
+edition = "2024"
+rust-version = "1.98.1"
+publish = false
+
+[workspace]
+resolver = "3"
+
+[dependencies]
+hoyadb-bindings = { path = "../../crates/hoyadb-bindings" }
+hoyadb-core = { path = "../../crates/hoyadb-core" }

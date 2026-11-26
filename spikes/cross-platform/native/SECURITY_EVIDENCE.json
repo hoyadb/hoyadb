@@ -1,0 +1,104 @@
+{
+  "recorded_at_utc": "2026-10-24T15:54:22.710935+00:00",
+  "scope": "TC-0035 actual x86_64 macOS Swift reference-host evidence only",
+  "platform": {
+    "os": "macOS26.7.1",
+    "build": "25G241",
+    "swift": "AppleSwift6.3.2 swiftlang-6.3.2.1.108 clang-2100.1.1.101",
+    "deployment_target": "x86_64-apple-macosx26.5"
+  },
+  "native_archive_sha256": "cfdf3bf05d9b78224529ad2831eb9a3bca8ed0e4ac1de1d817f81ce9929b5e74",
+  "full_suite_pre_run_inputs_sha256": {
+    "spikes/cross-platform/native/tests/commands.swift": "5630a367bdbac8904b18dfc440c18dcdedfe98000942e178990dbb51297cee70",
+    "spikes/cross-platform/native/target/debug/libhoyadb_native_spike.a": "cfdf3bf05d9b78224529ad2831eb9a3bca8ed0e4ac1de1d817f81ce9929b5e74",
+    "target/phase-six-native/native-commands": "7a74b0c0ac74a52dccbf7c2520019fe5be89aa0a94ca754be4d6fe860492f2ba"
+  },
+  "full_suite_retained_runner": {
+    "path": "target/phase-six-native/native-commands-full-tested",
+    "sha256": "7a74b0c0ac74a52dccbf7c2520019fe5be89aa0a94ca754be4d6fe860492f2ba"
+  },
+  "full_suite_retained_swift": {
+    "path": "target/phase-six-native/commands-full-tested.swift",
+    "sha256": "5630a367bdbac8904b18dfc440c18dcdedfe98000942e178990dbb51297cee70"
+  },
+  "measured_security_pre_run_inputs_sha256": {
+    "spikes/cross-platform/native/tests/commands.swift": "f2ad0c122224d7da6a57d92c293d151c1e1438a807bbe9f407fc5ef70093b902",
+    "spikes/cross-platform/native/target/debug/libhoyadb_native_spike.a": "cfdf3bf05d9b78224529ad2831eb9a3bca8ed0e4ac1de1d817f81ce9929b5e74",
+    "target/phase-six-native/native-commands": "9f0098dc25ecc2364d8a10d95787564f92ed3db888f4ec943e79775392a18f2a"
+  },
+  "post_full_suite_change": "exactly3 measurement statements inside S10 test; see target/phase-six-native/measurement-only.diff; no owner/core/scenario assertion change",
+  "results": {
+    "foundation_backup_cases": {
+      "passed": 6,
+      "failed": 0,
+      "log": "target/phase-six-native/final-backup.txt"
+    },
+    "protected_foreign_cases": {
+      "passed": 3,
+      "failed": 0,
+      "independent_reader": true,
+      "log": "target/phase-six-native/measured-security.txt"
+    },
+    "protected_existing_commands": {
+      "passed": 6,
+      "failed": 0
+    },
+    "protected_existing_entities": {
+      "passed": 4,
+      "failed": 0
+    },
+    "protected_full_log": "target/phase-six-native/protected-full.txt",
+    "protected_full_elapsed_seconds": 45.07007184904069,
+    "unprotected_existing_commands": {
+      "passed": 6,
+      "failed": 0
+    },
+    "unprotected_existing_entities": {
+      "passed": 4,
+      "failed": 0
+    },
+    "unprotected_full_log": "target/phase-six-native/legacy-full.txt",
+    "unprotected_full_elapsed_seconds": 44.57283327798359,
+    "older_swift_main": 5,
+    "older_swift_experiments": 3,
+    "older_swift_reactivity": 4,
+    "older_persistence_processes": [
+      "writer PASS",
+      "reader PASS"
+    ],
+    "older_log": "target/phase-six-native/legacy-swift-matrix.txt"
+  },
+  "measurements": {
+    "protected_fresh_open_including_foundation_policy_and_cabi_ns": 25580020,
+    "protected_H01_handler_to_drain_ns": 13214228,
+    "unprotected_H01_handler_to_drain_ns": 13696483,
+    "qualification": "single debug-build caller samples in one shared host session, including fixture overhead; no percentile/SLO/general performance claim"
+  },
+  "runtime_observed_capability": {
+    "encrypted": true,
+    "cipher": "SQLCipher4.19.0",
+    "backup_exclusion": "host-managed"
+  },
+  "profile_scope": "protected constructor enforces reviewed profile inside production adapter; Swift checks RPC capability and actual wrong-key/ciphertext behavior; provider/private profile test is parent-owned",
+  "loopback_http": "http://127.0.0.1:8775; task-owned shared fixture stopped after native and browser confirmations",
+  "formatting": {
+    "modified_commands_swift_strict": "PASS",
+    "warnings_as_errors_all_swift_builds": "PASS",
+    "diff_check": "PASS",
+    "unchanged_baseline_strict_lint_failures": {
+      "main.swift": "target/phase-six-native/format-main.swift.txt",
+      "experiments.swift": "target/phase-six-native/format-experiments.swift.txt",
+      "reactive.swift": "target/phase-six-native/format-reactive.swift.txt",
+      "persistence.swift": "target/phase-six-native/format-persistence.swift.txt"
+    },
+    "unchanged_baseline_sources_sha256": {
+      "main.swift": "b915c2d68e3159a00ab6d8ec8f3598ae63569d86dccc46ef295a0363fba3baba",
+      "experiments.swift": "984ea924c812a2ff8314709f6b6c873716f52f329908e9bcf882ccf4494848d3",
+      "reactive.swift": "74d3e871759c655d36477fbc330f6dfd1ac46fea33343692da85dd6594faf4f0",
+      "persistence.swift": "5e6cbe141bc79455a32ae700bd285641d08291cd42fe2c60ee71f69783a956b0"
+    }
+  },
+  "key_boundary_limits": "synthetic supplied key only; raw store main and any present sidecars checked for canaries/key hex/plain SQLite header; no compromised-runtime, secure foreign-copy erasure, universal backup suppression, mobile or FIPS claim",
+  "source_log_evidence_root": "target/phase-six-native",
+  "cleanup": "target/phase-six-native/cleanup.json exact failed task roots removed; successful host runs remove own roots; target/phase-six-native/http-cleanup.json records stopped owned server"
+}

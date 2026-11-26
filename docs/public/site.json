@@ -1,0 +1,280 @@
+[
+  {
+    "slug": "index",
+    "title": "Build locally. Sync deliberately.",
+    "summary": "An embedded database with typed local data, reactive queries and a durable queue for your authoritative backend.",
+    "group": "Start",
+    "symbols": []
+  },
+  {
+    "slug": "getting-started",
+    "title": "Getting started",
+    "summary": "Open your application database, query and observe rows, then define a command with its local handler and backend.",
+    "group": "Start",
+    "symbols": []
+  },
+  {
+    "slug": "typescript-getting-started",
+    "title": "TypeScript getting started",
+    "summary": "Open a database, read and watch local data, run a command and sync using the TypeScript binding.",
+    "group": "Start",
+    "symbols": []
+  },
+  {
+    "slug": "swift-getting-started",
+    "title": "Swift getting started",
+    "summary": "Open a database, read and watch local data, run a command and sync using the Swift binding.",
+    "group": "Start",
+    "symbols": []
+  },
+  {
+    "slug": "kotlin-getting-started",
+    "title": "Kotlin / Android getting started",
+    "summary": "Open a database, read and watch local data, run a command and sync using the Kotlin / Android binding.",
+    "group": "Start",
+    "symbols": []
+  },
+  {
+    "slug": "react-native-getting-started",
+    "title": "React Native getting started",
+    "summary": "Open a database, read and watch local data, run a command and sync using the React Native binding.",
+    "group": "Start",
+    "symbols": []
+  },
+  {
+    "slug": "c-getting-started",
+    "title": "C / native ABI getting started",
+    "summary": "Open a database, read and watch local data, run a command and sync using the C / native ABI binding.",
+    "group": "Start",
+    "symbols": []
+  },
+  {
+    "slug": "rust-getting-started",
+    "title": "Rust and embedding quickstart",
+    "summary": "Use the core directly from Rust; application bindings have their own quickstart.",
+    "group": "Start",
+    "symbols": [
+      "hoyadb_core/model/struct.Database.html"
+    ]
+  },
+  {
+    "slug": "installation",
+    "title": "Installation and builds",
+    "summary": "Use the repository’s pinned toolchain and local packages while the library is unpublished.",
+    "group": "Start",
+    "symbols": []
+  },
+  {
+    "slug": "architecture",
+    "title": "Owners and architecture",
+    "summary": "Choose the owner that matches your application’s local and sync responsibilities.",
+    "group": "Concepts",
+    "symbols": [
+      "hoyadb_core/model/struct.ReactiveDatabase.html",
+      "hoyadb_core/command/struct.CommandDatabase.html"
+    ]
+  },
+  {
+    "slug": "model",
+    "title": "Schemas and values",
+    "summary": "Declare the shape of your data, with explicit types and lossless values.",
+    "group": "Concepts",
+    "symbols": [
+      "hoyadb_core/model/struct.SchemaDefinition.html",
+      "hoyadb_core/storage/enum.Value.html"
+    ]
+  },
+  {
+    "slug": "queries",
+    "title": "Querying data",
+    "summary": "Build a lazy typed query, then fetch an owned result.",
+    "group": "Guides",
+    "symbols": [
+      "hoyadb_core/model/struct.QueryBuilder.html"
+    ]
+  },
+  {
+    "slug": "relations",
+    "title": "Working with relations",
+    "summary": "Navigate declared associations and keep identity rules explicit.",
+    "group": "Guides",
+    "symbols": [
+      "hoyadb_core/model/enum.RelationDefinition.html"
+    ]
+  },
+  {
+    "slug": "migrations",
+    "title": "Changing a schema",
+    "summary": "Describe each version transition explicitly and reopen through the normal schema boundary.",
+    "group": "Guides",
+    "symbols": [
+      "hoyadb_core/model/struct.Migration.html"
+    ]
+  },
+  {
+    "slug": "observations",
+    "title": "Reactive queries",
+    "summary": "Register once, deliver owned notifications on the host clock, and unsubscribe explicitly.",
+    "group": "Guides",
+    "symbols": [
+      "hoyadb_core/model/struct.ReactiveDatabase.html"
+    ]
+  },
+  {
+    "slug": "commands",
+    "title": "Offline commands",
+    "summary": "Commit an optimistic local action and retain the exact work needed for authoritative sync.",
+    "group": "Guides",
+    "symbols": [
+      "hoyadb_core/command/struct.CommandDatabase.html"
+    ]
+  },
+  {
+    "slug": "sync",
+    "title": "Transport and durable retries",
+    "summary": "Send core-generated envelopes and feed receipts back without changing their meaning.",
+    "group": "Concepts",
+    "symbols": [
+      "hoyadb_core/command/struct.SyncOptions.html"
+    ]
+  },
+  {
+    "slug": "reconciliation",
+    "title": "Reconciliation and recovery",
+    "summary": "Apply authoritative results without overwriting unrelated local work.",
+    "group": "Guides",
+    "symbols": [
+      "hoyadb_core/command/struct.ReconcilePlan.html",
+      "hoyadb_core/command/struct.CorrectionGuard.html"
+    ]
+  },
+  {
+    "slug": "entities",
+    "title": "Entity sync and partial patches",
+    "summary": "Explicitly configure tables whose ordinary writes become durable entity changes.",
+    "group": "Guides",
+    "symbols": [
+      "hoyadb_core/command/entity/struct.EntityChange.html"
+    ]
+  },
+  {
+    "slug": "pull-merge",
+    "title": "Pull pages and merge hooks",
+    "summary": "Advance checkpoints only when a validated page has committed.",
+    "group": "Guides",
+    "symbols": [
+      "hoyadb_core/command/struct.PullPage.html",
+      "hoyadb_core/command/enum.MergeStep.html"
+    ]
+  },
+  {
+    "slug": "persistence",
+    "title": "Persistent SQLite storage",
+    "summary": "Open protected local storage with an application-owned key and verify a real reopen.",
+    "group": "Guides",
+    "symbols": [
+      "hoyadb_storage_sqlite/struct.SqliteStorage.html"
+    ]
+  },
+  {
+    "slug": "security",
+    "title": "Security and application boundaries",
+    "summary": "Keep keys, authorization and transport decisions in the host application.",
+    "group": "Concepts",
+    "symbols": []
+  },
+  {
+    "slug": "errors",
+    "title": "Errors and atomicity",
+    "summary": "Handle typed failures and preserve the last committed state.",
+    "group": "Guides",
+    "symbols": [
+      "hoyadb_core/storage/enum.StorageError.html",
+      "hoyadb_core/command/enum.CommandError.html"
+    ]
+  },
+  {
+    "slug": "testing",
+    "title": "Testing applications",
+    "summary": "Exercise the real engine with deterministic host inputs.",
+    "group": "Guides",
+    "symbols": []
+  },
+  {
+    "slug": "glossary",
+    "title": "Glossary",
+    "summary": "A common vocabulary for local data, durable actions and backend authority.",
+    "group": "Concepts",
+    "symbols": []
+  },
+  {
+    "slug": "rust-reference",
+    "title": "Rust public reference",
+    "summary": "Generated signatures, types, traits and methods from the current workspace.",
+    "group": "Reference",
+    "symbols": []
+  },
+  {
+    "slug": "javascript",
+    "title": "JavaScript quickstart",
+    "summary": "Public imports, plain values, database instances, record updates and atomic async command handlers.",
+    "group": "Start",
+    "symbols": []
+  },
+  {
+    "slug": "platforms",
+    "title": "Web, Swift, React Native and Android",
+    "summary": "Find platform entry points and understand what the source establishes.",
+    "group": "Guides",
+    "symbols": []
+  },
+  {
+    "slug": "sdk-reference",
+    "title": "SDK method reference",
+    "summary": "Map application operations to the portable and platform wrappers.",
+    "group": "Reference",
+    "symbols": []
+  },
+  {
+    "slug": "sdk-declarations",
+    "title": "JavaScript declarations",
+    "summary": "Exact TypeScript surface for the portable host and browser entry.",
+    "group": "Reference",
+    "symbols": []
+  },
+  {
+    "slug": "native-reference",
+    "title": "Native C ABI reference",
+    "summary": "Exact C header and ownership contract.",
+    "group": "Reference",
+    "symbols": []
+  },
+  {
+    "slug": "swift-reference",
+    "title": "Swift source reference",
+    "summary": "Current Swift wrapper declarations and implementation source.",
+    "group": "Reference",
+    "symbols": []
+  },
+  {
+    "slug": "kotlin-reference",
+    "title": "Kotlin source reference",
+    "summary": "Android declarations; the getting-started example is verified separately on an emulator.",
+    "group": "Reference",
+    "symbols": []
+  },
+  {
+    "slug": "react-native-reference",
+    "title": "React Native reference",
+    "summary": "Current React Native entry declarations and source.",
+    "group": "Reference",
+    "symbols": []
+  },
+  {
+    "slug": "verification",
+    "title": "Example verification",
+    "summary": "Executed examples, exact source hashes and reproducible documentation checks.",
+    "group": "Reference",
+    "symbols": []
+  }
+]

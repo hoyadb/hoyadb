@@ -1,0 +1,14 @@
+# Installed approved official helper; no source fallback or external pod source.
+require Pod::Executable.execute_command('node', ['-p',
+  'require.resolve("react-native/scripts/react_native_pods.rb", {paths:[process.argv[1]]})', __dir__]).strip
+# Hermetic installs name an explicit local spec source; unset keeps the CocoaPods default.
+source ENV['HOYA_POD_SPEC_SOURCE'] if ENV['HOYA_POD_SPEC_SOURCE']
+platform :ios, '15.1'
+prepare_react_native_project!
+target 'HoyaConsumer' do
+  config=use_native_modules!
+  use_react_native!(path:config[:reactNativePath],app_path:"#{Pod::Config.instance.installation_root}/..",hermes_enabled:true)
+  post_install do |installer|
+    react_native_post_install(installer,config[:reactNativePath],mac_catalyst_enabled:false,ccache_enabled:false)
+  end
+end

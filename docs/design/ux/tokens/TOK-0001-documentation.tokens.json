@@ -1,0 +1,282 @@
+{
+  "$description": "TOK-0001: hoyadb documentation design tokens (W3C Design Tokens Format Module). Restates the values implemented in docs/public/assets/style.css; CSS-only values (ch, em, clamp) are listed in TOK-0001-documentation-design-tokens.md.",
+  "color": {
+    "text": {
+      "default": {
+        "$type": "color",
+        "$value": "#172b25",
+        "$description": "Body text, headings, brand name and card text (CSS --ink). 14.91:1 on surface.page."
+      },
+      "muted": {
+        "$type": "color",
+        "$value": "#51675e",
+        "$description": "Lead paragraphs, captions, footer, sidebar group headings and version badge (CSS --muted). 6.08:1 on surface.page, 5.62:1 on surface.subtle."
+      }
+    },
+    "accent": {
+      "default": {
+        "$type": "color",
+        "$value": "#166345",
+        "$description": "The single brand accent: links, eyebrow, card titles, callout rule and brand mark background (CSS --green). 7.23:1 on surface.page."
+      },
+      "hover": {
+        "$type": "color",
+        "$value": "#0a432d",
+        "$description": "Link hover state of accent.default. 11.33:1 on surface.page."
+      },
+      "on-accent": {
+        "$type": "color",
+        "$value": "#ffffff",
+        "$description": "Text placed on accent.default, such as the brand mark letter. 7.23:1."
+      }
+    },
+    "surface": {
+      "page": {
+        "$type": "color",
+        "$value": "#ffffff",
+        "$description": "Page, input and skip-link background (CSS --paper)."
+      },
+      "subtle": {
+        "$type": "color",
+        "$value": "#f3f7f3",
+        "$description": "Sidebar, table header, inline code and callout background (CSS --soft)."
+      }
+    },
+    "border": {
+      "subtle": {
+        "$type": "color",
+        "$value": "#dce5df",
+        "$description": "Decorative dividers: header, sidebar, table rows, cards, pager and version badge (CSS --line). Never the only boundary of an interactive control."
+      },
+      "control": {
+        "$type": "color",
+        "$value": "#8ca697",
+        "$description": "Search input border. Measured 2.62:1 on surface.page, below the 3:1 of WCAG 2.2 SC 1.4.11; recorded as a known gap in TOK-0001."
+      }
+    },
+    "focus": {
+      "ring": {
+        "$type": "color",
+        "$value": "#a44709",
+        "$description": "Visible focus outline for links, inputs and main (SC 2.4.7). Deliberately not green so focus differs from link color. 6.03:1 on surface.page, 5.57:1 on surface.subtle."
+      }
+    },
+    "code": {
+      "background": {
+        "$type": "color",
+        "$value": "#152b23",
+        "$description": "Code block background (CSS --code)."
+      },
+      "text": {
+        "$type": "color",
+        "$value": "#e3f1e9",
+        "$description": "Unhighlighted code text on code.background. 12.86:1."
+      }
+    },
+    "syntax": {
+      "keyword": {
+        "$type": "color",
+        "$value": "#d8b4fe",
+        "$description": "Keywords on code.background (UX-0003). 8.47:1."
+      },
+      "string": {
+        "$type": "color",
+        "$value": "#a7f3a1",
+        "$description": "String literals on code.background. 11.40:1."
+      },
+      "comment": {
+        "$type": "color",
+        "$value": "#afbdb5",
+        "$description": "Comments on code.background. 7.68:1."
+      },
+      "number": {
+        "$type": "color",
+        "$value": "#f6c177",
+        "$description": "Numeric literals on code.background. 9.14:1."
+      },
+      "type": {
+        "$type": "color",
+        "$value": "#8bd5ff",
+        "$description": "Type names on code.background. 9.32:1."
+      },
+      "callable": {
+        "$type": "color",
+        "$value": "#f5b4d2",
+        "$description": "Function and method names on code.background. 8.80:1."
+      },
+      "punctuation": {
+        "$type": "color",
+        "$value": "#dce5df",
+        "$description": "Punctuation on code.background. 11.64:1."
+      }
+    }
+  },
+  "font": {
+    "family": {
+      "sans": {
+        "$type": "fontFamily",
+        "$value": ["system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"],
+        "$description": "All prose and interface text. System fonts only: no external font files or CDN (UX-0003)."
+      },
+      "mono": {
+        "$type": "fontFamily",
+        "$value": ["ui-monospace", "SFMono-Regular", "Consolas", "monospace"],
+        "$description": "Code blocks."
+      },
+      "mark": {
+        "$type": "fontFamily",
+        "$value": ["Georgia", "serif"],
+        "$description": "Italic letter inside the brand mark only (CMP-0001)."
+      }
+    },
+    "size": {
+      "base": {
+        "$type": "dimension",
+        "$value": "16px",
+        "$description": "Root font size; rem values in TOK-0001 are relative to it."
+      },
+      "code": {
+        "$type": "dimension",
+        "$value": "13px",
+        "$description": "Code blocks at widths above layout.breakpoint-narrow."
+      },
+      "code-narrow": {
+        "$type": "dimension",
+        "$value": "12px",
+        "$description": "Code blocks at or below layout.breakpoint-narrow."
+      }
+    },
+    "weight": {
+      "regular": {
+        "$type": "fontWeight",
+        "$value": 400,
+        "$description": "Body text and the brand 'docs' suffix."
+      },
+      "label": {
+        "$type": "fontWeight",
+        "$value": 650,
+        "$description": "Form labels such as the search label."
+      },
+      "heading": {
+        "$type": "fontWeight",
+        "$value": 720,
+        "$description": "Page title (h1)."
+      },
+      "strong": {
+        "$type": "fontWeight",
+        "$value": 750,
+        "$description": "Brand name and eyebrow."
+      }
+    },
+    "line-height": {
+      "body": {
+        "$type": "number",
+        "$value": 1.7,
+        "$description": "Body text line height."
+      },
+      "code": {
+        "$type": "number",
+        "$value": 1.75,
+        "$description": "Code block line height at every width (UX-0003)."
+      },
+      "title": {
+        "$type": "number",
+        "$value": 1.15,
+        "$description": "Page title (h1) line height."
+      },
+      "heading": {
+        "$type": "number",
+        "$value": 1.35,
+        "$description": "Section heading (h2) line height."
+      }
+    }
+  },
+  "radius": {
+    "large": {
+      "$type": "dimension",
+      "$value": "12px",
+      "$description": "Cards and code blocks (CSS --radius)."
+    },
+    "medium": {
+      "$type": "dimension",
+      "$value": "8px",
+      "$description": "Callout trailing corners."
+    },
+    "control": {
+      "$type": "dimension",
+      "$value": "7px",
+      "$description": "Search input."
+    },
+    "inline": {
+      "$type": "dimension",
+      "$value": "4px",
+      "$description": "Inline code."
+    },
+    "pill": {
+      "$type": "dimension",
+      "$value": "20px",
+      "$description": "Version badge."
+    }
+  },
+  "focus": {
+    "width": {
+      "$type": "dimension",
+      "$value": "3px",
+      "$description": "Focus outline width (color.focus.ring)."
+    },
+    "offset": {
+      "$type": "dimension",
+      "$value": "4px",
+      "$description": "Focus outline offset; keeps the ring outside the focused element."
+    }
+  },
+  "space": {
+    "card-gap": {
+      "$type": "dimension",
+      "$value": "16px",
+      "$description": "Gap between cards."
+    },
+    "card-padding": {
+      "$type": "dimension",
+      "$value": "22px",
+      "$description": "Card padding, callout horizontal padding and code block padding above layout.breakpoint-narrow."
+    },
+    "code-padding-narrow": {
+      "$type": "dimension",
+      "$value": "15px",
+      "$description": "Code block padding at or below layout.breakpoint-narrow."
+    },
+    "gutter-narrow": {
+      "$type": "dimension",
+      "$value": "20px",
+      "$description": "Horizontal page gutter at or below layout.breakpoint-narrow."
+    }
+  },
+  "layout": {
+    "max-width": {
+      "$type": "dimension",
+      "$value": "1440px",
+      "$description": "Maximum width of the sidebar plus article grid."
+    },
+    "sidebar-width": {
+      "$type": "dimension",
+      "$value": "270px",
+      "$description": "Sidebar column width above layout.breakpoint-narrow."
+    },
+    "article-max-width": {
+      "$type": "dimension",
+      "$value": "1110px",
+      "$description": "Maximum width of the main article column."
+    },
+    "header-min-height": {
+      "$type": "dimension",
+      "$value": "80px",
+      "$description": "Minimum site header height."
+    },
+    "breakpoint-narrow": {
+      "$type": "dimension",
+      "$value": "760px",
+      "$description": "At or below this viewport width, navigation moves above the article and cards stack (UX-0003)."
+    }
+  }
+}

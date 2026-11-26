@@ -1,0 +1,65 @@
+{
+  "scope": "native Rust workspace source files including inline unit tests; branches unknown unless instrumented",
+  "measurement": {
+    "command": [
+      "cargo",
+      "llvm-cov",
+      "--workspace",
+      "--offline",
+      "--locked",
+      "--json",
+      "--output-path",
+      "target/quality/coverage.json",
+      "--release"
+    ],
+    "comparison": {
+      "kind": "coverage",
+      "compiler": "rustc 1.98.1 (48a229cea 2026-09-01)\nbinary: rustc\ncommit-hash: 48a229ceaefd4985c50990b14116b6d856af0985\ncommit-date: 2026-09-01\nhost: x86_64-unknown-linux-gnu\nrelease: 1.98.1\nLLVM version: 22.1.8",
+      "tool": "cargo-llvm-cov 0.9.1",
+      "target": "x86_64-unknown-linux-gnu",
+      "profile": "release",
+      "command": [
+        "cargo",
+        "llvm-cov",
+        "--workspace",
+        "--offline",
+        "--locked",
+        "--json",
+        "--release"
+      ],
+      "environment": {}
+    },
+    "captured_at": "2026-10-29T21:07:40.728652+00:00"
+  },
+  "components": {
+    "hoyadb-bindings": {
+      "lines": {
+        "count": 2397,
+        "covered": 2061
+      },
+      "branches": null
+    },
+    "hoyadb-core": {
+      "lines": {
+        "count": 15908,
+        "covered": 15198
+      },
+      "branches": null
+    },
+    "hoyadb-storage-sqlite": {
+      "lines": {
+        "count": 1816,
+        "covered": 1759
+      },
+      "branches": null
+    },
+    "hoyadb-storage-memory": {
+      "lines": null,
+      "branches": null
+    }
+  },
+  "source_snapshot_sha256": "67f330ea765348b7ca26280a70ec18223c32b626fbcc88e1f2ef4e60d273bcd3",
+  "revision": "035bd0f180ca73c017813f03c454d4ad85936927",
+  "dirty": true,
+  "evidence": "Initial complete Linux/release workspace coverage in the exact CI Rust image. Raw reports under target/quality/linux-worktree/target/quality; Rust source hashes equal the host tree. The first gate correctly rejected a missing Linux baseline. A postprocessing helper expected revision in that rejected summary and failed; this import obtains the actual HEAD from the host and preserves the source fingerprint. No test failure or timeout was ignored."
+}

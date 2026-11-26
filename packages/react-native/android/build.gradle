@@ -1,0 +1,13 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.facebook.react'
+
+react { libraryName = 'HoyaDBSpec'; codegenJavaPackageName = 'dev.hoyadb' }
+android {
+  namespace 'dev.hoyadb.reactnative'
+  compileSdk 37
+  defaultConfig { minSdk 24 }
+}
+dependencies {
+  implementation 'com.facebook.react:react-android:0.86.3'
+  implementation 'dev.hoyadb:hoyadb-android:0.1.0'
+}

@@ -1,0 +1,421 @@
+{
+  "architecture": [
+    {
+      "file": "crates/hoyadb-core/src/model/database.rs",
+      "names": [
+        "Database",
+        "into_storage"
+      ]
+    },
+    {
+      "file": "crates/hoyadb-core/src/model/reactive.rs",
+      "names": [
+        "ReactiveDatabase"
+      ]
+    },
+    {
+      "file": "crates/hoyadb-core/src/command/owner.rs",
+      "names": [
+        "CommandDatabase"
+      ]
+    }
+  ],
+  "model": [
+    {
+      "file": "crates/hoyadb-core/src/model/schema.rs",
+      "names": [
+        "SchemaDefinition",
+        "TableDefinition",
+        "RelationDefinition"
+      ]
+    },
+    {
+      "file": "crates/hoyadb-core/src/storage.rs",
+      "names": [
+        "Value",
+        "StorageError"
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "file": "crates/hoyadb-core/src/model/query.rs",
+      "names": [
+        "QueryBuilder",
+        "where_",
+        "where_in",
+        "order_by",
+        "limit",
+        "fetch"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "file": "crates/hoyadb-core/src/model/query.rs",
+      "names": [
+        "link",
+        "unlink"
+      ]
+    },
+    {
+      "file": "crates/hoyadb-core/src/model/database.rs",
+      "names": [
+        "related"
+      ]
+    }
+  ],
+  "migrations": [
+    {
+      "file": "crates/hoyadb-core/src/model/migration.rs",
+      "names": [
+        "Migration",
+        "MigrationStep",
+        "AddTable",
+        "DropTable",
+        "AddColumn",
+        "DropColumn",
+        "RenameColumn",
+        "Backfill",
+        "SetRelations"
+      ]
+    },
+    {
+      "file": "crates/hoyadb-core/src/model/database.rs",
+      "names": [
+        "open_recoverable"
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "file": "crates/hoyadb-core/src/model/reactive.rs",
+      "names": [
+        "observe",
+        "observe_count",
+        "observe_with_columns",
+        "drain_notifications",
+        "refresh_notifications",
+        "unsubscribe"
+      ]
+    }
+  ],
+  "commands": [
+    {
+      "file": "crates/hoyadb-core/src/command/owner.rs",
+      "names": [
+        "request",
+        "begin",
+        "finish",
+        "abort",
+        "scope_insert",
+        "scope_context"
+      ]
+    }
+  ],
+  "sync": [
+    {
+      "file": "crates/hoyadb-core/src/command/sync.rs",
+      "names": [
+        "prepare_push",
+        "receive",
+        "pending_reconciliations",
+        "request_redelivery"
+      ]
+    }
+  ],
+  "reconciliation": [
+    {
+      "file": "crates/hoyadb-core/src/command/sync.rs",
+      "names": [
+        "reconcile",
+        "reconcile_guarded",
+        "rollback",
+        "cancel",
+        "forget"
+      ]
+    },
+    {
+      "file": "crates/hoyadb-core/src/command/queue.rs",
+      "names": [
+        "CorrectionGuard",
+        "ReconcilePlan"
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "file": "crates/hoyadb-core/src/command/entity_owner.rs",
+      "names": [
+        "configure_entities",
+        "reconfigure_entities",
+        "patch"
+      ]
+    },
+    {
+      "file": "crates/hoyadb-core/src/command/entity.rs",
+      "names": [
+        "EntityConfig",
+        "EntityChange",
+        "FieldStamp"
+      ]
+    }
+  ],
+  "pull-merge": [
+    {
+      "file": "crates/hoyadb-core/src/command/pull.rs",
+      "names": [
+        "begin_pull",
+        "apply_pull",
+        "reset",
+        "PullPage",
+        "ResetMode",
+        "PreserveRecovery",
+        "DiscardRecovery"
+      ]
+    },
+    {
+      "file": "crates/hoyadb-core/src/command/merge.rs",
+      "names": [
+        "merge_prepare",
+        "merge_input",
+        "merge_reply",
+        "merge_commit",
+        "merge_abort"
+      ]
+    }
+  ],
+  "persistence": [
+    {
+      "file": "crates/hoyadb-storage-sqlite/src/lib.rs",
+      "names": [
+        "SqliteStorage",
+        "open_with_options",
+        "open_unprotected"
+      ]
+    },
+    {
+      "file": "crates/hoyadb-storage-sqlite/src/encryption.rs",
+      "names": [
+        "EncryptionKey",
+        "SqliteOpenOptions"
+      ]
+    }
+  ],
+  "sdk-reference": [
+    {
+      "file": "packages/client/index.d.ts",
+      "names": [
+        "batch",
+        "call",
+        "cancel",
+        "close",
+        "configureEntities",
+        "constructor",
+        "createMemoryStore",
+        "decodeJson",
+        "diagnostics",
+        "drain",
+        "dropMemoryStore",
+        "encodeJson",
+        "entityBatch",
+        "entityLink",
+        "entityUnlink",
+        "execute",
+        "fetch",
+        "forget",
+        "insert",
+        "jitter",
+        "limit",
+        "link",
+        "namespace",
+        "observationStats",
+        "observe",
+        "observeData",
+        "observeOutcome",
+        "observeProgress",
+        "observeStatus",
+        "open",
+        "orderBy",
+        "patch",
+        "pendingReconciliations",
+        "preparePush",
+        "protection",
+        "pullOnce",
+        "query",
+        "queueStatus",
+        "receive",
+        "receiveEntity",
+        "receiveWire",
+        "reconcile",
+        "reconcileGuarded",
+        "reconfigureEntities",
+        "refresh",
+        "related",
+        "remove",
+        "replace",
+        "requestRedelivery",
+        "reset",
+        "rollback",
+        "schema",
+        "setMergeHooks",
+        "startSync",
+        "stopSync",
+        "sync",
+        "syncProgress",
+        "toJSON",
+        "unlink",
+        "unsubscribe",
+        "where",
+        "whereIn"
+      ]
+    }
+  ],
+  "javascript": [
+    {
+      "file": "packages/client/src/index.js",
+      "names": [
+        "createRuntime",
+        "defineSchema",
+        "j",
+        "openDatabase",
+        "query"
+      ]
+    }
+  ],
+  "platforms": [
+    {
+      "file": "bindings/swift/Sources/HoyaDB/Database.swift",
+      "names": [
+        "Database",
+        "openMemory",
+        "openProtected"
+      ]
+    },
+    {
+      "file": "packages/react-native/index.d.ts",
+      "names": [
+        "openNativeDatabase",
+        "openMemoryDatabase",
+        "createNativeRuntime"
+      ]
+    }
+  ],
+  "application": [
+    {
+      "file": "packages/client/application.d.ts",
+      "names": [
+        "ApplicationDatabase",
+        "defineCommand",
+        "table",
+        "column",
+        "ApplicationPending",
+        "ApplicationQuery"
+      ]
+    }
+  ],
+  "typescript-getting-started": [
+    {
+      "file": "packages/client/application.d.ts",
+      "names": [
+        "defineSchema",
+        "table",
+        "column",
+        "defineCommand",
+        "observe",
+        "ready",
+        "sync",
+        "close",
+        "execute"
+      ]
+    }
+  ],
+  "react-native-getting-started": [
+    {
+      "file": "packages/react-native/src/index.js",
+      "names": [
+        "openMemoryDatabase",
+        "openNativeDatabase"
+      ]
+    },
+    {
+      "file": "packages/client/application.d.ts",
+      "names": [
+        "defineSchema",
+        "table",
+        "column",
+        "defineCommand",
+        "query",
+        "observe",
+        "close"
+      ]
+    }
+  ],
+  "rust-getting-started": [
+    {
+      "file": "crates/hoyadb-core/src/command/owner.rs",
+      "names": [
+        "CommandDatabase",
+        "begin",
+        "finish",
+        "observe",
+        "drain_notifications",
+        "close"
+      ]
+    },
+    {
+      "file": "crates/hoyadb-core/src/command/sync.rs",
+      "names": [
+        "prepare_push",
+        "receive",
+        "reconcile"
+      ]
+    }
+  ],
+  "swift-getting-started": [
+    {
+      "file": "bindings/swift/Sources/HoyaDB/Database.swift",
+      "names": [
+        "Database",
+        "openMemory",
+        "close"
+      ]
+    },
+    {
+      "file": "bindings/swift/Sources/HoyaDB/Commands.swift",
+      "names": [
+        "CommandDefinition",
+        "command",
+        "CapturedContext"
+      ]
+    },
+    {
+      "file": "bindings/swift/Sources/HoyaDB/Observations.swift",
+      "names": [
+        "observe",
+        "Subscription"
+      ]
+    }
+  ],
+  "kotlin-getting-started": [
+    {
+      "file": "bindings/android/src/main/kotlin/dev/hoyadb/Database.kt",
+      "names": [
+        "Database",
+        "openMemory",
+        "close"
+      ]
+    }
+  ],
+  "c-getting-started": [
+    {
+      "file": "crates/hoyadb-native/include/hoyadb.h",
+      "names": [
+        "hoya_v1_abi_version",
+        "hoya_v1_open",
+        "hoya_v1_call",
+        "hoya_v1_reply"
+      ]
+    }
+  ]
+}

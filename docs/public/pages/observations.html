@@ -1,0 +1,19 @@
+<p class="callout">Using a binding? Start with its <a href="getting-started.html">application tutorial</a>. This page teaches the Rust core. Snippets are consecutive parts of one tested program.</p>
+<h2>Watch local data</h2><p>The Rust core queues owned notifications. Your host decides when to drain and deliver them. Managed bindings schedule this delivery for you.</p>
+<p>The examples use <code>run</code>, <code>schema</code>, <code>fields</code> and <code>owner</code> from the <a href="testing.html#support">example support module</a>. <code>run</code> drives this memory fixture; applications with suspending adapters use their async executor. The examples use <code>unwrap()</code> to stop on unexpected failures; an application should handle the <a href="errors.html">typed errors</a>.</p>
+<p><a href="source:examples/src/bin/observations.rs">Read the complete runnable example</a>, including setup and assertions. The verification link beneath each snippet records its execution.</p>
+<h2>1. Open a reactive owner</h2><p>Turn the local database into a reactive owner before registering subscriptions.</p>
+{{example:observations:open}}
+<h2>2. Register rows and count</h2><p>Both subscriptions use the same query. Keep their tokens so you can route notifications and unsubscribe later.</p>
+{{example:observations:subscribe}}
+<h2>3. Deliver the first snapshot</h2><p>Initial notifications are available without a write. This first drain returns two events, one for each registration.</p>
+{{example:observations:initial}}
+<h2>4. Deliver a change</h2><p>Insert a note, then drain using a monotonic millisecond sample. Match each event's <code>subscription</code> to the token you registered.</p>
+{{example:observations:change}}
+<p>The row subscription has an event at this point. The count notification is delayed by its host-driven 16 ms interval; the example checks that it is not delivered early.</p>
+<h2>5. Schedule a later count drain</h2><p>The host must arrange the next drain; the core creates no timer. At 16 ms this fixture receives a count of one.</p>
+{{example:observations:count}}
+<h2>6. Stop watching</h2><p>Release both registrations when their consumers are gone. Removing the last registration releases the shared query group.</p>
+{{example:observations:dispose}}
+<h2>Choose what a change means</h2><p>Default row observations track membership. Use <code>observe_with_columns</code> when changes to selected cells should also cause delivery. Callback errors do not undo a committed write; <code>refresh_notifications</code> supports explicit refresh. See the <a href="javascript.html">binding guide</a> for managed callback delivery.</p>
+<p>Reference: <a href="api/hoyadb_core/model/struct.ReactiveDatabase.html">ReactiveDatabase</a>.</p>

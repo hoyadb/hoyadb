@@ -1,0 +1,42 @@
+[package]
+name = "hoyadb-storage-sqlite"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[dependencies]
+hoyadb-core = { path = "../hoyadb-core" }
+zeroize = "=1.9.1"
+
+# SPEC-0037 R2.3/R4: test instrumentation only; never enabled by production builds.
+[features]
+work-counters = ["hoyadb-core/work-counters"]
+# Native-only fault functions for fixtures; the pinned rusqlite declares functions = [].
+test-hooks = ["rusqlite/functions"]
+# SPEC-0037 R11: explicit offline native tooling, never a production dependency.
+ledger-convert-tool = []
+
+[[bin]]
+name = "hoyadb-convert-ledger"
+path = "src/bin/hoyadb-convert-ledger.rs"
+required-features = ["ledger-convert-tool"]
+
+[dev-dependencies]
+hoyadb-storage-sqlite = { path = ".", features = ["work-counters"] }
+
+[target.'cfg(not(target_arch = "wasm32"))'.dev-dependencies]
+hoyadb-storage-sqlite = { path = ".", features = ["test-hooks"] }
+
+[target.'cfg(not(target_arch = "wasm32"))'.dependencies]
+rusqlite = { git = "https://github.com/rusqlite/rusqlite", rev = "661107f6eb5d7477c61be1221744de3ad96c53e7", default-features = false, features = ["bundled-sqlcipher"] }
+
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+rusqlite = { git = "https://github.com/rusqlite/rusqlite", rev = "661107f6eb5d7477c61be1221744de3ad96c53e7", default-features = false, features = ["ffi-sqlite-wasm-rs"] }
+# Pin the backend and its transitive bridge family to the reviewed CLI graph.
+sqlite-wasm-rs = { version = "=0.6.2", default-features = false, features = ["wasm-bindgen", "sqlcipher"] }
+wasm-bindgen = "=0.2.129"
+js-sys = "=0.3.106"
+
+[lints]
+workspace = true

@@ -1,0 +1,6 @@
+# Upstream notice and recorded evidence hashes describe exact source bytes.
+# Preserve them through clean/checkout filters without changing source policy.
+bindings/*/third-party/** -text
+crates/hoyadb-native/third-party/** -text
+licenses/javascript/** -text
+tests/tooling/testdata/upstream-crlf.txt -text

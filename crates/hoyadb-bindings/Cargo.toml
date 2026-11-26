@@ -1,0 +1,26 @@
+[package]
+name = "hoyadb-bindings"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[dependencies]
+hoyadb-core = { path = "../hoyadb-core" }
+hoyadb-storage-memory = { path = "../hoyadb-storage-memory" }
+hoyadb-storage-sqlite = { path = "../hoyadb-storage-sqlite" }
+zeroize = "=1.9.1"
+
+# SPEC-0037 R4: test instrumentation only; never enabled by production builds.
+[features]
+work-counters = [
+    "hoyadb-core/work-counters",
+    "hoyadb-storage-memory/work-counters",
+    "hoyadb-storage-sqlite/work-counters",
+]
+
+[dev-dependencies]
+hoyadb-bindings = { path = ".", features = ["work-counters"] }
+
+[lints]
+workspace = true

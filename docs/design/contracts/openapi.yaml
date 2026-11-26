@@ -1,0 +1,270 @@
+openapi: 3.1.0
+info:
+  title: hoyadb reference HTTP sync transport
+  version: "1.0.0"
+  summary: Reference transport for hoyadb's sync contract — an example, not an exclusive requirement.
+  description: |
+    Historical version 1 reference. The approved unpublished Phase 5 extension
+    is API-0009 and entity-sync-openapi.json: writeId/removedFields correlation,
+    explicit completion and exact lossless comparison clocks for paged pull.
+    The original correlation/bootstrap gaps below are retained as history.
+
+    Machine-readable form of API-0001, itself derived from
+    legacy/docs/06-sync/transport-http-example.md.
+
+    IMPORTANT — scope and status:
+      * hoyadb's own code NEVER performs these calls. It hands envelopes to a
+        `Transport` object the integrating developer supplies (SPEC-0013,
+        REQ-0028); the developer's own code makes the request.
+      * HTTP is the REFERENCE transport. The underlying contract is intended to
+        be usable over other carriers, but that is ASSERTED, NOT VERIFIED — no
+        second transport has been built against it. See API-0001's status note.
+      * Authentication is entirely the developer's choice (ADR-0019). The bearer
+        scheme below is this reference transport's own convention, not a hoyadb
+        requirement.
+      * The HTTP status codes used per outcome are likewise this reference
+        transport's convention. hoyadb surfaces each outcome's `status` FIELD as
+        a CommandOutcome; application code never branches on an HTTP code
+        (REQ-0016).
+  contact:
+    email: contact@btk-consulting.fr
+
+servers:
+  - url: https://api.example.com
+    description: The integrating developer's own backend. hoyadb hosts nothing.
+
+security:
+  - bearerAuth: []
+
+paths:
+  /hoyadb/commands:
+    post:
+      operationId: pushWrites
+      summary: Push queued writes — always an array, each entry independently resolved
+      description: |
+        There is NO separate single-write wire shape: a lone queued write is an
+        array of length one (REQ-0029, ADR-0026). Entries arrive in the local
+        execution order SPEC-0008 guarantees.
+
+        An array is a TRANSPORT-LEVEL GROUPING, NOT A TRANSACTION. One entry
+        failing does not roll back or block the others; hoyadb promises no
+        cross-write atomicity, because an earlier entry may have committed real
+        side effects before a later one fails.
+
+        Receiving a response at all — regardless of any entry's `status` — is
+        what this reference transport treats as that entry's `acknowledged`
+        state. No response (timeout, network failure) leaves every entry `sent`
+        and eligible for retry. An entry MISSING from the response array is
+        treated identically: still `sent`, still retryable.
+      x-requirements: [REQ-0012, REQ-0014, REQ-0016, REQ-0029]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              minItems: 1
+              items:
+                oneOf:
+                  - $ref: "#/components/schemas/CommandEnvelope"
+                  - $ref: "#/components/schemas/EntityDiffPayload"
+      responses:
+        "200":
+          description: |
+            Per-entry outcomes, correlated by `idempotencyKey` (or `recordId`
+            for an entity-diff) — NEVER by array position, since a retry can
+            resend only part of a previous array. The array MAY be shorter than
+            the request; see the operation description.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/WireOutcome"
+        "401":
+          description: The developer's own authentication rejected the request. hoyadb defines no auth scheme (ADR-0019).
+
+  /hoyadb/changes:
+    get:
+      operationId: pullChanges
+      summary: Pull changes since a checkpoint, scoped by server-computed membership
+      description: |
+        The backend re-derives identity from the transport's own auth, computes
+        membership from it, and returns only changes within that membership
+        (REQ-0026, SPEC-0012). Scoping is NEVER derived from which queries the
+        client currently has mounted.
+
+        Only INCREMENTAL catch-up from a checkpoint is specified. Bootstrap for
+        a fresh install with no checkpoint — pagination, reactivity behaviour
+        while the first sync is in flight — is UNSPECIFIED (RISK-0005).
+      x-requirements: [REQ-0026]
+      parameters:
+        - name: since
+          in: query
+          required: false
+          description: |
+            An opaque checkpoint token previously returned by this endpoint.
+            Its internal structure is a backend implementation detail the client
+            never parses. Omitted or empty on a first sync — see the note above.
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Changes within the client's membership, plus a new checkpoint.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ChangesResponse"
+        "401":
+          description: The developer's own authentication rejected the request.
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: |
+        This reference transport's own convention only. hoyadb mandates no auth
+        scheme; it requires the mechanism be an established, vetted standard and
+        leaves the choice entirely to the developer (ADR-0019, SPEC-0014).
+
+  schemas:
+    CommandEnvelope:
+      type: object
+      description: A domain-level write. See DM-0002.
+      required: [command, idempotencyKey, schemaVersion, args, context]
+      properties:
+        command:
+          type: string
+          description: Versioned command name, e.g. `add-order-v1` (REQ-0014).
+          examples: ["add-order-v1"]
+        idempotencyKey:
+          type: string
+          description: |
+            Client-generated, time-sortable (ULID-leaning). Reused VERBATIM on
+            retry — never regenerated (REQ-0013). Also the response correlation
+            key. Whether a backend deduplicates against it is that backend's own
+            choice; hoyadb does not mandate it (THR-0003).
+          examples: ["01J8Z3K9F5G6H7J8K9M0N1P2Q3"]
+        schemaVersion:
+          type: integer
+          description: The client's schema version (REQ-0014).
+        args:
+          type: object
+          additionalProperties: true
+          description: |
+            The command's validated arguments. NOTE what is deliberately absent:
+            the row mutations the local handler produced are NOT sent. The
+            backend derives its own by re-running its own handler copy
+            (OBJ-0003, ADR-0014).
+        context:
+          $ref: "#/components/schemas/TrustedContext"
+
+    EntityDiffPayload:
+      type: object
+      description: |
+        A plain create/update/delete on a table with no domain logic. See
+        DM-0003. Carries NO idempotency key — create/update/delete against a
+        specific recordId is naturally idempotent to resend (REQ-0023).
+      required: [table, op, recordId, clientTimestamp, schemaVersion, context]
+      properties:
+        table:
+          type: string
+          examples: ["order_notes"]
+        op:
+          type: string
+          enum: [create, update, delete]
+        recordId:
+          type: string
+          description: |
+            Also the response correlation key for this payload. KNOWN GAP: this
+            cannot disambiguate two queued writes to the SAME record within one
+            array. Closing it needs a per-write correlation id for entity-diffs,
+            which is not designed (ADR-0026).
+          examples: ["note_789"]
+        changes:
+          type: object
+          additionalProperties: true
+          description: |
+            ONLY the fields actually written — a partial patch, never the whole
+            record. This is what lets per-field last-write-wins operate at field
+            granularity rather than record granularity (REQ-0024).
+        clientTimestamp:
+          type: string
+          format: date-time
+          description: |
+            LWW comparison input. NOT trusted as the tie-break authority — an
+            identical-timestamp tie is broken server-side by real arrival order
+            (REQ-0025).
+        schemaVersion:
+          type: integer
+        context:
+          $ref: "#/components/schemas/TrustedContext"
+
+    TrustedContext:
+      type: object
+      required: [identity]
+      properties:
+        identity:
+          type: string
+          description: |
+            Opaque, already-authenticated. hoyadb carries it faithfully and never
+            establishes, validates or inspects it (REQ-0015).
+
+            THE BACKEND MUST NOT USE THIS AS ITS AUTHORIZATION SOURCE. Re-derive
+            the real identity from the transport's own auth and use this field
+            only for logging or cross-checking (THR-0001, THR-0008).
+        capturedAt:
+          type: string
+          format: date-time
+          description: |
+            What `ctx.now()` returned during the local handler run, captured
+            automatically by hoyadb's core. The backend's own `ctx.now()` reads
+            it from here rather than its own wall clock — the recommended
+            determinism-threading convention (ADR-0014).
+
+    WireOutcome:
+      type: object
+      description: |
+        One entry's outcome. The transport-internal shape: it carries the
+        correlation field, which hoyadb's core strips before the application
+        sees a CommandOutcome (REQ-0016, DM-0002).
+      required: [status]
+      properties:
+        status:
+          type: string
+          enum: [applied, corrected, rejected]
+          description: |
+            `applied` — the backend ran it and the result stands.
+            `corrected` — it ran, but the result differs from the client's guess.
+            `rejected` — the backend refused to apply it.
+            The client-side states `queued`/`sent`/`acknowledged` never appear on
+            the wire; they are local queue states (SPEC-0009).
+        result:
+          description: |
+            Whatever the backend handler returned, on `applied`/`corrected` —
+            including the real record id that replaces the client's local id
+            (REQ-0019).
+        reason:
+          type: string
+          description: Present on `rejected`.
+        idempotencyKey:
+          type: string
+          description: Correlates this outcome to a command entry.
+        recordId:
+          type: string
+          description: Correlates this outcome to an entity-diff entry.
+
+    ChangesResponse:
+      type: object
+      required: [checkpoint, changes]
+      properties:
+        checkpoint:
+          type: string
+          description: Opaque; pass back as `since` on the next pull.
+        changes:
+          type: array
+          items:
+            type: object
+            additionalProperties: true
+            description: A change to apply locally, shaped like an EntityDiffPayload's table/op/recordId/changes.

@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "review": [
+    "2026-10-31 SPEC-0047 / DEF-0056: current source surface reviewed with Claude Fable 5.1; no actionable runtime issue in the JS/compatibility review. This is a source-drift gate, not a runtime or semantic compatibility certificate.",
+    "API-0012: React Native keeps the historical NativeHostOptions/ProtectedNativeOptions/MemoryNativeOptions and tagged factory overloads, adding application schema factory overloads and application helpers. defineSchema preserves the original tagged Schema overload while adding the application overload. Historical RN declarations are unchanged.",
+    "SPEC-0040 / API-0011: client declarations add ConflictReaction, ConflictPolicy, Resolution, ResolutionCallback, host conflict/onResolution options, reporting methods and explicit discard. QueueEntry adds the approved discarded state. Application declarations expose matching plain APIs and re-export types. Fable reviewed client/index.d.ts 98be4a24 and application.d.ts 6184c53e; full hashes below bind this cut.",
+    "Historical C header, native module map and RN Codegen bytes remain exact; the checker independently enforces their retained snapshot hashes. The package entry-point and RN factory-export input hashes are included; any later change requires a new explicit comparison and review.",
+    "2026-11-07 SPEC-0048 / SPEC-0049 / API-0011: root independently inspected the exact seven additive declaration lines, related ABI/spec contracts and host/application delegates; accepted AliasedWrite, AliasedBatchResult, entityBatchAliased, configureEntitiesDurable and resolveEntityId. Existing declarations, defaults, native C symbols, RN Codegen/factories and retained snapshots remain unchanged. This accepts source compatibility only, not runtime/native or artifact acceptance.",
+    "2026-11-26 SPEC-0050 / TC-0054: inspected the RN package manifest diff. Only publication metadata, MIT license, repository and LICENSE file packaging changed; exports, entry points, peer versions, declarations, factories and Codegen configuration are unchanged. This review accepts publication metadata only and does not certify native runtime or artifact readiness."
+  ],
+  "inputs": {
+    "crates/hoyadb-native/include/HoyaNative/module.modulemap": "33326b1780c8a1c82237313f2ee88578d34e816af4ecc3a4a799abfeb23af60c",
+    "crates/hoyadb-native/include/hoyadb.h": "2f61e513be42d3e7aabbd9bb06f02a98d88096551276ae89dd5b30aa28526b48",
+    "packages/client/application.d.ts": "465d0a2d762077f6bdc21cbf7e880cfb6545a7db4912d728d8c217edac1aa2c2",
+    "packages/client/index.d.ts": "2d00f60d621b250ea02a5a1083a6136e8597f3c2f5a7faff4ab85ea31c1248cb",
+    "packages/client/node.d.ts": "da4f811acb86bbc667bb7dfab65eb2189ba18c4a1eb8a143b868ed68a3009d2c",
+    "packages/client/web.d.ts": "f6722f025b0118c44521f365760e0ee1fad882b0ed77ec48803ef2a4a5f37a58",
+    "packages/react-native/index.d.ts": "27bc34203e4236957f375b2d693fda30d8511d3fa636288329db44389559f152",
+    "packages/react-native/package.json": "81efbf8c790a8624705c583f84d8f0bab5313df577d698d03921e377033f21b7",
+    "packages/react-native/src/NativeHoyaDB.ts": "ba9f3eb228f537498c0c4673c8de5fbf9b26755e60d090ddf60a5203e51d5a99",
+    "packages/react-native/src/index.js": "edfe3fe864d66cbb5e53c79bd509d6098a277de2e401f14d6fdf5f0be9bcfec6"
+  }
+}

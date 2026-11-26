@@ -1,0 +1,105 @@
+<p>Start with a complete tutorial: <a href="typescript-getting-started.html">TypeScript</a>, <a href="swift-getting-started.html">Swift</a>, <a href="kotlin-getting-started.html">Kotlin</a>, <a href="react-native-getting-started.html">React Native</a>, or <a href="c-getting-started.html">C</a>. Each page states its execution coverage.</p>
+<h2 id="overview">Platforms</h2>
+<p>Every platform wraps the same Rust core. No binding reimplements queries, reactivity, the command queue or
+sync; each one translates calls into the core and events back out. All packages are unreleased local
+artifacts. This page describes what each binding provides and how far it has been verified; it contains no
+application code for platforms whose examples are not executed by this documentation.</p>
+
+<table>
+  <thead><tr><th>Platform</th><th>Package</th><th>Storage</th><th>Verification so far</th></tr></thead>
+  <tbody>
+    <tr><td>Browser and Node (WebAssembly)</td><td><code>@hoyadb/client</code>, <code>@hoyadb/testing</code></td>
+      <td>Node memory; browser memory and protected OPFS in a dedicated worker</td>
+      <td>The tour on the <a href="javascript.html">JavaScript page</a> runs on every build. The recorded Node and protected-browser runs are linked from the implementation checkpoint.</td></tr>
+    <tr><td>Swift (macOS 13, iOS 15.1)</td><td>Swift package <code>HoyaDB</code>, plus <code>HoyaDBTesting</code></td>
+      <td>Memory; protected SQLite (SQLCipher)</td>
+      <td>The <a href="swift-getting-started.html">quickstart</a> is compiled and run on macOS against a fresh task-owned native core. Earlier simulator certificates are separate; no new iOS execution is claimed.</td></tr>
+    <tr><td>Android (Kotlin)</td><td>Local AAR, package <code>dev.hoyadb</code></td>
+      <td>Memory; protected SQLite (SQLCipher)</td>
+      <td>The <a href="kotlin-getting-started.html">quickstart</a> compiles and runs on a task-owned Android emulator (see <a href="verification.html#case-kotlin">recorded runtime details</a>) through <code>app_process</code> against a fresh archived core and binding. This is not an APK build or SDK certification. The packaged local Android artifact predates current <code>Database.kt</code>, <code>Queue.kt</code>, <code>Sync.kt</code> and <code>SyncModels.kt</code>; the quickstart builds the binding from source.</td></tr>
+    <tr><td>React Native</td><td><code>@hoyadb/react-native</code></td>
+      <td>Memory; protected native storage</td>
+      <td>The <a href="react-native-getting-started.html">shared quickstart logic</a> runs against WASM. Its native bootstrap is not compiled or executed here. Earlier iOS Hermes certificates are separate; Android execution remains held.</td></tr>
+    <tr><td>C ABI</td><td><code>hoyadb-native</code> (<code>include/hoyadb.h</code>)</td>
+      <td>Memory; protected SQLite (SQLCipher)</td>
+      <td>The <a href="c-getting-started.html">C quickstart</a> compiles and executes real ABI calls against a fresh task-owned library. It is the layer under Swift, Kotlin and React Native.</td></tr>
+  </tbody>
+</table>
+<p>See the <a href="source:docs/guides/sdk-integration.md">SDK integration guide</a> and <a href="source:docs/guides/github-delivery.md">delivery requirements</a>.</p>
+
+<h2 id="web">Browser and Node</h2>
+<p>See <a href="javascript.html">JavaScript and web</a>. In browsers, <code>createWebRuntime()</code> starts the
+worker that owns protected storage. Open with <code>engine: {kind: 'opfs', name}</code> and a 32-byte
+<code>encryptionKey</code>. One worker per origin may be active, even across different store names; after the
+worker retires, a later <code>createWebRuntime()</code> call creates a fresh worker;
+concurrent replacement opens share it. Existing handles stay closed and requests
+are not replayed. Replace application-owned workers explicitly. Node and
+tests initialize the WebAssembly module directly and use memory stores.</p>
+
+<h2 id="swift">Swift</h2>
+<p>The Swift package (<a href="source:bindings/swift/Package.swift">Package.swift</a>) exposes the
+<code>HoyaDB</code> library and a <code>HoyaDBTesting</code> library. It links the native core through the
+<code>HoyaNative</code> XCFramework binary target, which must be built first with the package's artifact
+script (see <a href="source:bindings/swift/README.md">the Swift README</a>).</p>
+<ul>
+  <li><code>Database</code> is created with its host options, including <code>onBackgroundError</code>, and opened
+  with <code>openMemory</code> or <code>openProtected</code>. Protected opens take a directory, a store name and a
+  32-byte key, and report backup exclusion through <code>protection()</code>.</li>
+  <li>Queries, observations, commands, sync, entities and errors expose typed Swift DTOs. The <a href="swift-getting-started.html">Swift quickstart</a> uses its actual methods, including the explicit push/receive/reconcile sequence rather than a JavaScript-style one-shot sync. Errors surface as <code>HoyaError</code>. Observations are <code>Subscription</code> objects, cancelled
+  explicitly or on deinit, and callbacks run on a serial executor (the main queue by default).</li>
+  <li>The commands are <code>command(_:value:context:handler:)</code>, which is cancellable through Swift Task
+  cancellation, plus <code>startSync</code> and <code>stopSync</code>. Entity sync uses <code>configureEntities</code>,
+  <code>patch</code>, <code>pullOnce</code> and <code>setMergeHooks</code>. Entity reset has no typed method; it is
+  available only through the advanced <code>execute</code> call.</li>
+  <li><code>BackgroundError</code> declares five sources, but only <code>observation</code> and <code>sync</code>
+  failures are currently reported.</li>
+  <li>Testing: <code>HoyaDBTesting</code> provides <code>MemoryTesting.open</code>, <code>ManualClock</code>,
+  <code>ManualUptime</code>, <code>ManualTimer</code> and <code>FakeTransport</code>. The macOS slice is x86_64
+  only.</li>
+  <li>Generated declarations: <a href="swift-reference.html">Swift reference</a>.</li>
+</ul>
+
+<h2 id="android">Android (Kotlin)</h2>
+<p>The Kotlin SDK (<a href="source:bindings/android/README.md">README</a>) wraps the same native core through JNI.
+<code>Database</code> is opened with <code>openMemory</code>, which takes a schema, an optional namespace, a memory
+store and migrations, or with <code>openProtected</code>, which takes an Android <code>Context</code>, a name, a key
+and the schema, and excludes the store from backup by default. Operations are <code>suspend</code> functions.
+<code>startSync</code> returns a <code>SyncDriver</code> that you <code>close()</code> to stop it.
+<code>observe</code> returns an <code>AutoCloseable</code> <code>Subscription</code>, and callbacks run on the
+database's <code>eventExecutor</code>. Queue states decode into <code>QueueState</code>, and errors are
+<code>HoyaException</code> values with a <code>kind</code>. The SDK is local and unpublished
+(<code>dev.hoyadb:hoyadb-android:0.1.0</code>), targets minSdk 24, and is built with the repository's manual
+tools, not Gradle.</p>
+<p class="note">API-0011 requires a per-database Kotlin <code>BackgroundError</code> sink with an
+<code>onBackgroundError</code> parameter. It is missing from the current source and tracked as DEF-0040. Android
+reports background sync failures only through <code>startSync</code>'s error callback.</p>
+<p>Generated declarations: <a href="kotlin-reference.html">Kotlin reference</a>. The <a href="kotlin-getting-started.html">Kotlin quickstart</a> is executed on the emulator; the wider Android SDK gates remain separate.</p>
+
+<h2 id="react-native">React Native</h2>
+<p><code>@hoyadb/react-native</code> (<a href="source:packages/react-native/README.md">README</a>,
+<a href="source:packages/react-native/src/index.js">entry</a>) reuses the JavaScript host <code>Database</code> over
+native iOS and Android modules. <code>openNativeDatabase</code> opens protected native storage from a store
+<code>name</code>, an <code>encryptionKey</code> and the schema, and excludes it from backup by default.
+<code>openMemoryDatabase</code> opens a memory store. <code>createNativeRuntime</code> exposes the runtime, and
+<code>j</code>, <code>query</code> and <code>defineSchema</code> are re-exported. Other host options are forwarded
+to the <code>Database</code>. Activation and Android build options are described in
+<a href="source:packages/react-native/ACTIVATION.md">ACTIVATION.md</a>. Generated declarations:
+<a href="react-native-reference.html">React Native reference</a>.</p>
+
+<h2 id="native">C ABI</h2>
+<p>The native boundary (<a href="source:crates/hoyadb-native/README.md">README</a>,
+<a href="source:crates/hoyadb-native/include/hoyadb.h">hoyadb.h</a>) exports four functions:
+<code>hoya_v1_abi_version</code>, <code>hoya_v1_open</code>, <code>hoya_v1_call</code> and
+<code>hoya_v1_validate_open</code>. Every operation exchanges one JSON frame, up to 1 MiB, and invokes exactly one collector with a borrowed reply. Copy its bytes before the collector returns; the caller frees its own copy. Key bytes travel only in the separate binary span of <code>hoya_v1_open</code>; a protected key is
+32 bytes and a memory open uses none. No application callback runs inside the C collector. Generated
+declarations: <a href="native-reference.html">native reference</a>.</p>
+
+<h2 id="common">Common rules</h2>
+<ul>
+  <li>Keys are caller-owned. The SDKs never persist them or include them in diagnostics.</li>
+  <li>Errors carry a static kind and no payload, key or row value.</li>
+  <li>The stop-or-discard conflict policy (SPEC-0040) is planned and <strong>not implemented</strong> on any
+  platform.</li>
+</ul>
+
+<h2>Application convenience layer</h2><p>The JavaScript tutorial now uses the plain application API. React Native exports the same builders over its existing native runtime in source; native execution of this addition is not claimed here. Swift and Kotlin retain their existing typed APIs. Kotlin execution is enabled for the documentation example only; wider SDK certification remains held.</p>

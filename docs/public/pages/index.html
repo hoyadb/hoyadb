@@ -1,0 +1,10 @@
+<div class="cards">
+<a class="card" href="getting-started.html"><strong>Start with a working database →</strong><span>Follow a complete JavaScript Todo app: database, query, observer, command and backend.</span></a>
+<a class="card" href="javascript.html"><strong>Use the JavaScript SDK →</strong><span>Open a database with public imports, plain rows and atomic command handlers.</span></a>
+<a class="card" href="commands.html"><strong>Make an offline change →</strong><span>Stage a command, commit locally and send its frozen envelope later.</span></a>
+<a class="card" href="rust-reference.html"><strong>Explore the public API →</strong><span>Generated reference for Rust and source declarations for each binding.</span></a>
+</div>
+<h2>One local model, an explicit sync boundary</h2>
+<p>Your application owns its schema, identity, backend transport and conflict decisions. hoyadb validates local data, commits changes through the selected adapter and exposes owned query results. The command owner adds optimistic scopes, durable retries and reconciliation. Network access is supplied by your application.</p>
+<h2>Choose a reading path</h2><ol><li><a href="installation.html">Prepare the local packages</a> and run the <a href="getting-started.html">quickstart</a>.</li><li>Learn <a href="model.html">schemas and values</a>, <a href="queries.html">queries</a> and <a href="observations.html">observations</a>.</li><li>Add <a href="commands.html">commands</a> or <a href="entities.html">entity sync</a> when a backend is ready.</li><li>Use <a href="security.html">protected persistence</a> and <a href="testing.html">deterministic tests</a> before integrating a platform host.</li></ol>
+<div class="callout"><strong>Unreleased library.</strong> These docs describe checked source, not a published release. The <a href="verification.html">verification report</a> records executed examples and their source hashes. Android/JVM execution is held; source references do not establish platform support. Planned stop/discard policy and format conversion are not current public APIs.</div>

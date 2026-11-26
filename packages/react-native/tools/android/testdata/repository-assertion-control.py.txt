@@ -1,0 +1,103 @@
+"""Assemble the owned file:// Maven repository for the RN Android consumer from approved inputs only.
+
+Binaries: approved artifact-index entries (androidDebug, nativeBuildTools, kotlinSdkRuntime) plus the
+four 8a87389 addendum JARs. Bytes come from earlier verified local copies or, if absent, from the
+entry's exact qualified_url over HTTPS; every byte is checked against the approved SHA256 pin and
+SHA512 when recorded. Metadata: root's captured POM/module files, each checked against its recorded
+URL/SHA256 provenance, plus the addendum's recorded repository responses. Nothing else is added.
+"""
+from pathlib import Path
+import hashlib
+import json
+import shutil
+import subprocess
+
+repo_root = Path(__file__).resolve().parents[3]
+here = Path(__file__).resolve().parent
+out = here / 'repo'
+assert not out.exists(), 'fresh repository required'
+review = repo_root / 'target/phase-seven-dependencies/native-source-review'
+addendum_docs = repo_root / 'tests/fixtures/repository-addendum'
+addendum = repo_root / 'target/phase-seven-plugin-addendum/archive-review'
+fetched_dir = here / 'fetched'
+fetched_dir.mkdir(exist_ok=True)
+record = {'binaries': [], 'metadata': [], 'fetched': []}
+
+
+def sha(data, algorithm='sha256'):
+    return hashlib.new(algorithm, data).hexdigest()
+
+
+def layout(coordinate, name):
+    group, artifact, version = coordinate.split(':')[:3]
+    return Path(group.replace('.', '/')) / artifact / version / name
+
+
+def place(relative, data, source, kind):
+    target = out / relative
+    if target.exists():
+        assert target.read_bytes() == data, ('conflicting bytes', relative)
+        return
+    target.parent.mkdir(parents=True, exist_ok=True)
+    target.write_bytes(data)
+    record[kind].append({'path': str(relative), 'sha256': sha(data), 'source': source})
+
+
+index = json.loads((repo_root / 'tests/fixtures/repository-inputs/native/artifact-index.json').read_text())
+wanted = {'androidDebug', 'nativeBuildTools', 'kotlinSdkRuntime'}
+verified_runtime = {x['coordinate'] + '|' + Path(x['path']).name: repo_root / x['path']
+                    for x in json.loads((repo_root / 'target/phase-seven-rn/maven/verified.json').read_text())['verified']}
+for entry in index['artifacts']:
+    if not wanted & set(entry['configurations']):
+        continue
+    coordinate, name = entry['coordinate'], entry['name']
+    candidates = [verified_runtime.get(coordinate + '|' + name),
+                  review / 'artifact-byte-review' / (coordinate.replace(':', '__') + '__' + name),
+                  fetched_dir / layout(coordinate, name)]
+    path = next((p for p in candidates if p is not None and p.is_file()), None)
+    source = str(path.relative_to(repo_root)) if path else None
+    if path is None:
+        path = fetched_dir / layout(coordinate, name)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        url = entry['qualified_url']
+        assert url.startswith('https://'), url
+        log = subprocess.run(['curl', '--fail', '--location', '--proto', '=https', '--proto-redir', '=https',
+                              '--tlsv1.2', '--retry', '2', '--silent', '--show-error', '--output',
+                              str(path) + '.part', url], stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True,
+                             timeout=600)
+        record['fetched'].append({'coordinate': coordinate, 'url': url, 'exit_code': log.returncode, 'output': log.stdout})
+        (here / 'prepare-repo.json').write_text(json.dumps(record, indent=2) + '\n')
+        assert log.returncode == 0, (coordinate, log.stdout)
+        Path(str(path) + '.part').rename(path)
+        source = url
+    data = path.read_bytes()
+    expected = entry.get('sha256') or entry.get('sha256_pin')
+    assert sha(data) == expected, (coordinate, name, 'sha256 mismatch')
+    if entry.get('sha512'):
+        assert sha(data, 'sha512') == entry['sha512'], (coordinate, name, 'sha512 mismatch')
+    place(layout(coordinate, name), data, source, 'binaries')
+
+bundle = json.loads((addendum_docs / 'bundle.json').read_text())
+for item in bundle['additional_artifacts']:
+    name = item['url'].rsplit('/', 1)[1]
+    data = (addendum / layout(item['coordinate'], name)).read_bytes()
+    assert sha(data) == item['sha256'], item['coordinate']
+    place(layout(item['coordinate'], name), data, item['url'], 'binaries')
+for response in json.loads((addendum_docs / 'repository-responses.json').read_text()):
+    name = response['url'].rsplit('/', 1)[1]
+    data = (addendum / layout(response['coordinate'], name)).read_bytes()
+    assert sha(data) == response['sha256'], response['coordinate']
+    place(layout(response['coordinate'], name), data, response['url'], 'metadata')
+
+provenance = {}
+for listing in ['metadata-provenance.json', 'selected-metadata-provenance.json', 'selected-patched-metadata-provenance.json']:
+    for item in json.loads((review / 'maven' / listing).read_text()):
+        assert provenance.setdefault(item['file'], item)['sha256'] == item['sha256'], item['file']
+for relative, item in sorted(provenance.items()):
+    data = (review / 'maven' / relative).read_bytes()
+    assert sha(data) == item['sha256'], relative
+    place(Path(relative), data, item['url'], 'metadata')
+
+record['counts'] = {k: len(v) for k, v in record.items() if isinstance(v, list)}
+(here / 'prepare-repo.json').write_text(json.dumps(record, indent=2) + '\n')
+print('HOYA_RN_ANDROID_REPO_PREPARED ' + json.dumps(record['counts']), flush=True)

@@ -1,0 +1,20 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 4
+
+[*.{js,mjs,html,yml,yaml}]
+indent_size = 2
+
+[*.md]
+indent_size = 2
+# Preserve Markdown's intentional two-space hard breaks.
+trim_trailing_whitespace = false
+
+[*.rs]
+max_line_length = 100

@@ -1,0 +1,29 @@
+{
+  "approved_review_commit": "dc5469e",
+  "reviewed_packet_hashes_verified": 86,
+  "runtime_artifacts": [
+    {
+      "coordinate": "org.jetbrains.kotlin:kotlin-stdlib:2.1.20",
+      "path": "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-kotlin/deps/kotlin-stdlib-2.1.20.jar",
+      "sha256": "1bcc74e8ce84e2c25eaafde10f1248349cce3062b6e36978cbeec610db1e930a"
+    },
+    {
+      "coordinate": "org.jetbrains:annotations:13.0",
+      "path": "/Users/boristacyniak/Projects/alocasia/hoyadb/target/phase-seven-kotlin/deps/annotations-13.0.jar",
+      "sha256": "ace2a10dc8e2d5fd34925ecac03e4988b2c0f851650c94b8cef49ba1bd111478"
+    }
+  ],
+  "installed_tool": "/Applications/Android Studio.app/Contents/plugins/Kotlin/kotlinc",
+  "compiler_classpath_authority": "kotlin-compiler.jar META-INF/MANIFEST.MF Class-Path plus kotlinc script preloader",
+  "installed_tool_closure": {
+    "bin/kotlinc": "90750c977cc043dd2b05c69dd4e052c10377554925dd5a155e74ef732be28c7d",
+    "lib/kotlin-preloader.jar": "7d1b28178518486afc7c20541dc310840dbab4e70bc934ed762a5513091f1b2a",
+    "lib/kotlin-compiler.jar": "26d99b0510e4bc279327827c9f8ce1a7bc859afcef5f8c2cf6d32e0f8751f6df",
+    "lib/annotations-13.0.jar": "ace2a10dc8e2d5fd34925ecac03e4988b2c0f851650c94b8cef49ba1bd111478",
+    "lib/kotlin-stdlib.jar": "8836ccffd3585fadda9901244b20d42901d2f3cd581058d8434e2ffabcf3a3e7",
+    "lib/kotlin-reflect.jar": "8209083a4a7c4e476d9842b078308fa96a96f07a6bd99f05f3586ee13289ab26",
+    "lib/kotlin-script-runtime.jar": "5c8bd5dd7ae1ea2eeb2778fdbeaa19a562184975f6cab8a0bb6779e4190731ae",
+    "lib/kotlinx-coroutines-core-jvm.jar": "9860906a1937490bf5f3b06d2f0e10ef451e65b95b269f22daf68a3d1f5065c5"
+  },
+  "qualification": "Tool closure includes compiler-only stdlib2.2.20/reflection/coroutines; these are NOT SDK/runtime dependencies. SDK uses no-stdlib/no-reflect and exclusive approved2.1.20 classpath; no plugins loaded."
+}

@@ -1,0 +1,16 @@
+{
+  "name": "hoyadb-javascript-workspace",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/client",
+    "packages/testing"
+  ],
+  "scripts": {
+    "test": "npm run test --workspaces",
+    "test:react-native": "node --test packages/react-native/test/*.test.mjs",
+    "build:packages": "node tools/javascript/scripts/build.mjs",
+    "check:packages": "node tools/javascript/scripts/check-build.mjs",
+    "test:packaging": "node tools/javascript/scripts/packed-consumer.mjs"
+  }
+}
